@@ -15,11 +15,11 @@ Execute o plano @[c:\Users\Victo\Desktop\Ufal\problems-of-the-obi\.gemini\plans\
 
 | Métrica | Quantidade de Tokens |
 | :--- | :--- |
-| **Input Tokens (Total)** | *Em processamento neste turno* |
-| ↳ *Input sem cache* | - |
-| ↳ *Input em cache (Prompt Cache)* | - |
-| **Output Tokens (Total)** | - |
-| ↳ *Thinking / Raciocínio* | - |
-| ↳ *Respostas / Chamadas de Ferramenta* | - |
-| **Total Geral (Input + Output)** | - |
-| **Iterações / Chamadas ao Modelo** | - |
+| **Input Tokens (Total)** | **9.391.523** |
+| ↳ *Input sem cache* | 743.273 |
+| ↳ *Input em cache (Prompt Cache)* | 8.648.250 |
+| **Output Tokens (Total)** | **19.712** |
+| ↳ *Thinking / Raciocínio* | 5.901 |
+| ↳ *Respostas / Chamadas de Ferramenta* | 13.811 |
+| **Total Geral (Input + Output)** | **9.411.235** |
+| **Iterações / Chamadas ao Modelo** | 58 |

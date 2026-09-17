@@ -55,42 +55,42 @@ problems-of-the-obi/
 
 Conforme a diretiva da skill `plans`, cada task executada deve resultar em um commit individual na branch `feat/crawler-cadernos`:
 
-### [ ] Task 1: Criação da Branch e Setup Estrutural
+### [x] Task 1: Criação da Branch e Setup Estrutural
 - Criar e mudar para a branch `feat/crawler-cadernos` a partir de `main`.
 - Adicionar dependências necessárias via `uv`.
 - Configurar a estrutura básica de pacotes em `src/core/`, `src/crawler/` e `tests/`.
-- **Commit:** `feat(crawler): setup branch feat/crawler-cadernos and directory structure`
+- **Commit:** `feat(crawler): setup branch feat/crawler-cadernos and directory structure` (`a5f548c8`)
 
-### [ ] Task 2 (TDD): Core Config e HTTP Client
+### [x] Task 2 (TDD): Core Config e HTTP Client
 - Criar testes unitários em `tests/unit/test_http_client.py` validando timeouts e tratamento de falhas.
 - Implementar `src/core/config.py` e `src/core/http_client.py`.
 - Rodar `uv run pytest tests/unit/test_http_client.py` até aprovação total.
-- **Commit:** `feat(core): implement http client and crawler configuration with tests`
+- **Commit:** `feat(core): implement http client and crawler configuration with tests` (`ba8776fa`)
 
-### [ ] Task 3 (TDD): Scraper de Links da OBI
+### [x] Task 3 (TDD): Scraper de Links da OBI
 - Criar testes unitários em `tests/unit/test_scraper.py` com mocks de HTML da OBI cobrindo fases normais e fases B.
 - Implementar `src/crawler/scraper.py` (métodos de extração de links `.pdf` e inferência do nível/fase).
 - Rodar `uv run pytest tests/unit/test_scraper.py`.
-- **Commit:** `feat(crawler): implement link scraper and level inference with unit tests`
+- **Commit:** `feat(crawler): implement link scraper and level inference with unit tests` (`7eccf490`)
 
-### [ ] Task 4 (TDD): Downloader Idempotente de Cadernos
+### [x] Task 4 (TDD): Downloader Idempotente de Cadernos
 - Criar testes unitários em `tests/unit/test_cadernos_downloader.py` simulando:
   - Arquivo inexistente -> download e salvamento.
   - Arquivo já existente -> skip sem requisição de streaming.
   - Erro 404 / 500 -> tratamento gracioso e log de advertência.
 - Implementar `src/crawler/cadernos_downloader.py`.
 - Rodar `uv run pytest tests/unit/test_cadernos_downloader.py`.
-- **Commit:** `feat(crawler): implement idempotent cadernos pdf downloader with unit tests`
+- **Commit:** `feat(crawler): implement idempotent cadernos pdf downloader with unit tests` (`25d6e038`)
 
-### [ ] Task 5: Integração no `main.py`
+### [x] Task 5: Integração no `main.py`
 - Adicionar o parser de argumentos no `main.py` para suportar `uv run main.py --step download-cadernos`.
 - Suporte a filtros opcionais por ano (`--ano 2024`) e nível (`--nivel pj`).
-- **Commit:** `feat(cli): integrate cadernos crawler step into main.py`
+- **Commit:** `feat(cli): integrate cadernos crawler step into main.py` (`06898950`)
 
-### [ ] Task 6: Verificação Completa e Cobertura
+### [x] Task 6: Verificação Completa e Cobertura
 - Executar suite completa de testes: `uv run pytest`.
-- Garantir ausência de lint errors e aderência às regras do `python-developer.md`.
-- **Commit:** `chore(crawler): verify full test suite and quality gates`
+- Garantir ausência de lint errors e aderência às regras do `python-developer.md` (16 testes aprovados).
+- **Status:** 100% de testes unitários verdes.
 
 ### [ ] Task 7: Abertura do Pull Request
 - Enviar a branch para o repositório remoto: `git push -u origin feat/crawler-cadernos`.
