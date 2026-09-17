@@ -1,10 +1,10 @@
-# SPEC: crawler-codigos v0.1
+# SPEC: crawler-codigos v0.2
 
 ## Objetivo: Realizar a busca e download de soluções e códigos-fonte oficiais disponibilizados nas páginas da OBI organizados por ano e nível.
 
 ## Entidades
-- CodigoSolucao { ano: int! 1999 <= ano <= 2026, nivel: str!, nome_problema: str!, linguagem: str! ['c', 'cpp', 'py', 'java', 'zip'], url: str!, caminho_local: Path! destino `codigo/[ano]/[nivel]/[nome_arquivo]` }
-- CodigoCrawlerConfig { pasta_base: Path! padrão `codigo/`, timeout: int! padrão 15, delay_requests: float! padrão 0.5, extensoes_validas: list[str]! ['.c', '.cpp', '.py', '.java', '.zip'] }
+- CodigoSolucao { ano: int! 1999 <= ano <= 2027, nivel: str!, nome_problema: str!, linguagem: str! ['c', 'cpp', 'py', 'java', 'js', 'pas', 'zip'], url: str!, caminho_local: Path! destino `codigo/[ano]/[nivel]/[nome_arquivo]` }
+- CodigoCrawlerConfig { pasta_base: Path! padrão `codigo/`, timeout: int! padrão 15, delay_requests: float! padrão 0.5, extensoes_validas: list[str]! ['.c', '.cpp', '.py', '.java', '.pas', '.js', '.zip'] }
 
 ## Pré-condições
 PC1: Conexão ativa com a internet para as páginas históricas da OBI.

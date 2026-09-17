@@ -34,6 +34,7 @@ problems-of-the-obi/
 │       └── test_cases/                # Casos de teste normalizados
 │           └── inputs/
 │               ├── [numero].in
+|           └── outputs/
 │               └── [numero].out
 ├── src/                               # Codigo-fonte modular da aplicacao
 │   ├── core/                          # Configuracoes globais, constantes e cliente HTTP resiliente
