@@ -19,16 +19,18 @@ def test_download_caderno_already_exists(tmp_path):
         texto_link="Caderno PJ"
     )
 
-    # Cria o arquivo previamente
+    # Cria o arquivo previamente e cadastra no manifest
     expected_path = tmp_path / "2024" / "pj" / "caderno_pj.pdf"
     expected_path.parent.mkdir(parents=True, exist_ok=True)
     expected_path.write_bytes(b"%PDF-1.4 dummy")
+    downloader._manifest[link.url] = str(expected_path.relative_to(tmp_path))
+    downloader._save_manifest()
 
     success, path = downloader.download_caderno(link, force=False)
 
     assert success is True
     assert path == expected_path
-    # Não deve chamar download_file pois já existia
+    # Não deve chamar download_file pois já existia para essa mesma URL
     mock_http.download_file.assert_not_called()
 
 
@@ -72,6 +74,98 @@ def test_download_caderno_failure(tmp_path):
     success, path = downloader.download_caderno(link)
 
     assert success is False
+
+
+def test_download_caderno_collision_creates_numbered_suffix(tmp_path):
+    """Regra R6: Se o arquivo já existir para outra URL, salva como [nome]-[numero].pdf."""
+    mock_http = MagicMock(spec=HttpClient)
+    mock_http.download_file.return_value = True
+
+    downloader = CadernosDownloader(http_client=mock_http, base_output_dir=tmp_path, request_delay=0)
+
+    # 1º Link (Fase 1 normal)
+    link1 = CadernoLink(
+        url="https://example.com/fase1/caderno_pj.pdf",
+        nome_arquivo="caderno_pj.pdf",
+        ano=2021,
+        nivel="pj",
+        texto_link="Caderno Fase 1"
+    )
+    success1, path1 = downloader.download_caderno(link1)
+    assert success1 is True
+    assert path1 == tmp_path / "2021" / "pj" / "caderno_pj.pdf"
+    # Simula a escrita real do arquivo
+    path1.parent.mkdir(parents=True, exist_ok=True)
+    path1.write_bytes(b"%PDF-1.4 dummy 1")
+
+    # 2º Link (Fase 1B com mesmo nome de arquivo)
+    link2 = CadernoLink(
+        url="https://example.com/fase1b/caderno_pj.pdf",
+        nome_arquivo="caderno_pj.pdf",
+        ano=2021,
+        nivel="pj",
+        texto_link="Caderno Fase 1B"
+    )
+    success2, path2 = downloader.download_caderno(link2)
+    assert success2 is True
+    assert path2 == tmp_path / "2021" / "pj" / "caderno_pj-1.pdf"
+    path2.write_bytes(b"%PDF-1.4 dummy 2")
+
+    # 3º Link (Fase 1C ou outra prova com mesmo nome)
+    link3 = CadernoLink(
+        url="https://example.com/fase1c/caderno_pj.pdf",
+        nome_arquivo="caderno_pj.pdf",
+        ano=2021,
+        nivel="pj",
+        texto_link="Caderno Fase 1C"
+    )
+    success3, path3 = downloader.download_caderno(link3)
+    assert success3 is True
+    assert path3 == tmp_path / "2021" / "pj" / "caderno_pj-2.pdf"
+
+
+def test_download_caderno_collision_idempotency_preserves_numbered_files(tmp_path):
+    """Reexecuções de URLs já mapeadas não geram novos números."""
+    mock_http = MagicMock(spec=HttpClient)
+    mock_http.download_file.return_value = True
+
+    downloader = CadernosDownloader(http_client=mock_http, base_output_dir=tmp_path, request_delay=0)
+
+    link1 = CadernoLink(
+        url="https://example.com/fase1/caderno_pj.pdf",
+        nome_arquivo="caderno_pj.pdf",
+        ano=2021,
+        nivel="pj",
+        texto_link="Caderno Fase 1"
+    )
+    link2 = CadernoLink(
+        url="https://example.com/fase1b/caderno_pj.pdf",
+        nome_arquivo="caderno_pj.pdf",
+        ano=2021,
+        nivel="pj",
+        texto_link="Caderno Fase 1B"
+    )
+
+    # 1ª execução
+    downloader.download_caderno(link1)
+    (tmp_path / "2021" / "pj" / "caderno_pj.pdf").parent.mkdir(parents=True, exist_ok=True)
+    (tmp_path / "2021" / "pj" / "caderno_pj.pdf").write_bytes(b"content 1")
+
+    downloader.download_caderno(link2)
+    (tmp_path / "2021" / "pj" / "caderno_pj-1.pdf").write_bytes(b"content 2")
+
+    mock_http.download_file.reset_mock()
+
+    # 2ª execução (mesmas URLs)
+    s1, p1 = downloader.download_caderno(link1)
+    s2, p2 = downloader.download_caderno(link2)
+
+    assert s1 is True
+    assert p1 == tmp_path / "2021" / "pj" / "caderno_pj.pdf"
+    assert s2 is True
+    assert p2 == tmp_path / "2021" / "pj" / "caderno_pj-1.pdf"
+    # Nenhuma chamada de download_file pois ambos já existem e estão mapeados
+    mock_http.download_file.assert_not_called()
 
 
 def test_crawl_and_download_with_filter(tmp_path, sample_obi_html):
