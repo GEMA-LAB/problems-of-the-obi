@@ -15,6 +15,7 @@ from google.genai import types
 import time
 import argparse
 from src.crawler.cadernos_downloader import CadernosDownloader
+from src.crawler.codigos_downloader import CodigosDownloader
 from openai import OpenAI
 
 # Carregar variáveis de ambiente
@@ -775,7 +776,7 @@ def main():
     parser = argparse.ArgumentParser(description="Pipeline de Automação e Catalogação da OBI")
     parser.add_argument(
         "--step",
-        choices=["download-cadernos", "download-gabaritos", "extract-questions", "organize-testcases", "clean-testcases", "all"],
+        choices=["download-cadernos", "download-codigos", "download-gabaritos", "extract-questions", "organize-testcases", "clean-testcases", "all"],
         default="all",
         help="Etapa específica a ser executada (padrão: all)"
     )
@@ -802,6 +803,23 @@ def main():
 
         if args.step == "download-cadernos":
             print("\nETAPA DOWNLOAD-CADERNOS FINALIZADA COM SUCESSO.")
+            return
+
+    # Passo 1.5: Baixar Codigos e Solucoes Oficiais (via CodigosDownloader modular)
+    if args.step in ["download-codigos", "all"]:
+        print(f"\n{'='*40}")
+        print("1.5. DOWNLOAD DOS CODIGOS DE SOLUCAO")
+        print(f"{'='*40}")
+        codigos_downloader = CodigosDownloader()
+        stats_codigos = codigos_downloader.crawl_and_download(
+            ano_filtro=args.ano,
+            nivel_filtro=args.nivel,
+            force=args.force
+        )
+        print(f"Estatisticas dos Codigos: {stats_codigos}")
+
+        if args.step == "download-codigos":
+            print("\nETAPA DOWNLOAD-CODIGOS FINALIZADA COM SUCESSO.")
             return
 
     # Passo 2: Mandar para LLM
