@@ -15,11 +15,11 @@ Vamos iniciar a refatoração do projeto, por isso verifique o @[c:\Users\Victo\
 
 | Métrica | Quantidade de Tokens |
 | :--- | :--- |
-| **Input Tokens (Total)** | **844.186** |
-| ↳ *Input sem cache* | 131.651 |
-| ↳ *Input em cache (Prompt Cache)* | 712.535 |
-| **Output Tokens (Total)** | **7.136** |
-| ↳ *Thinking / Raciocínio* | 3.433 |
-| ↳ *Respostas / Chamadas de Ferramenta* | 3.703 |
-| **Total Geral (Input + Output)** | **851.322** |
-| **Iterações / Chamadas ao Modelo** | 8 |
+| **Input Tokens (Total)** | **1.184.973** |
+| ↳ *Input sem cache* | 142.665 |
+| ↳ *Input em cache (Prompt Cache)* | 1.042.308 |
+| **Output Tokens (Total)** | **8.583** |
+| ↳ *Thinking / Raciocínio* | 3.621 |
+| ↳ *Respostas / Chamadas de Ferramenta* | 4.962 |
+| **Total Geral (Input + Output)** | **1.193.556** |
+| **Iterações / Chamadas ao Modelo** | 11 |

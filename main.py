@@ -767,104 +767,6 @@ def remover_questoes_sem_testes():
     print(
         f"\nTotal de questões removidas por falta de testes: {questoes_removidas}")
 
-# =====================================================================
-# ETAPA 6: ATUALIZAÇÃO DO README
-# =====================================================================
-
-
-def atualizar_readme():
-    print(f"\n{'='*40}")
-    print("6. ATUALIZANDO O README.MD")
-    print(f"{'='*40}")
-
-    problemas_por_ano = {}
-    for ano, nome in problemas_mapeados:
-        if ano not in problemas_por_ano:
-            problemas_por_ano[ano] = []
-        if nome not in problemas_por_ano[ano]:
-            problemas_por_ano[ano].append(nome)
-
-    secoes_anos_markdown = []
-
-    for ano in sorted(problemas_por_ano.keys(), reverse=True):
-        linhas_tabela = []
-
-        for i, nome in enumerate(problemas_por_ano[ano], 1):
-            if nome == "Concurso":
-                linhas_tabela.append(
-                    f"| {i} | {nome} | ❌ | Inviável | ❌ Sem casos de teste |")
-                continue
-
-            caminho_json = Path(f"output/{nome}/problem.json")
-            caminho_testes = Path(f"output/{nome}/test_cases")
-
-            testes_status = "Pendente"
-            status = "Pendente"
-
-            if caminho_json.exists():
-                extracao = "OK"
-                status = "⚠️ Aguardando Testes"
-
-                if caminho_testes.exists():
-                    # Verifica o que tem na pasta ignorando o nosso marcador
-                    conteudo = [f for f in caminho_testes.iterdir()
-                                if f.name != ".auto"]
-
-                    if len(conteudo) > 0:
-                        # Se o marcador estiver lá, foi o script. Se não, foi você.
-                        if (caminho_testes / ".auto").exists():
-                            testes_status = "🤖 Auto"
-                        else:
-                            testes_status = "🧑‍💻 Manual"
-
-                        status = "✅ Concluído"
-
-            linhas_tabela.append(
-                f"| {i} | {nome} | {extracao} | {testes_status} | {status} |")
-
-        tabela_markdown = "\n".join(linhas_tabela)
-
-        bloco_ano = f"""### OBI {ano}
-
-**Legenda de Status:**
-* **Extração (API)**: `[OK]` significa que a LLM extraiu o JSON com sucesso.
-* **Testes**: `[🤖 Auto]` baixado da OBI, `[🧑‍💻 Manual]` inserido manualmente, `[Pendente]` falta fazer.
-
-| # | Problema | Extração (API) | Testes | Status Final |
-|:---:|:---|:---:|:---:|:---:|
-{tabela_markdown}
-"""
-        secoes_anos_markdown.append(bloco_ano)
-
-    todas_as_edicoes_markdown = "\n\n".join(secoes_anos_markdown)
-
-    readme_content = f"""# Database para o Experimento: OBI (Olimpíada Brasileira de Informática)
-
-Este repositório cataloga e estrutura os problemas passados da OBI para a realização de experimentos e avaliação de LLMs em programação competitiva. 
-
-### ⚙️ Pipeline de Automação
-
-1. 📄 **Download dos Cadernos:** Baixar provas passadas no formato PDF.
-2. 🤖 **Extração via LLM:** Processar os PDFs e extrair os dados das questões em formato JSON.
-3. 📦 **Download dos Gabaritos:** Baixar todos os arquivos de casos de teste em `.zip`.
-4. 📂 **Organização:** Criar as pastas `test_cases` e associar os gabaritos às questões corretas.
-5. 🧹 **Limpeza de Dados:** Remover pastas vazias, arquivos desnecessários e padronizar.
-6. 📝 **Atualização do README:** Atualizar o documento principal detectando automaticamente o progresso. 
-
-**Fonte de Dados:** [Provas Passadas OBI - Unicamp](https://olimpiada.ic.unicamp.br/passadas/)
-
----
-
-## Mapeamento por Edição
-
-{todas_as_edicoes_markdown}
-"""
-
-    with open("README.md", "w", encoding="utf-8") as f:
-        f.write(readme_content)
-
-    print("Sucesso! README.md atualizado.")
-
 
 # =====================================================================
 # INICIALIZAÇÃO DA PIPELINE
@@ -901,8 +803,5 @@ if __name__ == "__main__":
     # Passo 5.5: NOVO - Remover questões sem testes válidos
     # Só executar caso queira apenas as questões padronizadas
     remover_questoes_sem_testes()
-
-    # Passo 6: Atualizar documento README com status atualizado
-    # atualizar_readme()
 
     print("\n🎉 PIPELINE FINALIZADA COM SUCESSO! 🎉")
