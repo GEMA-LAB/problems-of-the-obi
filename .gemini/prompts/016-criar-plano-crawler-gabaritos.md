@@ -29,11 +29,12 @@ A partir da spec@[c:\Users\Victo\Desktop\Ufal\problems-of-the-obi\.gemini\specs\
 
 | Métrica | Quantidade de Tokens |
 | :--- | :--- |
-| **Input Tokens (Total)** | *Em medição* |
-| ↳ *Input sem cache* | *Em medição* |
-| ↳ *Input em cache (Prompt Cache)* | *Em medição* |
-| **Output Tokens (Total)** | *Em medição* |
-| ↳ *Thinking / Raciocínio* | *Em medição* |
-| ↳ *Respostas / Chamadas de Ferramenta* | *Em medição* |
-| **Total Geral (Input + Output)** | *Em medição* |
-| **Iterações / Chamadas ao Modelo** | *Em medição* |
+| **Input Tokens (Total)** | **1.420.043** |
+| ↳ *Input sem cache* | 183.454 |
+| ↳ *Input em cache (Prompt Cache)* | 1.236.589 |
+| **Output Tokens (Total)** | **14.839** |
+| ↳ *Thinking / Raciocínio* | 8.734 |
+| ↳ *Respostas / Chamadas de Ferramenta* | 6.105 |
+| **Total Geral (Input + Output)** | **1.434.882** |
+| **Iterações / Chamadas ao Modelo** | **34** |
+

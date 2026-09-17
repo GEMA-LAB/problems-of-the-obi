@@ -1,0 +1,46 @@
+# Prompt 018 - Criar Spec para Organizar Questões (Test Cases e Soluções)
+
+- **Data e Hora:** 2026-09-17 17:21:55 -03:00
+- **Usuário:** Victo
+
+## Conteúdo do Prompt
+
+```text
+Crie uma spec através do @[c:\Users\Victo\Desktop\Ufal\problems-of-the-obi\.gemini\specs\model.md] a parte do código:
+
+# Passo 4: Cruzar ZIPs com Pastas Output
+    if args.step in ["organize-testcases", "all"]:
+        organizar_test_cases()
+        if args.step == "organize-testcases":
+            print("\nETAPA ORGANIZE-TESTCASES FINALIZADA COM SUCESSO.")
+            return
+
+Esses organizar_test_cases deve organizar tanto o test_cases e solution na questão respectiva. Pode ser um organizar question.
+```
+
+---
+
+## Alinhamento e Diagnóstico Técnico
+
+1. **Objetivo:**
+   - Criar uma especificação formal com base no modelo `.gemini/specs/model.md` para a funcionalidade de organização de questões, integrando tanto os casos de teste (`test_cases`) quanto os códigos de solução (`solution` / `solutions`) na estrutura de cada questão em `output_question_obi/`.
+
+2. **Diretrizes e Regras do Projeto:**
+   - Seguir rigorosamente o formato de `.gemini/specs/model.md`.
+   - Proibição estrita de emojis em documentação, logs e código.
+   - Observar as definições de arquitetura descritas em `.gemini/rules/architecture-programming-mode.md`.
+
+---
+
+## Consumo de Tokens (Execução do Prompt)
+
+| Métrica | Quantidade de Tokens |
+| :--- | :--- |
+| **Input Tokens (Total)** | *Em medição* |
+| ↳ *Input sem cache* | *Em medição* |
+| ↳ *Input em cache (Prompt Cache)* | *Em medição* |
+| **Output Tokens (Total)** | *Em medição* |
+| ↳ *Thinking / Raciocínio* | *Em medição* |
+| ↳ *Respostas / Chamadas de Ferramenta* | *Em medição* |
+| **Total Geral (Input + Output)** | *Em medição* |
+| **Iterações / Chamadas ao Modelo** | *Em medição* |

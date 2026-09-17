@@ -30,11 +30,12 @@ c:\Users\Victo\Desktop\Ufal\problems-of-the-obi\.gemini\plans\crawler-gabaritos-
 
 | Métrica | Quantidade de Tokens |
 | :--- | :--- |
-| **Input Tokens (Total)** | *Em medição* |
-| ↳ *Input sem cache* | *Em medição* |
-| ↳ *Input em cache (Prompt Cache)* | *Em medição* |
-| **Output Tokens (Total)** | *Em medição* |
-| ↳ *Thinking / Raciocínio* | *Em medição* |
-| ↳ *Respostas / Chamadas de Ferramenta* | *Em medição* |
-| **Total Geral (Input + Output)** | *Em medição* |
-| **Iterações / Chamadas ao Modelo** | *Em medição* |
+| **Input Tokens (Total)** | **10.263.089** |
+| ↳ *Input sem cache* | 1.306.488 |
+| ↳ *Input em cache (Prompt Cache)* | 8.956.601 |
+| **Output Tokens (Total)** | **36.267** |
+| ↳ *Thinking / Raciocínio* | 22.728 |
+| ↳ *Respostas / Chamadas de Ferramenta* | 13.539 |
+| **Total Geral (Input + Output)** | **10.299.356** |
+| **Iterações / Chamadas ao Modelo** | **93** |
+
