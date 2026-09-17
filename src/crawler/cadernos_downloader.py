@@ -1,4 +1,5 @@
-"""Downloader for OBI exam booklet PDFs."""
+"""Downloader for OBI exam booklet PDFs with collision resolution and idempotency."""
+import json
 import time
 from pathlib import Path
 from typing import Optional
@@ -16,7 +17,7 @@ from src.crawler.scraper import ObiScraper, CadernoLink
 
 
 class CadernosDownloader:
-    """Orchestrator for discovering and downloading OBI exam booklets."""
+    """Orchestrator for discovering and downloading OBI exam booklets with R6 collision numbering."""
 
     def __init__(
         self,
@@ -28,22 +29,100 @@ class CadernosDownloader:
         self.base_output_dir = Path(base_output_dir)
         self.request_delay = request_delay
         self.scraper = ObiScraper()
+        self.manifest_path = self.base_output_dir / ".manifest.json"
+        self._manifest: dict[str, str] = self._load_manifest()
+
+    def _load_manifest(self) -> dict[str, str]:
+        """Loads the download URL-to-path manifest."""
+        if self.manifest_path.exists():
+            try:
+                with open(self.manifest_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except (json.JSONDecodeError, OSError):
+                return {}
+        return {}
+
+    def _save_manifest(self) -> None:
+        """Persists the manifest file."""
+        try:
+            self.base_output_dir.mkdir(parents=True, exist_ok=True)
+            with open(self.manifest_path, "w", encoding="utf-8") as f:
+                json.dump(self._manifest, f, indent=2, ensure_ascii=False)
+        except OSError:
+            pass
 
     def get_destination_path(self, link: CadernoLink) -> Path:
-        """Calculates the target file path: base/ano/nivel/nome_arquivo."""
+        """Returns standard destination path: base/ano/nivel/nome_arquivo."""
         return self.base_output_dir / str(link.ano) / link.nivel / link.nome_arquivo
 
-    def download_caderno(self, link: CadernoLink, force: bool = False) -> tuple[bool, Path]:
-        """Downloads a single booklet PDF with idempotency guarantee."""
-        target_path = self.get_destination_path(link)
+    def resolve_destination_path(self, link: CadernoLink, force: bool = False) -> tuple[Path, bool]:
+        """
+        Resolves destination path for link enforcing rule R6.
+        Returns:
+            (target_path, already_downloaded_for_this_url)
+        """
+        # 1. Se a URL ja estiver no manifest e o arquivo existir em disco
+        if link.url in self._manifest and not force:
+            rel_path = self._manifest[link.url]
+            existing_path = self.base_output_dir / rel_path
+            if existing_path.exists():
+                return existing_path, True
 
-        if target_path.exists() and not force:
+        base_folder = self.base_output_dir / str(link.ano) / link.nivel
+        stem = Path(link.nome_arquivo).stem
+        suffix = Path(link.nome_arquivo).suffix
+        target_path = base_folder / link.nome_arquivo
+
+        # 2. Se o arquivo base nao existir, este e o destino
+        if not target_path.exists() or force:
+            return target_path, False
+
+        # 3. Se target_path ja existe, verificar se ja pertence a outra URL
+        rel_str = str(target_path.relative_to(self.base_output_dir))
+        url_owner = None
+        for u, path_str in self._manifest.items():
+            if path_str == rel_str:
+                url_owner = u
+                break
+
+        # Se ninguem reivindicou este arquivo no manifest, podemos atribuir a esta URL
+        if url_owner is None:
+            self._manifest[link.url] = rel_str
+            self._save_manifest()
+            return target_path, True
+
+        # Se ja pertence a outra URL (ex: Fase 1 x Fase 1B), aplicar R6: [nome]-[numero].pdf
+        counter = 1
+        while True:
+            candidate_name = f"{stem}-{counter}{suffix}"
+            candidate_path = base_folder / candidate_name
+            candidate_rel = str(candidate_path.relative_to(self.base_output_dir))
+
+            if not candidate_path.exists():
+                return candidate_path, False
+
+            # Se o arquivo candidato existe, verificar se ja pertence a esta URL
+            if self._manifest.get(link.url) == candidate_rel:
+                return candidate_path, True
+
+            counter += 1
+
+    def download_caderno(self, link: CadernoLink, force: bool = False) -> tuple[bool, Path]:
+        """Downloads a single booklet PDF with idempotency and R6 collision numbering."""
+        target_path, already_downloaded = self.resolve_destination_path(link, force=force)
+
+        if already_downloaded and not force:
             return True, target_path
 
         success = self.http.download_file(link.url, target_path)
 
-        if success and self.request_delay > 0:
-            time.sleep(self.request_delay)
+        if success:
+            rel_path = str(target_path.relative_to(self.base_output_dir))
+            self._manifest[link.url] = rel_path
+            self._save_manifest()
+
+            if self.request_delay > 0:
+                time.sleep(self.request_delay)
 
         return success, target_path
 
@@ -88,8 +167,8 @@ class CadernosDownloader:
                     urls_visitadas.add(link.url)
                     stats["encontrados"] += 1
 
-                    target_path = self.get_destination_path(link)
-                    if target_path.exists() and not force:
+                    target_path, already_downloaded = self.resolve_destination_path(link, force=force)
+                    if already_downloaded and not force:
                         stats["ja_existentes"] += 1
                         continue
 
