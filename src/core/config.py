@@ -23,6 +23,8 @@ PADROES_CADERNOS = [
     "fase1/programacao/cadernos/",
     "fase1/programacao-a/",
     "fase1/programacao-b/",
+    "fase1/programacaob/",
+    "fase1/programacaob/cadernos/",
 
     # Fase 1b
     "fase1b/programacao/",
@@ -31,6 +33,10 @@ PADROES_CADERNOS = [
     # Fase 2
     "fase2/programacao/",
     "fase2/programacao/cadernos/",
+    "fase2/programacao-a/",
+    "fase2/programacao-b/",
+    "fase2/programacaob/",
+    "fase2/programacaob/cadernos/",
 
     # Fase 2b
     "fase2b/programacao/",
@@ -39,10 +45,14 @@ PADROES_CADERNOS = [
     # Fase 3
     "fase3/programacao/",
     "fase3/programacao/cadernos/",
+    "fase3/programacao-a/",
+    "fase3/programacao-b/",
+    "fase3/programacaob/",
+    "fase3/programacaob/cadernos/",
 
     # Fase 3b
     "fase3b/programacao/",
-    "fase3b/programacao/cadernos/"
+    "fase3b/programacao/cadernos/",
 ]
 
 # Diretórios padrão do projeto
