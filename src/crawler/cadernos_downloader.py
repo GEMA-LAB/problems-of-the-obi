@@ -126,6 +126,29 @@ class CadernosDownloader:
 
         return success, target_path
 
+    def probe_static_cadernos(self, ano: int) -> list[CadernoLink]:
+        """Probes known static asset paths for unindexed or 404 competition years."""
+        discovered: list[CadernoLink] = []
+        phases = ["f1", "f2", "f3"]
+        levels = ["pj", "p1", "p2", "ps", "pu"]
+
+        for phase in phases:
+            for level in levels:
+                filename = f"ProvaOBI{ano}_{phase}{level}.pdf"
+                url = f"https://olimpiada.ic.unicamp.br/static/extras/obi{ano}/provas/{filename}"
+                response = self.http.head(url)
+                if response is not None and response.status_code == 200:
+                    inferred_level = self.scraper.infer_level_or_phase("", "", filename)
+                    discovered.append(CadernoLink(
+                        url=url,
+                        nome_arquivo=filename,
+                        ano=ano,
+                        nivel=inferred_level,
+                        texto_link=f"Caderno {inferred_level.upper()} {phase.upper()}"
+                    ))
+
+        return discovered
+
     def crawl_and_download(
         self,
         start_year: int = START_YEAR,
@@ -148,6 +171,8 @@ class CadernosDownloader:
         urls_visitadas: set[str] = set()
 
         for ano in anos:
+            ano_links: list[CadernoLink] = []
+
             for padrao in padroes_url:
                 page_url = f"{BASE_OBI_URL}OBI{ano}/{padrao}"
                 response = self.http.get(page_url)
@@ -156,26 +181,32 @@ class CadernosDownloader:
                     continue
 
                 links = self.scraper.extract_pdf_links(response.text, page_url, ano)
+                ano_links.extend(links)
 
-                for link in links:
-                    if link.url in urls_visitadas:
-                        continue
+            # Fallback para probing estatico se a edicao nao possuir paginas ativas no portal (ex: 2018, 2026)
+            if not ano_links:
+                static_links = self.probe_static_cadernos(ano)
+                ano_links.extend(static_links)
 
-                    if nivel_filtro and link.nivel.lower() != nivel_filtro.lower():
-                        continue
+            for link in ano_links:
+                if link.url in urls_visitadas:
+                    continue
 
-                    urls_visitadas.add(link.url)
-                    stats["encontrados"] += 1
+                if nivel_filtro and link.nivel.lower() != nivel_filtro.lower():
+                    continue
 
-                    target_path, already_downloaded = self.resolve_destination_path(link, force=force)
-                    if already_downloaded and not force:
-                        stats["ja_existentes"] += 1
-                        continue
+                urls_visitadas.add(link.url)
+                stats["encontrados"] += 1
 
-                    success, _ = self.download_caderno(link, force=force)
-                    if success:
-                        stats["baixados"] += 1
-                    else:
-                        stats["falhas"] += 1
+                target_path, already_downloaded = self.resolve_destination_path(link, force=force)
+                if already_downloaded and not force:
+                    stats["ja_existentes"] += 1
+                    continue
+
+                success, _ = self.download_caderno(link, force=force)
+                if success:
+                    stats["baixados"] += 1
+                else:
+                    stats["falhas"] += 1
 
         return stats

@@ -29,7 +29,7 @@ class ObiScraper:
             return "p1"
         if any(term in combined_text for term in ["nível 2", "nivel 2", "nivel2", "_p2", "p2."]):
             return "p2"
-        if any(term in combined_text for term in ["sênior", "senior", "ps"]):
+        if any(term in combined_text for term in ["sênior", "senior", "ps", "pu.", "_pu", "pu-", "_ps", "ps."]):
             return "senior"
 
         # Fallback para fases

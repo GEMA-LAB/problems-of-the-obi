@@ -10,7 +10,7 @@ DEFAULT_REQUEST_DELAY = 0.5
 
 # Anos de cobertura das provas OBI
 START_YEAR = 1999
-END_YEAR = 2026
+END_YEAR = 2027
 
 # Padrões de URL para busca de cadernos de questões (PDFs)
 PADROES_CADERNOS = [
@@ -53,6 +53,10 @@ PADROES_CADERNOS = [
     # Fase 3b
     "fase3b/programacao/",
     "fase3b/programacao/cadernos/",
+
+    # CFOBI (Competição Feminina da OBI)
+    "cfobi/programacao/",
+    "cfobi/programacao/cadernos/",
 ]
 
 # Diretórios padrão do projeto
