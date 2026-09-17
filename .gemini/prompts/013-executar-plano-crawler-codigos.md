@@ -37,11 +37,11 @@ Execute o plano
 
 | Métrica | Quantidade de Tokens |
 | :--- | :--- |
-| **Input Tokens (Total)** | **-** |
-| ↳ *Input sem cache* | - |
-| ↳ *Input em cache (Prompt Cache)* | - |
-| **Output Tokens (Total)** | **-** |
-| ↳ *Thinking / Raciocínio* | - |
-| ↳ *Respostas / Chamadas de Ferramenta* | - |
-| **Total Geral (Input + Output)** | **-** |
-| **Iterações / Chamadas ao Modelo** | - |
+| **Input Tokens (Total)** | **9.275.808** |
+| ↳ *Input sem cache* | 1.357.725 |
+| ↳ *Input em cache (Prompt Cache)* | 7.918.083 |
+| **Output Tokens (Total)** | **33.033** |
+| ↳ *Thinking / Raciocínio* | 11.296 |
+| ↳ *Respostas / Chamadas de Ferramenta* | 21.737 |
+| **Total Geral (Input + Output)** | **9.308.841** |
+| **Iterações / Chamadas ao Modelo** | 79 |

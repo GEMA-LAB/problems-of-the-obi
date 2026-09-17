@@ -33,11 +33,11 @@ crie um plano @[c:\Users\Victo\Desktop\Ufal\problems-of-the-obi\.gemini\skills\p
 
 | Métrica | Quantidade de Tokens |
 | :--- | :--- |
-| **Input Tokens (Total)** | **-** |
-| ↳ *Input sem cache* | - |
-| ↳ *Input em cache (Prompt Cache)* | - |
-| **Output Tokens (Total)** | **-** |
-| ↳ *Thinking / Raciocínio* | - |
-| ↳ *Respostas / Chamadas de Ferramenta* | - |
-| **Total Geral (Input + Output)** | **-** |
-| **Iterações / Chamadas ao Modelo** | - |
+| **Input Tokens (Total)** | **1.695.816** |
+| ↳ *Input sem cache* | 428.662 |
+| ↳ *Input em cache (Prompt Cache)* | 1.267.154 |
+| **Output Tokens (Total)** | **17.852** |
+| ↳ *Thinking / Raciocínio* | 9.532 |
+| ↳ *Respostas / Chamadas de Ferramenta* | 8.320 |
+| **Total Geral (Input + Output)** | **1.713.668** |
+| **Iterações / Chamadas ao Modelo** | 34 |
