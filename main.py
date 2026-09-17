@@ -162,6 +162,7 @@ Retorne os dados ESTRITAMENTE no formato JSON abaixo, preenchendo com as informa
 ### RESTRIÇÕES ###
 A sua resposta deve ser um ARRAY (lista) de objetos JSON, onde cada objeto representa um problema diferente.
 Não inclua nenhuma formatação markdown (como ```json) ou texto antes/depois do JSON.
+Importante: Os limites 'time_limit' (em segundos) e 'memory_limit' (em MB) devem ser interpretados e calibrados com foco na resolução da questão utilizando a linguagem Python a partir do enunciado e restrições. Não inclua o campo 'difficulty'.
 TEMPLATE ESPERADO:
     [{
         "title": "Nome do problema 1",
@@ -180,8 +181,9 @@ TEMPLATE ESPERADO:
         "year": "2024",
         "level": "PJ",
         "period": "Fase 3",
-        "topics": ["array", "programação dinâmica", "grafos" (categorias da questão)]
-        "difficulty": "Difícil [aqui só pode ter 3 valores únicos: Fácil, Médio ou Díficil]"
+        "topics": ["array", "programação dinâmica", "grafos" (categorias da questão)],
+        "time_limit": float:5.0 (tempo limite em segundos interpretado para resolver em Python),
+        "memory_limit": int:1024 (limite de memória em MB interpretado para resolver em Python)
     }]"""
 
         print("Processando o documento com a LLM (isso pode levar um tempo maior por ser o documento todo)...")
@@ -245,8 +247,10 @@ TEMPLATE ESPERADO:
     return erros
 
 def create_questions_gpt(pdfs_path):
-    client = OpenAI(api_key=os.getenv("GPT_API"))
-    modelo_gpt = os.getenv("GPT_MODEL")
+    base_url = os.getenv("OPENAI_BASE_URL")
+    api_key = os.getenv("OPENAI_API_KEY") or os.getenv("GPT_API")
+    modelo_gpt = os.getenv("OPENAI_MODEL") or os.getenv("GPT_MODEL") or "gpt-4o-mini"
+    client = OpenAI(api_key=api_key, base_url=base_url if base_url else None)
 
     if not pdfs_path:
         print("Nenhum arquivo PDF encontrado para processar.")
@@ -267,6 +271,7 @@ Retorne os dados ESTRITAMENTE no formato JSON abaixo, preenchendo com as informa
 ### RESTRIÇÕES ###
 A sua resposta deve ser um ARRAY (lista) de objetos JSON, onde cada objeto representa um problema diferente.
 Não inclua nenhuma formatação markdown (como ```json) ou texto antes/depois do JSON.
+Importante: Os limites 'time_limit' (em segundos) e 'memory_limit' (em MB) devem ser interpretados e calibrados com foco na resolução da questão utilizando a linguagem Python a partir do enunciado e restrições. Não inclua o campo 'difficulty'.
 TEMPLATE ESPERADO:
     [{
         "title": "Nome do problema 1",
@@ -286,8 +291,8 @@ TEMPLATE ESPERADO:
         "level": "PJ",
         "period": "Fase 3",
         "topics": ["array", "programação dinâmica", "grafos" (categorias da questão)],
-        "time_limit": float:5 (escala segundos)),
-        "memory_limit": int:1024 (escala MB)
+        "time_limit": float:5.0 (tempo limite em segundos interpretado para resolver em Python),
+        "memory_limit": int:1024 (limite de memória em MB interpretado para resolver em Python)
     }]"""
 
         try:
@@ -827,14 +832,13 @@ def main():
     # Passo 2: Mandar para LLM
     if args.step in ["extract-questions", "all"]:
         print(f"\n{'='*40}")
-        print("2. EXTRACAO DE DADOS (API GEMINI)")
+        print("2. EXTRACAO DE DADOS (API OPENAI)")
         print(f"{'='*40}")
-        path_data = Path("backup")
+        path_data = Path("cadernos") if Path("cadernos").exists() else Path("backup")
         pdfs_path = list(path_data.rglob("*.pdf"))
 
         while True:
-            #pdfs_path = create_questions_gpt(pdfs_path=pdfs_path)
-            pdfs_path = create_questions(pdfs_path=pdfs_path)
+            pdfs_path = create_questions_gpt(pdfs_path=pdfs_path)
             if len(pdfs_path) == 0:
                 break
 

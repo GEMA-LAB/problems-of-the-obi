@@ -1,33 +1,39 @@
-# SPEC: extractor-llm v0.1
+# SPEC: extractor-llm v0.2
 
-## Objetivo: Processar cadernos de prova em PDF utilizando APIs de LLMs (Gemini / OpenAI) e extrair os problemas de programação em formato JSON estruturado seguindo o schema padrão.
+## Objetivo: Processar cadernos de provas da OBI em formato PDF utilizando a biblioteca oficial da OpenAI para extrair os problemas de programação em formato JSON estruturado, interpretando limites de tempo e memória calibrados para a linguagem Python e salvando em `output/[titulo]/problem.json`.
 
 ## Entidades
-- ProblemSchema { title: str! não vazio, statement: str! descrição completa mantendo quebras de linha com `\n`, input: str! seção de Entrada, output: str! seção de Saída, constraints: str! seção de Restrições, examples: list[Exemplo]! lista com entradas e saídas, imgs: list[str]! links ou caminhos de imagens associadas, rating: list[int]! pontuação das subtarefas, year: str! ano de 4 dígitos, level: str! ['PJ', 'P1', 'P2', 'Senior', 'Geral'], period: str! ex: 'Fase 1', topics: list[str]! categorias do problema, difficulty: str! ['Fácil', 'Médio', 'Difícil'] }
+- ProblemSchema { title: str! não vazio, statement: str! descrição completa do enunciado mantendo quebras de linha com `\n`, input: str! texto da seção de Entrada, output: str! texto da seção de Saída, constraints: str! texto da seção de Restrições, examples: list[Exemplo]! lista de exemplos de entrada e saída, imgs: list[str]! links ou caminhos de imagens associadas, rating: list[int]! pontuação das subtarefas, year: str! ano de 4 dígitos, level: str! ['PJ', 'P1', 'P2', 'Senior', 'Geral'], period: str! fase da prova (ex: 'Fase 1', 'Fase 2', 'Fase 3'), topics: list[str]! tópicos e categorias da questão, time_limit: float! tempo limite em segundos calibrado para resolução em Python, memory_limit: int! limite de memória em MB calibrado para resolução em Python }
 - Exemplo { input: str!, output: str! }
-- ExtractorConfig { provider: str! ['gemini', 'openai'], model: str!, prompt_template_path: Path! padrão `src/prompts/extraction_prompt.md`, output_base_dir: Path! padrão `output_question_obi/` }
+- ExtractorConfig { base_url: str! URL base da API OpenAI (padrão `https://api.openai.com/v1` ou endpoint compatível), api_key: str! chave de acesso da API, model: str! nome do modelo (ex: `gpt-4o-mini`), pasta_entrada: Path! diretório dos cadernos PDF (`cadernos/` ou `data/`), pasta_output: Path! diretório base de saída (`output/`) }
 
 ## Pré-condições
-PC1: Variáveis de ambiente configuradas no `.env` (`GEMINI_API`, `GEMINI_MODEL`, ou `GPT_API`, `GPT_MODEL`).
-PC2: Arquivos de cadernos de prova em formato PDF disponíveis no diretório `cadernos/`.
-PC3: Template de prompt disponível e válido no sistema.
+PC1: Variáveis de ambiente configuradas no arquivo `.env` focadas estritamente na biblioteca OpenAI: `OPENAI_BASE_URL`, `OPENAI_API_KEY` e `OPENAI_MODEL`.
+PC2: Arquivos de cadernos de prova em formato PDF disponíveis no diretório de entrada (`cadernos/` ou `data/`).
+PC3: Biblioteca `openai` instalada no ambiente virtual gerenciado via `uv`.
 
 ## Regras
-R1: O envio do PDF para a API da LLM deve utilizar a Files API nativa correspondente (Gemini Files API ou OpenAI Files API).
-R2: Se a resposta da LLM contiver blocos cercados por markdown (ex: ```json ... ```) -> Sanitizar o texto extraindo puramente a string JSON antes da desserialização.
-R3: Se a resposta não for um JSON válido ou não for uma lista de objetos -> Registrar erro detalhado, salvar o PDF na lista de falhas para reprocessamento e continuar.
-R4: Para cada problema extraído, salvar em `output_question_obi/[ano]/[nivel]/[nome-questao]/problem.json` com `indent=4` e `ensure_ascii=False`.
-R5: Se já existir um diretório para o título da questão com ano divergente -> Adicionar sufixo `_{ano}` ao título e sanitizar caracteres especiais (ex: remover `?`).
-R6: Ao término do processamento de cada PDF (com sucesso ou falha) -> O arquivo enviado deve ser obrigatoriamente deletado dos servidores remotos da API (bloco `finally`).
+R1: A extração de problemas DEVE utilizar a biblioteca oficial `openai.OpenAI`, inicializada com `base_url` e `api_key` definidos no `.env`.
+R2: O envio do PDF para a API da OpenAI DEVE utilizar a Files API nativa (`client.files.create(file=f, purpose="assistants")`) e a requisição do modelo DEVE enviar a referência do arquivo carregado junto ao prompt de extração.
+R3: O prompt de extração DEVE instruir a LLM a interpretar o `time_limit` (float, em segundos) e o `memory_limit` (int, em MB) especificamente com foco na resolução da questão na linguagem Python a partir do enunciado e restrições fornecidas, e NÃO DEVE conter nem extrair o campo `difficulty`.
+R4: Se a resposta da LLM contiver formatações markdown (como blocos ```json ... ```) ou texto antes/depois do JSON -> Sanitizar o texto extraindo puramente o array JSON antes da desserialização com `json.loads`.
+R5: Se a resposta da LLM não for um JSON válido ou não for uma lista de objetos -> Registrar o erro, adicionar o PDF à lista de falhas para repetição cíclica e continuar a execução.
+R6: Para cada problema extraído com sucesso, criar a pasta `output/[titulo]/` e salvar os dados em `output/[titulo]/problem.json` com indentação de 4 espaços (`indent=4`) e `ensure_ascii=False`.
+R7: Se o diretório `output/[titulo]` já existir com um arquivo `problem.json` cujo ano seja diferente do ano do problema atual -> Resolver a colisão renomeando o diretório para `output/[titulo]_[ano]/` e sanitizando caracteres especiais (como remoção de `?`).
+R8: Ao término do processamento de cada PDF (tanto em caso de sucesso quanto em caso de erro ou exceção) -> O arquivo remoto enviado para a OpenAI DEVE ser obrigatoriamente excluído dos servidores (`client.files.delete`) no bloco `finally`.
 
 ## Exemplo (User stories)
-E1: Dado um caderno `cadernos/2024/pj/caderno.pdf` contendo 3 problemas Quando processado pela API Gemini Então cria 3 pastas em `output_question_obi/2024/pj/` contendo cada uma seu `problem.json` válido.
-E2: Dado que a chamada de API retorna erro de cota ou rede Quando detectada a exceção Então o erro é capturado, o arquivo remoto é excluído no `finally` e o PDF é marcado para retry.
+E1: Dado um arquivo PDF `cadernos/2024/pj/ProvaOBI2024_f3pj.pdf` contendo problemas da Fase 3 Quando o extrator da OpenAI processa o documento Então cria as pastas em `output/[titulo]/` com o `problem.json` contendo `time_limit` e `memory_limit` interpretados para Python e sem o campo `difficulty`.
+E2: Dado que já existe a pasta `output/Relogio` referente ao ano 2024 Quando for processada outra prova contendo o problema "Relógio" do ano 2012 Então cria a pasta `output/Relogio_2012` evitando sobrescrita indevida.
+E3: Dado que ocorre uma exceção de parsing ou timeout durante a requisição Quando a execução passa pelo bloco `finally` Então o arquivo temporário é deletado da OpenAI e o PDF é mantido na lista de pendências para nova tentativa.
 
 ## Invariantes (o que nunca pode quebrar)
-I1: Nenhum arquivo de caderno PDF deve permanecer retido indefinidamente nos servidores remotos da API da LLM após o término da requisição.
-I2: Todo `problem.json` gerado deve possuir formato JSON estritamente válido e decodificável.
+I1: Nenhum arquivo PDF carregado na API da OpenAI deve permanecer retido após a conclusão ou falha da requisição.
+I2: O arquivo `problem.json` gerado deve ser um JSON estritamente válido, contendo os campos obrigatórios com `time_limit` (float) e `memory_limit` (int) calibrados para Python, sem a presença do campo `difficulty`.
+I3: A estrutura em disco DEVE respeitar o padrão `output/[titulo]/problem.json` (ou `output/[titulo]_[ano]/problem.json`), preservando compatibilidade com os módulos de testes e gabaritos.
 
 ## Fora do escopo
-- Não associar nem descompactar gabaritos ou casos de teste nesta etapa.
+- Não gerar ou armazenar classificação subjetiva de dificuldade (`difficulty`).
+- Não utilizar ou depender da API ou SDK da Google (Gemini) nesta especificação focada em OpenAI.
+- Não descompactar gabaritos nem normalizar casos de teste nesta etapa.
 - Não executar código ou avaliar soluções.
