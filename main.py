@@ -284,8 +284,9 @@ TEMPLATE ESPERADO:
         "year": "2024",
         "level": "PJ",
         "period": "Fase 3",
-        "topics": ["array", "programação dinâmica", "grafos" (categorias da questão)]
-        "difficulty": "Difícil [aqui só pode ter 3 valores únicos: Fácil, Médio ou Díficil]"
+        "topics": ["array", "programação dinâmica", "grafos" (categorias da questão)],
+        "time_limit": float:5 (escala segundos)),
+        "memory_limit": int:1024 (escala MB)
     }]"""
 
         try:
