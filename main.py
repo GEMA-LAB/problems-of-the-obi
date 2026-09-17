@@ -16,6 +16,7 @@ import time
 import argparse
 from src.crawler.cadernos_downloader import CadernosDownloader
 from src.crawler.codigos_downloader import CodigosDownloader
+from src.crawler.gabaritos_downloader import GabaritosDownloader
 from openai import OpenAI
 
 # Carregar variáveis de ambiente
@@ -841,9 +842,19 @@ def main():
             print("\nETAPA EXTRACT-QUESTIONS FINALIZADA COM SUCESSO.")
             return
 
-    # Passo 3: Baixar ZIPs de gabaritos
+    # Passo 3: Baixar ZIPs de gabaritos (via GabaritosDownloader modular)
     if args.step in ["download-gabaritos", "all"]:
-        baixar_gabaritos()
+        print(f"\n{'='*40}")
+        print("3. DOWNLOAD DOS GABARITOS (ZIPs)")
+        print(f"{'='*40}")
+        gabaritos_downloader = GabaritosDownloader()
+        stats_gabaritos = gabaritos_downloader.crawl_and_download(
+            ano_filtro=args.ano,
+            nivel_filtro=args.nivel,
+            force=args.force
+        )
+        print(f"Estatisticas dos Gabaritos: {stats_gabaritos}")
+
         if args.step == "download-gabaritos":
             print("\nETAPA DOWNLOAD-GABARITOS FINALIZADA COM SUCESSO.")
             return
