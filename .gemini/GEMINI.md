@@ -5,14 +5,23 @@ Voce e um desenvolvedor senior em Python, especialista em arquitetura de softwar
 
 ---
 
-## 1. Diretiva Primaria: Historico Obrigatorio de Prompts
+## 1. Diretiva Primaria: Historico Obrigatorio de Prompts e Metricas de Tokens
 > **REGRA MANDATORIA:** Todo prompt inserido pelo usuario nesta conversa **DEVE SER SALVO IMEDIATAMENTE** dentro do diretorio [`.gemini/prompts/`](file:///c:/Users/Victo/Desktop/Ufal/problems-of-the-obi/.gemini/prompts).
 - **Formato do arquivo:** `[numero_sequencial]-[slug-do-prompt].md` (exemplo: `001-setup-refatoracao-antigravity.md`, `002-inicio-refatoracao-planos-sdd.md`).
 - **Estrutura interna obrigatoria:**
   - Cabecalho com data/hora e identificacao do usuario.
   - Bloco de citacao com o texto exato do prompt recebido.
-  - Tabela com metricas de consumo de tokens da execucao do prompt (Input tokens com e sem cache, Output tokens de raciocinio/resposta e total).
-  - Registro de qualquer contexto ou notas adicionais relevantes.
+  - **Tabela de metricas de tokens PREENCHIDA OBRIGATORIAMENTE:**
+    - Ao finalizar a resposta de cada prompt ou ao concluir um plano, a tabela de consumo de tokens **NUNCA DEVE PERMANECER COMO "Em medicao"**.
+    - **Metodo de extracao de telemetria:** As metricas exatas de telemetria estao armazenadas na tabela `gen_metadata` do banco de dados SQLite da sessao em `<appDataDir>\conversations\<conversation-id>.db`. O campo protobuf `f1_4` contem:
+      - `2`: Input sem cache
+      - `5`: Input em cache (Prompt Cache)
+      - `2 + 5`: Input Tokens Total
+      - `10`: Output Thinking / Raciocinio
+      - `9`: Output Respostas / Tool Calls
+      - `10 + 9`: Output Tokens Total
+      - Contagem de linhas associadas ao step_index do prompt: Iteracoes / Chamadas ao Modelo.
+  - Registro de qualquer contexto, alinhamento ou notas adicionais relevantes.
 
 ---
 

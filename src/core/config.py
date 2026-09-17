@@ -108,3 +108,24 @@ class CodigoCrawlerConfig:
         self.delay_requests = delay_requests
         self.extensoes_validas = extensoes_validas
 
+
+# Termos para filtro de links de gabarito e casos de teste
+TERMOS_GABARITO = ("gabarito", "testes")
+
+
+class GabaritoCrawlerConfig:
+    """Configuracao do crawler de gabaritos e casos de teste (.zip)."""
+
+    def __init__(
+        self,
+        pasta_base: Path = DEFAULT_GABARITOS_DIR,
+        timeout: int = DEFAULT_TIMEOUT,
+        delay_requests: float = DEFAULT_REQUEST_DELAY,
+        termos_filtro: tuple[str, ...] = TERMOS_GABARITO,
+    ):
+        self.pasta_base = Path(pasta_base)
+        self.timeout = timeout
+        self.delay_requests = delay_requests
+        self.termos_filtro = termos_filtro
+
+

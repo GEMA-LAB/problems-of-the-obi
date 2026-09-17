@@ -41,3 +41,22 @@ def test_cli_download_codigos_step():
                 force=False
             )
 
+
+def test_cli_download_gabaritos_step():
+    test_args = ["main.py", "--step", "download-gabaritos", "--ano", "2023", "--nivel", "senior"]
+
+    with patch.object(sys, "argv", test_args):
+        with patch("main.GabaritosDownloader") as mock_downloader_cls:
+            mock_instance = MagicMock()
+            mock_downloader_cls.return_value = mock_instance
+            mock_instance.crawl_and_download.return_value = {"encontrados": 3, "baixados": 3, "ja_existentes": 0, "falhas": 0}
+
+            main()
+
+            mock_downloader_cls.assert_called_once()
+            mock_instance.crawl_and_download.assert_called_once_with(
+                ano_filtro=2023,
+                nivel_filtro="senior",
+                force=False
+            )
+
