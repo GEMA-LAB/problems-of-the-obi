@@ -205,28 +205,15 @@ TEMPLATE ESPERADO:
                 f"Foram encontrados e extraídos {quantidade_problemas} problemas.")
 
             for output_json in dados_json:
-                titulo = output_json.get('title', 'Desconhecido')
-                ano = output_json.get('year', 'Unknown')
+                titulo = re.sub(r'[\\/*?:"<>|]', "", str(output_json.get('title', 'Desconhecido'))).strip()
+                ano = str(output_json.get('year', 'Unknown')).strip()
+                nivel = str(output_json.get('level', 'geral')).strip().lower()
 
-                output_path = Path(f"output/{titulo}")
-
-                # Resolução de conflitos de nome
-                if output_path.exists():
-                    arquivo_antigo = output_path / "problem.json"
-                    if arquivo_antigo.exists():
-                        with open(arquivo_antigo, "r", encoding="utf-8") as f:
-                            aux = json.load(f)
-
-                        if str(aux.get('year')) != str(ano):
-                            titulo = f"{titulo}_{ano}"
-                            titulo = titulo.replace('?', '')
-                            output_path = Path(f"output/{titulo}")
-                            print(output_path)
-
+                output_path = Path(f"output_with_code/{ano}/{nivel}/{titulo}")
                 output_path.mkdir(parents=True, exist_ok=True)
                 problemas_mapeados.add((ano, titulo))
 
-                with open(f"{str(output_path)}/problem.json", "w", encoding="utf-8") as f:
+                with open(output_path / "problem.json", "w", encoding="utf-8") as f:
                     json.dump(output_json, f, indent=4, ensure_ascii=False)
 
                 print(f"Sucesso! O arquivo '{titulo}' foi gerado.")
@@ -333,28 +320,15 @@ TEMPLATE ESPERADO:
             print(f"Foram encontrados e extraídos {quantidade_problemas} problemas.")
 
             for output_json in dados_json:
-                titulo = output_json.get('title', 'Desconhecido')
-                ano = output_json.get('year', 'Unknown')
+                titulo = re.sub(r'[\\/*?:"<>|]', "", str(output_json.get('title', 'Desconhecido'))).strip()
+                ano = str(output_json.get('year', 'Unknown')).strip()
+                nivel = str(output_json.get('level', 'geral')).strip().lower()
 
-                output_path = Path(f"output/{titulo}")
-
-                # Resolução de conflitos de nome
-                if output_path.exists():
-                    arquivo_antigo = output_path / "problem.json"
-                    if arquivo_antigo.exists():
-                        with open(arquivo_antigo, "r", encoding="utf-8") as f:
-                            aux = json.load(f)
-
-                        if str(aux.get('year')) != str(ano):
-                            titulo = f"{titulo}_{ano}"
-                            titulo = titulo.replace('?', '')
-                            output_path = Path(f"output/{titulo}")
-                            print(output_path)
-
+                output_path = Path(f"output_with_code/{ano}/{nivel}/{titulo}")
                 output_path.mkdir(parents=True, exist_ok=True)
                 problemas_mapeados.add((ano, titulo))
 
-                with open(f"{str(output_path)}/problem.json", "w", encoding="utf-8") as f:
+                with open(output_path / "problem.json", "w", encoding="utf-8") as f:
                     json.dump(output_json, f, indent=4, ensure_ascii=False)
 
                 print(f"Sucesso! O arquivo '{titulo}' foi gerado.")

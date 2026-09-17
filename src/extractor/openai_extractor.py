@@ -44,8 +44,9 @@ class OpenAiExtractor:
             self.client = client
         else:
             base_url = self.config.base_url
+            api_key = self.config.api_key or "placeholder_key"
             self.client = OpenAI(
-                api_key=self.config.api_key,
+                api_key=api_key,
                 base_url=base_url if base_url else None,
             )
 
@@ -61,6 +62,9 @@ class OpenAiExtractor:
         Envia PDF para OpenAI Files API, chama o modelo com o prompt de extracao
         e garante a delecao do arquivo remoto no bloco finally.
         """
+        if not self.config.api_key or self.config.api_key == "placeholder_key":
+            raise ValueError("OPENAI_API_KEY nao configurada no .env.")
+
         pdf_file = Path(pdf_path)
         if not pdf_file.exists():
             raise FileNotFoundError(f"Arquivo PDF nao encontrado: {pdf_file}")
@@ -109,25 +113,14 @@ class OpenAiExtractor:
 
     def save_problem(self, problem: ProblemSchema, output_base: Optional[Path] = None) -> Path:
         """
-        Salva o problema em output/[titulo]/problem.json.
-        Se ja existir uma pasta para o titulo com ano divergente, salva em output/[titulo]_[ano]/problem.json.
+        Salva o problema em output_with_code/[ano]/[nivel]/[nome_questao]/problem.json.
         """
         base_dir = Path(output_base or self.config.pasta_output)
         clean_title = sanitize_filename(problem.title) or "Sem_Titulo"
-        ano = str(problem.year).strip() or "Unknown"
+        ano = str(problem.year).strip() or "unknown"
+        nivel = str(problem.level).strip().lower() or "geral"
 
-        target_dir = base_dir / clean_title
-        if target_dir.exists():
-            existing_problem_file = target_dir / "problem.json"
-            if existing_problem_file.exists():
-                try:
-                    with open(existing_problem_file, "r", encoding="utf-8") as f:
-                        data = json.load(f)
-                    if str(data.get("year")) != ano:
-                        target_dir = base_dir / f"{clean_title}_{ano}"
-                except (json.JSONDecodeError, OSError):
-                    pass
-
+        target_dir = base_dir / ano / nivel / clean_title
         target_dir.mkdir(parents=True, exist_ok=True)
         file_path = target_dir / "problem.json"
         with open(file_path, "w", encoding="utf-8") as f:

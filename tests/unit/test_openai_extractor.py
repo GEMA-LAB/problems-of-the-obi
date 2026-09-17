@@ -89,11 +89,11 @@ def test_extract_from_pdf_always_deletes_remote_file_on_error(mock_client, tmp_p
 
 
 def test_save_problem_standard(sample_problem, tmp_path):
-    """Validates saving problem in output/[titulo]/problem.json."""
+    """Validates saving problem in output_with_code/[ano]/[nivel]/[nome_questao]/problem.json."""
     extractor = OpenAiExtractor(client=MagicMock())
     saved_path = extractor.save_problem(sample_problem, output_base=tmp_path)
 
-    expected_file = tmp_path / "Torre de Dados" / "problem.json"
+    expected_file = tmp_path / "2024" / "pj" / "Torre de Dados" / "problem.json"
     assert saved_path == expected_file
     assert expected_file.exists()
 
@@ -106,21 +106,30 @@ def test_save_problem_standard(sample_problem, tmp_path):
     assert "difficulty" not in data
 
 
-def test_save_problem_year_collision(sample_problem, tmp_path):
-    """Validates resolving collision when folder exists with divergent year."""
-    # Pre-existing problem with year 2020
-    existing_dir = tmp_path / "Torre de Dados"
-    existing_dir.mkdir(parents=True)
-    with open(existing_dir / "problem.json", "w", encoding="utf-8") as f:
-        json.dump({"title": "Torre de Dados", "year": "2020"}, f)
-
+def test_save_problem_year_and_level_separation(sample_problem, tmp_path):
+    """Validates separating problems of same name across different years or levels."""
     extractor = OpenAiExtractor(client=MagicMock())
-    # sample_problem has year 2024
-    saved_path = extractor.save_problem(sample_problem, output_base=tmp_path)
 
-    expected_file = tmp_path / "Torre de Dados_2024" / "problem.json"
-    assert saved_path == expected_file
-    assert expected_file.exists()
+    # Save problem from 2024 nivel pj
+    path_2024 = extractor.save_problem(sample_problem, output_base=tmp_path)
+    assert path_2024 == tmp_path / "2024" / "pj" / "Torre de Dados" / "problem.json"
+    assert path_2024.exists()
+
+    # Save homonymous problem from 2020 nivel p1
+    problem_2020 = ProblemSchema(
+        title="Torre de Dados",
+        statement="Outro enunciado...",
+        input="...",
+        output="...",
+        constraints="...",
+        examples=[],
+        year="2020",
+        level="P1",
+    )
+    path_2020 = extractor.save_problem(problem_2020, output_base=tmp_path)
+    assert path_2020 == tmp_path / "2020" / "p1" / "Torre de Dados" / "problem.json"
+    assert path_2020.exists()
+    assert path_2024.exists()
 
 
 def test_save_problem_sanitizes_special_characters(tmp_path):
@@ -137,7 +146,7 @@ def test_save_problem_sanitizes_special_characters(tmp_path):
     extractor = OpenAiExtractor(client=MagicMock())
     saved_path = extractor.save_problem(problem, output_base=tmp_path)
 
-    expected_dir = tmp_path / "Qual e o Maior"
+    expected_dir = tmp_path / "2022" / "geral" / "Qual e o Maior"
     assert saved_path == expected_dir / "problem.json"
     assert expected_dir.exists()
 
@@ -151,10 +160,11 @@ def test_process_cadernos_batch(mock_client, sample_problem, tmp_path):
     mock_response.output_text = json.dumps([sample_problem.to_dict()])
     mock_client.responses.create.return_value = mock_response
 
-    output_dir = tmp_path / "output"
+    output_dir = tmp_path / "output_with_code"
     extractor = OpenAiExtractor(client=mock_client)
     extracted, errors = extractor.process_cadernos([p1], output_base=output_dir)
 
     assert len(extracted) == 1
     assert len(errors) == 0
-    assert (output_dir / "Torre de Dados" / "problem.json").exists()
+    assert (output_dir / "2024" / "pj" / "Torre de Dados" / "problem.json").exists()
+
