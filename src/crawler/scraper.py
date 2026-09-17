@@ -1,8 +1,11 @@
 """HTML parser and link extractor for OBI past exams."""
 import re
 from dataclasses import dataclass
+from pathlib import Path
+from typing import Optional
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
+
 
 
 @dataclass(frozen=True)
@@ -13,6 +16,19 @@ class CadernoLink:
     ano: int
     nivel: str
     texto_link: str
+
+
+@dataclass(frozen=True)
+class CodigoSolucao:
+    """Representa um codigo-fonte ou solucao oficial descoberta."""
+    ano: int
+    nivel: str
+    nome_problema: str
+    linguagem: str
+    url: str
+    nome_arquivo: str
+    caminho_local: Optional[Path] = None
+    texto_link: str = ""
 
 
 class ObiScraper:

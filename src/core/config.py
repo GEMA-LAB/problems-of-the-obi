@@ -64,3 +64,47 @@ DEFAULT_CADERNOS_DIR = Path("cadernos")
 DEFAULT_GABARITOS_DIR = Path("gabaritos")
 DEFAULT_CODIGO_DIR = Path("codigo")
 DEFAULT_OUTPUT_DIR = Path("output_question_obi")
+
+# Extensoes e mapeamentos para codigos e solucoes oficiais
+EXTENSOES_CODIGO = (
+    ".c",
+    ".cpp",
+    ".cc",
+    ".cxx",
+    ".py",
+    ".py3",
+    ".java",
+    ".pas",
+    ".js",
+    ".zip",
+)
+
+MAPEAMENTO_LINGUAGEM = {
+    ".c": "c",
+    ".cpp": "cpp",
+    ".cc": "cpp",
+    ".cxx": "cpp",
+    ".py": "py",
+    ".py3": "py",
+    ".java": "java",
+    ".pas": "pas",
+    ".js": "js",
+    ".zip": "zip",
+}
+
+
+class CodigoCrawlerConfig:
+    """Configuracao do crawler de codigos de solucao."""
+
+    def __init__(
+        self,
+        pasta_base: Path = DEFAULT_CODIGO_DIR,
+        timeout: int = DEFAULT_TIMEOUT,
+        delay_requests: float = DEFAULT_REQUEST_DELAY,
+        extensoes_validas: tuple[str, ...] = EXTENSOES_CODIGO,
+    ):
+        self.pasta_base = Path(pasta_base)
+        self.timeout = timeout
+        self.delay_requests = delay_requests
+        self.extensoes_validas = extensoes_validas
+
