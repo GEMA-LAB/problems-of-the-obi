@@ -77,13 +77,13 @@ problems-of-the-obi/
 
 Conforme a diretriz da skill `plans`, a execucao ocorrera na branch `feat/crawler-gabaritos` com commits atomicos individuais por tarefa:
 
-### [ ] Task 1: Criacao da Branch e Modelos de Configuracao e Entidades
+### [x] Task 1: Criacao da Branch e Modelos de Configuracao e Entidades
 - Criar a branch `feat/crawler-gabaritos` a partir de `main`.
 - Adicionar constantes em `src/core/config.py`: `TERMOS_GABARITO = ("gabarito", "testes")` e dataclass `GabaritoCrawlerConfig`.
 - Definir dataclass `GabaritoZIP` em `src/crawler/scraper.py`.
-- **Commit:** `feat(crawler): setup branch and define gabarito crawler configuration models`
+- **Commit:** `2b0e8bd1 feat(crawler): setup branch and define gabarito crawler configuration models`
 
-### [ ] Task 2 (TDD): Extracao de Links de Gabarito no `ObiScraper`
+### [x] Task 2 (TDD): Extracao de Links de Gabarito no `ObiScraper`
 - Criar suite de testes em `tests/unit/test_scraper_gabaritos.py`:
   - Reconhecimento de links `.zip` com termo `gabarito` ou `testes` no `href` ou no texto visivel.
   - Descarte de arquivos que nao sejam `.zip` ou que nao contenham os termos de gabarito.
@@ -93,9 +93,9 @@ Conforme a diretriz da skill `plans`, a execucao ocorrera na branch `feat/crawle
   - Resolucao de URLs relativas para absolutas.
 - Implementar `extract_gabarito_links` no `ObiScraper` em `src/crawler/scraper.py`.
 - Executar `uv run pytest tests/unit/test_scraper_gabaritos.py` ate 100% de aprovacao.
-- **Commit:** `feat(crawler): implement gabarito links extraction in ObiScraper with unit tests`
+- **Commit:** `f8b9226b feat(crawler): implement gabarito links extraction in ObiScraper with unit tests`
 
-### [ ] Task 3 (TDD): Downloader Idempotente e Resiliente de Gabaritos (`GabaritosDownloader`)
+### [x] Task 3 (TDD): Downloader Idempotente e Resiliente de Gabaritos (`GabaritosDownloader`)
 - Criar suite de testes em `tests/unit/test_gabaritos_downloader.py`:
   - Sanitizacao de nomes de arquivo (remocao de `\ / : * ? " < > |`).
   - Resolucao correta de caminho local: `gabaritos/[ano]/[nivel]/[nome_sanitizado].zip`.
@@ -105,22 +105,22 @@ Conforme a diretriz da skill `plans`, a execucao ocorrera na branch `feat/crawle
   - Persistencia de mapeamento no `.manifest.json`.
 - Implementar `GabaritosDownloader` em `src/crawler/gabaritos_downloader.py`.
 - Executar `uv run pytest tests/unit/test_gabaritos_downloader.py` ate 100% de aprovacao.
-- **Commit:** `feat(crawler): implement idempotent GabaritosDownloader with ZIP integrity validation`
+- **Commit:** `dd025839 feat(crawler): implement idempotent GabaritosDownloader with ZIP integrity validation`
 
-### [ ] Task 4: Integracao no CLI (`main.py`)
+### [x] Task 4: Integracao no CLI (`main.py`)
 - Refatorar a chamada da etapa `--step download-gabaritos` em `main.py` para utilizar `GabaritosDownloader`.
 - Suportar filtros de escopo `--ano` e `--nivel`, alem da flag `--force`.
 - Atualizar `tests/unit/test_cli.py` para cobrir o acionamento do step `download-gabaritos`.
-- **Commit:** `feat(cli): integrate modular GabaritosDownloader into main CLI`
+- **Commit:** `a5d80131 feat(cli): integrate modular GabaritosDownloader into main CLI`
 
-### [ ] Task 5: Validacao da Suite Completa e Execucao Pratica
-- Executar a suite completa de testes: `uv run pytest -v` (garantindo zero regressoes em cadernos, codigos, scrapers e gabaritos).
+### [x] Task 5: Validacao da Suite Completa e Execucao Pratica
+- Executar a suite completa de testes: `uv run pytest -v` (garantindo zero regressoes em cadernos, codigos, scrapers e gabaritos: 53 testes aprovados).
 - Executar teste pratico controlado: `uv run main.py --step download-gabaritos --ano 2023 --nivel pj`.
-- Validar criacao correta da arvore de diretorios `gabaritos/2023/pj/` com arquivos `.zip` validos e nao corrompidos.
-- Validar idempotencia em reexecucao consecutiva.
-- **Commit:** `test(crawler): verify full test suite and validate gabaritos downloader execution`
+- Validar criacao correta da arvore de diretorios `gabaritos/2023/pj/` com 13 arquivos `.zip` validos e nao corrompidos.
+- Validar idempotencia em reexecucao consecutiva (13 encontrados, 0 baixados, 13 ja existentes).
+- **Commit:** `a7c460c1 test(crawler): verify full test suite and validate gabaritos downloader execution`
 
-### [ ] Task 6: Documentacao, Finalizacao e Abertura de Pull Request
+### [x] Task 6: Documentacao, Finalizacao e Abertura de Pull Request
 - Atualizar checklist em `.gemini/plans/crawler-gabaritos-plan.md` com status de conclusao e hashes dos commits.
 - Atualizar tabela de consumo de tokens em `.gemini/prompts/016-criar-plano-crawler-gabaritos.md`.
 - Abrir Pull Request a partir de `feat/crawler-gabaritos` para `main` com o sumario de alteracoes.
