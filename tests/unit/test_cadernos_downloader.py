@@ -190,3 +190,85 @@ def test_crawl_and_download_with_filter(tmp_path, sample_obi_html):
     assert stats["encontrados"] == 1
     assert stats["baixados"] == 1
     assert stats["falhas"] == 0
+
+
+def test_probe_static_cadernos_finds_candidates(tmp_path):
+    mock_http = MagicMock(spec=HttpClient)
+    downloader = CadernosDownloader(http_client=mock_http, base_output_dir=tmp_path, request_delay=0)
+
+    # Simula que ProvaOBI2018_f1pj.pdf e ProvaOBI2018_f1p1.pdf existem via HEAD
+    def mock_head(url):
+        res = MagicMock()
+        if "ProvaOBI2018_f1pj.pdf" in url or "ProvaOBI2018_f1p1.pdf" in url:
+            res.status_code = 200
+            return res
+        res.status_code = 404
+        return res
+
+    mock_http.head.side_effect = mock_head
+
+    links = downloader.probe_static_cadernos(2018)
+
+    assert len(links) == 2
+    filenames = [l.nome_arquivo for l in links]
+    assert "ProvaOBI2018_f1pj.pdf" in filenames
+    assert "ProvaOBI2018_f1p1.pdf" in filenames
+    levels = {l.nome_arquivo: l.nivel for l in links}
+    assert levels["ProvaOBI2018_f1pj.pdf"] == "pj"
+    assert levels["ProvaOBI2018_f1p1.pdf"] == "p1"
+
+
+def test_crawl_and_download_triggers_static_probing_when_no_html_links_found(tmp_path):
+    mock_http = MagicMock(spec=HttpClient)
+    # Pagina HTML retorna 404
+    mock_http.get.return_value = None
+    mock_http.download_file.return_value = True
+
+    downloader = CadernosDownloader(http_client=mock_http, base_output_dir=tmp_path, request_delay=0)
+
+    # Mock de probe_static_cadernos
+    link_2018 = CadernoLink(
+        url="https://olimpiada.ic.unicamp.br/static/extras/obi2018/provas/ProvaOBI2018_f1pj.pdf",
+        nome_arquivo="ProvaOBI2018_f1pj.pdf",
+        ano=2018,
+        nivel="pj",
+        texto_link="Caderno PJ"
+    )
+    downloader.probe_static_cadernos = MagicMock(return_value=[link_2018])
+
+    stats = downloader.crawl_and_download(ano_filtro=2018)
+
+    downloader.probe_static_cadernos.assert_called_once_with(2018)
+    assert stats["encontrados"] == 1
+    assert stats["baixados"] == 1
+    assert stats["falhas"] == 0
+
+
+def test_crawl_and_download_processes_cfobi(tmp_path):
+    mock_http = MagicMock(spec=HttpClient)
+    mock_response = MagicMock()
+    mock_response.status_code = 200
+    mock_response.text = '''
+    <html>
+        <body>
+            <a href="/static/extras/obi2024/provas/ProvaOBI2024_cfpj.pdf">Caderno Feminina PJ</a>
+        </body>
+    </html>
+    '''
+    mock_http.get.return_value = mock_response
+    mock_http.download_file.return_value = True
+
+    downloader = CadernosDownloader(http_client=mock_http, base_output_dir=tmp_path, request_delay=0)
+
+    stats = downloader.crawl_and_download(
+        ano_filtro=2024,
+        padroes=["cfobi/programacao/cadernos/"]
+    )
+
+    assert stats["encontrados"] == 1
+    assert stats["baixados"] == 1
+    expected_path = tmp_path / "2024" / "pj" / "ProvaOBI2024_cfpj.pdf"
+    mock_http.download_file.assert_called_once_with(
+        "https://olimpiada.ic.unicamp.br/static/extras/obi2024/provas/ProvaOBI2024_cfpj.pdf",
+        expected_path
+    )
