@@ -785,7 +785,7 @@ def main():
 
     args = parser.parse_args()
 
-    print("\n🚀 INICIANDO PIPELINE DE AUTOMAÇÃO DA OBI 🚀\n")
+    print("\nINICIANDO PIPELINE DE AUTOMACAO DA OBI\n")
 
     # Passo 1: Baixar PDFs (via CadernosDownloader modular)
     if args.step in ["download-cadernos", "all"]:
@@ -798,16 +798,16 @@ def main():
             nivel_filtro=args.nivel,
             force=args.force
         )
-        print(f"Estatísticas dos Cadernos: {stats}")
+        print(f"Estatisticas dos Cadernos: {stats}")
 
         if args.step == "download-cadernos":
-            print("\n🎉 ETAPA DOWNLOAD-CADERNOS FINALIZADA! 🎉")
+            print("\nETAPA DOWNLOAD-CADERNOS FINALIZADA COM SUCESSO.")
             return
 
     # Passo 2: Mandar para LLM
     if args.step in ["extract-questions", "all"]:
         print(f"\n{'='*40}")
-        print("2. EXTRAÇÃO DE DADOS (API GEMINI)")
+        print("2. EXTRACAO DE DADOS (API GEMINI)")
         print(f"{'='*40}")
         path_data = Path("backup")
         pdfs_path = list(path_data.rglob("*.pdf"))
@@ -819,21 +819,21 @@ def main():
                 break
 
         if args.step == "extract-questions":
-            print("\n🎉 ETAPA EXTRACT-QUESTIONS FINALIZADA! 🎉")
+            print("\nETAPA EXTRACT-QUESTIONS FINALIZADA COM SUCESSO.")
             return
 
     # Passo 3: Baixar ZIPs de gabaritos
     if args.step in ["download-gabaritos", "all"]:
         baixar_gabaritos()
         if args.step == "download-gabaritos":
-            print("\n🎉 ETAPA DOWNLOAD-GABARITOS FINALIZADA! 🎉")
+            print("\nETAPA DOWNLOAD-GABARITOS FINALIZADA COM SUCESSO.")
             return
 
     # Passo 4: Cruzar ZIPs com Pastas Output
     if args.step in ["organize-testcases", "all"]:
         organizar_test_cases()
         if args.step == "organize-testcases":
-            print("\n🎉 ETAPA ORGANIZE-TESTCASES FINALIZADA! 🎉")
+            print("\nETAPA ORGANIZE-TESTCASES FINALIZADA COM SUCESSO.")
             return
 
     # Passo 5: Limpar estrutura dos ZIPs
@@ -842,10 +842,10 @@ def main():
         limpar_test_cases()
         remover_questoes_sem_testes()
         if args.step == "clean-testcases":
-            print("\n🎉 ETAPA CLEAN-TESTCASES FINALIZADA! 🎉")
+            print("\nETAPA CLEAN-TESTCASES FINALIZADA COM SUCESSO.")
             return
 
-    print("\n🎉 PIPELINE COMPLETA FINALIZADA COM SUCESSO! 🎉")
+    print("\nPIPELINE COMPLETA FINALIZADA COM SUCESSO.")
 
 
 if __name__ == "__main__":
