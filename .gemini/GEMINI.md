@@ -37,6 +37,13 @@ Você é um desenvolvedor sênior em Python, especialista em arquitetura de soft
   2. **Plan:** Gerar o plano de implementação técnico correspondente e salvá-lo em [`.gemini/plans/[funcionalidade]-plan.md`](file:///c:/Users/Victo/Desktop/Ufal/problems-of-the-obi/.gemini/plans).
   3. **TDD:** Disparar a transição para a fase de testes via skill `tdd`.
 
+### Comando `/plans` (Gestão de Planos de Implementação)
+- **Gatilho:** Acionado via `/plans` ou ao solicitar a criação de um plano a partir de uma spec.
+- **Procedimento:** Seguir a skill [`.gemini/skills/plans/SKILL.md`](file:///c:/Users/Victo/Desktop/Ufal/problems-of-the-obi/.gemini/skills/plans/SKILL.md):
+  1. O plano deve sempre criar uma nova branch de funcionalidade a partir da branch principal `main`.
+  2. Cada task executada do plano deve conter um commit atômico individual.
+  3. Ao finalizar o plano, deve ser aberto um Pull Request listando todas as alterações e tarefas concluídas.
+
 ### Comando `/tdd` (Test-Driven Development)
 - **Gatilho:** Acionado via `/tdd` ou como etapa pós-spec/plano.
 - **Procedimento:** Seguir a skill [`.gemini/skills/tdd/SKILL.md`](file:///c:/Users/Victo/Desktop/Ufal/problems-of-the-obi/.gemini/skills/tdd/SKILL.md):
