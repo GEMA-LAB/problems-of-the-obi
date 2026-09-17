@@ -36,11 +36,12 @@ Esses organizar_test_cases deve organizar tanto o test_cases e solution na quest
 
 | Métrica | Quantidade de Tokens |
 | :--- | :--- |
-| **Input Tokens (Total)** | *Em medição* |
-| ↳ *Input sem cache* | *Em medição* |
-| ↳ *Input em cache (Prompt Cache)* | *Em medição* |
-| **Output Tokens (Total)** | *Em medição* |
-| ↳ *Thinking / Raciocínio* | *Em medição* |
-| ↳ *Respostas / Chamadas de Ferramenta* | *Em medição* |
-| **Total Geral (Input + Output)** | *Em medição* |
-| **Iterações / Chamadas ao Modelo** | *Em medição* |
+| **Input Tokens (Total)** | **1.648.915** |
+| ↳ *Input sem cache* | 321.594 |
+| ↳ *Input em cache (Prompt Cache)* | 1.327.321 |
+| **Output Tokens (Total)** | **20.111** |
+| ↳ *Thinking / Raciocínio* | 8.291 |
+| ↳ *Respostas / Chamadas de Ferramenta* | 11.820 |
+| **Total Geral (Input + Output)** | **1.669.026** |
+| **Iterações / Chamadas ao Modelo** | **35** |
+
