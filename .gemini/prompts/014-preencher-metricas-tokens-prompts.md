@@ -28,4 +28,19 @@ Coloque
 ## Resumo das Métricas Inseridas
 
 - **Prompt 012 (Criação do Plano):** 1.695.816 tokens de entrada (1.267.154 em cache), 17.852 tokens de saída, 34 iterações.
-- **Prompt 013 (Execução do Plano):** 9.275.808 tokens de entrada (7.918.083 em cache), 33.033 tokens de saída, 79 iterações.
+- **Prompt 013 (Execução do Plano):** 9.425.371 tokens de entrada (8.064.394 em cache), 34.028 tokens de saída, 80 iterações.
+
+---
+
+## Consumo de Tokens (Execução do Prompt)
+
+| Métrica | Quantidade de Tokens |
+| :--- | :--- |
+| **Input Tokens (Total)** | **2.919.201** |
+| ↳ *Input sem cache* | 80.418 |
+| ↳ *Input em cache (Prompt Cache)* | 2.838.783 |
+| **Output Tokens (Total)** | **9.206** |
+| ↳ *Thinking / Raciocínio* | 2.884 |
+| ↳ *Respostas / Chamadas de Ferramenta* | 6.322 |
+| **Total Geral (Input + Output)** | **2.928.407** |
+| **Iterações / Chamadas ao Modelo** | 18 |
