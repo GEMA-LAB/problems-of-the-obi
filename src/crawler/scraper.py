@@ -8,6 +8,9 @@ from bs4 import BeautifulSoup
 
 
 
+from src.core.config import EXTENSOES_CODIGO, MAPEAMENTO_LINGUAGEM
+
+
 @dataclass(frozen=True)
 class CadernoLink:
     """Represents a discovered exam PDF link."""
@@ -55,6 +58,34 @@ class ObiScraper:
 
         return "geral"
 
+    def infer_language(self, filename: str) -> Optional[str]:
+        """Infers the programming language from filename extension."""
+        suffix = Path(filename).suffix.lower()
+        # Tratamento para extensoes duplas ou especiais (ex: .c.txt -> .c ou .py3 -> py)
+        if filename.lower().endswith(".py3"):
+            return "py"
+        return MAPEAMENTO_LINGUAGEM.get(suffix)
+
+    def infer_problem_name(self, url_path: str) -> str:
+        """Infers problem name from solution directory structure or filename."""
+        clean_path = url_path.strip("/").replace("\\", "/")
+        parts = clean_path.split("/")
+
+        if len(parts) >= 2:
+            parent_folder = parts[-2]
+            if "_" in parent_folder:
+                # Exemplo: 2022f1pj_cinema -> cinema
+                return parent_folder.split("_", 1)[1].lower()
+            if parent_folder.lower() not in ["solucoes", "codigo", "extras"]:
+                return parent_folder.lower()
+
+        # Fallback para nome do arquivo sem extensao
+        filename = parts[-1]
+        stem = Path(filename).stem
+        if "_" in stem:
+            return stem.split("_", 1)[0].lower()
+        return stem.lower()
+
     def extract_pdf_links(self, html: str, page_url: str, ano: int) -> list[CadernoLink]:
         """Parses HTML content, extracts all PDF links, resolves absolute URLs and infers levels."""
         soup = BeautifulSoup(html, "html.parser")
@@ -84,3 +115,64 @@ class ObiScraper:
             ))
 
         return discovered
+
+    def extract_code_links(self, html: str, page_url: str, ano: int) -> list[CodigoSolucao]:
+        """Parses HTML content, extracts official code solution links, resolves absolute URLs."""
+        soup = BeautifulSoup(html, "html.parser")
+        discovered: list[CodigoSolucao] = []
+        seen_urls: set[str] = set()
+
+        for a_tag in soup.find_all("a", href=True):
+            href = a_tag["href"].strip()
+            lower_href = href.lower()
+
+            # Descartar cadernos PDF
+            if lower_href.endswith(".pdf"):
+                continue
+
+            # Descartar arquivos de gabarito ou testes
+            if "/gabaritos/" in lower_href or "gabarito" in lower_href:
+                continue
+
+            # Para arquivos zip, incluir apenas se estiver em pasta de solucoes ou tiver solucao no nome
+            if lower_href.endswith(".zip") and "/solucoes/" not in lower_href and "soluc" not in lower_href:
+                continue
+
+            # Verificar se extensao eh valida
+            has_valid_ext = any(lower_href.endswith(ext) for ext in EXTENSOES_CODIGO)
+            if not has_valid_ext:
+                continue
+
+            absolute_url = urljoin(page_url, href)
+
+            # Restringir apenas a links do dominio da OBI ou relativos
+            if "olimpiada.ic.unicamp.br" not in absolute_url:
+                continue
+
+            if absolute_url in seen_urls:
+                continue
+
+            filename = href.split("/")[-1]
+            linguagem = self.infer_language(filename)
+            if not linguagem:
+                continue
+
+            seen_urls.add(absolute_url)
+            link_text = a_tag.get_text(strip=True)
+
+            # Inferir nivel considerando a URL da pagina e o caminho do proprio link
+            nivel = self.infer_level_or_phase(f"{page_url} {href}", link_text, filename)
+            nome_problema = self.infer_problem_name(href)
+
+            discovered.append(CodigoSolucao(
+                ano=ano,
+                nivel=nivel,
+                nome_problema=nome_problema,
+                linguagem=linguagem,
+                url=absolute_url,
+                nome_arquivo=filename,
+                texto_link=link_text
+            ))
+
+        return discovered
+
