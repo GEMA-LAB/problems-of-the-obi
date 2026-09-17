@@ -34,6 +34,17 @@ class CodigoSolucao:
     texto_link: str = ""
 
 
+@dataclass(frozen=True)
+class GabaritoZIP:
+    """Representa um arquivo compactado (.zip) de gabarito ou casos de teste."""
+    ano: int
+    nivel: str
+    nome_questao: str
+    url: str
+    caminho_local: Optional[Path] = None
+    texto_link: str = ""
+
+
 class ObiScraper:
     """Scraper for OBI past competition pages."""
 
