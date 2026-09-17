@@ -211,4 +211,6 @@ cadernos/*
 !cadernos/example.txt
 gabaritos/*
 !gabaritos/example.txt
+codigo/*
+!codigo/example.txt
 !output/var
