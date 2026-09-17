@@ -17,6 +17,7 @@ import argparse
 from src.crawler.cadernos_downloader import CadernosDownloader
 from src.crawler.codigos_downloader import CodigosDownloader
 from src.crawler.gabaritos_downloader import GabaritosDownloader
+from src.extractor import OpenAiExtractor
 from openai import OpenAI
 
 # Carregar variáveis de ambiente
@@ -829,18 +830,32 @@ def main():
             print("\nETAPA DOWNLOAD-CODIGOS FINALIZADA COM SUCESSO.")
             return
 
-    # Passo 2: Mandar para LLM
+    # Passo 2: Mandar para LLM (via OpenAiExtractor modular)
     if args.step in ["extract-questions", "all"]:
         print(f"\n{'='*40}")
         print("2. EXTRACAO DE DADOS (API OPENAI)")
         print(f"{'='*40}")
         path_data = Path("cadernos") if Path("cadernos").exists() else Path("backup")
-        pdfs_path = list(path_data.rglob("*.pdf"))
 
-        while True:
-            pdfs_path = create_questions_gpt(pdfs_path=pdfs_path)
-            if len(pdfs_path) == 0:
-                break
+        # Filtros por ano e nivel se informados
+        if args.ano and args.nivel:
+            busca_path = path_data / str(args.ano) / args.nivel.lower()
+            pdfs_path = list(busca_path.rglob("*.pdf")) if busca_path.exists() else []
+        elif args.ano:
+            busca_path = path_data / str(args.ano)
+            pdfs_path = list(busca_path.rglob("*.pdf")) if busca_path.exists() else []
+        else:
+            pdfs_path = list(path_data.rglob("*.pdf"))
+            if args.nivel:
+                pdfs_path = [p for p in pdfs_path if args.nivel.lower() in [part.lower() for part in p.parts]]
+
+        extractor = OpenAiExtractor()
+        max_tentativas = 3
+        tentativa = 0
+        while pdfs_path and tentativa < max_tentativas:
+            tentativa += 1
+            print(f"Tentativa {tentativa} de extracao ({len(pdfs_path)} arquivos)...")
+            _, pdfs_path = extractor.process_cadernos(pdfs_path)
 
         if args.step == "extract-questions":
             print("\nETAPA EXTRACT-QUESTIONS FINALIZADA COM SUCESSO.")

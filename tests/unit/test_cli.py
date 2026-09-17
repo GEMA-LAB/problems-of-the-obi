@@ -60,3 +60,17 @@ def test_cli_download_gabaritos_step():
                 force=False
             )
 
+
+def test_cli_extract_questions_step():
+    test_args = ["main.py", "--step", "extract-questions", "--ano", "2024", "--nivel", "pj"]
+
+    with patch.object(sys, "argv", test_args):
+        with patch("main.OpenAiExtractor") as mock_extractor_cls:
+            mock_instance = MagicMock()
+            mock_extractor_cls.return_value = mock_instance
+            mock_instance.process_cadernos.return_value = ([], [])
+
+            main()
+
+            mock_extractor_cls.assert_called_once()
+
