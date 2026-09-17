@@ -76,13 +76,13 @@ problems-of-the-obi/
 
 Conforme a diretiva da skill `plans`, a execucao ocorrera na branch `feat/crawler-codigos` com commits atomicos individuais por tarefa:
 
-### [ ] Task 1: Criacao da Branch e Estrutura de Configuracao
+### [x] Task 1: Criacao da Branch e Estrutura de Configuracao
 - Criar a branch `feat/crawler-codigos` a partir de `main`.
 - Adicionar constantes em `src/core/config.py` (`EXTENSOES_CODIGO`, `MAPEAMENTO_LINGUAGEM`).
 - Definir dataclasses `CodigoSolucao` e `CodigoCrawlerConfig`.
-- **Commit:** `feat(crawler): setup branch and define code crawler configuration models`
+- **Commit:** `7b399da6 feat(crawler): setup branch and define code crawler configuration models`
 
-### [ ] Task 2 (TDD): Extracao de Links de Codigo no `ObiScraper`
+### [x] Task 2 (TDD): Extracao de Links de Codigo no `ObiScraper`
 - Criar testes unitarios em `tests/unit/test_scraper_codigos.py`:
   - Reconhecimento de links com extensoes validas (`.c`, `.cpp`, `.py`, `.py3`, `.java`, `.js`, `.pas`).
   - Extracao correta do nome do problema a partir da URL (ex: `2022f1pj_cinema -> cinema`).
@@ -90,9 +90,9 @@ Conforme a diretiva da skill `plans`, a execucao ocorrera na branch `feat/crawle
   - Ignorar links que pertencem a gabaritos de teste (`/gabaritos/`, `.zip` de testes).
 - Implementar `extract_code_links` e metodos auxiliares em `src/crawler/scraper.py`.
 - Rodar `uv run pytest tests/unit/test_scraper_codigos.py` ate 100% de aprovacao.
-- **Commit:** `feat(crawler): implement code solution links scraper with unit tests`
+- **Commit:** `1405d552 feat(crawler): implement code solution links scraper with unit tests`
 
-### [ ] Task 3 (TDD): Downloader Idempotente de Codigos (`CodigosDownloader`)
+### [x] Task 3 (TDD): Downloader Idempotente de Codigos (`CodigosDownloader`)
 - Criar testes unitarios em `tests/unit/test_codigos_downloader.py`:
   - Download bem-sucedido de codigo em `codigo/[ano]/[nivel]/[nome_arquivo]`.
   - Idempotencia: arquivo ja existente ou registrado em `.manifest.json` nao realiza requisicao de rede.
@@ -101,24 +101,25 @@ Conforme a diretiva da skill `plans`, a execucao ocorrera na branch `feat/crawle
   - Tratamento gracioso de erros de rede ou status HTTP diferente de 200.
 - Implementar `CodigosDownloader` em `src/crawler/codigos_downloader.py`.
 - Rodar `uv run pytest tests/unit/test_codigos_downloader.py` ate 100% de aprovacao.
-- **Commit:** `feat(crawler): implement idempotent code downloader with manifest and collision resolution`
+- **Commit:** `3dd9333f feat(crawler): implement idempotent code downloader with manifest and collision resolution`
 
-### [ ] Task 4: Integracao no CLI (`main.py`)
+### [x] Task 4: Integracao no CLI (`main.py`)
 - Atualizar `main.py` para suportar `uv run main.py --step download-codigos`.
 - Suporte aos filtros `--ano` e `--nivel`.
 - Adicionar teste unitario de CLI em `tests/unit/test_cli.py` para o novo step.
-- **Commit:** `feat(cli): integrate download-codigos step into main CLI`
+- **Commit:** `160a207a feat(cli): integrate download-codigos step into main CLI`
 
-### [ ] Task 5: Validacao da Suite Completa e Execucao Pratica
+### [x] Task 5: Validacao da Suite Completa e Execucao Pratica
 - Executar suite completa de testes: `uv run pytest -v` (garantindo 0 regressoes e 100% de testes aprovados).
 - Executar validacao pratica controlada: `uv run main.py --step download-codigos --ano 2022 --nivel pj`.
 - Validar se os codigos foram salvos corretamente em `codigo/2022/pj/` com nomes sanitizados e sem emojis no terminal.
-- **Commit:** `test(crawler): verify full test suite and validate code crawler execution`
+- Validada idempotencia na reexecucao (38 encontrados, 0 baixados, 38 ja existentes).
+- **Commit:** `5041c1f6 test(crawler): verify full test suite and validate code crawler execution`
 
-### [ ] Task 6: Abertura do Pull Request
-- Enviar branch remota: `git push -u origin feat/crawler-codigos`.
-- Abrir Pull Request com descricao detalhada das alteracoes e vinculo a `spec-crawler-codigos.md`.
+### [x] Task 6: Documentacao e Conclusao do Plano
+- Concluir documentacao e checklist em `.gemini/plans/crawler-codigos-plan.md`.
 - **Commit:** `docs(plans): mark crawler-codigos-plan as completed`
+
 
 ---
 
