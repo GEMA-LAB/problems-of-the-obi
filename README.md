@@ -1,80 +1,149 @@
-# Banco de Problemas OBI — Repositório para Experimentos e Avaliação
+# Banco de Problemas OBI — Repositorio para Experimentos e Avaliacao
 
-Este repositório centraliza, padroniza e disponibiliza problemas da Olimpíada Brasileira de Informática (OBI) com o objetivo de suportar experimentos em recuperação, avaliação e geração automática por modelos de linguagem e sistemas de correção automática.
+Este repositorio centraliza, padroniza e disponibiliza problemas da **Olimpiada Brasileira de Informatica (OBI)** em formato estruturado (`JSON`), associando casos de teste padronizados para suportar experimentos em avaliacao de Modelos de Linguagem (LLMs), sistemas de correcao automatica e pesquisa em inteligencia artificial aplicada a programacao competitiva.
 
-**Resumo:** coletamos provas públicas, extraímos metadados e enunciados em JSON, associamos casos de teste quando disponíveis e organizamos o material em uma estrutura reprodutível para pesquisa.
-
-**Fonte de dados:** [Provas Passadas OBI - Unicamp](https://olimpiada.ic.unicamp.br/passadas/)
-
-**Visão geral do conteúdo**
-- Problemas processados e exportados em JSON na pasta `output`.
-- Gabaritos e casos de teste organizados (quando disponíveis) em arquivos ZIP vinculados ao conjunto.
-- Scripts auxiliares para processamento e verificação em `main.py` e `check_questions.py`.
-
-**Objetivos do repositório**
-- Fornecer um dataset de problemas da OBI, anotado e testável, para avaliação de LLMs e ferramentas de correção automática.
-- Tornar reproduzível o pipeline de extração e organização das provas.
-- Facilitar estudos comparativos, benchmarks e análises métricas sobre desempenho de modelos em problemas de programação competitiva.
-
-## Pipeline de Automação
-O processo automatizado adotado no projeto segue etapas claras e reprodutíveis:
-
-1. Download das provas em PDF a partir das fontes públicas.
-2. Extração dos enunciados e metadados via pipeline automatizado (uso de OCR quando necessário e pós-processamento por LLMs para estruturar JSON).
-3. Download e associação dos gabaritos e casos de teste (.zip) às questões correspondentes.
-4. Organização da saída em diretórios por problema dentro de `output/` (cada problema contém um arquivo `problem.json` com enunciado, entradas, saídas e metadados).
-5. Limpeza e normalização (remoção de duplicatas, padronização de campos, verificação mínima de consistência).
-6. Verificação manual pontual (amostragem e correção de erros críticos, especialmente para imagens e casos de teste faltantes).
-
-## Estatísticas e Resultados (resumo)
-- Total de questões extraídas: 493
-- Com casos de teste: 468
-- Sem casos de teste: 25
-- Com imagens: 188
-- Sem imagens: 305
-- Custo aproximado da extração: R$ 100,00
-- Modelo inicial usado para extração: Gemini 3.1 (etapa de prova-conceitual)
-
-Estado atual dos artefatos: conjuntos gerados estão empacotados como `dataset-questions-obi.zip`, `provas-obi.zip` e `gabaritos-obi.zip`.
-
-## Estrutura do repositório
-- `output/` — diretório com subpastas por problema contendo `problem.json`, recursos e gabaritos quando presentes.
-- `gabaritos_obi/` — repositório local dos gabaritos originais baixados e organizados por ano.
-- `data/` — arquivos de apoio e exemplos de entrada.
-- `main.py` — script principal de orquestração do pipeline.
-- `check_questions.py` e `check_questions.csv` — ferramentas e logs para verificação e controle de qualidade.
-
-## Como usar (rápido)
-1. Instale dependências:
-
-```bash
-pip install -r requirements.txt
-```
-
-2. Executar verificação básica:
-
-```bash
-python check_questions.py
-```
-
-3. Executar o pipeline de extração/parsing (quando disponível e configurado):
-
-```bash
-python main.py
-```
-
-Observação: alguns passos do pipeline requerem arquivos ZIP externos (`provas-obi.zip`, `gabaritos-obi.zip`) e/ou credenciais para baixar fontes; leia os scripts para detalhes de configuração.
-
-## Observações metodológicas (para artigo)
-- Extração automatizada combina OCR (quando necessário) e pós-processamento por LLMs para estruturação em JSON — descreva as heurísticas adotadas ao reproduzir ou estender o trabalho.
-- A associação de casos de teste foi parcialmente automatizada e complementada por verificação manual para garantir correspondência entre enunciados e gabaritos.
-- Limitações conhecidas: erros de OCR em imagens complexas; casos de teste faltantes em algumas questões; ambiguidade em enunciados que exigiram intervenção humana.
-
-## Disponibilidade e uso dos dados
-- Os artefatos empacotados (ZIPs) estão listados na raiz do projeto e podem ser usados para experimentos sob as mesmas condições da fonte pública. Verifique licenças das provas originais antes de redistribuir.
-
-## Contato
-Para dúvidas, colaboração ou solicitações de dados adicionais, abra uma issue ou entre em contato com o mantenedor do repositório.
+- **Fonte de dados oficial:** [Provas Passadas OBI - Unicamp](https://olimpiada.ic.unicamp.br/passadas/)
+- **Objetivo Cientifico:** Criacao de um benchmark reprodutivel, testavel e anotado para avaliar o raciocinio logico e algoritmico de LLMs em lingua portuguesa.
 
 ---
-Versão resumida: este repositório é um banco de problemas da OBI, organizado para pesquisa e escrita de artigos sobre avaliação de modelos em tarefas de programação competitiva.
+
+## Arquitetura e Engenharia de Software
+
+O projeto adota uma **arquitetura orientada a dominios modulares**, garantindo desacoplamento entre as etapas do pipeline e permitindo execucoes isoladas ou em lote.
+
+### Estrutura do Repositorio
+
+```text
+problems-of-the-obi/
+├── .gemini/                           # Governanca, engenharia de prompts e ciclo SDD
+│   ├── GEMINI.md                      # Instrucoes mestras do projeto
+│   ├── plans/                         # Planos tecnicos de implementacao
+│   ├── prompts/                       # Historico rastreavel e metricas de tokens
+│   ├── rules/                         # Regras de arquitetura e desenvolvimento Python
+│   ├── skills/                        # Habilidades do Antigravity (sdd, plans, tdd)
+│   └── specs/                         # Especificacoes formais de cada funcionalidade
+├── cadernos/                          # Cadernos de provas originais em PDF
+│   └── [ano]/[nivel]/[arquivo].pdf
+├── gabaritos/                         # Arquivos ZIP brutos com testes e gabaritos
+│   └── [ano]/[nivel]/[arquivo].zip
+├── codigo/                            # Solucoes e codigos-fonte de referencia
+│   └── [ano]/[nivel]/
+├── output_question_obi/               # Base de dados estruturada do benchmark
+│   └── [ano]/[nivel]/[nome-questao]/
+│       ├── problem.json               # Schema padronizado de metadados e enunciado
+│       └── test_cases/                # Casos de teste normalizados
+│           └── inputs/
+│               ├── [numero].in
+│               └── [numero].out
+├── src/                               # Codigo-fonte modular da aplicacao
+│   ├── core/                          # Configuracoes globais, constantes e cliente HTTP resiliente
+│   │   ├── config.py
+│   │   └── http_client.py
+│   ├── crawler/                       # Dominio 1: Web Scraping do Portal da OBI
+│   │   ├── scraper.py                 # Descoberta de links e inferencia de nivel/fase
+│   │   └── cadernos_downloader.py     # Downloader de cadernos com idempotencia
+│   ├── extractor/                     # Dominio 2: Extracao estruturada via LLM (Gemini/GPT)
+│   ├── processor/                     # Dominio 3: Associacao, descompactacao e normalizacao de testes
+│   └── reporter/                      # Dominio 4: Auditoria do dataset e documentacao
+├── tests/                             # Suite de testes automatizados (TDD)
+│   ├── conftest.py
+│   └── unit/                          # Testes unitarios isolados por modulo
+├── main.py                            # Ponto de entrada unificado e interface CLI
+├── pyproject.toml                     # Gerenciamento de dependencias via uv
+└── README.md                          # Documentacao do projeto
+```
+
+---
+
+## Dominios e Pipeline de Automacao
+
+1. **Dominio Crawler (Download de Cadernos e Gabaritos):**
+   - Varre as paginas de provas da OBI (1999–2026) cobrindo todas as fases e niveis (PJ, P1, P2, Senior).
+   - Realiza download resiliente e idempotente com controle de taxa de requisicoes (0.5s) e timeout estrito (15s).
+
+2. **Dominio Extractor (Extracao via LLM):**
+   - Processa os cadernos PDF atraves de APIs multimodais (Google Gemini / OpenAI).
+   - Extrai enunciados, limites de tempo/memoria, secoes de entrada/saida, pontuacoes de subtarefas e categorias em schema JSON estrito (`problem.json`).
+
+3. **Dominio Processor (Associacao e Normalizacao de Testes):**
+   - Executa a correspondencia normalizada Unicode entre o nome da questao e o arquivo ZIP de gabarito.
+   - Descompacta e padroniza pares identicos de casos de teste: `inputs/[numero].in` e `inputs/[numero].out`.
+   - Remove residuos temporarios e descarta questoes sem casos de teste validos.
+
+4. **Dominio Reporter (Auditoria e Relatorios):**
+   - Varre o diretorio gerado, valida consistencia estrutural e atualiza dinamicamente as tabelas de progresso e estatisticas.
+
+---
+
+## Como Executar
+
+### 1. Pre-requisitos
+O projeto utiliza o gerenciador de ambientes Python **[uv](https://github.com/astral-sh/uv)**:
+
+```bash
+# Clonar o repositorio
+git clone https://github.com/GEMA-LAB/problems-of-the-obi.git
+cd problems-of-the-obi
+
+# Criar e ativar o ambiente virtual
+uv venv .venv
+source .venv/bin/activate  # Linux/macOS
+# ou no Windows:
+.venv\Scripts\activate
+
+# Sincronizar dependencias
+uv sync
+```
+
+### 2. Execucao da Suite de Testes (TDD)
+Todos os modulos sao cobertos por testes unitarios com mocks de rede:
+
+```bash
+uv run pytest -v
+```
+
+### 3. Execucao Modular via CLI (`main.py`)
+A execucao pode ser realizada etapa por etapa ou em lote, com suporte a filtros por ano e nivel:
+
+```bash
+# Ajuda e listagem de parametros
+uv run python main.py --help
+
+# Download exclusivo dos cadernos de provas em PDF (Etapa 1)
+uv run python main.py --step download-cadernos
+
+# Filtrar por ano especifico (ex: 2024) e nivel especifico (ex: pj)
+uv run python main.py --step download-cadernos --ano 2024 --nivel pj
+
+# Forcar novo download de arquivos pre-existentes
+uv run python main.py --step download-cadernos --force
+
+# Executar pipeline completa (todas as etapas sequenciais)
+uv run python main.py --step all
+```
+
+---
+
+## Metodologia de Desenvolvimento (SDD e TDD)
+
+O repositorio adota **Spec-Driven Development (SDD)** acoplado a **Test-Driven Development (TDD)**:
+
+- **Especificacoes (`.gemini/specs/`):** Cada funcionalidade e formalmente especificada definindo objetivos, entidades, regras de negocio, invariantes e cenarios antes do codigo.
+- **Planos Tecnicos (`.gemini/plans/`):** Toda funcionalidade possui plano de execucao com branch dedicada (`feat/[funcionalidade]`), commits atomicos por tarefa e criterios de aceite.
+- **TDD Rigoroso:** Testes unitarios sao escritos e validados previamente a implementacao do codigo de producao em `src/`.
+
+---
+
+## Estatisticas do Dataset Extraido (Resultados Preliminares)
+
+- **Total de questoes processadas:** 493
+- **Com casos de teste oficiais:** 468
+- **Com ilustracoes/figuras:** 188
+- **Sem figuras:** 305
+- **Modelo base de prova-de-conceito:** Gemini 3.1 Flash / Gemini 3.8 Flash
+
+---
+
+## Licenca e Uso Academico
+
+Os enunciados e provas originais sao de titularidade do Instituto de Computacao da **Universidade Estadual de Campinas (UNICAMP)** e da organizacao da OBI. Este repositorio destina-se estritamente para **fins de pesquisa cientifica, benchmarks academicos e avaliacao educacional**.

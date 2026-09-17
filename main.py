@@ -13,6 +13,8 @@ from pathlib import Path
 from google import genai
 from google.genai import types
 import time
+import argparse
+from src.crawler.cadernos_downloader import CadernosDownloader
 from openai import OpenAI
 
 # Carregar variáveis de ambiente
@@ -769,39 +771,82 @@ def remover_questoes_sem_testes():
 
 
 # =====================================================================
-# INICIALIZAÇÃO DA PIPELINE
-# =====================================================================
-if __name__ == "__main__":
-    print("\n🚀 INICIANDO PIPELINE DE AUTOMAÇÃO DA OBI 🚀\n")
+def main():
+    parser = argparse.ArgumentParser(description="Pipeline de Automação e Catalogação da OBI")
+    parser.add_argument(
+        "--step",
+        choices=["download-cadernos", "download-gabaritos", "extract-questions", "organize-testcases", "clean-testcases", "all"],
+        default="all",
+        help="Etapa específica a ser executada (padrão: all)"
+    )
+    parser.add_argument("--ano", type=int, default=None, help="Filtrar por ano específico (ex: 2024)")
+    parser.add_argument("--nivel", type=str, default=None, help="Filtrar por nível específico (ex: pj, p1, p2, senior)")
+    parser.add_argument("--force", action="store_true", help="Forçar download mesmo se o arquivo já existir")
 
-    # Passo 1: Baixar PDFs
-    baixar_cadernos_pdf()
+    args = parser.parse_args()
+
+    print("\nINICIANDO PIPELINE DE AUTOMACAO DA OBI\n")
+
+    # Passo 1: Baixar PDFs (via CadernosDownloader modular)
+    if args.step in ["download-cadernos", "all"]:
+        print(f"\n{'='*40}")
+        print("1. DOWNLOAD DOS CADERNOS (PDFs)")
+        print(f"{'='*40}")
+        downloader = CadernosDownloader()
+        stats = downloader.crawl_and_download(
+            ano_filtro=args.ano,
+            nivel_filtro=args.nivel,
+            force=args.force
+        )
+        print(f"Estatisticas dos Cadernos: {stats}")
+
+        if args.step == "download-cadernos":
+            print("\nETAPA DOWNLOAD-CADERNOS FINALIZADA COM SUCESSO.")
+            return
 
     # Passo 2: Mandar para LLM
-    print(f"\n{'='*40}")
-    print("2. EXTRAÇÃO DE DADOS (API GEMINI)")
-    print(f"{'='*40}")
-    path_data = Path("backup")
-    pdfs_path = list(path_data.rglob("*.pdf"))
+    if args.step in ["extract-questions", "all"]:
+        print(f"\n{'='*40}")
+        print("2. EXTRACAO DE DADOS (API GEMINI)")
+        print(f"{'='*40}")
+        path_data = Path("backup")
+        pdfs_path = list(path_data.rglob("*.pdf"))
 
-    while True:
-        #pdfs_path = create_questions_gpt(pdfs_path=pdfs_path)
-        pdfs_path = create_questions(pdfs_path=pdfs_path)
-        if len(pdfs_path) == 0:
-            break
+        while True:
+            #pdfs_path = create_questions_gpt(pdfs_path=pdfs_path)
+            pdfs_path = create_questions(pdfs_path=pdfs_path)
+            if len(pdfs_path) == 0:
+                break
+
+        if args.step == "extract-questions":
+            print("\nETAPA EXTRACT-QUESTIONS FINALIZADA COM SUCESSO.")
+            return
 
     # Passo 3: Baixar ZIPs de gabaritos
-    baixar_gabaritos()
+    if args.step in ["download-gabaritos", "all"]:
+        baixar_gabaritos()
+        if args.step == "download-gabaritos":
+            print("\nETAPA DOWNLOAD-GABARITOS FINALIZADA COM SUCESSO.")
+            return
 
     # Passo 4: Cruzar ZIPs com Pastas Output
-    organizar_test_cases()
+    if args.step in ["organize-testcases", "all"]:
+        organizar_test_cases()
+        if args.step == "organize-testcases":
+            print("\nETAPA ORGANIZE-TESTCASES FINALIZADA COM SUCESSO.")
+            return
 
     # Passo 5: Limpar estrutura dos ZIPs
-    limpar_pastas_test_cases()
-    limpar_test_cases()
+    if args.step in ["clean-testcases", "all"]:
+        limpar_pastas_test_cases()
+        limpar_test_cases()
+        remover_questoes_sem_testes()
+        if args.step == "clean-testcases":
+            print("\nETAPA CLEAN-TESTCASES FINALIZADA COM SUCESSO.")
+            return
 
-    # Passo 5.5: NOVO - Remover questões sem testes válidos
-    # Só executar caso queira apenas as questões padronizadas
-    remover_questoes_sem_testes()
+    print("\nPIPELINE COMPLETA FINALIZADA COM SUCESSO.")
 
-    print("\n🎉 PIPELINE FINALIZADA COM SUCESSO! 🎉")
+
+if __name__ == "__main__":
+    main()

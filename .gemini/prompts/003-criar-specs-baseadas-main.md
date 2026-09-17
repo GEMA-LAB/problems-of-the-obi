@@ -15,11 +15,11 @@ Através do @[c:\Users\Victo\Desktop\Ufal\problems-of-the-obi\.gemini\skills\sdd
 
 | Métrica | Quantidade de Tokens |
 | :--- | :--- |
-| **Input Tokens (Total)** | **1.482.805** |
-| ↳ *Input sem cache* | 277.928 |
-| ↳ *Input em cache (Prompt Cache)* | 1.204.877 |
-| **Output Tokens (Total)** | **11.194** |
-| ↳ *Thinking / Raciocínio* | 5.564 |
-| ↳ *Respostas / Chamadas de Ferramenta* | 5.630 |
-| **Total Geral (Input + Output)** | **1.493.999** |
-| **Iterações / Chamadas ao Modelo** | 12 |
+| **Input Tokens (Total)** | **1.876.725** |
+| ↳ *Input sem cache* | 419.525 |
+| ↳ *Input em cache (Prompt Cache)* | 1.457.200 |
+| **Output Tokens (Total)** | **13.699** |
+| ↳ *Thinking / Raciocínio* | 5.936 |
+| ↳ *Respostas / Chamadas de Ferramenta* | 7.763 |
+| **Total Geral (Input + Output)** | **1.890.424** |
+| **Iterações / Chamadas ao Modelo** | 15 |
