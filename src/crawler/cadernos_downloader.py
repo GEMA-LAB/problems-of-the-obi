@@ -116,6 +116,17 @@ class CadernosDownloader:
 
         success = self.http.download_file(link.url, target_path)
 
+        # Fallback para URLs quebradas com erro de digitação no portal da Unicamp (ex: pu vs ps)
+        if not success:
+            for old_pat, new_pat in [("pu.pdf", "ps.pdf"), ("ps.pdf", "pu.pdf")]:
+                if old_pat in link.url:
+                    alt_url = link.url.replace(old_pat, new_pat)
+                    alt_path = target_path.with_name(target_path.name.replace(old_pat, new_pat))
+                    if self.http.download_file(alt_url, alt_path):
+                        success = True
+                        target_path = alt_path
+                        break
+
         if success:
             rel_path = str(target_path.relative_to(self.base_output_dir))
             self._manifest[link.url] = rel_path
