@@ -50,8 +50,8 @@ O universo de cadernos de programacao no servidor da Unicamp e consideravelmente
 
 ## 4. Checklist de Execucao (TDD & Commits Atomicos)
 
-- [ ] **Task 1 (TDD):** Testes unitarios para retries e fallback estatico no `HttpClient` e `CadernosDownloader`.
-- [ ] **Task 2:** Implementar resiliencia com retries no `HttpClient`.
-- [ ] **Task 3:** Adicionar suporte a `cfobi/`, ano 2018 (fallback estatico) e ano 2026 (`END_YEAR=2027`) em `config.py` e `downloader`.
-- [ ] **Task 4:** Executar varredura completa e validar alcance de 205 cadernos de programacao.
-- [ ] **Task 5:** Atualizar metricas e documentacao de status.
+- [x] **Task 1 (TDD):** Testes unitarios para retries e fallback estatico no `HttpClient` e `CadernosDownloader`.
+- [x] **Task 2:** Implementar resiliencia com retries no `HttpClient`.
+- [x] **Task 3:** Adicionar suporte a `cfobi/`, ano 2018 (fallback estatico) e ano 2026 (`END_YEAR=2027`) em `config.py` e `downloader`.
+- [x] **Task 4:** Executar varredura completa e validar alcance de 205 cadernos de programacao.
+- [x] **Task 5:** Atualizar metricas e documentacao de status.
