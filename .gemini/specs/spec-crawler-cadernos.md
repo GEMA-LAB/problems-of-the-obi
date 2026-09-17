@@ -16,6 +16,7 @@ R2: Se a requisição HTTP da página de listagem retornar status diferente de 2
 R3: A cada download concluído com sucesso -> Aguardar pausa configurável (mínimo 0.5s) para não sobrecarregar o servidor da Unicamp.
 R4: Se a URL da prova contiver indicação de fase ou nível (ex: `fase1`, `fase2`, `fase3`, `pj`, `p1`, `p2`) -> Inferir a pasta de nível correspondente; caso contrário, utilizar `geral`.
 R5: Se o download falhar por erro de conexão ou timeout -> Registrar erro no log e continuar a execução sem abortar o crawler.
+R6: Se o arquivo PDF existir coloque como [nome]-[numero].pdf referindo ao número de execução
 
 ## Exemplo (User stories)
 E1: Dado que o ano 2024 possui cadernos em `fase1/programacao/cadernos/` Quando o crawler é executado Então faz o download dos PDFs salvando em `cadernos/2024/fase1/[arquivo].pdf`.

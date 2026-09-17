@@ -50,6 +50,7 @@ problems-of-the-obi/
 │       └── test_cases/                # Casos de teste descompactados e normalizados
 │           └── inputs/
 │               ├── [numero].in
+|           └── outputs/
 │               └── [numero].out
 ├── src/                               # Código-fonte modular da aplicação
 │   ├── __init__.py
