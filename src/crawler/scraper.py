@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 
 
-from src.core.config import EXTENSOES_CODIGO, MAPEAMENTO_LINGUAGEM
+from src.core.config import EXTENSOES_CODIGO, MAPEAMENTO_LINGUAGEM, TERMOS_GABARITO
 
 
 @dataclass(frozen=True)
@@ -215,6 +215,58 @@ class ObiScraper:
                 linguagem=linguagem,
                 url=absolute_url,
                 nome_arquivo=filename,
+                texto_link=link_text
+            ))
+
+        return discovered
+
+    def extract_gabarito_links(self, html: str, page_url: str, ano: int) -> list[GabaritoZIP]:
+        """Parses HTML content, extracts test cases and gabarito .zip links, resolving absolute URLs."""
+        soup = BeautifulSoup(html, "html.parser")
+        discovered: list[GabaritoZIP] = []
+        seen_urls: set[str] = set()
+
+        for a_tag in soup.find_all("a", href=True):
+            href = a_tag["href"].strip()
+            lower_href = href.lower()
+
+            # Descartar links que nao terminam com .zip
+            if not lower_href.endswith(".zip"):
+                continue
+
+            link_text = a_tag.get_text(strip=True)
+            lower_text = link_text.lower()
+
+            # R1: Link deve conter termos de gabarito ou testes no texto visivel ou na URL
+            has_term = any(term in lower_href or term in lower_text for term in TERMOS_GABARITO)
+            if not has_term:
+                continue
+
+            absolute_url = urljoin(page_url, href)
+
+            # Restringir a links do dominio da OBI ou relativos
+            if "olimpiada.ic.unicamp.br" not in absolute_url:
+                continue
+
+            if absolute_url in seen_urls:
+                continue
+
+            seen_urls.add(absolute_url)
+            filename = href.split("/")[-1]
+
+            # R2: Se possuir texto visivel nao vazio -> utilizar texto; senao extrair nome do arquivo
+            if link_text:
+                nome_questao = link_text
+            else:
+                nome_questao = Path(filename).stem
+
+            nivel = self.infer_level_or_phase(f"{page_url} {href}", link_text, filename)
+
+            discovered.append(GabaritoZIP(
+                ano=ano,
+                nivel=nivel,
+                nome_questao=nome_questao,
+                url=absolute_url,
                 texto_link=link_text
             ))
 
