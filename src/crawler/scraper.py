@@ -37,22 +37,55 @@ class CodigoSolucao:
 class ObiScraper:
     """Scraper for OBI past competition pages."""
 
+    def infer_level_from_solution_url(self, url_path: str) -> Optional[str]:
+        """Infers competition level specifically from OBI solution directory pattern."""
+        # Padrao: /solucoes/{ano}f{fase}{nivel}_{problema}/
+        match = re.search(r"/solucoes/[^/]*?f\d+([a-z0-9]+)_", url_path.lower())
+        if match:
+            code = match.group(1)
+            if code in ("pj", "p0", "junior"):
+                return "pj"
+            if code in ("p1", "nivel1", "1"):
+                return "p1"
+            if code in ("p2", "nivel2", "2"):
+                return "p2"
+            if code in ("ps", "pu", "senior", "sen", "s"):
+                return "senior"
+        return None
+
     def infer_level_or_phase(self, url_path: str, link_text: str, filename: str) -> str:
         """Infers the competition level (e.g., pj, p1, p2, senior) or phase from metadata."""
-        combined_text = f"{url_path} {link_text} {filename}".lower()
+        # 1. Se for uma URL de solucao com diretorio estruturado da OBI
+        sol_level = self.infer_level_from_solution_url(url_path)
+        if sol_level:
+            return sol_level
+
+        # 2. Remover esquema e host para evitar falsos positivos com 'https'
+        clean_text = re.sub(r"https?://[^\s/]+", "", f"{url_path} {link_text} {filename}").lower()
 
         # Checagem de níveis específicos
-        if any(term in combined_text for term in ["júnior", "junior", "pj"]):
+        # Júnior
+        if any(term in clean_text for term in ["júnior", "junior", "nível júnior", "nivel junior"]) or \
+           re.search(r"(?:f\d+|_|\b)(?:pj|p0)(?:_|\.|\b)", clean_text):
             return "pj"
-        if any(term in combined_text for term in ["nível 1", "nivel 1", "nivel1", "_p1", "p1."]):
+
+        # Nível 1
+        if any(term in clean_text for term in ["nível 1", "nivel 1", "nivel1", "nível1"]) or \
+           re.search(r"(?:f\d+|_|\b)p1(?:_|\.|\b)", clean_text):
             return "p1"
-        if any(term in combined_text for term in ["nível 2", "nivel 2", "nivel2", "_p2", "p2."]):
+
+        # Nível 2
+        if any(term in clean_text for term in ["nível 2", "nivel 2", "nivel2", "nível2"]) or \
+           re.search(r"(?:f\d+|_|\b)p2(?:_|\.|\b)", clean_text):
             return "p2"
-        if any(term in combined_text for term in ["sênior", "senior", "ps", "pu.", "_pu", "pu-", "_ps", "ps."]):
+
+        # Sênior / Universitário
+        if any(term in clean_text for term in ["sênior", "senior", "nível sênior", "nivel senior"]) or \
+           re.search(r"(?:f\d+|_|\b)(?:ps|pu)(?:_|\.|\b)", clean_text):
             return "senior"
 
         # Fallback para fases
-        fase_match = re.search(r"fase\s*(\d+[ab]?)", combined_text)
+        fase_match = re.search(r"fase\s*(\d+[ab]?)", clean_text)
         if fase_match:
             return f"fase{fase_match.group(1)}"
 

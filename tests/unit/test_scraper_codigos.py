@@ -96,3 +96,28 @@ def test_infer_problem_name_from_url(scraper):
     assert scraper.infer_problem_name("/static/extras/obi2020/solucoes/2020f2p1_lesma/lesma.c") == "lesma"
     assert scraper.infer_problem_name("/static/extras/obi2004/solucoes/2004f0p0_par/par.pas") == "par"
     assert scraper.infer_problem_name("/static/extras/obi2012/solucoes/2012f1senior_campeonato/camp.c") == "campeonato"
+
+
+def test_extract_code_links_different_levels_not_senior(scraper):
+    html = """
+    <html>
+        <body>
+            <a href="/static/extras/obi2022/solucoes/2022f1pj_cinema/cinema.java">Cinema PJ</a>
+            <a href="/static/extras/obi2022/solucoes/2022f1p1_show/show.java">Show P1</a>
+            <a href="/static/extras/obi2022/solucoes/2022f1p2_bombom/bombom.java">Bombom P2</a>
+            <a href="/static/extras/obi2022/solucoes/2022f1ps_trofeu/trofeu.java">Trofeu PS</a>
+            <a href="/static/extras/obi2022/solucoes/2022f1pu_trofeu/trofeu.java">Trofeu PU</a>
+            <a href="/static/extras/obi2012/solucoes/2012f1senior_campeonato/camp.c">Campeonato Senior</a>
+        </body>
+    </html>
+    """
+    page_url = "https://olimpiada.ic.unicamp.br/passadas/OBI2022/fase1/programacao/"
+    links = scraper.extract_code_links(html, page_url, ano=2022)
+
+    level_map = {l.nome_problema: l.nivel for l in links}
+    assert level_map["cinema"] == "pj"
+    assert level_map["show"] == "p1"
+    assert level_map["bombom"] == "p2"
+    assert level_map["trofeu"] == "senior"
+    assert level_map["campeonato"] == "senior"
+
