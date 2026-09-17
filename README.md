@@ -1,32 +1,32 @@
-# Banco de Problemas OBI — Repositório para Experimentos e Avaliação
+# Banco de Problemas OBI — Repositorio para Experimentos e Avaliacao
 
-Este repositório centraliza, padroniza e disponibiliza problemas da **Olimpíada Brasileira de Informática (OBI)** em formato estruturado (`JSON`), associando casos de teste padronizados para suportar experimentos em avaliação de Modelos de Linguagem (LLMs), sistemas de correção automática e pesquisa em inteligência artificial aplicada à programação competitiva.
+Este repositorio centraliza, padroniza e disponibiliza problemas da **Olimpiada Brasileira de Informatica (OBI)** em formato estruturado (`JSON`), associando casos de teste padronizados para suportar experimentos em avaliacao de Modelos de Linguagem (LLMs), sistemas de correcao automatica e pesquisa em inteligencia artificial aplicada a programacao competitiva.
 
 - **Fonte de dados oficial:** [Provas Passadas OBI - Unicamp](https://olimpiada.ic.unicamp.br/passadas/)
-- **Objetivo Científico:** Criação de um benchmark reprodutível, testável e anotado para avaliar o raciocínio lógico e algorítmico de LLMs em português.
+- **Objetivo Cientifico:** Criacao de um benchmark reprodutivel, testavel e anotado para avaliar o raciocinio logico e algoritmico de LLMs em lingua portuguesa.
 
 ---
 
-## 🏛️ Arquitetura e Engenharia de Software
+## Arquitetura e Engenharia de Software
 
-O projeto adota uma **arquitetura orientada a domínios modulares**, garantindo desacoplamento entre as etapas do pipeline e permitindo execuções isoladas ou em lote.
+O projeto adota uma **arquitetura orientada a dominios modulares**, garantindo desacoplamento entre as etapas do pipeline e permitindo execucoes isoladas ou em lote.
 
-### Estrutura do Repositório
+### Estrutura do Repositorio
 
 ```text
 problems-of-the-obi/
-├── .gemini/                           # Governança, engenharia de prompts e ciclo SDD
-│   ├── GEMINI.md                      # Instruções mestras do projeto
-│   ├── plans/                         # Planos técnicos de implementação
-│   ├── prompts/                       # Histórico rastreável e métricas de tokens
+├── .gemini/                           # Governanca, engenharia de prompts e ciclo SDD
+│   ├── GEMINI.md                      # Instrucoes mestras do projeto
+│   ├── plans/                         # Planos tecnicos de implementacao
+│   ├── prompts/                       # Historico rastreavel e metricas de tokens
 │   ├── rules/                         # Regras de arquitetura e desenvolvimento Python
 │   ├── skills/                        # Habilidades do Antigravity (sdd, plans, tdd)
-│   └── specs/                         # Especificações formais de cada funcionalidade
+│   └── specs/                         # Especificacoes formais de cada funcionalidade
 ├── cadernos/                          # Cadernos de provas originais em PDF
 │   └── [ano]/[nivel]/[arquivo].pdf
 ├── gabaritos/                         # Arquivos ZIP brutos com testes e gabaritos
 │   └── [ano]/[nivel]/[arquivo].zip
-├── codigo/                            # Soluções e códigos-fonte de referência
+├── codigo/                            # Solucoes e codigos-fonte de referencia
 │   └── [ano]/[nivel]/
 ├── output_question_obi/               # Base de dados estruturada do benchmark
 │   └── [ano]/[nivel]/[nome-questao]/
@@ -35,87 +35,87 @@ problems-of-the-obi/
 │           └── inputs/
 │               ├── [numero].in
 │               └── [numero].out
-├── src/                               # Código-fonte modular da aplicação
-│   ├── core/                          # Configurações globais, constantes e HTTP client resiliente
+├── src/                               # Codigo-fonte modular da aplicacao
+│   ├── core/                          # Configuracoes globais, constantes e cliente HTTP resiliente
 │   │   ├── config.py
 │   │   └── http_client.py
-│   ├── crawler/                       # Domínio 1: Web Scraping do Portal da OBI
-│   │   ├── scraper.py                 # Descoberta de links e inferência de nível/fase
-│   │   └── cadernos_downloader.py     # Downloader de cadernos com idempotência
-│   ├── extractor/                     # Domínio 2: Extração estruturada via LLM (Gemini/GPT)
-│   ├── processor/                     # Domínio 3: Associação, descompactação e normalização de testes
-│   └── reporter/                      # Domínio 4: Auditoria do dataset e documentação
-├── tests/                             # Suíte de testes automatizados (TDD)
+│   ├── crawler/                       # Dominio 1: Web Scraping do Portal da OBI
+│   │   ├── scraper.py                 # Descoberta de links e inferencia de nivel/fase
+│   │   └── cadernos_downloader.py     # Downloader de cadernos com idempotencia
+│   ├── extractor/                     # Dominio 2: Extracao estruturada via LLM (Gemini/GPT)
+│   ├── processor/                     # Dominio 3: Associacao, descompactacao e normalizacao de testes
+│   └── reporter/                      # Dominio 4: Auditoria do dataset e documentacao
+├── tests/                             # Suite de testes automatizados (TDD)
 │   ├── conftest.py
-│   └── unit/                          # Testes unitários isolados por módulo
+│   └── unit/                          # Testes unitarios isolados por modulo
 ├── main.py                            # Ponto de entrada unificado e interface CLI
-├── pyproject.toml                     # Gerenciamento de dependências via uv
-└── README.md                          # Este documento
+├── pyproject.toml                     # Gerenciamento de dependencias via uv
+└── README.md                          # Documentacao do projeto
 ```
 
 ---
 
-## ⚙️ Domínios e Pipeline de Automação
+## Dominios e Pipeline de Automacao
 
-1. **📄 Domínio Crawler (Download de Cadernos e Gabaritos):**
-   - Varre as páginas de provas da OBI (1999–2026) cobrindo todas as fases e níveis (PJ, P1, P2, Sênior).
-   - Realiza download resiliente e idempotente com controle de *rate limit* (0.5s) e timeout estrito (15s).
+1. **Dominio Crawler (Download de Cadernos e Gabaritos):**
+   - Varre as paginas de provas da OBI (1999–2026) cobrindo todas as fases e niveis (PJ, P1, P2, Senior).
+   - Realiza download resiliente e idempotente com controle de taxa de requisicoes (0.5s) e timeout estrito (15s).
 
-2. **🤖 Domínio Extractor (Extração via LLM):**
-   - Processa os cadernos PDF através de APIs multimodais (Google Gemini / OpenAI).
-   - Extrai enunciados, limites de tempo/memória, seções de entrada/saída, pontuações de subtarefas e categorias em schema JSON estrito (`problem.json`).
+2. **Dominio Extractor (Extracao via LLM):**
+   - Processa os cadernos PDF atraves de APIs multimodais (Google Gemini / OpenAI).
+   - Extrai enunciados, limites de tempo/memoria, secoes de entrada/saida, pontuacoes de subtarefas e categorias em schema JSON estrito (`problem.json`).
 
-3. **📦 Domínio Processor (Associação e Normalização de Testes):**
-   - Faz o cruzamento fonético/Unicode entre o nome da questão e o arquivo ZIP de gabarito.
-   - Descompacta e normaliza pares idênticos de casos de teste: `inputs/[numero].in` e `inputs/[numero].out`.
-   - Remove resíduos temporários e descarta questões sem casos de teste válidos.
+3. **Dominio Processor (Associacao e Normalizacao de Testes):**
+   - Executa a correspondencia normalizada Unicode entre o nome da questao e o arquivo ZIP de gabarito.
+   - Descompacta e padroniza pares identicos de casos de teste: `inputs/[numero].in` e `inputs/[numero].out`.
+   - Remove residuos temporarios e descarta questoes sem casos de teste validos.
 
-4. **📝 Domínio Reporter (Auditoria e Relatórios):**
-   - Varre o diretório gerado, valida consistência e atualiza dinamicamente as tabelas de progresso e estatísticas.
+4. **Dominio Reporter (Auditoria e Relatorios):**
+   - Varre o diretorio gerado, valida consistencia estrutural e atualiza dinamicamente as tabelas de progresso e estatisticas.
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
-### 1. Pré-requisitos
-O projeto utiliza o gerenciador rápido de ambientes Python **[uv](https://github.com/astral-sh/uv)**:
+### 1. Pre-requisitos
+O projeto utiliza o gerenciador de ambientes Python **[uv](https://github.com/astral-sh/uv)**:
 
 ```bash
-# Clone o repositório
+# Clonar o repositorio
 git clone https://github.com/GEMA-LAB/problems-of-the-obi.git
 cd problems-of-the-obi
 
-# Crie e ative o ambiente virtual
+# Criar e ativar o ambiente virtual
 uv venv .venv
-source .venv/bin/activate  # No Linux/macOS
+source .venv/bin/activate  # Linux/macOS
 # ou no Windows:
 .venv\Scripts\activate
 
-# Sincronize as dependências
+# Sincronizar dependencias
 uv sync
 ```
 
-### 2. Execução da Suíte de Testes (TDD)
-Todos os módulos são cobertos por testes unitários e de integração utilizando mocks:
+### 2. Execucao da Suite de Testes (TDD)
+Todos os modulos sao cobertos por testes unitarios com mocks de rede:
 
 ```bash
 uv run pytest -v
 ```
 
-### 3. Execução Modular via CLI (`main.py`)
-A execução pode ser feita etapa por etapa ou em lote, com suporte a filtros por ano e nível:
+### 3. Execucao Modular via CLI (`main.py`)
+A execucao pode ser realizada etapa por etapa ou em lote, com suporte a filtros por ano e nivel:
 
 ```bash
-# Ajuda e listagem de parâmetros
+# Ajuda e listagem de parametros
 uv run python main.py --help
 
-# Download apenas dos cadernos de provas em PDF (Etapa 1)
+# Download exclusivo dos cadernos de provas em PDF (Etapa 1)
 uv run python main.py --step download-cadernos
 
-# Filtrar por ano específico (ex: 2024) e nível específico (ex: pj)
+# Filtrar por ano especifico (ex: 2024) e nivel especifico (ex: pj)
 uv run python main.py --step download-cadernos --ano 2024 --nivel pj
 
-# Forçar re-download de arquivos existentes
+# Forcar novo download de arquivos pre-existentes
 uv run python main.py --step download-cadernos --force
 
 # Executar pipeline completa (todas as etapas sequenciais)
@@ -124,26 +124,26 @@ uv run python main.py --step all
 
 ---
 
-## 🧪 Metodologia de Desenvolvimento (SDD & TDD)
+## Metodologia de Desenvolvimento (SDD e TDD)
 
-O repositório adota **Spec-Driven Development (SDD)** acoplado a **Test-Driven Development (TDD)** e governança pelo Antigravity:
+O repositorio adota **Spec-Driven Development (SDD)** acoplado a **Test-Driven Development (TDD)**:
 
-- **Especificações (`.gemini/specs/`):** Cada funcionalidade é especificada formalmente definindo objetivos, entidades, regras de negócio, invariantes e cenários BDD antes da escrita de código.
-- **Planos Técnicos (`.gemini/plans/`):** Toda feature possui um plano de execução com branch dedicada (ex: `feat/[funcionalidade]`), commits atômicos por tarefa e critérios de aceite.
-- **TDD Rigoroso:** O teste unitário com mocks de rede é escrito e validado antes da implementação do código de produção em `src/`.
+- **Especificacoes (`.gemini/specs/`):** Cada funcionalidade e formalmente especificada definindo objetivos, entidades, regras de negocio, invariantes e cenarios antes do codigo.
+- **Planos Tecnicos (`.gemini/plans/`):** Toda funcionalidade possui plano de execucao com branch dedicada (`feat/[funcionalidade]`), commits atomicos por tarefa e criterios de aceite.
+- **TDD Rigoroso:** Testes unitarios sao escritos e validados previamente a implementacao do codigo de producao em `src/`.
 
 ---
 
-## 📊 Estatísticas do Dataset Extraído (Resultados Preliminares)
+## Estatisticas do Dataset Extraido (Resultados Preliminares)
 
-- **Total de questões processadas:** 493
+- **Total de questoes processadas:** 493
 - **Com casos de teste oficiais:** 468
-- **Com ilustrações/figuras:** 188
+- **Com ilustracoes/figuras:** 188
 - **Sem figuras:** 305
 - **Modelo base de prova-de-conceito:** Gemini 3.1 Flash / Gemini 3.8 Flash
 
 ---
 
-## 📄 Licença e Uso Acadêmico
+## Licenca e Uso Academico
 
-Os enunciados e provas originais são de titularidade do Instituto de Computação da **Universidade Estadual de Campinas (UNICAMP)** e da organização da OBI. Este repositório destina-se estritamente para **fins de pesquisa científica, benchmarks acadêmicos e avaliação educacional**.
+Os enunciados e provas originais sao de titularidade do Instituto de Computacao da **Universidade Estadual de Campinas (UNICAMP)** e da organizacao da OBI. Este repositorio destina-se estritamente para **fins de pesquisa cientifica, benchmarks academicos e avaliacao educacional**.
