@@ -1,0 +1,39 @@
+{
+    "title": "Retas",
+    "statement": "Nome do arquivo:retas.c, retas.cpp, retas.java, retas.js ou retas.py\nJuan é um artista talentoso que ama criar obras com padrões geométricos, e sua última criação\nenvolve desenhar várias linhas retas em uma imensa tela infinita. Cada linha que ele desenha é\nrepresentada por uma equação da formay = A· x + B, onde:\n• A é a inclinação da linha, indicando o quanto ela sobe ou desce.\n• B é o ponto em que a linha cruza o eixoy (a interseção com o eixo vertical).\nPor exemplo, a figura a seguir mostra a linhay =−2· x + 9:\n8\neixo x\neixo y\n0 1 2 3 4 5 60\n1\n2\n3\n4\n5\n6\n7\n8\n9\ny = −2 · x + 9\nDepois de desenhar N dessas linhas, Juan começou a observar que algumas delas se cruzavam,\ncriando pontos de interseção. Fascinado por esses cruzamentos, ele decidiu focar em uma região\nespecífica da sua tela, delimitada entre dois valores no eixox: X1 e X2. Ele quer saber quantas\ninterseções ocorrem dentro desse intervalo dex.\nPor exemplo, se Juan desenhou as seguintesN = 4 linhas:\n• y =−2· x + 9\n• y = 1· x− 3\n• y = 1· x + 2\n• y = 0· x + 5\nE deseja saber quantas interseções existem na região entreX1 = 3 e X2 = 7, podemos visualizar na\nfigura a seguir que a resposta é 2:\n7\neixo x\neixo y\n−1 0 1 2 3 4 5 6 7 8 9\n−3\n−2\n−1\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\ny = −2 · x + 9\ny = 1 · x − 3\ny = 1 · x + 2\ny = 0 · x + 5\nA\nB\nC D E\nPerceba que os pontos de interseçãoA e D estão na região de interesse de Juan, já os pontosC, B\ne E estão fora dessa região.\nSua tarefa é ajudar Juan a descobrir o número de interseções entre asN linhas que possuem o valor\nda coordenada x entre X1 e X2 (incluindo X1 e X2).",
+    "input": "A primeira linha contém três inteirosN, X1, X2, ondeN é o número de linhas desenhadas por Juan,\nX1 é o limite inferior da coordenada x da região de interesse de Juan, enquanto X2 é o limite\nsuperior dessa região.\nAs próximas N linhas descrevem as equações das linhas, cada uma contendo dois inteirosAi e Bi,\nonde Ai é a inclinação dai-ésima linha, eBi é o ponto em que a linha cruza o eixoy.",
+    "output": "A saída deve conter um único número inteiro, a quantidade de interseções entre asN linhas que\npossuem o valor da coordenadax entre X1 e X2 (incluindo X1 e X2).",
+    "constraints": "- 1≤ N≤ 105\n- −109≤ X1≤ X2≤ 109\n- −109≤ Ai, Bi≤ 109\n- Ai̸= Aj ou Bi̸= Bj para todo 1≤ i < j≤ N. Ou seja, não existem duas linhas iguais.",
+    "examples": [
+        {
+            "input": "4 3 7\n-2 9\n1 -3\n1 2\n0 5",
+            "output": "2\nExplicação do exemplo 1:Este é o exemplo mostrado no enunciado."
+        },
+        {
+            "input": "2 2 3\n-2 9\n1 2",
+            "output": "1"
+        },
+        {
+            "input": "5 100 200\n2 213\n2 209\n2 210\n2 410\n4 10",
+            "output": "3"
+        },
+        {
+            "input": "4 1 1\n15 -5\n0 10\n-5 15\n-20 30",
+            "output": "6\nExplicação do exemplo 4: As 4 retas têm o mesmoy = 10 em x = 1 (note que X1 = X2 =\n1), então todos os 6 pares de retas se intersectam. Perceba que o mesmo ponto pode ser\ncontabilizado mais de uma vez caso ele seja a interseção de mais de um par de retas."
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2024",
+    "level": "p2",
+    "period": "Fase 3",
+    "topics": [
+        "geometria computacional",
+        "ordenação",
+        "segment tree"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 512
+}

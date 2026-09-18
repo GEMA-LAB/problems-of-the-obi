@@ -1,9 +1,9 @@
 {
     "title": "Relógio",
-    "statement": "Nome do arquivo: relogio.c, relogio.cpp, relogio.java, relogio.js ou relogio.py\n\nA Seleção de Basquete Campinense (SBC) está ansiosa para disputar a final do campeonato nacional universitário contra o Clube de Basquete Sergipano (CBS), o arquivral da SBC. Entretanto, a comissão organizadora esteve sobrecarregada e acabou cometendo alguns erros logísticos, o que levou o jogo a ser adiado em exatamente T segundos. A comissão já está trabalhando dobrado e precisa da sua ajuda para reajustar o horário do jogo.\n\nA sua tarefa é: dado o horário original de início do jogo e o tempo T, em segundos, em que o jogo foi adiado, determine o novo horário de início do jogo.",
-    "input": "A entrada contém quatro linhas. As três primeiras linhas indicam o horário original de início do jogo: a primeira linha contém um inteiro H, que indica as horas. A segunda linha contém um inteiro M, que indica os minutos. A terceira linha contém um inteiro S, que indica os segundos. A quarta linha contém um único inteiro T, indicando em quantos segundos o jogo foi adiado.\n\nNote que o horário é dado no formato de 24 horas, ou seja, H é um inteiro entre 0 e 23.",
-    "output": "Seu programa deve imprimir o novo horário de início do jogo, seguindo o mesmo formato de horário da entrada. Ou seja, seu programa deve imprimir três linhas, cada uma contendo um único inteiro:\n- A primeira linha deve conter as horas do novo horário de início do jogo.\n- A segunda linha deve conter os minutos do novo horário de início do jogo.\n- A terceira linha deve conter os segundos do novo horário de início do jogo.\n\nObserve que você não deve imprimir zeros à esquerda (veja o exemplo de saída 2).",
-    "constraints": "- 0 ≤ H ≤ 23\n- 0 ≤ M ≤ 59\n- 0 ≤ S ≤ 59\n- 0 ≤ T ≤ 10^9",
+    "statement": "Nome do arquivo:relogio.c, relogio.cpp, relogio.java, relogio.js ou relogio.py\nA Seleção de Basquete Campinense (SBC) está ansiosa para disputar a final do campeonato nacional\nuniversitário contra o Clube de Basquete Sergipano (CBS), o arquirrival da SBC. Entretanto, a\ncomissão organizadora esteve sobrecarregada e acabou cometendo alguns erros logísticos, o que\nlevou o jogo a ser adiado em exatamenteT segundos. A comissão já está trabalhando dobrado e\nprecisa da sua ajuda para reajustar o horário do jogo.\nA sua tarefa é: dado o horário original de início do jogo e o tempo T, em segundos, em que o jogo\nfoi adiado, determine o novo horário de início do jogo.",
+    "input": "A entrada contém quatro linhas. As três primeiras linhas indicam o horário original de início do\njogo: a primeira linha contém um inteiro H, que indica as horas. A segunda linha contém um\ninteiro M, que indica os minutos. A terceira linha contém um inteiro eS, que indica os segundos.\nA quarta linha contém um único inteiroT, indicando em quantos segundos o jogo foi adiado.\nNote que o horário é dado no formato de24 horas, ou seja,H é um inteiro entre0 e 23.",
+    "output": "Seu programa deve imprimir o novo horário de início do jogo, seguindo o mesmo formato de horário\nda entrada. Ou seja, seu programa deve imprimir três linhas, cada uma contendo um único inteiro:\n• A primeira linha deve conter as horas do novo horário de início do jogo.\n• A segunda linha deve conter os minutos do novo horário de início do jogo.\n• A terceira linha deve conter os segundos do novo horário de início do jogo.\nObserve que você não deve imprimir zeros à esquerda (veja o exemplo de saída 2).",
+    "constraints": "- 0≤ H≤ 23\n- 0≤ M≤ 59\n- 0≤ S≤ 59\n- 0≤ T≤ 109",
     "examples": [
         {
             "input": "3\n14\n15\n1",
@@ -31,9 +31,8 @@
     "period": "Fase 1",
     "topics": [
         "aritmética",
-        "módulo",
-        "tempo"
+        "ad-hoc"
     ],
-    "time_limit": 2.0,
+    "time_limit": 1.0,
     "memory_limit": 256
 }

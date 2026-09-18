@@ -1,0 +1,35 @@
+{
+    "title": "Construtora",
+    "statement": "Nome do arquivo:construtora.c, construtora.cpp, construtora.java, construtora.js ou\nconstrutora.py\nEm uma rua existemN prédios adjacentes, oi-ésimo entre eles (da esquerda para a direita) possui\nai andares. Uma construtora acabou de comprar todos os prédios da rua, e fará uma obra para que\neles tenham a mesma altura (quantidade de andares), porém, para realizar esta obra ela deve seguir\nas regras definidas pela Sociedade Brasileira de Construção (SBC).\nSegundo as regras da SBC, cada fase da obra só pode aumentar em uma unidade a quantidade de\nandares de prédios consecutivos que já possuam uma mesma quantidade de andares. Sendo mais\nespecífico, para cada fase:\n• A construtora deve definir um índice inicialL\n• A construtora deve definir um índice finalR\n• Todos os prédios entreL e R (incluindo L e R) devem possuir a mesma quantidade de andares,\ndigamos a\n• Ao final desta fase da obra, todos os prédios entreL e R (incluindo L e R) vão possuira + 1\nandares\nPor exemplo, suponha queN seja igual a 8, e que as alturas iniciais sejam:a1 = 5 , a2 = 4 , a3 =\n4, a4 = 4, a5 = 5, a6 = 4, a7 = 4 e a8 = 7, perceba que:\n• A construtora não pode definir L = 2 e R = 7 para a primeira fase, pois nem todas as\nquantidades de andares nesse intervalo de prédios são iguais\n• A construtora não pode definir L = 1 e R = 5 para a primeira fase, pois nem todas as\nquantidades de andares nesse intervalo de prédios são iguais\n• A construtora pode definir L = 8 e R = 8 para a primeira fase, e a quantidade de andares\nfinal seria: a1 = 5, a2 = 4, a3 = 4, a4 = 4, a5 = 5, a6 = 4, a7 = 4 e a8 = 8\n• A construtora pode definir L = 2 e R = 4 para a primeira fase, e a quantidade de andares\nfinal seria: a1 = 5, a2 = 5, a3 = 5, a4 = 5, a5 = 5, a6 = 4, a7 = 4 e a8 = 7\nPara cada fase da obra, a construtora deve pagar impostos para a prefeitura, portanto, ela deseja\ncompletar a tarefa usando a menor quantidade possível de fases. No exemplo mostrado anterior-\nmente a menor quantidade de fases é4, você consegue enxergar como?\nDadas a quantidade inicial de andares de cada um dosN prédios, sua tarefa é determinar a quan-\ntidade mínima de fases para completar a obra.",
+    "input": "A primeira linha da entrada contém um único inteiroN, o número de prédios da rua.\nA segunda linha contémN inteiros, o i-ésimo entre esses inteiros éai, a quantidade de andares do\ni-ésimo prédio.",
+    "output": "A saída deve conter um único número inteiro, a menor quantidade de fases necessárias para a\nconstrutora completar a obra, ou seja, deixar todos os prédios com a mesma altura.",
+    "constraints": "- 2≤ N≤ 100.\n- 1≤ ai≤ 100.",
+    "examples": [
+        {
+            "input": "4\n3 1 1 2",
+            "output": "2\nExplicação do exemplo 1:A construtora define L = 2 e R = 3 para a primeira fase da obra,\nao final as alturas serão:3 2 2 2 . Depois, a construtora defineL = 2 e R = 4 para a segunda\nfase da obra, ao final as alturas serão:3 3 3 3 , e portanto a obra está finalizada com2 fases."
+        },
+        {
+            "input": "8\n5 4 4 4 5 4 4 7",
+            "output": "4\nExplicação do exemplo 2:Este é o exemplo mostrado no enunciado."
+        },
+        {
+            "input": "3\n100 100 100",
+            "output": "0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2024",
+    "level": "senior",
+    "period": "Fase 3",
+    "topics": [
+        "programação dinâmica",
+        "geometria",
+        "guloso"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 512
+}

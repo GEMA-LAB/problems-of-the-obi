@@ -1,13 +1,13 @@
 {
     "title": "Fefe e o jogos dos monstrinhos",
-    "statement": "Fefe acabou de descobrir um novo jogo de computador, chamado Fadas versus Monstrinhos.\n\nNeste jogo existem as fadas e os monstrinhos, que são adversários. Cada fada e cada monstrinho possui uma quantidade de poder, que representa o quão forte ela ou ele é. Quando uma fada e um monstrinho se enfrentam, o mais forte sempre vence. Se a fada e o monstrinho tiverem a mesma quantidade de poder, é declarado um empate, isto é, ninguém perde e ninguém ganha.\n\nFefe possui F fadas e irá passar por um torneio onde enfrentará N monstrinhos. No jogo original, cada uma das fadas de Fefe pode enfrentar no máximo um monstrinho, pois as fadas se cansam muito rápido de tanto voar. Ou seja, se Fefe usa sua fada favorita f para derrotar um monstrinho m0, ela não pode usar a mesma fada f novamente para derrotar um outro monstrinho m1.\n\nFefe tem grande talento para modificar jogos de computador usando seu grande conhecimento em programação. Ela, então, decidiu modificar o jogo original com o objetivo de deixá-lo mais divertido. Em Fadas versus Monstrinhos: Versão da Fefe, cada fada de Fefe possui um bônus, nome dado à quantidade de monstrinhos distintos que tal fada consegue enfrentar. Por exemplo, uma fada com bônus de valor dois pode enfrentar dois monstrinhos distintos.\n\nFefe está determinada a derrotar o máximo de monstrinhos possível na versão que ela criou do jogo!\n\nDados os poderes dos monstrinhos que Fefe irá enfrentar e os poderes e bônus das fadas que Fefe possui, sua tarefa é descobrir quantos monstrinhos Fefe irá derrotar se ela jogar da melhor forma possível.",
-    "input": "A primeira linha da entrada contém um inteiro N, a quantidade de monstrinhos que Fefe irá enfrentar.\nA segunda linha da entrada contém um inteiro F, a quantidade de fadas que Fefe possui.\nAs próximas N linhas representam os poderes dos monstrinhos que Fefe irá enfrentar. A i-ésima destas linhas possui o inteiro E_i, o poder do i-ésimo monstrinho.\nAs próximas F linhas representam os poderes das fadas de Fefe. A j-ésima destas linhas possui o inteiro P_j, o poder da j-ésima fada.\nAs últimas F linhas representam os bônus das fadas de Fefe. A j-ésima destas linhas possui o inteiro B_j, o bônus da j-ésima fada.",
-    "output": "Seu programa deverá produzir uma única linha contendo um único inteiro, o número máximo de monstrinhos que Fefe consegue derrotar.",
-    "constraints": "- 1 <= N <= 1500\n- 1 <= F <= N\n- 1 <= E_i <= 1000000 para todo 1 <= i <= N\n- 1 <= P_j <= 1000000 para todo 1 <= j <= F\n- 1 <= B_j <= 1000000 para todo 1 <= j <= F",
+    "statement": "Nome do arquivo:monstrinhos.c, monstrinhos.cpp, monstrinhos.java, monstrinhos.js ou\nmonstrinhos.py\nFefe acabou de descobrir um novo jogo de computador, chamadoFadas versus Monstrinhos.\nNeste jogo existem as fadas e os monstrinhos, que são adversários. Cada fada e cada monstrinho\npossui uma quantidade depoder, que representa o quão forte ela ou ele é. Quando uma fada e um\nmonstrinho se enfrentam, o mais forte sempre vence. Se a fada e o monstrinho tiverem a mesma\nquantidade de poder, é declarado um empate, isto é, ninguém perde e ninguém ganha.\nFefe possui F fadas e irá passar por um torneio onde enfrentaráN monstrinhos. No jogo original,\ncada uma das fadas de Fefe pode enfrentar no máximo um monstrinho, pois as fadas se cansam\nmuito rápido de tanto voar. Ou seja, se Fefe usa sua fada favoritaf para derrotar um monstrinho\nm0, ela não pode usar a mesma fadaf novamente para derrotar um outro monstrinhom1.\nFefe tem grande talento para modificar jogos de computador usando seu grande conhecimento em\nprogramação. Ela, então, decidiu modificar o jogo original com o objetivo de deixá-lo mais divertido.\nEm Fadas versus Monstrinhos: Versão da Fefe, cada fada de Fefe possui umbônus, nome dado à\nquantidade de monstrinhos distintos que tal fada consegue enfrentar. Por exemplo, uma fada com\nbônus de valor dois pode enfrentar dois monstrinhos distintos.\nFefe está determinada a derrotar o máximo de monstrinhos possível na versão que ela criou do jogo!\nDados os poderes dos monstrinhos que Fefe irá enfrentar e os poderes e bônus das fadas que Fefe\npossui, sua tarefa é descobrir quantos monstrinhos Fefe irá derrotar se ela jogar da melhor forma\npossível.",
+    "input": "A primeira linha da entrada contém um inteiro N, a quantidade de monstrinhos que Fefe irá\nenfrentar.\nA segunda linha da entrada contém um inteiroF, a quantidade de fadas que Fefe possui.\nAs próximas N linhas representam os poderes dos monstrinhos que Fefe irá enfrentar. Ai-ésima\ndestas linhas possui o inteiroEi, o poder doi-ésimo monstrinho.\nAs próximas F linhas representam os poderes das fadas de Fefe. Aj-ésima destas linhas possui o\ninteiro Pj, o poder daj-ésima fada.\nAs últimasF linhas representam os bônus das fadas de Fefe. Aj-ésima destas linhas possui o inteiro\nBj, o bônus daj-ésima fada.",
+    "output": "Seu programa deverá produzir uma única linha contendo um único inteiro, o número máximo de\nmonstrinhos que Fefe consegue derrotar.",
+    "constraints": "- 1 ≤ N ≤ 1 500\n- 1 ≤ F ≤ N\n- 1 ≤ Ei ≤ 1 000 000 para todo 1 ≤ i ≤ N\n- OlimpíadaBrasileiradeInformática–CompetiçãoFeminina-OBI2024–Prog. Nível1–FaseÚnica 5\n- 1 ≤ Pj ≤ 1 000 000 para todo 1 ≤ j ≤ F\n- 1 ≤ Bj ≤ 1 000 000 para todo 1 ≤ j ≤ F",
     "examples": [
         {
             "input": "3\n2\n2\n2\n4\n1\n3\n3\n1",
-            "output": "1"
+            "output": "1\nOlimpíadaBrasileiradeInformática–CompetiçãoFeminina-OBI2024–Prog. Nível1–FaseÚnica 6"
         },
         {
             "input": "3\n3\n2\n2\n4\n1\n3\n6\n3\n1\n2",
@@ -22,11 +22,10 @@
     "level": "p1",
     "period": "Fase Única",
     "topics": [
-        "ganância",
-        "ordenacao",
-        "correspondência",
-        "implementação"
+        "jogos",
+        "simulação",
+        "ad-hoc"
     ],
-    "time_limit": 2.0,
-    "memory_limit": 512
+    "time_limit": 1.0,
+    "memory_limit": 256
 }
