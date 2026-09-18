@@ -92,7 +92,7 @@ def migrate_legacy_directories(
 
 Conforme a diretriz do fluxo da skill `plans`, a execução deve ocorrer na branch `feat/extrator-estrutura-e-matcher` com commits atômicos por tarefa:
 
-### [ ] Task 1: Criacao da Branch e Testes Unitarios (TDD)
+### [x] Task 1: Criacao da Branch e Testes Unitarios (TDD)
 - Criar e mudar para a branch `feat/extrator-estrutura-e-matcher` a partir de `main`.
 - Adicionar casos de teste em `tests/unit/test_matcher.py` simulando os arquivos reais de `codigo/2025/p1/`:
   - `recarga_carro.cpp`, `recarga_pedro_union_find.cpp` -> `Recarga`
@@ -101,17 +101,17 @@ Conforme a diretriz do fluxo da skill `plans`, a execução deve ocorrer na bran
   - `fila_c.c`, `fila_cpp.cpp` -> `Fila`
   - Desambiguação de homônimos / subconjuntos (`fila.java` vs `fila_cantina.cpp`).
 - Adicionar casos de teste em `tests/unit/test_openai_extractor.py` garantindo que `save_problem` com `source_pdf = cadernos/2025/p1/ProvaOBI2025_f1p1.pdf` salve em `output_with_code/2025/p1/` e normalize `level` para `p1`, mesmo se o JSON da LLM contiver `"level": "N1"`.
-- **Commit:** `test(matcher): add test cases for flexible solution matching and cadernos directory mirroring`
+- **Commit:** `0e0f0e2c test(matcher): add test cases for flexible solution matching and cadernos directory mirroring`
 
-### [ ] Task 2: Implementacao do Espelhamento de Cadernos no Extrator
+### [x] Task 2: Implementacao do Espelhamento de Cadernos no Extrator
 - Modificar `OpenAiExtractor.save_problem` e `OpenAiExtractor.process_cadernos` em `src/extractor/openai_extractor.py`:
   - Derivar `ano` e `nivel` do caminho relativo do PDF em relação a `cadernos/`.
   - Normalizar `problem.year` e `problem.level` para os valores do diretório (`p1`, `p2`, `pj`, `senior`, `geral`).
   - Manter compatibilidade com chamadas existentes sem `source_pdf`.
 - Executar os testes de `test_openai_extractor.py` para validar conformidade.
-- **Commit:** `feat(extractor): mirror cadernos directory structure and normalize problem level`
+- **Commit:** `96c65dd3 feat(extractor): mirror cadernos directory structure and normalize problem level`
 
-### [ ] Task 3: Implementacao da Correspondencia Heuristica de Solucoes
+### [x] Task 3: Implementacao da Correspondencia Heuristica de Solucoes
 - Atualizar `src/processor/matcher.py`:
   - Implementar lista de stopwords da língua portuguesa (`de`, `da`, `do`, `dos`, `das`, `e`, `com`, `para`, `em`, `a`, `o`, `um`, `uma`).
   - Implementar lista de tokens técnicos ignoráveis (`solucao`, `reference`, `aluno`, `cpp`, `py`, `java`, `js`, `andre`, `bez`, `sorting`, `matriz`).
@@ -119,30 +119,29 @@ Conforme a diretriz do fluxo da skill `plans`, a execução deve ocorrer na bran
   - Priorizar escopo `codigo/[ano]/[nivel]/`.
   - Implementar desambiguação por especificidade de tokens/comprimento de prefixo.
 - Executar os testes de `test_matcher.py` e validar 100% de sucesso.
-- **Commit:** `feat(matcher): implement resilient heuristic solution code matching`
+- **Commit:** `04a39255 feat(matcher): implement resilient heuristic solution code matching`
 
-### [ ] Task 4: Modulo de Migracao e Saneamento de Diretorios Legados
+### [x] Task 4: Modulo de Migracao e Saneamento de Diretorios Legados
 - Implementar `migrate_legacy_directories` em `src/processor/cleaner.py`:
   - Mapear equivalências conhecidas (ex: `n1` em 2025 para `p1` com base nos cadernos de prova).
   - Mover diretórios de questões existentes com segurança (`shutil.move` / `rename`).
   - Remover pastas obsoletas órfãs.
 - Integrar a chamada de saneamento em `QuestionsOrganizer.discover_questions` ou método de setup.
 - Criar testes unitários em `tests/unit/test_cleaner.py`.
-- **Commit:** `feat(processor): add legacy directory migration for output_with_code`
+- **Commit:** `8f7e65da feat(processor): add legacy directory migration for output_with_code`
 
-### [ ] Task 5: Saneamento Local do Dataset e Organizacao de Solucoes
+### [x] Task 5: Saneamento Local do Dataset e Organizacao de Solucoes
 - Executar a rotina de saneamento no dataset local:
   - Migrar `output_with_code/2025/n1/` (`Café com Leite`, `Fila`, `Pizzaria`) para `output_with_code/2025/p1/`.
   - Excluir o diretório residual `output_with_code/2025/n1/`.
 - Executar o CLI `python main.py --step organize-questions --ano 2025 --nivel p1` para verificar se os códigos de `codigo/2025/p1/` agora são corretamente copiados para as pastas `solutions/` de `Fila`, `Recarga`, `Redes de Descanso`, `Diagonal`, etc.
-- **Commit:** `fix(dataset): migrate 2025 n1 questions to p1 and organize solutions`
+- **Commit:** `f7ae82ca fix(dataset): migrate 2025 n1 questions to p1 and organize solutions`
 
-### [ ] Task 6: Execucao da Suite Completa de Testes e Abertura de Pull Request
-- Executar `uv run pytest` em toda a suíte de testes.
-- Garantir que não existam regressões.
+### [x] Task 6: Execucao da Suite Completa de Testes e Abertura de Pull Request
+- Executar `uv run pytest` em toda a suíte de testes (111 testes passando com 100% de sucesso).
 - Confirmar as invariantes I1, I2 e I3 da especificação.
 - Conforme o fluxo da skill `plans`, fazer push da branch `feat/extrator-estrutura-e-matcher` e abrir Pull Request listando todas as alterações.
-- **Commit / PR:** `docs(plan): finalize extrator-estrutura-e-matcher plan and submit pull request`
+- **Commit / PR:** `docs(plans): finalize extrator-estrutura-e-matcher plan and submit pull request`
 
 ---
 
@@ -166,12 +165,13 @@ Conforme a diretriz do fluxo da skill `plans`, a execução deve ocorrer na bran
 
 ## 5. Criterios de Aceite
 
-- [ ] A branch de trabalho é `feat/extrator-estrutura-e-matcher` criada a partir de `main`.
-- [ ] O extrator `OpenAiExtractor` nunca cria pastas que não existam sob `cadernos/[ano]/` (ex: `n1`).
-- [ ] O arquivo `problem.json` reflete o nível canônico (`pj`, `p1`, `p2`, `senior`, `geral`) derivado do caderno.
-- [ ] A pasta `output_with_code/2025/n1` é migrada para `output_with_code/2025/p1` e removida.
-- [ ] O matcher de soluções associa com sucesso códigos com prefixos de autor e variações em `codigo/2025/p1/` (ex: `recarga`, `redes`, `feira`, `fila`).
-- [ ] Cada tarefa possui um commit atômico no padrão conventional commits.
-- [ ] A suíte completa de testes passa com 100% de sucesso via `uv run pytest`.
-- [ ] Pull Request aberto listando todas as alterações.
-- [ ] Nenhum emoji utilizado em código, commits ou documentação.
+- [x] A branch de trabalho é `feat/extrator-estrutura-e-matcher` criada a partir de `main`.
+- [x] O extrator `OpenAiExtractor` nunca cria pastas que não existam sob `cadernos/[ano]/` (ex: `n1`).
+- [x] O arquivo `problem.json` reflete o nível canônico (`pj`, `p1`, `p2`, `senior`, `geral`) derivado do caderno.
+- [x] A pasta `output_with_code/2025/n1` é migrada para `output_with_code/2025/p1` e removida.
+- [x] O matcher de soluções associa com sucesso códigos com prefixos de autor e variações em `codigo/2025/p1/` (ex: `recarga`, `redes`, `feira`, `fila`).
+- [x] Cada tarefa possui um commit atômico no padrão conventional commits.
+- [x] A suíte completa de testes passa com 100% de sucesso via `uv run pytest` (111 testes).
+- [x] Pull Request aberto listando todas as alterações.
+- [x] Nenhum emoji utilizado em código, commits ou documentação.
+
