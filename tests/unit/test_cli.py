@@ -74,3 +74,48 @@ def test_cli_extract_questions_step():
 
             mock_extractor_cls.assert_called_once()
 
+
+def test_cli_organize_questions_step():
+    test_args = ["main.py", "--step", "organize-questions", "--ano", "2023", "--nivel", "pj", "--force"]
+
+    with patch.object(sys, "argv", test_args):
+        with patch("main.QuestionsOrganizer") as mock_organizer_cls:
+            mock_instance = MagicMock()
+            mock_organizer_cls.return_value = mock_instance
+            mock_instance.organize_all.return_value = {
+                "total_encontradas": 1,
+                "sucesso": 1,
+                "parcial": 0,
+                "ignoradas_idempotentes": 0,
+                "removidas_sem_testes": 0,
+                "total_testes": 2,
+                "total_solucoes": 1,
+            }
+
+            main()
+
+            mock_organizer_cls.assert_called_once()
+            mock_instance.organize_all.assert_called_once()
+            call_kwargs = mock_instance.organize_all.call_args.kwargs
+            assert call_kwargs["ano_filtro"] == 2023
+            assert call_kwargs["nivel_filtro"] == "pj"
+            assert call_kwargs["config"].force is True
+
+
+def test_cli_organize_testcases_alias_step():
+    test_args = ["main.py", "--step", "organize-testcases", "--ano", "2022"]
+
+    with patch.object(sys, "argv", test_args):
+        with patch("main.QuestionsOrganizer") as mock_organizer_cls:
+            mock_instance = MagicMock()
+            mock_organizer_cls.return_value = mock_instance
+            mock_instance.organize_all.return_value = {"total_encontradas": 0}
+
+            main()
+
+            mock_organizer_cls.assert_called_once()
+            call_kwargs = mock_instance.organize_all.call_args.kwargs
+            assert call_kwargs["ano_filtro"] == 2022
+            assert call_kwargs["config"].force is False
+
+
