@@ -1,0 +1,31 @@
+{
+    "title": "Dígitos",
+    "statement": "Nome do arquivo:digitos.c, digitos.cpp, digitos.pas, digitos.java, digitos.js ou\ndigitos.py\nJoãozinho te propôs o seguinte desaﬁo: ele escolheu dois inteirosA e B, com 1 ≤ A ≤ B ≤ 101000,\ne escreveu na lousa todos os inteiros entreA e B, em sequência, porém colocando um espaço após\ncada dígito, de forma a não ser possível ver quando um número termina ou começa. Por exemplo,\nse Joãozinho escolherA = 98 e B = 102, ele escreveria a sequência \"9 8 9 9 1 0 0 1 0 1 1 0 2\".\nSeu desaﬁo é: dada a lista de dígitos escritos na lousa, encontrar os valores deA e B. Caso exista\nmais de uma possibilidade para os valores que geraria a lista, você deve encontrar uma em que o\nvalor de A é o menor possível.\nÉ garantido que a lista de dígitos da lousa tem no máximo tamanho1000.",
+    "input": "A primeira linha da entrada contém um único inteiroN, indicando o número de dígitos. A segunda\nlinha contém N inteiros di, indicando os dígitos escritos.",
+    "output": "Imprima o menor valor possível deA.",
+    "constraints": "- 1 ≤ N ≤ 1000\n- 0 ≤ di ≤ 9",
+    "examples": [
+        {
+            "input": "6\n1 2 3 1 2 4",
+            "output": "123"
+        },
+        {
+            "input": "6\n8 9 1 0 1 1",
+            "output": "8"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2022",
+    "level": "p1",
+    "period": "Fase 3",
+    "topics": [
+        "matemática",
+        "números",
+        "busca"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

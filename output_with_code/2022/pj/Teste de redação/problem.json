@@ -1,0 +1,35 @@
+{
+    "title": "Teste de redação",
+    "statement": "Nome do arquivo:teste.c, teste.cpp, teste.pas, teste.java, teste.js ou teste.py\nVocê é o mais novo estagiário numa empresa de inteligência artiﬁcial que está desenvolvendo um\ncorretor automatizado de redações. Para testar o corretor, seu chefe solicitou que você escreva um\nprograma que gere redações aleatórias – que por não fazerem sentido, devem receber a nota zero do\ncorretor automatizado!\nAs redações geradas pelo seu programa devem obedecer aos seguintes requisitos:\n• Cada palavra deve ser composta apenas por letras minúsculas.\n• Cada palavra deve ter no mínimo uma letra e no máximo 10 letras.\n• Duas palavras devem ser separadas por um espaço em branco.\n• A redação deve ser composta por no mínimoN palavras e no máximoM palavras.\n• A redação deve ser composta por no mínimoM/2 palavras distintas.",
+    "input": "A primeira linha contém dois inteirosN e M, indicando respectivamente o número mínimo e o\nnúmero máximo de palavras da redação teste.",
+    "output": "Seu programa deve produzir uma única linha, contendo a redação produzida.",
+    "constraints": "- 1 ≤ N ≤ M ≤ 10 000\n- M é par\n- Apenas letras minúsculas não acentuadas são permitidas:abcdefghijklmnopqrstuvwxyz",
+    "examples": [
+        {
+            "input": "2 10",
+            "output": "melhor que machado de assis"
+        },
+        {
+            "input": "6 6",
+            "output": "b c d e f g"
+        },
+        {
+            "input": "6 8",
+            "output": "aa bb aa bb aa bb"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2022",
+    "level": "pj",
+    "period": "Fase 3",
+    "topics": [
+        "strings",
+        "busca",
+        "ad-hoc"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 256
+}

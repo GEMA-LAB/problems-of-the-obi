@@ -1,0 +1,39 @@
+{
+    "title": "Tanque de combustível",
+    "statement": "Nome do arquivo:tanque.c, tanque.cpp, tanque.pas, tanque.java, tanque.js ou tanque.py\nCássio alugou um carro para a viagem de férias. O carro tem consumo de combustível constante\n(em kilometros rodados por litro de combustível), independente da velocidade com que trafega. Ao\nﬁm da viagem, Cássio deve devolver o carro no aeroporto.\nCássio está terminando sua viagem de férias e está no momento na rodovia que leva ao aeroporto,\nem direção ao aeroporto para devolver o carro. Mais precisamente Cássio está no último posto de\ncombustível existente na rodovia em que ele pode abastecer o carro antes de devolvê-lo.\nPara economizar o máximo possível em combustível, Cássio quer devolver o carro com o menor\nnúmero de litros possível no tanque – idealmente, com o tanquezerado, ou seja, sem combustível.\nDados o consumo do carro, a distância em que se encontra do aeroporto e a quantidade de combus-\ntível presente no tanque antes do abastecimento, determine qual deve ser a menor quantidade de\ncombustível que Cássio deve comprar.",
+    "input": "A primeira linha contém um inteiro,C, o consumo do carro em kilômetros rodados por litro de\ncombustível. A segunda linha contém um inteiroD, a distância do aeroporto, em kilometros. A\nterceira linha contém um inteiroT, o número de litros de combustível presente no tanque antes do\nabastecimento. Você pode assumir que o tanque tem capacidade suﬁciente para armazenar todo o\ncombustível que Cássio comprar.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único valor, com um dígito de precisão,\nindicando a quantidade de combustível que Cássio deve comprar, para chegar ao aeroporto com o\ntanque contendo a menor quantidade de combustível possível.",
+    "constraints": "- 1≤ C≤ 50\n- 1≤ D≤ 1000\n- 0≤ T≤ 100",
+    "examples": [
+        {
+            "input": "2\n10\n0",
+            "output": "5.0"
+        },
+        {
+            "input": "30\n100\n2",
+            "output": "1.3"
+        },
+        {
+            "input": "50\n120\n3",
+            "output": "0.0"
+        },
+        {
+            "input": "50\n73\n0",
+            "output": "1.5"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2022",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "aritmética",
+        "geometria",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

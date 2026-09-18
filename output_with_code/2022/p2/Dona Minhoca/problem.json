@@ -1,0 +1,32 @@
+{
+    "title": "Dona Minhoca",
+    "statement": "Nome do arquivo:minhoca.c, minhoca.cpp, minhoca.pas, minhoca.java, minhoca.js ou\nminhoca.py\nDona Minhoca construiu uma bela casa, composta deN salas conectadas porN− 1 túneis. Cada\ntúnel conecta exatamente duas salas distintas, e pode ser percorrido em qualquer direção. A casa\nde dona Minhoca foi construída de modo que, percorrendo os túneis, é possível partir de qualquer\nsala e chegar a qualquer outra sala da casa.\nPara deixar sua casa mais segura, Dona Minhoca decidiu instalar radares anti-furto em algumas\ndas salas. Ela comprou K radares, e deve agora decidir em quais salas colocará um radar. Além\ndisso, todos radares terão umraio de alcance, cujo valorR também deve ser decidido. Quando um\nradar com raio de alcanceR é instalado na salas, todas as salas com distância menor ou igual aR\nda sala s (incluindo a próprias) ﬁcam sob o alcance do radar, e estarão protegidas.\nDevido à política estranha de cobrança da empresa de radares, todos osK radares devem ter o\nmesmo raio de alcance. Dona Minhoca então se pergunta: qual seria o menor valor possível paraR,\ntal que, se o raio de alcance dos radares forR, é possível escolherK salas para instalar os radares\nde forma que todas asN salas estejam protegidas?",
+    "input": "A primeira linha da entrada contém dois inteirosN e K, indicando o número de salas, e de radares\nque Dona Minhoca possui. AsN− 1 linhas seguintes contém dois inteirosai e bi cada, indicando\nque existe um túnel conectando essas duas salas.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, o menor valor possível\npara R.",
+    "constraints": "- 1≤ N≤ 300000\n- 1≤ K < N\n- ai⁄= bi",
+    "examples": [
+        {
+            "input": "6 1\n1 2\n2 3\n3 4\n4 5\n4 6",
+            "output": "2"
+        },
+        {
+            "input": "6 2\n1 2\n2 3\n3 4\n4 5\n4 6",
+            "output": "1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2022",
+    "level": "p2",
+    "period": "Fase 3",
+    "topics": [
+        "grafos",
+        "árvores",
+        "diâmetro",
+        "combinatória"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 512
+}

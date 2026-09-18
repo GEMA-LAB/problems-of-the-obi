@@ -1,0 +1,31 @@
+{
+    "title": "Pirâmide",
+    "statement": "Nome do arquivo:piramide.c, piramide.cpp, piramide.pas, piramide.java, piramide.js ou\npiramide.py\nO rei da Nlogônia decidiu construir uma pirâmide no jardim do Palácio Real, usando cubos de pedra\nde mesmo tamanho. Adimensão de uma pirâmide é o número de cubos de pedra num dos lados\nda base (primeira camada) da pirâmide. A base da pirâmide é quadrada, ou seja, cada lado tem o\nmesmo número de cubos de pedra.\nNa pirâmide, a partir da segunda camada, cada cubo de pedra deve ser empilhado exatamente em\ncima de outro cubo de pedra que não esteja na borda da camada abaixo. Além disso, o número de\ncamadas deve ser o maior possível para uma dada dimensão, e em cada camada deve ser usado o\nmaior número de cubos de pedra possível.\nA ﬁgura abaixo à esquerda mostra uma pirâmide de dimensão 3; a ﬁgura à direita mostra oplano\nde contruçãopara essa pirâmide, indicando quantos cubos de pedra devem ser empilhados em cada\nposição.\n1\n1 1 1\n1\n11\n2\n1\nO rei ainda não decidiu qual a dimensão da pirâmide que vai construir, mas como é muito detalhista\njá avisou os Arquitetos Reais que antes de iniciar a contrução eles devem produzir um plano de\ncontrução para a dimensão escolhida.\nAjude os Arquitetos Reais, escrevendo um programa que, dada a dimensão da pirâmide, produza o\nseu plano de construção.",
+    "input": "A primeira e única linha da entrada contém um número inteiroN, a dimensão da pirâmide.",
+    "output": "Seu programa deve produzir o plano de contrução da pirâmide, constituído porN linhas, cada linha\ncontendo N números inteiros.",
+    "constraints": "- 1 ≤ N ≤ 100",
+    "examples": [
+        {
+            "input": "3",
+            "output": "1 1 1\n1 2 1\n1 1 1"
+        },
+        {
+            "input": "8",
+            "output": "1 1 1 1 1 1 1 1\n1 2 2 2 2 2 2 1\n1 2 3 3 3 3 2 1\n1 2 3 4 4 3 2 1\n1 2 3 4 4 3 2 1\n1 2 3 3 3 3 2 1\n1 2 2 2 2 2 2 1\n1 1 1 1 1 1 1 1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2022",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "programação dinâmica",
+        "matrizes",
+        "geometria"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 512
+}
