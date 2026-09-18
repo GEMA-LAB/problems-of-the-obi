@@ -1,0 +1,42 @@
+{
+    "title": "Entrega de Caixas",
+    "statement": "Nome do arquivo:“caixas.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nVocê precisa transportar três caixas vazias usando um drone que pode levantar uma caixa por vez\napenas em cada viagem. Quer dizer, sempre dá para transportar as três caixas vazias fazendo três\nviagens do drone. Mas talvez dê para fazer menos do que três viagens, se for possível colocar uma\ncaixa dentro de outra. As caixas têm formato de cubo e a única restrição para uma caixa ser\ncolocada dentro de outra é o tamanho, não importando o peso.\nUma caixa de tamanhoX pode ser colocada dentro de uma caixa de tamanhoY se X < Y . Note,\nportanto, que uma caixa não cabe dentro de outra do mesmo tamanho. Além disso, duas caixas\nde tamanhos X e Y podem ser colocadas, lado a lado, dentro de uma caixa de tamanho Z se\n(X + Y ) < Z.\nA ﬁgura ilustra as quatro conﬁgurações possíveis para o drone fazer uma viagem.\nNeste problema, os tamanhos das três caixas são dados em ordem crescente e seu programa deve\ncomputar o número mínimo de viagens que o drone pode fazer para transportar todas as três caixas.",
+    "input": "A primeira linha da entrada contém um inteiroA. A segunda linha da entrada contém um inteiro\nB. A terceira linha da entrada contém um inteiroC. Os três inteiros representam os tamanhos das\ntrês caixas.",
+    "output": "Seu programa deve imprimir uma linha contendo um inteiro, representando o número mínimo de\nviagens que o drone pode fazer para transportar todas as três caixas.",
+    "constraints": "- 1 ≤ A ≤ B ≤ C ≤ 1000",
+    "examples": [
+        {
+            "input": "12\n45\n188",
+            "output": "1"
+        },
+        {
+            "input": "67\n67\n67",
+            "output": "3"
+        },
+        {
+            "input": "111\n463\n463",
+            "output": "2"
+        },
+        {
+            "input": "72\n72\n345",
+            "output": "1"
+        },
+        {
+            "input": "30\n30\n55",
+            "output": "2"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "condicional",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

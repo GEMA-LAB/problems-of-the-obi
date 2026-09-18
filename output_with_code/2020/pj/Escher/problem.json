@@ -1,0 +1,30 @@
+{
+    "title": "Escher",
+    "statement": "Nome do arquivo:“escher.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nM. C. Escher foi um artista gráﬁco holandês que fazia incríveis ilustrações onde preenchia a tela\ncom objetos auto-similares, cujos contornos encaixam neles próprios, criando simetrias geométricas\nmuito impressionantes. Veja um exemplo dessa ideia na ﬁgura, que mostra um objeto que é um\nperﬁl ortogonal deﬁnido por uma sequência de números naturais representando a sequência de\nalturas. Podemos pegar uma cópia do objeto, rotacionar 180 graus e encaixar perfeitamente no\nobjeto original, formando um retângulo.\n3 6 6 3 4 2 8 7 6 4 4 7\nEm termos mais gerais, se uma sequência deN números naturais representando a sequência de altu-\nras for A1, A2, A3, . . . , AN −2, AN −1, AN, o perﬁl deﬁnido será chamado de perﬁl Escher se tivermos\nA1 + AN igual a A2 + AN −1 igual a A3 + AN −2, e assim por diante. Neste problema, será dada a\nsequência de alturas que deﬁnem o perﬁl e seu programa deve decidir se o perﬁl é Escher, ou não.",
+    "input": "A primeira linha da entrada contém um númeroN, indicando quantos números tem a sequência. A\nsegunda linha da entrada contémN números naturais, Ai, para 1 ≤ i ≤ N, deﬁnindo a sequência\nde alturas do perﬁl.",
+    "output": "Seu programa deve imprimir uma linha contendo o caractereS, se o perﬁl for Escher; ouN, senão.",
+    "constraints": "- 3 ≤ N ≤ 10000.\n- 1 ≤ Ai ≤ 1000, para todo1 ≤ i ≤ N.",
+    "examples": [
+        {
+            "input": "12\n3 6 6 4 3 2 8 7 6 4 4 7",
+            "output": "S"
+        },
+        {
+            "input": "5\n2 1 9 13 12",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "vetores",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

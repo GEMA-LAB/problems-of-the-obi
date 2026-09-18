@@ -1,0 +1,35 @@
+{
+    "title": "Piloto Automático",
+    "statement": "Nome do arquivo:“piloto.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nUma grande fábrica de carros elétricos está realizando melhorias no sistema de piloto automático e\nprecisa da sua ajuda para implementar um programa que decida se um carroB, que está trafegando\nno meio de dois carrosA e C, precisa acelerar, desacelerar ou manter a velocidade atual. Os carros\nsão iguais e os sensores do piloto automático vão fornecer, como entrada, a posição atual da traseira\ndos três carros. Veja um exemplo na ﬁgura.\nA B C\nO carroB precisa ser acelerado se a distância da sua traseira para a traseira do carroA for menor do\nque a distância da sua traseira para a traseira do carroC. Se for maior, ele precisa ser desacelerado.\nSe for igual, precisa manter a velocidade atual. Quer dizer, o carro B precisa ser acelerado se\n(B − A) < (C − B), desacelerado se(B − A) > (C − B) e manter a velocidade se(B − A) for igual\na (C − B).",
+    "input": "A primeira linha da entrada contém um inteiroA. A segunda linha da entrada contém um inteiro\nB. A terceira linha da entrada contém um inteiroC. Os três inteiros representam as posições atuais\ndas traseiras dos carrosA, B e C, respectivamente.",
+    "output": "Seu programa deve imprimir uma linha contendo um inteiro:1 se o carroB precisa acelerar; −1 se\nprecisa desacelerar; ou0 se precisa manter a velocidade atual.",
+    "constraints": "- 0 ≤ A < B < C ≤ 500",
+    "examples": [
+        {
+            "input": "10\n23\n38",
+            "output": "1"
+        },
+        {
+            "input": "105\n212\n319",
+            "output": "0"
+        },
+        {
+            "input": "80\n120\n132",
+            "output": "-1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "aritmética",
+        "condicional",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

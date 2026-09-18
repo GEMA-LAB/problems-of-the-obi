@@ -1,0 +1,35 @@
+{
+    "title": "Fissura Perigosa",
+    "statement": "Nome do arquivo:“fissura.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nA erupção do vulcão Kilauea em 2018 no Havaí atraiu a atenção de todo o mundo. Inicialmente\na força da erupção era menor e a lava avançou para o sul com relativamente poucos danos. Após\nalgumas semanas, porém, a ﬁssura 8 começou a jorrar com mais força e a lava avançou também\npara o norte trazendo muita destruição.\nVocê está ajudando na implementação de um sistema para simular a área por onde a lava avançaria,\nem função da força da erupção. O mapa será representado simpliﬁcadamente por uma matriz\nquadrada de caracteres, de1 a 9, indicando a altitude do terreno em cada posição da matriz. Vamos\nconsiderar que a ﬁssura 8, por onde a erupção se inicia, está sempre na posição do canto superior\nesquerdo da matriz. Dada a força da erupção, que será um valor inteiro, de0 a 9, seu programa deve\nimprimir a matriz de caracteres representando o avanço ﬁnal da lava. Se a lava consegue invadir\numa posição da matriz, o caractere naquela posição deve ser trocado por um asterisco (‘*’). Uma\nposição será invadida pela lava se seu valor for menor ou igual à força da erupção e\n• for a posição inicial; ou\n• estiver adjacente, ortogonalmente (abaixo, acima, à esquerda ou à direita), a uma posição\ninvadida.\nA ﬁgura abaixo mostra um exemplo de mapa e o avanço ﬁnal da lava para quatro forças de erupção:\n1, 3, 6 e 8, respectivamente da esquerda para a direita.\n27755478 *7755478 *7755478 ********\n29985439 *9985439 *9985439 *99****9\n34899989 *4899989 **899989 ***999*9\n22115569 ****5569 *******9 *******9\n66736689 667*6689 **7***89 *******9\n99886555 99886555 9988**** 99******\n44433399 44433399 ******99 ******99\n99986991 99986991 9998*991 999**991",
+    "input": "A primeira linha da entrada contém dois inteirosN e F representando, respectivamente o número\nde linhas (que é igual ao de colunas) da matriz e a força da erupção. Cada uma dasN linhas\nseguintes contém uma string deN caracteres, entre 1 e 9, indicando o mapa de entrada.",
+    "output": "Seu programa deve imprimirN linhas contendo, cada uma,N caracteres representando o avanço\nﬁnal da lava de acordo com o enunciado.",
+    "constraints": "- 1 ≤ N ≤ 500\n- 0 ≤ F ≤ 9",
+    "examples": [
+        {
+            "input": "8 6\n27755478\n29985439\n34899989\n22115569\n66736689\n99886555\n44433399\n99986991",
+            "output": "*7755478\n*9985439\n**899989\n*******9\n**7***89\n9988****\n******99\n9998*991"
+        },
+        {
+            "input": "5 4\n25679\n35234\n17182\n39993\n11223",
+            "output": "*5679\n*5***\n*7*8*\n*999*\n*****"
+        },
+        {
+            "input": "2 8\n91\n11",
+            "output": "91\n11"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "grafos",
+        "busca em largura",
+        "matrizes"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 256
+}

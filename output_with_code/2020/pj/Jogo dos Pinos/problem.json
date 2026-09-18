@@ -1,0 +1,31 @@
+{
+    "title": "Jogo dos Pinos",
+    "statement": "Nome do arquivo:“pinos.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nO Jogo dos Pinos é um quebra-cabeças que utiliza pinos e um tabuleiro com furos em forma de\ncruz. Inicialmente há apenas um furo vago, no centro do tabuleiro, e todos os outros furos contém\num pino como mostra ﬁgura abaixo.\nO objetivo do jogo é remover os pinos do tabuleiro de forma que reste apenas um pino. Para remover\num pino é necessário fazer ummovimento válido, que é deﬁnido da seguinte maneira. O jogador\ndeve escolher um pino, chamadopivô, e uma das quatro direções (acima, abaixo, esquerda, direita)\nde tal forma que o pivô tenha um outro pino, chamadoalvo, como vizinho imediato na direção\nescolhida e que o pino alvo seja seguido, também na direção escolhida, por um furo vago (chamado\nde destino). A ﬁgura abaixo mostra os quatro possíveis pivôs da conﬁguração inicial do jogo.\nO jogador pode então fazer o pino pivô pular sobre o pino alvo e ocupar o furo destino, removendo\no pino alvo do tabuleiro. A ﬁgura abaixo mostra um exemplo (a) antes, (b) durante e (c) depois de\num movimento válido.\nPivô Alvo Destino Pivô Alvo Destino Pivô Alvo Destino\n(a) (b) (c)\nDada uma conﬁguração de pinos em um tabuleiro, escreva um programa para determinar o número\nde movimentos válidos possíveis na conﬁguração dada.",
+    "input": "A entrada é composta por sete linhas, cada linha com exatamente sete caracteres. A linhas são\nidentiﬁcadas por números de 1 a 7. Os dois primeiros caracteres e os dois últimos caracteres\ndas linhas 1, 2, 6 e 7 são ‘-’ (hífen). Todos os outros caracteres são ou ‘o’ (letra o minúscula)\nrepresentando um pino, ou ‘.’ (ponto) representando um furo.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, o número de movimentos\nválidos na conﬁguração da entrada.",
+    "constraints": "- A seção Entrada descreve as restrições.",
+    "examples": [
+        {
+            "input": "--ooo--\n--ooo--\nooooooo\nooo.ooo\nooooooo\n--ooo--\n--ooo--",
+            "output": "4"
+        },
+        {
+            "input": "--.o.--\n--o.o--\n....o..\n....o..\no.o.o..\n--o.o--\n--o.o--",
+            "output": "2"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "matrizes",
+        "simulação",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}
