@@ -18,7 +18,15 @@ from src.crawler.cadernos_downloader import CadernosDownloader
 from src.crawler.codigos_downloader import CodigosDownloader
 from src.crawler.gabaritos_downloader import GabaritosDownloader
 from src.extractor import OpenAiExtractor
+from src.processor import QuestionsOrganizer
+from src.core.config import (
+    DEFAULT_CODIGO_DIR,
+    DEFAULT_GABARITOS_DIR,
+    DEFAULT_OUTPUT_DIR,
+    OrganizeConfig,
+)
 from openai import OpenAI
+
 
 # Carregar variáveis de ambiente
 load_dotenv()
@@ -758,7 +766,16 @@ def main():
     parser = argparse.ArgumentParser(description="Pipeline de Automação e Catalogação da OBI")
     parser.add_argument(
         "--step",
-        choices=["download-cadernos", "download-codigos", "download-gabaritos", "extract-questions", "organize-testcases", "clean-testcases", "all"],
+        choices=[
+            "download-cadernos",
+            "download-codigos",
+            "download-gabaritos",
+            "extract-questions",
+            "organize-questions",
+            "organize-testcases",
+            "clean-testcases",
+            "all",
+        ],
         default="all",
         help="Etapa específica a ser executada (padrão: all)"
     )
@@ -852,21 +869,32 @@ def main():
             print("\nETAPA DOWNLOAD-GABARITOS FINALIZADA COM SUCESSO.")
             return
 
-    # Passo 4: Cruzar ZIPs com Pastas Output
-    if args.step in ["organize-testcases", "all"]:
-        organizar_test_cases()
-        if args.step == "organize-testcases":
-            print("\nETAPA ORGANIZE-TESTCASES FINALIZADA COM SUCESSO.")
+    # Passo 4: Organizar questoes, casos de teste e solucoes (via QuestionsOrganizer modular)
+    if args.step in ["organize-questions", "organize-testcases", "clean-testcases", "all"]:
+        print(f"\n{'='*40}")
+        print("4. ORGANIZACAO DE QUESTOES, GABARITOS E SOLUCOES")
+        print(f"{'='*40}")
+        output_base = DEFAULT_OUTPUT_DIR if DEFAULT_OUTPUT_DIR.exists() else (
+            Path("output_question_obi") if Path("output_question_obi").exists() else Path("output")
+        )
+        organize_config = OrganizeConfig(
+            pasta_output=output_base,
+            pasta_gabaritos=DEFAULT_GABARITOS_DIR,
+            pasta_codigo=DEFAULT_CODIGO_DIR,
+            force=args.force,
+        )
+        organizer = QuestionsOrganizer()
+        stats_org = organizer.organize_all(
+            config=organize_config,
+            ano_filtro=args.ano,
+            nivel_filtro=args.nivel,
+        )
+        print(f"Estatisticas da Organizacao: {stats_org}")
+
+        if args.step in ["organize-questions", "organize-testcases", "clean-testcases"]:
+            print("\nETAPA ORGANIZE-QUESTIONS FINALIZADA COM SUCESSO.")
             return
 
-    # Passo 5: Limpar estrutura dos ZIPs
-    if args.step in ["clean-testcases", "all"]:
-        limpar_pastas_test_cases()
-        limpar_test_cases()
-        remover_questoes_sem_testes()
-        if args.step == "clean-testcases":
-            print("\nETAPA CLEAN-TESTCASES FINALIZADA COM SUCESSO.")
-            return
 
     print("\nPIPELINE COMPLETA FINALIZADA COM SUCESSO.")
 

@@ -225,14 +225,14 @@ Integração no CLI central do repositório substituindo código legado monolít
 
 Conforme a diretriz da skill `plans`, a execução ocorrerá na branch `feat/organize-questions` criada a partir de `main`:
 
-### [ ] Task 1: Criação da Branch e Modelos de Domínio (`test_case.py`)
+### [x] Task 1: Criação da Branch e Modelos de Domínio (`test_case.py`)
 - Criar a branch de trabalho `feat/organize-questions` a partir de `main`.
 - Adicionar constantes em `src/core/config.py`.
 - Implementar as entidades dataclass em `src/models/test_case.py` e exportá-las em `src/models/__init__.py`.
 - Criar testes unitários em `tests/unit/test_models_test_case.py` cobrindo instanciação e validações.
-- **Commit:** `feat(models): define test case and question organization models`
+- **Commit:** `e32a3e18 feat(models): define test case and question organization models`
 
-### [ ] Task 2 (TDD): Módulo de Normalização e Correspondência (`matcher.py`)
+### [x] Task 2 (TDD): Módulo de Normalização e Correspondência (`matcher.py`)
 - Criar suite de testes em `tests/unit/test_matcher.py`:
   - Normalização estrita NFD: remoção de acentos, pontuações e case-folding.
   - Correspondência exata por ano/nível/slug.
@@ -240,9 +240,9 @@ Conforme a diretriz da skill `plans`, a execução ocorrerá na branch `feat/org
   - Descoberta e associação de soluções oficiais (`c`, `cpp`, `py`, `java`, etc.).
 - Implementar `src/processor/matcher.py`.
 - Executar testes até 100% de aprovação.
-- **Commit:** `feat(processor): implement unicode name normalization and resource matcher with unit tests`
+- **Commit:** `88e67269 feat(processor): implement unicode name normalization and resource matcher with unit tests`
 
-### [ ] Task 3 (TDD): Módulo de Descompactação Segura (`zip_extractor.py`)
+### [x] Task 3 (TDD): Módulo de Descompactação Segura (`zip_extractor.py`)
 - Criar suite de testes em `tests/unit/test_zip_extractor.py`:
   - Descompactação de ZIP válido de gabarito para diretório temporário.
   - Proteção contra Zip Slip (caminhos inseguros).
@@ -250,9 +250,9 @@ Conforme a diretriz da skill `plans`, a execução ocorrerá na branch `feat/org
   - Extração de ZIPs de código de solução.
 - Implementar `src/processor/zip_extractor.py`.
 - Executar testes até 100% de aprovação.
-- **Commit:** `feat(processor): implement safe zip extractor with zip slip protection and resilience`
+- **Commit:** `b03d7efa feat(processor): implement safe zip extractor with zip slip protection and resilience`
 
-### [ ] Task 4 (TDD): Módulo de Normalização de Pares de Teste (`normalizer.py`)
+### [x] Task 4 (TDD): Módulo de Normalização de Pares de Teste (`normalizer.py`)
 - Criar suite de testes em `tests/unit/test_normalizer.py`:
   - Detecção de pares `.in` e `.out` / `.sol` em múltiplos formatos de gabarito da OBI.
   - Ordenação natural e renumeração sequencial base 1 (`1.in`, `1.out`, `2.in`, `2.out`, etc.).
@@ -260,18 +260,18 @@ Conforme a diretriz da skill `plans`, a execução ocorrerá na branch `feat/org
   - Alocação em `inputs/` e `outputs/`.
 - Implementar `src/processor/normalizer.py`.
 - Executar testes até 100% de aprovação.
-- **Commit:** `feat(processor): implement test cases pair detection and 1-based sequential normalizer`
+- **Commit:** `ec6f2fd5 feat(processor): implement test cases pair detection and 1-based sequential normalizer`
 
-### [ ] Task 5 (TDD): Módulo de Limpeza e Expurgador (`cleaner.py`)
+### [x] Task 5 (TDD): Módulo de Limpeza e Expurgador (`cleaner.py`)
 - Criar suite de testes em `tests/unit/test_cleaner.py`:
   - Expurgo de arquivos compilados `.exe`, `.o` e arquivos de log residuais de `test_cases/`.
   - Remoção completa de diretórios de questões sem casos de teste válidos.
   - Preservação estrita de `problem.json` e `imgs/` para questões com testes válidos (Invariante I1).
 - Implementar `src/processor/cleaner.py`.
 - Executar testes até 100% de aprovação.
-- **Commit:** `feat(processor): implement dataset cleaner and invalid question expurgation`
+- **Commit:** `b6d957fa feat(processor): implement dataset cleaner and invalid question expurgation`
 
-### [ ] Task 6 (TDD): Orquestrador Central (`questions_organizer.py`)
+### [x] Task 6 (TDD): Orquestrador Central (`questions_organizer.py`)
 - Criar suite de testes em `tests/unit/test_questions_organizer.py`:
   - Descoberta e leitura de pastas de questões com `problem.json`.
   - Comportamento idempotente quando testes válidos já existem (`force=False`).
@@ -280,19 +280,20 @@ Conforme a diretriz da skill `plans`, a execução ocorrerá na branch `feat/org
   - Geração de relatório de resultados (`OrganizeResult`).
 - Implementar `src/processor/questions_organizer.py` e `src/processor/__init__.py`.
 - Executar testes até 100% de aprovação.
-- **Commit:** `feat(processor): implement QuestionsOrganizer coordinator with full pipeline support`
+- **Commit:** `4b5d58e2 feat(processor): implement QuestionsOrganizer coordinator with full pipeline support`
 
-### [ ] Task 7: Integração no CLI (`main.py`) e Testes de CLI
+### [x] Task 7: Integração no CLI (`main.py`) e Testes de CLI
 - Atualizar `main.py` com o novo step `organize-questions` e alias `organize-testcases`.
 - Atualizar `tests/unit/test_cli.py` com testes para o novo step, filtros `--ano`, `--nivel` e `--force`.
 - Garantir que a suíte completa passe sem regressões: `uv run pytest`.
-- **Commit:** `feat(cli): integrate QuestionsOrganizer into main CLI and update cli tests`
+- **Commit:** `6405a09b feat(cli): integrate QuestionsOrganizer into main CLI and update cli tests`
 
-### [ ] Task 8: Validação Prática, Documentação e Abertura de Pull Request
-- Executar teste prático com dados reais do dataset (ex: `--step organize-questions --ano 2023 --nivel pj`).
+### [x] Task 8: Validação Prática, Documentação e Abertura de Pull Request
+- Executar teste prático com dados reais do dataset (ex: `--step organize-questions --ano 2024 --nivel pj`).
 - Atualizar checklist deste plano com os status e commits.
 - Abrir Pull Request de `feat/organize-questions` para `main` documentando todas as alterações.
 - **Commit:** `docs(plans): mark organize-questions-plan as completed`
+
 
 ---
 
