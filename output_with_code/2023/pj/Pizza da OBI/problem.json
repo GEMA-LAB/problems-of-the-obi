@@ -1,0 +1,35 @@
+{
+    "title": "Pizza da OBI",
+    "statement": "Nome do arquivo:pizza.c, pizza.cpp, pizza.java, pizza.js ou pizza.py\nO prof. Carlos comprou pizzas para servir um lanche para os estudantes que compareceram à prova\nda OBI na escola. Infelizmente ele não conseguiu comprar todas as pizzas de mesmo tamanho:\ncomprou pizzas de 8 pedaços e pizzas de 6 pedaços. Mas felizmente cada pedaço, de qualquer pizza,\ntem exatamente a mesma quantidade de pizza.\nO prof. Carlos vai distribuir para os participantes o maior número de pedaços possível, mas no\nmáximo um pedaço de pizza para cada participante. Os pedaços de pizza serão distribuídos somente\npara participantes da prova.\nDados o número de participantes da prova da OBI e o número de pizzas de cada tamanho, escreva\num programa para determinar o número de pedaços de pizza que sobram.\nNote que é possível que não sobre nenhum pedaço, e é possível também que alguns alunos não\nrecebam um pedaço de pizza.",
+    "input": "A primeira linha contém um inteiroN, o número de participantes na prova da OBI. A segunda\nlinha contém um inteiroG, o número de pizzas de 8 pedaços. A terceira e última linha contém um\ninteiro M, o número de pizzas de 6 pedaços.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, o número de pedaços de\npizza que sobram.",
+    "constraints": "- 1≤ N≤ 500 000\n- 1≤ G≤ 100\n- 1≤ M≤ 100",
+    "examples": [
+        {
+            "input": "20\n1\n1",
+            "output": "0\nExplicação do exemplo 1:São 20 participantes, 1 pizza de 8 pedaços e 1 pizza de 6 pedaços,\ntotalizando 14 pedaços de pizza. Portanto, não sobra nenhum pedaço (6 participantes ficam\nsem pizza) e a resposta é zero."
+        },
+        {
+            "input": "34\n4\n2",
+            "output": "10\nExplicação do exemplo 2:São 34 participantes, 4 pizzas de 8 pedaços e 2 pizzas de 6 pedaços,\ntotalizando 4×8+2×6 = 44 pedaços de pizza. Portanto sobram 10 pedaços, que é a resposta."
+        },
+        {
+            "input": "500000\n1\n2",
+            "output": "0\nExplicação do exemplo 3:há 500 000 participantes, 1 pizza de oito pedaços e 2 pizzas de seis\npedaços, totalizando 1× 8 + 2× 6 = 20 pedaços. Portanto, não sobra nenhum pedaço (muitos\nficam sem pizza!) e a resposta é zero."
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2023",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "aritmética",
+        "divisão",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

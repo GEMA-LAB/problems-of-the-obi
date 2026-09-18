@@ -1,0 +1,34 @@
+{
+    "title": "Conversa dos Pinguins",
+    "statement": "Nome do arquivo:pinguins.c, pinguins.cpp, pinguins.java, pinguins.js ou pinguins.py\nAlly e Billy são pinguins muito tecnológicos e adoram jogar jogos, assistir vídeos e conversar pela\nInternet. Mesmo morando longe um do outro, eles trocam mensagens todos os dias utilizando o\nIcebook, que é a rede social mais popular entre os pinguins.\nUm dos seus assuntos favoritos é a temperatura do local onde cada um está. Ally teve a ideia de\naté mesmo transformar isso em um jogo: todos os dias, exatamente ao meio-dia, os dois pinguins\nutilizam seus Termômetros Oficiais de Pinguim (TOPs) para medir a temperatura. TOPs utilizam\numa escala de temperatura especial desenvolvida pelos mais brilhantes pinguins cientistas e são\nusados por todos os pinguins. O pinguim que estiver no lugar mais frio ganha um ponto.\nPasseando recentemente pela Antártida, os dois conheceram exploradores de diversos países e fi-\ncaram surpresos ao descobrir que os seres humanos também inventaram escalas de temperatura.\nFascinados com a novidade, Ally e Billy perguntaram para os exploradores se aceitariam fazer uma\ntroca de presentes: TOPs por termômetros humanos. Entre os termômetros que ganharam, eles\nnotaram que alguns utilizam uma escala chamada Celsius e outros utilizam uma escala chamada\nFahrenheit. Os exploradores explicaram que as duas escalas se relacionam utilizando a seguinte\nfórmula, onde C é a temperatura na escala Celsius eF é a temperatura na escala Fahrenheit:\nC = (F− 32)× 5/9\nBilly então sugeriu que fizessem uma modificação em seu jogo: primeiro, cada um falaria a escala\ndo termômetro humano que utilizaram para fazer a medição. Em seguida, cada um falaria a\ntemperatura do local onde cada um está. Utilizando a fórmula da explicação dos exploradores,\neles descobririam então quem ganhou o ponto.\nA sua tarefa é fazer um programa para ajudar Ally e Billy a descobrir quem vai ganhar o ponto.",
+    "input": "A primeira linha da entrada contém dois caracteres,EA e EB, representando a escala de temperatura\nutilizada por Ally e Billy, respectivamente. Os possíveis valores são “C” (sem aspas) para a escala\nCelsius e “F” (sem aspas) para a escala Fahrenheit.\nA segunda linha da entrada contém dois números inteiros,TA e TB, representando as temperaturas\nmedidas por Ally e Billy, respectivamente.",
+    "output": "Sua saída deve conter o caractere “A” (sem aspas) se Ally estiver no local mais frio ou “B” (sem\naspas) se Billy estiver no local mais frio. É garantido que a temperatura nunca será igual nos dois\nlocais.",
+    "constraints": "- −130≤ TA, TB≤ 68\n- EA, EB∈{ C, F}",
+    "examples": [
+        {
+            "input": "C C\n-10 10",
+            "output": "A"
+        },
+        {
+            "input": "C F\n-10 5",
+            "output": "B"
+        },
+        {
+            "input": "F C\n0 0",
+            "output": "A"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2023",
+    "level": "pj",
+    "period": "Fase Única",
+    "topics": [
+        "strings",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

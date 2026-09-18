@@ -1,0 +1,31 @@
+{
+    "title": "Leilão",
+    "statement": "Nome do arquivo:leilao.c, leilao.cpp, leilao.java, leilao.js ou leilao.py\nPara arrecadar dinheiro para o Hospital da cidade, os alunos do Centro Acadêmico conseguiram\nque o maior esportista nascido e criado na cidade, hoje um jogador de fama internacional, doasse\numa camiseta do seu time atual, autografada.\nOsalunosentãoorganizaramumleilãopelainternet, aceitando lances pelacamiseta, comapromessa\nde que o lance de maior valor compraria a camiseta pelo valor oferecido. Cada lance é composto\npelo nome do interessado e o valor oferecido.\nNo entanto a notícia do leilão viralizou, e o número de lances foi muito grande. Sabendo que você\nsabe resolver problemas usando o computador, os alunos do Centro Acadêmico pediram a sua ajuda\npara processar os lances.\nDada a lista de lances, na ordem em que foram feitos, escreva um programa para determinar o lance\nde maior valor. Se houver empate no valor, o lance que foi feito primeiro é o vencedor.",
+    "input": "A primeira linha contém um inteiroN, o número de lances recebidos. A seguir são dados osN\nlances, na ordem em que foram feitos. Cada lance é dado em duas linhas: a primeira linha contém\numa cadeia de caracteresC, o nome da pessoa que fez o lance; a segunda linha contém um inteiro\nV, o valor do lance.",
+    "output": "Seu programa deve produzir duas linhas. A primeira linha deve conter o nome da pessoa que fez o\nlance ganhador. A segunda linha deve conter o valor do lance ganhador.",
+    "constraints": "- 0≤ N≤ 10 000\n- C contém apenas letras maiúsculas e minúsculas, não acentuadas.\n- C contém no mínimo uma e no máximo 10 letras.\n- 1≤ V ≤ 100 000",
+    "examples": [
+        {
+            "input": "4\nLeila\n200\nPedro\n250\nClara\n230\nEduardo\n200",
+            "output": "Pedro\n250"
+        },
+        {
+            "input": "5\nMateus\n2000\nJoana\n2354\nEduardo\n2354\nIara\n2354\nMichel\n2300",
+            "output": "Joana\n2354"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2023",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "busca",
+        "strings",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}
