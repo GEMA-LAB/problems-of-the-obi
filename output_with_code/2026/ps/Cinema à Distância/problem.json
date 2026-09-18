@@ -1,0 +1,39 @@
+{
+    "title": "Cinema à Distância",
+    "statement": "As pessoas da N-logônia adoram cinema, porém, há poucas salas de cinema pelo reino, o que dificulta o acesso dessa atividade tão importante para a cultura local. Foi então que Pedro, o rei, decidiu inaugurar uma nova modalidade: Cinema à Distância, onde cada pessoa pode comprar um ingresso e assistir ao filme remotamente.\n\nO sucesso foi instantâneo, mas o sistema de controle não contabiliza quantas pessoas participaram de cada sessão. Por isso, Pedro, o rei, ordenou que você implemente esta funcionalidade.\n\nO sistema registrou que N pessoas compraram ingressos para assistir a um filme. O filme é exibido em M sessões diferentes, e cada uma tem capacidade para C pessoas (mesmo sendo a distância, é necessário ter controle para não vaziar o filme). Cada pessoa i comprou seu ingresso no instante T_i (para todo 1 ≤ i ≤ N) e cada sessão j tem um horário de início H_j (para todo 1 ≤ j ≤ M). Para que uma pessoa consiga entrar em uma sessão, ela precisa ter comprado seu ingresso antes ou exatamente no horário de início do filme, ou seja, uma pessoa que comprou o ingresso no instante T_i pode entrar na sessão j somente se H_j ≥ T_i.\n\nQuando uma pessoa compra um ingresso, ela é alocada na primeira sessão disponível em que pode entrar, isto é, a sessão j de menor índice tal que H_j ≥ T_i e que ainda não atingiu a capacidade C. Se não existir tal sessão, o ingresso não é vendido, mas fica registrado para as estatísticas do sistema.\n\nPor exemplo, considere N = 10 pessoas que compraram ingressos nos instantes 2, 2, 2, 7, 10, 10, 15, 20, 20, 23, com M = 3 sessões com horários de início 3, 9, 25 e capacidade C = 4:\n\n- Sessão 1 (H_1 = 3): as 3 pessoas dos instantes 2, 2, 2 conseguem entrar, pois H_1 = 3 ≥ 2. Já a pessoa do instante 7 não consegue entrar nessa sessão, portanto a sessão termina com 3 pessoas.\n- Sessão 2 (H_2 = 9): a pessoa do instante 7 entra nessa sessão (9 ≥ 7). Já as pessoas do instante 10 não conseguem, pois H_2 = 9 < 10. Assim a sessão termina com 1 pessoa.\n- Sessão 3 (H_3 = 25): as pessoas dos instantes 10, 10, 15, 20 entram, preenchendo a capacidade máxima (4 pessoas). Perceba que as pessoas dos instantes 20 e 23 não conseguem ingresso, pois a sessão já está cheia e não há outras sessões.\n\nDado o número N de pessoas, o número M de sessões, a capacidade C de cada sessão, os instantes de compra das pessoas (T_i para todo 1 ≤ i ≤ N) e os horários de início de cada sessão (H_j para todo 1 ≤ j ≤ M), determine quantas pessoas assistiram ao filme em cada sessão.",
+    "input": "A primeira linha da entrada contém três inteiros N, M e C, indicando respectivamente o número de pessoas, o número de sessões e a capacidade de cada sessão.\n\nA segunda linha contém N inteiros T_1, T_2, ..., T_N, os instantes em que cada pessoa comprou seu ingresso, em ordem não decrescente (T_i ≤ T_{i+1} para todo 1 ≤ i < N).\n\nA terceira linha contém M inteiros H_1, H_2, ..., H_M, os horários de início de cada sessão, em ordem não decrescente (H_j ≤ H_{j+1} para todo 1 ≤ j < M).",
+    "output": "A saída deve conter uma única linha com M inteiros separados por espaços. O j-ésimo inteiro deve ser a quantidade de pessoas que assistirão ao filme na sessão j.",
+    "constraints": "1 ≤ N ≤ 10^5.\n1 ≤ M ≤ 10^5.\n1 ≤ C ≤ 10^5.\n1 ≤ T_i ≤ 10^9, para todo 1 ≤ i ≤ N.\n1 ≤ H_j ≤ 10^9, para todo 1 ≤ j ≤ M.\nT_i ≤ T_{i+1}, para todo 1 ≤ i < N.\nH_j ≤ H_{j+1}, para todo 1 ≤ j < M.",
+    "examples": [
+        {
+            "input": "10 3 4\n2 2 2 7 10 10 15 20 20 23\n3 9 25",
+            "output": "3 1 4"
+        },
+        {
+            "input": "10 2 6\n1 1 1 1 1 1 1 1 1\n2 20",
+            "output": "6 4"
+        },
+        {
+            "input": "5 1 10\n1 3 5 8 11\n6",
+            "output": "3"
+        },
+        {
+            "input": "4 2 3\n7 8 9 10\n1 3",
+            "output": "0 0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2026",
+    "level": "PS",
+    "period": "Fase 2",
+    "topics": [
+        "simulação",
+        "guloso",
+        "arrays"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 256
+}

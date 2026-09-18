@@ -1,0 +1,43 @@
+{
+    "title": "Doces da Estela",
+    "statement": "Estela é uma grande doceira. Cada um dos pedidos feitos na sua confeitaria tem sempre $N$ doces e, em cada pedido, todos eles precisam ser divididos em caixas com a mesma quantidade de doces, sem sobrar nenhum doce.\n\nUma caixa simples consiste de uma embalagem plástica e alguns doces (entre 1 e $N$). A embalagem possui um preço fixo de 10 reais, enquanto cada doce adiciona 3 reais ao preço da caixa.\n\nAlém disso, os clientes não gostam muito de caixas simples, eles preferem caixas enfeitadas, cada uma com um lindo laço. Porém, Estela não gosta de colocar laços nas caixas porque isso dá muito trabalho. Então, quanto mais caixas enfeitadas tem em um pedido, mais Estela cobra por cada caixa. Em particular, em um pedido com $C$ caixas enfeitadas o preço de cada caixa enfeitada é o preço de uma caixa simples multiplicado por $(2 + C)$.\n\nPor exemplo, para um pedido com 5 caixas enfeitadas com 2 doces em cada, Estela cobrará o valor de $(2 + 5) \\times (10 + 3 \\times 2) = 112$ reais por caixa, totalizando $112 \\times 5 = 560$ reais pelo pedido.\n\nEstela notou algo muito interessante sobre os pedidos de hoje: ela recebeu exatamente um pedido de caixas enfeitadas para cada divisão possível de $N$ doces nas caixas. Uma divisão é possível se todos os doces são distribuídos igualmente nas caixas e não sobra nenhum. Por exemplo, se $N = 10$, ela receberia quatro pedidos: um pedido com uma caixa, outro com duas caixas, outro com cinco caixas e outro com dez caixas.\n\nSua tarefa é responder quantos reais Estela ganhará no total com os pedidos de hoje.",
+    "input": "A única linha da entrada contém um inteiro $N$, que representa o número de doces em cada pedido.",
+    "output": "Seu programa deverá imprimir uma única linha contendo um único inteiro, o quanto Estela ganhará no total com os pedidos de hoje.",
+    "constraints": "- $1 \\leq N \\leq 1000000$\n\nPara competidoras que utilizam C++ ou Java: Observe que a resposta pode ser muito grande para caber em um inteiro de 32 bits. É recomendado o uso de um inteiro de 64 bits (long long em C++; long em Java). (Competidoras usando Python ou JavaScript podem ignorar este aviso.)",
+    "examples": [
+        {
+            "input": "1",
+            "output": "39"
+        },
+        {
+            "input": "5",
+            "output": "530"
+        },
+        {
+            "input": "9",
+            "output": "1683"
+        },
+        {
+            "input": "10",
+            "output": "2440"
+        },
+        {
+            "input": "1000000",
+            "output": "21329695784850"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2025",
+    "level": "P2",
+    "period": "Competição Feminina",
+    "topics": [
+        "matemática",
+        "divisores",
+        "laços"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 256
+}

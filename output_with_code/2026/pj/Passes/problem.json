@@ -1,0 +1,38 @@
+{
+    "title": "Passes",
+    "statement": "Durante uma partida de futebol, uma câmera registra, a cada segundo, o número do jogador que está com a bola. Os jogadores do time 1 são identificados por números de 1 a 100, e os jogadores do time 2 são identificados por números de -1 a -100.\n\nUm passe acontece quando, em um segundo, a bola está com um jogador de determinado time e, no segundo seguinte, a bola passa para um outro jogador do mesmo time. Quando a bola vai de um jogador de um time para um jogador do outro time, isso não é considerado passe de nenhum dos dois times.\n\nPor exemplo, se a sequência de posse de bola é 10, 9, 9, -3, -2, -2, -1, -7, 3, 3, então:\n\n- O time 1 realizou 1 passe: do jogador 10 para o jogador 9.\n- O time 2 realizou 3 passes: de -3 para -2, de -2 para -1, e de -1 para -7.\n\nNote que os momentos em que a posse passou de um time para o outro (como de 9 para -3, ou de -7 para 3) não contam como passe de nenhum time.\n\nDado o registro de $N$ segundos da partida, determine quantos passes realizou cada time.",
+    "input": "A primeira linha da entrada contém um único inteiro $N$, a quantidade de segundos registrados.\n\nA segunda linha da entrada contém $N$ inteiros $J_{1}, J_{2}, \\ldots, J_{N}$, onde $J_{i}$ é o número do jogador que está com a bola no segundo $i$. Números positivos identificam jogadores do time 1, e números negativos identificam jogadores do time 2.",
+    "output": "A saída deve conter exatamente duas linhas. A primeira linha deve conter um inteiro com a quantidade de passes realizados pelo time 1. A segunda linha deve conter um inteiro com a quantidade de passes realizados pelo time 2. Imprima 0 caso um time não tenha realizado nenhum passe.",
+    "constraints": "- $3 \\leq N \\leq 10000$.\n- $1 \\leq J_{i} \\leq 100$, para todo segundo $i$ em que a bola está com um jogador do time 1.\n- $-100 \\leq J_{i} \\leq -1$, para todo segundo $i$ em que a bola está com um jogador do time 2.",
+    "examples": [
+        {
+            "input": "10\n10 9 9 -3 -2 -2 -1 -7 3 3",
+            "output": "1\n3"
+        },
+        {
+            "input": "3\n5 -2 7",
+            "output": "0\n0"
+        },
+        {
+            "input": "5\n3 3 7 7 1",
+            "output": "2\n0"
+        },
+        {
+            "input": "6\n1 2 -1 -2 5 -3",
+            "output": "1\n1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2026",
+    "level": "PJ",
+    "period": "Fase 2",
+    "topics": [
+        "simulação",
+        "arrays"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

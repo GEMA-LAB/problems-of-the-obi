@@ -1,0 +1,35 @@
+{
+    "title": "Elevador",
+    "statement": "Devido ao crescente destaque do país nas competições internacionais de programação, a OBI (Olimpíada Brasileira de Informática) passou por um processo de expansão e agora é dona de um prédio de 100 andares! No entanto, a construção é um pouco antiga e possui um erro básico em seu projeto: há apenas um elevador. Consequentemente, seus funcionários perdem muito tempo para se mover entre os andares do prédio, o que afeta a produtividade da empresa.\n\nA fim de analisar o impacto desse problema, a OBI decidiu estudar o tempo gasto na movimentação do elevador ao longo de um dia de trabalho. Nesse período, o elevador fez N paradas em sequência, denotadas pela lista A1, A2, ..., AN. O deslocamento entre essas paradas é simples e preciso, de forma que o tempo gasto para subir ou descer um andar é de exatamente 1 segundo. Além disso, para os propósitos dessa pesquisa, o tempo de entrada e saída de pessoas no elevador é irrelevante.\n\nPor exemplo, para N = 3 e as seguintes paradas: A1 = 1, A2 = 9 e A3 = 5, o elevador demoraria 8 segundos para subir do 1º ao 9º andar e, em seguida, 4 segundos para descer do 9º ao 5º andar. Ou seja, seu tempo total de deslocamento seria 8 + 4 = 12 segundos.\n\nEssa análise é muito importante para a OBI, mas seu departamento de pesquisa e desenvolvimento está muito ocupado com a criação de um novo ambiente de provas para a olimpíada. Assim, dada a quantidade N e a lista A1, A2, ..., AN de paradas do elevador, ajude a OBI a calcular por quanto tempo o elevador se moveu durante o dia.",
+    "input": "A primeira linha da entrada contém um único inteiro N, a quantidade de paradas.\n\nA segunda linha da entrada contém N inteiros A1, A2, ..., AN, os andares pelos quais o elevador passou ao longo do dia, em ordem.",
+    "output": "A saída deve conter um único inteiro, o tempo total de deslocamento do elevador.",
+    "constraints": "3 ≤ N ≤ 100.\n1 ≤ Ai ≤ 100, para todo 1 ≤ i ≤ N.\nAi ≠ Ai+1, para todo 1 ≤ i < N.\nA1 = 1, ou seja, o elevador sempre começa no andar 1.",
+    "examples": [
+        {
+            "input": "3\n1 9 5",
+            "output": "12"
+        },
+        {
+            "input": "4\n1 7 9 6",
+            "output": "11"
+        },
+        {
+            "input": "5\n1 3 8 11 20",
+            "output": "19"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2026",
+    "level": "PS",
+    "period": "Fase 1",
+    "topics": [
+        "array",
+        "matemática",
+        "simulação"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 1024
+}

@@ -1,0 +1,35 @@
+{
+    "title": "Loja Virtual",
+    "statement": "Beto é um analista de dados na Nlogônia Store, uma gigantesca loja virtual. O sistema da loja exibe o catálogo de produtos para os clientes em um formato de grade paginada. Existem N páginas no total, e cada página exibe exatamente M produtos, listados horizontalmente da esquerda para a direita.\n\nUma característica nativa do site é que o catálogo está ordenado estritamente pela data de lançamento do produto. O tempo avança da esquerda para a direita dentro de uma mesma página e, naturalmente, flui de uma página para a seguinte. Ou seja, o produto na primeira posição da página T + 1 foi lançado cronologicamente logo após o último produto da página T (para 1 ≤ T < N).\n\nEnquanto analisava o banco de dados, Beto percebeu uma coincidência curiosa: ao selecionar áreas retangulares especiais na grade do catálogo, os preços dos produtos dentro dessa seleção, quando lidos na ordem natural do tempo (da esquerda para a direita, página por página), formavam uma sequência estritamente crescente.\n\nBeto quer estudar esse padrão a fundo, mas o catálogo é enorme. Por isso, ele pediu a sua ajuda. Sua tarefa é escrever um programa que, dada a matriz representando os preços dos produtos no catálogo, encontrar o tamanho da maior seleção possível (ou seja, a área da maior submatriz) que atenda a esta coincidência.\n\nA submatriz é formada escolhendo-se uma página inicial e uma página final, bem como uma coluna inicial e uma coluna final. Ela é válida se, ao linearizar os preços selecionados seguindo o fluxo natural das páginas, a sequência gerada for estritamente crescente.",
+    "input": "A primeira linha contém dois inteiros N e M, representando o número de páginas e o número de produtos exibidos por página, respectivamente.\n\nAs próximas N linhas contêm M inteiros positivos cada. Onde o j-ésimo inteiro da i-ésima linha, P_{i,j}, representa o preço do produto localizado na coluna j da página i.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, a quantidade máxima de produtos em uma submatriz válida.",
+    "constraints": "1 ≤ N ≤ 800.\n1 ≤ M ≤ 800.\n1 ≤ P_{i,j} ≤ 10^7, para todo 1 ≤ i ≤ N e 1 ≤ j ≤ M.",
+    "examples": [
+        {
+            "input": "3 4\n5 1 2 6\n8 3 5 9\n2 5 8 10",
+            "output": "4"
+        },
+        {
+            "input": "1 6\n3 1 4 5 2 6",
+            "output": "3"
+        },
+        {
+            "input": "6 8\n500 100 200 300 400 500 600 700\n800 900 100 200 300 400 500 600\n999 1 2 3 4 5 6 999\n998 7 8 9 10 11 12 997\n700 600 500 400 300 200 100 800\n150 160 170 180 190 200 210 220",
+            "output": "12"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2026",
+    "level": "PS",
+    "period": "Fase 2",
+    "topics": [
+        "matriz",
+        "programação dinâmica",
+        "two pointers"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 256
+}

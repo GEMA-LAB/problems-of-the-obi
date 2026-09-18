@@ -1,0 +1,30 @@
+{
+    "title": "Copa do Mundo",
+    "statement": "A paixão pelo futebol pulsa forte no coração brasileiro. A cada Copa do Mundo, o grito de “Brasil! Olé, Olé, Olé!” ecoa por todo o país. Inspirado nessa energia contagiante e na busca incessante pela glória, o problema que você enfrentará agora é uma homenagem às nossas conquistas mais memoráveis no maior palco do futebol.\n\nE foi baseado nesse grito que, na Copa do Mundo de 2018, foi criada uma música de mesmo nome. A música fala sobre as cinco vitórias da nossa seleção brasileira ao longo dos anos, como nos trechos:\n\n“É, em cinquenta e oito, foi Pelé\nEm sessenta e dois, foi o Mané\nEm setenta, o esquadrão\nPrimeiro a ser tricampeão\n\nOh, noventa e quatro, Romário\nDois mil e dois, Fenômeno\nPrimeiro tetracampeão\nÚnico penta é o Brasília?”\n\nNa letra da música, “cinquenta e oito”, “sessenta e dois”, “setenta”, “noventa e quatro” e “dois mil e dois” se referem, respectivamente, aos anos 1958, 1962, 1970, 1994 e 2002, que correspondem aos cinco anos nos quais o Brasil venceu a Copa do Mundo.\n\nDado um ano específico, você deve determinar se o Brasil venceu a Copa do Mundo e levantou a taça naquele ano.",
+    "input": "A entrada é composta por uma única linha contendo um único número inteiro $N$, representando o ano a ser verificado.",
+    "output": "Seu programa deverá imprimir uma única linha contendo um único caractere. Caso o Brasil tenha ganhado uma Copa do Mundo naquele ano, imprima o caractere S (a letra S maiúscula). Caso contrário, imprima o caractere N (a letra N maiúscula).",
+    "constraints": "- $1930 \\leq N \\leq 2025$",
+    "examples": [
+        {
+            "input": "1958",
+            "output": "S"
+        },
+        {
+            "input": "1982",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2025",
+    "level": "P2",
+    "period": "Competição Feminina",
+    "topics": [
+        "condicional",
+        "introdução"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

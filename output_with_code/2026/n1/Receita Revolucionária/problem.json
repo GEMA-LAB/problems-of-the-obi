@@ -1,0 +1,34 @@
+{
+    "title": "Receita Revolucionária",
+    "statement": "Ao longo de sua vida, Murilo aprimorou suas habilidades culinárias e, enfim, descobriu uma receita revolucionária de sabor insuperável: pão com ovo. Esta combinação é sua maior obra-prima gastronômica, devido à versatilidade desses ingredientes. Os ovos podem ser preparados de diversas maneiras, como ovos fritos, cozidos, mexidos, poché ou omeletes. Estes podem ser combinados com inúmeras variedades de pão, para criar diferentes pratos de café da manhã.\n\nExistem infinitas possibilidades culinárias com esses ingredientes, e Murilo adora provar combinações de variedades de pão e ovo. Dessa forma, todo dia, no café da manhã, ele come exatamente 2 pães e 4 ovos.\n\nNo entanto, vendo que seu estoque havia acabado, o garoto foi ao supermercado SBC (Sobremesas, Bebidas e Comidas) e comprou $P$ pães e $O$ ovos.\n\nMurilo está muito ansioso para testar novas receitas, mas se pergunta quantos dias esses ingredientes irão durar. Assim, dadas as quantidades $P$ e $O$, ajude Murilo a calcular quantos cafés da manhã ele conseguirá tomar com os ingredientes que ele acabou de comprar.",
+    "input": "A primeira linha da entrada contém um único inteiro $P$, a quantidade de pães que Murilo comprou. A segunda linha da entrada contém um único inteiro $O$, a quantidade de ovos que Murilo comprou.",
+    "output": "A saída deve conter um único inteiro, a quantidade de cafés da manhã que Murilo conseguirá tomar.",
+    "constraints": "- $1 \\leq P \\leq 20$.\n- $1 \\leq O \\leq 30$.",
+    "examples": [
+        {
+            "input": "10\n13",
+            "output": "3"
+        },
+        {
+            "input": "3\n9",
+            "output": "1"
+        },
+        {
+            "input": "1\n1",
+            "output": "0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2026",
+    "level": "N1",
+    "period": "Fase 1",
+    "topics": [
+        "matemática",
+        "simulação"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

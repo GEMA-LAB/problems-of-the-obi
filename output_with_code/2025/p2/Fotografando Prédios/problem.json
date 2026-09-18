@@ -1,0 +1,32 @@
+{
+    "title": "Fotografando Prédios",
+    "statement": "Dhara está de férias, e decidiu chamar os amigos da rua em que ela mora para uma competição de fotografia. Na rua de Dhara, existem $N$ prédios dispostos em uma linha, numerados de 1 a $N$ da esquerda para a direita. Dhara tem em seu caderno anotadas as alturas de todos os prédios na lista $A$, onde $A_i$ é a altura do prédio de número $i$.\n\nNessa competição, cada um dos $N$ amigos de Dhara vai se posicionar em um prédio diferente e deve tirar fotos de prédios que estejam à direita (não é permitido tirar fotos do próprio prédio em que o fotógrafo está posicionado). Como alguns prédios podem ser maiores do que outros, pode não ser possível fotografar alguns prédios. Uma pessoa posicionada no prédio $i$ só pode fotografar um prédio de número $j$ se ele não for \"coberto\" por outro prédio de número $k$. Isso aconteceria se $i < k < j$ e $A_k \\geq A_j$ (prédio à direita de $i$ e à esquerda de $j$ com altura maior ou superior que $A_j$).\n\nComo Dhara está organizando a competição, ela escreveu em seu caderno uma outra lista $F$, e decidiu que o amigo posicionado no prédio de número $p$ deve tirar ao total exatamente $F_p$ fotos, cada uma de um prédio diferente. As regras da competição dizem que a $i$-ésima foto tirada, considerando que o prédio de número $k$ foi o fotografado, valerá $i \\times A_k$ pontos. Dessa forma, a pontuação de cada pessoa será a soma das pontuações de suas fotos, considerando a ordem em que foram tiradas.\n\nDhara está torcendo por cada um de seus amigos. A competição só vai ser na semana que vem, mas ela pediu que você já calculasse, a partir da lista $A$ das alturas e da lista $F$ das quantidades de fotos, qual seria a menor pontuação possível que cada amigo poderia atingir. É possível que Dhara tenha se confundido e alguns dos amigos não consigam tirar a quantidade de fotos exigida, e ela também deseja ser informada sobre isso.",
+    "input": "A primeira linha da entrada contém o inteiro $N$, a quantidade de amigos e de prédios na rua.\n\nA segunda linha da entrada contém $N$ inteiros. O $i$-ésimo inteiro da esquerda para a direita é $A_i$, a altura do prédio de número $i$.\n\nA terceira linha da entrada também contém $N$ inteiros. O $i$-ésimo inteiro da esquerda para a direita é $F_i$, a quantidade de fotos que o amigo posicionado no prédio $i$ deve tirar.",
+    "output": "Seu programa deve imprimir uma única linha contendo $N$ inteiros, separados por um espaço em branco. O $i$-ésimo inteiro da esquerda para a direita deve ser a menor pontuação possível que o amigo posicionado no prédio $i$ consegue atingir. Caso esse amigo não consiga tirar $F_i$ fotos, o $i$-ésimo valor deve ser $-1$.",
+    "constraints": "- $1 \\leq N \\leq 100000$\n- $1 \\leq A_i \\leq 100000000$\n- $1 \\leq F_i \\leq N$\n\nPara competidoras que utilizam C++ ou Java: Observe que as respostas podem ser muito grandes para caberem em inteiros de 32 bits. É recomendado o uso de inteiros de 64 bits (long long em C++; long em Java). (Competidoras usando Python ou JavaScript podem ignorar este aviso.)",
+    "examples": [
+        {
+            "input": "5\n1 5 3 2 4\n2 2 1 1 5",
+            "output": "-1 10 2 4 -1"
+        },
+        {
+            "input": "10\n18 94 72 18 40 1 56 78 91 24\n5 2 5 4 3 1 2 6 2 7",
+            "output": "-1 222 665 575 193 56 247 -1 -1 -1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2025",
+    "level": "P2",
+    "period": "Competição Feminina",
+    "topics": [
+        "estruturas de dados",
+        "pilha",
+        "ordenação",
+        "greedy"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 256
+}
