@@ -45,6 +45,11 @@ class QuestionsOrganizer:
         if not output_dir.exists():
             return []
 
+        # Saneamento preventivo de pastas legadas orfas em output_dir
+        cadernos_dir = Path("cadernos")
+        if cadernos_dir.exists():
+            self.cleaner.migrate_legacy_directories(output_dir, cadernos_dir)
+
         questions: List[QuestionFolder] = []
 
         for json_file in output_dir.rglob("problem.json"):
@@ -83,6 +88,9 @@ class QuestionsOrganizer:
                     if part_lower in ("pj", "p1", "p2", "senior", "geral", "iniciacao", "cfobi"):
                         nivel = part_lower
                         break
+
+            level_map = {"n1": "p1", "n2": "p2", "nivel1": "p1", "nivel2": "p2"}
+            nivel = level_map.get(nivel, nivel)
 
             ano = ano or 2024
             nivel = nivel or "geral"
