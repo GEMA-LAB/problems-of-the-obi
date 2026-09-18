@@ -1,0 +1,30 @@
+{
+    "title": "Torre de Números",
+    "statement": "Ricardinho é um menino prodígio e, com apenas 3 anos, aprendeu a contar até 9999. Vendo seu potencial, os pais do garoto compraram uma caixa com diversos blocos numerados de 0 a 9 para ele brincar. A criança adorou o presente e, em apenas alguns dias, já havia aprendido adição e subtração.\n\nPara testar seu aprendizado, o garoto decidiu construir uma torre de números. Inicialmente, Ricardinho pega 4 blocos **não todos iguais** na caixa e os coloca em alguma ordem na base da torre, formando um número $N$. Em seguida, o garoto realiza o seguinte processo:\n\n- Ricardinho pega quatro blocos na caixa, iguais aos quatro blocos atualmente no topo da torre. Depois, ele reorganiza esses blocos do **menor para o maior**, formando um número $X_{1}$ de quatro algarismos.\n- Analogamente, o menino pega outros quatro blocos na caixa, também iguais aos blocos atualmente no topo da torre. Em seguida, ele reorganiza esses blocos do **maior para o menor**, formando um número $X_{2}$ de quatro algarismos.\n- Por fim, ele calcula $X = X_{2} - X_{1}$. Caso $X$ já esteja na torre, ele para de construir a torre. Caso contrário, Ricardinho pega quatro blocos na caixa, coloca o número $X$ no topo da torre e repete o processo.\n\nO garoto sabe que todos os números que ele conhece podem ser formados por quatro blocos, desde que ele coloque blocos com zeros à esquerda quando necessário. Além disso, a caixa de blocos é muito grande, de forma que há blocos suficientes para construir qualquer torre de números.\n\nPor exemplo, para $N = 8082$, a torre será formada pelos seguintes passos:\n\n- Inicialmente, a torre começa com 8082.\n- O número no topo da torre é formado pelos blocos 8, 0, 8 e 2. Assim, $X_{1} = 0288$ e $X_{2} = 8820$. Portanto, $X = X_{2} - X_{1} = 8820 - 0288 = 8532$. Como 8532 não está na torre, ele é adicionado no topo.\n- O número no topo da torre é formado pelos blocos 8, 5, 3 e 2. Assim, $X_{1} = 2358$ e $X_{2} = 8532$. Portanto, $X = X_{2} - X_{1} = 8532 - 2358 = 6174$. Como 6174 não está na torre, ele é adicionado no topo.\n- O número no topo da torre é formado pelos blocos 6, 1, 7 e 4. Assim, $X_{1} = 1467$ e $X_{2} = 7641$. Portanto, $X = X_{2} - X_{1} = 7641 - 1467 = 6174$. Como 6174 já está na torre, ele não é adicionado no topo, e a torre é finalizada.\n\nNo fim, esta é a aparência da torre formada:\n\n|  6 | 1 | 7 | 4  |\n| --- | --- | --- | --- |\n|  8 | 5 | 3 | 2  |\n|  8 | 0 | 8 | 2  |\n\nRicardinho está muito animado com sua nova brincadeira, mas ainda é uma criança pequena e está cansado depois de fazer tantas contas. Dessa forma, dado o número $N$ na base da torre, ajude Ricardinho a construir a torre, e determine qual será a aparência final da torre de números.",
+    "input": "A entrada contém uma única linha com um único inteiro $N$, o número na base da torre.\n\nO número será dado sem zeros à esquerda, mesmo que ele possua menos de quatro algarismos.",
+    "output": "A saída deve conter a torre de números formada pelo procedimento criado por Ricardinho.\n\nA primeira linha da saída deve conter o número na base da torre, a segunda linha deve conter o número no segundo andar da torre, e assim sucessivamente.\n\nImprima os números sem zeros à esquerda, mesmo que ele possua menos de quatro algarismos.",
+    "constraints": "- $1 \\leq N \\leq 9999$\n- $N$ não possui todos os algarismos iguais.",
+    "examples": [
+        {
+            "input": "8082",
+            "output": "8082\n8532\n6174"
+        },
+        {
+            "input": "71",
+            "output": "71\n7083\n8352\n6174"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2026",
+    "level": "P2",
+    "period": "Fase 1",
+    "topics": [
+        "simulação",
+        "matemática"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

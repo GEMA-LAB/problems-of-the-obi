@@ -1,0 +1,34 @@
+{
+    "title": "Recarga",
+    "statement": "Jonas quer fazer uma viagem de Pelém para Pique-Pique, duas grandes cidades do Brasil, seu país de origem, mas seu carro quebrou! Sendo assim, ele decide comprar um carro elétrico.\n\nNa hora de escolher qual carro comprar, ele percebe que cada um tem uma bateria de capacidade diferente. Essa decisão pode ter um grande impacto, uma vez que nem todas as cidades tem uma estação de recarga para a bateria, e portanto uma capacidade baixa pode tornar a viagem inviável.\n\nSabemos que existem N cidades no Brasil, sendo Pelém a cidade 1 e Pique-Pique a cidade N. Ademais, existem M rodovias de mão dupla, onde a i-ésima rodovia liga a cidade a_i com a cidade b_i. Ao percorrer a i-ésima rodovia, Jonas sabe que um carro elétrico consome c_i unidades de energia da bateria. Note que a bateria não pode ter energia negativa em nenhum momento, e portanto, Jonas só pode percorrer a rodovia i se a bateria tiver ao menos c_i unidades de energia.\n\nTambém existem K cidades com estações de recarga para carros elétricos. Ao chegar em uma dessas cidades, Jonas pode recuperar a energia da bateria por completo, ou seja, a energia da bateria volta a ser a capacidade máxima. É garantido que Pelém (a cidade 1) tem uma estação de recarga, e Pique-Pique (a cidade N) não tem.\n\nDadas essas informações, ajude Jonas respondendo qual é a menor capacidade para a bateria de seu carro elétrico de forma que seja possível fazer uma viagem de Pelém até Pique-Pique. Perceba que não é necessário minimizar a distância total percorrida, nem a quantidade de cidades intermediárias, Jonas está interessado apenas na menor capacidade para a bateria com a qual é possível realizar a viagem (isso porque ele notou que, quanto maior a capacidade da bateria, o carro é mais caro).",
+    "input": "A primeira linha da entrada contém dois inteiros, N e M, que indica o número total de cidades e o número total de rodovias, respectivamente.\n\nAs próximas M linhas possuem três inteiros cada e descrevem as rodovias. A i-ésima destas linhas contém três inteiros a_i, b_i e c_i indicando que as cidades a_i e b_i são ligadas pela i-ésima rodovia, e a quantidade de energia c_i consumida para percorrê-la.\n\nA próxima linha tem um inteiro K, a quantidade de cidades com estações de recarga.\n\nA última linha contém K inteiros x_1, x_2, ..., x_K, indicando as cidades que contêm uma estação de recarga.",
+    "output": "A saída deve conter uma única linha contendo um inteiro, a capacidade mínima que a bateria do carro de Jonas precisa ter para ele conseguir fazer sua viagem de Pelém para Pique-Pique.",
+    "constraints": "2 ≤ N ≤ 50000.\n1 ≤ M ≤ 100000.\n1 ≤ a_i, b_i ≤ N e a_i ≠ b_i, para todo 1 ≤ i ≤ M.\nÉ garantido que não há duas rodovias diferentes que liguem o mesmo par de cidades.\n1 ≤ c_i ≤ 10^9, para todo 1 ≤ i ≤ M.\n1 ≤ K < N\n1 ≤ x_j < N, para todo 1 ≤ j ≤ K.\nA cidade 1 contém uma estação de recarga e a cidade N não contém.\nÉ garantido que com uma capacidade de bateria suficientemente alta é possível fazer uma viagem entre qualquer par de cidades.",
+    "examples": [
+        {
+            "input": "7 8\n1 2 50\n1 3 120\n2 4 80\n3 4 40\n4 5 70\n4 6 150\n5 7 90\n6 7 60\n2\n1 4",
+            "output": "160"
+        },
+        {
+            "input": "5 6\n1 2 10\n1 3 60\n2 4 30\n3 5 70\n4 5 90\n2 5 100\n3\n1 3 4",
+            "output": "70"
+        }
+    ],
+    "imgs": [
+        "img-4.jpeg"
+    ],
+    "rating": [
+        100
+    ],
+    "year": "2025",
+    "level": "P1",
+    "period": "Fase 3",
+    "topics": [
+        "graphs",
+        "binary search",
+        "dijkstra",
+        "shortest path"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 256
+}

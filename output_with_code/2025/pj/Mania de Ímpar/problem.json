@@ -1,0 +1,35 @@
+{
+    "title": "Mania de Ímpar",
+    "statement": "Bel é uma garota muito estudiosa e inteligente. No entanto, como muitas pessoas geniais, ela tem algumas manias peculiares, sendo que a principal delas é fazer as coisas em quantidades ímpares. Isso geralmente não atrapalha a sua vida, mas às vezes cria situações interessantes. Por exemplo, Bel visitou sua tia e, como de costume, levou em sua mochila um tênis e uma meia extras, bateu na porta três vezes e tomou cinco copos de água.\n\nNesse dia, elas decidiram que fariam cookies. Quando a menina chegou, a massa já havia sido preparada e disposta em $N$ linhas e $M$ colunas em uma bandeja. A fim de atender à mania da sobrinha, a tia de Bel havia posicionado os biscoitos de forma que $N$ e $M$ são ímpares, mas não teve tempo de colocar as quantidades corretas de gotas de chocolate em cada cookie. Dessa forma, o biscoito na linha $i$ e coluna $j$ possui $G_{i,j}$ gotas de chocolate.\n\nBel decidiu modificar os cookies para estarem de acordo com sua mania. Ela considera que uma bandeja está organizada se, para todo par de cookies adjacentes, a soma das quantidades de gotas de chocolate nos dois cookies é ímpar. Um cookie é adjacente a outro se está imediatamente à esquerda, à direita, acima ou abaixo dele. Bel pretende adicionar gotas de chocolate em alguns cookies para deixar a bandeja organizada. Porém, para economizar os ingredientes da tia, ela deseja fazer isso adicionando o mínimo de gotas possível.\n\nSua tarefa é: dadas os valores $N$ e $M$, bem como as quantidades $G_{i,j}$ de gotas de chocolate em cada cookie, determine a quantidade mínima de gotas que precisam ser adicionadas para que a bandeja esteja organizada, isto é, para que a soma das quantidades de gotas em dois cookies adjacentes seja sempre ímpar. Além disso, você deve descrever a configuração final da bandeja organizada, isto é, indicar a quantidade de gotas de chocolate em cada cookie após as adições de Bel.",
+    "input": "A primeira linha da entrada contém dois inteiros, $N$ e $M$, a quantidade de linhas e a quantidade de colunas na bandeja.\n\nAs próximas $N$ linhas contêm $M$ inteiros cada. A $i$-ésima destas linhas contém os inteiros $G_{i,1}$, $G_{i,2}$, ..., $G_{i,M}$, as quantidades de gotas de chocolate nos cookies da $i$-ésima linha.",
+    "output": "A primeira linha da saída deve conter um único inteiro, o mínimo de gotas de chocolate que precisam ser adicionadas para que a bandeja esteja organizada.\n\nAs $N$ linhas seguintes devem conter $M$ inteiros cada, indicando a configuração final da bandeja de cookies na solução ótima, no mesmo formato da entrada.",
+    "constraints": "É garantido que todo caso de teste satisfaz as restrições abaixo.\n\n- $1 \\leq N, M \\leq 100$\n- $N$ e $M$ são ímpares\n- $1 \\leq G_{i,j} \\leq 1000$ para todo $1 \\leq i \\leq N$ e $1 \\leq j \\leq M$",
+    "examples": [
+        {
+            "input": "3 3\n1 2 1\n2 2 2\n1 2 1",
+            "output": "1\n1 2 1\n2 3 2\n1 2 1"
+        },
+        {
+            "input": "5 5\n8 7 2 5 7\n9 9 9 8 7\n2 7 4 5 6\n6 2 8 2 1\n2 3 4 7 8",
+            "output": "4\n8 7 2 5 8\n9 10 9 8 7\n2 7 4 5 6\n7 2 9 2 1\n2 3 4 7 8"
+        },
+        {
+            "input": "1 5\n1 2 3 4 5",
+            "output": "0\n1 2 3 4 5"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2025",
+    "level": "PJ",
+    "period": "Fase 2",
+    "topics": [
+        "paridade",
+        "matriz",
+        "guloso"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 256
+}

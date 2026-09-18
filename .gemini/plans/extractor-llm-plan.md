@@ -102,34 +102,34 @@ problems-of-the-obi/
 
 ## 4. Checklist de Execucao por Tasks (Commits Atomicos)
 
-Conforme a diretriz da skill `plans`, a execucao ocorrera na branch `feat/extractor-llm` com commits atomicos individuais por tarefa:
+Conforme a diretriz da skill `plans`, a execucao ocorreu na branch `feat/extractor-llm` com commits atomicos individuais por tarefa:
 
-### [ ] Task 1: Configuracao da Branch e Modelos de Dominio (`ProblemSchema`)
+### [x] Task 1: Configuracao da Branch e Modelos de Dominio (`ProblemSchema`)
 - Criar a branch `feat/extractor-llm` a partir de `main`.
 - Adicionar `ExtractorConfig` e constantes de OpenAI em `src/core/config.py`.
 - Implementar `ProblemSchema` e `Exemplo` em `src/models/problem.py` com validacao de tipos, limites `time_limit` e `memory_limit` e sem o campo `difficulty`.
 - Criar testes unitarios em `tests/unit/test_models_problem.py`.
-- **Commit:** `feat(models): create ProblemSchema with python limits and ExtractorConfig`
+- **Commit:** `7820e953 feat(models): create ProblemSchema with python limits and ExtractorConfig`
 
-### [ ] Task 2: Template de Prompt e Prompt Loader
+### [x] Task 2: Template de Prompt e Prompt Loader
 - Criar o template de prompt versionado em `src/prompts/extraction_prompt.md`:
   - Persona e task especializadas na OBI.
   - Regras estritas: sem `difficulty`, com `time_limit` e `memory_limit` calibrados para viabilizar resolucao em linguagem Python.
   - Formato JSON em array de objetos.
 - Implementar `PromptLoader` em `src/extractor/prompt_loader.py`.
 - Criar testes unitarios em `tests/unit/test_prompt_loader.py`.
-- **Commit:** `feat(extractor): add extraction prompt template and prompt loader`
+- **Commit:** `abc13847 feat(extractor): add extraction prompt template and prompt loader`
 
-### [ ] Task 3: Sanitizacao e Parsing de JSON Tolerante a Falhas
+### [x] Task 3: Sanitizacao e Parsing de JSON Tolerante a Falhas
 - Implementar `sanitize_json_markdown` e `parse_problems_json` em `src/extractor/json_parser.py`:
   - Limpeza de fences ````json ... ```` ou ```` ... ````.
   - Extracao tolerante de arrays JSON validos com `json.loads`.
   - Conversao de dicionarios brutos para instancias de `ProblemSchema`.
   - Tratamento de excecoes de JSONDecodeError retornando lista vazia e registrando detalhes do erro.
 - Criar testes unitarios exaustivos em `tests/unit/test_json_parser.py` (JSON valido, JSON com markdown, JSON com texto periferico, JSON invalido).
-- **Commit:** `feat(extractor): implement markdown sanitization and json parser`
+- **Commit:** `c6f906b5 feat(extractor): implement markdown sanitization and json parser`
 
-### [ ] Task 4: Modulo `OpenAiExtractor` com Files API e Exclusao Mandatoria
+### [x] Task 4: Modulo `OpenAiExtractor` com Files API e Exclusao Mandatoria
 - Implementar `OpenAiExtractor` em `src/extractor/openai_extractor.py`:
   - Inicializacao com `ExtractorConfig` ou cliente `OpenAI` injetado.
   - Metodo `extract_from_pdf(pdf_path: Path) -> list[ProblemSchema]`:
@@ -142,16 +142,16 @@ Conforme a diretriz da skill `plans`, a execucao ocorrera na branch `feat/extrac
   - Metodo `process_cadernos(cadernos: list[Path]) -> tuple[list[ProblemSchema], list[Path]]`:
     - Processamento de multiplos PDFs com retencao de falhas para repeticao ciclica.
 - Criar suite de testes com mocks em `tests/unit/test_openai_extractor.py`.
-- **Commit:** `feat(extractor): implement OpenAiExtractor with Files API and lifecycle cleanup`
+- **Commit:** `174c8de9 feat(extractor): implement OpenAiExtractor with Files API and lifecycle cleanup`
 
-### [ ] Task 5: Integracao no CLI (`main.py`) e Validacao End-to-End
+### [x] Task 5: Integracao no CLI (`main.py`) e Validacao End-to-End
 - Integrar `OpenAiExtractor` no fluxo de `--step extract-questions` e pipeline geral em `main.py`.
 - Suporte a filtros de `--ano` e `--nivel` para selecao de cadernos PDF.
 - Atualizar documentacao do CLI e garantir que `uv run pytest` passe com 100% de sucesso.
-- **Commit:** `feat(cli): integrate OpenAiExtractor into main pipeline CLI`
+- **Commit:** `c5e68ea5 feat(cli): integrate OpenAiExtractor into main pipeline CLI`
 
-### [ ] Task 6: Finalizacao e Abertura de Pull Request
-- Executar suite completa de testes unitarios e de integracao.
+### [x] Task 6: Finalizacao e Abertura de Pull Request
+- Executar suite completa de testes unitarios e de integracao (74 testes passando).
 - Confirmar conformidade estrita com as invariantes I1, I2 e I3.
 - Submeter branch e abrir Pull Request detalhando as mudancas conforme a skill `plans`.
 - **Commit / PR:** `docs: finalize extractor-llm implementation plan and submit pull request`
@@ -182,9 +182,9 @@ Conforme a diretriz da skill `plans`, a execucao ocorrera na branch `feat/extrac
 
 ## 6. Criterios de Aceite
 
-- [ ] Todos os novos modulos estao localizados em `src/extractor/`, `src/models/` e `src/prompts/`.
-- [ ] O modelo `ProblemSchema` nao contem `difficulty` e contem `time_limit` (float) e `memory_limit` (int) voltados para Python.
-- [ ] Todo arquivo enviado a API da OpenAI e deletado no `finally` sem retencao residual.
-- [ ] Os arquivos sao salvos estritamente em `output/[titulo]/problem.json` (ou `output/[titulo]_[ano]/`).
-- [ ] A suite completa de testes passa com 100% de sucesso via `uv run pytest`.
-- [ ] Nenhum emoji utilizado em arquivos de codigo, commits ou documentacao.
+- [x] Todos os novos modulos estao localizados em `src/extractor/`, `src/models/` e `src/prompts/`.
+- [x] O modelo `ProblemSchema` nao contem `difficulty` e contem `time_limit` (float) e `memory_limit` (int) voltados para Python.
+- [x] Todo arquivo enviado a API da OpenAI e deletado no `finally` sem retencao residual.
+- [x] Os arquivos sao salvos estritamente em `output/[titulo]/problem.json` (ou `output/[titulo]_[ano]/`).
+- [x] A suite completa de testes passa com 100% de sucesso via `uv run pytest`.
+- [x] Nenhum emoji utilizado em arquivos de codigo, commits ou documentacao.

@@ -1,5 +1,6 @@
 """Core settings and constants for the OBI crawler pipeline."""
 from pathlib import Path
+from typing import Optional
 
 # URLs e Endpoints
 BASE_OBI_URL = "https://olimpiada.ic.unicamp.br/passadas/"
@@ -63,7 +64,10 @@ PADROES_CADERNOS = [
 DEFAULT_CADERNOS_DIR = Path("cadernos")
 DEFAULT_GABARITOS_DIR = Path("gabaritos")
 DEFAULT_CODIGO_DIR = Path("codigo")
-DEFAULT_OUTPUT_DIR = Path("output_question_obi")
+DEFAULT_OUTPUT_DIR = Path("output_with_code")
+DEFAULT_OPENAI_BASE_URL = "https://api.openai.com/v1"
+DEFAULT_OPENAI_MODEL = "gpt-4o-mini"
+DEFAULT_PROMPT_TEMPLATE = Path("src/prompts/extraction_prompt.md")
 
 # Extensoes e mapeamentos para codigos e solucoes oficiais
 EXTENSOES_CODIGO = (
@@ -127,5 +131,25 @@ class GabaritoCrawlerConfig:
         self.timeout = timeout
         self.delay_requests = delay_requests
         self.termos_filtro = termos_filtro
+
+
+class ExtractorConfig:
+    """Configuracao do extrator LLM de questoes."""
+
+    def __init__(
+        self,
+        base_url: Optional[str] = None,
+        api_key: Optional[str] = None,
+        model: str = DEFAULT_OPENAI_MODEL,
+        prompt_template_path: Path = DEFAULT_PROMPT_TEMPLATE,
+        pasta_entrada: Path = DEFAULT_CADERNOS_DIR,
+        pasta_output: Path = DEFAULT_OUTPUT_DIR,
+    ):
+        self.base_url = base_url
+        self.api_key = api_key
+        self.model = model
+        self.prompt_template_path = Path(prompt_template_path)
+        self.pasta_entrada = Path(pasta_entrada)
+        self.pasta_output = Path(pasta_output)
 
 
