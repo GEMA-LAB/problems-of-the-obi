@@ -1,0 +1,30 @@
+{
+    "title": "Torneio de tênis",
+    "statement": "Nome do arquivo:“torneio.x”,onde x deve ser c, cpp, pas, java, js ou py\nA prefeitura contratou um novo professor para ensinar as crianças do bairro a jogar tênis na quadra\nde tênis do parque municipal. O professor convidou todas as crianças do bairro interessadas em\naprender a jogar tênis. Ao ﬁnal do primeiro mês de aulas e treinamentos foi organizado um torneio\nem que cada participante disputou exatamente seis jogos. O professor vai usar o desempenho\nno torneio para separar as crianças em três grupos, de forma a ter grupos de treino em que os\nparticipantes tenham habilidades mais ou menos iguais, usando o seguinte critério:\n• participantes que venceram 5 ou 6 jogos serão colocados no Grupo 1;\n• participantes que venceram 3 ou 4 jogos serão colocados no Grupo 2;\n• participantes que venceram 1 ou 2 jogos serão colocados no Grupo 3;\n• participantes que não venceram nenhum jogo não serão convidados a continuar com os trei-\nnamentos.\nDada uma lista com o resultado dos jogos de um participante, escreva um programa para determinar\nem qual grupo ele será colocado.",
+    "input": "A entrada consiste de seis linhas, cada linha indicando o resultado de um jogo do participante.\nCada linha contém um único caractere:V se o participante venceu o jogo, ouP se o jogador perdeu\no jogo. Não há empates nos jogos.",
+    "output": "Seu programa deve produzir uma única linha na saída, contendo um único inteiro, identiﬁcando o\ngrupo em que o participante será colocado. Se o participante não for colocado em nenhum dos três\ngrupos seu programa deve imprimir o valor−1.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "V\nV\nP\nP\nP\nV",
+            "output": "2"
+        },
+        {
+            "input": "P\nP\nP\nP\nP\nP",
+            "output": "-1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "senior",
+    "period": "Fase 1",
+    "topics": [
+        "condicional",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

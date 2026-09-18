@@ -1,0 +1,31 @@
+{
+    "title": "Zero para cancelar",
+    "statement": "Nome do arquivo:“zero.x”,onde x deve ser c, cpp, pas, java, js ou py\nSeu chefe está ao telefone, nervoso. Ele quer que você compute a soma de uma sequência de números\nque ele vai falar para você ao telefone, para saber o total das vendas em sua mais recente viagem\nde negócios.\nInfelizmente, de vez em quando seu chefe fala números errados para você ao telefone.\nFelizmente, seu chefe rapidamente percebe que falou um número errado e diz “zero”, que como\ncombinado previamente quer dizerignore o último número corrente.\nInfelizmente, seu chefe pode cometer erros repetidos, e diz “zero” para cada erro.\nPor exemplo, seu chefe pode falar ao telefone “Um, três, cinco, quatro, zero, zero, sete, zero, zero,\nseis”, o que signiﬁca uma soma total igual a 7, conforme explicado na tabela abaixo:\nFala do chefe Números correntes Explicação\n“um, três, cinco, quatro” 1,3,5,4 registre os quatro números\n“zero, zero” 1, 3 ignore os dois últimos números\n“sete” 1, 3, 7 registre o sete ao ﬁnal da lista\n“zero, zero” 1 ignore os dois últimos números\n“seis” 1, 6 registre seis ao ﬁnal da lista\nPara não deixar seu chefe ainda mais nervoso, escreva um programa que determine a soma total\ndos números falados por seu chefe ao telefone.",
+    "input": "A primeira linha da entrada contém um inteiroN, a quantidade de números inteiros (incluindo os\n“zeros”) que o seu chefe falou ao telefone. Cada uma dasN linhas seguintes contém um número\ninteiro Xi.",
+    "output": "Seu programa deve produzir uma única linha na saída, contendo um único inteiro, a soma correta\ndos números, levando em conta que o valor 0 signiﬁca erro, conforme descrito.",
+    "constraints": "- 1 ≤ N ≤ 100 000\n- 0 ≤ Xi ≤ 100, para (1 ≤ i ≤ N)\n- 0 ≤ resultado ≤ 1 000 000",
+    "examples": [
+        {
+            "input": "4\n3\n0\n4\n0",
+            "output": "0"
+        },
+        {
+            "input": "10\n1\n3\n5\n4\n0\n0\n7\n0\n0\n6",
+            "output": "7"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "pilhas",
+        "estruturas de dados",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,35 @@
+{
+    "title": "Poligrama",
+    "statement": "Nome do arquivo:“poligrama.x”,onde x deve ser c, cpp, pas, java, js ou py\nDuas palavras A e B são anagramas entre sise podemos transformar a palavraA na palavra B\napenas trocando de posição as letras da palavraA. Por exemplo, “duetos” e “estudo” são anagramas\nentre si. Um outro exemplo é “bba” e “bab”.\nVamos chamar depoligramauma palavra que consiste na concatenação de duas ou mais palavras que\nsão anagramas entre si. A primeira dessas palavras é chamada deraiz do poligrama. Por exemplo,\na palavra “bbabab” é um poligrama com raiz “bba”, pois ela é a concatenação dos anagramas “bba”\ne “bab”.\nDada uma palavra, escreva um programa que determine se ela é um poligrama e encontre a sua\nraiz.",
+    "input": "A primeira linha da entrada contém um inteiroN, indicando o número de letras da palavra. A\nsegunda linha contém a palavraP.",
+    "output": "Seu programa deve produzir uma única linha. Se a palavra dada é um poligrama, a linha deve conter\na raiz do poligrama. Caso contrário, a linha deve conter o caractere asterisco (’*’). Se houver mais\nde uma raiz possível, seu programa deve imprimir a de menor comprimento.",
+    "constraints": "- 1 ≤ N ≤ 100000\n- O número de caracteres deP é igual aN.\n- Os únicos caracteres emP são letras minúsculas não acentuadas.",
+    "examples": [
+        {
+            "input": "5\nxxxxx",
+            "output": "x"
+        },
+        {
+            "input": "2\nxy",
+            "output": "*"
+        },
+        {
+            "input": "6\nbbabab",
+            "output": "bba"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "strings",
+        "contagem",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,35 @@
+{
+    "title": "Passatempo",
+    "statement": "Nome do arquivo:“passatempo.x”,onde x deve ser c, cpp, pas, java, js ou py\nDesaﬁos de lógica e matemática são um ótimo passatempo, atraindo um grande número de prati-\ncantes, e um mercado que envolve aplicativos para celular, atividades on-line, revistas especializadas\ne até mesmo cursos na internet para melhorar o desempenho!\nNeste problema sua tarefa é escrever um programa que resolva um novo passatempo, mostrado na\nﬁgura abaixo. O passatempo é composto por um quadriculado com letras dentro de cada célula\ne números ao lado de cada linha ou coluna do quadriculado. As letras dentro de cada célula\nrepresentam variáveis, e os números representam as somas dos valores das variáveis em cada linha\nou coluna.\ndf bb cg df df\naz cg az ee\ncg cg df df\naz cg az az\n11\n6\n10\n6\nee\ndf\naz\n66876\nO objetivo desse passatempo é determinar o valor de cada variável de modo a satisfazer as somas\ndas linhas e colunas mostradas. Para permitir que um número maior de pessoas consiga resolver o\npassatempo, ele tem uma propriedade que facilita a sua solução: sempre é possível encontrar uma\nlinha ou coluna em que há apenas uma variável cujo valor ainda é desconhecido. Assim, uma possível\nmaneira de resolver o problema é, a cada passo da solução, encontrar o valor de uma variável.\nSua tarefa é, dado um passatempo, determinar os valores das variáveis que o solucionam.",
+    "input": "A primeira linha contém dois inteirosL e C indicando o número de linhas e o número de colunas\ndo passatempo. Cada uma das L linhas seguintes contém C nomes de variáveis, seguidos de um\ninteiro S, asomaresultantedasvariáveisdessalinha. Aúltimalinhacontém C inteiros Xi, indicando\nrespectivamente a soma das variáveis na colunai. Nomes de variáveis são formados por precisamente\nduas letras minúsculas, de ’a’ a ’z’. Todos os passatempos têm solução única, em que todas as\nvariáveis são números inteiros.",
+    "output": "Seu programa deve produzir uma linha para cada variável do passatempo, contendo o nome da\nvariável e o seu valor inteiro. As variáveis devem ser escritas em ordem alfabética crescente, ou seja,\nrespeitando a ordem\naa, ab, . . . ,az, ba, bb, . . . ,za, zb, . . . ,zz.",
+    "constraints": "- 1 ≤ L ≤ 100\n- 2 ≤ C ≤ 100\n- −108 ≤ S ≤ 108\n- −108 ≤ Xi ≤ 108",
+    "examples": [
+        {
+            "input": "4 5\ndf bb cg df df 11\nee az cg az ee 6\ndf cg cg df df 10\naz az cg az az 6\n6 7 8 6 6",
+            "output": "az 1\nbb 3\ncg 2\ndf 2\nee 1"
+        },
+        {
+            "input": "3 4\naa bb cc dd 10\naa bb cc dd 10\naa bb cc dd 10\n3 6 9 12",
+            "output": "aa 1\nbb 2\ncc 3\ndd 4"
+        },
+        {
+            "input": "3 3\naa zz aa 27\nvv zz aa -5\nkk kk aa 40\n15 -7 54",
+            "output": "aa 18\nkk 11\nvv -14\nzz -9"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "sistemas lineares",
+        "grafos",
+        "matrizes"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 256
+}
