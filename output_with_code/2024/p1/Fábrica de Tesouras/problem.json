@@ -1,0 +1,37 @@
+{
+    "title": "Fábrica de Tesouras",
+    "statement": "Cecília trabalha em uma fábrica de tesouras. Após o fim da super-promoção de volta às aulas, sobraram muitas tesouras, então ela decidiu usar algumas delas em um quadro para decorar a parede da fábrica. Cecília ama a natureza, e por isso decidiu que seu quadro seguirá o formato de uma árvore.\n\nCecília fará a montagem de acordo os passos abaixo.\n\n- O primeiro passo é colar uma tesoura fechada em pé na base do quadro. Esta tesoura representa o tronco da árvore.\n- O segundo passo é colar, na ponta das lâminas da tesoura fechada, uma tesoura aberta. Esta tesoura aberta representa os primeiros galhos da árvore.\n- O terceiro passo é colar tesouras fechadas em cima de cada lâmina da tesoura posicionada no passo anterior.\n- O quarto passo é colar uma tesoura aberta na ponta das lâminas de cada tesoura colada no passo anterior.\n- O quinto passo segue a mesma regra do terceiro passo: colar tesouras fechadas em cima de cada lâmina das tesouras abertas coladas no quarto passo.\n- O sexto passo segue a mesma regra do quarto passo: colar tesouras abertas em cima de cada lâmina das tesouras fechadas coladas no quinto passo.\n- E assim em diante: Cecília vai alternando os passos entre colar tesouras fechadas e abertas até ficar satisfeita com a altura do quadro.\n\nCecília chama de altura do quadro o número de passos usados para criá-lo.\n\nPor exemplo, o seguinte quadro tem altura 1, e o seguinte quadro tem altura 6.\n\nCecília já fez a colagem de altura K, porém ela ainda não está satisfeita com o quadro: ela está incomodada porque as lâminas das tesouras não possuem a mesma cor que os seus cabos.\n\nSua amiga, Laura, irá emprestar um tubo de spray de tinta para Cecília pintar a árvore com a cor dos cabos das tesouras. Porém, Laura só permitiu que Cecília use o spray uma única vez. Ou seja, Cecília não pode usar o spray para pintar uma parte da árvore, parar de pintar e recomeçar em uma outra parte da árvore.\n\nPor exemplo, Cecília pode usar o spray para pintar a seguinte árvore, de altura 4, fazendo um caminho com o spray. Note que, por só poder usar o spray uma vez, Cecília teve que pintar algumas lâminas de tesouras duas vezes, gastando mais tinta.\n\nAlém disso, observe que, quando uma tesoura está fechada, uma passada de spray basta para pintar as lâminas e gastamos apenas 1 ml de tinta.\n\nPor outro lado, quando uma tesoura está aberta, temos que passar o spray ao menos uma vez em cada lâmina e gastamos 1 ml de tinta em cada passada.\n\nCecília sempre começa pintando a árvore a partir de seu tronco (de baixo para cima) e tenta sempre gastar o mínimo de tinta possível. Na árvore de altura 4, por exemplo, ela gastou 14 ml de tinta.\n\nSua tarefa é, dada a altura K da árvore que Cecília pintou, determinar a quantidade M de tinta (em ml) que ela usou. Observe que M pode ser muito grande. Se M for maior ou igual a 1000000007, você deve encontrar o resto da divisão de M por 1000000007.",
+    "input": "A única linha da entrada contém um único inteiro K, a altura da árvore montada por Cecília.",
+    "output": "Seu programa deverá produzir uma única linha contendo um único inteiro, o resto da divisão de M por 1000000007.",
+    "constraints": "- 1 <= K <= 50000",
+    "examples": [
+        {
+            "input": "1",
+            "output": "1"
+        },
+        {
+            "input": "4",
+            "output": "14"
+        }
+    ],
+    "imgs": [
+        "img-4.jpeg",
+        "img-5.jpeg",
+        "img-6.jpeg",
+        "img-7.jpeg"
+    ],
+    "rating": [
+        100
+    ],
+    "year": "2024",
+    "level": "p1",
+    "period": "Fase Única",
+    "topics": [
+        "recorrência",
+        "programação dinâmica",
+        "matemática",
+        "módulo"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 512
+}

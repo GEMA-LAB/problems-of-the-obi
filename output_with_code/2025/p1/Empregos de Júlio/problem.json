@@ -1,9 +1,9 @@
 {
     "title": "Empregos de Júlio",
-    "statement": "Júlio trabalha muito para sustentar sua família. No entanto, ele percebeu que um único emprego não seria suficiente para pagar as contas e, por isso, decidiu arranjar dois! Assim, ele foi contratado para ser entregador de jornais e segurança de shopping. A princípio, ele pensou que conseguiria trabalhar em ambos ao mesmo tempo, mas logo descobriu que isso não seria tão fácil.\n\nComo os dois serviços demandam muito tempo e esforço, Júlio desistiu de pegar turnos em ambos ao mesmo tempo. Dessa forma, ele pretende escolher em qual deles ele vai trabalhar em cada um dos próximos N dias, sendo que, para cada um desses, Júlio sabe o quanto ele ganharia se trabalhasse como entregador ou segurança. Mais especificamente, no i-ésimo dia, ele ganhará a_i reais para entregar jornais e b_i reais para vigiar o shopping.\n\nO chefe de Júlio no emprego de segurança ficou sabendo da decisão de seu empregado e, a fim de segurá-lo no trabalho, ofereceu um incentivo a ele. Assim, ele prometeu a Júlio que, após trabalhar K dias na segurança do shopping, ele ganhará em dobro em todo e qualquer turno que ele escolher, ou seja, ganhará 2b_i reais se vigiar o shopping no i-ésimo dia. Note que os primeiros K dias trabalhados nesse emprego não precisam ser consecutivos, e ele ganhará o valor normal do dia.\n\nJúlio está muito interessado na proposta do chefe, mas, como a quantidade N e K de dias são muito grandes, ele não sabe em qual emprego ele deve trabalhar em cada dia. Sua tarefa é: dados os valores N e K, bem como as listas a_1 ... a_N e b_1 ... b_N, ajude Júlio a saber qual o máximo de dinheiro que ele pode conseguir, considerando a proposta feita por um de seus chefes.",
-    "input": "A primeira linha da entrada contém dois inteiros, N e K, que indicam o número de dias que Júlio irá trabalhar e a quantidade de vezes que ele deve trabalhar de segurança para ganhar em dobro.\n\nA segunda linha da entrada contém N inteiros, a_1, a_2, ..., a_N, que representam o quanto ele receberia em cada dia caso trabalhasse entregando jornais.\n\nA terceira linha da entrada contém N inteiros, b_1, b_2, ..., b_N, que representam o quanto ele receberia em cada dia caso trabalhasse vigiando o shopping.",
+    "statement": "Nome do arquivo: empregos.c, empregos.cpp, empregos.pas, empregos.java, empregos.js ou empregos.py\n\nJúlio trabalha muito para sustentar sua família. No entanto, ele percebeu que um único emprego não seria suficiente para pagar as contas e, por isso, decidiu arranjar dois! Assim, ele foi contratado para ser entregador de jornais e segurança de shopping. A princípio, ele pensou que conseguiria trabalhar em ambos ao mesmo tempo, mas logo descobriu que isso não seria tão fácil.\n\nComo os dois serviços demandam muito tempo e esforço, Júlio desistiu de pegar turnos em ambos ao mesmo tempo. Dessa forma, ele pretende escolher em qual deles ele vai trabalhar em cada um dos próximos N dias, sendo que, para cada um desses, Júlio sabe o quanto ele ganharia se trabalhasse como entregador ou segurança. Mais especificamente, no i-ésimo dia, ele ganhará a_i reais para entregar jornais e b_i reais para vigiar o shopping.\n\nO chefe de Júlio no emprego de segurança ficou sabendo da decisão de seu empregado e, a fim de segurá-lo no trabalho, ofereceu um incentivo a ele. Assim, ele prometeu a Júlio que, após trabalhar K dias na segurança do shopping, ele ganhará em dobro em todo e qualquer turno que ele escolher, ou seja, ganhará 2b_i reais se vigiar o shopping no i-ésimo dia. Note que os primeiros K dias trabalhados nesse emprego não precisam ser consecutivos, e ele ganhará o valor normal do dia.\n\nJúlio está muito interessado na proposta do chefe, mas, como as quantidades N e K de dias são muito grandes, ele não sabe em qual emprego ele deve trabalhar em cada dia. Sua tarefa é: dados os valores N e K, bem como as listas a_1 ... a_N e b_1 ... b_N, ajude Júlio a saber qual o máximo de dinheiro que ele pode conseguir, considerando a proposta feita por um de seus chefes.",
+    "input": "A primeira linha da entrada contém dois inteiros, N e K, que indicam o número de dias que Júlio irá trabalhar e a quantidade de vezes que ele deve trabalhar de segurança para ganhar em dobro.\nA segunda linha da entrada contém N inteiros, a_1, a_2, ..., a_N, que representam o quanto ele receberia em cada dia caso trabalhasse entregando jornais.\nA terceira linha da entrada contém N inteiros, b_1, b_2, ..., b_N, que representam o quanto ele receberia em cada dia caso trabalhasse vigiando o shopping.",
     "output": "A saída deve conter uma única linha contendo um inteiro, o máximo que Júlio consegue receber nos próximos N dias.",
-    "constraints": "1 ≤ N ≤ 100000.\n0 ≤ K ≤ N.\n1 ≤ a_i, b_i ≤ 1000000000, para todo 1 ≤ i ≤ N.",
+    "constraints": "- 1 <= N <= 100000.\n- 0 <= K <= N.\n- 1 <= a_i, b_i <= 1000000000, para todo 1 <= i <= N.\n\nPara competidores que utilizam C++ ou Java: Observe que alguns valores na saída podem ser muito grandes para caberem em um inteiro de 32 bits. É recomendado o uso de inteiros de 64 bits (long long em C++; long em Java). (Competidores usando Python ou JavaScript podem ignorar este aviso.)",
     "examples": [
         {
             "input": "5 0\n30 40 30 50 70\n10 30 20 20 40",
@@ -23,13 +23,13 @@
         100
     ],
     "year": "2025",
-    "level": "P1",
+    "level": "p1",
     "period": "Fase 3",
     "topics": [
-        "dynamic programming",
-        "greedy",
-        "heap"
+        "array",
+        "programação dinâmica",
+        "greedy"
     ],
-    "time_limit": 2.0,
-    "memory_limit": 256
+    "time_limit": 5.0,
+    "memory_limit": 1024
 }

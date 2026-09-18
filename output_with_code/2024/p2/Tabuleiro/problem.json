@@ -1,0 +1,35 @@
+{
+    "title": "Tabuleiro",
+    "statement": "Júlia gosta muito de jogos de tabuleiro. Sabendo disso, seu avô Radeck a presenteou com um jogo matemático de tabuleiro.\n\nO jogo é jogado em um tabuleiro com dimensões 3 × N (3 linhas e N colunas), inicialmente vazio, e contém uma bolsa com peças de tabuleiro nos nove formatos da figura abaixo. Existem infinitas peças de cada formato.\n\nO objetivo do jogo é determinar de quantas maneiras é possível preencher completamente o tabuleiro com peças nos formatos acima. Cada quadrado do tabuleiro deve estar coberto por exatamente uma peça. Não é permitido rotacionar as peças (ou seja, cada peça deve ser posicionada exatamente como na figura acima). Também não é permitido que sobrem pedaços de peças para fora do tabuleiro.\n\nPor exemplo, um tabuleiro 3 × 2 pode ser preenchido de 3 maneiras.\n\nSua tarefa é, dado o comprimento N do tabuleiro, calcular o número de modos de preencher o tabuleiro de acordo com as regras acima. Se este número for maior ou igual a 1000000007, você deve encontrar o resto da divisão do número por 1000000007.\n\nObservação: O “resto da divisão” é o valor que sobra quando um número é dividido por outro. Por exemplo, o resto da divisão de 10 por 4 é 2. Este resto pode ser calculado utilizando o operador % entre o dividendo e o divisor.",
+    "input": "A entrada consiste de uma única linha com um único inteiro N, o comprimento do tabuleiro.",
+    "output": "Seu programa deve imprimir uma única linha contendo apenas um inteiro, o resto da divisão do número de maneiras de preencher o tabuleiro por 1000000007.",
+    "constraints": "- 1 ≤ N ≤ 100000",
+    "examples": [
+        {
+            "input": "2",
+            "output": "3"
+        },
+        {
+            "input": "4",
+            "output": "15"
+        },
+        {
+            "input": "5",
+            "output": "35"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2024",
+    "level": "p2",
+    "period": "Fase Única",
+    "topics": [
+        "programação dinâmica",
+        "recorrência",
+        "matemática"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,35 @@
+{
+    "title": "Revezamento",
+    "statement": "A cada ano, a escola municipal de Nlogópolis organiza uma gincana para os alunos se divertirem. Animada com a competição, Bárbara se encarregou de organizar o time de revezamento que irá representar a sua turma na natação.\n\nUm revezamento válido é composto por quatro alunos diferentes: dois da modalidade feminina e dois da masculina. Nesse revezamento, os quatro estilos — costas, peito, borboleta e crawl — são nadados por pessoas diferentes. Mais especificamente, a primeira pessoa nada costas, a segunda peito, a terceira borboleta e a quarta crawl.\n\nCom os quatro integrantes escolhidos, Bárbara tem a liberdade de escolher a ordem na qual eles irão nadar. O tempo total do revezamento é a soma dos tempos de cada aluno no seu respectivo estilo nadado. Há N pessoas na turma de Bárbara e ela tem à disposição os dados de todos, ou seja, ela sabe a qual modalidade (feminina ou masculina) cada aluno pertence e quais são os seus tempos para cada um dos quatro estilos.\n\nApós saber que a turma com revezamento vencedor irá ganhar croissants de chocolate da cantina, Bárbara deseja escolher os quatro integrantes e a ordem deles de modo a ganhar a competição. Sua tarefa é escrever um programa que ajude Bárbara a encontrar o menor tempo total possível para um revezamento válido.",
+    "input": "A primeira linha da entrada contém um único inteiro N, que representa a quantidade de pessoas na turma de Bárbara.\n\nCada uma das próximas N linhas representa um aluno. Na i-ésima linha, o primeiro inteiro indica a modalidade do aluno — 0 para feminina e 1 para masculina — e os quatro inteiros seguintes (A_i, B_i, C_i e D_i) representam o tempo do i-ésimo aluno nos estilos costas, peito, borboleta e crawl, respectivamente.",
+    "output": "Seu programa deverá imprimir uma única linha contendo um único inteiro: o menor tempo total possível para um revezamento válido. Caso não seja possível montar um revezamento válido, seu programa deverá imprimir também uma única linha contendo apenas o inteiro -1.",
+    "constraints": "- 4 ≤ N ≤ 100000\n- 1 ≤ A_i, B_i, C_i, D_i ≤ 1000000000\n\nPara competidoras que utilizam C++ ou Java: Observe que a resposta pode ser muito grande para caber em um inteiro de 32 bits. É recomendado o uso de um inteiro de 64 bits (long long em C++; long em Java). (Competidoras usando Python ou JavaScript podem ignorar este aviso.)",
+    "examples": [
+        {
+            "input": "4\n0 39 49 28 31\n1 50 40 20 10\n1 30 20 10 5\n0 20 60 48 30",
+            "output": "78"
+        },
+        {
+            "input": "4\n0 39 49 28 31\n0 50 40 20 10\n1 30 20 10 5\n0 20 60 48 30",
+            "output": "-1"
+        },
+        {
+            "input": "7\n0 34 44 20 70\n1 43 27 56 40\n1 10 20 24 20\n0 66 59 30 25\n0 24 63 65 47\n0 58 52 40 53\n1 55 41 25 29",
+            "output": "82"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2025",
+    "level": "pj",
+    "period": "Competição Feminina",
+    "topics": [
+        "greedy",
+        "sorting",
+        "implementation"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 1024
+}

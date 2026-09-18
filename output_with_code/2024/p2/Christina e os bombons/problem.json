@@ -1,0 +1,36 @@
+{
+    "title": "Christina e os bombons",
+    "statement": "A Competição de Programação Feminina está sendo organizada no famoso reino da Quadradolândia. Christina, que é grande fã de viagens e de chocolate, ficou responsável por levar bombons para as competidoras.\n\nA Quadradolândia é um lugar lindo com várias montanhas e vales. O mapa do reino é descrito como um tabuleiro L × C (L linhas e C colunas), onde cada quadrado representa uma cidade do reino. As cidades da Quadradolândia possuem diferentes tipos de terreno, alguns mais fáceis de atravessar e outros mais difíceis. Por isso, cada cidade possui uma dificuldade p associada a ela, um inteiro expressando o quão trabalhoso é atravessar a cidade.\n\nChristina está na cidade A, onde ela vai comprar bombons. Ela pretende andar pelo reino para levar os bombons para a competição, que acontecerá em uma outra cidade B daqui a D dias. Porém, Christina tem medo de se perder, e por isso só anda nas direções Norte, Sul, Leste e Oeste, sem sair do reino (ou seja, Christina só pode andar horizontalmente ou verticalmente dentro do tabuleiro).\n\nOs bombons são bem pesados e, quanto mais bombons Christina carrega, mais devagar ela anda. Mais especificamente, se ela estiver levando W bombons, ela irá demorar p × W dias para atravessar uma cidade com dificuldade p. Note que Christina precisa atravessar a cidade A para sair dela, mas acaba sua viagem imediatamente ao entrar na cidade B (ou seja, ela não precisa atravessar a cidade B).\n\nAlém disso, a Quadradolândia é um reino com muitos perigos: algumas cidades possuem monstros e Christina decidiu que ela não pode passar por tais cidades. Por sorte, Christina sabe que existe pelo menos um caminho entre A e B que não atravessa cidades com monstros.\n\nChristina quer levar o maior número possível de bombons para a competição. Ajude ela a encontrar a quantidade máxima de bombons que ela pode carregar de forma a chegar na cidade B a tempo da competição.",
+    "input": "A primeira linha da entrada contém três inteiros L, C e D, indicando, respectivamente, o número de linhas no tabuleiro que descreve a Quadradolândia, o número de colunas no tabuleiro e o número de dias que faltam para a competição acontecer.\nAs próximas L linhas contêm C inteiros cada e representam a dificuldade do terreno de cada cidade. O j-ésimo inteiro da i-ésima destas linhas, p_ij, corresponde à dificuldade da cidade na posição (i,j) do tabuleiro. Se a cidade (i,j) possui monstros, p_ij = -1 e Christina não pode atravessá-la.\nA próxima linha contém dois inteiros L_1 e C_1, indicando que a cidade A onde Christina vai comprar os bombons está na L_1-ésima linha e C_1-ésima coluna do tabuleiro.\nA última linha contém dois inteiros L_2 e C_2, indicando que a cidade B da competição está na L_2-ésima linha e C_2-ésima coluna do tabuleiro.",
+    "output": "Seu programa deverá produzir uma única linha contendo um único inteiro W, a quantidade máxima de bombons que Christina pode levar de modo a chegar à cidade da competição em no máximo D dias.",
+    "constraints": "- 2 ≤ L ≤ 100\n- 2 ≤ C ≤ 100\n- 1 ≤ D ≤ 1000000000\n- 1 ≤ p_ij ≤ 10000 ou p_ij = -1 para todos 1 ≤ i ≤ L e 1 ≤ j ≤ C\n- 1 ≤ L_1 ≤ L e 1 ≤ C_1 ≤ C\n- 1 ≤ L_2 ≤ L e 1 ≤ C_2 ≤ C\n- (L_1, C_1) ≠ (L_2, C_2)\n- É garantido que existe caminho entre A e B que não atravessa cidades com monstros",
+    "examples": [
+        {
+            "input": "2 2 100\n10 100\n1 10\n1 1\n2 2",
+            "output": "9"
+        },
+        {
+            "input": "3 4 37\n2 2 2 2\n2 -1 -1 2\n2 2 2 2\n3 3\n1 1",
+            "output": "4"
+        },
+        {
+            "input": "3 4 1000\n1 2 3 4\n-1 -1 -1 5\n9 8 7 6\n3 1\n1 1",
+            "output": "22"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2024",
+    "level": "p2",
+    "period": "Fase Única",
+    "topics": [
+        "busca binária",
+        "grafos",
+        "caminho mínimo",
+        "Dijkstra"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 256
+}

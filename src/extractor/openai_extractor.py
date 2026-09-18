@@ -218,7 +218,7 @@ class OpenAiExtractor:
                     extracted_all.append(p)
 
             except Exception as e:
-                logger.error(f"Erro ao processar caderno {pdf_path}: {e}")
+                logger.error(f"Erro ao processar caderno {pdf_path}")
                 errors.append(pdf_path)
 
         return extracted_all, errors

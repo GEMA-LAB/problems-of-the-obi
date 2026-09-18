@@ -1,9 +1,9 @@
 {
     "title": "Diagonal",
-    "statement": "Joana é dona de uma construtora muito famosa. Em seu novo empreendimento, ela está construindo um condomínio de N prédios, onde atualmente o i-ésimo prédio possui A_i apartamentos, um por andar. Como o condomínio ainda está em construção, é possível que a quantidade de apartamentos em um prédio não seja 0. Mas nos prédios onde há pelo menos um apartamento, eles são numerados a partir da base, ou seja, o apartamento no primeiro andar recebe o número 1, o apartamento no segundo andar recebe o número 2, e assim por diante, até o apartamento no último andar que recebe o número A_i.\n\nJoana é uma entusiasta da construção civil, por isso está sempre usando as técnicas mais avançadas neste setor. Dessa vez, ela construiu o condomínio utilizando um material especial, que prometia ser mais resistente. Porém, foram descobertos problemas em relação à propagação de som neste material. Um funcionário identificou que, quando algo em um determinado apartamento emite um som, este som é ouvido em todos os apartamentos que estão à esquerda, em um andar mais alto e que estejam na mesma diagonal que o apartamento inicial.\n\nMais precisamente, se algo emite no apartamento i do prédio j emite um som, ele é ouvido no apartamento a do prédio b se e somente se b < j e a - i = j - b. Por exemplo, na figura a seguir, se um som é emitido no apartamento 2 do prédio 4, ele será ouvido no apartamento 4 do prédio 2, mas não será ouvido no apartamento 1 do prédio 3 (pois o apartamento não está acima do andar inicial) nem no apartamento 4 do prédio 6 (pois o prédio não está à esquerda do prédio inicial). A figura abaixo ilustra esse cenário.\n\nJoana ficou muito decepcionada ao saber desse problema. Porém, quantos apartamentos ouvem um som depende de onde ele é inicialmente emitido. Assim, para avaliar os possíveis danos, Joana deseja que você calcule o maior número de apartamentos (incluindo o apartamento inicial) que podem ouvir um som emitido em algum apartamento do condomínio.",
-    "input": "A primeira linha da entrada contém um único inteiro N, representando a quantidade de prédios do condomínio.\n\nA segunda linha da entrada contém N inteiros, A_1, A_2, ..., A_N, que representam a quantidade de apartamentos de cada prédio, da esquerda para a direita.",
-    "output": "Seu programa deverá produzir uma única linha contendo somente um inteiro, o maior número de apartamentos que podem ouvir um som emitido em algum apartamento do condomínio, se o apartamento inicial for escolhido de maneira a maximizar esta quantidade.",
-    "constraints": "1 ≤ N ≤ 300000.\n0 ≤ A_i ≤ 100000000 para todo 1 ≤ i ≤ N.",
+    "statement": "Nome do arquivo: diagonal.c, diagonal.cpp, diagonal.pas, diagonal.java, diagonal.js ou diagonal.py\n\nJoana é dona de uma construtora muito famosa. Em seu novo empreendimento, ela está construindo um condomínio de N prédios, onde atualmente o i-ésimo prédio possui A_i apartamentos, um por andar. Como o condomínio ainda está em construção, é possível que a quantidade de apartamentos em um prédio seja 0. Mas nos prédios onde há pelo menos um apartamento, eles são numerados a partir da base, ou seja, o apartamento no primeiro andar recebe o número 1, o apartamento no segundo andar recebe o número 2, e assim por diante, até o apartamento no último andar que recebe o número A_i.\n\nJoana é uma entusiasta da construção civil, por isso está sempre usando as técnicas mais avançadas neste setor. Dessa vez, ela construiu o condomínio utilizando um material especial, que prometia ser mais resistente. Porém, foram descobertos problemas em relação à propagação de som neste material. Um funcionário identificou que, quando alguém em um determinado apartamento emite um som, este som é ouvido em todos os apartamentos que estão em um prédio à esquerda, em um andar mais alto e que estejam na mesma diagonal que o apartamento inicial.\n\nMais precisamente, se alguém no apartamento i do prédio j emite um som, ele é ouvido no apartamento a do prédio b se e somente se b < j e a - i = j - b. Por exemplo, na figura a seguir, se um som é emitido no apartamento 2 do prédio 4, ele será ouvido no apartamento 4 do prédio 2, mas não será ouvido no apartamento 1 do prédio 3 (pois o apartamento não está acima do andar inicial) nem no apartamento 4 do prédio 6 (pois o prédio não está à esquerda do prédio inicial). A figura abaixo ilustra esse cenário.\n\nJoana ficou muito decepcionada ao saber desse problema. Porém, quantos apartamentos ouvem um som depende de onde ele é inicialmente emitido. Assim, para avaliar os possíveis danos, Joana deseja que você calcule o maior número de apartamentos (incluindo o apartamento inicial) que podem ouvir um som emitido em algum apartamento do condomínio.",
+    "input": "A primeira LINHA da entrada contém um único inteiro N, representando a quantidade de prédios do condomínio.\nA segunda LINHA da entrada contém N inteiros, A_1, A_2, ..., A_N, que representam a quantidade de apartamentos de cada prédio, da esquerda para a direita.",
+    "output": "Seu programa deverá produzir uma única LINHA contendo somente um inteiro, o maior número de apartamentos que podem ouvir um som emitido em algum apartamento do condomínio, se o apartamento inicial for escolhido de maneira a maximizar esta quantidade.",
+    "constraints": "- 1 <= N <= 300000.\n- 0 <= A_i <= 100000000 para todo 1 <= i <= N.",
     "examples": [
         {
             "input": "9\n8 7 0 2 4 5 0 0 3",
@@ -26,13 +26,13 @@
         100
     ],
     "year": "2025",
-    "level": "P1",
+    "level": "p1",
     "period": "Fase 3",
     "topics": [
         "array",
-        "sweep line",
-        "intervals"
+        "programação dinâmica",
+        "hash"
     ],
-    "time_limit": 2.0,
-    "memory_limit": 256
+    "time_limit": 5.0,
+    "memory_limit": 1024
 }

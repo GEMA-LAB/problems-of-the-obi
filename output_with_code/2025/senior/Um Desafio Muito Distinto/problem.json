@@ -1,0 +1,36 @@
+{
+    "title": "Um Desafio Muito Distinto",
+    "statement": "João e Maria são dos irmãos que adoram bolinhas de gude e matemática. Por isso, eles gostaram muito do novo lançamento da OBI (Organização de Brincadeiras Infantis), o Desafio Muito Distinto. Em cada partida do desafio, Maria usa bolinhas de gude para avaliar as habilidades de memória e matemática de João.\n\nNo início de uma partida, Maria coloca uma quantidade muito grande de bolinhas de gude em uma mesa e dá uma caixa vazia para João. Maria também escolhe três inteiros positivos L, A e B que definem as regras da partida:\n- João deve usar as rodadas do desafio para mover bolinhas da mesa para a caixa. Se, ao final de uma rodada, a caixa possuir L ou mais bolinhas, a partida acaba.\n- Em cada rodada, João poderá mover no mínimo A e no máximo B bolinhas de gude da mesa para a caixa.\n- Uma rodada se inicia com João escolhendo um inteiro x, tal que A <= x <= B, de bolinhas de gude que ele deseja mover. Porém, João não pode escolher o mesmo valor de x mais de uma vez na mesma partida. Em outras palavras, os valores que João escolhe para x em cada rodada precisam ser todos distintos.\n- Caso João não consiga escolher algum valor válido para x, a partida termina. Caso João escolha um x válido, ele completa a rodada movendo as x bolinhas de gude para a caixa. Vale ressaltar que a mesa possui muitas bolinhas de gude, de modo que sempre existem bolinhas suficientes para João mover.\n\nMemorizar quantidades, contar e mover bolinhas é bastante trabalho. Por isso, Maria decidiu que, após cada partida, ela irá presentear João com uma quantidade de chocolates igual ao número de rodadas que ele completou na partida. Deste modo, a meta de João em toda partida é maximizar o número de rodadas que ele completa. Observe que é irrelevante para João se a caixa possui mais ou menos de L bolinhas de gude ao fim da partida.\n\nJoão quer saber quantos chocolates ele conseguiria ganhar se jogar o desafio da melhor maneira possível. Além disso, como os valores de L, A e B escolhidos por Maria podem variar de uma partida para a outra, ele deseja consultar a resposta para vários valores diferentes de L, A e B.\n\nSua tarefa é: dada a quantidade P de partidas que João deseja consultar e os parâmetros L, A e B de cada partida, determine, para cada partida, o número máximo de rodadas que João consegue completar. Observe que as partidas são independentes, ou seja, é permitido que João repita o mesmo valor de x em partidas diferentes.",
+    "input": "A primeira linha da entrada contém um único inteiro P, a quantidade de partidas que João deseja consultar.\n\nAs próximas P linhas descrevem as consultas. A i-ésima destas linhas possui três inteiros L_i, A_i e B_i indicando os parâmetros L, A e B, respectivamente, escolhidos para a i-ésima partida.",
+    "output": "Seu programa deverá imprimir P linhas, uma para cada partida, na mesma ordem da entrada. Para cada partida, imprima um único inteiro: o número máximo de rodadas que João consegue completar se ele jogar de forma ótima.",
+    "constraints": "É garantido que todo caso de teste satisfaz as restrições abaixo.\n- 1 <= P <= 50000\n- 1 <= L_i <= 10000000000000 para todo 1 <= i <= P\n- 1 <= A_i <= B_i <= 20000000000 para todo 1 <= i <= P\n\nPara competidores que utilizam C++ ou Java: Observe que alguns valores na entrada podem ser muito grandes para caberem em um inteiro de 32 bits. É recomendado o uso de inteiros de 64 bits (long long em C++; long em Java). (Competidores usando Python ou JavaScript podem ignorar este aviso.)\n\nA tarefa vale 100 pontos. Estes pontos estão distribuídos em subtarefas, cada uma com suas restrições adicionais às definidas acima.\n- Subtarefa 1 (0 pontos): Esta subtarefa é composta apenas pelos exemplos mostrados abaixo. Ela não vale pontos, serve apenas para que você verifique se o seu programa imprime o resultado correto para os exemplos.\n- Subtarefa 2 (11 pontos): P = 1, A_1 = 1 e B_1 = L_1.\n- Subtarefa 3 (12 pontos): P = 1.\n- Subtarefa 4 (26 pontos): P <= 80.\n- Subtarefa 5 (20 pontos): A_i = 1 e B_i = L_i para todo 1 <= i <= P.\n- Subtarefa 6 (31 pontos): Sem restrições adicionais.",
+    "examples": [
+        {
+            "input": "2\n7 3 7\n8 3 7",
+            "output": "2\n3"
+        },
+        {
+            "input": "1\n10 1 3",
+            "output": "3"
+        },
+        {
+            "input": "4\n20 10 11\n40 1 10\n40 10 20\n5 5 5",
+            "output": "2\n9\n4\n1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2025",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "matemática",
+        "greedy",
+        "busca binária",
+        "implementação"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 256
+}
