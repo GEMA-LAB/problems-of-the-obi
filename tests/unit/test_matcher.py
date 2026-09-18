@@ -190,6 +190,8 @@ def test_find_solutions_disambiguation(tmp_path):
         titulo="Fila na Cantina",
         titulo_normalizado=normalize_name("Fila na Cantina"),
     )
+    q_fila.path.mkdir(parents=True, exist_ok=True)
+    q_cantina.path.mkdir(parents=True, exist_ok=True)
 
     res_fila = matcher.find_solutions(question=q_fila)
     res_cantina = matcher.find_solutions(question=q_cantina)
