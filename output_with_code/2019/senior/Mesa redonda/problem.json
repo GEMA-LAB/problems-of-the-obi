@@ -1,0 +1,31 @@
+{
+    "title": "Mesa redonda",
+    "statement": "Nome do arquivo: mesa.c, mesa.cpp, mesa.pas, mesa.java, mesa.js, mesa_py2.py ou mesa_py3.py\nAna, Beatriz e Carolina sempre saem juntas para tomar\ncafé numa padaria onde as mesas são circulares e têm três\ncadeiras numeradas 0, 1 e 2, no sentido anti-horário, como\nilustrado na ﬁgura ao lado.\nElas gostam de decidir quem vai sentar em qual cadeira com\numa brincadeira gerando números aleatórios nos seus celu-\nlares. Primeiro Ana sorteia um número inteiroA e, come-\nçando da cadeira1, seguindo no sentido anti-horário, conta\nA cadeiras e senta na cadeira em que a contagem terminar.\nDepois Beatriz sorteia um númeroB e faz a mesma coisa:\ncomeçando da cadeira 1, no sentido anti-horário, contaB\ncadeiras. Se a cadeira ﬁnal estiver livre, Beatriz senta nela.\nCaso seja a cadeira onde Ana está sentada, então Beatriz\nsenta na próxima cadeira no sentido anti-horário. Claro, ao\nﬁnal, Carolina senta na cadeira que estiver livre.\n100\n2\nPor exemplo, se Ana sortear 8, ela vai contar [1, 2, 0, 1, 2, 0, 1, 2] e sentar na cadeira 2. Depois,\nse Beatriz sortear 6, ela vai contar[1, 2, 0, 1, 2, 0] e sentar na cadeira0. Assim, Carolina senta na\ncadeira 1. Num outro exemplo, se Ana sortear3, ela vai contar[1, 2, 0] e sentar na cadeira0. Depois,\nse Beatriz sortear 9, ela vai contar[1, 2, 0, 1, 2, 0, 1, 2, 0] e, como Ana já está sentada na cadeira0,\nBeatriz senta na cadeira1. Dessa forma, Carolina senta na cadeira2.\nNeste problema, dados os números sorteados por Ana e Beatriz, seu programa deve imprimir o\nnúmero da cadeira onde Carolina vai sentar.",
+    "input": "A primeira linha da entrada contém um inteiroA representando o número sorteado por Ana. A\nsegunda linha da entrada contém um inteiroB representando o número sorteado por Beatriz.",
+    "output": "Seu programa deve imprimir uma linha contendo um número inteiro indicando a cadeira onde\nCarolina vai sentar.",
+    "constraints": "- 1 ≤ A ≤ 1000\n- 1 ≤ B ≤ 1000",
+    "examples": [
+        {
+            "input": "8\n6",
+            "output": "1"
+        },
+        {
+            "input": "3\n9",
+            "output": "2"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "senior",
+    "period": "Fase 3",
+    "topics": [
+        "aritmética",
+        "simulação",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

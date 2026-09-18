@@ -1,0 +1,35 @@
+{
+    "title": "Tabela do campeonato",
+    "statement": "Nome do arquivo: tabela.c, tabela.cpp, tabela.pas, tabela.java, tabela.js, tabela_py2.py ou tabela_py3.py\nJoana adora futebol e conseguiu um estágio no clube pelo qual torce. Na sala de troféus Joana\nencontrou uma caderneta em que um antigo conselheiro do clube anotou os resultados de todos os\ncampeonatos que o time participou.\nPara cada campeonato há uma anotação na caderneta informando cinco dados: o número de jogos,\no número de pontos, o número de vitórias, o número de empates e o número de derrotas do time\nnaquele campeonato. Em todos os campeonatos, cada vitória vale três pontos, cada empate vale\num ponto e derrotas não valem pontos.\nInfelizmente, a caderneta era muito velha e alguns desses números estavam ilegíveis. Joana, no\nentanto, percebeu que, para cada campeonato, se algum número estivesse ilegível ele poderia ser\ncomputado utilizando os números legíveis daquele campeonato.\nSua tarefa é escrever um programa para completar as informações encontradas na caderneta.",
+    "input": "A entrada consiste de uma única linha que contém cinco inteirosJ, P, V, E e D, indicando respec-\ntivamente o número de jogos, o número de pontos, o número de vitórias, o número de empates e\no número de derrotas para um campeonato. Um ou dois desses números tem o valor -1, indicando\nque o número é ilegível na caderneta. Todos os casos da entrada têm solução.",
+    "output": "Seu programa deve produzir uma única linha, com exatamente cinco números inteiros, os valores\ncorrigidos da caderneta para o campeonato da entrada. Os números devem ser dados na mesma\nordem fornecida na entrada: o número de jogos, o número de pontos, o número de vitórias, o número\nde empates e o número de derrotas, separados por exatamente um espaço em branco. Note que no\nresultado devem valer as equaçõesJ = V + E + D e P = 3 × V + E.",
+    "constraints": "- 1 ≤ J ≤ 100; 0 ≤ P ≤ 300; 0 ≤ V ≤ 100; 0 ≤ E ≤ 100; 0 ≤ D ≤ 100.\n- Na entrada, um ou dois dos valores entreJ, P, V, E e D é igual a−1 (e somente nesses casos\n- as restrições acima não são obedecidas).",
+    "examples": [
+        {
+            "input": "10 20 6 2 -1",
+            "output": "10 20 6 2 2"
+        },
+        {
+            "input": "-1 64 18 10 10",
+            "output": "38 64 18 10 10"
+        },
+        {
+            "input": "-1 47 14 -1 9",
+            "output": "28 47 14 5 9"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "aritmética",
+        "condicional",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

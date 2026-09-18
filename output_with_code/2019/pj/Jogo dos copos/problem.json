@@ -1,0 +1,34 @@
+{
+    "title": "Jogo dos copos",
+    "statement": "Nome do arquivo: copos.c, copos.cpp, copos.pas, copos.java, copos.js, copos_py2.py ou copos_py3.py\nUma brincadeira muito comum e divertida entre dois jogadores usa uma moeda e três copos opacos\n(ou seja, não é possível ver o que está dentro do copo olhando pela lateral do copo). Os três copos\nsão colocados com a boca para baixo, em uma linha, um ao lado do outro, em posições que vamos\nchamar de A, B e C. Uma moeda é colocada embaixo de um dos copos.\nNa brincadeira, um jogador chamado banca realiza um movimento para trocar a posição de dois\ncopos, arrastando os copos de tal modo que se a moeda está em baixo de um dos copos envolvidos\nno movimento, ela continua embaixo do mesmo copo após a troca de posição. O jogador banca\npode realizar três tipos de movimento, ilustrados na ﬁgura abaixo:\n1. Trocar o copo na posição A com o copo na posição B.\n2. Trocar o copo na posição B com o copo na posição C.\n3. Trocar o copo na posição A com o copo na posição C.\nA B C A B CA B C\nMovimento de tipo 1:\ntroca os copos nas posições A e B\nMovimento de tipo 2:\ntroca os copos nas posições B e C\nMovimento de tipo 3:\ntroca os copos nas posições A e C\nO jogador banca realiza vários movimentos de troca tentando confundir o outro jogador, chamado\nespectador. Ao ﬁnal o jogador espectador deve dizer em qual posição está a moeda.\nPor exemplo, considere que inicialmente a moeda está embaixo do copo na posição A e que o jogador\nbanca realiza uma sequência de apenas três trocas, executando um movimento do tipo 1, após o\nqual moeda termina embaixo do copo na posição B, seguido de um movimento do tipo 2, após o\nqual a moeda termina embaixo do copo na posição C, seguido de um movimento do tipo 3, após o\nqual a moeda termina embaixo do copo na posição A.\nNesta tarefa, dadas a descrição da sequência de movimentos e a posição inicial da moeda, você deve\nescrever um programa que determine a posição ﬁnal da moeda após todos os movimentos.",
+    "input": "A primeira linha contém um inteiroN, o número de movimentos que o jogador banca realiza. A\nsegunda linha contém um caractere, entreA, B e C, indicando a posição inicial da moeda. Cada uma\ndas N linhas seguintes contém um inteiro, indicando o tipo de movimento efetuado pelo jogador\nbanca na sequência.",
+    "output": "Seu programa deve produzir uma única linha, com um único caractere entreA, B e C, a posição em\nque a moeda se encontra ao ﬁnal da sequência de movimentos.",
+    "constraints": "- 1 ≤ N ≤ 1000",
+    "examples": [
+        {
+            "input": "3\nA\n1\n2\n3",
+            "output": "A"
+        },
+        {
+            "input": "6\nC\n1\n2\n3\n3\n1\n1",
+            "output": "B"
+        },
+        {
+            "input": "1\nB\n3",
+            "output": "B"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "simulação",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}
