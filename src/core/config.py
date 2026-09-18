@@ -153,3 +153,29 @@ class ExtractorConfig:
         self.pasta_output = Path(pasta_output)
 
 
+# Constantes de organizacao de casos de teste e solucoes
+DEFAULT_TEST_CASES_DIR = Path("test_cases")
+DEFAULT_SOLUTIONS_DIR = Path("solutions")
+DEFAULT_INPUTS_DIR = Path("inputs")
+DEFAULT_OUTPUTS_DIR = Path("outputs")
+EXTENSOES_ENTRADA_TESTE = (".in", ".input")
+EXTENSOES_SAIDA_TESTE = (".out", ".output", ".sol")
+
+
+class OrganizeConfig:
+    """Configuracao para organizacao e correspondencia de questoes e recursos."""
+
+    def __init__(
+        self,
+        pasta_output: Path = DEFAULT_OUTPUT_DIR,
+        pasta_gabaritos: Path = DEFAULT_GABARITOS_DIR,
+        pasta_codigo: Path = DEFAULT_CODIGO_DIR,
+        force: bool = False,
+    ):
+        self.pasta_output = Path(pasta_output)
+        self.pasta_gabaritos = Path(pasta_gabaritos)
+        self.pasta_codigo = Path(pasta_codigo)
+        self.force = force
+
+
+
