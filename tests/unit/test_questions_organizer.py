@@ -92,6 +92,8 @@ def test_organize_question_full_flow(tmp_path):
     assert (q_path / "test_cases" / "inputs" / "2.in").exists()
     assert (q_path / "test_cases" / "outputs" / "2.out").exists()
     assert not (q_path / "test_cases" / "sobra.exe").exists()
+    assert not (q_path / "test_cases" / "1.in").exists()
+    assert not (q_path / "test_cases" / "1.out").exists()
     assert (q_path / "solutions" / "cabo.cpp").exists()
     assert (q_path / "problem.json").exists()
 

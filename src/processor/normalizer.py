@@ -112,8 +112,7 @@ class TestCaseNormalizer:
         test_cases_dir: Path,
     ) -> List[TestCasePair]:
         """
-        Organiza os pares de teste em test_cases/inputs/[id].in e test_cases/outputs/[id].out.
-        Tambem disponibiliza [id].in e [id].out diretamente na raiz de test_cases/ para compatibilidade.
+        Organiza os pares de teste exclusivamente em test_cases/inputs/[id].in e test_cases/outputs/[id].out.
         """
         test_cases_dir = Path(test_cases_dir)
         inputs_dir = test_cases_dir / "inputs"
@@ -131,12 +130,6 @@ class TestCaseNormalizer:
             # Copia para inputs/ e outputs/
             shutil.copy2(src_in, dest_in)
             shutil.copy2(src_out, dest_out)
-
-            # Copia direta para a raiz de test_cases/
-            root_in = test_cases_dir / f"{idx}.in"
-            root_out = test_cases_dir / f"{idx}.out"
-            shutil.copy2(src_in, root_in)
-            shutil.copy2(src_out, root_out)
 
             result_pairs.append(
                 TestCasePair(

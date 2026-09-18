@@ -131,6 +131,10 @@ class QuestionsOrganizer:
         if not config.force and inputs_dir.exists():
             existing_inputs = list(inputs_dir.glob("*.in"))
             if len(existing_inputs) > 0:
+                # Garante que arquivos soltos na raiz de test_cases/ sejam limpos
+                for item in list(test_cases_dir.iterdir()):
+                    if item.is_file():
+                        item.unlink(missing_ok=True)
                 return OrganizeResult(
                     questao=question.titulo,
                     status="ignorado_idempotente",

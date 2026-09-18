@@ -1,4 +1,4 @@
-﻿"""Modulo de limpeza e expurgo de residuos e questoes invalidas."""
+"""Modulo de limpeza e expurgo de residuos e questoes invalidas."""
 import shutil
 from pathlib import Path
 from typing import List
@@ -20,27 +20,24 @@ class DatasetCleaner:
         if not test_cases_dir.exists():
             return
 
-        # Arquivos esperados em inputs/ e outputs/ e na raiz de test_cases/
+        # Arquivos esperados exclusivamente em inputs/ e outputs/
         expected_paths = set()
         for pair in valid_pairs:
             expected_paths.add(pair.input_file.resolve())
             expected_paths.add(pair.output_file.resolve())
-            expected_paths.add((test_cases_dir / f"{pair.id}.in").resolve())
-            expected_paths.add((test_cases_dir / f"{pair.id}.out").resolve())
 
         # Subdiretorios permitidos
         inputs_dir = (test_cases_dir / "inputs").resolve()
         outputs_dir = (test_cases_dir / "outputs").resolve()
 
-        # 1. Varre itens diretamente na raiz de test_cases_dir
+        # 1. Varre itens diretamente na raiz de test_cases_dir: nenhum arquivo solto deve permanecer
         for item in list(test_cases_dir.iterdir()):
             resolved = item.resolve()
             if item.is_dir():
                 if resolved not in (inputs_dir, outputs_dir):
                     shutil.rmtree(item, ignore_errors=True)
             elif item.is_file():
-                if resolved not in expected_paths:
-                    item.unlink(missing_ok=True)
+                item.unlink(missing_ok=True)
 
         # 2. Varre inputs e outputs para garantir que nada estranho sobrou
         for sub_dir in (test_cases_dir / "inputs", test_cases_dir / "outputs"):

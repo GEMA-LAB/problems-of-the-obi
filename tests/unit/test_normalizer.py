@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """Testes unitarios para o modulo de normalizacao de casos de teste (normalizer.py)."""
 from pathlib import Path
 import pytest
@@ -78,6 +78,10 @@ def test_normalize_to_destination(tmp_path):
     assert (dest_dir / "outputs" / "1.out").exists()
     assert (dest_dir / "inputs" / "2.in").exists()
     assert (dest_dir / "outputs" / "2.out").exists()
+    assert not (dest_dir / "1.in").exists()
+    assert not (dest_dir / "1.out").exists()
+    assert not (dest_dir / "2.in").exists()
+    assert not (dest_dir / "2.out").exists()
 
 
 def test_empty_directory(tmp_path):

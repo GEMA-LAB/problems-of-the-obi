@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """Testes unitarios para o modulo de limpeza e expurgacao segura (cleaner.py)."""
 from pathlib import Path
 import pytest
@@ -37,10 +37,10 @@ def test_clean_residuals_removes_binaries_and_temp(tmp_path):
     # Verifica o que deve permanecer
     assert in1.exists()
     assert out1.exists()
-    assert root_in1.exists()
-    assert root_out1.exists()
 
     # Verifica o que deve ter sido expurgado
+    assert not root_in1.exists()
+    assert not root_out1.exists()
     assert not exe_file.exists()
     assert not o_file.exists()
     assert not (tc_dir / "lixo_dir").exists()
