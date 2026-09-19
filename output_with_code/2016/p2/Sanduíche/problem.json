@@ -1,0 +1,33 @@
+{
+    "title": "Sanduíche",
+    "statement": "Nome do arquivo: sanduiche.c, sanduiche.cpp, sanduiche.pas, sanduiche.java,\nsanduiche.js, sanduiche.py2 ou sanduiche.py3\nVocê está na Seletiva para a IOI e depois de um dia cansativo de provas, chegou a hora do jantar.\nHoje, trouxeram um sanduíche muito longo cortado em N pedaços de diversos tamanhos diferentes.\nVocê gostaria de comer uma quantidade total de sanduíche de comprimento D, porém há uma regra:\npara evitar bagunça, você só pode ou pegar uma sequência contínua de pedaços, ou pegar pedaços\ndas extremidades. Você sabe a sequência C1, C2, ... CN dos comprimentos dos pedaços na ordem em\nque estão posicionados no sanduíche. Agora, para otimizar o seu jantar, quer fazer um programa\nque com esses dados responda de quantas formas você pode escolher os pedaços do sanduíche que\nvai comer. Em outras palavras, deve contar quantos pares (i, j), 1 ≤i ≤j ≤N, existem tais que\no somatório Ci + Ci+1 + ... + Cj seja igual a D e quantos pares (i, j), 1 ≤i < j ≤N, existem tais\nque o somatório C1 + C2 + ... + Ci + Cj + Cj+1 + ... + CN seja igual a D.",
+    "input": "A primeira linha contém dois inteiros N e D, representando respectivamente o número de pedaços e\na quantidade de sanduíche que você quer comer. A segunda linha contém N inteiros C1, C2, ... CN,\nonde Ci é o tamanho do i-ésimo pedaço.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, o número de maneiras de\ncomer pedaços de sanduíche com soma D.",
+    "constraints": "- 2 ≤N ≤106.\n- 1 ≤D ≤109.\n- 1 ≤Ci ≤103.",
+    "examples": [
+        {
+            "input": "5 10\n1 2 3 4 3",
+            "output": "3"
+        },
+        {
+            "input": "5 5\n1 1 1 1 1",
+            "output": "5\n\n10"
+        },
+        {
+            "input": "9 618\n665 658 248 282 428 562 741 290 457 5",
+            "output": "0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2016",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

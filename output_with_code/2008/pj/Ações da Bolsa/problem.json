@@ -1,0 +1,33 @@
+{
+    "title": "Ações da Bolsa",
+    "statement": "Nome do arquivo fonte: acoes.c, acoes.cpp ou acoes.pas\nJuninho é um menino muito visionário e inteligente, que quer ficar rico. Aos 12 anos de idade, já está interessado\nem investimentos de ações na bolsa de valores. Uma ação é como se fosse um pedaço de uma empresa que\nqualquer pessoa pode comprar. E como cada empresa tem tamanhos e valores diferentes, cada ação também\ntem diferentes valores, e esses valores mudam o tempo todo. Suponha, por exemplo, que Juninho compre uma\nação de uma empresa de petróleo, que custe R$ 100. Suponha que no dia seguinte, essa empresa descubra um\nenorme poço de petróleo, o que vai dar muitos lucros para ela no futuro. Essa empresa, então, passa a ser mais\nvalorizada, e conseq¨uentemente o preço das ações sobem. Suponha que as ações subiram 20% nesse dia. Então\nJuninho, que tinha uma ação de R$ 100, hoje tem a mesma ação, mas que vale R$ 120. Ou seja, se ele a vender\nhoje, vai ter um lucro de R$ 20, só por ter comprado e vendido a ação.\nUma empresa de refrigerantes criou um novo tipo de investimento especial para iniciantes. Ela ocorre da seguinte\nmaneira:\n• O investidor compra as ações da empresa na manhã do dia X\n• O dinheiro fica investido durante exatamente quatro dias seguidos.\n• Ao final dos quatro dias, são aplicados juros simples ao preço das ações; todas elas são vendidas e o\ndinheiro é dado de volta ao investidor\nPor exemplo, suponha que as variações do preço das ações sejam:\n• Dia 1: Aumento de 3%\n• Dia 2: Aumento de 1%\n• Dia 3: Queda de 2%\n• Dia 4: Queda de 3%\n• Dia 5: Aumento de 5%\n• Dia 6: Queda de 5%\nSe aplicarmos R$ 100 no dia 1, ao final do dia 4 vamos ter uma variação de 3 + 1 −2 −3 = −1%, ou seja,\nprejuízo de R$ 1. Mas se começarmos aplicando no dia 2, ao final teremos uma variação de 1 −2 −3 + 5 = 1%,\nou seja, lucro de R$ 1.\nJuninho, que além de inteligente é também vidente (ou seja, consegue prever o futuro), pediu a sua ajuda para\ndescobrir qual é a maior quantidade de dinheiro que ele pode lucrar investindo exatamente R$ 100,00 durante\nquatro dias. Para isso, ele vai te dizer a variação das ações nos próximos N dias seguidos, onde N ≥4.",
+    "input": "A entrada contém um único teste, a ser lido da entrada padrão. O teste contém duas linhas. Na primeira, é\ndado um número inteiro N (4 ≤N ≤100000), indicando a quantidade de dias que Juninho já sabe qual será a\nvariação do valor da ação. Na segunda linha são dados N números inteiros Xi (−1000 ≤Xi ≤1000), separados\npor espaços em branco, sendo Xi a variação do preço das ações no dia i.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha, contendo um número inteiro indicando qual é o\nmaior lucro que Juninho pode conseguir ao investir nos dias que ele previu (o dinheiro não pode ficar investido\nem nenhum dia que ele não previu). Note que o ‘lucro’ pode na verdade ser prejuízo (lucro negativo), se as\nações se desvalorizarem.\n\n5",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3 1 -2 -3 5",
+            "output": ""
+        },
+        {
+            "input": "-2 1 -2 1 0 -3",
+            "output": ""
+        },
+        {
+            "input": "-1 -2 -3 -4 -5 -6 -7 -8",
+            "output": "-10\nInformações sobre a pontuação\n• Em um conjunto de casos de teste que totaliza 30 pontos, N ≤10 e 0 ≤Xi ≤100.\n• Em um conjunto de casos de teste que totaliza 55 pontos, N ≤100 e −100 ≤Xi ≤100."
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2008",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

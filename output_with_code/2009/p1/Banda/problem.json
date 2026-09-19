@@ -1,0 +1,29 @@
+{
+    "title": "Banda",
+    "statement": "Nome do arquivo fonte: banda.c, banda.cpp, ou banda.pas\nJimmy é um garoto muito esperto que adora música. No último mês ele ganhou um campeonato de um jogo\ncujo objetivo é tocar guitarra. Empolgado, Jimmy decidiu montar uma banda. Para Jimmy a banda perfeita\ntem quatro integrantes, ele e mais três: um baterista, um baixista e um cantor.\nAgora Jimmy precisa encontrar os outros integrantes da banda.\nPara isto ele reuniu todos os álbums que\nencontrou na internet e, após escutá-los diversas vezes, compilou o que ele chama de lista de entrosamento entre\nmúsicos. Nessa lista ele atribui, para cada par de músicos que já tocaram juntos, uma nota inteira de 1 a 100,\nque é uma medida de quão bem os músicos tocam juntos (o nível de entrosamento entre eles). Se dois músicos\nnunca tocaram juntos o nível de entrosamento é zero. Jimmy nunca tocou com nenhum músico da lista.\nJimmy pretende formar a sua banda a partir da lista de entrosamento entre músicos, da seguinte maneira:\nele quer escolher os outros três músicos de tal forma que a soma dos níveis de entrosamento dos integrantes\nda banda seja a maior possível (ou seja, a soma dos níveis de entrosamento dos três pares possíveis de serem\nformados entre os três novos integrantes seja a maior possível).\nMas a lista de entrosamento entre músicos ficou muito grande e Jimmy não está conseguindo escolher os\nintegrantes. Por isso, Jimmy está pedindo sua ajuda.\nTarefa\nVocê deve ajudar Jimmy a montar a melhor banda possível fazendo um programa que receba uma lista contendo\no nível de entrosamento para cada par de músicos que já tocaram junto, e determine os músicos que formariam\na melhor banda.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado).\nA primeira linha da entrada é formada por dois inteiros N e M, informando respectivamente o número de\nmúsicos (3 ≤N ≤100) e o número de pares de músicos que já tocaram juntos (0 ≤M ≤104). Os músicos são\nidentificados por números inteiros de 1 a N. Cada uma das M linhas seguintes contém três inteiros X, Y e Z,\nem que X e Y representa um par de músicos (1 ≤X ≤N, 1 ≤Y ≤N e X̸ = Y ) e Z representa o seu nível de\nentrosamento (1 ≤Z ≤100). Cada par de músicos que já tocou junto aparece uma única vez na entrada.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha, contendo três números inteiros separados por\nespaço em branco, identificando os três outros músicos que devem compor a banda (em qualquer ordem). Se\nexistir mais de uma melhor banda, Jimmy contenta-se com qualquer uma.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3 3\n1 2 50\n2 3 27\n3 1 1",
+            "output": "1 2 3"
+        },
+        {
+            "input": "5 8\n1 2 50\n1 3 50\n1 4 50\n2 3 50\n2 5 10\n3 4 50\n3 5 25\n4 5 20",
+            "output": "1 3 4"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2009",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

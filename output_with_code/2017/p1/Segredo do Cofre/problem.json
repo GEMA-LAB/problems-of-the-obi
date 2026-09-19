@@ -1,0 +1,33 @@
+{
+    "title": "Segredo do Cofre",
+    "statement": "Nome do arquivo: cofre.c, cofre.cpp, cofre.pas, cofre.java, cofre.js ou cofre.py\nO sistema de segredo para abrir esse cofre é bastante complexo. Ao invés de girar um botão várias\nvezes, como a gente vê normalmente nos filmes, o dono do cofre tem que deslizar um controle para a\nesquerda e para a direita, em cima de uma barra, várias vezes, parando em determinadas posições.\nA barra possui N posições e cada posição contém um número inteiro entre 0 e 9, inclusive. No\nexemplo da figura, a barra tem 14 posições e o controle está na posição 1.\n9 4 3 9 1 2 4 5 1 1 9 7 0 5\n9\n2\n3\n4\n5\n6\n7\n8\n9\n10 11 12 13 14\n1\nO segredo vai depender de quantas vezes cada um dos dez inteiros entre 0 e 9 vai aparecer dentro\ndo controle. Por exemplo, suponha que o dono deslize o controle da posição inicial 1 até a posição\n9, depois para a posição 4, depois para a posição 11 e por fim até a posição 13. Veja que o inteiro\n1, por exemplo, vai aparecer seis vezes dentro do controle; e o inteiro 9 vai aparecer quatro vezes.\nDada a sequência de inteiros na barra e a sequência de posições entre as quais o dono desliza o\ncontrole, começando da posição inicial 1, seu programa deve contar quantas vezes cada inteiro,\nentre 0 e 9, vai aparecer dentro do controle.",
+    "input": "A primeira linha da entrada contém dois inteiros N e M, representando o número de posições na\nbarra do cofre e o número de posições na sequência que o dono vai seguir para deslizar o controle.\nA segunda linha contém N inteiros entre 0 e 9, definindo a barra do cofre. A terceira linha contém\nM inteiros representando a sequência de posições que o dono vai seguir. A primeira posição nessa\nsequência é sempre 1 e não há duas posições consecutivas iguais.",
+    "output": "Seu programa deve imprimir uma linha contendo 10 inteiros, representando o número de vezes que\ncada inteiro, entre 0 e 9, vai aparecer no controle da barra.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "A primeira linha da entrada contém dois inteiros N e M, representando o número de posições na\nbarra do cofre e o número de posições na sequência que o dono vai seguir para deslizar o controle.\nA segunda linha contém N inteiros entre 0 e 9, definindo a barra do cofre. A terceira linha contém\nM inteiros representando a sequência de posições que o dono vai seguir. A primeira posição nessa\nsequência é sempre 1 e não há duas posições consecutivas iguais.",
+            "output": "Seu programa deve imprimir uma linha contendo 10 inteiros, representando o número de vezes que\ncada inteiro, entre 0 e 9, vai aparecer no controle da barra.\nRestrições\n• 2 ≤N ≤105 e 2 ≤M ≤105\nInformações sobre a pontuação\n• Em um conjunto de testes somando 40 pontos, N ≤1000 e M ≤1000"
+        },
+        {
+            "input": "14 5\n9 4 3 9 1 2 4 5 1 1 9 7 0 5\n1 9 4 11 13",
+            "output": "1 6 3 1 4 3 0 1 0 4"
+        },
+        {
+            "input": "5 4\n5 8 0 5 1\n1 4 2 5",
+            "output": "3 1 0 0 0 3 0 0 2 0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2017",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

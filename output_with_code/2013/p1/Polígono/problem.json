@@ -1,0 +1,33 @@
+{
+    "title": "Polígono",
+    "statement": "Nome do arquivo fonte: poligono.c, poligono.cpp, poligono.pas, poligono.java, ou\npoligono.py\nRenato gosta muito de geometria e acaba de achar alguns palitos em seu quarto. Ele está tentando utilizar\nesses palitos de forma a fazer um polígono com o maior número de lados possíveis.\nPara montar o polígono, Renato não quer cruzar os palitos; ou seja, os palitos devem se tocar apenas nas\npontas. Ele também não quer quebrar nenhum palito, de forma que todos os palitos que forem usados devem\nmanter sua medida original.\nSe, por exemplo, os palitos têm medidas 3, 4 e 5, é possível utilizar todos os três palitos para formar um\ntriângulo. Mas se as medidas são 1, 1, 1 e 5, é possível formar um triângulo com três lados iguais a 1 mas\nnão é possivel formar um polígono com todos os 4 palitos.\nVocê consegue ajudar Renato a descobrir qual é o maior número de palitos que ele consegue usar?",
+    "input": "A primeira linha contém apenas um inteiro N que indica o número de palitos. A segunda linha possui N\ninteiros indicando as medidas dos palitos.",
+    "output": "Se programa deve imprimir uma única linha, contendo um único inteiro, o maior número de lados que o\npolígono pode ter seguindo as restrições do enunciado. Se não for possível formar nenhum polígono usando\nos palitos, imprima 0.",
+    "constraints": "- 3 ≤N ≤100000\n- As medidas dos palitos são inteiros positivos menores ou iguais a 10000",
+    "examples": [
+        {
+            "input": "3\n3 4 5",
+            "output": "3"
+        },
+        {
+            "input": "3\n3 1 2",
+            "output": "0"
+        },
+        {
+            "input": "4\n1 1 5 1",
+            "output": "3"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

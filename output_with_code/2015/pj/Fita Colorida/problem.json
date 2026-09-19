@@ -1,0 +1,33 @@
+{
+    "title": "Fita Colorida",
+    "statement": "Nome do arquivo: fita.c, fita.cpp, fita.pas, fita.java, fita.js ou fita.py\nRoberto tem um conjunto de lápis com 10 tons diferentes de uma mesma cor, numerados de 0 a\n9. Numa fita quadriculada, alguns quadrados foram coloridos inicialmente com o tom 0. Roberto\nprecisa determinar, para cada quadrado Q não colorido, qual é a distância dele para o quadrado\nmais próximo de tom 0. A distância entre dois quadrados é definida com o número mínimo de\nmovimentos para a esquerda, ou para a direita, para ir de um quadrado para o outro. O quadrado\nQ, então, deve ser colorido com o tom cuja numeração corresponde à distância determinada. Se a\ndistância for maior ou igual a 9, o quadrado deve ser colorido com o tom 9. Seu programa deve\ncolorir e imprimir a fita quadriculada dada na entrada.",
+    "input": "A primeira linha da entrada contém apenas um inteiro N, indicando o número de quadrados da\nfita. A segunda linha contém N números inteiros: “-1” se o quadrado não está colorido, e “0” se\nestá colorido com o tom 0.",
+    "output": "Seu programa deve escrever na saída a fita totalmente colorida, de acordo com a regra definida\nacima.",
+    "constraints": "- 3 ≤N ≤10000;\n- Sempre existe pelo menos um “0” inicialmente na fita.",
+    "examples": [
+        {
+            "input": "8\n-1 -1 0 -1 -1 -1 0 -1",
+            "output": "2 1 0 1 2 1 0 1"
+        },
+        {
+            "input": "13\n-1 0 -1 -1 -1 -1 -1 -1 -1 -1 0 -1 -1",
+            "output": "1 0 1 2 3 4 4 3 2 1 0 1 2"
+        },
+        {
+            "input": "6\n0 -1 -1 -1 -1 -1",
+            "output": "0 1 2 3 4 5"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2015",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,33 @@
+{
+    "title": "Progressões Aritméticas",
+    "statement": "Nome do arquivo fonte: pas.c, pas.cpp, pas.pas, pas.java, ou pas.py\nBob é um aluno do ensino médio que gosta muito de matemática. Na última aula ele aprendeu o que são\nProgressões Aritméticas (PAs) e ficou fascinado por elas. Pelo que Bob entendeu, Progressões Aritméticas são\nsequências de números nas quais a diferença entre dois elementos consecutivos é sempre igual a uma constante r,\nchamada de razão da PA.\nUm exemplo de Progressão Aritmética de razão 2 é −1, 1, 3, 5. Além disso, toda sequência com um ou dois\nelementos é sempre uma Progressão Aritmética. Por outro lado, 5, 6, 8, 9, 10 não é uma PA porque a diferença\nentre elementos consecutivos não é constante: a diferença entre os dois primeiros elementos é 6−5 = 1, enquanto\na diferença entre o terceiro e o segundo elementos é 8 −6 = 2.\nBob percebeu que qualquer sequência, mesmo que a mesma não seja uma Progressão Aritmética, pode ser\nquebrada em sequências menores que são PAs. Por exemplo, vimos que a sequência 5, 6, 8, 9, 10 não é uma PA,\nmas podemos quebrar ela entre o 6 e o 8 para obtermos as sequências 5, 6 e 8, 9, 10, que são PAs. Note que não\nexiste como quebrar a sequência em menos partes se quisermos ter apenas PAs no fim do procedimento.\nBob é fascinado por programação mas ainda não sabe programar muito bem, e por isso pediu sua ajuda: ele\nnão está conseguindo descobrir como quebrar sequências muito grandes de um jeito eficiente; por isso, pediu\nque você escrevesse um programa para, dada uma sequência qualquer, imprimir o número mínimo de partes em\nque precisamos quebrar a sequência para termos apenas Progressões Aritméticas no término do processo. Caso\na sequência original já seja uma PA, podemos terminar o processo com uma única parte, e portanto a resposta\npara esse caso é 1.",
+    "input": "A primeira linha da entrada é composta por um inteiro N, o número de elementos da sequência. Na segunda\nlinha existem N inteiros ai, os elementos da sequência.",
+    "output": "A saída deve conter uma única linha, indicando o número mínimo de partes em que Bob precisa quebrar a\nsequência original para que ele termine apenas com PAs.",
+    "constraints": "- 1 ≤N ≤105\n- −105 ≤ai ≤105\n- 5",
+    "examples": [
+        {
+            "input": "5\n1 2 3 4 5",
+            "output": "1"
+        },
+        {
+            "input": "7\n-2 0 2 3 3 4 6",
+            "output": "3\nÉ fácil verificar que a sequência −2, 0, 2, 3, 3, 4, 6 (do"
+        },
+        {
+            "input": "4\n-2 0 3 6",
+            "output": "2\nA sequência −2, 0, 3, 6 (do"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2011",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

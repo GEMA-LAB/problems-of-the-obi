@@ -1,0 +1,33 @@
+{
+    "title": "Campo Minado",
+    "statement": "Nome do arquivo fonte: campominado.c, campominado.cpp, campominado.pas, campominado.java, ou\ncampominado.py\nLeonardo Viana é um garoto fascinado por jogos de tabuleiro. Nas férias de janeiro, ele aprendeu um jogo\nchamado Campo minado, que é jogado em um tabuleiro com N células dispostas na horizontal. O objetivo\ndesse jogo é determinar, para cada célula do tabuleiro, o número de minas explosivas nos arredores da mesma\n(que são a própria célula e as células imediatamente vizinhas à direita e à esquerda, caso essas existam). Por\nexemplo, a figura abaixo ilustra uma possível configuração de um tabuleiro com 5 células:\nA primeira célula não possui nenhuma mina explosiva, mas é vizinha de uma célula que possui uma mina\nexplosiva. Nos arredores da segunda célula temos duas minas, e o mesmo acontece para a terceira e quarta\ncélulas; a quinta célula só tem uma mina explosiva em seus arredores. A próxima figura ilustra a resposta para\nesse caso.\n1\n2\n2\n2\n1\nLeonardo sabe que você participa da OBI e resolveu lhe pedir para escrever um programa de computador que,\ndado um tabuleiro, imprima o número de minas na vizinhança de cada posição. Assim, ele poderá conferir as\ncentenas de tabuleiros que resolveu durante as férias.",
+    "input": "A primeira linha da entrada contém um inteiro N indicando o número de células no tabuleiro. O tabuleiro é\ndado nas próximas N linhas. A i-ésima linha seguinte contém 0 se não existe mina na i-ésima célula do tabuleiro\ne 1 se existe uma mina na i-ésima célula do tabuleiro.",
+    "output": "A saída é composta por N linhas. A i-ésima linha da saída contém o número de minas explosivas nos arredores\nda i-ésima célula do tabuleiro.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "A primeira linha da entrada contém um inteiro N indicando o número de células no tabuleiro. O tabuleiro é\ndado nas próximas N linhas. A i-ésima linha seguinte contém 0 se não existe mina na i-ésima célula do tabuleiro\ne 1 se existe uma mina na i-ésima célula do tabuleiro.",
+            "output": "A saída é composta por N linhas. A i-ésima linha da saída contém o número de minas explosivas nos arredores\nda i-ésima célula do tabuleiro.\nRestrições\n• 1 ≤N ≤50\n\n5"
+        },
+        {
+            "input": "5\n0\n1\n1\n0\n1",
+            "output": "1\n2\n2\n2\n1"
+        },
+        {
+            "input": "5\n0\n1\n1\n1\n0",
+            "output": "1\n2\n3\n2\n1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2011",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

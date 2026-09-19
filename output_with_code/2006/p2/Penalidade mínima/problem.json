@@ -1,0 +1,33 @@
+{
+    "title": "Penalidade mínima",
+    "statement": "Nome do arquivo fonte: penalidade.c, penalidade.cpp, ou penalidade.pas\nA Sra. Bastos é uma elaboradora de passatempos matemáticos e pediu para que você criasse um programa que\nconseguisse jogar de forma eficiente a sua mais nova criação.\nO jogo consiste em um tabuleiro formado por casas dispostas em N linhas por N colunas.\nCada casa\ncontém um inteiro não-negativo. No começo do jogo, uma peça é colocada na casa localizada no canto superior\nesquerdo, ou seja, na posição (1,1). O objetivo do jogo é mover a peça até a casa localizada no canto inferior\ndireito (posição (N,N)) somente movendo um único quadrado para baixo ou para a direita em cada passo. Além\ndisso, a peça não pode ser colocada em nenhum quadrado que contenha o número zero.\nO custo do caminho utilizado para percorrer o tabuleiro corresponde ao produto de todos os números\ndas casas percorridos no caminho. A penalidade é definida utilizando a representação decimal do custo, sendo\nrepresentada pelo número de dígitos zeros, contados da direita para a esquerda, antes do primeiro dígito diferente\nde zero. Por exemplo, um custo igual a 501000 tem penalidade 3, e um custo igual a 501 tem penalidade zero.\nO objetivo do jogo é conseguir chegar à casa (N,N) através de um caminho “otimizado”. Dizemos que o\ncaminho foi otimizado se a penalidade for mínima.\nTarefa\nEscreva um programa que, dado um tabuleiro, determine a penalidade do custo otimizado.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém um inteiro N que indica o número de linhas e colunas do\ntabuleiro (1 ≤N ≤1000). As N linhas seguintes contêm N inteiros I cada (1 ≤I ≤1000000), que representam\no valor da casa do tabuleiro naquela posição. Existe pelo menos uma solução possível para todos os casos de\nteste.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha, contendo a penalidade do custo “otimizado”.\nEntrada\n3\n1 2 3\n4 5 6\n7 8 9\nSaída\n0\nEntrada\n3\n5 7 6\n4 0 1\n3 2 5\nSaída\n1\nEntrada\n4\n1 3 0 0\n0 8 2 25\n6 5 0 3\n0 15 7 4\nSaída\n2",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3\n1 2 3\n4 5 6\n7 8 9",
+            "output": "0"
+        },
+        {
+            "input": "3\n5 7 6\n4 0 1\n3 2 5",
+            "output": "1"
+        },
+        {
+            "input": "4\n1 3 0 0\n0 8 2 25\n6 5 0 3\n0 15 7 4",
+            "output": "2"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2006",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

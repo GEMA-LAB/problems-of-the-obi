@@ -1,0 +1,26 @@
+{
+    "title": "Saldo de gols",
+    "statement": "Arquivo fonte: saldo.c, saldo.cc, saldo.cpp ou saldo.pas\nHipólito é um torcedor fanático. Coleciona flâmulas, bandeiras, recortes de jornal, figurinhas de\njogadores, camisetas e tudo o mais que se refira a seu time preferido. Quando ganhou um compu-\ntador de presente em uma festa, resolveu montar um banco de dados com os resultados de todos\nos jogos de seu time ocorridos desde a sua fundação, em 1911. Depois de inseridos os dados,\nHipólito começou a ficar curioso sobre estatísticas de desempenho do time. Por exemplo, ele\ndeseja saber qual foi o período em que o seu time acumulou o maior saldo de gols. Como Hipólito\ntem o computador há muito pouco tempo, não sabe programar muito bem, e precisa de sua ajuda.\n1. Tarefa\nÉ dada uma lista, numerada seqüencialmente a partir de 1, com os resultados de todos os jogos do\ntime (primeira partida: 3 x 0, segunda partida: 1 x 2, terceira partida: 0 x 5 ...). Sua tarefa é escre-\nver um programa que determine em qual período o time conseguiu acumular o maior saldo de\ngols. Um período é definido pelos números de seqüência de duas partidas, A e B, onde A ≤ B. O\nsaldo de gols acumulado entre A e B é dado pela soma dos gols marcados pelo time em todas as\npartidas realizadas entre A e B (incluindo as mesmas) menos a soma dos gols marcados pelos\ntimes adversários no período. Se houver mais de um período com o mesmo saldo de gols, escolha\no maior período (ou seja, o período em que B - A é maior). Se ainda assim houver mais de uma\nsolução possível, escolha qualquer uma delas como resposta.",
+    "input": "Seu programa deve ler vários conjuntos de teste. A primeira linha de um conjunto de teste contém\num inteiro não negativo, N, que indica o número de partidas realizadas pelo time (o valor N = 0\nindica o final da entrada). Seguem-se N linhas, cada uma contendo um par de números inteiros\nnão negativos X e Y que representam o resultado da partida: X são os gols a favor e Y os gols con-\ntra o time de Hipólito. As partidas são numeradas sequencialmente a partir de 1, na ordem em que\naparecem na entrada. \nExemplo de Entrada\n2 \n2 3\n7 1\n9\n2 2\n0 5\n6 2\n1 4\n0 0\n5 1\n1 5\n6 2\n\n9\n0 5\n3\n0 2\n0 3\n0 4\n0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "2 3\n7 1\n9\n2 2\n0 5\n6 2\n1 4\n0 0\n5 1\n1 5\n6 2\n\n9\n0 5\n3\n0 2\n0 3\n0 4\n0\n3. Saída\nPara cada conjunto de teste da entrada seu programa deve produzir três linhas na saída. A primeira\nlinha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é numerado\na partir de 1. A segunda linha deve conter um par de inteiros I e J que indicam respectivamente a\nprimeira e última partidas do melhor período, conforme determinado pelo seu programa, exceto\nquando o saldo de gols do melhor período for menor ou igual a zero; neste caso a segunda linha\ndeve conter a expressão “nenhum”. A terceira linha deve ser deixada em branco. A grafia mos-\ntrada no Exemplo de Saída, abaixo, deve ser seguida rigorosamente.",
+            "output": "Teste 1\n2 2\nTeste 2 \n3 8\nTeste 3\nnenhum\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2000",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "matemática",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

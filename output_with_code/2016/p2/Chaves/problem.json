@@ -1,0 +1,37 @@
+{
+    "title": "Chaves",
+    "statement": "Nome do arquivo: chaves.c, chaves.cpp, chaves.pas, chaves.java, chaves.js, chaves.py2 ou\nchaves.py3\nSeu amigo Juca está enfrentando problemas com programação. Na linguagem C, algumas partes\ndo código devem ser colocadas entre chaves \"{ }\" e ele frequentemente esquece de colocá-las ou as\ncoloca de forma errada. Porém, como Juca tem dificuldade para entender os erros de compilação, ele\nnunca sabe exatamente o que procurar. Por isso ele te pediu para fazer um programa que determine\nse um código está com as chaves balanceadas, ou seja, se é válido. Um código está com as chaves\nbalanceadas se:\n• Não há chaves (como por exemplo “Bom” ou “Correto”);\n• O código é composto por uma sequência de códigos válidos (como por exemplo “Bom Correto”\nou “{}{}” ou “{}Correto”); ou\n• O código é formado por um código válido entre chaves (como por exemplo “{{}}” ou “{Bom}”).\nO código de Juca é composto por N linhas de até 100 caracteres cada. Pode haver linhas vazias e\nespaços consecutivos.",
+    "input": "A primeira linha contém um inteiro N, representando o número de linhas no código. As N linhas\nseguintes contém até 100 caracteres.",
+    "output": "Seu programa deve produzir uma única linha, contendo uma única letra, \"S\" se o código está com\nas chaves balanceadas e \"N\", caso contrário.",
+    "constraints": "- 1 ≤N ≤103.",
+    "examples": [
+        {
+            "input": "6\n#include <stdio.h>\nint main(void)\n{\nprintf(\"Hello World\\n\");\n}",
+            "output": "S\n\n4"
+        },
+        {
+            "input": "5\n{I{N{\n}F{])\n}O}R{\n}M}A{T}I{C@!!{onze}!!}",
+            "output": "S"
+        },
+        {
+            "input": "1\n{{}}{{}}}",
+            "output": "N"
+        },
+        {
+            "input": "1\n{{{3}}}{{{2}}a{{1}}{0}",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2016",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

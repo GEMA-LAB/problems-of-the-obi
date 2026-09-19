@@ -1,0 +1,33 @@
+{
+    "title": "Lobo Mau",
+    "statement": "Nome do arquivo fonte: lobo.c, lobo.cpp, ou lobo.pas\nNa fazenda do Sr. Amarante existe um certo número de ovelhas. Enquanto elas estão dormindo profundamente,\nalguns lobos famintos tentam invadir a fazenda e atacar as ovelhas. Ovelhas normais ficariam indefesas diante de\ntal ameaça, mas felizmente as ovelhas do Sr. Amarante são praticantes de artes marciais e conseguem defender-se\nadequadamente.\nA fazenda possui um formato retangular e consiste de campos arranjados em linhas e colunas. Cada campo\npode conter uma ovelha (representada pela letra ‘k’), um lobo (letra ‘v’), uma cerca (símbolo ‘#’) ou simples-\nmente estar vazio (símbolo ‘.’). Consideramos que dois campos pertencem a um mesmo pasto se podemos ir\nde um campo ao outro através de um caminho formado somente com movimentos horizontais ou verticais, sem\npassar por uma cerca. Na fazenda podem existir campos vazios que não pertencem a nenhum pasto. Um campo\nvazio não pertence a nenhum pasto se é possível “escapar” da fazenda a partir desse campo (ou seja, caso exista\num caminho desse campo até a borda da fazenda).\nDurante a noite, as ovelhas conseguem combater os lobos que estão no mesmo pasto, da seguinte forma: se\nem um determinado pasto houver mais ovelhas do que lobos, as ovelhas sobrevivem e matam todos os lobos\nnaquele pasto. Caso contrário, as ovelhas daquele pasto são comidas pelos lobos, que sobrevivem. Note que\ncaso um pasto possua o mesmo número de lobos e ovelhas, somente os lobos sobreviverão, já que lobos são\npredadores naturais, ao contrário de ovelhas.\nTarefa\nEscreva um programa que, dado um mapa da fazenda do Sr. Amarante indicando a posição das cercas, ovelhas\ne lobos, determine quantas ovelhas e quantos lobos estarão vivos na manhã seguinte.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente o\nteclado). A primeira linha da entrada contém dois inteiros R e C que indicam o número de linhas (3 ≤R ≤250)\ne de colunas (3 ≤C ≤250) de campos da fazenda. Cada uma das R linhas seguintes contém C caracteres,\nrepresentando o contéudo do campo localizado naquela linha e coluna (espaço vazio, cerca, ovelha ou lobo).",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha, contendo dois inteiros, sendo que o primeiro\nrepresenta o número de ovelhas e o segundo representa o número de lobos que ainda estão vivos na manhã\nseguinte.\n\nOBI2006 – Modalidade Programação Nível 2 – Fase Nacional\n3\nEntrada\n6 6\n...#..\n.##v#.\n#v.#.#\n#.k#.#\n.###.#\n...###\nSaída\n0 2\nEntrada\n8 8\n.######.\n#..k...#\n#.####.#\n#.#v.#.#\n#.#.k#k#\n#k.##..#\n#.v..v.#\n.######.\nSaída\n3 1\nEntrada\n9 12\n.###.#####..\n#.kk#...#v#.\n#..k#.#.#.#.\n#..##k#...#.\n#.#v#k###.#.\n#..#v#....#.\n#...v#v####.\n.####.#vv.k#\n.......####\nSaída\n3 5",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "6 6\n...#..\n.##v#.\n#v.#.#\n#.k#.#\n.###.#\n...###",
+            "output": "0 2"
+        },
+        {
+            "input": "8 8\n.######.\n#..k...#\n#.####.#\n#.#v.#.#\n#.#.k#k#\n#k.##..#\n#.v..v.#\n.######.",
+            "output": "3 1"
+        },
+        {
+            "input": "9 12\n.###.#####..\n#.kk#...#v#.\n#..k#.#.#.#.\n#..##k#...#.\n#.#v#k###.#.\n#..#v#....#.\n#...v#v####.\n.####.#vv.k#\n.......####",
+            "output": "3 5"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2006",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

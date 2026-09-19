@@ -1,0 +1,25 @@
+{
+    "title": "Transmissão de Energia",
+    "statement": "Arquivo fonte: energia.c, energia.cc, energia.cpp ou energia.pas\nA distribuição de energia para as diversas regiões do país exige um investimento muito grande em\nlinhas de transmissão e estações transformadoras. Uma linha de transmissão interliga duas estações\ntransformadoras. Uma estação transformadora pode estar interligada a uma ou mais outras estações\ntransformadoras, mas devido ao alto custo não pode haver mais de uma linha de transmissão interli-\ngando duas estações.\nAs estações transformadoras são interconectadas de forma a garantir que a energia possa ser\ndistribuída entre qualquer par de estações. Uma rota de energia entre duas estações e1 e ek é definida\ncomo uma seq¨uência (e1, l1, e2, l2, ...ek−1, lk−1, ek) onde cada ei é uma estação transformadora e cada\nli é uma linha de transmissão que conecta ei ei+1.\nOs engenheiros de manutenção do sistema de transmissão de energia consideram que o sistema\nestá em estado normal se há pelo menos uma rota entre qualquer par de estações, e em estado de\nfalha caso contrário.\nFigura 1: Dois exemplos de sistemas de transmissão: (a) sistema em estado normal; (b) sistema em\nestado de falha.\nUm grande tornado passou pelo país, danificando algumas das linhas de transmissão, e os enge-\nnheiros de manutenção do sistema de transmissão de energia necessitam de sua ajuda.\nTarefa\nDada a configuração atual do sistema de transmissão de energia, descrevendo as interconexões exis-\ntentes entre as estações, escreva um programa que determine o estado do sistema.",
+    "input": "A entrada é composta de vários casos de teste. A primeira linha de um caso de teste contém dois\nnúmeros inteiros E e L indicando respectivamente o número de estações (3 ≤E ≤100) e o número\nde linhas de transmissão do sistema (E −1 ≤L ≤E × (E −1)/2) que continuam em funcionamento\napós o tornado. As estações são identificadas por números de 1 a E. Cada uma das L linhas seguintes\ncontém dois inteiros X e Y que indicam que existe uma linha de transmissão interligando a estação\nX à estação Y . O final da entrada é indicado por E = L = 0.\nA entrada deve ser lida do dispositivo de entrada padrão (normalmente o teclado).",
+    "output": "Para cada caso de teste seu programa deve produzir três linhas na saída. A primeira identifica o\nconjunto de teste no formato “Teste n”, onde n é numerado a partir de 1. A segunda linha deve\n\n4\nconter a palavra “normal”, se, para cada par de estações, houver uma rota que as conecte, e a palavra\n“falha” caso não haja uma rota entre algum par de estações. A terceira linha deve ser deixada em\nbranco. A grafia mostrada no Exemplo de Saída, abaixo, deve ser seguida rigorosamente.\nA saída deve ser escrita no dispositivo de saída padrão (normalmente a tela).",
+    "constraints": "- 3 ≤E ≤100\n- E −1 ≤L ≤E × (E −1)/2",
+    "examples": [
+        {
+            "input": "6 7\n1 2\n2 3\n3 4\n4 5\n5 6\n6 2\n1 5\n4 3\n1 2\n4 2\n1 4\n0 0",
+            "output": "Teste 1\nnormal\nTeste 2\nfalha"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2005",
+    "level": "p2",
+    "period": "Fase Única",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

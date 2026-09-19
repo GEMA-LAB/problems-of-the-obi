@@ -1,0 +1,33 @@
+{
+    "title": "Letras",
+    "statement": "Nome do arquivo fonte: letra.c, letra.cpp, letra.pas, letra.java, ou letra.py\nConsidere as definições abaixo:\n• Uma palavra é uma sequência de letras consecutivas.\n• Um texto é um conjunto de palavras separadas pelo caractere espaço em branco.\nVocê foi contratado pela empresa Booble para escrever um programa que, dados uma letra e um\ntexto, determina a porcentagem de palavras do texto que contém a letra dada.",
+    "input": "A primeira linha da entrada contém um único caractere, a letra de interesse na pesquisa. A segunda\nlinha contém um texto, como definido acima.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único número real, a porcentagem de\npalavras do texto que contêm a letra dada, com precisão de uma casa decimal.",
+    "constraints": "- O texto é composto apenas por letras minúsculas e o caractere espaço em branco.\n- O texto é formado por no mínimo um caractere, e no máximo 1000 caracteres.\n- O texto não contém dois espaços em branco consecutivos.",
+    "examples": [
+        {
+            "input": "p\npapagaio",
+            "output": "100.0"
+        },
+        {
+            "input": "o\nno meio do caminho tinha uma pedra tinha uma pedra no meio do caminho",
+            "output": "57.1"
+        },
+        {
+            "input": "b\nnunca me esquecerei que no meio do caminho tinha uma pedra",
+            "output": "0.0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2014",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

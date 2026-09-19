@@ -1,0 +1,25 @@
+{
+    "title": "Tetris",
+    "statement": "Arquivo fonte: tetris.c, tetris.cc, tetris.cpp ou tetris.pas\nA sua  turma do  colégio resolveu organizar  um campeonato  de tetris. Após discussão sobre as\nregras,  ficou definido que cada aluno jogaria um total de 12 partidas.  Das  12 pontuações obtidas\npor um aluno, a maior e a  menor são descartadas, e as  demais são somadas, resultando na pontu-\nação final do aluno. \n1. Tarefa\nComo você possui  conhecimentos de programação, acabou sendo designado pela turma para\nescrever um programa para  imprimir a classificação final do campeonato, a partir das pontuações\nde cada jogador.",
+    "input": "A  entrada é composta de vários conjuntos  de  teste.  A  primeira linha  de um conjunto de  testes\ncontém um número  inteiro J, que indica o  número de jogadores que participaram do  campeo-\nnato. A seguir, para cada jogador há  duas  linhas na  entrada:  a primeira  possui  o  nome do  joga-\ndor (formado apenas por letras, sendo apenas a inicial em maiúscula, e com no máximo 15 letras),\ne a  segunda possui as 12 pontuações que o jogador obteve, separadas  por espaço. As pontuações\nsão inteiros entre 0 e 1000. O final  da entrada é indicado por um conjunto de teste com J = 0.\nExemplo de Entrada\n4\nZezinho\n100 123 133 333 400 300 129 200 360 340 200 600\nLuizinho\n60 50 120 250 170 190 190 220 260 270 290 300 \nCarlinhos\n10 10 20 10 10 10 10 20 20 20 20 20\nJoaozinho\n200 300 400 400 500 500 500 600 650 650 700 810\n3\nPedrinho\n100 100 200 200 300 300 400 400 500 500 600 600\nHuguinho\n50 100 200 200 300 300 500 500 400 400 600 700\nZezinho\n100 100 100 100 100 100 100 100 100 100 100 100\n0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "Zezinho\n100 123 133 333 400 300 129 200 360 340 200 600\nLuizinho\n60 50 120 250 170 190 190 220 260 270 290 300 \nCarlinhos\n10 10 20 10 10 10 10 20 20 20 20 20\nJoaozinho\n200 300 400 400 500 500 500 600 650 650 700 810\n3\nPedrinho\n100 100 200 200 300 300 400 400 500 500 600 600\nHuguinho\n50 100 200 200 300 300 500 500 400 400 600 700\nZezinho\n100 100 100 100 100 100 100 100 100 100 100 100\n0\n3. Saída\nPara cada conjunto de teste, o seu programa deve escrever uma linha contendo o identificador do\nconjunto de teste, no formato “Teste n”, onde n é numerado seqüencialmente a partir de 1. A\nseguir, o seu programa deve escrever a classificação final no campeonato, utilizando uma linha\n\nOBI2003 - página 15\npara cada participante. Cada linha deve conter três informações, separadas por um espaço em\nbranco: a classificação do jogador, a sua pontuação final, e o seu nome. A classificação de um\njogador é igual a 1 mais o número de jogadores que obtiveram pontuação maior do que a sua. Em\ncaso de empate, os jogadores devem ser ordenados em ordem alfabética. Depois de toda a classifi-\ncação, deve ser deixada uma linha em branco. O formato do exemplo de saída abaixo deve ser\nseguido rigorosamente.",
+            "output": "Teste 1\n1 5200 Joaozinho\n2 2518 Zezinho\n3 2020 Luizinho\n4 150 Carlinhos\nTeste 2\n1 3500 Huguinho\n1 3500 Pedrinho\n3 1000 Zezinho\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2003",
+    "level": "senior",
+    "period": "Fase Única",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

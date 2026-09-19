@@ -1,0 +1,29 @@
+{
+    "title": "Setas",
+    "statement": "Nome do arquivo fonte: setas.c, setas.cpp, setas.pas, setas.java, ou setas.py\nGabriel é um garoto que gosta muito de um jogo onde há várias letras em um tabuleiro e o jogador\nprecisa rapidamente pisar nas letras corretas, de acordo com as instruções na tela, seguindo uma\nmúsica. Cansado de vencer, Gabriel inventou um novo jogo: agora temos um tabuleiro quadrado,\ncom N células de cada lado, em que cada célula possui uma seta que aponta para uma das quatro\nposições vizinhas. O jogador primeiro escolhe uma célula inicial para se posicionar e, quando a\nmúsica começa, ele deve caminhar na direção para onde a seta em que ele está aponta. Ganha o\njogo quem pisar em mais setas corretas durante um período de tempo.\nO problema é que Gabriel joga tão rápido que quando a seta atual manda ele sair do tabuleiro,\nele segue a orientação, muitas vezes quebrando alguns objetos próximos. Quando isso acontece,\ndizemos que a célula inicial deste jogo não é segura, pois leva a um caminho que termina fora do\ntabuleiro. A figura abaixo mostra dois tabuleiros.\nTabuleiro 3x3  com oito\ncélulas seguras\nTabuleiro 4x4 com onze \ncélulas seguras\nAjude Gabriel: dada a configuração do tabuleiro, determine quantas células são seguras para ele\niniciar o jogo.",
+    "input": "A primeira linha da entrada contém um inteiro N, o tamanho do tabuleiro. Cada uma das N linhas\nseguintes contém N caracteres, com as direções das setas. As direções válidas são:\n• ‘V’ Aponta para a célula da linha abaixo, na mesma coluna\n• ‘<’ (sinal menor-que) aponta para a célula à esquerda, na mesma linha\n• ‘>’ (sinal maior-que) aponta para a célula à direita, na mesma linha\n• ‘A’ Aponta para a célula da linha acima, na mesma coluna",
+    "output": "Seu programa deve produzir um único inteiro, o número de células seguras.",
+    "constraints": "- 1 ≤N ≤500\n- 4",
+    "examples": [
+        {
+            "input": "3\n>>V\nAV<\nA<>",
+            "output": "8"
+        },
+        {
+            "input": "4\n>>V<\nA<<<\nAAA>\n>>>A",
+            "output": "11"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2014",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

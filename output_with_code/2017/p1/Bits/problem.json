@@ -1,0 +1,30 @@
+{
+    "title": "Bits",
+    "statement": "Nome do arquivo: bits.c, bits.cpp, bits.pas, bits.java, bits.js, bits.py2 ou bits.py3\nDuas sequências de N bits são distintas se, para alguma posição i, 1 ≤i ≤N, o bit na posição i\nde uma sequência é distinto do bit na posição i da outra sequência. As duas sequências de N = 10\nbits abaixo são distintas pois, por exemplo, os bits na posição 7, da esquerda para a direita, são\ndistintos:\n0 1 0 0 0 1 1 0 1 0\n1 0 0 1 0 1 0 0 1 0\nMas veja que as duas sequências acima, apesar de distintas, têm uma característica em comum:\nnão há três bits 1 consecutivos nelas. Neste problema, dado o número de bits N e um K, seu\nprograma deve computar quantas sequências distintas de N bits existem, nas quais não há K bits\n1 consecutivos.",
+    "input": "A entrada consiste de uma linha contendo os dois inteiros N e K.",
+    "output": "Imprima uma linha contendo um inteiro, representando o número de sequências distintas de N bits,\nnas quais não há K bits 1 consecutivos. Porque esse número pode ser muito grande, você deve\nimprimir o resto da divisão dele por 109 + 7.",
+    "constraints": "- 1 ≤N ≤1000\n- 1 ≤K ≤N + 1",
+    "examples": [
+        {
+            "input": "4 2",
+            "output": "8"
+        },
+        {
+            "input": "10 3",
+            "output": "504"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2017",
+    "level": "p1",
+    "period": "Fase 3",
+    "topics": [
+        "matemática",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

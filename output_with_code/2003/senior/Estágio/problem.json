@@ -1,0 +1,25 @@
+{
+    "title": "Estágio",
+    "statement": "Arquivo fonte: estagio.c, estagio.cc, estagio.cpp ou estagio.pas\nVocê conseguiu um estágio para trabalhar como programador na secretaria da sua escola. Como\nprimeira tarefa, Dona Vilma, a coordenadora, solicitou que você aprimore um programa que foi\ndesenvolvido pelo estagiário anterior. Esse programa tem como entrada uma lista de nomes e de\nmédias finais dos alunos de uma turma, e determina o aluno com a maior média na turma. Dona\nVilma pretende utilizar o programa para premiar o melhor aluno de cada turma da escola. O pro-\ngrama desenvolvido pelo estagiário anterior encontra-se nas páginas a seguir (programa Pascal na\npágina 5, programa C na página 6, programa C++ na página 7).\nComo você pode verificar, o programa na forma atual tem uma imperfeição: no caso de haver alu-\nnos empatados com a melhor média na turma, ele imprime apenas o primeiro aluno que aparece\nna lista. \n1. Tarefa\nDona Vilma deseja que você altere o programa para que ele produza uma lista com todos os alu-\nnos da turma que obtiveram a maior média, e não apenas um deles. Você consegue ajudá-la nesta\ntarefa?",
+    "input": "A  entrada  é  constituída  de  vários conjuntos  de  teste, representando várias turmas. A primeira\nlinha de um conjunto de testes contém um número inteiro N (1 ≤ N ≤ 1000) que indica o total de\nalunos na turma. As N linhas seguintes contêm, cada uma,  um par de números  inteiros C  (1 ≤ C\n≤ 20000) e M  (0 ≤ M ≤ 100), indicando  respectivamente o código e a média de um aluno. O final\nda  entrada é indicado por uma turma com N = 0.\nExemplo de Entrada\n3\n1 85\n2 91\n3 73\n5\n12300 81\n12601 99\n15023 76\n10111 99\n212 99\n0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "1 85\n2 91\n3 73\n5\n12300 81\n12601 99\n15023 76\n10111 99\n212 99\n0\n3. Saída\nPara cada turma da entrada seu programa deve produzir três linhas na saída. A primeira linha deve\nconter um identificador do conjunto de teste, no formato “Turma n”, onde n é numerado a partir\nde 1. A segunda linha deve conter os códigos dos alunos que obtiveram a maior média da turma.\nOs códigos dos alunos devem aparecer na mesma ordem da entrada, e cada um deve ser seguido\nde um espaço em branco. A terceira linha deve ser deixada em branco. O formato mostrado no\n\nOBI2003 - página 5\nexemplo de saída abaixo deve ser seguido rigorosamente.",
+            "output": "Turma 1\n2\nTurma 2\n12601 10111 212\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2003",
+    "level": "senior",
+    "period": "Fase Única",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

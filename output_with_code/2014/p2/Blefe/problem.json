@@ -1,0 +1,29 @@
+{
+    "title": "Blefe",
+    "statement": "Nome do arquivo fonte: blefe.c, blefe.cpp, blefe.pas, blefe.java, ou blefe.py\nPedro está desenvolvendo um jogo on-line para dois jogadores, em que o objetivo é forçar um erro\ndo adversário, blefando. A questão é que, à medida que o jogo prossegue, mais tempo é necessário\npara verificar se uma jogada é válida ou não, ou seja, se é um blefe ou não. Daí que Pedro precisa da\nsua ajuda para implementar um algoritmo rápido para verificar se uma jogada é ou não um blefe.\nConsidere um conjunto A fixo de N números inteiros, positivos ou negativos, e uma sequência de\nnúmeros inteiros B, inicialmente vazia. Os jogadores se alternam em jogadas que consistem em\nincluir um número por vez no final da sequência B. Quando chega a sua vez, um jogador deve fazer\numa de duas jogadas válidas possíveis: (i) incluir em B qualquer um dos números do conjunto A;\n(ii) ou incluir em B um número que é a soma de dois números quaisquer que já estejam em B\n(note a soma não é de números necessariamente distintos, pode ser a soma de um número com ele\nmesmo).\nNesta tarefa, você deve escrever um programa que, dado o conjunto A e uma sequência B, diga se\ntodas as jogadas foram válidas, ou mostre qual é a primeira jogada inválida em B.",
+    "input": "A entrada consiste de três linhas. A primeira linha contém dois números N e M, respectivamente\no tamanho do conjunto A e o tamanho da sequência B. A segunda linha contém os N números\ninteiros do conjunto A. A terceira linha contém os M números inteiros da sequência B.",
+    "output": "Seu programa deve produzir uma única linha. A linha deve conter a palavra “sim” caso todas as\njogadas em B sejam válidas; se houver alguma jogada inválida em B, a linha deve conter o primeiro\nnúmero inválido em B.",
+    "constraints": "- 1 ≤N ≤103 e 1 ≤M ≤104\n- O valor de todos os números em A e em B está entre −109 e 109",
+    "examples": [
+        {
+            "input": "6 11\n34 9 -2 77 -11 5\n34 5 -2 32 -11 -6 28 66 -2 -22 33",
+            "output": "sim\n\n5"
+        },
+        {
+            "input": "6 8\n34 9 -2 77 -11 5\n-11 77 -2 75 9 48 7 5",
+            "output": "48"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2014",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

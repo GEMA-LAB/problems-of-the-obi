@@ -1,0 +1,29 @@
+{
+    "title": "Escalonamento ótimo",
+    "statement": "Nome do arquivo fonte: escalona.c, escalona.cpp, escalona.pas, escalona.java, ou escalona.py\nO SBC (System for Batch Computing) é um sistema operacional voltado para a execução sequencial de tarefas.\nO operador do sistema cria tarefas e o sistema operacional é responsável por agendar a execução destas tarefas.\nCada tarefa pode depender da conclusão de algumas tarefas para poder começar. Se uma tarefa A depende de\numa tarefa B, a tarefa B deve terminar antes que a tarefa A inicie sua execução.\nAlém disto, cada tarefa possui uma prioridade. É sempre mais vantajoso para o sistema começar executando\numa tarefa de mais alta prioridade, depois continuar executando uma tarefa de mais alta prioridade dentre as\nque sobraram e assim por diante.\nNeste problema, será dado um inteiro N, que irá representar o número de tarefas no sistema. As tarefas serão\nnumeradas de 0 até N −1. Tarefas com índice menor possuem prioridade maior, de forma que a tarefa 0 é a\ntarefa de mais alta prioridade, a tarefa 1 é a tarefa com a segunda maior prioridade e assim por diante, até a\ntarefa N −1, que é a tarefa com a menor prioridade. Além disso, serão dadas M relações de dependência entre\nas tarefas.\nSeu objetivo será decidir se é possível executar as tarefas em alguma ordem. Caso seja possível, você deverá\nproduzir uma ordem de execução ótima para as tarefas, isto é, desempate as ordens possíveis pela prioridade da\nprimeira tarefa. Se o empate ainda persistir, desempate pela prioridade da segunda tarefa, e assim por diante.",
+    "input": "A primeira linha da entrada contém inteiros N e M.\nAs próximas M linhas descrevem, cada uma, uma\ndependência entre as tarefas da entrada. Cada uma dessas linhas irá conter dois inteiros A e B que indicam\nque a tarefa B depende da tarefa A, isto é, que a tarefa A deve terminar antes que a tarefa B inicie.",
+    "output": "Se não for possível ordenar as tarefas de forma que as dependências sejam satisfeitas, imprima uma única linha\ncontendo o caracter *. Caso contrário, imprima N linhas contendo cada uma um número inteiro. O inteiro\nna i-ésima linha deve ser o índice da i-ésima tarefa a ser executada na ordem ótima de execução das tarefas.",
+    "constraints": "- 0 ≤N ≤50000.\n- 0 ≤M ≤200000.\n- 0 ≤A, B < N.",
+    "examples": [
+        {
+            "input": "3 1\n2 0",
+            "output": "1\n2\n0"
+        },
+        {
+            "input": "2 2\n0 1\n1 0",
+            "output": "*"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2011",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

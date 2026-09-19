@@ -1,0 +1,41 @@
+{
+    "title": "Clube dos Cinco",
+    "statement": "Nome do arquivo: clube.c, clube.cpp, clube.pas, clube.java, clube.js, clube.py2 ou\nclube.py3\nNo Clube dos Cinco são oferecidos três esportes aos associados: tiro com arco, badminton e ca-\nnoagem. Cada associado pode participar de no máximo dois esportes, mas a administração do\nclube suspeita que algumas pessoas estejam ultrapassando esse limite. A fim de descobrir a ver-\ndade, perguntaram aos treinadores quantas pessoas estavam frequentando suas aulas, resultando\nnos seguintes dados:\n• O número A de pessoas que praticam tiro com arco;\n• O número B de pessoas que praticam badminton;\n• O número C de pessoas que praticam canoagem.\nAlém disso, perguntaram aos membros quais esportes eles praticam. Obviamente, os associados\nque praticam três esportes mentiram, mas considere que outros falaram a verdade. Os dados dos\nassociados foram resumidos nas seguintes informações:\n• O número D de pessoas que praticam tiro com arco e badminton;\n• O número E de pessoas que praticam tiro com arco e canoagem;\n• O número F de pessoas que praticam badminton e canoagem;\n• O número G de pessoas que não praticam nenhum esporte.\nVocê ficou encarregado da a tarefa de descobrir se a suspeita é verdadeira. Dados o número N de\nassociados do clube e os números A, B, C, D, E, F e G descritos acima, descubra se existe alguma\npessoa que faz três esportes.",
+    "input": "A primeira linha contém um inteiros N, representando o número de associados. A segunda linha\ncontém sete inteiros A, B, C, D, E, F e G como descritos no enunciado.",
+    "output": "Seu programa deve produzir uma única linha, contendo uma única letra, \"S\" se algum associado\nparticipa de três esportes e \"N\", caso contrário.",
+    "constraints": "- 1 ≤N ≤104.\n- 0 ≤A, B, C, D, E, F, G ≤N.",
+    "examples": [
+        {
+            "input": "7\n4 4 4 1 1 2 0",
+            "output": "S"
+        },
+        {
+            "input": "8\n4 4 4 1 1 2 0",
+            "output": "N"
+        },
+        {
+            "input": "10\n4 4 4 1 1 1 1",
+            "output": "N"
+        },
+        {
+            "input": "7\n4 4 4 1 1 1 1",
+            "output": "S"
+        },
+        {
+            "input": "10\n4 4 4 0 0 0 1",
+            "output": "S"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2016",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

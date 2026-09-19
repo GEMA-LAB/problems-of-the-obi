@@ -1,0 +1,37 @@
+{
+    "title": "Feira de Bactérias",
+    "statement": "Nome do arquivo fonte: bacterias.c, bacterias.cpp, ou bacterias.pas\nBruno é um biólogo apaixonado por sua profissão. Sua especialidade é estudar o comportamento de bactérias.\nPor isso, ele possui em seu laboratório centenas de colônias de diferentes tipos desses microorganismos.\nNesta semana ele viu o anúncio de um evento inusitado: uma feira de bactérias. Nessa feira, vários fornecedores\nestarão vendendo diferentes tipos de bactérias. Cada tipo de bactéria é vendido em uma placa de vidro, já\npreparada para a formação de uma colônia de bactérias.\nCada placa de vidro é vendida com apenas uma\nbactéria inicialmente.\nBruno deu uma olhada no catálogo com os tipos de bactérias que estarão à venda na feira, e notou algumas\ncoisas interessantes:\n• Todos os tipos de bactérias à venda terão o mesmo preço.\n• Todas as bactérias (de todos os tipos) se subdividem todas as noites para gerar outras bactérias. Por\nexemplo, a bactéria da colônia de tipo X se subdivide em 2 outras bactérias todas as noites. Assim,\nno primeiro dia teremos só uma bactéria na colônia. No dia seguinte, teremos 2, e no próximo, 4. A\nquantidade de divisões de uma bactéria depende do seu tipo.\n• O crescimento da colônia cessa após um determinado número de dias, por causa da escassez de alimento.\nA quantidade de dias em que uma colônia cresce depende do tipo de bactéria.\nÉ final de mês e Bruno já gastou quase todo o seu dinheiro. Assim, resolveu que irá comprar apenas uma colônia\nde bactérias. No entanto, ele pretende comprar a colônia que forneça a maior quantidade de bactérias ao final\ndo período de crescimento da mesma.\nEle tem um catálogo mostrando os tipos de bactérias à venda. Para cada tipo de bactéria, o catálogo informa\na quantidade de bactérias geradas por uma bactéria desse tipo a cada divisão e por quantos dias a população\nda colônia crescerá. Porém, a calculadora que ele tem em casa não é suficiente para que ele faça os cálculos\nnecessários para decidir qual é a melhor colônia a comprar.\nTarefa\nBruno pediu sua ajuda para decidir qual é o melhor tipo de bactéria para a compra. Lembre que para Bruno\no melhor tipo de bactéria é aquele cuja colônia, ao final do período de crescimento, terá a maior quantidade de\nbactérias.\nVocê deve supor que não haverá duas colônias com a mesma população final de bactérias.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado).\nA primeira linha da entrada contém um inteiro N (1 ≤N ≤50.000) representando a quantidade tipos de\nbactérias no catálogo. Cada uma das N linhas seguintes contém informações sobre um tipo de bactéria: a\nprimeira dessas linhas contém a informação da bactéria de tipo 0, a segunda dessas linhas contém a informação\nsobre a bactéria de tipo 1, e assim por diante. A última dessas linhas contém a informação da bactéria de tipo\nN −1.\nA informação para cada tipo de bactéria é composta por dois números inteiros D e C (1 ≤D ≤2.000 e\n1 ≤C ≤5.000), onde D é quantidade de bactérias que cada bactéria deste tipo gera ao se dividir numa noite,\ne C é a quantidade de dias que a população de bactérias crescerá.\n\n8",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado).\nA primeira linha da entrada contém um inteiro N (1 ≤N ≤50.000) representando a quantidade tipos de\nbactérias no catálogo. Cada uma das N linhas seguintes contém informações sobre um tipo de bactéria: a\nprimeira dessas linhas contém a informação da bactéria de tipo 0, a segunda dessas linhas contém a informação\nsobre a bactéria de tipo 1, e assim por diante. A última dessas linhas contém a informação da bactéria de tipo\nN −1.\nA informação para cada tipo de bactéria é composta por dois números inteiros D e C (1 ≤D ≤2.000 e\n1 ≤C ≤5.000), onde D é quantidade de bactérias que cada bactéria deste tipo gera ao se dividir numa noite,\ne C é a quantidade de dias que a população de bactérias crescerá.\n\n8",
+            "output": "Seu programa deve imprimir, na saída padrão, um número inteiro entre 0 e N −1 representando o tipo da\nbactéria que Bruno deverá comprar.\nInformações sobre a pontuação\n• Em um conjunto de casos de teste que totaliza 20 pontos, N ≤1.000, DC ≤1.000.000.\n• Em um conjunto de casos de teste que totaliza 80 pontos, N ≤2.000, D ≤2.000, C ≤5.000."
+        },
+        {
+            "input": "2\n2 5\n3 4",
+            "output": "1"
+        },
+        {
+            "input": "5\n2 1\n4 5\n30 4\n20 6\n2 154",
+            "output": "4"
+        },
+        {
+            "input": "4\n145 15\n2 4999\n3 3211\n135 20",
+            "output": "2"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2009",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

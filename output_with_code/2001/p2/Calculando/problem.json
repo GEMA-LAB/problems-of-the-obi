@@ -1,0 +1,25 @@
+{
+    "title": "Calculando",
+    "statement": "Arquivo fonte: calcula.c, calcula.cc, calcula.cpp ou calcula.pas\nA disseminação dos computadores se deve principalmente à capacidade de eles se comportarem\ncomo outras máquinas, vindo a substituir muitas destas. Esta flexibilidade é possível porque pode-\nmos alterar a funcionalidade de um computador, de modo que ele opere da forma que desejarmos:\nessa é a base do que chamamos programação. \n1. Tarefa\nSua tarefa é escrever um programa que faça com que o computador opere como uma calculadora\nsimples. O seu programa deve ler expressões aritméticas e produzir como saída o valor dessas\nexpressões, como uma calculadora faria. O programa deve implementar apenas um subconjunto\nreduzido das operações disponíveis em uma calculadora: somas e subtrações.",
+    "input": "A entrada é composta de vários conjuntos de testes. A primeira linha de um conjunto de testes\ncontém um número inteiro m (1 ≤ m ≤ 100), indicando o número de operandos da expressão a ser\navaliada. A segunda linha de um conjunto de testes contém a expressão aritmética a ser avaliada,\nno seguinte formato:\nX1 s1 X2 s2 ... Xm-1 sm-1 Xm\nonde\n•\nXi , 1 ≤ i ≤ m, é um operando (0 ≤ Xi ≤ 100);\n•\nsj, 1 ≤ j < m, é um operador, representado pelos símbolos ‘+’ ou ‘–’; \n•\nnão há espaços em branco entre operandos e operadores.\nO final da entrada é indicado pelo valor m=0.\nExemplo de Entrada\n3\n3+7-22\n3\n5-10-77\n10\n1+2+3+4+5+6+7+8+9+10\n0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3+7-22\n3\n5-10-77\n10\n1+2+3+4+5+6+7+8+9+10\n0\n3. Saída\nPara cada conjunto de testes da entrada seu programa deve produzir três linhas. A primeira linha\ndeve conter um identificador da expressão, no formato “Teste n”, onde n é numerado a partir de 1.\nNa segunda linha deve aparecer o resultado encontrado pelo seu programa. A terceira linha deve\nser deixada em branco. A grafia mostrada no Exemplo de Saída, abaixo, deve ser seguida rigoro-\n\n11\nsamente.",
+            "output": "Teste 1\n-12\nTeste 2\n-82\nTeste 3\n55\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2001",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

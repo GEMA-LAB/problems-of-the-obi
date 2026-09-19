@@ -1,0 +1,29 @@
+{
+    "title": "Frequencia na aula",
+    "statement": "Nome do arquivo fonte: frequencia.c, frequencia.cpp, frequencia.pas, frequencia.java, ou\nfrequencia.py\nCerta vez, numa aula, a professora passou um filme para os alunos assistirem. Durante este filme, ela passou\numa lista de presença em sua sala para verificar a presença dos alunos, onde cada aluno deveria inserir apenas seu\nnúmero de registro. Alguns alunos contudo, como possuem amigos que fogem da aula, decidiram ser camaradas\ne inseriram os números de registro de seus amigos fujões. O problema é que muitos alunos são amigos de alunos\nque fogem da aula e alguns números de registro acabaram sendo repetidamente inseridos na lista de presença.\nAlém de tudo, alguns dos alunos que se esperava que não estivessem na aula de fato estavam!\nA professora, ao notar que a lista de presença continha alguns números repetidos, ficou sem entender, mas\ndecidiu dar um voto de confiança e dar presença a todos os alunos cujos números de registro estavam na lista.\nComo são muitos alunos na sala e muitos números com repetição, ela pediu a sua ajuda para determinar o total\nde alunos que receberam presença na aula.",
+    "input": "A primeira linha da entrada contém um número inteiro N, que informa a quantidade de números de registro\nque apareceram na lista de presença. Cada uma das N linhas seguintes contém um número de registro Vi que\nfoi inserido na lista de presença.",
+    "output": "Seu programa deve imprimir uma única linha, contendo apenas um número inteiro, o número de alunos que\nreceberam presença.",
+    "constraints": "- 1 ≤N ≤105\n- Para cada elemento Vi, 0 ≤Vi ≤106\n- Informações sobre pontuação\n- Em um conjunto de casos que totaliza 40 pontos, N ≤103 e Vi ≤103",
+    "examples": [
+        {
+            "input": "3\n2\n3\n1",
+            "output": "3\n\n7"
+        },
+        {
+            "input": "7\n0\n5\n12\n41\n7\n5\n41",
+            "output": "5"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2012",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

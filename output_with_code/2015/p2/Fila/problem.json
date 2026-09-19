@@ -1,0 +1,25 @@
+{
+    "title": "Fila",
+    "statement": "Nome do arquivo: fila.c, fila.cpp, fila.pas, fila.java, fila.js ou fila.py\nNa cerimônia de encerramento da IOI, os competidores formam uma fila à medida que vão chegando\nao local. Os competidores são desorganizados e entram na fila perto de seus novos amigos, ou seja,\ncada competidor escolhe uma posição arbitrária da fila para entrar. Logo na entrada do local há\num telão que mostra fotografias e vídeos dos competidores durante a competição. Há uma grande\ndiferença entre as alturas dos competidores, inclusive pelas diferenças de idade, e para que todos\npossam ver o telão, deve-se evitar que um competidor muito alto fique na frente de um competidor\nmuito baixo, a não ser que esse competidor mais alto esteja longe, mais à frente na fila.\nA organização da IOI está monitorando a fila e pediu que você faça um programa que inicialmente\nreceba a descrição da fila inicial (número N de pessoas e suas alturas A1, A2, . . . , AN, pela ordem\nna fila, onde A1 é a altura do primeiro da fila). Em seguida, seu programa deve processar dois tipos\nde operações:\n• na operação tipo 0, seu programa recebe a informação que um novo competidor, de altura H,\nacabou de entrar na fila, exatamente atrás do I-ésimo competidor na fila (para I = 0 o novo\ncompetidor entrou no começo da fila)\n• na operação tipo 1, seu programa recebe dois inteiros, I e D, e deve responder a uma consulta:\nconsidere a I-ésima pessoa na fila, digamos, P, e determine a posição na fila da pessoa mais\npróxima de P que está à frente de P e cuja altura é maior do que HI + D (onde HI é a altura\nde P).",
+    "input": "A primeira linha da entrada contém um único número inteiro N, indicando o número de pessoas na\nfila inicial. A segunda linha da entrada contém os N números inteiros A1, A2, . . . , AN, as alturas de\ncada pessoa da fila. A terceira linha contém um único inteiro Q indicando o número de operações.\nCada uma das Q linhas seguintes contém três números inteiros números T, I e X, descrevendo uma\noperação: T indica o tipo da operação, I representa uma posição na fila e X é a altura H do novo\ncompetidor (na operação tipo 0) ou o parâmetro D (na operação do tipo 1).\nRestrições\n• 0 ≤N ≤6 × 105\n• 1 ≤Q ≤6 × 105\n• 1 ≤Ai ≤109 para todo i, 1 ≤i ≤N\n• 1 ≤X ≤109\nInformações sobre a pontuação\n• Em um conjunto de casos de testes somando 40 pontos, N ≤2 × 105, Q ≤2 × 105 e todas as\noperações são do tipo 1;\n• Em um conjunto de casos de testes somando 80 pontos, N ≤2 × 105 e Q ≤2 × 105.\n\n10\nExemplos\nEntrada\n5\n10 5 7 8 2\n6\n1 5 6\n0 1 11\n1 6 6\n0 0 13\n1 6 4\n1 6 5",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "- 0 ≤N ≤6 × 105\n- 1 ≤Q ≤6 × 105\n- 1 ≤Ai ≤109 para todo i, 1 ≤i ≤N\n- 1 ≤X ≤109",
+    "examples": [
+        {
+            "input": "5\n10 5 7 8 2\n6\n1 5 6\n0 1 11\n1 6 6\n0 0 13\n1 6 4\n1 6 5",
+            "output": "1\n2\n1\n0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2015",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

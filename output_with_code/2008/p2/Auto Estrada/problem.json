@@ -1,0 +1,33 @@
+{
+    "title": "Auto Estrada",
+    "statement": "Nome do arquivo fonte: auto.c, auto.cpp ou auto.pas\nCertas regiões resolveram o problema de tráfego intenso com a construção de auto estradas, que são estradas\ncontendo em geral quatro ou mais pistas de rolagem em cada sentido, de forma que um número grande de carros\npossa passar sem que ocorram congestionamentos. O problema das auto estradas é que, junto com os carros\ntemos um aumento considerável de ruído nas imediações da pista, o que incomoda os moradores das regiões\npróximas.\nA GoTo engenharia, uma empresa do ramo de construção especializada em obras de estradas, encontrou uma\nsolução engenhosa para o problema: instalar grandes painéis defletores de som de cada lado da auto estrada\npara tentar minimizar o ruído percebido pelos vizinhos.\nOs painéis são construídos em blocos contínuos de 10 metros lineares. A auto estrada também é dividida em\nblocos de 10 metros de extensão, sendo cada bloco descrito por um código, como definido abaixo:\n• P - Pista, trecho em linha reta sem curvas ou saídas. Deve-se instalar um painel de cada lado da auto\nestrada.\n• C - Curva, trecho em curva de 90 graus na auto estrada. Deve-se instalar dois painéis de concreto do lado\nexterno da curva; o outro lado fica sem painel instalado.\n• A - Acesso, trecho em linha reta no qual existe uma entrada ou uma saída a partir de um dos lados da\nauto estrada (mas não do outro). Deve-se instalar um painel no lado onde não existe o acesso.\n• D - Duplo acesso, trecho em linha reta no qual existem dois acessos (entradas ou saidas, em qualquer\ncombinação possível), um de cada lado da rodovia. Nenhum painel deve ser instalado nesse bloco da auto\nestrada.\nApesar de ser uma empresa formada por engenheiros, nenhum dos funcionários da GoTo sabe programar, de\nforma que eles decidiram contrataram você como consultor independente. Você deve escrever um programa\npara, dado um mapa da auto estrada, determinar quantos painéis defletores são necessários para cobrir toda a\nextensão dessa auto estrada.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha contém um inteiro C (1 ≤C ≤106), indicando o comprimento da auto estrada,\nem blocos de 10 metros. A linha seguinte contêm C caracteres, cada letra descrevendo um bloco de 10 metros\nda auto estrada, como definido acima.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha contendo um número inteiro, representando\nquantas unidades de painel são necessárias para cobrir toda a extensão da auto estrada.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "DAPCD",
+            "output": ""
+        },
+        {
+            "input": "AACCAAPP",
+            "output": "2"
+        },
+        {
+            "input": "ADCCPPPPPAADCP",
+            "output": "Informações sobre a pontuação\n• Para um subconjunto dos casos de teste totalizando 30 pontos, 1 ≤C ≤100.\n• Para um subconjunto dos casos de teste totalizando 55 pontos, 1 ≤C ≤103."
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2008",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

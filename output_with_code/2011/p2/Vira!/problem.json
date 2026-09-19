@@ -1,0 +1,29 @@
+{
+    "title": "Vira!",
+    "statement": "Nome do arquivo fonte: vira.c, vira.cpp, vira.pas, vira.java, ou vira.py\nVira! é um jogo individual que se inicia com N peças igualmente espaçadas em uma linha. Cada peça do\nVira! possui dois lados, sendo um branco e um preto; assim, ao virar uma peça, alterna-se a cor que está sendo\nmostrada entre branco e preto. A figura abaixo ilustra um possível arranjo com 5 peças, duas mostrando o lado\nbranco e duas mostrando o lado preto.\nUm movimento consiste em retirar uma peça preta  criando um espaço  e inverter as peças vizinhas à\nretirada.\nSendo assim, dependendo do número de peças vizinhas à retirada, um movimento pode inverter\nduas, uma, ou mesmo nenhuma peça (se não houver peças vizinhas à que está sendo retirada). Você vence o\njogo quando consegue remover todas as peças. A figura abaixo exemplifica uma sequência de movimentos que\nresolvem uma instância do problema com 5 peças, em que as peças são retiradas na ordem 5-2-1-3-4.\n1\n2\n3\n4\n5\nDescrição do movimento\nConfiguração inicial\nRemovemos a peça da posição 5\nRemovemos a peça da posição 2\nRemovemos a peça da posição 1\nRemovemos a peça da posição 3\nRemovemos a peça da posição 4\nFim do jogo.\nPara uma determinada disposição inicial das peças, podem existir várias soluções diferentes.\nPor exemplo,\npoderíamos retirar as peças na ordem 5-2-3-4-1 e ainda assim conseguir retirar todas as peças.\nSua tarefa, neste problema, consiste em contar o número de soluções diferentes para uma dada disposição inicial\ndas peças. Como o número de soluções pode ser muito grande, você deve imprimir apenas o resto do número\nquando dividido por 10007.",
+    "input": "A primeira linha da entrada contém o inteiro N.\nA linha seguinte contém N letras separadas por espaço\nrepresentando o arranjo inicial das peças. Uma peça branca é indicada pela letra B na entrada, e uma peça\npreta é indicada pela letra P.",
+    "output": "Seu programa deve imprimir uma linha contendo o número de soluções distintas que resolvem o jogo.",
+    "constraints": "- 1 ≤N ≤1000.\n- 11",
+    "examples": [
+        {
+            "input": "5\nB P B P P",
+            "output": "15"
+        },
+        {
+            "input": "3\nB P B",
+            "output": "2"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2011",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

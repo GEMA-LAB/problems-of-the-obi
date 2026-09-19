@@ -1,0 +1,25 @@
+{
+    "title": "Trem ou Caminhão?",
+    "statement": "9\n0Trem ou Caminhão?\nA  produtora de refrigerantes CaraCola precisa enviar com freqüência grandes carregamentos para\nas suas distribuidoras em outros estados. Para isso ela pode utilizar uma transportadora que traba-\nlha com caminhões ou uma transportadora que trabalha com trens. As duas transportadoras com-\npetem agressivamente para conseguir o serviço, mas seus custos dependem do momento (por\nexemplo, se há ou não caminhões disponíveis, etc.). A cada carregamento, a CaraCola consulta as\nduas transportadoras, que informam as condições de preço vigentes no momento, para o estado\ndesejado. Sua ",
+    "input": "de Dados\nO arquivo COLA.IN contém vários conjuntos de teste. Cada conjunto de teste é composto por\numa linha, que contém cinco valores. O primeiro valor é um número inteiro positivo K que repre-\nsenta o peso, em kilogramas, do carregamento.  Os quatro valores restantes são números reais  A,\nB, C e D que representam os custos informados pelas empresas de transporte. A e B representam\nrespectivamente o custo fixo e o custo variável por kilograma informado pela empresa que utiliza\ntrem. C e D representam respectivamente o custo fixo e o custo variável por kilograma informado\npela empresa que utiliza caminhão. Os custos são apresentados sempre com precisão de dois alga-\nrismos decimais. O final do arquivo de testes é indicado quando K = 0 (este último conjunto de\ntestes não é válido e não deve ser processado).\nO arquivo COLA.IN contém ao menos um conjunto de teste que deve ser processado.\nExemplo de Entrada\n2354 450.00 3.50 230.00 3.70\n1000 411.50 2.85 411.50 2.85\n2327 325.00 3.10 557.50 3.00\n0\nERRATA\nA prova distribuída aos competidores continha\num erro. O exemplo correto é:\n2354 450.00 3.50 230.00 3.70\n1000 411.50 2.85 411.50 2.85\n2327 325.00 3.10 556.50 3.00\n\n10",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "2354 450.00 3.50 230.00 3.70\n1000 411.50 2.85 411.50 2.85\n2327 325.00 3.10 557.50 3.00\n0\nERRATA\nA prova distribuída aos competidores continha\num erro. O exemplo correto é:\n2354 450.00 3.50 230.00 3.70\n1000 411.50 2.85 411.50 2.85\n2327 325.00 3.10 556.50 3.00\n\n10\n3. Saída de Dados\nSeu programa deve produzir um arquivo de saída chamado COLA.OUT. Para cada conjunto de\nteste do arquivo de entrada seu programa deve produzir três linhas no arquivo de saída. A primeira\nlinha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é numerado\na partir de 1. Na segunda linha deve aparecer resposta, no formato “envie por trem” ou “envie por\ncaminhao”.  A terceira linha deve ser deixada em branco. A grafia mostrada no Exemplo de Saída,\nabaixo, deve ser seguida rigorosamente (note que não são usados acentos).",
+            "output": "Teste 1\nenvie por trem\nTeste 2\nenvie por trem\nTeste 3\nenvie por caminhao\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "1999",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

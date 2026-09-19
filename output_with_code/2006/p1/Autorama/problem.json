@@ -1,0 +1,33 @@
+{
+    "title": "Autorama",
+    "statement": "Nome do arquivo fonte: auto.c, auto.cpp, ou auto.pas\nSeu Diniz possui uma pista de autorama profissional. Nessa pista a marcação de tempo é feita com sensores\nque fazem leitura da passagem de cada cada carrinho pelo ponto onde o sensor está instalado. K sensores são\ndistribuídos ao longo da pista nos chamados postos de checagem.\nDurante uma corrida, os carrinhos devem passar pelos postos de checagem na ordem pré-estabelecida, ou\nseja, primeiro no posto de checagem 1, depois no 2, até o posto de checagem K, quando ele deve retornar\nao posto de checagem 1 para completar uma volta. Entretanto, às vezes, quando os carrinhos saem da pista\nos competidores os recolocam mais à frente na pista, pulando alguns postos de checagem. Nesse caso, todas\nas passagens daquele carrinho por postos de checagem devem ser ignoradas até que ele passe pelo posto de\nchecagem correto.\nA posição de um carrinho na corrida é determinada pelo número de postos de checagem que ele passou\nna ordem correta. Caso dois carrinhos tenham passado pelo mesmo número de postos de checagem, a ordem\nutilizada é a ordem cronológica, ou seja, está mais à frente o carrinho que passou pelo último posto de checagem\nprimeiro.\nA pista de autorama do Seu Diniz possui um computador central que recebe os sinais lidos pelos sensores,\nmas ainda não possui um programa que permita determinar a posição dos carrinhos ao final da corrida.\nTarefa\nEscreva um programa que, dado uma lista de leituras feitas pelos sensores, determine a classificação dos carrinhos\nna corrida.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contêm três inteiros, K, N e M. K representa o número de postos\nde checagem (1 ≤K ≤100), N o número de carrinhos (1 ≤N ≤100) e M o número de leituras feitas pelos\nsensores (1 ≤M ≤10000). Os carrinhos são identificados por inteiros de 1 a N e os postos de checagem por\ninteiros de 1 a K. As M linhas seguintes contêm cada uma dois inteiros X e Y, separados por espaço. Eles\nindicam que o carrinho número X (1 ≤X ≤N) passou pelo posto de checagem Y (1 ≤Y ≤K). Os eventos\nsão apresentados na ordem cronológica. Sempre é possível determinar a classificação de todos os pilotos com os\ndados fornecidos.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma linha contendo N inteiros, sendo que o i-ésimo inteiro\nrepresenta o carrinho que ocupa a posição i na corrida. Ou seja, o primeiro inteiro é o que ocupa o primeiro\nlugar, o segundo inteiro é o carrinho que ocupa o segundo lugar, e assim por diante.\ncada inteiro I contendo o número do carrinho que ocupa a posição de número I na corrida: o primeiro\ncolocado ocupa a posição de número 1, o segundo colocado a posiç?o de número 2, etc.\n\nOBI2006 – Modalidade Programação Nível 1 – Fase Nacional\n4\nEntrada\n3 3 6\n3 1\n1 1\n2 1\n3 2\n3 3\n2 2\nSaída\n3 2 1\nEntrada\n2 2 5\n2 1\n2 1\n1 1\n2 1\n1 2\nSaída\n1 2\nEntrada\n4 4 22\n3 1\n2 1\n4 2\n4 3\n4 4\n4 1\n1 1\n1 2\n1 3\n3 2\n3 3\n2 2\n2 3\n3 4\n2 4\n3 1\n1 4\n2 1\n4 3\n2 2\n3 2\nSaída\n2 3 1 4",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3 3 6\n3 1\n1 1\n2 1\n3 2\n3 3\n2 2",
+            "output": "3 2 1"
+        },
+        {
+            "input": "2 2 5\n2 1\n2 1\n1 1\n2 1\n1 2",
+            "output": "1 2"
+        },
+        {
+            "input": "4 4 22\n3 1\n2 1\n4 2\n4 3\n4 4\n4 1\n1 1\n1 2\n1 3\n3 2\n3 3\n2 2\n2 3\n3 4\n2 4\n3 1\n1 4\n2 1\n4 3\n2 2\n3 2",
+            "output": "2 3 1 4"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2006",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

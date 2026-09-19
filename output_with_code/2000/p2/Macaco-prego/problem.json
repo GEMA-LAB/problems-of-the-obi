@@ -1,0 +1,25 @@
+{
+    "title": "Macaco-prego",
+    "statement": "Arquivo fonte: macaco.c, macaco.cc, macaco.cpp ou macaco.pas\nO macaco-prego é um animal irrequieto e barulhento, merecedor também dos adjetivos desordeiro\ne despudorado. A sua cabeça, encimada por uma densa pelagem negra ou marrom-escura, seme-\nlhante a um gorro, torna seu aspecto inconfundível. Apesar de ser o macaco mais comum nas\nmatas do país, uma de suas sub-espécies encontra-se seriamente ameaçada de extinção: o macaco-\nprego-do-peito-amarelo, que se distingue das demais pela coloração amarelada do peito e da parte\nanterior dos braços.\nUm grande esforço foi feito pelos primatologistas para aumentar a população dos macacos-prego-\ndo-peito-amarelo. Sabe-se que eles se alimentam de plantas, das quais consomem preferencial-\nmente frutos e brotos. Alimentam-se também de muitos animais, preferencialmente lesmas, lagar-\ntas e rãs, e preferem as florestas mais densas. Para determinar o melhor local do país para criar\numa nova reserva ambiental para os macacos-prego-do-peito-amarelo, o governo fez um levanta-\nmento das regiões no país onde as condições preferidas desses animais ocorrem: regiões de flo-\nresta densa, regiões com frutos, regiões com muitos brotos, etc. Ajude a salvar os macacos-prego-\ndo-peito-amarelo.\n1. Tarefa\nAs regiões propícias para o macaco-prego-do-peito-amarelo foram determinadas como retângulos\ncujos lados são todos verticais ou horizontais. Sua tarefa é encontrar o local ideal para a reserva\nambiental, definida como a interseção de todas as regiões dadas. \nAs regiões foram divididas de tal forma que uma região não tangencia qualquer outra região.\nAssim, a interseção entre quaisquer duas regiões ou é um retângulo ou é vazia.",
+    "input": "Seu programa deve ler vários conjuntos de teste. A primeira linha de um conjunto de teste contém\num inteiro não negativo, N, que indica o número de regiões (o valor N = 0 indica o final da\nentrada). Seguem-se N linhas, cada uma contendo quatro números inteiros X, Y, U e V que descre-\nvem uma região: o par X, Y representa a coordenada do canto superior esquerdo e o par U, V\nrepresenta a coordenada do canto inferior direito de um retângulo.\nConjunto de três regiões com \ninterseção preenchida em cinza\nConjunto de três regiões com inter-\nseção vazia\n\n11\nExemplo de Entrada\n3\n0 6 8 1\n1 5 6 3\n2 4 9 0\n3\n0 4 4 0\n3 1 7 -3\n6 4 10 0\n0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "0 6 8 1\n1 5 6 3\n2 4 9 0\n3\n0 4 4 0\n3 1 7 -3\n6 4 10 0\n0\n3. Saída\nPara cada conjunto de teste da entrada seu programa deve produzir três linhas na saída. A primeira\nlinha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é numerado\na partir de 1. A segunda linha deve conter as coordenadas do retângulo de interseção encontrado\npelo seu programa, no mesmo formato utilizado na entrada. Caso a interseção seja vazia, a\nsegunda linha deve conter a expressão “nenhum”. A terceira linha deve ser deixada em branco. A\ngrafia mostrada no Exemplo de Saída, abaixo, deve ser seguida rigorosamente.",
+            "output": "Teste 1\n2 4 6 3\nTeste 2\nnenhum\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2000",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

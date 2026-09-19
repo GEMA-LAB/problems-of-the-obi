@@ -1,0 +1,30 @@
+{
+    "title": "Robô",
+    "statement": "Nome do arquivo fonte: robo.c, robo.cpp, robo.pas, robo.java, ou robo.py\nUm novo robô de limpeza para um grande salão retangular está sendo desenvolvido. O robô vai percorrer o\ncaminho definido por uma linha marcada no chão, que é coberto com ladrilhos quadrados, brancos e pretos:\nladrilhos pretos indicam o caminho que o robô deve percorrer. Ao movimentar-se, o robô pode andar apenas\nem linha reta, para a frente. Parado, o robô pode girar para as quatro direções (Norte, Sul, Leste e Oeste).\nDados um mapa indicando a cor de cada ladrilho no chão e a posição inicial do robô, você deve escrever um\nprograma que determine a posição final do robô.",
+    "input": "A primeira linha contém dois inteiros L e C indicando as dimensões do salão (número de linhas e número\nde colunas), medidas em ladrilhos. A segunda linha contém dois inteiros A e B indicando respectivamente\na linha e a coluna da posição inicial do robô (as linhas são numeradas de 1 a L, de cima para baixo; as\ncolunas são numeradas de 1 a C, da esquerda para a direita). Cada uma das L linhas seguintes contém C\ninteiros, zeros ou uns. Nessa representação, o valor ‘1’ indica que o ladrilho corresponte é preto. O ladrilho\nda linha A e coluna B sempre é preto. O caminho do robô é definido unicamente: em nenhum momento o\nrobô necessita fazer uma escolha sobre em qual direção ir (em outras palavras, todo ladrilho preto tem no\nmáximo dois vizinhos pretos e o ladrilho inicial tem um vizinho preto).",
+    "output": "Seu programa deve imprimir apenas uma linha, contendo dois números inteiros, respectivamente a linha e a\ncoluna da posição final do robô.",
+    "constraints": "- 1 ≤L, C ≤1000\n- 1 ≤A ≤L, 1 ≤B ≤C\n- A posição final é diferente da posição inicial.",
+    "examples": [
+        {
+            "input": "3 5\n1 1\n1 0 0 0 1\n1 0 0 1 1\n1 1 1 1 0",
+            "output": "1 5"
+        },
+        {
+            "input": "4 7\n3 4\n0 0 1 1 1 1 1\n1 1 1 0 0 0 1\n1 0 0 1 0 1 1\n1 1 0 1 1 1 0",
+            "output": "4 2"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "jogos",
+        "simulação"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,33 @@
+{
+    "title": "Escada perfeita",
+    "statement": "Nome do arquivo fonte: escada.c, escada.cpp, ou escada.pas\nUma construtora, durante a criação de um parque temático, encontrou no terreno um conjunto de vários pilhas\nde cubos de pedra. Ao invés de pagar pela remoção dos cubos de pedras, um dos arquitetos da empresa achou\ninteressante utilizar as pedras para decoração do parque, determinando que as pedras fossem rearranjadas no\nformato de “escada”.\nPara isso, os funcionários deveriam mover alguns cubos para formar os degraus das\nescadas. Só que o arquiteto decidiu que, entre uma pilha e outra de pedras deveria haver exatamente uma pedra\nde diferença, formando o que ele chamou de escada perfeita. O exemplo abaixo mostra um conjunto de cinco\npilhas de pedras encontradas e as cinco pilhas como ficaram após a arrumação em escada perfeita.\nArranjo de pilhas de\ncubos de pedras encontrado\nTarefa\nDada uma seq¨uência de pilhas de cubos de pedras com suas respectivas alturas, você deve determinar o número\nmínimo de pedras que precisam ser movidas para formar uma escada perfeita com exatamente o mesmo número\nde pilhas de pedras encontrado inicialmente (ou seja, não devem ser criadas ou eliminadas pilhas de pedras). O\ndegrau mais baixo da escada deve sempre estar do lado esquerdo.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha contém um inteiro N que indica o número de pilhas de pedras. A segunda linha\ncontém N números inteiros que indicam a quantidade de cubos de pedras em cada uma das pilhas, da esquerda\npara a direita.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha, contendo um inteiro: o número mínimo de\ncubos de pedras que devem ser movidos para transformar o conjunto de pilhas em uma escada perfeita, conforme\ncalculado pelo seu programa. Caso não seja possível efetuar a transformação em escada perfeita, imprima como\nresultado o valor -1.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "5\n5 4 5 4 2",
+            "output": "5"
+        },
+        {
+            "input": "6\n9 8 7 6 5 4",
+            "output": "9"
+        },
+        {
+            "input": "2\n1 5",
+            "output": "-1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2006",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

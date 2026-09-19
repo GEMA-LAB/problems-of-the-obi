@@ -1,0 +1,29 @@
+{
+    "title": "Fila",
+    "statement": "Nome do arquivo fonte: fila.c, fila.cpp, fila.pas, fila.java, ou fila.py\nCom a proximidade da Copa do Mundo, o fluxo de pessoas nas filas para compra de ingressos\naumentou consideravelmente. Como as filas estão cada vez maiores, pessoas menos pacientes tendem\na desistir da compra de ingressos e acabam deixando as filas, liberando assim vaga para outras\npessoas. Quando uma pessoa deixa a fila, todas as pessoas que estavam atrás dela dão um passo\na frente, sendo assim nunca existe um espaço vago entre duas pessoas. A fila inicialmente contém\nN pessoas, cada uma com um identificador diferente. Joãozinho sabe o estado inicial dela e os\nidentificadores em ordem das pessoas que deixaram a fila.\nSabendo que após o estado inicial\nnenhuma pessoa entrou mais na fila, Joãozinho deseja saber o estado final da fila.",
+    "input": "A primeira linha contém um inteiro N representando a quantidade de pessoas inicialmente na fila.\nA segunda linha contém N inteiros representando os identificadores das pessoas na fila. O primeiro\nidentificador corresponde ao identificador da primeira pessoa na fila. É garantido que duas pessoas\ndiferentes não possuem o mesmo identificador. A terceira linha contém um inteiro M representando\na quantidade de pessoas que deixaram a fila. A quarta linha contém M inteiros representando os\nidentificadores das pessoas que deixaram a fila, na ordem em que elas saíram. É garantido que um\nmesmo identificador não aparece duas vezes nessa lista.",
+    "output": "Seu programa deve imprimir uma linha contedo N −M inteiros com os identificadores das pessoas\nque permaneceram na fila, em ordem de chegada.",
+    "constraints": "- 1 ≤N ≤50000\n- 1 ≤M ≤50000 e M < N\n- Cada identificador está entre 1 e 100000",
+    "examples": [
+        {
+            "input": "8\n5 100 9 81 70 33 2 1000\n3\n9 33 5",
+            "output": "100 81 70 2 1000"
+        },
+        {
+            "input": "4\n10 9 6 3\n1\n3",
+            "output": "10 9 6"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2014",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

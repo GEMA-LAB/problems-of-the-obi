@@ -1,0 +1,26 @@
+{
+    "title": "Ortografia",
+    "statement": "Nome do arquivo fonte: ortografia.c, ortografia.cpp ou ortografia.pas\nUm serviço de busca na Internet está preocupado com a crescente taxa de erros de ortografia de seus usuários,\ntornando mais difíceis as buscas por palavras chaves, que constantemente contêm erros de algumas letras,\ndevidos a má digitação ou má ortografia.\nO serviço funciona com base num dicionário de palavras. O usuário deve inserir uma palavra num campo de\num formulário; o serviço então procura esta palavra no dicionário e retorna conteúdo que tenha relação com a\npalavra.\nPara contornar o problema de ortografia, você foi contratado para fazer um programa que tenta adivinhar qual\npalavra o usuário pretendia procurar, independente de haver erros de ortografia nela.\nPara este problema vamos definir a distância entre duas palavras A e B como sendo o número de operações,\ndescritas abaixo, necessárias para transformar A em B:\n1. Retirar uma letra de A.\n2. Adicionar uma letra a A, em qualquer posição.\n3. Trocar qualquer letra de A por outra letra, na mesma posição.\nO serviço de busca definiu que a palavra P fornecida pelo usuário pode se referir a uma palavra D do dicionário\nse está a uma distância de no máximo 2 de D.\nExemplos:\n• A palavra ‘tu’ pode se referir à palavra do dicionário ‘tubo’, realizando duas vezes a operação 2.\n• A palavra ‘crto’ pode se referir à palavra do dicionário ‘corte’, realizando uma vez a operação 2 e uma vez\na operação 3.\n• A palavra ‘crto’ pode se referir à palavra do dicionário ‘curto’, realizando uma vez a operação 2.\n• A palavra ‘hortgrafea’ não pode se referir à palavra do dicionário ‘ortografia’.\nVocê deve escrever um programa que, dado um dicionário de palavras, descubra para cada palavra fornecida\npelo usuário a quais palavras do dicionário ela pode se referir, nas condições descritas acima.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha contém 2 inteiros N, M, representando respectivamente o número de palavras\ncontidas no dicionário (1 ≤N ≤1000) e o número de palavras a serem analisadas (1 ≤M ≤100). Cada\numa das N linhas seguintes conterá uma palavra pertencente ao dicionário. Cada uma das M linhas seguintes\nconterá uma palavra a ser analisada, fornecida pelo usuário. Cada palavra pode ter de 1 a 20 letras, contendo\napenas letras de ‘a’ a ‘z’, minúsculas.",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3 3\npato\npateta\ncaneca\npat\nccanecos\npata",
+            "output": "pato\npato pateta\nInformações sobre a pontuação\n• Em um conjunto de casos de teste que totaliza 30 pontos, N ≤10 e M ≤10.\n• Em um conjunto de casos de teste que totaliza 55 pontos, N ≤50 e M ≤500."
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2008",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "strings",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

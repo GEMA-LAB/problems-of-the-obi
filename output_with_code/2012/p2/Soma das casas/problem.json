@@ -1,0 +1,30 @@
+{
+    "title": "Soma das casas",
+    "statement": "Nome do arquivo fonte: soma.c, soma.cpp, soma.pas, soma.java, ou soma.py\nJoãozinho mora em uma rua que tem N casas. Marquinhos é o melhor amigo dele, mas sempre gosta de pregar\npeças em Joãozinho. Desta vez, ele pegou os dois brinquedos prediletos de Joãozinho e os escondeu em duas\ncasas distintas da rua. Em compensação, Marquinhos deu uma dica importante para Joãozinho:\nA soma dos números das casas em que escondi teus brinquedos é igual a K. Além disso, escolhi as casas de tal\nforma que não existe outro par de casas cuja soma tenha esse mesmo valor.\nSabendo disto, encontre qual é o par de casas em que se encontram os brinquedos de Joãozinho. Para auxiliar\nseu amigo, Marquinhos entregou a Joãozinho uma lista com o número das casas já em ordem crescente (isto é,\ndo menor para o maior número).",
+    "input": "A primeira primeira linha da entrada contém um número inteiro N, que representa o número de casas que\nexistem na rua. Cada uma das N linhas seguintes contém um número inteiro, representando o número de uma\ncasa. Note que esses N números estão ordenados, do menor para o maior. A última linha da entrada contém\num inteiro K, que é a soma dos números das duas casas onde os brinquedos estão escondidos.",
+    "output": "Se programa deve imprimir uma única linha, contendo dois inteiros, A e B, A < B, que representam os números\ndas casas em que estão escondidos os brinquedos. Os dois números devem ser separados por um espaço em\nbranco.\nInformações sobre a pontuação\n• Em um conjunto de casos que totaliza 30 pontos, N ≤103.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "4\n1\n2\n3\n5\n8",
+            "output": "3 5"
+        },
+        {
+            "input": "4\n1\n2\n3\n5\n5",
+            "output": "2 3"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2012",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "matemática",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,25 @@
+{
+    "title": "Problema D",
+    "statement": "arquivo de entrada: SEQ.IN, arquivo de saída: SEQ.OUT) \nUma seqüência de 0’s e 1’s é chamada de seqüência-H se é composta por um único 0 ou se é com-\nposta por um 1 seguido de duas seqüências-H. Por exemplo, 0, 100 e 10100 são seqüências-H,\nmas 10, 111 e 10010 não são.\n1. Tarefa\nSua tarefa é determinar se uma dada seqüência é ou não uma seqüência-H.",
+    "input": "de Dados\nO arquivo SEQ.IN contém vários conjuntos de teste. Cada conjunto de teste é composto por uma\núnica linha, que contém a seqüência a ser testada, composta de dígitos 0’s e 1’s (sem espaços em\nbranco intermediários). O final da seqüência é indicado pelo caractere ‘#’. O final do arquivo de\ntestes é indicado quando o primeiro caractere da linha de teste é ‘#’ (esta última seqüência de teste\nnão é válida e não deve ser processada).\nExemplo de Entrada\n0#\n10100#\n10010#\n#",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "0#\n10100#\n10010#\n#\n3. Saída de Dados\nSeu programa deve produzir um arquivo de saída chamado SEQ.OUT. Para cada conjunto de teste\ndo arquivo de entrada seu programa deve produzir três linhas no arquivo de saída. A primeira\nlinha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é numerado\na partir de 1. Na segunda linha deve aparecer a palavra “sim” se a seqüência é uma seqüência-H,\nou a palavra “nao” se a seqüência não é uma seqüência-H. A terceira linha deve ser deixada em\nbranco. A grafia mostrada no Exemplo de Saída, abaixo, deve ser seguida rigorosamente (note que\nnão são usados acentos).\n\n9",
+            "output": "Teste 1\nsim\nTeste 2\nsim\nTeste 3\nnao\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "1999",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

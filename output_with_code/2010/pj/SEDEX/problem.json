@@ -1,0 +1,33 @@
+{
+    "title": "SEDEX",
+    "statement": "Nome do arquivo fonte: sedex.c, sedex.cpp, ou sedex.pas\nA Copa do Mundo de 2010 será realizada na África do Sul. Bolas de futebol são muito fáceis de transportar, já\nque elas saem das fábricas vazias e só são enchidas somente pelas lojas ou pelos consumidores finais.\nInfelizmente o mesmo não pode ser dito das bolas de boliche. Como elas são completamente sólidas, elas só\npodem ser transportadas embaladas uma a uma, em caixas separadas.\nA SBC — Só Boliche Cascavel — é uma fábrica de bolas de boliche que trabalha somente através de encomendas\ne envia todas as bolas por SEDEX. Como as bolas têm tamanhos diferentes, a SBC tem vários tamanhos de\ncaixas diferentes para transportá-las.\nTarefa\nEscreva um programa que, dado o diâmetro de uma bola e as 3 dimensões de uma caixa (altura, largura e\nprofundidade), diz se a bola de boliche cabe dentro da caixa ou não.",
+    "input": "A primeira linha da entrada contém um inteiro N (1 ≤N ≤10.000) que indica o diâmetro da bola de boliche. A\nsegunda linha da entrada contém 3 números inteiros separados por um espaço cada: a altura A (1 ≤A ≤10.000),\nseguida da largura L (1 ≤L ≤10.000) e da profundidade P (1 ≤P ≤10.000).",
+    "output": "Seu programa deve imprimir uma única linha, contendo a letra ‘S’ caso a bola de boliche caiba dentro da caixa\nou ‘N’ caso contrário.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3\n2 3 5",
+            "output": "N"
+        },
+        {
+            "input": "5\n5 5 5",
+            "output": "S"
+        },
+        {
+            "input": "9\n15 9 10",
+            "output": "S"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2010",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,29 @@
+{
+    "title": "Lâmpadas",
+    "statement": "Nome do arquivo: lampadas.c, lampadas.cpp, lampadas.pas, lampadas.java, lampadas.js,\nlampadas.py2 ou lampadas.py3\nVocê está de volta em seu hotel na Tailândia depois de um dia de mergulhos. O seu quarto tem\nduas lâmpadas. Vamos chamá-las de A e B. No hotel há dois interruptores, que chamaremos de I1\ne I2. Ao apertar I1, a lâmpada A troca de estado, ou seja, acende se estiver apagada e apaga se\nestiver acesa. Se apertar I2, ambas as lâmpadas A e B trocam de estado.\nAs lâmpadas inicialmente estão ambas apagadas. Seu amigo resolveu bolar um desafio para você.\nEle irá apertar os interruptores em uma certa sequência, e gostaria que você respondesse o estado\nfinal das lâmpadas A e B.",
+    "input": "A primeira linha contém um número N que representa quantas vezes seu amigo irá apertar algum\ninterruptor. Na linha seguinte seguirão N números, que pode ser 1, se o interruptor I1 foi apertado,\nou 2, se o interruptor I2 foi apertado.",
+    "output": "Seu programa deve imprimir dois valores, em linhas separadas.\nNa primeira linha, imprima 1 se a lâmpada A estiver acesa no final das operações e 0 caso contrário.\nNa segunda linha, imprima 1 se a lâmpada B estiver acesa no final das operações e 0 caso contrário.",
+    "constraints": "- 1 ≤N ≤105",
+    "examples": [
+        {
+            "input": "3\n1 2 2",
+            "output": "1\n0"
+        },
+        {
+            "input": "4\n2 1 2 2",
+            "output": "0\n1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2016",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

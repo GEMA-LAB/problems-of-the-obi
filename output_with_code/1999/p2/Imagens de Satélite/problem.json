@@ -1,0 +1,25 @@
+{
+    "title": "Imagens de Satélite",
+    "statement": "4\n0Imagens de Satélite\nA imagem de uma zona rural, gerada por satélite, deve ser analisada para determinar quantas\nconstruções existem na área da imagem. A imagem é capturada com uma câmara sensível a radia-\nção infra-vermelha, que diferencia áreas construídas e áreas não construídas. Ao ser digitalizada, a\nimagem é dividida em um quadriculado de células com M linhas e N colunas. Na imagem digita-\nlizada, células que não contêm qualquer construção recebem o código numérico 0. Células que\ncontêm algum material de construção são representadas por um código numérico de 1 a 9, que\nindicam a densid",
+    "input": "de Dados\nO arquivo IMAGEM.IN contém vários conjuntos de teste. A primeira linha de um conjunto de tes-\ntes contém dois inteiros positivos, M e N, que indicam respectivamente o número de linhas e o\nnúmero de colunas da imagem a ser analisada. As M linhas seguintes contêm N dígitos cada (dígi-\ntos entre 0, 1, 2..., 9), correspondendo à imagem enviada pelo satélite. O final do arquivo de testes\né indicado quando M = N = 0 (este último conjunto de testes não é válido e não deve ser proces-\nsado).\nO arquivo IMAGEM.IN contém ao menos um conjunto de teste que deve ser processado.\nImagem com 4 constru-\nções.\n\n5\nExemplo de Entrada\n2 2\n0 0\n0 0\n9 15\n000000000000000\n007677888000080\n008000000900000\n006003300080000\n005003300800000\n004000009000600\n034556780005000\n300000000004400\n020000000000000\n0 0\n \n(note que o segundo teste deste conjunto de entrada corresponde ao exemplo da Figura acima)",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "2 2\n0 0\n0 0\n9 15\n000000000000000\n007677888000080\n008000000900000\n006003300080000\n005003300800000\n004000009000600\n034556780005000\n300000000004400\n020000000000000\n0 0\n \n(note que o segundo teste deste conjunto de entrada corresponde ao exemplo da Figura acima)\n3. Saída de Dados\nSeu programa deve produzir um arquivo de saída chamado IMAGEM.OUT. Para cada conjunto\nde teste do arquivo de entrada seu programa deve produzir três linhas no arquivo de saída. A pri-\nmeira linha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é\nnumerado a partir de 1. Na segunda linha deve aparecer o número de construções presentes na\nimagem de teste, precedido de “Numero de construcoes:”. A terceira linha deve ser deixada em\nbranco. A grafia mostrada no Exemplo de Saída, abaixo, deve ser seguida rigorosamente (note que\nnão são usados acentos).",
+            "output": "Teste 1\nNumero de construcoes: 0\nTeste 2\nNumero de construcoes: 4\n \n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "1999",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

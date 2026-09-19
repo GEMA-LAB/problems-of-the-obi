@@ -1,0 +1,25 @@
+{
+    "title": "Bafo",
+    "statement": "Arquivo fonte: bafo.c, bafo.cc, bafo.cpp ou bafo.pas\nÁlbuns de figurinhas – sejam de times de futebol, princesas ou super-heróis – têm marcado gerações de\ncrianças e adolescentes. Conseguir completar um álbum é uma tarefa muitas vezes árdua, envolvendo\nnegociações com colegas para a troca de figurinhas. Mas a existência das figurinhas propicia uma\noutra brincadeira, que foi muito popular entre crianças no século passado: o jogo de bater figurinhas\n(o famoso “Bafo”). O jogo é muito simples, mas divertido (e muito competitivo). No início de uma\npartida, cada criança coloca em uma pilha um certo número de figurinhas. Uma partida é composta\nde rodadas; a cada rodada as crianças batem com a mão sobre a pilha de figurinhas, tentando virá-las\ncom o vácuo formado pelo movimento da mão. As crianças jogam em turnos, até que a pilha de\nfigurinhas esteja vazia. Ganha a partida a criança que conseguir virar mais figurinhas.\nAldo e Beto estão jogando bafo com todas as suas figurinhas e pediram sua ajuda para calcular\nquem é o vencedor.\nTarefa\nVocê deve escrever um programa que, dada a quantidade de figurinhas que Aldo e Beto viraram em\ncada rodada, determine qual dos dois é o vencedor.",
+    "input": "A entrada é composta de vários casos de teste, cada um correspondendo a uma partida entre Aldo\ne Beto.\nA primeira linha de um caso de teste contém um número inteiro R que indica quantas\nrodadas ocorreram na partida. Cada uma das R linhas seguintes contém dois inteiros, A e B, que\ncorrespondem, respectivamente, ao número de figurinhas que Aldo e Beto conseguiram virar naquela\nrodada. Em todos os casos de teste há um único vencedor (ou seja, não ocorre empate). O final da\nentrada é indicado por R = 0.\nA entrada deve ser lida do dispositivo de entrada padrão (normalmente o teclado).",
+    "output": "Para cada caso de teste da entrada, seu programa deve produzir três linhas na saída. A primeira linha\ndeve conter um identificador do caso de teste, no formato “Teste n”, onde n é numerado seq¨uenci-\nalmente a partir de 1. A segunda linha deve conter o nome do vencedor (Aldo ou Beto). A terceira\nlinha deve ser deixada em branco. A grafia mostrada no Exemplo de Saída, abaixo, deve ser seguida\nrigorosamente.\nA saída deve ser escrita no dispositivo de saída padrão (normalmente a tela).",
+    "constraints": "- 1 ≤R ≤1000 (R = 0 apenas para indicar o final da entrada)\n- 0 ≤A ≤100\n- 0 ≤B ≤100\n- 2",
+    "examples": [
+        {
+            "input": "1 5\n2 3\n3\n0 0\n4 7\n10 0\n0",
+            "output": "Teste 1\nBeto\nTeste 2\nAldo"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2005",
+    "level": "p2",
+    "period": "Fase Única",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

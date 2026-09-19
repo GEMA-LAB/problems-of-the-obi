@@ -1,0 +1,26 @@
+{
+    "title": "Número de Erdos",
+    "statement": "arquivo fonte: erdos.pas, erdos.c, erdos.cc ou erdos.cpp\nO matemático húngaro Paul Erdos (1913-1996), um dos mais brilhantes do século XX, é conside-\nrado o mais prolífico matemático da história. Erdos publicou mais de 1500 artigos, em colabora-\nção com cerca de outros 450 matemáticos. Em homenagem a este gênio húngaro, os matemáticos\ncriaram um número, denominado \"número de Erdos\". Toda pessoa que escreveu um artigo com\nErdos tem o número 1. Todos que não possuem número 1, mas escreveram algum artigo junta-\nmente com alguém que possui número 1, possuem número 2. E assim por diante. Quando\nnenhuma ligação pode ser estabelecida entre Erdos e uma pessoa, diz-se que esta possui número\nde Erdos infinito. Por exemplo, o número de Erdos de Albert Einstein é 2. E, talvez surpreenden-\ntemente, o número de Erdos de Bill Gates é 4.\n1. Tarefa\nSua tarefa é escrever um programa que, a partir de uma lista de autores de artigos, determine o\nnúmero de Erdos dos autores.",
+    "input": "A entrada é constituída por vários conjuntos de teste. A primeira linha de um conjunto de teste\ncontém um número inteiro A (1 ≤ A ≤ 100), que indica o número de artigos. Cada uma das A\nlinhas seguintes contém a lista de autores de um artigo. Cada autor é identificado pela inicial de\nseu nome (em maiúscula), seguida de um ponto e de um espaço em branco (indicando que o nome\nestá abreviado), seguida de seu último sobrenome (‘P. Erdos’, por exemplo). O sobrenome de\num autor possui, no máximo, 15 letras, e apenas a letra inicial aparece em maiúscula. Os autores\nsão separados por vírgulas, e a lista de autores de um artigo termina com um ponto (veja os exem-\nplos abaixo). Um único espaço em branco separa a abreviatura do nome do sobrenome, bem como\no nome de um autor do anterior. Espaços em branco não são usados em outros locais. Um artigo\npossui, no máximo, 10 autores, e o total de autores não excede 100. O final da entrada é indicado\npor A = 0.\nExemplo de Entrada\n5\nP. Erdos, A. Selberg. \nP. Erdos, J. Silva, M. Souza. \nM. Souza, A. Selberg, A. Oliveira.\nJ. Ninguem, M. Ninguem. \nP. Duarte, A. Oliveira.\n2\nZ. Silva, P. Erdos.\nZ. Souza.\n0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "P. Erdos, A. Selberg. \nP. Erdos, J. Silva, M. Souza. \nM. Souza, A. Selberg, A. Oliveira.\nJ. Ninguem, M. Ninguem. \nP. Duarte, A. Oliveira.\n2\nZ. Silva, P. Erdos.\nZ. Souza.\n0\n3. Saída\nPara cada conjunto de teste da entrada seu programa deve produzir um conjunto de linhas na\nsaída. A primeira linha deve conter um identificador do conjunto de teste, no formato “Teste n”,\nonde n é numerado seqüencialmente a partir de 1. A seguir devem aparecer uma linha para cada\n\nOBI2003 - página 13\nautor do conjunto de testes (exceto o próprio P. Erdos). Cada linha deve conter o nome do autor\nseguido pelo caractere ‘:’, um espaço em branco e o seu número de Erdos. Caso o número de\nErdos de um determinado autor seja infinito, escreva ‘infinito’. A saída deve ser ordenada alfa-\nbeticamente pelo sobrenome do autor, e, em caso de mesmo sobrenome, o desempate deve ser\nfeito pela inicial do primeiro nome. Imprima uma linha em branco ao final de cada conjunto de\nteste. A grafia mostrada no Exemplo de Saída, abaixo, deve ser seguida rigorosamente.",
+            "output": "Teste 1\nP. Duarte: 3 \nJ. Ninguem: infinito \nM. Ninguem: infinito \nA. Oliveira: 2 \nA. Selberg: 1 \nJ. Silva: 1 \nM. Souza: 1\nTeste 2\nZ. Silva: 1\nZ. Souza: infinito\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2003",
+    "level": "senior",
+    "period": "Fase Única",
+    "topics": [
+        "matemática",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

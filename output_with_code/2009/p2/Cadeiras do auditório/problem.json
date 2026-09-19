@@ -1,0 +1,29 @@
+{
+    "title": "Cadeiras do auditório",
+    "statement": "Nome do arquivo fonte: cadeiras.c, cadeiras.cpp, ou cadeiras.pas\nAs cadeiras do auditório da escola são organizadas em um quadriculado com L linhas e C colunas. As linhas\nsão numeradas de 1 a L, as colunas são numeradas de 1 a C, e as cadeiras são numeradas de 1 a L × C, de tal\nmodo que uma cadeira na linha i coluna j tem o número (i −1) × C + j.\nDurante a aula de teatro, a professora fez com que os alunos executassem uma sequência de mudanças na\nconfiguração da sala. Cada uma dessas mudanças intercambiou ou duas colunas ou duas linhas. A figura abaixo\nilustra uma configuração original com três linhas e quatro colunas, a posição das cadeiras após uma mudança\n(intercâmbio das colunas 1 e 4), e a posição das cadeiras após mais uma mudança (intercâmbio das linhas 2 e\n3).\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n4\n2\n3\n1\n8\n6\n7\n5\n12\n10\n11\n9\n4\n2\n3\n1\n12\n10\n11\n9\n8\n6\n7\n5\nConfiguração inicial\ndas cadeiras\nApós intercâmbio das \ncolunas 1 e 4\nApós intercâmbio das\nlinhas 2 e 3\nAo final da aula, como era de se esperar, a numeração das cadeiras ficou bem bagunçada.\nO problema é\nque a próxima aula é de Matemática, e o professor é muito exigente, e quer começar a aula com as cadeiras\nperfeitamente posicionadas da maneira original.\nTarefa\nSua tarefa é escrever um programa que, dada a posição de cada cadeira ao final da aula de teatro, determine\nqual é a menor sequência de mudanças que devem ser executadas para retornar as cadeiras aos seus devidos\nlugares, considerando que cada mudança faça o intercâmbio ou de duas linhas ou de duas colunas de cadeiras.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado).\nA primeira linha da entrada contém dois números inteiros L e C, representando respectivamente o número de\nlinhas e o número de colunas de cadeiras do auditório (1 ≤L ≤200 e 1 ≤C ≤200). Cada uma das L linhas\nseguintes contém C números inteiros entre 1 e L × C, separados por um espaço em branco, indicando a posição\ndas cadeiras ao final da aula de teatro. O j-ésimo número dado na linha i é o número da cadeira que se encontra\nna linha i e coluna j.",
+    "output": "Seu programa deve imprimir, na saída padrão, na primeira linha um inteiro K representando o número de\nmudanças necessárias para retornar as cadeiras para sua posição original. Cada uma das K linhas seguintes\ncontém a descrição de uma mudança, na forma de um caractere M (que pode ser ‘L’ ou ‘C’), seguido de um\nespaço em branco, seguido de um inteiro X, seguido de um espaço em branco, seguido de um inteiro Y . Se o\ncaractere descrevendo a mudança é ‘L’, X e Y representam linhas que devem ser intercambiadas; se o caractere\ndescrevendo a mudança é ‘C’, X e Y representam colunas que devem ser intercambiadas.\n\n6\nPara todos os casos testes existe solução com K ≤1000. Se mais de uma solução existe com o mesmo número\nde mudanças, imprima qualquer uma delas.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "2 2\n4 3\n2 1",
+            "output": "2\nL 1 2\nC 1 2"
+        },
+        {
+            "input": "3 4\n1 2 3 4\n5 6 7 8\n9 10 11 12",
+            "output": "0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2009",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,25 @@
+{
+    "title": "Cubra os Furos",
+    "statement": "Arquivo fonte: furos.c, furos.cc, furos.cpp ou furos.pas\nUma placa de aço retangular contém N furos circulares de 5 mm de diâmetro, localizados em pon-\ntos distintos, não sobrepostos – ou seja, o centro de cada furo está a uma distância maior ou igual\na 5 mm do centro de todos os outros furos.\nUma peça de forma circular, tendo em seu centro um eixo de 5 mm de diâmetro, deve ser colo-\ncada sobre a placa, de modo que o eixo encaixe-se em um de seus furos.\n1. Tarefa\nVocê deve escrever um programa para determinar o diâmetro mínimo que a peça deve ter de tal\nforma que, com seu eixo encaixado em um dos furos da placa, a parte circular cubra completa-\nmente todos os outros furos da placa.",
+    "input": "A entrada é composta de vários conjuntos de teste. A primeira linha de um conjunto de teste con-\ntém um inteiro N, que indica o número de furos na placa de aço (1 ≤ N ≤ 1000). As N linhas\nseguintes contêm cada uma dois inteiros X e Y, separados por um espaço em branco, que descre-\nvem a posição do centro de um furo (-10000 ≤ X ≤ 10000 e -10000 ≤ Y ≤ 10000). A unidade de\nmedida das coordenadas dos furos é 1 mm. O final da entrada é indicado por N = 0.\nExemplo de Entrada\n3\n20 25\n10 5\n10 10\n3\nplaca\npeça\nvista frontal\nda placa\nvista frontal\nda peça\nvista frontal\nda peça encaixada\nna placa\n\n5\n0 5\n10 0\n0 10\n0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "20 25\n10 5\n10 10\n3\nplaca\npeça\nvista frontal\nda placa\nvista frontal\nda peça\nvista frontal\nda peça encaixada\nna placa\n\n5\n0 5\n10 0\n0 10\n0\n3. Saída\nPara cada conjunto de teste da entrada seu programa deve produzir três linhas na saída. A primeira\nlinha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é numerado\nseqüencialmente a partir de 1. A segunda linha deve conter o diâmetro mínimo que a peça deve\nter, como um número inteiro. A terceira linha em deve ser deixada em branco. A grafia mostrada\nno Exemplo de Saída, abaixo, deve ser seguida rigorosamente.",
+            "output": "Teste 1\n41\nTeste 2\n27\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2004",
+    "level": "senior",
+    "period": "Fase Única",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

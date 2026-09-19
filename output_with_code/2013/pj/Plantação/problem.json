@@ -1,0 +1,29 @@
+{
+    "title": "Plantação",
+    "statement": "Nome do arquivo fonte: plantacao.c, plantacao.cpp, plantacao.pas, plantacao.java, ou\nplantacao.py\nA N-logônia é uma região com um clima muito intenso e variável, onde em questão de poucos dias é possível\nobservar uma forte seca, seguida de uma intensa estação de chuvas. O Seu João tem uma plantação de\nobilina, uma fruta típica e muito apreciada na região, o que a torna muito valiosa. A obilina, entretanto, é\nmuito suscetível a mudanças climáticas, de forma que é difícil prever quanto desta fruta será colhido durante\na safra.\nObservou-se que as árvores de obilina seguem as seguintes regras:\n• As árvores produzem frutas todos os dias, exceto quando elas morrem;\n• As árvores mortas não produzem frutas, e infelizmente, mesmo que volte a chover, continuam mortas;\n• Se choveu na noite anterior, a árvore produz uma fruta a mais que no dia anterior;\n• Se estiou na noite anterior, a árvore produz uma fruta a menos que no dia anterior; e\n• Uma árvore morre se não produzir nenhuma fruta.\nO Seu João deseja vender toda a obilina produzida para uma grande rede de mercados local, mas para isso,\nprecisa saber exatamente quantas frutas de obilina ele colherá durante a safra.\nPara ajudar o Seu João nesta tarefa, você deve escrever um programa que, dada a previsão do tempo para\ncada noite do período da safra, e quantas frutas cada árvore do Seu João produziu no dia anterior ao início\nda safra, determine quantas obilinas serão colhidas durante a safra.\nPor exemplo, considerando apenas um pé de obilina, se a safra dura dois dias, choveu durante duas noites,\ne o pé de obilina produziu 3 frutos antes de começar a safra, a produção total da safra será de 9 frutas: 4\nno primeiro dia da safra, e 5 no segundo dia.",
+    "input": "A primeira linha da entrada contém dois inteiros, N e K, respectivamente o número de dias que dura a safra,\ne o número de árvores que o Seu João possui.\nA segunda linha contém K inteiros ai indicando quantas frutas foram produzidas no dia anterior ao início\nda safra por cada uma das K árvores.\nA linha seguinte contém N letras separadas por um espaço em branco. Cada uma das letras indica se choveu\nou se estiou durante a noite respectiva: a primeira letra se refere à primeira noite, a segunda letra se refere\nà segunda noite, e assim por diante. Se a letra for um ‘C’, indica que choveu aquela noite chuvosa, e se for\num ‘E’, indica que estiou (ou seja, não choveu).",
+    "output": "Seu programa deve imprimir uma única linha, contendo um único inteiro, indicando o número de frutas que\nserão produzidas pela plantação do Seu João.",
+    "constraints": "- 1 ≤N ≤100 000\n- 1 ≤K ≤100 000\n- 1 ≤ai ≤100 para todo i\n- 6",
+    "examples": [
+        {
+            "input": "3 2\n1 2\nC E C",
+            "output": "13"
+        },
+        {
+            "input": "5 3\n2 3 1\nE E E C C",
+            "output": "4"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

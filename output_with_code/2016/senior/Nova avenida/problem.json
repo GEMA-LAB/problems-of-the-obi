@@ -1,0 +1,29 @@
+{
+    "title": "Nova avenida",
+    "statement": "Nome do arquivo: avenida.c, avenida.cpp, avenida.pas, avenida.java, avenida.js,\navenida.py2 ou avenida.py3\nO bairro Boa Vista é formado por um conjunto de quadras de mesmo tamanho, dispostas em um\nquadriculado de N por M quadras, com ruas no sentido Norte-Sul e no sentido Leste-Oeste. Assim,\no comprimento de cada rua no sentido Norte-Sul é igual a N quadras e o comprimento de cada\nrua no sentido Leste-Oeste é igual a M quadras. A atual administração da prefeitura decidiu que\né necessário escolher uma rua do bairro, no sentido Norte-Sul, para ser alargada. Para isso, será\nnecessário desapropriar todas as quadras de um dos lados da rua escolhida.\nAs quadras têm construções diferentes, de forma que cada quadra tem um valor diferente no mer-\ncado. Para desapropriar as quadras, a prefeitura tem que pagar o valor do mercado aos proprietários.\nA figura abaixo mostra um exemplo dos valores das quadras, em milhões de reais, onde N = 3 e\nM = 4.\nN\nS\nO\nL\n3\n12\n4\n5\n4\n7\n2\n5\n1\n10\n5\n5\nSua tarefa é escrever um programa que, dados os valores das quadras, em milhões de reais, determine\nqual o menor valor que a prefeitura terá que desembolsar.",
+    "input": "A primeira linha da entrada contém dois inteiro N e M que indicam respectivamente o número\nde quadras no sentido Norte-Sul e no sentido Leste-Oeste.\nCada uma das N linhas seguintes\ncorresponde a uma das N fileiras de quadras no sentido Leste-Oeste e contém M inteiros, que são\nos valores das quadras daquela fileira de quadras, visualizada no sentido Leste-Oeste.",
+    "output": "Seu programa deve imprimir uma única linha, contendo um único inteiro, que é o menor valor, em\nmilhões de reais, que a prefeitura vai precisar desembolsar.",
+    "constraints": "- A entrada obedece às seguintes restrições:\n- 2 ≤N ≤1000\n- 2 ≤M ≤1000\n- cada quadra tem valor entre 1 e 100 milhões de reais\n- 8",
+    "examples": [
+        {
+            "input": "3 4\n5 3 12 4\n5 4 7 2\n5 1 10 5",
+            "output": "8"
+        },
+        {
+            "input": "4 5\n20 30 10 10 50\n20 30 10 10 50\n20 30 10 10 50\n20 30 10 10 50",
+            "output": "40"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2016",
+    "level": "senior",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

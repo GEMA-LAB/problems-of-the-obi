@@ -1,0 +1,45 @@
+{
+    "title": "Competição de chocolate",
+    "statement": "Nome do arquivo fonte: chocolate.c, chocolate.cpp, ou chocolate.pas\nCarlos e Paula acabaram de ganhar um saco com bolinhas de chocolate. Como sabem que vão comer tudo\nmuito rápido inventaram uma brincadeira:\n• Eles vão comer de forma alternada, um depois o outro, sendo que sempre a Paula começa.\n• A cada vez, só se pode comer de 1 a M bolinhas, sendo o M decidido pela mãe de Paula, de forma que\nnão engasguem com o chocolate.\n• Se um comeu K bolinhas em sua vez, o próximo não pode comer o mesmo tanto, tendo que comer um\nnúmero de bolinhas distinto.\n• Quem não puder mais jogar de maneira válida perde.\nUm exemplo de partida para M = 5 e 20 bolinhas, onde Carlos ganhou:\nQuem joga\nQuantas comeu\nNúmero de bolinhas restantes\n-\n-\n20\nPaula\n5\n15\nCarlos\n4\n11\nPaula\n3\n8\nCarlos\n4\n4\nPaula\n2\n2\nCarlos\n1\n1\nObserve que no final Carlos não poderia comer 2 bolinhas para ganhar, pois seria o mesmo que Paula comeu\nna vez anterior. Mas Paula também não pôde comer a última bolinha, pois Carlos havia comido apenas uma\nna rodada anterior, assim Paula ficou sem opção de jogada e perdeu.\nAmbos são muito espertos e jogam de maneira ótima, de forma que se existe para um deles uma sequência de\njogadas que garante a vitória independente da jogada do outro, essa pessoa jogará dessa forma.\nTarefa\nSua tarefa é determinar quem vai ganhar a brincadeira, se ambos jogam de forma ótima.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado).\nA entrada consiste de uma linha contendo dois inteiros N (2 ≤N ≤106) e M (2 ≤M ≤103), sendo N o\nnúmero de bolinhas de chocolate e M o número de bolinhas permitidas por vez.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma linha, contendo o nome do vencedor, como exemplificado\nabaixo.\n\n4",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "5 3",
+            "output": "Paula"
+        },
+        {
+            "input": "20 5",
+            "output": "Carlos"
+        },
+        {
+            "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado).\nA primeira linha da entrada contém dois números inteiros N e M, separados por um espaço em branco, indi-\ncando respectivamente o número de países (1 ≤N ≤100) e número de modalidades esportivas envolvidas na\ncompetição (1 ≤M ≤100). Os países são identificados por números inteiros de 1 a N.\nCada uma das M linhas seguintes contém três números inteiros O, P e B, separados por um espaço em\nbranco, representando os países cujos atletas receberam respectivamente medalhas de ouro (1 ≤O ≤N), prata\n(1 ≤P ≤N) e bronze (1 ≤B ≤N). Assim, se uma das M linhas contém os números 3 2 1, significa que nessa\nmodalidade a medalha de outro foi ganha pelo país 3, a de prata pelo país 2 e a de bronze pelo país 1.",
+            "output": "Seu programa deve imprimir, na saída padrão, uma linha contendo N números, separados por um espaço em\nbranco, representando os países na ordem decrescente de classificação (o primeiro número representa o país que\né o primeiro colocado, o segundo número representa o país que é o segundo colocado, e assim por diante).\nInformações sobre a pontuação\n• Em um conjunto de casos de teste que totaliza 30 pontos, N ≤10 e M ≤10.\n• Em um conjunto de casos de teste que totaliza 70 pontos, N ≤50 e M ≤50.\n\n6"
+        },
+        {
+            "input": "2 2\n2 1 2\n1 2 2",
+            "output": "2 1"
+        },
+        {
+            "input": "4 3\n3 2 1\n4 3 1\n4 3 1",
+            "output": "4 3 2 1"
+        },
+        {
+            "input": "3 3\n3 1 2\n2 3 1\n1 2 3",
+            "output": "1 2 3"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2009",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

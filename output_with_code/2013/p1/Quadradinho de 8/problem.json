@@ -1,0 +1,37 @@
+{
+    "title": "Quadradinho de 8",
+    "statement": "Nome do arquivo fonte: quadrado.c, quadrado.cpp, quadrado.pas, quadrado.java, ou\nquadrado.py\nFernando ficou sabendo de um novo jogo chamado quadradinho de 8. Nesse jogo, é apresentado ao jogador\numa fileira de quadrados, um do lado do outro. Em cada quadrado há um número escrito. Veja abaixo um\nexemplo de fileira de quadrados:\n3\n4\n6\n0\n2\n9\nPara ganhar, o jogador deve escolher alguns quadrados de forma que eles juntos formem apenas um retângulo\ncontíguo e que a soma de seus números seja divisível por 8. Na fileira de quadrados acima, o jogador ganha\nse escolher os quadrados com os números 6, 0 e 2. O jogador perde se escolher os quadrados com 3, 4 e 9,\napesar da soma ser divisivel por 8, os quadrados não estão juntos, eles acabam formando dois retângulos\nseparados.\nVocê deve estar pensando agora que Fernando quer sua ajuda para que você mostre a ele como ganhar o\njogo, mas Fernando é um garoto muito esperto e sabe resolver o jogo rapidamente. Ele quer na verdade que\nvocê o ajude a descobrir de quantas formas é possível ganhar esse jogo.",
+    "input": "A entrada possui duas linhas.\nA primeira linha contém apenas um inteiro N que indica o número de\nquadrados na fileira de um jogo.\nA segunda linha contém N inteiros indicando na ordem os números\npresentes nos quadrados da fileira de um jogo.",
+    "output": "Seu programa deve imprimir uma única linha, contendo apenas um inteiro, o número de maneiras de ganhar\no jogo apresentado na entrada. Se não for possível que o jogador ganhe o jogo, imprima 0.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "A entrada possui duas linhas.\nA primeira linha contém apenas um inteiro N que indica o número de\nquadrados na fileira de um jogo.\nA segunda linha contém N inteiros indicando na ordem os números\npresentes nos quadrados da fileira de um jogo.",
+            "output": "Seu programa deve imprimir uma única linha, contendo apenas um inteiro, o número de maneiras de ganhar\no jogo apresentado na entrada. Se não for possível que o jogador ganhe o jogo, imprima 0.\nRestrições\n• 1 ≤N ≤1000000\n• Os números nos quadrados são inteiros não negativos menores ou iguais a 1000.\nInformações sobre a pontuação\n• Para um conjunto de entradas totalizando 50 pontos, N ≤200\n• Para um conjunto de entradas totalizando 70 pontos, N ≤5000"
+        },
+        {
+            "input": "6\n3 4 6 0 2 9",
+            "output": "3"
+        },
+        {
+            "input": "7\n1 1 1 1 1 1 1",
+            "output": "0\n\n5"
+        },
+        {
+            "input": "5\n8 0 8 0 8",
+            "output": "15"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

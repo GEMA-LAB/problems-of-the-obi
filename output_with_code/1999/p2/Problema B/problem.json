@@ -1,0 +1,25 @@
+{
+    "title": "Problema B",
+    "statement": "arquivo de entrada: REST.IN, arquivo de saída: REST.OUT) \nA UNICOMP (Universidade Independente de Computação) possui vários refeitórios que servem\nseus milhares de alunos e professores. Para melhorar o atendimento a UNICOMP planeja fazer\numa reforma nos refeitórios, mas para isso necessita saber qual o número máximo de pessoas que\nsão atendidas simultaneamente em um mesmo refeitório. Para isso a UNICOMP, que possui catra-\ncas eletrônicas, coletou os seguintes dados:\n•\nUm vetor E, ordenado crescentemente, em que E[i] representa o instante de tempo em que a \npessoa i entrou no restaurante;\n•\nUm vetor S,  em que S[i] representa o instante de tempo em que a pessoa i saiu do restaurante.\nOs elementos de E e S são inteiros positivos que indicam o número de segundos transcorridos\ndesde a abertura do restaurante. A entrada e a saída do restaurante se faz por uma única catraca,\nonde passa apenas uma pessoa por vez, de maneira que os tempos registrados em E e S são todos\ndistintos. \n1. Tarefa\nSua tarefa é escrever um programa que, dados dois vetores de inteiros E e S, ambos de compri-\nmento igual a N, calcula o número máximo de pessoas que estão presentes ao mesmo tempo den-\ntro do restaurante.",
+    "input": "de Dados\nO arquivo REST.IN contém vários conjuntos de teste. Cada conjunto de teste é composto por três\nlinhas. A primeira linha contém um inteiro positivo, N, que indica o comprimento dos vetores E e\nS, conforme descrito acima. A segunda linha do conjunto de teste contém os elementos do vetor E,\nseparados por espaço em branco, e a terceira linha contém os elementos do vetor S, separados por\nespaço em branco. O final do arquivo de testes é indicado quando N = 0 (este último conjunto de\ntestes não é válido e não deve ser processado).\nO arquivo REST.IN contém ao menos um conjunto de teste que deve ser processado.\n\n5\nExemplo de Entrada\n3\n14 67 98\n1890 1900 2123\n2\n200 1800\n1543 2324\n0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "14 67 98\n1890 1900 2123\n2\n200 1800\n1543 2324\n0\n3. Saída de Dados\nSeu programa deve produzir um arquivo de saída chamado REST.OUT. Para cada conjunto de\nteste do arquivo de entrada seu programa deve produzir três linhas no arquivo de saída. A primeira\nlinha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é numerado\na partir de 1. Na segunda linha deve aparecer o número máximo de pessoas presentes simultanea-\nmente no restaurante, encontrado pelo seu programa, precedido por “pessoas:”. A terceira linha\ndeve ser deixada em branco. A grafia mostrada no Exemplo de Saída, abaixo, deve ser seguida\nrigorosamente.",
+            "output": "Teste 1\npessoas: 3\nTeste 2\npessoas: 1\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "1999",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

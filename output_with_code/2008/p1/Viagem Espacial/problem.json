@@ -1,0 +1,33 @@
+{
+    "title": "Viagem Espacial",
+    "statement": "Nome do arquivo fonte: viagem.c, viagem.cpp ou viagem.pas\nA empresa de jogos Sonyc está desenvolvendo um novo jogo de naves espaciais, chamado Space Traveller (Via-\njante Espacial). O objetivo do jogo é viajar entre dois pontos sem colidir com nenhum asteróide no caminho.\nPara o protótipo, você foi contratado para implementar o programa responsável por verificar se um tiro disparado\npela nave atingiu um determinado asteróide. Nessa primeira versão, os tiros disparados pela nave são projeções\nnum plano 2D, formando uma linha reta infinita, e asteróides são circunferências perfeitas. Para que um tiro\nefetivamente destrua qualquer asteróide, ele deve tangenciar a circunferência que define o asteróide.\nDada uma sequências de tiros realizados pela nave e a localização de um asteróide, você deve dizer quantos tiros\nacertaram o asteróide.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém quatro números inteiros N, XC, YC e R (1 ≤N ≤1.000,\n0 ≤XC ≤1.000, 0 ≤YC ≤1.000, 1 ≤R ≤1.000) indicando, respectivamente, o número de tiros, as duas\ncoordenadas no plano do centro do asteróide (XC, YC), e o raio do asteróide.\nEm seguida haverá N linhas, uma para cada tiro. Cada linha terá 4 inteiros X1, Y1, X2, Y2 (0 ≤X1, X2, Y1, Y2 ≤\n1.000), representando duas coordenadas de pontos distintos da reta formada pela projeção do tiro.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha, contendo um inteiro, indicando quantos tiros\natigiram o asteróide.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "2 10 10 5\n10 1 10 3\n4 11 4 10",
+            "output": ""
+        },
+        {
+            "input": "2 5 5 1\n0 0 0 1\n0 0 1 0",
+            "output": ""
+        },
+        {
+            "input": "3 6 4 2\n1 4 2 4\n1 5 6 4\n0 0 6 1",
+            "output": "Informações sobre a pontuação\n• Em um conjunto de casos de teste que totaliza 30 pontos, N ≤10 e X1, Y1, X2, Y2, Xc, Yc, R ≤20.\n• Em um conjunto de casos de teste que totaliza 55 pontos, N ≤100 e X1, Y1, X2, Y2, Xc, Yc, R ≤100."
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2008",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

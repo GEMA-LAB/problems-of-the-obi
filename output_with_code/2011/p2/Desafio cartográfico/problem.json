@@ -1,0 +1,29 @@
+{
+    "title": "Desafio cartográfico",
+    "statement": "Nome do arquivo fonte: cartografico.c, cartografico.cpp, cartografico.pas, cartografico.java, ou\ncartografico.py\nLeonardo Nascimento é um garoto de 13 anos apaixonado por cartografia.\nEle assina a lista de discussões\nda Sociedade Brasileira de Cartografia (SBC) para ficar por dentro de todas as novidades. Em um tópico de\ndiscussão na lista da SBC, o presidente da sociedade descobriu que Leonardo tinha apenas 13 anos, e ficou\nmuito feliz em saber que uma pessoa tão jovem tinha tanto interesse pela arte de traçar mapas geográficos e\ntopográficos. Foi então que o presidente resolveu criar desafios com intuito de difundir a cartografia.\nUm dos desafios era o seguinte: dado um mapa de cidades ligadas por estradas, determinar a distância entre\num par de cidades mais distantes. Como o objetivo era fazer as crianças se divertirem, o presidente resolveu\nselecionar mapas bem simples. As restrições adotadas foram: (a) todas as estradas são de mão dupla; (b)\ntodas as estradas possuem 1km de comprimento, e portanto toda estrada ligando duas cidades tem o mesmo\ncomprimento; (c) toda estrada conecta apenas duas cidades, e (d) dadas duas cidades quaisquer A e B, só existe\numa única maneira de chegar em A partindo de B, e vice-versa.\nO presidente da SBC resolveu pedir sua ajuda para escrever um programa de computador que, dado um mapa\nseguindo as restrições acima, devolva a resposta. Assim, ele conseguirá gerar um gabarito para enviar junto\ncom o desafio.",
+    "input": "A primeira linha da entrada contém um inteiro N representando o número de cidades no mapa. Cada uma das\nN −1 linhas seguintes da entrada contém dois inteiros A e B indicando que existe uma estrada entre as cidades\nA e B.",
+    "output": "A única linha da saída contém um inteiro indicando a distância entre um par de cidades mais distantes.\nInformações sobre a pontuação\n• Em um conjunto de casos de teste que totaliza 20 pontos, N ≤200.\n• Em um conjunto de casos de teste que totaliza 40 pontos, N ≤1000.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "10\n1 2\n2 3\n3 4\n4 5\n5 6\n6 7\n7 8\n8 9\n9 10",
+            "output": "9"
+        },
+        {
+            "input": "5\n1 2\n2 3\n3 4\n3 5",
+            "output": "3\nA figura abaixo ilustra este"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2011",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

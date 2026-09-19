@@ -1,0 +1,33 @@
+{
+    "title": "Cachecol da Vovó Vitória",
+    "statement": "Nome do arquivo fonte: cachecol.c, cachecol.cpp, cachecol.pas, cachecol.java, ou\ncachecol.py\nVovó Vitória possui muitos netinhos; como toda boa avó, ela se preocupa constantemente com a saúde de\nseus netos, e quer garantir que eles estejam sempre bem agasalhados o tempo todo.\nVovó Vitória dispõe de um saco com vários retalhos quadrados de mesmo tamanho, em três cores diferentes,\ne quer usá-los para costurar cachecóis para seus netos. Ela quer que cada cachecol tenha três retalhos de\nlargura por N de comprimento e, além disso, retalhos adjacentes devem ter cores diferentes. Por exemplo,\na figura abaixo mostra três cachecóis que Vovó Vitória pode costurar.\nVovó Vitória tem muitos netos, e quer fazer um cachecol diferente para cada um deles, mas ela não sabe de\nquantas formas ela pode arrumar os retalhos para formar cachecóis diferentes. Por isso, ela pediu para você\nescrever um programa que determina quantos cachecóis diferentes ela pode costurar.",
+    "input": "A entrada consiste de uma única linha contendo um único inteiro N, indicando o número de retalhos no\ncomprimento do cachecol.",
+    "output": "Imprima uma única linha contendo um único número inteiro, indicando o número de cachecóis distintos que\na Vovó Vitória pode costurar. Como este número pode ser muito grande, imprima o resto que este número\ndeixa quando dividido por 1.000.000.007 (109 + 7).",
+    "constraints": "- 1 ≤N ≤1018",
+    "examples": [
+        {
+            "input": "1",
+            "output": "12"
+        },
+        {
+            "input": "2",
+            "output": "54"
+        },
+        {
+            "input": "4",
+            "output": "1122"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

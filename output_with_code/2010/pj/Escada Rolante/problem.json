@@ -1,0 +1,33 @@
+{
+    "title": "Escada Rolante",
+    "statement": "Nome do arquivo fonte: escada.c, escada.cpp, ou escada.pas\nO Shopping Boas Compras – SBC, através de sua política ambiental, está preocupado com o consumo de energia\ne, resolveu trocar todas as escadas rolantes por modelos mais modernos, que se desligam caso ninguém esteja\nutilizando, poupando energia.\nA nova escada rolante possui um sensor no início. Toda vez que ela está vazia e alguém passa pelo sensor, a\nescada começa a funcionar, parando de funcionar novamente após 10 segundos se ninguém mais passar pelo\nsensor. Estes 10 segundos representam o tempo suficiente para levar alguém de um nível ao outro.\nPreocupados em saber exatamente quanto de energia o shopping está economizando, o gerente pediu sua ajuda.\nComo eles sabem qual era o consumo da escada rolante antiga, eles te pediram para calcular o tempo que a\nnova escada ficou funcionando.\nTarefa\nDados os instantes, em segundos, em que passaram pessoas pela escada rolante, você deve calcular quantos\nsegundos ela ficou ligada.",
+    "input": "A primeira linha da entrada contém um inteiro N que indica o número de pessoas que o sensor detectou\n(1 ≤N ≤1.000). As N linhas seguintes representam o instante em que a i-ésima pessoa passou pelo sensor e\ncontém um inteiro T (0 ≤T ≤10.000). Os tempos estão em ordem crescente, sem repetições.",
+    "output": "Seu programa deve imprimir uma única linha, contendo o tempo que a escada rolante ficou ligada.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3\n0\n10\n20",
+            "output": "30\n\n3"
+        },
+        {
+            "input": "5\n5\n10\n17\n20\n30",
+            "output": "35"
+        },
+        {
+            "input": "3\n1\n2\n3",
+            "output": "12"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2010",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

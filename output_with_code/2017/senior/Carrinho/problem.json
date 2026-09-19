@@ -1,0 +1,25 @@
+{
+    "title": "Carrinho",
+    "statement": "Nome do arquivo: carrinho.c, carrinho.cpp, carrinho.pas, carrinho.java, carrinho.js,\ncarrinho.py2 ou carrinho.py3\nUm carrinho elétrico, que usa apenas uma bateria com carga inicial de C coulombs, tem uma\ncaracterística incrível: ele só pode ir à velocidade constante mas pode escolher qualquer velocidade\nconstante, maior do que zero, de V metros por segundo. Só que quanto maior a velocidade, menor\na autonomia.\nQuer dizer, de maneira mais rigorosa, a distância máxima dmax metros que ele\npode percorrer é diretamente proporcional à carga inicial da bateria e inversamente proporcional à\nvelocidade: dmax = C\nV . É incrível mas veja que, mesmo que a carga seja muito pequena, o carrinho\nsempre pode percorrer qualquer distância, desde que vá a uma velocidade suficientemente pequena!\nO carrinho está na posição zero de uma pista reta com comprimento D metros. Há N baterias,\ncom diferentes cargas, colocadas em posições distintas ao longo da pista, uma delas na posição zero.\nConsidere que nosso carrinho ideal consegue fazer um pit-stop instantâneo, trocando de bateria sem\nperder tempo algum. Ao passar por uma nova bateria ele pode decidir ou não fazer a troca; e ele\npode alterar sua velocidade apenas num instante em que troca de bateria. Qual é o tempo mínimo\npossível para o carrinho chegar ao final da pista?",
+    "input": "A primeira linha da entrada contém um inteiro N e um real D, respectivamente, o número de\nbaterias e o comprimento da pista. As N linhas seguintes contêm, cada uma, dois reais P e C\ndefinindo, respectivamente, a posição e a carga das baterias. Sempre existe uma bateria na posição\n0.0 e as baterias são dadas em ordem estritamente crescente de posição.",
+    "output": "Imprima uma linha contendo um real, com exatamente três casas decimais, o tempo mínimo possível\nem segundos para o carrinho chegar ao final da pista.",
+    "constraints": "- 1 ≤N ≤1000 e 1.0 ≤D ≤10000.0\n- 0.0 ≤P < D e 0.0 < C < 100.0",
+    "examples": [
+        {
+            "input": "4 10.000\n0.000 1.000\n1.200 0.100\n3.000 10.000\n7.700 1.000",
+            "output": "13.900"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2017",
+    "level": "senior",
+    "period": "Fase 3",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

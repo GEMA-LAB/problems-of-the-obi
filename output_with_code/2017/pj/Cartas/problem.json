@@ -1,0 +1,30 @@
+{
+    "title": "Cartas",
+    "statement": "Nome do arquivo: cartas.c, cartas.cpp, cartas.pas, cartas.java, cartas.js, cartas.py2 ou\ncartas.py3\nUm novo game de realidade aumentada tem, dentro dele, um mini-game que aparece em certas\nsituações para aumentar o ganho de pontos do game principal. O mini-game é um joguinho de\nmemória com quatro cartas, formando dois pares de cartas iguais. Quer dizer, duas cartas têm um\nnúmero inteiro N marcado em uma de suas faces e as outras duas cartas têm um outro número\ninteiro M, N̸ = M. Neste problema, o jogador já virou três cartas, como mostrado na figura.\n40\n40\n11\nClaro que, dadas as condições, a carta que falta virar vai formar par com uma das três que já foram\nviradas. No caso da figura, o número marcado na carta que ainda falta virar é 11. Implemente um\nprograma que, dados os números de três cartas, imprima o número da carta que ainda falta virar!",
+    "input": "A primeira linha da entrada contém um inteiro A, representando a primeira carta aberta. A segunda\nlinha contém o inteiro B, representando a segunda carta. A terceira linha contém o inteiro C, que\né a terceira carta.",
+    "output": "Seu programa deve imprimir uma linha contendo um inteiro representando o número que está na\ncarta que ainda falta virar.",
+    "constraints": "- 0 ≤A, B, C ≤100",
+    "examples": [
+        {
+            "input": "40\n11\n40",
+            "output": "11"
+        },
+        {
+            "input": "8\n8\n96",
+            "output": "96"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2017",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "jogos",
+        "simulação"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

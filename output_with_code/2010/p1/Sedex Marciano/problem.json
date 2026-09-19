@@ -1,0 +1,33 @@
+{
+    "title": "Sedex Marciano",
+    "statement": "Nome do arquivo fonte: marciano.c, marciano.cpp, ou marciano.pas\nEstamos no ano 2048 e um dos sonhos da humanidade torna-se finalmente realidade: a colonização do planeta\nMarte. Nossos primeiros colonizadores acabam de chegar, e já começam a fazer as preparações (como a instalação\nde cúpulas de oxigênio e tratamento do solo para agricultura) para que mais pessoas possam tentar uma nova\nvida no planeta vizinho.\nApesar dos avanços tecnológicos e desafios vencidos, ainda resta um grande problema: os foguetes usados para\nir a Marte ainda são complicados e caros.\nCom isso, fica difícil enviar suprimentos para os nossos colonos\n(enquanto a agricultura ainda não é possível) por muito tempo. Assim, a agência espacial contratou o SBC\n(Serviço Balístico Cósmico), que desenvolveu um canhão super-potente que consegue disparar esferas até Marte,\nsem precisar gastar milhões de dólares em equipamento e combustível.\nAgora, tudo o que é necessário fazer para enviar suprimentos a Marte é colocar uma caixa com as encomendas\ndentro de uma esfera e disparar a mesma até seu destino.\nTarefa\nDadas as dimensões de uma caixa com suprimentos e o raio interno da esfera que é disparada pelo canhão, seu\nprograma deverá dizer se é possível enviar tal caixa para Marte usando tal esfera.",
+    "input": "Cada entrada contém apenas uma linha com quatro inteiros L, A, P e R, (0 ≤L, A, P, R ≤1000) que represen-\ntam, respectivamente, a largura, altura e profundidade da caixa, e o raio da esfera.",
+    "output": "Seu programa deve imprimir um único caractere: ‘S’ (sem aspas) se é possível colocar a caixa dentro da esfera,\nou ‘N’ (sem aspas) caso contrário.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "10 20 30 30",
+            "output": "S"
+        },
+        {
+            "input": "10 10 10 7",
+            "output": "N"
+        },
+        {
+            "input": "2 4 4 3",
+            "output": "S"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2010",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

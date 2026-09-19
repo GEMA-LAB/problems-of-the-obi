@@ -1,0 +1,25 @@
+{
+    "title": "Quermesse",
+    "statement": "Arquivo fonte: querm.c, querm.cc, querm.cpp ou querm.pas\nOs alunos do último ano resolveram organizar uma quermesse para arrecadar fundos para a festa\nde formatura. A festa prometia ser um sucesso, pois o pai de um dos formandos, Teófilo, dono de\numa loja de informática, decidiu doar um computador para ser sorteado entre os que compareces-\nsem. Os alunos prepararam barracas de quentão, pipoca, doces, ensaiaram a quadrilha e coloca-\nram à venda ingressos numerados sequencialmente a partir de 1. O número do ingresso serviria\npara o sorteio do computador. Ficou acertado que Teófilo decidiria o método de sorteio; em prin-\ncípio o sorteio seria, claro, computadorizado.\nO local escolhido para a festa foi o ginásio da escola. A entrada dos participantes foi pela porta\nprincipal, que possui uma roleta, onde passa uma pessoa por vez. Na entrada, um funcionário\ninseriu, em uma lista no computador da escola, o número do ingresso, na ordem de chegada dos\nparticipantes. Depois da entrada de todos os participantes, Teófilo começou a trabalhar no compu-\ntador para preparar o sorteio. Verificando a lista de presentes, notou uma característica notável:\nhavia apenas um caso, em toda a lista, em que o participante que possuia o ingresso numerado\ncom i, havia sido a i-ésima pessoa a entrar no ginásio. Teófilo ficou tão encantado com a coinci-\ndência que decidiu que o sorteio não seria necessário: esta pessoa seria o ganhador do computa-\ndor.\n1. Tarefa\nConhecendo a lista de participantes, por ordem de chegada, sua tarefa é determinar o número do\ningresso premiado, sabendo que o ganhador é o único participante que tem o número do ingresso\nigual à sua posição de entrada na festa.",
+    "input": "A entrada é composta de vários conjuntos de teste. A primeira linha de um conjunto de teste con-\ntém um número inteiro positivo N que indica o número de participantes da festa. A linha seguinte\ncontém a sequência, em ordem de entrada, dos N ingressos das pessoas que participaram da festa.\nO final da entrada é indicado quando N = 0. Para cada conjunto de teste da entrada haverá um\núnico ganhador. \nExemplo de Entrada\n4\n4 5 3 1\n10\n9 8 7 6 1 4 3 2 12 10\n0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "4 5 3 1\n10\n9 8 7 6 1 4 3 2 12 10\n0\n3. Saída\nPara cada conjunto de teste da entrada seu programa deve produzir três linhas. A primeira linha\nidentifica o conjunto de teste, no formato \"Teste n\", onde n é numerado a partir de 1. A segunda\n\n5\nlinha deve conter o número do ingresso do ganhador, conforme determinado pelo seu programa. A\nterceira linha deve ser deixada em branco. A grafia mostrada no Exemplo de Saída, abaixo, deve\nser seguida rigorosamente.",
+            "output": "Teste 1\n3\nTeste 2\n10\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2000",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

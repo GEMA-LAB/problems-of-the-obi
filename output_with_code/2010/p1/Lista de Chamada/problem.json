@@ -1,0 +1,33 @@
+{
+    "title": "Lista de Chamada",
+    "statement": "Nome do arquivo fonte: chamada.c, chamada.cpp, ou chamada.pas\nTia Joana é uma respeitada professora e tem vários alunos. Em sua última aula, ela prometeu que iria sortear\num aluno para ganhar um bônus especial na nota final: ela colocou N pedaços de papel numerados de 1 a N em\num saquinho e sorteou um determinado número K; o aluno premiado foi o K-ésimo aluno na lista de chamada.\nO problema é que a Tia Joana esqueceu o diário de classe, então ela não tem como saber qual número corresponde\na qual aluno. Ela sabe os nomes de todos os alunos, e que os números deles, de 1 até N, são atribuídos de acordo\ncom a ordem alfabética, mas os alunos dela estão muito ansiosos e querem logo saber quem foi o vencedor.\nTarefa\nDado os nomes dos alunos da Tia Joana e o número sorteado, determine o nome do aluno que deve receber o\nbônus.",
+    "input": "A primeira linha contém dois inteiros N e K separados por um espaço em branco (1 ≤K ≤N ≤100). Cada\numa das N linhas seguintes contém uma cadeia de caracteres de tamanho mínimo 1 e máximo 20 representando\nos nomes dos alunos. Os nomes são compostos apenas por letras minúsculas de ‘a’ a ‘z’.",
+    "output": "Seu programa deve imprimir uma única linha, contendo o nome do aluno que deve receber o bônus.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "5 1\nmaria\njoao\ncarlos\nvanessa\njose",
+            "output": "carlos"
+        },
+        {
+            "input": "5 5\nmaria\njoao\ncarlos\nvanessa\njose",
+            "output": "vanessa"
+        },
+        {
+            "input": "5 3\nmaria\njoao\ncarlos\nvanessa\njose",
+            "output": "jose"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2010",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

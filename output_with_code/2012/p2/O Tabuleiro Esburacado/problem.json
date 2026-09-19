@@ -1,0 +1,30 @@
+{
+    "title": "O Tabuleiro Esburacado",
+    "statement": "Nome do arquivo fonte: cavalo.c, cavalo.cpp, cavalo.pas, cavalo.java, ou cavalo.py\nUm tabuleiro normal, 8 x 8, foi danificado, e 4 posições ficaram esburacadas. A Figura 1(a) mostra o tabuleiro.\nA posição inferior esquerda tem coordenadas (0, 0). Os 4 buracos estão marcados em preto, e têm coordenadas\n(1, 3), (2, 3), (2, 5) e (5, 4). Um cavalo de xadrez foi colocado na posição (4, 3), marcada como 0 no tabuleiro.\n0\n(a)\n4\n5\n1\n8\n2\n7\n6\n3\n0\n(b)\nOs 8 movimentos de um cavalo estão numerados de 1 a 8 na Figura 1(b), a partir da posição marcada como 0.\nPor exemplo, se o cavalo estiver na posição inicial (4, 3), o movimento 7 leva o cavalo à posição (2, 4), sem cair\nno buraco (2, 3), porque o cavalo salta da posição (4, 3) para a posição (2, 4).\nSeu problema é simular um passeio do cavalo, dados os movimentos através dos números de 1 a 8 e determinar\nquantos movimentos o cavalo faz até ou (i) terminar o passeio ou (ii) cair em um buraco. Por exemplo, na\ntrajetória dada pelos 5 movimentos 1, 8, 5, 3, 4, o cavalo passa pelas posições (5, 5), (4, 7), (3, 5) e cai no buraco\n(5, 4), fazendo portanto apenas 4 movimentos.\nJá no passeio dado pelos 3 movimentos 6, 8, 1, o cavalo passa pelas posições (2, 2), (1, 4) e (2, 6) e não cai em\nnenhum buraco: portanto, perfaz todos os 3 movimentos do passeio.",
+    "input": "A primeira linha da entrada contém N, o número de movimentos do passeio. A segunda linha contém N inteiros\nM1, M2, . . . , MN, separados por um espaço em branco, correspondentes aos N movimentos do cavalo no passeio.\nUm movimento pode levar o cavalo a cair em um buraco, mas nunca leva o cavalo a sair do tabuleiro.",
+    "output": "Seu programa deve imprimir uma única linha, contendo um único número inteiro, o número de movimentos do\ncavalo até terminar o passeio ou o cavalo cair em um buraco.",
+    "constraints": "- 1 ≤N ≤100\n- 5\n- 1 ≤MI ≤8, para I = 1, 2, . . . , N.",
+    "examples": [
+        {
+            "input": "5\n1 8 5 3 4",
+            "output": "4"
+        },
+        {
+            "input": "3\n6 8 1",
+            "output": "3"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2012",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "matrizes",
+        "simulação"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

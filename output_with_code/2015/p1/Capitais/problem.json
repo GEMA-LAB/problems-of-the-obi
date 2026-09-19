@@ -1,0 +1,29 @@
+{
+    "title": "Capitais",
+    "statement": "Nome do arquivo: capitais.c, capitais.cpp, capitais.pas, capitais.java, capitais.js ou\ncapitais.py\nA Linearlândia construiu uma rede de ferrovias de alta velocidade,\nligando certos pares de cidades, de modo que: é possível viajar\nentre qualquer par de cidades usando apenas ferrovias; e há apenas\num caminho de ferrovias (sequência de ferrovias) entre qualquer\npar de cidades. Existe muita disputa entre as capitais dos estados\nda Linearlândia e, por isso, ficou decidido que cada capital seria\nligada por ferrovia a apenas uma outra cidade, e que toda cidade\nque não é capital seria ligada a outras cidades por duas ou mais\nferrovias. Dessa forma, nenhuma viagem entre um par de capitais\nusando apenas ferrovias passa por uma terceira capital.\n5\n12\nVamos definir como distância-ferrovia entre duas cidades o número de ferrovias que é necessário\nutilizar para viajar entre essas duas cidades.\nDada apenas a informação sobre quais pares de\ncidades estão ligados por uma ferrovia, você deve escrever um programa para computar a menor\ndistância-ferrovia entre todos os pares de capitais. Na figura acima, há nove capitais e a menor\ndistância-ferrovia entre qualquer par de capitais é 3, entre as capitais 5 e 12.",
+    "input": "A primeira linha da entrada contém um inteiro N, o número de cidades. As cidades são identificadas\npor inteiros de 1 a N. As N−1 linhas seguintes contém, cada uma, dois inteiros U e V , representando\num par de cidades ligadas por uma ferrovia.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, a menor distância-ferrovia\nentre todos os pares capitais.",
+    "constraints": "- 2 ≤N ≤105",
+    "examples": [
+        {
+            "input": "8\n1 2\n2 3\n3 4\n5 3\n6 5\n6 7\n8 7",
+            "output": "3"
+        },
+        {
+            "input": "2\n1 2",
+            "output": "1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2015",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

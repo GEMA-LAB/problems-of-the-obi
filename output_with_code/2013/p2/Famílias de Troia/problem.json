@@ -1,0 +1,33 @@
+{
+    "title": "Famílias de Troia",
+    "statement": "Nome do arquivo fonte: troia.c, troia.cpp, troia.pas, troia.java, ou troia.py\nA Guerra de Troia pode ter sido um grande conflito bélico entre gregos e troianos, possivelmente ocorrido\nentre 1300 a.C. e 1200 a.C. (fim da Idade do Bronze no Mediterrâneo). Recentemente foram encontradas\ninscrições numa caverna a respeito de sobreviventes. Após um trabalho árduo, arqueólogos descobritam que\nas incrições descreviam relações de parentesco numa certa população. Cada item da inscrição indicavam\nduas pessoas que pertenciam a uma mesma família. Seu problema é determinar quantas famílias distintas\nexistem.",
+    "input": "O arquivo de entrada consiste de M + 1 linhas. A primeira linha do arquivo de entrada contém um inteiro\npositivo N, que indica o número de elementos da comunidade, numerados de 1 a N. As demais M linhas\ndo arquivo de entrada contêm, cada uma, dois inteiros. Cada inteiro identifica um elemento da comunidade.\nCada linha indica que os dois indivíduos pertencem a uma mesma família.",
+    "output": "A saída deve conter apenas uma linha contendo um único inteiro, que é o número de famílias.",
+    "constraints": "- 1 ≤N ≤5 × 104\n- 1 ≤M ≤105",
+    "examples": [
+        {
+            "input": "4 4\n1 2\n2 3\n3 4\n4 1",
+            "output": "1"
+        },
+        {
+            "input": "8 10\n1 2\n2 3\n3 6\n6 5\n5 4\n4 3\n6 7\n7 8\n8 1\n1 5",
+            "output": "1\n\n6"
+        },
+        {
+            "input": "9 8\n1 2\n2 3\n3 6\n4 3\n6 5\n7 8\n1 4\n6 2",
+            "output": "3"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

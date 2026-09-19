@@ -1,0 +1,33 @@
+{
+    "title": "Monopólio",
+    "statement": "Nome do arquivo fonte: mono.c, mono.cpp, ou mono.pas\nMonopólio (conhecido no Brasil como Banco Imobiliário) é um dos jogos mais famosos do mundo, com 750\nmilhões de cópias vendidas. Durante o jogo, os jogadores podem comprar propriedades que estejam disponíveis,\nvendê-las para que elas voltem a ficar disponíveis, e cobrar aluguel pelo uso de uma determinada propriedade\npor outro jogador. O objetivo do jogo é acumular a maior quantidade de dinheiro possível.\nO jogo é composto por um tabuleiro e um conjunto de cédulas de dinheiro. Três amigos, Dália, Elói e Félix,\nquerem jogar uma partida de Monopólio, mas o irmãozinho menor de Dália escondeu as cédulas de dinheiro. Os\ntrês amigos decidiram jogar a partida assim mesmo, anotando em um papel todas as operações que ocorreram\ndurante o jogo (compras, vendas e pagamentos de aluguéis). Assim que eles pararam de jogar, perceberam que\nlevaria muito tempo para descobrir quanto dinheiro cada um acumulou. Eles então pediram sua ajuda para\ndeterminar esses valores.\nTarefa\nSua tarefa é escrever um programa que, a partir dos registros de jogadas realizados pelos três jogadores, deter-\nmine a quantidade de dinheiro acumulada por cada um dos jogadores.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém dois inteiros, I e N que indicam respectivamente as quantias de\ndinheiro que Dália, Elói e Félix possuem no início do jogo (1 ≤I ≤1000000) e o número de operações realizadas\ndurante o jogo (1 ≤N ≤10000). Note que os três jogadores iniciam a partida com a mesma quantidade de\ndinheiro. Os jogadores são representados na entrada sempre pela letra inicial de seu nome (‘D’, ‘E’ ou ‘F’). As\nN linhas contém as operações ocorridas durante o jogo. Cada linha pode ter um dos formatos abaixo:\n• Compra — a letra C, seguida da letra inicial de um jogador J e de um inteiro X que representa o valor\ngasto por J na compra (0 < X ≤1000000). Exemplo: ‘C D 1000’.\n• Venda — a letra V, seguida da letra inicial de um jogador J e de um inteiro X que representa o valor\nrecebido por J na venda (0 < X ≤1000000). Exemplo: ‘V E 200’.\n• Aluguel — a letra A, seguida da letra inicial de um jogador J que recebe o aluguel, da letra inicial do jogador\nK que paga o aluguel e de um inteiro X que representa o valor do aluguel (J̸ = K e 0 ≤X ≤1000000).\nExemplo: ‘A F D 500’.\nOs valores intermediários e totais acumulados por cada jogador estão entre 0 e 1000000.",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "1000 1\nC D 500",
+            "output": "500 1000 1000"
+        },
+        {
+            "input": "1000 3\nC D 100\nV E 200\nA D F 1000",
+            "output": "1900 1200 0"
+        },
+        {
+            "input": "10000 5\nC D 5000\nC E 3000\nA D F 1000\nV E 4000\nA F E 1000",
+            "output": "6000 10000 10000"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2006",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

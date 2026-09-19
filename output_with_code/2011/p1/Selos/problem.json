@@ -1,0 +1,33 @@
+{
+    "title": "Selos",
+    "statement": "Nome do arquivo fonte: selos.c, selos.cpp, selos.pas, selos.java, ou selos.py\nEuclides é um garoto que gosta muito de colecionar selos. No seu aniversário, seus pais o presentearam com\nN selos, todos em formato de quadrados com 1 cm de lado. Euclides gostaria de guardar todos os N selos\nque ganhou colando-os numa página de papel em branco. Ao decidir por guardá-los assim, no entanto, ele logo\npercebeu que a única forma que lhe agradava de posicionar os selos na página era a forma de um retângulo\ncompletamente coberto pelos mesmos, sem sobreposição.\nEle percebeu também que, independente do número de selos obtido, colocar todos os selos numa única linha ou\ntodos os selos numa única coluna é uma configuração válida. Como essa maneira usa a página do caderno de\num jeito muito ineficiente, Euclides gostaria de saber se existe algum modo de dispor os N selos num retângulo\nque tenha mais de uma linha e mais de uma coluna tal que todas as linhas e colunas sejam completamente\nocupadas por selos (isto é, tal que não existam posições sem selos no interior do retângulo).",
+    "input": "A entrada contém uma única linha com um único inteiro N, o número de selos que Euclides ganhou.",
+    "output": "A saída deve conter uma linha com um único caracter, que deve ser `S' se for possível organizar os selos em um\nretângulo com mais que uma linha e mais que uma coluna ou `N' caso não seja possível.",
+    "constraints": "- 1 ≤N ≤10 000 000 000.",
+    "examples": [
+        {
+            "input": "8",
+            "output": "S\nA figura abaixo exemplifica duas maneiras de guardar os selos em forma de retângulo."
+        },
+        {
+            "input": "1",
+            "output": "N"
+        },
+        {
+            "input": "11",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2011",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

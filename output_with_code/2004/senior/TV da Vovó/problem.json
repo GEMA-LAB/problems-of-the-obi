@@ -1,0 +1,25 @@
+{
+    "title": "TV da Vovó",
+    "statement": "Arquivo fonte: tv.c, tv.cc, tv.cpp ou tv.pas\nA vovó tem um televisor muito antigo, que ultimamente está exibindo um defeito incômodo: a\nimagem aparece ‘deslocada’ (para cima ou para baixo, para o lado direito ou para o lado\nesquerdo). Quando a imagem está deslocada para cima, a parte da imagem que deixa de ser vista\nna parte superior reaparece na parte de baixo da tela. Da mesma forma, quando a imagem está\ndeslocada a direita, a parte da imagem que deixa de ser vista à direita reaparece na tela do lado\nesquerdo.\nA imagem do televisor pode ser vista como uma matriz de pontos organizados em linhas e colu-\nnas. Para consertar o televisor da vovó, você pode ajustar a imagem introduzindo uma série de\n‘comandos de correção’ em um painel de ajuste. Cada comando de correção desloca a imagem de\num certo número de linhas (para cima ou para baixo) e um certo número de colunas (para a direita\nou para a esquerda).\n1. Tarefa\nDada uma matriz que representa uma imagem defeituosa e uma série de comandos de correção,\nseu programa deve calcular a matriz que representa a imagem resultante após todos os comandos\nterem sido aplicados sequencialmente.",
+    "input": "A entrada possui vários conjuntos de teste. Cada conjunto de teste inicia com a descrição da\nmatriz que representa a imagem do televisor. A primeira linha contém dois inteiros M e N repre-\nsentando o número de linhas e o número de colunas da matriz (1 ≤ M ≤ 1000 e 1 ≤ N ≤ 1000). As\nM linhas seguintes da entrada contém cada uma N inteiros, descrevendo o valor de cada ponto da\nimagem. Após a descrição da imagem, segue-se a descrição dos comandos de correção. Cada\ncomando de correção é descrito em uma linha contendo dois inteiros X e Y. O valor de X repre-\nsenta o deslocamento na direção horizontal (valor positivo representa deslocamento para a direita,\nvalor negativo para a esquerda), e o valor de Y representa o deslocamento da direção vertical\n(valor positivo para cima, valor negativo para baixo). O final da lista de comandos é indicado por\nX = Y = 0, e o final da entrada é indicado por M = N = 0.\nimagem\ndeslocada\nimagem\ncorrigida\npara a esquerda\nimagem\ndeslocada\npara cima\nimagem\ndeslocada para a\nesquerda e para cima\n\n9\nExemplo de Entrada\n3 3\n1 2 3\n4 5 6\n7 8 9\n1 0\n1 -1\n0 0\n3 4\n6 7 8 5\n10 11 12 9\n2 3 4 1\n-3 2\n0 0\n0 0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3 3\n1 2 3\n4 5 6\n7 8 9\n1 0\n1 -1\n0 0\n3 4\n6 7 8 5\n10 11 12 9\n2 3 4 1\n-3 2\n0 0\n0 0\n3. Saída\nPara cada conjunto de teste, o seu programa deve produzir uma imagem na saída. A primeira linha\nda saída deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é nume-\nrado seqüencialmente a partir de 1. A seguir deve aparecer a matriz que representa a imagem\nresultante, no mesmo formato da imagem de entrada. Ou seja, as N linhas seguintes devem conter\ncada uma M inteiros que representam os pixels da imagem. Após a imagem deixe uma linha em\nbranco. A grafia mostrada no Exemplo de Saída, abaixo, deve ser seguida rigorosamente.",
+            "output": "Teste 1\n8 9 7 \n2 3 1 \n5 6 4 \nTeste 2\n1 2 3 4 \n5 6 7 8 \n9 10 11 12 \n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2004",
+    "level": "senior",
+    "period": "Fase Única",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

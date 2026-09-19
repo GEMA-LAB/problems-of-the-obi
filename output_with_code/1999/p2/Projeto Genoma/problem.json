@@ -1,0 +1,25 @@
+{
+    "title": "Projeto Genoma",
+    "statement": "2\n0Projeto Genoma\nUm grande projeto mundial está em curso para mapear todo o material genético do ser humano: o\nProjeto Genoma Humano. As moléculas de DNA (moléculas que contêm material genético)\npodem ser representadas por cadeias de caracteres que usam um alfabeto de apenas 4 letras: ‘A’,\n‘C’, ‘T’ e ‘G’. Um exemplo de uma tal cadeia é:\nTCATATGCAAATAGCTGCATACCGA\nNesta tarefa você deverá produzir uma ferramenta muito utilizada no projeto Genoma: um pro-\ngrama que procura ocorrências de uma pequena cadeia de DNA (que vamos chamar de p) dentro\nde uma outra cadeia de DNA (que vamos chamar de t). ",
+    "input": "de Dados\nO arquivo GENOMA.IN contém vários conjuntos de teste. Cada conjunto de teste é composto por\ntrês linhas. A primeira linha contém dois inteiros positivos, M e N, M ≤ N, que indicam respecti-\nvamente o comprimento das cadeias de DNA p e t, conforme descrito acima. A segunda linha do\nconjunto de teste contém a cadeia p, e a terceira linha contém a cadeia t, onde p e t são compostas\nutilizando apenas os caracteres ‘A’, ‘C’, ‘G’ e ‘T’. O final do arquivo de testes é indicado quando\nM = N = 0 (este último conjunto de testes não é válido e não deve ser processado).\nO arquivo GENOMA.IN contém ao menos um conjunto de teste que deve ser processado.\n\n3\nExemplo de Entrada\n2 4\nAC\nTGGT\n4 25\nCATA\nTCATATGCAAATAGCTGCATACCGA\n0 0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "2 4\nAC\nTGGT\n4 25\nCATA\nTCATATGCAAATAGCTGCATACCGA\n0 0\n3. Saída de Dados\nSeu programa deve produzir um arquivo de saída chamado GENOMA.OUT. Para cada conjunto\nde teste do arquivo de entrada seu programa deve produzir quatro linhas no arquivo de saída. A\nprimeira linha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é\nnumerado a partir de 1. Na segunda linha deve aparecer a lista, em ordem crescente, com a posi-\nção inicial de cada ocorrência, na forma direta, do padrão p na seqüência t.  Na terceira linha deve\naparecer a lista, em ordem crescente, com a posição inicial de cada ocorrência, na forma comple-\nmentar invertida, do padrão p na seqüência t. A quarta linha deve ser deixada em branco. A grafia\nmostrada no Exemplo de Saída, abaixo, deve ser seguida rigorosamente.",
+            "output": "Teste 1\nocorrencia direta: 0\nocorrencia complementar invertida: 3\nTeste 2\nocorrencia direta: 2 18\nocorrencia complementar invertida: 4\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "1999",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

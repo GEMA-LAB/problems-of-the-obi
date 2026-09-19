@@ -1,0 +1,37 @@
+{
+    "title": "Rodovia",
+    "statement": "Nome do arquivo fonte: rodovia.c, rodovia.cpp, rodovia.pas, rodovia.java, ou rodovia.py\nAs estradas da Nlogônia estão severamente danificadas, devido ao intenso fluxo de veículos pesados criado\npelo desenvolvimento econômico do reino. Para resolver o problema, o rei da Nlogônia decretou que seriam\nconstruídas novas rodovias. O decreto determinou que:\n• todas as rodovias construídas terão mão única, e ligarão exatamente duas cidades;\n• nenhum par de rodovias se intersectará — serão construídos viadutos, túneis e pontes conforme ne-\ncessário;\n• por razões orçamentárias, o número de rodovias a construir será igual ao número de cidades que\nexistem na Nlogônia;\n• deve ser possível, partindo de qualquer cidade, chegar a qualquer outra cidade usando só as novas\nrodovias, sempre respeitando a mão das rodovias.\nO engenheiro-chefe do reino desenhou uma proposta de mapa viário; o rei verificou que o plano satisfaz as\ntrês primeiras restrições, mas não conseguiu verificar a última. Por isso, ele pediu que você escrevesse um\nprograma que determina se o plano de rodovias permite viajar de qualquer cidade até qualquer outra cidade\nda Nlogônia.",
+    "input": "A primeira linha de cada caso de teste contém um inteiro N, indicando o número de cidades. Cada uma das\nN linhas seguintes descrevem uma estrada: a linha contém dois inteiros A e B que indicam que existe uma\nestrada de mão única ligando a cidade A a outra cidade, B (as cidades são numeradas de 1 a N).",
+    "output": "Imprima uma única linha contendo um único caractere: ‘S’ se for possível ir de qualquer cidade a qualquer\noutra cidade por rodovias e ‘N’ caso contrário.",
+    "constraints": "- 2 ≤N ≤104\n- A̸ = B;",
+    "examples": [
+        {
+            "input": "3\n1 2\n2 3\n3 1",
+            "output": "S\n\n5"
+        },
+        {
+            "input": "3\n1 2\n2 3\n1 3",
+            "output": "N"
+        },
+        {
+            "input": "6\n1 2\n2 3\n4 1\n5 6\n3 5\n6 4",
+            "output": "S"
+        },
+        {
+            "input": "6\n1 2\n2 3\n3 1\n4 5\n5 6\n6 4",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

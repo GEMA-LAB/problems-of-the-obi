@@ -1,0 +1,33 @@
+{
+    "title": "Colchão",
+    "statement": "Nome do arquivo fonte: colchao.c, colchao.cpp, colchao.pas, colchao.java, ou colchao.py\nJoão está comprando móveis novos para sua casa. Agora é a vez de comprar um colchão novo, de molas, para\nsubstituir o colchão velho. As portas de sua casa têm altura H e largura L e existe um colchão que está em\npromoção com dimensões A × B × C.\nO colchão tem a forma de um paralelepípedo reto retângulo e João só consegue arrastá-lo através de uma porta\ncom uma de suas faces paralelas ao chão, mas consegue virar e rotacionar o colchão antes de passar pela porta.\nEntretanto, de nada adianta ele comprar o colchão se ele não passar através das portas de sua casa. Portanto\nele quer saber se consegue passar o colchão pelas portas e para isso precisa de sua ajuda.",
+    "input": "A primeira linha da entrada contém três números inteiros A, B e C, as três dimensões do colchão, em centímetros.\nA segunda linha contém dois inteiros H e L, respectivamente a altura e a largura das portas em centímetros.",
+    "output": "Se programa deve escrever uma única linha, contendo apenas a letra ‘S’ se o colchão passa pelas portas e apenas\na letra ‘N’ em caso contrário.",
+    "constraints": "- 1 ≤A, B, C ≤300\n- 1 ≤H, L ≤250\n- 3",
+    "examples": [
+        {
+            "input": "25 120 220\n200 100",
+            "output": "S"
+        },
+        {
+            "input": "25 205 220\n200 100",
+            "output": "N"
+        },
+        {
+            "input": "25 200 220\n200 100",
+            "output": "S"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2012",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

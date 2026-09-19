@@ -1,0 +1,29 @@
+{
+    "title": "Caçadores de Mitos",
+    "statement": "Nome do arquivo fonte: mito.c, mito.cpp, ou mito.pas\nJorge é um apresentador de televisão que comanda a versão brasileira do grande sucesso Caçadores de Mitos,\nonde se estuda um mito para descobrir se é fato ou apenas um boato.\nNo próximo episódio, Jorge deverá apresentar o mito que diz que ”os raios não caem duas vezes no mesmo\nlugar”, referindo-se aos raios das tempestades de chuva.\nPara isso, foi até a cidade de Eletrolândia, que é a cidade com maior ocorrência de raios no mundo. O prefeito\ntem tanto orgulho desse título que mandou criar um sistema para registrar os raios. Jorge conseguiu um relatório\ncom as ocorrências de cada raio que caiu na cidade nos últimos anos.\nO mapa de Eletrolândia é um retângulo. Para o sistema de registro a cidade é subdividida em quadrados de um\nmetro de lado, denominados quadrantes. Assim, se a cidade tem 300 metros de largura e 1000 de comprimento,\nela será subdividida em 300.000 quadrantes. O sistema de registro armazena o quadrante em que o raio caiu.\nCada quadrante é identificado pelas suas coordenadas X e Y, conforme ilustra a figura abaixo, que exemplifica\num mapa de uma cidade com oito metros de comprimento por cinco metros de largura (quarenta quadrantes).\n0\n1\n2\n3\n4\n0\n1\n2\n3\n4\n5\n6\n7\nComo os quadrantes são relativamente pequenos, Jorge decidiu que se dois raios caíram no mesmo quadrante,\npode-se considerar que caíram no mesmo lugar.\nTarefa\nSua missão é escrever um programa que receba as coordenadas dos raios que caíram em Eletrolândia nos últimos\nanos e determine se o mito estudado é realmente apenas um mito ou pode ser considerado verdade.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado).\nA primeira linha da entrada contém um número inteiro N (2 ≤N ≤500.000) representando o número de\nregistros de raios no relatório. Cada uma das N linhas seguintes contém 2 números inteiros X, Y (0 ≤X, Y ≤\n500), representando o registro de um raio que caiu no quadrante cujas coordenadas são (X, Y ).",
+    "output": "Seu programa deve imprimir, na saída padrão, o número 0 se nenhum raio caiu no mesmo lugar, ou o número 1\ncaso contrário. Note que você deve imprimir o número 1 mesmo que haja mais do que 1 par de raios que caíram\nno mesmo lugar.\n\n4",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "5\n1 1\n2 3\n3 3\n4 2\n4 4",
+            "output": "0"
+        },
+        {
+            "input": "8\n1 1\n2 2\n2 3\n4 4\n2 3\n6 5\n9 11\n10 10",
+            "output": "1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2009",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

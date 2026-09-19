@@ -1,0 +1,29 @@
+{
+    "title": "Frete",
+    "statement": "Nome do arquivo: frete.c, frete.cpp, frete.pas, frete.java, frete.js, frete.py2 ou\nfrete.py3\nO senhor Satoshi passou anos reclamando da empresa de correios do seu país, porque ela sempre\ntransportava suas encomendas usando um caminho que passava pelo número mínimo de cidades\nentre a cidade onde o senhor Satoshi mora e a cidade destino da encomenda. A empresa alegava\nque essa estratégia levava ao menor tempo para a entrega final da encomenda. O problema é que\nele notou que essa estratégia da empresa nem sempre levava ao menor preço para o frete total. Se\nele pudesse escolher o caminho por onde a encomenda deveria passar para ir da sua cidade para a\ncidade destino, ele poderia economizar bastante com o frete, já que não havia muita urgência para\na maioria de suas encomendas.\nDepois de muita reclamação, a empresa finalmente está dando aos clientes a opção de determinar\no caminho por onde a encomenda deve passar. O senhor Satoshi, feliz da vida, agora quer a sua\najuda para implementar um programa que, dado o custo de transporte de uma encomenda entre\nvários pares de cidades pelo país, para os quais a empresa realiza entregas diretas, determine qual\né o preço total mínimo para o frete entre a cidade onde ele mora e a cidade destino da encomenda.\n1\n2\n4\n3\n5\n4\n2\n5\n3\n6\n1\ncusto\ncidade\nO país tem N cidades, identificadas pelos números de 1 a N. O senhor Satoshi mora na cidade 1 e\no destino da encomenda será sempre a cidade N. É garantido que sempre haverá um caminho de 1\naté N. No exemplo da figura, para N = 5, o custo mínimo será 7, para o caminho 1 →2 →4 →5.",
+    "input": "A primeira linha da entrada contém dois números inteiros N e M, representando o número de\ncidades e quantos pares de cidades possuem entrega direta de encomenda pela empresa. As M\nlinhas seguintes contêm, cada uma, três inteiros A, B e C, indicando que a empresa realiza a\nentrega de uma encomenda diretamente entre as cidades A e B, cobrando o preço C.",
+    "output": "Seu programa deve imprimir uma linha contendo um inteiro representando o preço mínimo total\npara o frete entre a cidade onde o senhor Satoshi mora, a cidade 1, e a cidade destino da encomenda,\na cidade N.",
+    "constraints": "- 2 ≤N ≤100 e 1 ≤M ≤1000\n- 1 ≤A, B ≤N e A̸ = B\n- 1 ≤C ≤1000\n- 7",
+    "examples": [
+        {
+            "input": "5 6\n1 2 4\n1 3 3\n4 3 6\n4 5 2\n2 4 1\n3 5 5",
+            "output": "7"
+        },
+        {
+            "input": "7 10\n1 2 5\n3 1 32\n1 4 3\n2 3 4\n2 6 20\n6 3 1\n6 4 9\n6 5 6\n3 7 18\n5 7 2",
+            "output": "18"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2017",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

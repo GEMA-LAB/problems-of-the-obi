@@ -1,0 +1,29 @@
+{
+    "title": "Insensibilidade",
+    "statement": "Nome do arquivo fonte: insens.c, insens.cpp ou insens.pas\nO planeta Bizz fica a 133 upals de distância do planeta Terra (onde “upals” é uma unidade de medida dada\npor “um monte de anos-luz”), e parece ser o único planeta com vida for além do nosso. Este planeta é muito\ninteressante, pois, em cada país, seus habitantes têm uma característica diferente.\nUm desses países é a Cegônia, que tem como característica o fato de que todos os seus habitantes são cegos. Em\ncompensação, todos possuem um “sexto sentido” acentuado, podendo perceber o que está à sua volta mesmo\nsem enxergar.\nEste ano, o governo da Cegônia fará um censo, e dentre os dados de seus habitantes, quer saber o quanto de\ninsensibilidade cada pessoa possui. A insensibilidade indica quão ruim é a capacidade das pessoas de perceber\nos objetos à sua volta sem precisar enxergar.\nTal teste é feito da seguinte maneira: a pessoa é colocada em uma sala onde encontram-se vários objetos em\nposições pré-determinadas. A pessoa deve, então, dizer quais são as coordenadas de cada objeto dentro da sala.\nPara cada objeto, calcula-se o quadrado da distância entre a posição adivinhada pela pessoa e a posição real do\nobjeto; esse valor é chamado de D. O nível de insensibilidade da pessoa é dado pela soma de todos os D.\nPor exemplo, suponha que na sala existam 4 objetos, nas coordenadas (1, 1), (3, 4), (5, 7) e (10, 10). Se a pessoa\nentão disser que os objetos estão, respectivamente, nas posições (1, 2), (5, 4), (5, 7) e (19, 10), o valor de D para\ncada objeto será 1, 4, 0 e 81 e portanto o nível de insensibilidade da pessoa é 1 + 4 + 0 + 81 = 86.\nVocê precisa fazer um programa que, dadas as coordenadas verdadeiras dos objetos e as coordenadas indicadas\npor uma pessoa, diga qual é o nível de insensibilidade dessa pessoa.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém um único inteiro N (1 ≤N ≤1.000), indicando quantos objetos\nestão no quarto. As N linhas seguintes contêm cada uma quatro inteiros X1, Y1, X2, Y2 (0 ≤Xi ≤1000). Cada\nlinha representa um objeto: a posição real do objeto é (X1, Y1), e a posição onde a pessoa disse estar tal objeto\né (X2, Y2).",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha, contendo um único inteiro, indicando o nível\nde insensibilidade da pessoa estudada.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "1 1 1 2\n3 4 5 4\n5 7 5 7\n10 10 19 10",
+            "output": ""
+        },
+        {
+            "input": "0 0 0 0\n1 3 1 3\n4 10 11 10\n2 2 3 3\n0 1 0 1",
+            "output": ""
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2008",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

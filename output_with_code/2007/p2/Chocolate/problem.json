@@ -1,0 +1,33 @@
+{
+    "title": "Chocolate",
+    "statement": "Nome do arquivo fonte: choc.c, choc.cpp, ou choc.pas\nJuliana é uma famosa doceira reconhecida internacionalmente pelos seus bombons, exportados para todo o\nmundo. Embora não revele a ninguém as suas receitas, ela já deu entrevistas contando alguns de seus segredos.\nSua fábrica de bombons utiliza somente chocolates comprados de um único produtor suíço, que envia barras\ngigantescas que são cortadas por grandes máquinas.\nDada uma barra grande de chocolate, Juliana realiza divisões sucessivas da barra até obter uma barra\nque contém a quantidade exata de chocolate para aquela receita.\nApós cada divisão, ela seleciona um dos\npedaços resultantes e armazena os demais para uso futuro. As divisões são determinadas por critérios técnicos\nrelacionados ao tamanho das barras e aos equipamentos disponiveis em um dado momento.\nPor exemplo, se ela deseja obter uma barra de 100g de chocolate a partir de uma barra de 3Kg, primeiro\nela divide a barra ao meio.\nEm seguida, um dos pedaços é dividido em cinco partes iguais e por fim, um\ndesses pedaços de 300g é dividido em 3 pedaços, resultando no pedaço de 100g necessário para a receita. Nesse\nprocesso, 1 pedaço é utilizado para a receita e 7 pedaços de diferentes tamanhos serão guardados para uso\nfuturo. A figura abaixo ilustra esse cenário.\nBarra original\nDivisões na barra original e pedaços da barra\ndividida\nO pedaço marcado será utilizado na receita\nTarefa\nDada uma sequência de divisões realizadas por Juliana em uma barra de chocolate, determinar quantos pedaços\nserão armazenados em estoque para uso futuro.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém um inteiro N que indica o número de divisões feitas na barra de\nchocolate original (1 ≤N ≤1.000). A linha seguinte contém N inteiros I (2 ≤I ≤10) representando o número\nde pedaços em que o pedaço atual foi dividido. Sempre que é feita uma divisão, um pedaço é utilizado para a\npróxima divisão e os demais são separados para serem armazenados em estoque.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha, contendo o número de pedaços de chocolate\nque serão armazenados em estoque.\nEntrada\n3\n2 3 5\nSaída\n7\nEntrada\n5\n2 2 2 3 3\nSaída\n7\nEntrada\n7\n2 3 4 5 6 7 8\nSaída\n28",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3\n2 3 5",
+            "output": "7"
+        },
+        {
+            "input": "5\n2 2 2 3 3",
+            "output": "7"
+        },
+        {
+            "input": "7\n2 3 4 5 6 7 8",
+            "output": "28"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2007",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

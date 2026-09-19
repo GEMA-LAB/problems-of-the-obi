@@ -1,0 +1,25 @@
+{
+    "title": "Caça ao Tesouro",
+    "statement": "Arquivo fonte: tesouro.c, tesouro.cc, tesouro.cpp ou tesouro.pas\nQuando limpavam o porão da casa recentemente herdada, os primos João e José descobriram um\nantigo mapa guardado no baú que havia sido de seu bisavô. O mapa parecia descrever uma ilha,\nera muito antigo, e em meio a indicações de caminhos pela ilha, continha apenas um nome: Huyn\nChong Chong. Curiosos, João e José pesquisaram o nome na bilbioteca do colégio e na Internet.\nPara sua surpresa e excitação, o nome era relacionado a uma antiga lenda de um tesouro escon-\ndido por piratas no século XVIII.\nEncantados com a lenda, os primos acreditaram ter encontrado o mapa que os levaria ao tesouro,\nescondido na ilha de Huyn Chong Chong, próximo à Coréia do Sul. O tesouro, dizia a lenda, con-\ntinha uma arca cheia de pedras preciosas muito raras e valiosas. Certos de que encontrariam o\ntesouro, os primos embarcaram rumo à ilha. Cada um dos primos se imaginava mais esperto do\nque o outro, e acreditava que encontraria o tesouro primeiro. Assim, eles combinaram que cada\num ficaria com a parte do tesouro que encontrasse. Os primos então se separaram, e começaram a\nprocurar o tesouro, especialmente a arca. Cada um dos primos tomou o caminho que imaginava\nque o levaria até a arca, e seguindo a indicação do mapa, ambos foram encontrando várias jóias\npelo caminho. Coincidentemente, os dois primos cheragam ao mesmo tempo no local onde a arca\nestava escondida. Como os dois encontraram a arca ao mesmo tempo, eles tinham agora que deci-\ndir como dividir o tesouro. Depois de analisar algumas alternativas, os primos concordaram em\nfazer a divisão da seguinte forma. Cada um ficaria com a parte do tesouro que encontrou antes de\nchegar à arca, e o conteúdo da arca seria dividido de forma que os dois ficassem com partes do\ntesouro total de mesmo valor. Para fazer a divisão desta forma, ao chegar de volta ao Brasil, os pri-\nmos mandaram avaliar cada jóia do tesouro. Contudo, eles estão agora em dúvida se é possível\nfazer a divisão conforme eles haviam combinado. Você, como amigo dos dois primos (agora mili-\nonários), e esperando receber alguma recompensa, dispôs-se a ajudá-los a descobrir se é possível\nfazer tal divisão.\n1. Tarefa\nSão dados:\n•\no valor dos objetos coletados por João e por José antes de encontrarem a arca;\n•\numa lista de valores, correspondentes aos objetos encontrados dentro da arca.\nComo as jóias são muito valiosas, estes valores são dados em unidades de R$ 1.000,00, ou seja, o\nvalor 10 significa R$ 10.000,00. Você deve escrever um programa que determina se é possível\ndividir os objetos da arca de forma que, considerados também os valores dos objetos encontrados\nanteriormente (que ficarão com quem os encontrou), os primos recebam partes do tesouro com o\nmesmo valor.",
+    "input": "Seu programa deve ler vários conjuntos de testes. A primeira linha de um conjunto de testes con-\ntém três números inteiros X, Y e N. Os valores X eY representam respectivamente a soma dos valo-\nres encontrados por João e por José antes de chegarem à arca. O valor N indica o número de\nobjetos encontrados na arca. Seguem-se N linhas, cada uma contendo um número inteiro V, cor-\nrespondendo ao valor de um dos objetos da arca. O final da entrada é indicado por X = Y = N = 0.\n\n5\nExemplo de Entrada\n10 20 4\n3\n8\n7\n2\n1 1 6\n2\n7\n7\n12\n5\n3\n0 0 0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "10 20 4\n3\n8\n7\n2\n1 1 6\n2\n7\n7\n12\n5\n3\n0 0 0\n3. Saída\nPara cada conjunto de teste da entrada seu programa deve produzir três linhas na saída. A primeira\nlinha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é numerado\na partir de 1. A segunda linha deve conter o caractere ‘S’ caso seja possível dividir o tesouro como\ncombinado pelos dois primos, ou o caractere ‘N’ caso contrário. A terceira linha deve ser deixada\nem branco. A grafia mostrada no Exemplo de Saída, abaixo, deve ser seguida rigorosamente.",
+            "output": "Teste 1\nS\nTeste 2\nN\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2002",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,29 @@
+{
+    "title": "Uiquipédia",
+    "statement": "Nome do arquivo fonte: uiqui.c, uiqui.cpp, ou uiqui.pas\nA Uiquipédia (Wikipedia em inglês), fundada em 2001 por Jimmy Wales e Larry Sanger, é um site onde qualquer\npessoa pode editar os artigos, fazendo correções ou ampliando seu conteúdo.\nUma das grandes vantagens da Uiquipédia sobre enciclopédias de papel é a facilidade de seguir referências;\ncom um simples clique, é possível ir de um artigo para outro relacionado. Essas referências são chamadas de\nreferências diretas. Também é possível navegar a Uiquipédia seq¨uencialmente: cada artigo possui referência\npara o artigo anterior e para o posterior, na ordem alfabética. Essas referências são chamadas de referências\nsequenciais.\nPor exemplo, um artigo para o termo “Elefante” pode ter uma referencia direta para “Mamiferos” em seu\ntexto, desta forma pode-se chegar de “Elefante” a “Mamiferos” em um clique. Observe que pode não existir a\nreferência direta contrária, ou seja, de “Mamiferos” para “Elefante”. Adicionalmente se “Elevador” é o próximo\nartigo depois de “Elefante”, na ordem alfabetica, pode-se ir com um clique de “Elefante” para “Elevador” e de\n“Elevador” para “Elefante”, pois há uma referencia sequencial entre eles.\nPaulo e André são dois amigos que contribuem para a Uiquipédia. Muitas vezes, André edita um artigo e\nquer que Paulo o ajude a revisar a modificação. A conexão de Paulo à Internet é discada, e por isso ele quer\nchegar na página que André editou usando o menor número de cliques possível, comecando do artigo em que\nestá, e navegando apenas por referencias, diretas ou sequenciais.\nTarefa\nEscreva um programa que, dados todas as referências diretas existentes na Uiquipédia, a página onde Paulo\nestá, e a página editada por André, determina de quantos cliques Paulo precisa, no mínimo, para ver a página\nque foi modificada por André, utilizando as referências diretas e sequenciais.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha contém um único inteiro, N, que é o número de referências da Uiquipédia (1 ≤\nN ≤1.000). As N linhas contém cada uma duas strings X e Y , separadas por um espaço, que são os nomes\nde duas páginas da Uiquipédia conectadas por uma referência direta (de X para Y ). Todo artigo existente\nna Uiquipédia aparece pelo menos uma vez na descricao das referencias diretas, permitindo que as referencias\nsequenciais sejam extraidas das informacoes dadas. Note que uma referência direta pode ligar duas páginas que\nestariam ligadas também por uma referência sequencial.\nDepois da descrição das referências, há uma linha em branco, e a linha seguinte contém duas cadeias de\ncaracteres, P e A, que são a página atual de Paulo e a página editada por André. O nome de cada página é\nlimitado a 100 caracteres e contém somente letras maíusculas, letras minusculas e o símbolo ’ ’. Observe que na\nordem alfabetica o simbolo ’ ’ é anterior às letras maiusculas, que por sua vez sao anteriores às letras minusculas.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha, contendo um único inteiro, que diz o número\nmínimo de cliques que são necessários para ir da página atual de Paulo até a página editada por André. Sempre\né possível navegar de um artigo a outro.\n\n5\nEntrada\n3\nPink_Floyd O_Lado_Escuro_Da_Lua\nPink_Floyd O_Muro\nO_Muro Muro_de_Berlim\nO_Muro O_Lado_Escuro_Da_Lua\nSaída\n1\nEntrada\n4\nChaves Quico\nQuico Chiquinha\nProfessor_Girafales Dona_Florinda\nChaves Dona_Clotilde\nChaves Chiquinha\nSaída\n2",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3\nPink_Floyd O_Lado_Escuro_Da_Lua\nPink_Floyd O_Muro\nO_Muro Muro_de_Berlim\nO_Muro O_Lado_Escuro_Da_Lua",
+            "output": "1"
+        },
+        {
+            "input": "4\nChaves Quico\nQuico Chiquinha\nProfessor_Girafales Dona_Florinda\nChaves Dona_Clotilde\nChaves Chiquinha",
+            "output": "2"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2007",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}
