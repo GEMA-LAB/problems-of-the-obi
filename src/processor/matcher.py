@@ -49,6 +49,124 @@ def get_tokens(text: str) -> list[str]:
     return tokens
 
 
+# Mapeamento consolidado de aliases historicos da OBI para gabaritos e solucoes
+GLOBAL_ALIASES = {
+    # 2002
+    "temperaturalunar": "lua",
+    # 2003
+    "cofrinhosdavovitoria": "cofre",
+    "numerodeerdos": "erdos",
+    "numerosdeerdos": "erdos",
+    "torresdehanoi": "hanoi",
+    # 2004
+    "cubraosfuros": "furos",
+    "protejasuasenha": "senha",
+    "tvdavovo": "tv",
+    # 2005
+    "campodeminhocas": "minhoca",
+    "frotadetaxi": "taxi",
+    "minipoker": "poker",
+    "pedidodedesculpas": "desculpa",
+    "transmissaodeenergia": "energia",
+    # 2006
+    "colheitadecaju": "caju",
+    "jogodecartas": "cartas",
+    # 2007
+    "detectandocolisoes": "colisoes",
+    "detetandocolisoes": "colisoes",
+    "paoametro": "metro",
+    "quadradomagico": "magico",
+    # 2008
+    "fretedafamiliasilva": "frete",
+    "lanchenaempresa": "lanche",
+    "acoesdabolsa": "acoes",
+    "minicalculadora": "minicalc",
+    # 2009
+    "avioesdepapel": "papel",
+    "competicaodechocolate": "chocolate",
+    "feiradebacterias": "bacterias",
+    "numerodeenvelopes": "envelopes",
+    "caminhodaspontes": "pontes",
+    "cacadoresdemitos": "mito",
+    "notasdaprova": "nota",
+    # 2010
+    "sedexmarciano": "marciano",
+    "listadechamada": "chamada",
+    "dancaindigena": "danca",
+    "escadarolante": "escada",
+    # 2011
+    "progressoesaritmeticas": "pas",
+    "pulodosapo": "pulosapo",
+    "desafiocartografico": "cartografico",
+    "omarnaosataparapeixe": "pesca",
+    "omarnaoestepeixe": "pesca",
+    "omarnaoestaparapeixe": "pesca",
+    "campominado": "campominado",
+    "transportedeconteineres": "transporte",
+    "cacaaotesouro": "tesouro",
+    # 2012
+    "vicecampeao": "vice",
+    "frequencianaaula": "frequencia",
+    "desafiodomaiornumero": "maior",
+    "buscanainternet": "busca",
+    "otabuleiroesburacado": "cavalo",
+    "albumdefotos": "fotos",
+    # 2013
+    "tiraoalvo": "alvo",
+    "catalogodemusicas": "catalogo",
+    "saldodovovo": "saldo",
+    # 2015
+    "impedimento": "impedido",
+    "fitacolorida": "fita",
+    "premiodomilhao": "premio",
+    "chocolatedefrutas": "chocolate",
+    # 2017
+    "segredodocofre": "cofre",
+    "cortandoopapel": "papel",
+    "darioexerxes": "dario",
+    "dividindooimperio": "imperio",
+    # 2019
+    "aidadededonamonica": "idade",
+    "distanciaentreamigos": "amigos",
+    "sequenciasecreta": "sequencia",
+    # 2020
+    "donaformiga": "formiga",
+    "donalesma": "lesma",
+    "trespordois": "3por2",
+    "entregadecaixas": "caixas",
+    "divisaodotesouro": "tesouro",
+    "aplicativodecalorias": "calorias",
+    "coberturaparacelular": "celular",
+    "palavrascruzadas": "cruzadas",
+    # 2021
+    "duplasdetenis": "tenis",
+    "torneiodetenis": "tenis",
+    "srsapo": "sapo",
+    "donaminhoca": "minhoca",
+    "senhadavozinha": "senha",
+    "idadedecamila": "idade",
+    "mediaemediana": "media",
+    "pesquisadeprecos": "pesquisa",
+    "planodeestacionamento": "plano",
+    "planodeinternet": "plano",
+    # 2022
+    "restaurantedepizza": "pizza",
+    "construcaoderodovia": "rodovia",
+    "viagemdeonibus": "viagem",
+    # 2023
+    "agrandecasquinha": "casquinha",
+    "conversadospinguins": "pinguins",
+    "oficinamecanica": "oficina",
+    "srtoupeira": "toupeira",
+    "triodebonecas": "bonecas",
+    # 2024
+    "fefeoojogosdosmonstrinhos": "fefe",
+    "fabricadetesouras": "tesouras",
+    "christinaeosbombons": "bombons",
+    "saladadefrutas": "salada",
+}
+
+
 def calculate_solution_match_score(
     question_title: str,
     file_stem: str,
@@ -58,9 +176,12 @@ def calculate_solution_match_score(
     Calcula pontuacao de correspondencia heuristica (0 a 100):
     100: Exatidao normalizada
     95:  Alias explicito
-    80-95: Intersecao completa de tokens sem stopwords
+    90:  Alias global conhecido
+    85:  Intersecao completa de tokens sem stopwords
     75:  Slug reverso (file_stem comeca com target_slug)
-    50-70: Prefixo por separador (_ ou -)
+    70:  Token lider do arquivo igual a um token significativo da questao
+    60:  Prefixo de token lider do arquivo
+    50:  Prefixo do arquivo por separador
     0:   Nao corresponde
     """
     target_slug = normalize_name(question_title)
@@ -76,6 +197,13 @@ def calculate_solution_match_score(
     if alias_slug and (stem_norm == alias_slug or alias_slug in stem_norm):
         return 95
 
+    # Verificacao de aliases conhecidos
+    known_alias = GLOBAL_ALIASES.get(target_slug)
+    if known_alias:
+        ka_norm = normalize_name(known_alias)
+        if stem_norm == ka_norm or stem_norm.startswith(ka_norm):
+            return 90
+
     q_tokens = [w for w in get_tokens(question_title) if w not in STOPWORDS_PT]
     f_tokens = get_tokens(file_stem)
 
@@ -87,8 +215,20 @@ def calculate_solution_match_score(
     if stem_norm.startswith(target_slug) and len(target_slug) >= 3:
         return 75
 
-    # Prefixo antes de separador
+    # Token lider do arquivo sem digitos finais
     if f_tokens:
+        lead_raw = f_tokens[0]
+        lead_token = re.sub(r"\d+$", "", lead_raw)
+        if len(lead_token) >= 3:
+            # Match exato de um token significativo da questao
+            if lead_token in q_tokens:
+                return 70
+            # Prefixo de um token significativo (>= 3 chars)
+            for qt in q_tokens:
+                if len(qt) >= 3 and (qt.startswith(lead_token) or lead_token.startswith(qt)):
+                    if len(min(qt, lead_token)) >= 3:
+                        return 60
+
         first_token = f_tokens[0]
         if len(first_token) >= 3:
             if first_token == target_slug:
@@ -101,7 +241,6 @@ def calculate_solution_match_score(
 
 
 class ResourceMatcher:
-
     """Localiza arquivos de gabarito e codigos de solucao oficial de forma resiliente."""
 
     def __init__(
@@ -115,31 +254,33 @@ class ResourceMatcher:
     def find_gabarito(self, question: QuestionFolder) -> Optional[TestCaseSource]:
         """
         Busca o arquivo .zip de gabarito correspondente a questao.
-        Prioriza ano e nivel; caso nao encontre, busca pelo ano e name_norm.
+        Prioriza ano e nivel; caso nao encontre, busca pelo ano e name_norm com fallback para aliases.
         """
         if not self.gabaritos_dir.exists():
             return None
 
         target_slug = question.titulo_normalizado
+        alias_target = GLOBAL_ALIASES.get(target_slug, "")
 
         # 1. Busca em gabaritos/[ano]/[nivel]/
         path_nivel = self.gabaritos_dir / str(question.ano) / question.nivel.lower()
         if path_nivel.exists():
             for zip_file in path_nivel.glob("*.zip"):
-                if normalize_name(zip_file.stem) == target_slug:
+                stem_slug = normalize_name(zip_file.stem)
+                if stem_slug == target_slug or (alias_target and stem_slug == alias_target):
                     return TestCaseSource(
                         path_zip=zip_file,
                         ano=question.ano,
                         nivel=question.nivel.lower(),
-                        nome_normalizado=normalize_name(zip_file.stem),
+                        nome_normalizado=stem_slug,
                     )
 
-        # 2, Busca em gabaritos/[ano]/ recursivo
+        # 2. Busca em gabaritos/[ano]/ recursivo
         path_ano = self.gabaritos_dir / str(question.ano)
         if path_ano.exists():
             for zip_file in path_ano.rglob("*.zip"):
                 stem_slug = normalize_name(zip_file.stem)
-                if stem_slug == target_slug:
+                if stem_slug == target_slug or (alias_target and stem_slug == alias_target):
                     return TestCaseSource(
                         path_zip=zip_file,
                         ano=question.ano,
@@ -147,17 +288,25 @@ class ResourceMatcher:
                         nome_normalizado=stem_slug,
                     )
 
-        # 3. Correspondencia parcial (quando o zip contem ou e substring do titulo)
+        # 3. Correspondencia parcial (quando o zip contem ou e substring do titulo ou do alias)
         if path_ano.exists():
             for zip_file in path_ano.rglob("*.zip"):
                 stem_slug = normalize_name(zip_file.stem)
-                if stem_slug and len(stem_slug) >= 4 and (stem_slug in target_slug or target_slug in stem_slug):
-                    return TestCaseSource(
-                        path_zip=zip_file,
-                        ano=question.ano,
-                        nivel=zip_file.parent.name.lower(),
-                        nome_normalizado=stem_slug,
-                    )
+                if stem_slug and len(stem_slug) >= 4:
+                    if stem_slug in target_slug or target_slug in stem_slug:
+                        return TestCaseSource(
+                            path_zip=zip_file,
+                            ano=question.ano,
+                            nivel=zip_file.parent.name.lower(),
+                            nome_normalizado=stem_slug,
+                        )
+                    if alias_target and (stem_slug in alias_target or alias_target in stem_slug):
+                        return TestCaseSource(
+                            path_zip=zip_file,
+                            ano=question.ano,
+                            nivel=zip_file.parent.name.lower(),
+                            nome_normalizado=stem_slug,
+                        )
 
         return None
 
@@ -168,7 +317,7 @@ class ResourceMatcher:
     ) -> List[SolutionSource]:
         """
         Busca arquivos de codigo ou zips de solucao oficial para a questao
-        utilizando correspondencia heuristica em 4 camadas e desambiguacao por especificidade.
+        utilizando correspondencia heuristica em multiplas camadas e desambiguacao por especificidade.
         """
         if not self.codigo_dir.exists():
             return []
@@ -235,3 +384,4 @@ class ResourceMatcher:
                     )
 
         return solutions
+

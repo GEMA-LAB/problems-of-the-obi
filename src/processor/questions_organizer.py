@@ -135,18 +135,50 @@ class QuestionsOrganizer:
         inputs_dir = test_cases_dir / "inputs"
 
 
-        # 1. Verificacao de Idempotencia (Regra R3)
+        # 1. Verificacao de Idempotencia de Testes (Regra R3)
+        testes_ja_normalizados = False
         if not config.force and inputs_dir.exists():
             existing_inputs = list(inputs_dir.glob("*.in"))
             if len(existing_inputs) > 0:
+                testes_ja_normalizados = True
                 # Garante que arquivos soltos na raiz de test_cases/ sejam limpos
                 for item in list(test_cases_dir.iterdir()):
                     if item.is_file():
                         item.unlink(missing_ok=True)
+                
+                # Verifica se solutions/ ja existe e possui arquivos
+                solutions_dir = question.path / "solutions"
+                has_solutions = solutions_dir.exists() and any(solutions_dir.iterdir())
+                
+                # Se ja tem testes e ja tem solucoes, retorna imediatamente como ignorado_idempotente
+                if has_solutions:
+                    return OrganizeResult(
+                        questao=question.titulo,
+                        status="ignorado_idempotente",
+                        mensagem="Testes e solucoes ja existentes (force=False)",
+                    )
+                
+                # Se tem testes mas nao tem solucoes, tenta sincronizar solucoes oficiais
+                solutions = self.matcher.find_solutions(question)
+                solutions_count = 0
+                if solutions:
+                    solutions_dir.mkdir(parents=True, exist_ok=True)
+                    for sol in solutions:
+                        if sol.path_arquivo.suffix.lower() == ".zip":
+                            extracted = self.zip_extractor.extract_solutions(
+                                sol.path_arquivo, solutions_dir
+                            )
+                            solutions_count += len(extracted)
+                        else:
+                            dest_file = solutions_dir / sol.path_arquivo.name
+                            shutil.copy2(sol.path_arquivo, dest_file)
+                            solutions_count += 1
+
                 return OrganizeResult(
                     questao=question.titulo,
+                    solutions_count=solutions_count,
                     status="ignorado_idempotente",
-                    mensagem="Testes ja normalizados existentes (force=False)",
+                    mensagem="Testes existentes preservados; solucoes sincronizadas" if solutions_count > 0 else "Testes ja normalizados existentes (force=False)",
                 )
 
         # 2. Localizacao de gabarito
