@@ -119,16 +119,16 @@ def test_cli_organize_testcases_alias_step():
             assert call_kwargs["config"].force is False
 
 
-def test_cli_export_python_dataset_step():
-    test_args = ["main.py", "--step", "export-python-dataset", "--ano", "2024", "--nivel", "pj", "--force"]
+def test_cli_export_dataset_python_step():
+    test_args = ["main.py", "--step", "export-dataset", "--python", "--ano", "2024", "--nivel", "pj", "--force"]
 
     with patch.object(sys, "argv", test_args):
-        with patch("main.PythonDatasetBuilder") as mock_builder_cls:
+        with patch("main.LanguageDatasetBuilder") as mock_builder_cls:
             mock_instance = MagicMock()
             mock_builder_cls.return_value = mock_instance
             mock_instance.build_dataset.return_value = {
                 "total_questoes_analisadas": 10,
-                "questoes_com_python": 5,
+                "questoes_com_solucao": 5,
                 "questoes_exportadas": 5,
             }
 
@@ -137,9 +137,63 @@ def test_cli_export_python_dataset_step():
             mock_builder_cls.assert_called_once()
             mock_instance.build_dataset.assert_called_once()
             call_kwargs = mock_instance.build_dataset.call_args.kwargs
+            assert call_kwargs["language"] == "python"
             assert call_kwargs["ano_filtro"] == 2024
             assert call_kwargs["nivel_filtro"] == "pj"
             assert call_kwargs["force"] is True
+
+
+def test_cli_export_dataset_cpp_step():
+    test_args = ["main.py", "--step", "export-dataset", "--cpp", "--ano", "2023"]
+
+    with patch.object(sys, "argv", test_args):
+        with patch("main.LanguageDatasetBuilder") as mock_builder_cls:
+            mock_instance = MagicMock()
+            mock_builder_cls.return_value = mock_instance
+            mock_instance.build_dataset.return_value = {"questoes_exportadas": 3}
+
+            main()
+
+            mock_builder_cls.assert_called_once()
+            mock_instance.build_dataset.assert_called_once()
+            call_kwargs = mock_instance.build_dataset.call_args.kwargs
+            assert call_kwargs["language"] == "cpp"
+            assert call_kwargs["ano_filtro"] == 2023
+
+
+def test_cli_export_dataset_lang_argument():
+    test_args = ["main.py", "--step", "export-dataset", "--lang", "java"]
+
+    with patch.object(sys, "argv", test_args):
+        with patch("main.LanguageDatasetBuilder") as mock_builder_cls:
+            mock_instance = MagicMock()
+            mock_builder_cls.return_value = mock_instance
+            mock_instance.build_dataset.return_value = {"questoes_exportadas": 2}
+
+            main()
+
+            mock_builder_cls.assert_called_once()
+            mock_instance.build_dataset.assert_called_once()
+            call_kwargs = mock_instance.build_dataset.call_args.kwargs
+            assert call_kwargs["language"] == "java"
+
+
+def test_cli_export_python_dataset_legacy_step():
+    test_args = ["main.py", "--step", "export-python-dataset"]
+
+    with patch.object(sys, "argv", test_args):
+        with patch("main.LanguageDatasetBuilder") as mock_builder_cls:
+            mock_instance = MagicMock()
+            mock_builder_cls.return_value = mock_instance
+            mock_instance.build_dataset.return_value = {"questoes_exportadas": 5}
+
+            main()
+
+            mock_builder_cls.assert_called_once()
+            mock_instance.build_dataset.assert_called_once()
+            call_kwargs = mock_instance.build_dataset.call_args.kwargs
+            assert call_kwargs["language"] == "python"
+
 
 
 
