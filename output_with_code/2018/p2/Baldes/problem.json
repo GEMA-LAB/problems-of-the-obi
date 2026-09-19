@@ -1,0 +1,30 @@
+{
+    "title": "Baldes",
+    "statement": "Nome do arquivo:“baldes.x”,onde x deve ser c|cpp|pas|java|js|py2|py3\nTemos uma sequência de N baldes, identiﬁcados de1 até N, cada balde contendo inicialmente\numa bola de peso inteiro positivo. Queremos realizar uma sequência deM operações de dois tipos\npossíveis:\n1. Adicionar uma bola de pesop ao balde i;\n2. Dados a e b, com 1≤ a < b ≤ N, imprimir a maior diferença absoluta possível entre o peso\nde duas bolas, de baldes distintos, dentro do intervalo de baldes[a, b].\nPor exemplo, na ﬁgura abaixo, paraN = 6, o resultado da operação do tipo2 para o intervalo\n[2, 5] é 11, correspondente às bolas4 e 15, dos baldes2 e 3 respectivamente. Existe uma diferença\nabsoluta maior para as bolas15 e 2, mas elas estão no mesmo balde, portanto, essa diferença não\nconta.\n3\n1\n10\n2\n4\n15\n3\n2\n6\n9\n4\n8\n7\n5\n101\n6\n9\n9\n[2,5]",
+    "input": "A primeira linha da entrada contém dois inteiros,N e M, respectivamente, o número de baldes e\no número de operações. A segunda linha da entrada contémN inteiros indicando o peso da bola\ncontida em cada balde inicialmente. AsM linhas seguintes descrevem, cada uma, uma operação. Se\na operação é do primeiro tipo, a linha contém o número1 seguido de dois inteiros,P e I, indicando\no peso da bola a ser adicionada e o identiﬁcador do balde. Se a operação é do segundo tipo, a linha\ncontém o número2 seguido de dois inteiros,A e B, representando o intervalo[A, B] de baldes.",
+    "output": "Para cada operação do segundo tipo, imprima uma linha contendo a maior diferença absoluta\npossível entre o peso de duas bolas, de baldes distintos, dentro do intervalo em questão.",
+    "constraints": "- 2≤ N≤ 105;\n- 1≤ M≤ 105;\n- 1≤ A < B≤ N;\n- O peso das bolas está entre1 e 106;\n- A entrada contém pelo menos uma operação do segundo tipo.",
+    "examples": [
+        {
+            "input": "10 5\n3 9 12 4 20 5 7 15 9 10\n1 1 5\n1 33 8\n2 6 9\n1 15 2\n2 1 7",
+            "output": "28\n17"
+        },
+        {
+            "input": "2 3\n100 200\n2 1 2\n1 55 1\n2 1 2",
+            "output": "100\n145"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "p2",
+    "period": "Fase 3",
+    "topics": [
+        "segment tree",
+        "estruturas de dados"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 512
+}

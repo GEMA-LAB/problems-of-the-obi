@@ -81,7 +81,8 @@ def test_validate_and_cleanup_question_without_tests(tmp_path):
     kept = cleaner.validate_and_cleanup_question(q_dir, valid_pairs=[])
 
     assert kept is False
-    assert not q_dir.exists()
+    assert q_dir.exists()
+    assert (q_dir / "problem.json").exists()
 
 
 def test_migrate_legacy_directories(tmp_path):

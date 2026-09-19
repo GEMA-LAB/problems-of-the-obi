@@ -126,7 +126,7 @@ class QuestionsOrganizer:
         3. Normaliza pares sequenciais 1-para-1 em inputs/ e outputs/.
         4. Limpa residuos compilados e lixo em test_cases/.
         5. Copia e/ou extrai solucoes oficiais para solutions/.
-        6. Se nao possuir testes validos, expurga a pasta da questao.
+        6. Se nao possuir testes validos, preserva a questao e marca status='sem_testes'.
         """
         self.matcher.gabaritos_dir = config.pasta_gabaritos
         self.matcher.codigo_dir = config.pasta_codigo
@@ -197,16 +197,16 @@ class QuestionsOrganizer:
                     shutil.copy2(sol.path_arquivo, dest_file)
                     solutions_count += 1
 
-        # 4. Validacao e Expurgo Final (Regras R7, I1, I4)
-        kept = self.cleaner.validate_and_cleanup_question(
+        # 4. Validacao Final de Casos de Teste (Regras R7, I1, I4)
+        has_tests = self.cleaner.validate_and_cleanup_question(
             question.path, normalized_pairs
         )
 
-        if not kept:
+        if not has_tests:
             return OrganizeResult(
                 questao=question.titulo,
-                status="removido_sem_testes",
-                mensagem="Questao removida por ausencia de casos de teste validos",
+                status="sem_testes",
+                mensagem="Questao mantida sem casos de teste validos",
             )
 
         status = "sucesso" if solutions_count > 0 else "parcial"
@@ -239,6 +239,7 @@ class QuestionsOrganizer:
             "sucesso": 0,
             "parcial": 0,
             "ignoradas_idempotentes": 0,
+            "sem_testes": 0,
             "removidas_sem_testes": 0,
             "total_testes": 0,
             "total_solucoes": 0,
@@ -252,7 +253,8 @@ class QuestionsOrganizer:
                 stats["parcial"] += 1
             elif result.status == "ignorado_idempotente":
                 stats["ignoradas_idempotentes"] += 1
-            elif result.status == "removido_sem_testes":
+            elif result.status in ("sem_testes", "removido_sem_testes"):
+                stats["sem_testes"] += 1
                 stats["removidas_sem_testes"] += 1
 
             stats["total_testes"] += len(result.test_pairs)

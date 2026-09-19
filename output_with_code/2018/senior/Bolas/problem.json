@@ -1,0 +1,31 @@
+{
+    "title": "Bolas",
+    "statement": "Nome do arquivo:“bolas.x”,onde x deve ser c|cpp|pas|java|js|py2|py3\nTemos oito bolas, colocadas lado a lado em uma\nsequência. Cada bola tem um número impresso, que\npode ter valor de 0 até 9. Queremos trocar algumas\nbolas de posição na sequência de modo que nenhum\npar de bolas vizinhas na sequência tenha o mesmo nú-\nmero. Quer dizer, não pode haver duas bolas, uma ao\nlado da outra, com o mesmo número. A ﬁgura ao lado\nmostra um exemplo para o qual isso foi possível. Mas\nserá que sempre é possível? Seu programa deve decidir\nse é ou não possível obter uma sequência em que não\nhaja bolas vizinhas com o mesmo número.\n3 3 3 7 5 5 5 9\n3 3 3 7 5 59 5",
+    "input": "A única linha da entrada contém uma sequência de oito inteirosBi, para 1 ≤ i ≤ 8, representando\nos números impressos em cada bola da sequência.",
+    "output": "Imprima uma linha contendo o caractere “S” se for possível trocar bolas de posição e obter a\nsequência sem bolas vizinhas com o mesmo número; ou o caracter “N” se não for possível.",
+    "constraints": "- Bi é um inteiro entre0 e 9, inclusive.",
+    "examples": [
+        {
+            "input": "3 7 3 3 5 5 5 9",
+            "output": "S"
+        },
+        {
+            "input": "8 3 8 8 8 8 8 0",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "senior",
+    "period": "Fase 3",
+    "topics": [
+        "contagem",
+        "vetores",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

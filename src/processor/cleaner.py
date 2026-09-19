@@ -56,15 +56,14 @@ class DatasetCleaner:
     ) -> bool:
         """
         Valida se a questao possui casos de teste validos.
-        Se possuir, preserva problem.json e imgs/ e retorna True.
-        Se nao possuir pares validos, remove a pasta inteira da questao e retorna False.
+        Retorna True se possuir ao menos um par de teste valido em disco.
+        Retorna False se nao possuir pares validos, preservando a questao intacta sem remocao.
         """
         question_path = Path(question_path)
         if not question_path.exists():
             return False
 
         if not valid_pairs:
-            shutil.rmtree(question_path, ignore_errors=True)
             return False
 
         # Verifica se os arquivos de teste realmente existem em disco
@@ -73,11 +72,7 @@ class DatasetCleaner:
             for pair in valid_pairs
         )
 
-        if not has_at_least_one_valid:
-            shutil.rmtree(question_path, ignore_errors=True)
-            return False
-
-        return True
+        return has_at_least_one_valid
 
     def migrate_legacy_directories(
         self,

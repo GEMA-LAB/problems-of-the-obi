@@ -1,0 +1,35 @@
+{
+    "title": "Pulo do Gato",
+    "statement": "Nome do arquivo:“gato.x”,onde x deve ser c|cpp|pas|java|js|py2|py3\nO gato Obinho gosta de brincar no pátio do colégio, que tem a forma de um quadriculado deL\nlinhas por C colunas de lajotas, que podem ser brancas ou pretas. Obinho está na lajota inicial,\nna linha 1, coluna 1 (canto superior esquerdo), e quer ir pulando até a lajota ﬁnal, na linhaL,\ncoluna C (canto inferior direito). Mas ele só gosta de pular de uma lajota preta para outra lajota\npreta, nunca pisando numa lajota branca. Além disso, ele não consegue pular muito longe. A parte\nesquerda da ﬁgura mostra as lajotas que o Obinho pode alcançar com um pulo: qualquer lajota\ndentro do quadrado de5× 5 lajotas centrado na posição atual dele.\nObinho quer chegar na lajota ﬁnal com o número mínimo de pulos possível. Por exemplo, na parte\ndireita da ﬁgura, paraL = 10 e C = 14, o menor número de pulos possível é11. Seu programa\ndeve computar o número mínimo de pulos para o Obinho chegar na lajota ﬁnal!",
+    "input": "A primeira linha da entrada contém dois inteirosL e C, representando o número de linhas e colunas\ndo pátio. As L linhas seguintes contêm, cada uma,C inteiros indicando a cor das lajotas:1 para\npreta; 0 para branca.",
+    "output": "Imprima uma linha contendo o número mínimo de pulos que o gato Obinho precisa dar para ir da\nlajota inicial até a lajota ﬁnal. Se não for possível pular até a lajota ﬁnal, imprima−1.",
+    "constraints": "- 1≤ L, C≤ 500;\n- As lajotas inicial e ﬁnal são sempre pretas.",
+    "examples": [
+        {
+            "input": "10 14\n1 0 0 0 1 1 0 0 1 0 0 0 0 0\n0 1 1 0 0 0 0 0 0 0 1 0 1 0\n0 0 0 0 0 0 1 0 0 0 0 0 0 1\n0 0 0 0 0 0 0 0 0 1 0 0 0 0\n1 0 0 0 1 0 0 0 0 0 0 0 0 0\n1 1 0 0 0 0 0 0 0 0 0 0 0 1\n0 0 0 0 1 0 0 0 1 0 1 0 1 1\n0 0 1 0 0 1 0 1 0 0 0 0 0 0\n0 0 1 0 0 0 0 0 0 0 0 0 1 0\n1 0 0 0 0 0 0 1 0 0 0 0 0 1",
+            "output": "11"
+        },
+        {
+            "input": "10 14\n1 0 0 0 1 1 0 0 1 0 0 0 0 0\n0 1 1 0 0 0 0 0 0 0 1 0 1 0\n0 0 0 0 0 0 1 0 0 0 0 0 0 1\n0 0 0 0 0 0 0 0 0 1 0 0 0 0\n1 0 0 0 1 0 0 0 0 0 0 0 0 0\n1 1 0 0 0 0 0 0 0 0 0 0 0 1\n0 0 0 0 1 0 0 0 0 0 1 0 1 1\n0 0 1 0 0 1 0 1 0 0 0 0 0 0\n0 0 1 0 0 0 0 0 0 0 0 0 1 0\n1 0 0 0 0 0 0 1 0 0 0 0 0 1",
+            "output": "-1"
+        },
+        {
+            "input": "1 12\n1 1 1 1 1 1 1 1 1 1 1 1",
+            "output": "6"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "p1",
+    "period": "Fase 3",
+    "topics": [
+        "grafos",
+        "bfs",
+        "ad-hoc"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 256
+}

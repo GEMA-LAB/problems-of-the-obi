@@ -1,0 +1,31 @@
+{
+    "title": "Cápsulas",
+    "statement": "Nome do arquivo:“capsulas.x”,onde x deve ser c|cpp|pas|java|js|py2|py3\nO discípulo Fan Chi’ih retornou recentemente da China com algumas cápsulas mágicas, que são\ncapazes de produzir moedas de ouro! Uma cápsula possui um certo ciclo de produção, que é um\nnúmero C de dias. A cadaC dias a cápsula produz uma nova moeda; a moeda é sempre produzida\nno último dia do ciclo. Fan Chi’ih vai ativar todas as cápsulas ao mesmo tempo e quer acumular\numa fortuna de pelo menosF moedas. Ele precisa da sua ajuda para computar o número mínimo\nde dias para que as cápsulas produzam, no total, pelo menosF moedas. Na tabela abaixo, por\nexemplo, existem três cápsulas com ciclos de3, 7 e 2 dias. Se Fan Chi’ih quiser acumular pelo\nmenos 12 moedas, ele vai ter que esperar pelo menos14 dias.\ndia\ncápsula ciclo 1 2 3 4 5 6 7 8 9 10 11 12 13 14\n1 3 1 1 1 1\n2 7 1 1\n3 2 1 1 1 1 1 1 1",
+    "input": "A primeira linha da entrada contém dois inteirosN e F, indicando o número de cápsulas e o número\nde moedas que Fan Chi’ih quer produzir, respectivamente. A segunda linha contémN inteiros Ci,\npara 1≤ i≤ N, representando os ciclos de cada cápsula.",
+    "output": "Imprima um inteiro, representando o número mínimo de dias para que as cápsulas produzam, no\ntotal, pelo menosF moedas.",
+    "constraints": "- 1≤ N≤ 105; 1≤ F≤ 109\n- 1≤ Ci≤ 106\n- Em todos os casos de teste, a resposta é sempre menor ou igual a108 dias;\n- Em todos os casos de teste, o número de moedas produzido, no total, após108 dias, é sempre\n- menor ou igual a109.",
+    "examples": [
+        {
+            "input": "3 12\n3 7 2",
+            "output": "14"
+        },
+        {
+            "input": "10 100\n17 13 20 10 12 16 10 13 13 10",
+            "output": "130"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "busca binária",
+        "vetores",
+        "ad-hoc"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 512
+}

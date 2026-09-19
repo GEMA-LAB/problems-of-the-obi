@@ -1,0 +1,35 @@
+{
+    "title": "Relógios",
+    "statement": "Nome do arquivo:“relogios.x”,onde x deve ser c|cpp|pas|java|js|py2|py3\nÉ como se diz: mesmo um relógio parado está certo duas vezes\npor dia. Quer dizer, se um relógio está parado com seus ponteiros\nmarcando, digamos, 7:32, e você olhar para ele exatamente às\n7:32 da manhã, ou da noite, o relógio vai lhe mostrar a hora\ncerta! Ocoelhobrancoestáatrasado, muitoatrasado. Eleprecisa\nchegar ao seu destino o mais rápido possível, mas não pode, de\njeito nenhum, mas de jeito nenhum mesmo, passar por um relógio\nque não esteja lhe mostrando a hora certa.\n0\n3\n1\n2\n5\n4\n0\n3\n1\n2\n5\n4\n0\n3\n1\n2\n5\n4\n0\n3\n1\n2\n5\n4\n0\n3\n1\n2\n5\n4\n0\n3\n1\n2\n5\n4\n0\n3\n1\n2\n5\n4\nO coelho branco está na sala do canto superior esquerdo de um palácio que é um quadriculado de\nsalas iguais, cada uma delas contendo um relógio cujo marcador está dividido emK unidades de\ntempo, de 0 a K − 1, e que possuem apenas um ponteiro. Alguns relógios estão parados, enquanto\nos demais funcionam perfeitamente sincronizados. O coelho precisa chegar na sala do canto inferior\ndireito, pode se mover ortogonalmente apenas e leva exatamente uma unidade de tempo para ir de\numa sala para outra. Ele pode ﬁcar esperando parado, por uma quantidade inteira de unidades de\ntempo, numa sala cujo relógio esteja funcionando. Mas ele não pode entrar, nem ﬁcar esperando\nparado, em uma sala cujo relógio lhe esteja mostrando a hora errada!\nNo exemplo da ﬁgura,K = 6 e os relógios mostrados estão parados. Nas salas onde a ﬁgura não\nmostra o relógio, é porque ele está funcionando. Você consegue ver que, para esse exemplo, o tempo\nmínimo para o coelho branco chegar na sala inferior direita é 8 unidades de tempo?\nSeu programa precisa computar a quantidade mínima de unidades de tempo para o coelho branco\nchegar ao destino, se for possível chegar ao destino!",
+    "input": "A primeira linha da entrada contém três inteirosL, C e K, indicando, respectivamente, o número de\nlinhas, o número de colunas e a quantidade de unidades de tempo na qual o marcador dos relógios\nestá dividido. As L linhas seguintes contêm, cada uma,C inteiros P, representando o estado dos\nrelógios em cada sala: P = −1, se o relógio estiver funcionando corretamente; e0 ≤ P ≤ K − 1,\nse estiver parado com o ponteiro na posiçãoP. O relógio na sala inicial, primeira linha e primeira\ncoluna, está sempre parado na posição0.",
+    "output": "Imprima um inteiro, representando a quantidade mínima de unidades de tempo para o coelho branco\nchegar ao destino. Se não for possível, imprima−1.",
+    "constraints": "- 2 ≤ L, C ≤ 100\n- 2 ≤ K ≤ 105\n- − 1 ≤ P ≤ K − 1",
+    "examples": [
+        {
+            "input": "3 4 6\n0 -1 3 -1\n4 1 -1 1\n4 -1 2 -1",
+            "output": "8"
+        },
+        {
+            "input": "5 4 10\n0 -1 -1 -1\n-1 9 9 9\n4 9 -1 8\n-1 -1 9 7\n-1 7 9 -1",
+            "output": "-1"
+        },
+        {
+            "input": "5 4 10\n0 -1 -1 -1\n-1 9 9 9\n4 9 -1 8\n-1 2 9 9\n-1 7 9 -1",
+            "output": "20"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "grafos",
+        "dijkstra",
+        "menor caminho"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 512
+}

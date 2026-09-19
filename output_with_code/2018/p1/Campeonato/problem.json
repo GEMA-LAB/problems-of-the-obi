@@ -1,0 +1,39 @@
+{
+    "title": "Campeonato",
+    "statement": "Nome do arquivo:“campeonato.x”,onde x deve ser c|cpp|pas|java|js|py2|py3\nO sorteio das posições dos jogadores na chave decisiva da copa do mundo de ping-pong está deixando\na todos nervosos. É que ninguém quer pegar o jogador mais bem ranqueado, o Master Kung, logo\nnas oitavas de ﬁnal, ou nas quartas de ﬁnal. Melhor que só seja possível enfrentar Master Kung\nna semiﬁnal ou na ﬁnal! Os jogadores são identiﬁcados por números inteiros de1 a 16, sendo que\nMaster Kung é o jogador de número1. O jogador para o qual nós estamos torcendo, Master Lu,\ntem o número9.\nA chave possui16 posições também numeradas de1 a 16, como na ﬁgura abaixo. A organização\nda copa vai fazer um sorteio para deﬁnir em qual posição cada jogador vai iniciar a chave decisiva.\nNas oitavas de ﬁnal, o jogador na posição1 enfrenta o jogador na posição2; o da posição3 enfrenta\no da posição4; e assim por diante, como na ﬁgura.\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16\noitavas\nquartas\nsemifinal\nfinal\nposições na chave\nO objetivo deste problema é decidir em que fase da chave os jogadores Master Kung e Master Lu vão\nse enfrentar, caso vençam todas as suas respectivas partidas antes de se enfrentarem. Por exemplo,\nse o sorteio da chave determinar a seguinte ordem de jogadores da posição1 até a 16: [4, 11, 3, 2,\n8, 13, 14, 5, 16, 9, 12, 6, 10, 7, 1, 15], eles vão se enfrentar na semiﬁnal.",
+    "input": "A primeira e única linha da entrada contém16 números Xi inteiros distintos, de valores entre1 e\n16. Ou seja, uma permutação dos inteiros entre1 e 16. A permutação deﬁne a ordem dos jogadores\nnas posições da chave decisiva da copa.",
+    "output": "Seu programa deve produzir uma única linha contendo uma das palavras seguintes, decidindo a fase\nem que vão se enfrentar os jogadores Master Kung e Master Lu, se eles vencerem todas as suas\npartidas antes de se enfrentarem:oitavas, quartas, semifinal ou final.",
+    "constraints": "- 1 ≤ Xi ≤ 16",
+    "examples": [
+        {
+            "input": "4 11 3 2 8 13 14 5 16 9 12 6 10 7 1 15",
+            "output": "semifinal"
+        },
+        {
+            "input": "4 11 8 13 14 5 1 9 16 2 12 6 3 7 10 15",
+            "output": "oitavas"
+        },
+        {
+            "input": "4 11 1 13 14 5 3 8 16 2 12 6 9 7 10 15",
+            "output": "final"
+        },
+        {
+            "input": "4 11 8 13 9 5 3 1 16 2 12 6 7 14 10 15",
+            "output": "quartas"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "árvores",
+        "torneio",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

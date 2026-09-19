@@ -1,0 +1,31 @@
+{
+    "title": "Maximin",
+    "statement": "Nome do arquivo:“maximin.x”,onde x deve ser c|cpp|pas|java|js|py2|py3\nMaximin é uma pessoa muito pessimista. Sempre que ele avalia um conjunto de possibilidades,\nassume que o pior cenário é aquele que irá se concretizar. E assim, se ele deve tomar alguma\ndecisão, certamente escolhe a alternativa que tem o melhor dos piores resultados.\nMaximin e seus amigos inventaram um jogo que funciona da seguinte maneira:\n• No começo de cada rodada, cada um dos participantes ganha um pedaço de papel e deve\nescrever um número inteiro no mesmo;\n• Assim que todos terminam de escrever em seu papel, os números de cada participante são\nditos em voz alta, de modo que todos sabem quais números foram escritos, e os papéis são\ncolocados em uma caixa;\n• Os jogadores discutem e deﬁnem um limite inferiorL e um limite superiorR;\n• Cada participante deve então escolher um número maior ou igual aL e menor ou igual aR;\n• Por ﬁm, um dos papéis colocados na caixa é sorteado e a pontuação de cada jogador na rodada\né a diferença entre o número escrito no papel sorteado e o número escolhido pelo jogador.\nComo é de se esperar, por ser pessimista Maximin assume que independente de sua escolha o número\nsorteado será aquele com a menor diferença em relação ao número escolhido por ele. Sua estratégia\nentão é escolher o número que tem a maior das menores diferenças.\nPor exemplo, considere que há três participantes (incluindo Maximin), que numa rodada escreveram\nos números 10, 28 e 17 nos papéis, e os limites foram deﬁnidos comoL = 7 e R = 37. Então Maximin\nescolhe o número 37, prevendo, pessimisticamente, que o papel que será sorteado terá o número\n28. Assim, se sua previsão se concretizar, sua pontuação seria 9 nessa rodada (e se ela não se\nconcretizar, sua pontuação será maior do que 9!). Note que qualquer outro número que Maximim\nescolhesse, e sua previsão pessimista se concretizasse, sua pontuação seria menor do que 9.\nQuando a quantidade de participantes aumenta ou os limites escolhidos são muito distantes um do\noutro ﬁca bem difícil avaliar todas as possibilidades e por isso Maximin precisa de sua ajuda.\nNeste problema, seu programa deve computar qual a pontuação esperada de Maximin.",
+    "input": "A primeira linha contém três inteirosN, L e R representando respectivamente, a quantidade de\nparticipantes (incluindo Maximin), o menor e o maior número que pode ser escolhido na rodada. A\nlinha seguinte contémN inteiros ai representando os números escritos nos papéis.",
+    "output": "Seu programa deve produzir um inteiro representando a pontuação esperada por Maximin.",
+    "constraints": "- 2 ≤ N ≤ 105.\n- − 109 ≤ L ≤ R ≤ 109.\n- − 109 ≤ ai ≤ 109.",
+    "examples": [
+        {
+            "input": "3 7 37\n10 17 28",
+            "output": "9"
+        },
+        {
+            "input": "5 -6 6\n8 -4 -3 6 12",
+            "output": "4"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "senior",
+    "period": "Fase 3",
+    "topics": [
+        "busca binária",
+        "ordenação",
+        "dois ponteiros"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 512
+}

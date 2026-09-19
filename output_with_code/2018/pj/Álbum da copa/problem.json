@@ -1,0 +1,35 @@
+{
+    "title": "Álbum da copa",
+    "statement": "Nome do arquivo:“album.x”,onde x deve ser cpp, pas, java, js, py2 ou py3\nEm ano de Copa do Mundo de Futebol, o álbum de ﬁgurinhas oﬁcial é sempre um grande sucesso\nentre crianças e também entre adultos. Para quem não conhece, o álbum contém espaços numerados\nde 1 a N para colar as ﬁgurinhas; cada ﬁgurinha, também numerada de 1 aN, é uma pequena\nfoto de um jogador de uma das seleções que jogará a Copa do Mundo. O objetivo é colar todas\nas ﬁgurinhas nos respectivos espaços no álbum, de modo acompletar o álbum (ou seja, não deixar\nnenhum espaço sem a correspondente ﬁgurinha).\nAs ﬁgurinhas são vendidas em envelopes fechados, de forma que o comprador não sabe quais ﬁ-\ngurinhas está comprando, e pode ocorrer de comprar uma ﬁgurinha que ele já tenha colado no\nálbum.\nPara ajudar os usuários, a empresa responsável pela venda do álbum e das ﬁgurinhas quer criar um\naplicativo que permita gerenciar facilmente as ﬁgurinhas que faltam para completar o álbum e está\nsolicitando a sua ajuda.\nDados o número total de espaços e ﬁgurinhas do álbum, e uma lista das ﬁgurinhas já compradas (que\npode conter ﬁgurinhas repetidas), sua tarefa é determinar quantas ﬁgurinhas faltam paracompletar\no álbum.",
+    "input": "A primeira linha contém um inteiroN indicando o número total de ﬁgurinhas e espaços no álbum.\nA segunda linha contém um inteiroM indicando o número de ﬁgurinhas já compradas. Cada uma\ndas M linhas seguintes contém um número inteiroX indicando uma ﬁgurinha já comprada.",
+    "output": "Seu programa deve produzir uma única linha contendo um inteiro representando o número de\nﬁgurinhas que falta para completar o álbum.",
+    "constraints": "- 1 ≤ N ≤ 100\n- 1 ≤ M ≤ 300\n- 1 ≤ X ≤ N",
+    "examples": [
+        {
+            "input": "10\n3\n5\n8\n3",
+            "output": "7"
+        },
+        {
+            "input": "5\n6\n3\n3\n2\n3\n3\n3",
+            "output": "3"
+        },
+        {
+            "input": "3\n4\n2\n1\n3\n3",
+            "output": "0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "conjuntos",
+        "vetores",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}
