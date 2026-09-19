@@ -113,16 +113,12 @@ Copie o arquivo de exemplo e preencha suas credenciais de API:
 cp .env.example .env
 ```
 
-Configuracoes principais suportadas no `.env`:
+Configuracoes suportadas no `.env`:
 ```env
 # Configuracoes para Extracao via OpenAI
 OPENAI_BASE_URL=https://api.openai.com/v1
 OPENAI_API_KEY=sua_chave_de_api_aqui
 OPENAI_MODEL=gpt-4o-mini
-
-# Configuracoes Legadas / Opcionais (Google Gemini)
-GEMINI_API=sua_chave_gemini_aqui
-GEMINI_MODEL=gemini-2.5-flash
 ```
 
 ---
@@ -162,7 +158,7 @@ Parametros aceitos:
            download-codigos    Download exclusivo de codigos de solucao
            download-gabaritos  Download exclusivo de gabaritos (.zip)
            extract-questions   Extracao estruturada via LLM (OpenAI)
-           organize-questions  Organizacao de testes, solucoes e saneamento
+           organize-questions  Organizacao de testes, solucoes e saneamento (aliases: organize-testcases, clean-testcases)
            all                 Executa todas as etapas sequencialmente (padrao)
   --ano    Filtrar por ano especifico (ex: 2024, 2025)
   --nivel  Filtrar por nivel especifico (pj, p1, p2, senior, geral)
