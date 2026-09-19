@@ -119,3 +119,27 @@ def test_cli_organize_testcases_alias_step():
             assert call_kwargs["config"].force is False
 
 
+def test_cli_export_python_dataset_step():
+    test_args = ["main.py", "--step", "export-python-dataset", "--ano", "2024", "--nivel", "pj", "--force"]
+
+    with patch.object(sys, "argv", test_args):
+        with patch("main.PythonDatasetBuilder") as mock_builder_cls:
+            mock_instance = MagicMock()
+            mock_builder_cls.return_value = mock_instance
+            mock_instance.build_dataset.return_value = {
+                "total_questoes_analisadas": 10,
+                "questoes_com_python": 5,
+                "questoes_exportadas": 5,
+            }
+
+            main()
+
+            mock_builder_cls.assert_called_once()
+            mock_instance.build_dataset.assert_called_once()
+            call_kwargs = mock_instance.build_dataset.call_args.kwargs
+            assert call_kwargs["ano_filtro"] == 2024
+            assert call_kwargs["nivel_filtro"] == "pj"
+            assert call_kwargs["force"] is True
+
+
+

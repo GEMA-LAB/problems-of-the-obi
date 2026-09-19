@@ -7,13 +7,14 @@ from src.core.config import (
     DEFAULT_CODIGO_DIR,
     DEFAULT_GABARITOS_DIR,
     DEFAULT_OUTPUT_DIR,
+    DEFAULT_PYTHON_DATASET_DIR,
     OrganizeConfig,
 )
 from src.crawler.cadernos_downloader import CadernosDownloader
 from src.crawler.codigos_downloader import CodigosDownloader
 from src.crawler.gabaritos_downloader import GabaritosDownloader
 from src.extractor import OpenAiExtractor
-from src.processor import QuestionsOrganizer
+from src.processor import PythonDatasetBuilder, QuestionsOrganizer
 
 # Carregar variáveis de ambiente
 load_dotenv()
@@ -31,6 +32,7 @@ def main():
             "organize-questions",
             "organize-testcases",
             "clean-testcases",
+            "export-python-dataset",
             "all",
         ],
         default="all",
@@ -151,6 +153,24 @@ def main():
         if args.step in ["organize-questions", "organize-testcases", "clean-testcases"]:
             print("\nETAPA ORGANIZE-QUESTIONS FINALIZADA COM SUCESSO.")
             return
+
+    # Passo 5: Exportar dataset com solucoes em Python (via PythonDatasetBuilder modular)
+    if args.step in ["export-python-dataset"]:
+        print(f"\n{'='*40}")
+        print("5. EXPORTACAO DO DATASET OBI PYTHON")
+        print(f"{'='*40}")
+        source_dir = DEFAULT_OUTPUT_DIR if DEFAULT_OUTPUT_DIR.exists() else Path("output")
+        builder = PythonDatasetBuilder()
+        stats_dataset = builder.build_dataset(
+            source_dir=source_dir,
+            target_dir=DEFAULT_PYTHON_DATASET_DIR,
+            ano_filtro=args.ano,
+            nivel_filtro=args.nivel,
+            force=args.force,
+        )
+        print(f"Estatisticas da Exportacao Python: {stats_dataset}")
+        print("\nETAPA EXPORT-PYTHON-DATASET FINALIZADA COM SUCESSO.")
+        return
 
     print("\nPIPELINE COMPLETA FINALIZADA COM SUCESSO.")
 
