@@ -1,0 +1,35 @@
+{
+    "title": "Matriz super-legal",
+    "statement": "Nome do arquivo: matriz.c, matriz.cpp, matriz.pas, matriz.java, matriz.js, matriz_py2.py ou matriz_py3.py\nDenotando por Ai,j o elemento na i-ésima linha e j-ésima coluna da matrizA, dizemos que uma\nmatriz é “legal” se a condição\nA1,1 + Alin,col≤ A1,col + Alin,1\né verdadeira para todolin > 1 e col > 1.\nAdicionalmente, dizemos que a matriz é “super-legal” se cada uma de suas submatrizes com pelo\nmenos duas linhas e duas colunas é legal. Lembre que uma submatrizS de uma matrizML×C é uma\nmatriz que inclui todos os elementosMi,j tais que l1≤ i≤ l2 e c1≤ j≤ c2, para 1≤ l1≤ l2≤ L e\n1≤ c1≤ c2≤ C.\nA sua tarefa é, dada uma matrizA, determinar a maior quantidade de elementos de uma submatriz\nsuper-legal da matrizA.",
+    "input": "A primeira linha contém dois inteiros L e C indicando respectivamente o número de linhas e o\nnúmero de colunas da matriz. Cada uma dasL linhas seguintes contémC inteiros Xi representando\nos elementos da matriz.",
+    "output": "Seu programa deve produzir uma única linha, com apenas um número inteiro, a maior quantidade\nde elementos de uma submatriz super-legal da matriz da entrada, ou zero no caso de não existir\numa submatriz super-legal.",
+    "constraints": "- 2≤ L, C≤ 1000\n- −106≤ Xi≤ 106",
+    "examples": [
+        {
+            "input": "3 3\n1 4 10\n5 2 6\n11 1 3",
+            "output": "9"
+        },
+        {
+            "input": "3 3\n1 3 1\n2 1 2\n1 1 1",
+            "output": "4"
+        },
+        {
+            "input": "5 6\n1 1 4 0 3 3\n4 4 9 7 11 13\n-3 -1 4 2 8 11\n1 5 9 5 9 10\n4 8 10 5 8 8",
+            "output": "15"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "matrizes",
+        "programação dinâmica",
+        "ad-hoc"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 512
+}

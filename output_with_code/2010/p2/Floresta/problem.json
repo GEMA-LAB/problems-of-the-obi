@@ -1,0 +1,33 @@
+{
+    "title": "Floresta",
+    "statement": "Nome do arquivo fonte: floresta.c, floresta.cpp, ou floresta.pas\nO desmatamento é um dos maiores problemas enfrentados pelo Brasil hoje; estima-se que mais de 10 mil km2 de\nvegetação sejam desflorestados todo ano. Além de destruir os habitats de várias espécies em risco de extinção, o\ndesmatamento promove a emissão de gás carbônico, principal responsável pelo efeito estufa e pelo aquecimento\nglobal.\nA Fundação de Conservação dos Carvalhos (FCC) tenta combater esta tendência, promovendo o reflorestamento\ndas regiões desmatadas. Para isso, eles pretendem plantar carvalhos formando um quadriculado (um carvalho\nem cada vértice); no centro de cada quadrado formado por eles, a FCC também plantará um eucalipto. Para\npreservar a biodiversidade da área plantada, pelo menos uma árvore de cada espécie deve ser plantada durante\no reflorestamento.\nPor exemplo, se a FCC quiser plantar 23 árvores, ela poderá fazê-lo de duas maneiras: ou formando um retângulo\n3 × 5 com os carvalhos, como na figura (a), ou formando um retângulo 2 × 8, como na figura (b).\nConsidere que, para os propósitos deste problema, um retângulo x × y é equivalente a um retângulo y × x.\n(a)\n(b)\nTarefa\nEscreva um programa que, dado o número total de árvores que devem ser plantadas, de quantas maneiras\ndiferentes elas podem ser dispostas.",
+    "input": "A única linha da entrada contém um único inteiro N, que indica o número total de árvores que devem ser\nplantadas (1 ≤N ≤109).",
+    "output": "Seu programa deve imprimir uma única linha, contendo um único inteiro, indicando o número de arranjos\ndistintos que podem ser feitos para o reflorestamento.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "23",
+            "output": "2"
+        },
+        {
+            "input": "7",
+            "output": "0"
+        },
+        {
+            "input": "53",
+            "output": "3"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2010",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

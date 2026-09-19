@@ -1,9 +1,9 @@
 {
     "title": "Fila na Cantina",
-    "statement": "Na escola municipal da Nlogópolis, o lanche mais esperado da cantina é o famoso croissant de chocolate. Diulia está muito interessada em estudar como a fila da cantina se comporta quando há croissants nos recreios.\n\nPara isso, ela decidiu anotar em seu caderno a quantidade de pessoas na fila a cada minuto. A fila é bem dinâmica, então, a cada minuto, alguém entra ou sai da fila (mas nunca ambos ao mesmo tempo). Diulia começou a anotar assim que a primeira pessoa entrou na fila. Além disso, no momento em que ela parou de anotar, a fila estava vazia.\n\nNo final do dia, ela decidiu investigar os dados de suas anotações. Diulia escolheu $Q$ intervalos do dia para analisar, de forma que o $i$-ésimo intervalo corresponde aos minutos começando em $c_i$ e terminando em $t_i$ (incluindo os minutos $c_i$ e $t_i$). Ela garantiu que cada intervalo analisado é completo. Um intervalo é considerado completo se:\n\n- A menor quantidade de pessoas na fila entre os minutos $c_i$ e $t_i - 1$, inclusive, é igual à quantidade de pessoas na fila no minuto $c_i$ (ou seja, antes do fim do intervalo a fila nunca fica menor do que no início dele).\n- No minuto $t_i$ existe a mesma quantidade de pessoas na fila que existia no minuto $c_i - 1$ (ou seja, no fim do intervalo existe a mesma quantidade que logo antes do início). Se $c_i = 1$, consideramos que existem 0 pessoas na fila no minuto 0.\n- No minuto $c_i$ existe uma pessoa a mais na fila do que no minuto $c_i - 1$ (ou seja, o intervalo começa com alguém entrando na fila).¹\n\nPara cada um dos $Q$ intervalos, Diulia deseja saber qual é a quantidade de pessoas na fila que mais se repetiu entre os minutos desse intervalo, e também quantas foram essas repetições.",
-    "input": "A primeira linha da entrada contém dois inteiros $N$ e $Q$, que representam a quantidade de minutos observados e a quantidade de intervalos que Diulia está interessada em investigar, respectivamente.\n\nA próxima linha contém $N$ inteiros separados por espaços em branco. O $i$-ésimo deles, $P_i$, representa a quantidade de pessoas no minuto $i$.\n\nCada uma das próximas $Q$ linhas representa um intervalo que Diulia deseja investigar. A $i$-ésima dessas linhas contém dois inteiros $c_i$ e $t_i$, representando os minutos de início e fim correspondentes ao $i$-ésimo intervalo.",
-    "output": "Seu programa deverá imprimir $Q$ linhas, cada uma contendo dois inteiros. A $i$-ésima linha deve conter a quantidade que mais se repetiu entre os minutos $c_i$ e $t_i$ e quantas foram essas repetições, nesta ordem. Caso haja múltiplas quantidades empatadas com o maior número de repetições, o primeiro inteiro deverá ser a menor dessas quantidades.",
-    "constraints": "¹Errata: Esta condição não estava presente no enunciado original usado na prova, mas é necessária para a resolução das subtarefas 5 e 6.\n\n- $2 \\leq N \\leq 600000$\n- $2 \\leq Q \\leq 600000$\n- $P_1 = 1$ e $P_N = 0$\n- $P_i = P_{i-1} + 1$ ou $P_i = P_{i-1} - 1$ para todo $1 < i \\leq N$\n- $0 \\leq P_i \\leq N$\n- $1 \\leq c_i < t_i \\leq N$\n- Os minutos de $c_i$ a $t_i$, inclusive, formam um intervalo completo",
+    "statement": "Na escola municipal da Nlogópolis, o lanche mais esperado da cantina é o famoso croissant de chocolate. Diulia está muito interessada em estudar como a fila da cantina se comporta quando há croissants nos recreios.\n\nPara isso, ela decidiu anotar em seu caderno a quantidade de pessoas na fila a cada minuto. A fila é bem dinâmica, então, a cada minuto, alguém entra ou sai da fila (mas nunca ambos ao mesmo tempo). Diulia começou a anotar assim que a primeira pessoa entrou na fila. Além disso, no momento em que ela parou de anotar, a fila estava vazia.\n\nNo final do dia, ela decidiu investigar os dados de suas anotações. Diulia escolheu Q intervalos do dia para analisar, de forma que o i-ésimo intervalo corresponde aos minutos começando em c_i e terminando em t_i (incluindo os minutos c_i e t_i). Ela garantiu que cada intervalo analisado é completo. Um intervalo é considerado completo se:\n\n- A menor quantidade de pessoas na fila entre os minutos c_i e t_i - 1, inclusive, é igual à quantidade de pessoas na fila no minuto c_i (ou seja, antes do fim do intervalo a fila nunca fica menor do que no início dele).\n- No minuto t_i existe a mesma quantidade de pessoas na fila que existia no minuto c_i - 1 (ou seja, no fim do intervalo existe a mesma quantidade que logo antes do início). Se c_i = 1, consideramos que existem 0 pessoas na fila no minuto 0.\n- No minuto c_i existe uma pessoa a mais na fila do que no minuto c_i - 1 (ou seja, o intervalo começa com alguém entrando na fila).¹\n\nPara cada um dos Q intervalos, Diulia deseja saber qual é a quantidade de pessoas na fila que mais se repetiu entre os minutos desse intervalo, e também quantas foram essas repetições.\n\n¹Errata: Esta condição não estava presente no enunciado original usado na prova, mas é necessária para a resolução das subtarefas 5 e 6.",
+    "input": "A primeira linha da entrada contém dois inteiros N e Q, que representam a quantidade de minutos observados e a quantidade de intervalos que Diulia está interessada em investigar, respectivamente.\nA próxima linha contém N inteiros separados por espaços em branco. O i-ésimo deles, P_i, representa a quantidade de pessoas no minuto i.\nCada uma das próximas Q linhas representa um intervalo que Diulia deseja investigar. A i-ésima dessas linhas contém dois inteiros c_i e t_i, representando os minutos de início e fim correspondentes ao i-ésimo intervalo.",
+    "output": "Seu programa deverá imprimir Q linhas, cada uma contendo dois inteiros. A i-ésima linha deve conter a quantidade que mais se repetiu entre os minutos c_i e t_i e quantas foram essas repetições, nesta ordem. Caso haja múltiplas quantidades empatadas com o maior número de repetições, o primeiro inteiro deverá ser a menor dessas quantidades.",
+    "constraints": "- 2 ≤ N ≤ 600000\n- 2 ≤ Q ≤ 600000\n- P_1 = 1 e P_N = 0\n- P_i = P_{i-1} + 1 ou P_i = P_{i-1} - 1 para todo 1 < i ≤ N\n- 0 ≤ P_i ≤ N\n- 1 ≤ c_i < t_i ≤ N\n- Os minutos de c_i a t_i, inclusive, formam um intervalo completo",
     "examples": [
         {
             "input": "4 2\n1 2 1 0\n1 4\n2 3",
@@ -19,14 +19,14 @@
         100
     ],
     "year": "2025",
-    "level": "P2",
+    "level": "p2",
     "period": "Competição Feminina",
     "topics": [
         "estruturas de dados",
-        "range queries",
-        "segment tree",
-        "frequência"
+        "consultas em intervalos",
+        "histograma",
+        "mo's algorithm"
     ],
     "time_limit": 5.0,
-    "memory_limit": 512
+    "memory_limit": 1024
 }

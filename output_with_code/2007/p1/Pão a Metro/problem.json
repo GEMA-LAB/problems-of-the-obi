@@ -1,0 +1,34 @@
+{
+    "title": "Pão a Metro",
+    "statement": "Nome do arquivo fonte: metro.c, metro.cpp, ou metro.pas\nPão a metro é um tipo de sanduíche gigante que é uma excelente opção de lanche para torneios de programação,\nembora a experiência já tenha mostrado que o oferecimento de sanduiches pode gerar reclamação dos competi-\ndores. Outro grande problema é que algumas pessoas são mais gulosas que outras e, dessa maneira, acabam\npegando pedaços maiores que os pedaços dos outros. Para a final da OBI, a coordenação estava pensando em\nprovidenciar pão a metro para os competidores, porém tais problemas os fizeram recuar na idéia.\nEmbora a idéia tenha sido momentaneamente abandonada, uma idéia simples surgiu: cortar previamente\no pão em fatias de tamanho iguais e distribuí-las entre as pessoas. O único problema com tal idéia é que se\no número de pessoas for muito grande, fica impraticável ter apenas um pão. Por exemplo, se quisermos que\n1.000 pessoas recebam 20 centímetros de sanduíche, seria necessário um sanduíche de 20.000 centímetros, ou\n200 metros!\nAlguém levantou a seguinte hipótese: se houvessem N pessoas e fossem encomendados K sanduíches de\nempresas diferentes, cada qual com uma determinada metragem (tamanho) Mi (1 ≤i ≤K), seria possível\nretirar desses pães N fatias de mesmo tamanho, possivelmente sobrando partes nao utilizadas. A questão seria:\nqual o tamanho inteiro máximo que essas fatias poderão ter?\nPor exemplo, se tivermos K = 4, com os tamanhos (em centímetros) M1 = 120, M2 = 89, M3 = 230 e\nM4 = 177 e N = 10, podemos retirar N fatias iguais de tamanho máximo 57, pois assim conseguimos 2 fatias\nno primeiro pão, 1 no segundo, 4 no terceiro e 3 no quarto, totalizando as 10 fatias necessárias. Se tentarmos\ncortar fatias de tamanho 58, só será possível obter 3 fatias do terceiro pão, totalizando 9 e, portanto, 57 é\nrealmente o melhor que podemos obter. Note que não podemos usar duas ou mais fatias menores de diferentes\npães para formarmos uma fatia do tamanho selecionado. (ficaria muito deselegante dar um lanche recortado às\npessoas).\nTarefa\nEscreva um programa que, dados os tamanhos de pão disponíveis (em centímetros) e a quantidade de pessoas a\nserem atendidas, retorne o tamanho inteiro máximo (em centímetros) da fatia que pode ser cortada de maneira\na atender todas as pessoas.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente o\nteclado). A primeira linha da entrada contém um inteiro N que indica a quantidade pessoas (1 ≤N ≤10.000).\nA segunda linha contém um inteiro K (1 ≤K ≤10.000) que é a quantidade de sanduíches disponível. Na\nterceira linha há K inteiros M (1 ≤M ≤10.000) separados por um espaço em branco representando o tamanho\nde cada pão.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha, contendo o tamanho inteiro máximo da fatia\nque pode ser cortada.\nEntrada\n10\n4\n120 89 230 177\nSaída\n57\nEntrada\n3\n2\n45 85\nSaída\n42\nEntrada\n7\n7\n100 98 99 505 102 97 101\nSaída\n101",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "10\n4\n120 89 230 177",
+            "output": "57"
+        },
+        {
+            "input": "3\n2\n45 85",
+            "output": "42"
+        },
+        {
+            "input": "7\n7\n100 98 99 505 102 97 101",
+            "output": "101"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2007",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "grafos",
+        "busca"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

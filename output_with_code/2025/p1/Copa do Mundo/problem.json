@@ -19,12 +19,12 @@
         100
     ],
     "year": "2025",
-    "level": "P1",
+    "level": "p1",
     "period": "Competição Feminina",
     "topics": [
-        "condicional",
-        "básico"
+        "condicionais",
+        "conjuntos"
     ],
     "time_limit": 1.0,
-    "memory_limit": 256
+    "memory_limit": 1024
 }

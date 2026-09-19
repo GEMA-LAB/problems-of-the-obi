@@ -1,0 +1,29 @@
+{
+    "title": "Dividindo o império",
+    "statement": "Nome do arquivo: imperio.c, imperio.cpp, imperio.pas, imperio.java, imperio.js,\nimperio.py2 ou imperio.py3\nUm grande Império é composto por N cidades, nu-\nmeradas de 1 até N. Alguns pares de cidades estão\nligados diretamente por estradas bidirecionais e, por\numa antiga tradição, esses pares são escolhidos de\nmaneira que sempre é possível ir de qualquer cidade\npara qualquer outra cidade por exatamente um ca-\nminho (um caminho é uma sequência de estradas).\nO imperador quer dividir seu império em dois para\ndeixar de herança para seus dois filhos. Ele percebeu\nque basta destruir exatamente uma estrada, qual-\nquer estrada, para dividir seu império em dois me-\nnores que, separadamente, preservam a antiga tradi-\nção. Ele agora precisa da sua ajuda para computar a\nmenor diferença possível no número de cidades entre\nos dois impérios resultantes.\n12\n5\n3\nPor exemplo, na figura, se o imperador destruir a estrada entre as cidades 3 e 12, os impérios\nresultantes terão 5 e 11 cidades, uma diferença de 6 cidades. Porém, se ele destruir a estrada entre\nas cidades 3 e 5, a diferença será de apenas 4 cidades.\nVocê consegue ver que essa é a menor\ndiferença possível para esse exemplo da figura?",
+    "input": "A primeira linha da entrada contém um inteiro N, representando o número de cidades no império.\nAs N −1 linhas seguintes contém, cada uma, dois inteiros A e B, indicando que existe uma estrada\nbidirecional ligando diretamente as cidades A e B.",
+    "output": "Seu programa deve imprimir uma linha contendo um inteiro representando a menor diferença pos-\nsível no número de cidades entre os dois impérios resultantes.",
+    "constraints": "- 2 ≤N ≤105\n- 1 ≤A ≤N, 1 ≤B ≤N",
+    "examples": [
+        {
+            "input": "4\n1 2\n2 3\n3 4",
+            "output": "0\n\n5"
+        },
+        {
+            "input": "16\n3 5\n12 3\n5 1\n2 1\n4 1\n6 1\n7 1\n12 8\n12 9\n12 10\n12 11\n3 13\n13 14\n15 13\n15 16",
+            "output": "4"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2017",
+    "level": "senior",
+    "period": "Fase 3",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

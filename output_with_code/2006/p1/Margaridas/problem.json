@@ -1,0 +1,33 @@
+{
+    "title": "Margaridas",
+    "statement": "Nome do arquivo fonte: marg.c, marg.cpp, ou marg.pas\nLeopoldo é gerente de uma plantação de flores da Associação de Cultivo de Margaridas (ACM), um grupo que\ncultiva margaridas em grandes propriedades para abastecer floriculturas em grandes cidades.\nAs margaridas são plantadas em vasos dispostos em linhas e colunas, formando uma espécie de grade. Na\nplantação administrada por Leopoldo existem L linhas de vasos de margaridas, cada uma formada por C vasos.\nPara facilitar o gerenciamento, os vasos são organizados em lotes de M linhas e N colunas de vasos, sendo que\nnão existem sobreposições entre os lotes (não existe nenhuma linha ou coluna comum a mais de um lote) e todos\nos lotes têm exatamente M linhas e N colunas.\nA colheita é sempre feita em um único lote, coletando-se todas as margaridas daquele lote que estejam\nprontas para a venda. Uma semana antes de fazer a colheita, os funcionários da plantação analisaram cada\nvaso e anotaram quantas margaridas estarão prontas para venda na semana seguinte. Leopoldo agora precisa\nda sua ajuda para determinar qual o número máximo de margaridas que poderá ser colhido em um único lote\nde M × N vasos.\nTarefa\nSua tarefa é escrever um programa que, dado um mapa da plantação contendo o número de margaridas prontas\npara venda em cada vaso, encontre qual o número máximo de margaridas que podem ser colhidos por Leopoldo.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém quatro números inteiros, L, C, M e N. L e C representam\nrespectivamente o número de linhas (1 ≤L ≤1000) e de colunas (1 ≤C ≤1000) de vasos existentes na\nplantação. M e N representam respectivamente o número de linhas (1 ≤M ≤L) e de colunas (1 ≤N ≤C) dos\nlotes. As L linhas seguintes contêm C inteiros cada, representando número de margaridas prontas para colheita\nno vaso localizado naquela linha e coluna. Note que\nL\nM e C\nN são sempre inteiros, pois não há linha ou coluna de\nvasos que pertença a mais de um lote.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha que contém o número máximo de margaridas\nque podem ser colhidos em um lote de M × N. Esse número não pode ser superior a 1000000.\nEntrada\n3 3 1 1\n1 2 3\n1 3 3\n1 10 1\nSaída\n10\nEntrada\n4 4 2 1\n1 2 3 4\n5 6 7 8\n1 10 5 2\n1 5 9 10\nSaída\n15\nEntrada\n6 6 2 2\n1 1 1 1 1 1\n1 2 2 1 1 2\n1 2 2 1 1 1\n1 1 1 1 1 1\n1 3 1 1 3 1\n1 1 1 1 2 1\nSaída\n7",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3 3 1 1\n1 2 3\n1 3 3\n1 10 1",
+            "output": "10"
+        },
+        {
+            "input": "4 4 2 1\n1 2 3 4\n5 6 7 8\n1 10 5 2\n1 5 9 10",
+            "output": "15"
+        },
+        {
+            "input": "6 6 2 2\n1 1 1 1 1 1\n1 2 2 1 1 2\n1 2 2 1 1 1\n1 1 1 1 1 1\n1 3 1 1 3 1\n1 1 1 1 2 1",
+            "output": "7"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2006",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

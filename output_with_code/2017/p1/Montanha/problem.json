@@ -1,0 +1,29 @@
+{
+    "title": "Montanha",
+    "statement": "Nome do arquivo: montanha.c, montanha.cpp, montanha.pas, montanha.java, montanha.js,\nmontanha.py2 ou montanha.py3\nUm sistema de informações geográficas computadorizado está representando o perfil de uma mon-\ntanha através de uma sequência de números inteiros, na qual não há dois números consecutivos\niguais, como ilustrado na figura abaixo para três montanhas. Os números representam a altura da\nmontanha ao longo de uma certa direção.\n6\n2\n3\n5\n6\n7\n5\n2\n4\n1\n2\n3\n4\n5\n6\n7\n2\n2\n3\n3\n4\n6\n5\nO gerente do sistema de informações geográficas pesquisou e encontrou uma maneira de identificar se\numa sequência de números inteiros representa uma montanha com mais de um pico, ou com apenas\num pico.\nEle observou que, como não há números consecutivos iguais, se houver três números\nconsecutivos na sequência, tal que o número do meio é menor do que os outros dois números, então\na montanha tem mais de um pico. Caso contrário, a montanha tem apenas um pico. De forma mais\nrigorosa, se a sequência é A = [A1, A2, A3, . . . , AN−2, AN−1, AN], ele quer saber se há uma posição\ni, para 2 ≤i ≤N −1, tal que Ai−1 > Ai e Ai < Ai+1.\nPara ajudar o gerente, seu programa deve determinar, dada a sequência de números inteiros repre-\nsentando a montanha, se ela tem mais de um pico, ou se tem um pico apenas.",
+    "input": "A primeira linha da entrada contém um inteiro N, representando o tamanho da sequência.\nA\nsegunda linha contém N inteiros Ai, 1 ≤i ≤N, representando a sequência de alturas da montanha.",
+    "output": "Seu programa deve imprimir uma linha contendo o caractere “S” se há mais de um pico, ou o\ncaractere “N” se há apenas um pico.",
+    "constraints": "- 3 ≤N ≤1000\n- 1 ≤Ai ≤1000, para 1 ≤i ≤N",
+    "examples": [
+        {
+            "input": "8\n2 3 5 6 7 5 4 2",
+            "output": "N"
+        },
+        {
+            "input": "8\n2 3 6 5 4 6 3 2",
+            "output": "S"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2017",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

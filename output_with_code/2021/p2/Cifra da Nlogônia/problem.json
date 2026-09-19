@@ -1,0 +1,35 @@
+{
+    "title": "Cifra da Nlogônia",
+    "statement": "Nome do arquivo:“cifra.x”,onde x deve ser c, cpp, pas, java, js ou py\nO rei da Nlogônia ordenou que todos os documentos importantes sejam “cifrados”, para que apenas\nquem tem conhecimento da cifra possa lê-los (cifrar um documento signiﬁca alterar o original\nmodiﬁcando as letras de acordo com algum algoritmo de cifra).\nO rei decretou que o seguinte algotimo deve ser usado para cifrar os documentos:\n• Cada consoante deve ser substituída por exatamente três letras, na seguinte ordem:\n1. a própria consoante (vamos chamar deconsoante original);\n2. a vogal mais próxima da consoante original no alfabeto, com a regra adicional de que se\na consoante original está à mesma distância de duas vogais, então a vogal mais próxima\ndo início do alfabeto é usada. Por exemplo, se a consoante original éd, a vogal que deve\nser usada ée, pois esta é a vogal mais próxima; se a consoante original éc, a vogal que\ndeve ser utilizada éa, porquec está à mesma distância dea e e, ea é mais próxima do\ninício do alfabeto.\n3. a consoante que segue a consoante original, na ordem do início ao ﬁm do alfabeto. Por\nexemplo, se a consoante original é d, a consoante a ser utilizada é f. No caso de a\nconsoante original serz, deve ser utilizada a própria letraz.\n• As vogais não são modiﬁcadas.\nNesta tarefa, o alfabeto é\na b c d e f g h i j k l m n o p q r s t u v x z\ne as vogais são\na e i o u\nPor exemplo, a cifra da palavra “ter” é “tuveros” (tuv-e-ros) e a cifra da palavra “paz” é “poqazuz”\n(poq-a-zuz).\nO rei da Nlogônia procura por alguém que saiba escrever um programa que produza a cifra de uma\npalavra dada. Você pode ajudá-lo?",
+    "input": "A primeira e única linha da entrada contém uma palavraP formada por letras minúsculas sem\nacentuação.",
+    "output": "Seu programa deve produzir uma única linha, contendo a palavra cifrada.",
+    "constraints": "- A palavraP tem no mínimo uma e no máximo 30 letras, todas minúsculas e sem acentuação.",
+    "examples": [
+        {
+            "input": "ter",
+            "output": "tuveros"
+        },
+        {
+            "input": "rei",
+            "output": "rosei"
+        },
+        {
+            "input": "arteiro",
+            "output": "arostuveiroso"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "strings",
+        "busca",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,29 @@
+{
+    "title": "O Banco Inteligente",
+    "statement": "Nome do arquivo: banco.c, banco.cpp, banco.pas, banco.java, banco.js ou banco.py\nCaixas automáticos nos bancos são uma invenção ótima mas, às vezes, a gente precisa de dinheiro\ntrocado e a máquina entrega notas de R$100,00. Outras vezes, a gente quer sacar um valor um\npouco maior e por questões de segurança gostaria de receber tudo em notas de R$100,00, mas a\nmáquina entrega um monte de notas de R$20,00. O Banco Inteligente está tentando minimizar\nesse problema dando aos clientes a possibilidade de escolher o valor das notas na hora do saque.\nPara isso, eles precisam da sua ajuda para saber, dado o valor S do saque e quantas notas de cada\nvalor a máquina tem, quantas formas distintas existem de entregar o valor S. O banco disponibiliza\nnotas de 2, 5, 10, 20, 50 e 100. Por exemplo, se S = 22 e o número de notas de cada valor é\nN2 = 5, N5 = 4, N10 = 3, N20 = 10, N50 = 0 e N100 = 10, então há 4 formas distintas da máquina\nentregar o valor do saque: 20 + 2, 10 + 10 + 2, 10 + 5 + 5 + 2 e 5 + 5 + 5 + 5 + 2.",
+    "input": "A primeira linha da entrada contém um inteiro S, o valor do saque. A segunda linha contém seis\ninteiros N2, N5, N10, N20, N50 e N100, respectivamente, o número de notas de valores 2, 5, 10, 20, 50\ne 100, disponíveis na máquina.",
+    "output": "Seu programa deve imprimir um inteiro, o número de formas distintas da máquina entregar o saque.",
+    "constraints": "- 0 ≤S ≤5000 e Ni ≤500",
+    "examples": [
+        {
+            "input": "22\n5 4 3 10 0 10",
+            "output": "4"
+        },
+        {
+            "input": "1000\n20 20 20 20 20 20",
+            "output": "34201"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2015",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

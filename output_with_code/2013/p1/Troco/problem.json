@@ -1,0 +1,29 @@
+{
+    "title": "Troco",
+    "statement": "Nome do arquivo fonte: troco.c, troco.cpp, troco.pas, troco.java, ou troco.py\nVocê está num supermercado e está na fila do caixa para comprar alguns produtos. Assim que você termina\nde passar as compras pelo caixa, se lembra que tem várias moedas em seu bolso, algumas repetidas, e fica\npensando se com elas dá para pagar exatamente o valor das compras (para assim se livrar destas moedas e\nficar com os bolsos mais leves). Você consegue pagar o valor exato da conta usando estas moedas?",
+    "input": "A primeira linha da entrada contém dois números inteiros V e M, indicando, respectivamente, o valor final\nda compra e o número de moedas que você tem em seu bolso. A segunda linha contém M números inteiros\nque descrevem o valor Mi de cada moeda existente em seu bolso.",
+    "output": "Seu programa deve imprimir apenas uma linha, contendo apenas um caractere: S caso seja possível pagar o\nvalor exato da conta usando apenas suas moedas, ou N caso contrário.",
+    "constraints": "- 1 ≤V ≤105\n- 1 ≤M ≤103\n- 1 ≤Mi ≤105",
+    "examples": [
+        {
+            "input": "16 4\n25 10 5 1",
+            "output": "S"
+        },
+        {
+            "input": "20 4\n25 10 5 1",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

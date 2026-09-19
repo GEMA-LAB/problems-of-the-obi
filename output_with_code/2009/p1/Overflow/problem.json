@@ -1,0 +1,33 @@
+{
+    "title": "Overflow",
+    "statement": "Nome do arquivo fonte: overflow.c, overflow.cpp, ou overflow.pas\nOs computadores foram inventados para realizar cálculos muito rapidamente, e atendem a esse requisito de ma-\nneira extraordinária. Porém, nem toda conta pode ser feita num computador, pois ele não consegue representar\ntodos os números dentro de sua memória. Em um computador pessoal atual, por exemplo, o maior inteiro que\né possível representar em sua memória é 4.294.967.295. Caso alguma conta executada pelo computador dê um\nresultado acima desse número, ocorrerá o que chamamos de overflow, que é quando o computador faz uma conta\ne o resultado não pode ser representado, por ser maior do que o valor máximo permitido (em inglês overflow\nsignifica trasbordar).\nPor exemplo, se um computador só pode representar números menores do que 1023 e mandamos ele executar a\nconta 1022 + 5, vai ocorrer overflow.\nTarefa\nDados o maior número que um computador consegue representar e uma expressão de soma ou multiplicação\nentre dois inteiros, determine se ocorrerá overflow.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado).\nA primeira linha da entrada contém um inteiro N (1 ≤N ≤500.000) representando o maior número que\no computador consegue representar.\nA segunda linha contém um inteiro P (0 ≤P ≤1000), seguido de\num espaço em branco, seguido de um caractere C (que pode ser ‘+’ ou ‘*’, representando os operadores de\nadição e multiplicação, respectivamente), seguido de um espaço em branco, seguido de um outro inteiro Q\n(0 ≤Q ≤1000). Essa linha representa a expressão P + Q, se o caractere C for ‘+’, ou P × Q, se o caractere C\nfor ‘*’.",
+    "output": "Seu programa deve imprimir, na saída padrão, a palavra ‘OVERFLOW’ se o resultado da expressão causar um\noverflow, ou a palavra ‘OK’ caso contrário. Ambas as palavras devem ser escritas com letras maiúsculas.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "10\n5 + 5",
+            "output": "OK\n\n4"
+        },
+        {
+            "input": "44\n23 * 2",
+            "output": "OVERFLOW"
+        },
+        {
+            "input": "323500\n42 * 35",
+            "output": "OK"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2009",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

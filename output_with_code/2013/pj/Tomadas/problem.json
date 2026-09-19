@@ -1,0 +1,33 @@
+{
+    "title": "Tomadas",
+    "statement": "Nome do arquivo fonte: tomadas.c, tomadas.cpp, tomadas.pas, tomadas.java, ou tomadas.py\nA Olimpíada Internacional de Informática (IOI, no original em inglês) é a mais prestigiada competição de\nprogramação para alunos de ensino médio; seus aproximadamente 300 competidores se reúnem em um país\ndiferente todo ano para os dois dias de prova da competição. Naturalmente, os competidores usamo o tempo\nlivre para acessar a Internet, programar e jogar em seus notebooks, mas eles se depararam com um problema:\no saguão do hotel só tem uma tomada.\nFelizmente, os quatro competidores da equipe brasileira da IOI trouxeram cada um uma régua de tomadas,\npermitindo assim ligar vários notebooks em uma tomada só; eles também podem ligar uma régua em outra\npara aumentar ainda mais o número de tomadas disponíveis.\nNo entanto, como as réguas têm muitas\ntomadas, eles pediram para você escrever um programa que, dado o número de tomadas em cada régua,\ndetermina quantas tomadas podem ser disponibilizadas no saguão do hotel.",
+    "input": "A entrada consiste de uma linha com quatro inteiros positivos T1, T2, T3, T4, indicando o número de tomadas\nde cada uma das quatro réguas.",
+    "output": "Seu programa deve imprimir uma única linha contendo um único número inteiro, indicando o número máximo\nde notebooks que podem ser conectados num mesmo instante.",
+    "constraints": "- 2 ≤Ti ≤6.",
+    "examples": [
+        {
+            "input": "2 4 3 2",
+            "output": "8"
+        },
+        {
+            "input": "6 6 6 6",
+            "output": "21"
+        },
+        {
+            "input": "2 2 2 2",
+            "output": "5"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

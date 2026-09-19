@@ -1,0 +1,31 @@
+{
+    "title": "Tempo de resposta",
+    "statement": "Nome do arquivo:“tempo.x”,onde x deve ser c, cpp, pas, java, js ou py\nSara adora trocar mensagens com amigos. Como ela recebe e envia muitas mensagens, está preo-\ncupada com o tempo que seus amigos esperam para receber respostas das mensagens.\nAs seguintes regras de etiqueta são sempre obedecidas:\n• as únicas mensagens que Sara envia são respostas a mensagens que ela recebeu.\n• Sara envia no máximo uma mensagem como reposta a uma mensagem que recebeu.\n• um amigo de Sara nunca envia uma nova mensagem para Sara até que tenha recebido resposta\nda mensagem que enviou anteriormente.\nO aplicativo de mensagens que Sara e seus amigos usam recebe e envia mensagens instantaneamente.\nO envio e o recebimento de mensagens são chamados deeventos. O aplicativo registra cada evento\nna ordem em que os eventos ocorrem, usando dois tipos de registro:\n• R X indica que uma mensagem foi recebida do amigoX.\n• E X indica que uma mensagem foi enviada ao amigoX.\nO aplicativo usa ainda um outro tipo de registro, para indicar o tempo que se passou entre dois\neventos consecutivos, na forma\n• T X indicando que X segundos se passaram entre o evento anterior e o evento posterior a\nesse registro.\nSe não há registro do tipoT Xentre dois registros de eventos consecutivos signiﬁca que exatamente\n1 segundo se passou entre esses dois eventos.\nO Tempo de Respostade uma mensagem é o tempo que se passa entre o recebimento da mensagem\npor Sara e o envio da resposta a essa mensagem por Sara. Se um amigo recebeu respostas para todas\nas suas mensagens, oTempo de Resposta Totalpara esse amigo é a soma dos Tempos de Respostas\npara as mensagens desse amigo; caso contrário o Tempo de Resposta Total para esse amigo é−1.\nDada a lista de registros do aplicativo de Sara, sua tarefa é determinar o Tempo de Resposta Total\npara cada amigo.",
+    "input": "A primeira linha da entrada contém um inteiroN, o número de registros. Os amigos de Sara são\nidentiﬁcados por números inteiros. Cada uma dasN linhas seguintes descreve um registro e contém\num caractere (R, E ou T) seguido de um número inteiroX. No caso de registros dos tiposR e E\no valor deX indica um amigo de Sara; no caso do registro de tipoT, o valor deX indica o número\nde segundos que se passaram entre o evento anterior e o posterior.",
+    "output": "Para cada amigo de Sara seu programa deve produzir uma linha na saída contendo dois inteiros: o\nnúmero do amigo e o Tempo de Resposta Total para esse amigo, em ordem crescente dos números\ndos amigos.",
+    "constraints": "- 1 ≤ N ≤ 20\n- 1 ≤ X ≤ 100",
+    "examples": [
+        {
+            "input": "5\nR 2\nR 3\nT 5\nE 2\nE 3",
+            "output": "2 6\n3 6"
+        },
+        {
+            "input": "14\nR 12\nT 2\nR 23\nT 3\nR 45\nE 45\nR 45\nE 23\nR 23\nT 2\nE 23\nR 34\nE 12\nE 34",
+            "output": "12 13\n23 8\n34 2\n45 -1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "simulação",
+        "vetores",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

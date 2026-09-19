@@ -1,0 +1,33 @@
+{
+    "title": "Repositórios",
+    "statement": "Nome do arquivo fonte: repos.c, repos.cpp, ou repos.pas\nUma das boas práticas ao administrar um conjunto de computadores é manter os aplicativoss sempre atuali-\nzados. Entretanto, em uma grande corporação com milhares de aplicativos instalados, a simples verificação do\nque precisa ser atualizado pode tornar-se uma tarefa bem complicada. Para facilitar isso, alguns fabricantes\narmazenam todos os aplicativos existentes em grandes bases de dados chamadas repositórios e um programa é\nresponsável por verificar esse repositório e atualizar as versões dos aplicativos.\nM.V.Lzr, um administrador de sistemas e rapper nas horas vagas, trabalha em uma empresa que, infeliz-\nmente, não utiliza um sistema com repositórios. Para facilitar sua vida, ele decidiu que era a hora de ter o seu\npróprio sistema e pediu a sua ajuda.\nPeriodicamente ele varre a Internet em busca das páginas que possam conter os aplicativos e constrói uma\nlista com as versões dos aplicativos que deseja instalar disponíveis em cada página. Um programa deve verificar\nentão qual a versão de cada programa instalado nos computadores (todos eles possuem os mesmos aplicativos\ninstalados e nas mesmas versões) e instalar todos aqueles que ainda não foram instalados ou cuja versão instalada\nseja anterior a versão mais recente. Como ele não sabe programar direito, ele pediu sua ajuda.\nTarefa\nDado uma lista de aplicativos instaladas nos computadores da empresa, com suas respectivas versões e uma\nlista de aplicativos disponíveis na internet que devem ser instalados, determinar quais devem ser instalados e\nem quais versões.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém dois inteiros C (1 ≤C ≤10.000) e N (1 ≤N ≤1.000) que\nrepresentam o número total de aplicativos e versões disponíveis na internet e o número total de programas\ninstalados na empresa, respectivamente.\nAs C linhas seguintes possuem dois inteiros cada, Pc (1 ≤Pc ≤\n1.000.000.000) e Vc (1 ≤Vc ≤1.000.000.000), representando o número do programa e o número da versão\ninstalada nos computadores. Todo aplicativo está instalado uma única vez em cada máquina e em uma única\nversão. Em seguida, as As N linhas seguintes possuem dois inteiros cada, Pn (1 ≤Pn ≤1.000.000.000) e Vn\n(1 ≤Vn ≤1.000.000.000), representando o número do programa e o número da versão disponível na internet.\nUm dado programa pode estar disponível em mais de uma versão na internet.",
+    "output": "Seu programa deve imprimir, na saída padrão, diversas linhas, cada uma contendo dois inteiros, Ps e Vs com o\nnúmero do programa e a versão que deve ser instalada. Em todo caso de teste existe pelo menos um programa\nque deve ser instalado.\n\n3\nEntrada\n1 1\n5215 1\n5215 3\nSaída\n5215 3\nEntrada\n3 2\n1640 1\n2540 4\n1870 3\n2540 1\n1640 4\nSaída\n1640 4\nEntrada\n2 5\n2000 4\n2001 5\n2000 1\n2001 4\n2001 6\n2000 2\n2000 3\nSaída\n2001 6",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "1 1\n5215 1\n5215 3",
+            "output": "5215 3"
+        },
+        {
+            "input": "3 2\n1640 1\n2540 4\n1870 3\n2540 1\n1640 4",
+            "output": "1640 4"
+        },
+        {
+            "input": "2 5\n2000 4\n2001 5\n2000 1\n2001 4\n2001 6\n2000 2\n2000 3",
+            "output": "2001 6"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2007",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

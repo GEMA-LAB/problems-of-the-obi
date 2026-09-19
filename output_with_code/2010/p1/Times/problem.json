@@ -1,0 +1,29 @@
+{
+    "title": "Times",
+    "statement": "Nome do arquivo fonte: times.c, times.cpp, ou times.pas\nAs aulas de educação física, em muitas escolas, acontecem da seguinte maneira: O professor entrega uma bola\nao alunos (geralmente de futebol) e estes se dividem em times, onde jogam partidas alternadamente.\nA maneira como os times são escolhidos também é semelhante em todas as escolas: decide-se quantos times\nserão formados, e uma pessoa para montar cada um dos times. Cada pessoa vai escolher, alternadamente, um\ndos alunos restantes para fazer parte de sua equipe. Como todos querem ter uma boa equipe, a pessoa que\nvai escolher o próximo membro do time escolhe aquele, dentre os ainda disponíveis, que possui o melhor nível\nde habilidade. Assim, os times acabam ficando relativamente equilibrados na soma do nível de habilidade dos\njogadores.\nTarefa\nDada uma lista de alunos que serão escolhidos e seus respectivos níveis de habilidade para os times e a quantidade\nde times que serão formados, mostre como ficarão os times ao final do processo de montagem dos mesmos.",
+    "input": "A primeira linha da entrada contém dois inteiros N (2 ≤N ≤10.000) e T (2 ≤T ≤1000), representando\nrespectivamente a quantidade de alunos e o número de times a serem formados, sendo T ≤N. As N linhas\nseguintes descrevem, cada uma, um aluno disponível para escolha de times. Cada uma dessas linhas possui o\nnome do aluno (composto apenas por letras minúsculas) e um inteiro H (0 ≤H ≤1.000.000) descrevendo seu\nnível de habilidade).\nNão existem dois alunos com o mesmo nível de habilidade, e todos eles possuem nomes diferentes. É possível\nque alguns times acabem ficando com menos jogadores do que os outros.",
+    "output": "Seu programa deve imprimir a lista de times que será formada ao final do processo de seleção. Para cada time,\nvocê deverá mostrar o termo “Time N”, onde N é o número do time (1 para o primero, 2 para o segundo, e\nassim por diante) seguido de K linhas, onde K é a quantidade de jogadores do time, mostrando o nome de cada\num dos jogadores do time, em ordem alfabética. Imprima uma linha em branco após cada descrição de time\n(inclusive do último).\nOs times serão escolhidos pelo computador, então não é necessário considerar o aluno que irá fazer a escolha\ndos times.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "14 3\nfelipe 4\nalvaro 8\nthiago 1\nrodrigo 3\nrobson 2\nfabio 9\nricardo 11\nrodolfo 0\nandre 14\narthur 12\nronaldo 55\nrogerio 30\nlucas 7\nrafael 17",
+            "output": "Time 1\nandre\nfabio\nfelipe\nronaldo\nthiago\nTime 2\nalvaro\narthur\nrodolfo\nrodrigo\nrogerio\nTime 3\nlucas\nrafael\nricardo\nrobson"
+        },
+        {
+            "input": "4 3\njohn 3\nrichard 0\ngreg 100\nrupert 20",
+            "output": "Time 1\ngreg\nrichard\nTime 2\nrupert\nTime 3\njohn"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2010",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

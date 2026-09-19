@@ -1,0 +1,35 @@
+{
+    "title": "Mancha",
+    "statement": "Nome do arquivo:“mancha.x”,onde x deve ser c|cpp|pas|java|js|py2|py3\nJuninho está participando de um projeto de iniciação cientíﬁca sobre identiﬁcação de doenças de\npele através de análises de imagens digitais. Muitas vezes o formato de uma lesão de pele, ou\nmancha, pode indicar as possibilidades de diagnóstico. O professor orientador tem algumas imagens\ndigitalizadas de manchas e precisa identiﬁcar aquelas que são “regulares” segundo uma deﬁnição\nbastante precisa, que será dada abaixo. Juninho precisa da sua ajuda para processar a imagem da\nmancha e decidir se ela é ou não regular.\nA imagem é um reticulado deN× N pixels. Os pixels escuros representam a mancha, que é sempre\nconexa, ou seja, é composta de apenas uma componente. De forma mais precisa, dado qualquer\npar de pixels pertencentes à mancha, sempre existe um caminho, uma sequência de pixels escuros\nentre eles seguindo somente por direções ortogonais, totalmente contido dentro da mancha. A ﬁgura\nacima ilustra três possíveis manchas, paraN = 10.\nDados dois pixelsP e Q, a distância de Manhattan entre eles é deﬁnida como:dmanhattan(P, Q) =\n|Pl− Ql| +|Pc− Qc|, onde Pl é o índice da linha do pixelP e Pc é o índice da coluna do pixelP,\nna imagem digitalizada. O mesmo vale paraQl e Qc. Ou seja, a distância de Manhattan é a soma\nda diferença absoluta entre a linha deP e a linha deQ com a diferença absoluta entre as colunas\nde P e Q. Dados dois pixels P e Q que pertencem à mancha, deﬁniremosd(P, Q) como sendo o\ncomprimento do menor caminho existente entreP e Q, que esteja totalmente contido dentro da\nmancha.\nNo exemplo da ﬁgura mais à esquerda, ondeP e Q estão representados por um pequeno círculo,\nd(P, Q) = 9 e dmanhattan(P, Q) = 9. Na ﬁgura do meio,d(P, Q) = 10 e dmanhattan(P, Q) = 6; e na\nﬁgura mais à direita,d(P, Q) = 5 e dmanhattan(P, Q) = 3.\nFinalmente, uma mancha seráregular se, para qualquer par de pixelsP e Q pertencentes à mancha,\ntivermos d(P, Q) = dmanhattan(P, Q). Dessa forma, veriﬁque que a ﬁgura mais à esquerda ilustra\numa mancha regular, enquanto que as outras duas são irregulares.",
+    "input": "A primeira linha da entrada contém um inteiroN, representando as dimensões da imagem. AsN\nlinhas seguintes contêm, cada uma, uma cadeia deN caracteres deﬁnindo uma linha de pixels da\nimagem. Os caracteres podem ser: “.” para pixels fora da mancha; e “*” para pixels que pertencem\nà mancha.",
+    "output": "Imprima uma linha contendo o caractere “S”, se a mancha for regular; ou “N”, se for irregular.",
+    "constraints": "- 2≤ N≤ 1000;\n- A mancha possui pelo menos dois pixels.",
+    "examples": [
+        {
+            "input": "10\n..........\n.....*....\n...***....\n..*****...\n..*****...\n..*******.\n.********.\n...*****..\n......**..\n..........",
+            "output": "S"
+        },
+        {
+            "input": "10\n..........\n....*.***.\n....*.***.\n..******..\n..****....\n....**....\n....****..\n...*****..\n.......*..\n..........",
+            "output": "N"
+        },
+        {
+            "input": "2\n.*\n**",
+            "output": "S"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "p2",
+    "period": "Fase 3",
+    "topics": [
+        "matrizes",
+        "geometria",
+        "ad-hoc"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 256
+}

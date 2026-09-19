@@ -1,0 +1,30 @@
+{
+    "title": "Número de Envelopes",
+    "statement": "Nome do arquivo fonte: envelopes.c, envelopes.cpp, ou envelopes.pas\nAldo é um garoto muito esperto que adora promoções e sorteios. Como já participou de muitas promoções da\nforma “para participar, envie n rótulos de produtos ...”, Aldo tem o costume de guardar o rótulo de todos os\nprodutos que compra. Dessa forma, sempre que uma empresa faz uma promoção ele já tem um monte de rótulos\npara mandar.\nA SBC (Super Balas e Caramelos) está fazendo uma nova promoção, e, como era de se esperar, Aldo quer\nparticipar. Para participar da promoção é preciso enviar um envelope contendo um rótulo de cada tipo de bala\nque a SBC produz. Por exemplo, se a SBC produz 3 tipos de balas, A, B, C, e uma pessoa tem 3 rótulos de A,\n3 de B e 2 de C, ela pode enviar no máximo 2 envelopes, já que falta um rótulo de C para compor o terceiro\nenvelope. Não há limite para o número de envelopes que uma pessoa pode enviar.\nBalas são a segunda coisa de que Aldo mais gosta (a primeira como você sabe são promoções). Por causa disso a\nquantidade de rótulos de balas que ele tem é muito grande, e ele não está conseguindo determinar a quantidade\nmáxima de envelopes que ele pode enviar.\nComo você é o melhor amigo de Aldo ele pediu sua ajuda para fazer o cálculo, de modo que ele compre o número\nexato de envelopes.\nTarefa\nVocê deve escrever um programa que, a partir da lista de rótulos de Aldo, calcula o número máximo de envelopes\nválidos que ele pode enviar.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém um número inteiro N (1 ≤N ≤1000) representando o número\nde tipos diferentes de balas que a SBC produz. A segunda linha da entrada contém N números inteiros, cada\num representando uma quantidade de rótulos de balas que Aldo tem. O primeiro número nessa linha representa\na quantidade de rótulos do tipo 1 que Aldo possui, o segundo número representa a quantidade de rótulos do\ntipo 2, e assim por diante, até o último número, que representa a quantidade de rótulos de tipo N que Aldo\npossui.",
+    "output": "Seu programa deve imprimir, na saída padrão, o número máximo de envelopes válidos que Aldo pode enviar.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "4\n5 3 6 2",
+            "output": "2"
+        },
+        {
+            "input": "6\n10 5 21 3 0 11",
+            "output": "0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2009",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "matemática",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

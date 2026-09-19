@@ -1,0 +1,33 @@
+{
+    "title": "Transporte de Contêineres",
+    "statement": "Nome do arquivo fonte: transporte.c, transporte.cpp, transporte.pas, transporte.java, ou\ntransporte.py\nA Betalândia é um país que apenas recentemente se abriu para o comércio exterior e está preparando agora\nsua primeira grande exportação. A Sociedade Betalandesa de Comércio (SBC) ficou encarregada de conduzir\na exportação e determinou que, seguindo os padrões internacionais, a carga será transportada em contêineres,\nque são, por sua vez, colocados em grandes navios para o transporte internacional.\nTodos os contêineres betalandeses são idênticos, medindo A metros de largura, B metros de comprimento e C\nmetros de altura. Um navio porta-contêineres pode ser visto como um retângulo horizontal de X metros de\nlargura e Y metros de comprimento, sobre o qual os contêineres são colocados. Nenhuma parte de contêiner\npode ficar para fora do navio. Além disso, para possibilitar a travessia de pontes, a altura máxima da carga no\nnavio não pode ultrapassar Z metros.\nX\nY\n≤ Z\nA\nB\nC\nDevido a limitações do guindaste utilizado, os contêineres só podem ser carregados alinhados com o navio.\nOu seja, os contêineres só podem ser colocados sobre o navio de tal forma que a largura e o comprimento do\ncontêiner estejam paralelos à largura e ao comprimento do navio, respectivamente.\nA SBC está com problemas para saber qual a quantidade máxima de contêineres que podem ser colocados no\nnavio e pede sua ajuda. Sua tarefa, neste problema, é determinar quantos contêineres podem ser carregados no\nnavio respeitando as restrições acima.",
+    "input": "A entrada consiste de duas linhas. A primeira linha contém três inteiros A, B e C que representam as dimensões\ndos contêineres, enquanto a segunda linha contém outros três inteiros X, Y e Z que representam as dimensões\ndo navio.",
+    "output": "Seu programa deve imprimir apenas uma linha contendo um inteiro que indica a quantidade máxima de contêi-\nneres que o navio consegue transportar.",
+    "constraints": "- 1 ≤A, B, C, X, Y, Z ≤106\n- É garantido que a maior resposta será menor ou igual a 106.\n- 3",
+    "examples": [
+        {
+            "input": "1 1 1\n1 1 1",
+            "output": "1"
+        },
+        {
+            "input": "1 2 5\n9 6 11",
+            "output": "54"
+        },
+        {
+            "input": "1 2 12\n6 9 10",
+            "output": "0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2011",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

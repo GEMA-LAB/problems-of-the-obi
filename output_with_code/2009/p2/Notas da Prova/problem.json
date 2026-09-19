@@ -1,0 +1,33 @@
+{
+    "title": "Notas da Prova",
+    "statement": "Nome do arquivo fonte: nota.c, nota.cpp, ou nota.pas\nRosy é uma talentosa professora do Ensino Médio que já ganhou muitos prêmios pela qualidade de sua aula.\nSeu reconhecimento foi tamanho que foi convidada a dar aulas em uma escola da Inglaterra. Mesmo falando\nbem inglês, Rosy ficou um pouco apreensiva com a responsabilidade, mas resolveu aceitar a proposta e encará-la\ncomo um bom desafio.\nTudo ocorreu bem para Rosy até o dia da prova. Acostumada a dar notas de 0 (zero) a 100 (cem), ela fez o\nmesmo na primeira prova dos alunos da Inglaterra. No entanto, os alunos acharam estranho, pois na Inglaterra\no sistema de notas é diferente: as notas devem ser dadas como conceitos de A a E. O conceito A é o mais alto,\nenquanto o conceito E é o mais baixo.\nConversando com outros professores, ela recebeu a sugestão de utilizar a seguinte tabela, relacionando as notas\nnuméricas com as notas de conceitos:\nNota\nConceito\n0\nE\n1 a 35\nD\n36 a 60\nC\n61 a 85\nB\n86 a 100\nA\nO problema é que Rosy já deu as notas no sistema numérico, e terá que converter as notas para o sistema de\nletras. Porém, Rosy precisa preparar as próximas aulas (para manter a qualidade que a tornou reconhecida), e\nnão tem tempo suficiente para fazer a conversão das notas manualmente.\nTarefa\nVocê deve escrever um programa que recebe uma nota no sistema numérico e determina o conceito correspon-\ndente.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A entrada contém uma única linha com um número inteiro N (0 ≤N ≤100), representando uma\nnota de prova no sistema numérico.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma letra (A, B, C, D, ou E em maiúsculas) representando o\nconceito correspondente à nota dada na entrada.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "12",
+            "output": "D"
+        },
+        {
+            "input": "87",
+            "output": "A"
+        },
+        {
+            "input": "0",
+            "output": "E"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2009",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

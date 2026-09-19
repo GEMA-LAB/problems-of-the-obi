@@ -1,0 +1,33 @@
+{
+    "title": "Colheita de Caju",
+    "statement": "Nome do arquivo fonte: caju.c, caju.cpp, ou caju.pas\nConrado é gerente em uma das fazendas de plantação de caju da Sociedade de Beneficiamento de Caju (SBC),\num grupo que cultiva caju em grandes propriedades para o mercado externo.\nOs cajueiros são plantados dispostos em linhas e colunas, formando uma espécie de grade.\nNa fazenda\nadministrada por Conrado existem L linhas de cajueiros, cada uma formada por C colunas. Nesta semana\nConrado deve executar a colheita da produção de um subconjunto contínuo de cajueiros. Esse subconjunto é\nformado por M linhas e N colunas de cajueiros. Há uma semana, seus funcionários analisaram cada cajueiro da\nfazenda e estimaram a sua produtividade em número de cajus prontos para a colheita. Conrado agora precisa\nda sua ajuda para determinar qual a produtividade máxima estimada (em número de cajus) de uma área de\nM × N cajueiros.\nTarefa\nSua tarefa é escrever um programa que, dado um mapa da fazenda contendo o número de cajus prontos para\ncolheita em cada cajueiro, encontre qual o número máximo de cajus que podem ser colhidos na fazenda em uma\nárea de M × N cajueiros.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém quatro números inteiros, L, C, M e N. L e C representam,\nrespectivamente, o número de linhas (1 ≤L ≤1000) e de colunas (1 ≤C ≤1000) de cajueiros existentes na\nfazenda. M e N representam, respectivamente, o número de linhas (1 ≤M ≤L) e de colunas (1 ≤N ≤C)\nde cajueiros a serem colhidos. As L linhas seguintes contêm C inteiros cada, representando número de cajus\nprontos para colheita no cajueiro localizado naquela linha e coluna.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha que contém o número máximo estimado de cajus\nque podem ser colhidos em uma área contínua de M × N. Esse número não será superior a 1000000\nEntrada\n3 3 1 1\n1 2 3\n1 3 3\n1 10 1\nSaída\n10\nEntrada\n4 4 2 1\n1 2 3 4\n5 6 7 8\n1 10 5 2\n1 5 9 10\nSaída\n16\nEntrada\n5 5 2 2\n1 1 1 3 1\n1 2 1 1 1\n1 1 1 2 1\n1 1 2 1 1\n1 3 1 1 3\nSaída\n7",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3 3 1 1\n1 2 3\n1 3 3\n1 10 1",
+            "output": "10"
+        },
+        {
+            "input": "4 4 2 1\n1 2 3 4\n5 6 7 8\n1 10 5 2\n1 5 9 10",
+            "output": "16"
+        },
+        {
+            "input": "5 5 2 2\n1 1 1 3 1\n1 2 1 1 1\n1 1 1 2 1\n1 1 2 1 1\n1 3 1 1 3",
+            "output": "7"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2006",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

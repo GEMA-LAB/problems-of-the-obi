@@ -214,3 +214,5 @@ gabaritos/*
 codigo/*
 !codigo/example.txt
 !output/var
+
+!output_with_code/2023/p1/VAR

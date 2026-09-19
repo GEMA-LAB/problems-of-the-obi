@@ -1,0 +1,31 @@
+{
+    "title": "Fábrica de Tesouras",
+    "statement": "Nome do arquivo:tesoura.c, tesoura.cpp, tesoura.java, tesoura.js ou tesoura.py\nCecília trabalha em uma fábrica de tesouras. Após o fim da super-promoção de volta às aulas,\nsobraram muitas tesouras, então ela decidiu usar algumas delas em um quadro para decorar a\nparede da fábrica. Cecília ama a natureza, e por isso decidiu que seu quadro seguirá o formato de\numa árvore.\nCecília fará a montagem de acordo os passos abaixo.\n• O primeiro passo é colar uma tesoura fechada em pé na base do quadro. Esta tesoura repre-\nsenta o tronco da árvore:\n• O segundo passo é colar, na ponta das lâminas da tesoura fechada, uma tesoura aberta. Esta\ntesoura aberta representa os primeiros galhos da árvore:\n• O terceiro passo é colar tesouras fechadas em cima de cada lâmina da tesoura posicionada no\npasso anterior:\nOlimpíadaBrasileiradeInformática–CompetiçãoFeminina-OBI2024–Prog. Nível1–FaseÚnica 10\n• O quarto passo é colar uma tesoura aberta na ponta das lâminas de cada tesoura colada no\npasso anterior:\n• O quinto passo segue a mesma regra do terceiro passo: colar tesouras fechadas em cima de\ncada lâmina das tesouras abertas coladas no quarto passo.\n• O sexto passo segue a mesma regra do quarto passo: colar tesouras abertas em cima de cada\nlâmina das tesouras fechadas coladas no quinto passo.\n• E assim em diante: Cecília vai alternando os passos entre colar tesouras fechadas e abertas\naté ficar satisfeita com a altura do quadro.\nCecília chama dealtura do quadro o número de passos usados para criá-lo.\nPor exemplo, o seguinte quadro tem altura 1:\nE o seguinte quadro tem altura 6:\nOlimpíadaBrasileiradeInformática–CompetiçãoFeminina-OBI2024–Prog. Nível1–FaseÚnica 11\nCecília já fez a colagem de alturaK, porém ela ainda não está satisfeita com o quadro: ela está\nincomodada porque as lâminas das tesouras não possuem a mesma cor que os seus cabos.\nSua amiga, Laura, irá emprestar um tubo de spray de tinta para Cecília pintar a árvore com a cor\ndos cabos das tesouras. Porém, Laura só permitiu que Cecília use o spray uma única vez. Ou seja,\nCecília não pode usar o spray para pintar uma parte da árvore, parar de pintar e recomeçar em\numa outra parte da árvore.\nPor exemplo, Cecília pode usar o spray para pintar a seguinte árvore, de altura 4:\nPara isso, ela pode fazer o seguinte caminho com o spray:\nOlimpíadaBrasileiradeInformática–CompetiçãoFeminina-OBI2024–Prog. Nível1–FaseÚnica 12\nNote que, por só poder usar o spray uma vez, Cecília teve que pintar algumas lâminas de tesouras\nduas vezes, gastando mais tinta.\nAlém disso, observe que, quando uma tesoura está fechada, uma passada de spray basta para pintar\nas lâminas e gastamos apenas 1 ml de tinta:\nFigura 1: pintamos as lâminas em uma passada, gastando1 ml\nPor outro lado, quando uma tesoura está aberta, temos que passar o spray ao menos uma vez em\ncada lâmina e gastamos 1 ml de tinta em cada passada:\nFigura 2: pintamos a lâmina da direita em duas passadas, gastando3 ml no total\nCecília sempre começa pintando a árvore a partir de seu tronco (de baixo para cima) e tenta sempre\nOlimpíadaBrasileiradeInformática–CompetiçãoFeminina-OBI2024–Prog. Nível1–FaseÚnica 13\ngastar o mínimo de tinta possível. Na árvore de altura 4, por exemplo, ela gastou 14 ml de tinta.\nSua tarefa é, dada a alturaK da árvore que Cecília pintou, determinar a quantidadeM de tinta (em\nml) que ela usou. Observe queM pode ser muito grande. SeM for maior ou igual a1 000 000 007,\nvocê deve encontrar o resto da divisão deM por 1 000 000 007.",
+    "input": "A única linha da entrada contém um único inteiroK, a altura da árvore montada por Cecília.",
+    "output": "Seu programa deverá produzir uma única linha contendo um único inteiro, o resto da divisão deM\npor 1 000 000 007.",
+    "constraints": "- 1 ≤ K ≤ 50 000",
+    "examples": [
+        {
+            "input": "1",
+            "output": "1"
+        },
+        {
+            "input": "4",
+            "output": "14\nOlimpíadaBrasileiradeInformática–CompetiçãoFeminina-OBI2024–Prog. Nível1–FaseÚnica 14\nObservação\nO “resto da divisão” é o valor que sobra quando um número é dividido por outro. Por exemplo,\no resto da divisão de 10 por 4 é 2. Este resto pode ser calculado utilizando o operador% entre o\ndividendo e o divisor. Por exemplo:\n• O resto da divisão de 10 por 4 é calculado por10 % 4\n• O resto da divisão deM por 1 000 000 007é calculado porM % 1000000007"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2024",
+    "level": "p1",
+    "period": "Fase Única",
+    "topics": [
+        "estruturas de dados",
+        "simulação",
+        "pilhas"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

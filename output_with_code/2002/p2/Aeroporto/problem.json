@@ -1,0 +1,25 @@
+{
+    "title": "Aeroporto",
+    "statement": "arquivo fonte: aero.pas, aero.c, aero.cc ou aero.cpp\nA crescente utilização do transporte aéreo preocupa os especialistas, que prevêem que o congesti-\nonamento em aeroportos poderá se tornar um grande problema no futuro. Os números atuais já\nsão alarmantes: relatórios oficiais demonstram que na Europa, em junho de 2001, houve uma\nmédia de 7.000 atrasos de vôos por dia. Preocupada com a previsão dos seus especialistas em trá-\nfego aéreo, a Associação de Transporte Aéreo Internacional (ATAI) está começando um estudo\npara descobrir quais são os aeroportos onde o tráfego aéreo pode vir a ser mais problemático no\nfuturo. \n1. Tarefa\nComo programador recém contratado pela ATAI você foi encarregado de escrever um programa\npara determinar, a partir de uma listagem  de aeroportos  e vôos, qual aeroporto possui maior pro-\nbabilidade de congestionamento no futuro. Como medida da probabilidade de congestionamento\nserá utilizado neste estudo o número total de vôos que chegam ou que partem de cada aeroporto.",
+    "input": "A entrada é composta de vários conjuntos de teste. A primeira linha de um conjunto de teste con-\ntém dois números inteiros A e V, que indicam respectivamente o número de aeroportos e o número\nde vôos. Os aeroportos são identificados por inteiros de 1 a A. As V linhas seguintes contêm cada\numa a informação de um vôo, representada por um par de números inteiros positivos X e Y, indi-\ncando que há um vôo do aeroporto X para o aeroporto Y. O final da entrada é indicado quando A =\nV = 0.\nExemplo de Entrada\n5 7\n1 3\n2 1\n3 2\n3 4\n4 5\n3 5\n2 5\n3 5\n1 3\n1 2\n3 2\n1 2\n2 1\n0 0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "5 7\n1 3\n2 1\n3 2\n3 4\n4 5\n3 5\n2 5\n3 5\n1 3\n1 2\n3 2\n1 2\n2 1\n0 0\n3. Saída\nPara cada conjunto de teste da entrada seu programa deve produzir três linhas. A primeira linha\nidentifica o conjunto de teste, no formato “Teste n”, onde n é numerado a partir de 1. A segunda\nlinha deve conter  o identificador do aeroporto que possui maior tráfego aéreo.   Caso mais de  um\n\n9\naeroporto possua este  valor máximo, você deve listar todos estes aeroportos, em ordem crescente\nde identificação, e separados por pelo menos um espaço em branco. A terceira linha deve ser dei-\nxada em branco. A grafia mostrada no Exemplo de Saída, abaixo, deve ser seguida rigorosamente.",
+            "output": "Teste 1\n3\nTeste 2\n1 2\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2002",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

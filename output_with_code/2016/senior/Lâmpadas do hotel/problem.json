@@ -1,0 +1,33 @@
+{
+    "title": "Lâmpadas do hotel",
+    "statement": "Nome do arquivo: hotel.c, hotel.cpp, hotel.pas, hotel.java, hotel.js, hotel.py2 ou\nhotel.py3\nVocê está de volta em seu hotel na Tailândia depois de um dia de mergulhos. O seu quarto tem\nduas lâmpadas. Vamos chamá-las de A e B. No hotel há dois interruptores, que chamaremos de C1\ne C2. Ao apertar C1, a lâmpada A acende se estiver apagada, e apaga se estiver acesa. Se apertar\nC2, cada uma das lâmpadas A e a B troca de estado: se estiver apagada, fica acesa e se estiver\nacesa apaga.\nVocê chegou no hotel e encontrou as lâmpadas em um determinado estado, como foram deixadas\npor seu amigo. Vamos chamar o estado inicial da lâmpada A de IA e o estado inicial da lâmpada B\nde IB. Você gostaria de deixar as lâmpadas em uma certa configuração final, que chamaremos de\nFA e FB, respectivamente, apertando os interruptores a menor quantidade de vezes possível. Por\nexemplo, se as duas lâmpadas começam apagadas, e você quer que apenas a lâmpada A termine\nacesa, basta apertar o interruptor C1.\nDados os estados iniciais e desejados das duas lâmpadas (acesa/apagada), determine o número\nmínimo de vezes que interruptores devem ser apertados.",
+    "input": "A entrada contém quatro inteiros: IA, IB, FA e FB, os estados iniciais das lâmpadas A e B e os\nestados finais desejados das lâmpadas A e B, respectivamente e nessa ordem. Os valores de IA, IB,\nFA e FB possíveis são 0, se a lâmpada estiver apagada e 1 caso contrário.",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "A entrada contém quatro inteiros: IA, IB, FA e FB, os estados iniciais das lâmpadas A e B e os\nestados finais desejados das lâmpadas A e B, respectivamente e nessa ordem. Os valores de IA, IB,\nFA e FB possíveis são 0, se a lâmpada estiver apagada e 1 caso contrário.",
+            "output": "Seu programa deverá imprimir um único número, o número mínimo de interruptores que devem ser\napertados.\nInformações sobre a pontuação\n• Em um conjunto de casos de teste equivalente a 25 pontos, as duas lâmpadas começam sempre\napagadas (IA = IB = 0)."
+        },
+        {
+            "input": "0 0 1 1",
+            "output": "1"
+        },
+        {
+            "input": "0 0 0 1",
+            "output": "2"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2016",
+    "level": "senior",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

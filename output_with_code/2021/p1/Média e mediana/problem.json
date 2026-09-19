@@ -1,0 +1,34 @@
+{
+    "title": "Média e mediana",
+    "statement": "Nome do arquivo:“media.x”,onde x deve ser c, cpp, pas, java, js ou py\nA média de três números inteirosA, B e C é (A + B + C)/3. A mediana de três números inteiros\né o número que ﬁcaria no meio se os três números fossem ordenados em ordem não-decrescente.\nSua tarefa é escrever um programa que, dados dois números inteiros distintosA e B, calcule o menor\ninteiro possível C tal que a média e a mediana deA, B e C sejam iguais.",
+    "input": "A entrada é composta de uma única linha contendo dois números inteirosA e B.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único número, o menor inteiro possível\nC tal que a média e a mediana deA, B e C são iguais.",
+    "constraints": "- 1 ≤ A ≤ B ≤ 109",
+    "examples": [
+        {
+            "input": "1 2",
+            "output": "0"
+        },
+        {
+            "input": "6 10",
+            "output": "2"
+        },
+        {
+            "input": "1 1000000000",
+            "output": "-999999998"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "matemática",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

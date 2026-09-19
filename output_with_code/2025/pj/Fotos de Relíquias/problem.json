@@ -1,0 +1,32 @@
+{
+    "title": "Fotos de Relíquias",
+    "statement": "Jonas, um famoso arqueólogo, quer viralizar nas redes sociais publicando fotos de relíquias encontradas em suas jornadas. Para tirar fotos agradáveis, Jonas escolheu uma paisagem como plano de fundo para suas fotos.\n\nA paisagem escolhida por Jonas é dividida em N seções, de forma que algumas são seções de destaque e outras não. Ele escreveu uma lista A de N inteiros que descrevem as N seções da paisagem, da esquerda para a direita, de forma que, se A_i = 1 então a i-ésima seção é de destaque, e caso contrário A_i = 0.\n\nJonas escolheu uma relíquia e vai tirar uma foto dela usando uma região contínua da paisagem como plano de fundo. Para que a relíquia seja o foco principal, a foto deve conter uma única seção de destaque, onde a relíquia será posicionada. Portanto, ele deve escolher um par de inteiros (l, r) que satisfaça as seguintes condições:\n- 1 <= l <= r <= N.\n- As seções l, l + 1, ..., r farão parte da foto.\n- Dentre as seções presentes na foto, exatamente uma é de destaque, ou seja, existe um único índice k tal que l <= k <= r e A_k = 1.\n\nJonas quer saber de quantas maneiras diferentes ele pode tirar a foto. Ajude ele a determinar a quantidade de pares de inteiros (l, r) que satisfazem todas as condições desejadas.",
+    "input": "A primeira linha da entrada contém um único inteiro N, indicando o número de seções na paisagem.\nA segunda linha da entrada possui N inteiros A_1, A_2, ..., A_N, onde A_i = 1 se a i-ésima seção é uma seção de destaque, ou A_i = 0 caso contrário.",
+    "output": "Seu programa deve imprimir uma única linha contendo um único inteiro, o número de modos que Jonas pode tirar a foto.",
+    "constraints": "É garantido que todo caso de teste satisfaz as restrições abaixo.\n- 1 <= N <= 100000.\n- A_i = 0 ou A_i = 1 para todo 1 <= i <= N.\n\nPara competidores que utilizam C++ ou Java: Observe que alguns valores na saída podem ser muito grandes para caberem em um inteiro de 32 bits. É recomendado o uso de inteiros de 64 bits (long long em C++; long em Java). (Competidores usando Python ou JavaScript podem ignorar este aviso.)",
+    "examples": [
+        {
+            "input": "5\n1 0 0 1 0",
+            "output": "9"
+        },
+        {
+            "input": "12\n0 0 0 1 0 0 0 0 0 0 0 0",
+            "output": "36"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2025",
+    "level": "pj",
+    "period": "Fase 3",
+    "topics": [
+        "array",
+        "prefix sums",
+        "two pointers",
+        "math"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 512
+}

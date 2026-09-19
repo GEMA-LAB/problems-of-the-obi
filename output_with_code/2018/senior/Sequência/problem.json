@@ -1,0 +1,39 @@
+{
+    "title": "Sequência",
+    "statement": "Nome do arquivo:“sequencia.x”,onde x deve ser c|cpp|pas|java|js|py2|py3\nO professor da importante disciplina de Indução Matemática está tentando resolver uma versão\ngeneralizada de um problema muito tradicional: encontrar o valor máximo possível para a soma dos\nelementos de uma subsequência contígua de uma sequência de números inteiros quaisquer. Mais\nrigorosamente, dado uma sequênciaS = [s1, s2, . . . , sN ], ondesi é um número inteiro qualquer, para\n1 ≤ i ≤ N, maximizar soma(i, j) = si + si+1 + · · · + sj entre todos os possíveis pares(i, j), onde\n1 ≤ i ≤ j ≤ N.\nNa versão do professor, entretanto, alguns elementos da sequência são especiais e estão marcados.\nAlém da sequência marcada, são dadas como entrada duas cotas:L e H, com L ≤ H. O objetivo\nagora é encontrar o valor máximo possível para a soma dos elementos de uma subsequência contígua,\nque contenha pelo menosL e no máximoH elementos marcados.\nPor deﬁnição, uma subsequência vazia (de zero elementos) tem soma igual a zero. Mas note que,\ncomo podemos ter uma cota inferior para o número de elementos marcados, a subsequência contígua\nde soma máxima pode ter soma negativa!",
+    "input": "A primeira linha da entrada contém três inteirosN, L e H, indicando respectivamente o número de\nelementos na sequência, a cota inferiorL e a cota superiorH. A segunda linha contémN inteiros\nsi, para 1 ≤ i ≤ N, deﬁnindo os elementos da sequência. A terceira linha contémN inteiros mi,\npara 1 ≤ i ≤ N, indicando as marcas. Se oi-ésimo elemento está marcado, o valor émi = 1. Se\nnão estiver marcado,mi = 0.",
+    "output": "Imprima um inteiro, representando o valor máximo possível para a soma dos elementos de uma\nsubsequência contígua, que contenha pelo menosL e no máximoH elementos marcados.",
+    "constraints": "- 1 ≤ N ≤ 105\n- 0 ≤ L ≤ H ≤ 20\n- − 103 ≤ si ≤ 103, para 1 ≤ i ≤ N\n- O número de elementos marcados na sequência é maior ou igual aL; portanto sempre existe\n- solução.",
+    "examples": [
+        {
+            "input": "14 3 4\n9 0 -23 -12 7 1 -13 2 -1 9 -16 -1 14 12\n1 0 0 1 0 1 0 0 1 1 0 0 1 1",
+            "output": "19"
+        },
+        {
+            "input": "14 7 20\n9 0 -23 -12 7 1 -13 2 -1 9 -16 -1 14 12\n1 0 0 1 0 1 0 0 1 1 0 0 1 1",
+            "output": "-12"
+        },
+        {
+            "input": "14 5 5\n9 0 -23 -12 7 1 -13 2 -1 9 -16 -1 14 12\n1 0 0 1 0 1 0 0 1 1 0 0 1 1",
+            "output": "14"
+        },
+        {
+            "input": "14 0 20\n9 0 -23 -12 7 1 -13 2 -1 9 -16 -1 14 12\n1 0 0 1 0 1 0 0 1 1 0 0 1 1",
+            "output": "26"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "programação dinâmica",
+        "vetores",
+        "ad-hoc"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 512
+}

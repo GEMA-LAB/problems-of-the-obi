@@ -1,0 +1,35 @@
+{
+    "title": "Figurinhas da copa",
+    "statement": "Nome do arquivo:“figurinhas.x”,onde x deve ser cpp, pas, java, js, py2 ou py3\nEm ano de Copa do Mundo de Futebol, o álbum de ﬁgurinhas oﬁcial é sempre um grande sucesso\nentre crianças e também entre adultos. Para quem não conhece, o álbum contém espaços numerados\nde 1 a N para colar as ﬁgurinhas; cada ﬁgurinha, também numerada de 1 aN, é uma pequena\nfoto de um jogador de uma das seleções que jogará a Copa do Mundo. O objetivo é colar todas\nas ﬁgurinhas nos respectivos espaços no álbum, de modo acompletar o álbum (ou seja, não deixar\nnenhum espaço sem a correspondente ﬁgurinha).\nAlgumas ﬁgurinhas sãocarimbadas (efetivamente têm um carimbo impresso sobre a fotograﬁa do\njogador) e são mais raras, mais difíceis de conseguir.\nAs ﬁgurinhas são vendidas em envelopes fechados, de forma que o comprador não sabe quais ﬁguri-\nnhas está comprando, e pode ocorrer de comprar uma ﬁgurinha que ele já tenha colado no álbum.\nPara ajudar os usuários, a empresa responsável pela venda do álbum e das ﬁgurinhas quer criar um\naplicativo que permita gerenciar facilmente as ﬁgurinhas que faltam para completar o álbum.\nDados o número total de espaços e ﬁgurinhas do álbum (N), a lista das ﬁgurinhas carimbadas e uma\nlista das ﬁgurinhas já compradas (que pode conter ﬁgurinhas repetidas), sua tarefa é determinar\nquantas ﬁgurinhas carimbadasfaltam paracompletar o álbum.",
+    "input": "A primeira linha contém três números inteiros N, C e M indicando respectivamente o número\nde ﬁgurinhas (e espaços) do álbum, o número de ﬁgurinhas carimbadas do álbum e o número de\nﬁgurinhas já compradas. A segunda linha contémC números inteiros distintos Xi indicando as\nﬁgurinhas carimbadas do álbum. A terceira linha contém M números inteiros Yi indicando as\nﬁgurinhas já compradas.",
+    "output": "Seu programa deve produzir um inteiro representando o número deﬁgurinhas carimbadasque falta\npara completar o álbum.",
+    "constraints": "- 1≤ N≤ 100\n- 1≤ C≤ N/2\n- 1≤ M≤ 300\n- 1≤ Xi, Yi≤ N",
+    "examples": [
+        {
+            "input": "10 2 5\n4 7\n7 1 2 8 3",
+            "output": "1"
+        },
+        {
+            "input": "10 2 6\n4 7\n7 1 8 4 9 3",
+            "output": "0"
+        },
+        {
+            "input": "8 4 10\n2 4 6 8\n3 1 1 5 9 1 7 7 1 1",
+            "output": "4"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "árvores",
+        "torneio",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

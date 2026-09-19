@@ -1,0 +1,25 @@
+{
+    "title": "Pedido de Desculpas",
+    "statement": "Arquivo fonte: desculpa.c, desculpa.cc, desculpa.cpp ou desculpa.pas\nCuca saiu para jogar futebol com os amigos e esqueceu do encontro que tinha com a namorada. Ciente\nda mancada, Cuca deseja elaborar um pedido especial de desculpas. Resolveu então enviar flores e\nusar o cartão da floricultura para escrever um pedido especial de desculpas.\nCuca buscou na internet um conjunto de frases bonitas contendo a palavra ‘desculpe’ (que pode\nocorrer mais de uma vez na mesma frase). No entanto, o cartão da floricultura é pequeno, e nem todas\nas frases que Cuca colecionou poderão ser aproveitadas.\nCuca quer aproveitar o espaço do cartão, onde cabe um número limitado de caracteres, para\nescrever um sub-conjunto das frases coletadas de modo que apareça o máximo de vezes possível a\npalavra ‘desculpe’.\nTarefa\nEscreva um programa que, dados o número de caracteres que cabem no cartão e a quantidade de\nfrases coletadas (com os respectivos comprimentos e os números de ocorrências da palavra ‘desculpe’),\ndetermine o número máximo de vezes que a palavra aparece, utilizando apenas as frases colecionadas,\nsem repetí-las.",
+    "input": "A entrada é constituída de vários casos de teste. A primeira linha de um caso de teste contém dois\nnúmeros inteiros C e F indicando respectivamente o comprimento do cartão em caracteres (8 ≤C ≤\n1000) e o número de frases coletadas (1 ≤F ≤50). Cada uma das F linhas seguintes descreve uma\nfrase coletada. A descrição é composta por dois inteiros N e D que indicam respectivamente o número\nde caracteres na frase (8 ≤N ≤200) e quantas vezes a palavra ‘desculpe’ ocorre na frase (1 ≤D ≤25).\nO final da entrada é indicado por C = F = 0.\nA entrada deve ser lida do dispositivo de entrada padrão (normalmente o teclado).",
+    "output": "Para cada caso de teste seu programa deve produzir três linhas na saída. A primeira identifica o\nconjunto de teste no formato “Teste n”, onde n é numerado a partir de 1. A segunda linha deve\nconter o máximo número de vezes que a palavra ‘desculpe’ pode aparecer no cartão, considerando que\napenas frases coletadas podem ser utilizadas, e cada frase não é utilizada mais de uma vez. A terceira\nlinha deve ser deixada em branco. A grafia mostrada no Exemplo de Saída, abaixo, deve ser seguida\nrigorosamente.\nA saída deve ser escrita no dispositivo de saída padrão (normalmente a tela).",
+    "constraints": "- 8 ≤C ≤1000 (C = 0 apenas para indicar o fim da entrada)\n- 1 ≤F ≤50 (S = 0 apenas para indicar o fim da entrada)\n- 8 ≤N ≤200\n- 1 ≤D ≤25\n- 8",
+    "examples": [
+        {
+            "input": "200 4\n100 4\n100 1\n120 2\n80 5\n40 3\n10 1\n10 1\n20 2\n0 0",
+            "output": "Teste 1\n9\nTeste 2\n4"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2005",
+    "level": "p2",
+    "period": "Fase Única",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

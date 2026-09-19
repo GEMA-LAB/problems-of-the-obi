@@ -1,0 +1,33 @@
+{
+    "title": "Dança Indígena",
+    "statement": "Nome do arquivo fonte: danca.c, danca.cpp, ou danca.pas\nA OBI (Organização Brasileira dos Índios) promoverá um festival indígena, onde várias tribos irão se reunir e\nfazer demonstrações de cultura, como artesanato, danças, pinturas, comidas e etc.\nUma das tribos é a dos Tunak Tunak, que possuem uma apresentação de dança muito peculiar. Nessa dança,\nexistem N toras de madeira encrustadas no chão, dispostas de maneira circular e igualmente espaçadas. Em\nalgumas dessas toras fica um índio, olhando em sentido horário ou anti-horário.\nA cada batida do tambor, os índios pulam para a próxima tora (que depende da direção para onde ele está\nolhando no momento). Durante a dança, porém, algumas coisas podem acontecer:\n• Dois índios que pulam em sentidos opostos caem na mesma tora ao mesmo tempo.\nNesse caso, ambos permanecem nas toras, mas passam a pular na direção contrária a partir da próxima\nbatida de tambor (isso é, quem estava pulando em sentido horário passa a pular em sentido anti-horário,\ne vice-versa)\n• Dois índios em toras consecutivas vão pular um em direção ao outro.\nNesse caso, os índios simplesmente não pulam (para não causar nenhum acidente), e, assim como no caso\nanterior, passam a pular no sentido contrário a partir da próxima batida de tambor.\nNote que se o índio não pula e inverte seu sentido, mas ao mesmo tempo um outro índio cair na mesma tora\nno sentido contrário, caimos no primeiro caso, e ambos os índios na tora invertem seus sentidos (assim, o índio\nque estava na tora anteriormente inverte seu sentido novamente).\nA dança termina quando as toras ocupadas por um índio são exatamente as mesmas toras ocupadas no início\nda dança, não importando qual índio está em cada tora e nem os sentidos para onde eles estão pulando.\nA figura abaixo ilustra (a) uma configuração inicial com oito toras e seis índios; (b) a posição dos índios após\numa batida de tambor; e (c) a posição dos índios após duas batidas de tambor.\n1\n2\n3\n4\n5\n6\n7\n8\n1\n2\n3\n4\n5\n6\n7\n8\n1\n2\n3\n4\n5\n6\n7\n8\n(a)\n(b)\n(c)\nTarefa\nOs índios querem se preparar para a dança e precisam saber quanto tempo ela vai durar.\nPara isso, você deverá escrever um programa que, dados a quantidade de toras que serão utilizadas, a quantidade\nde índios e a posição inicial de cada um, calcule quantas batidas de tambor levará para que a dança termine.",
+    "input": "A primeira linha da entrada possui 2 inteiros: N (3 ≤N ≤1.000.000) e E (1 ≤E ≤1000), que são,\nrespectivamente, a quantidade de toras e a quantidade de índios que irão dançar (E ≤N). As próximas E\n\n8\nlinhas contém, cada uma, a descrição da posição inicial de cada índio.\nCada linha possui dois inteiros: V\n(1 ≤V ≤N) e D (D = 1 ou D = −1) que representam, respectivamente, o número da tora onde o índio inicia\ne seu sentido inicial (1 se horário, −1 se anti-horário). A numeração das toras obedece o sentido horário. No\ninício da dança uma tora terá, no máximo, um índio.",
+    "output": "Seu programa deverá exibir um número inteiro representando a quantidade de batidas de tambor necessárias\npara que a dança acabe.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "6 4\n2 1\n3 1\n5 1\n6 1",
+            "output": "3"
+        },
+        {
+            "input": "3 1\n2 -1",
+            "output": "3"
+        },
+        {
+            "input": "8 6\n2 -1\n3 1\n4 -1\n6 1\n7 -1\n8 1",
+            "output": "4"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2010",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

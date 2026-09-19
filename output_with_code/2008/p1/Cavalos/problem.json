@@ -1,0 +1,33 @@
+{
+    "title": "Cavalos",
+    "statement": "Nome do arquivo fonte: cavalos.c, cavalos.cpp ou cavalos.pas\nO jogo de xadrez como conhecido hoje foi inventado por volta do século XV, na Europa Medieval. Uma das\nsuas peças mais interessantes é o cavalo, que se movimenta e ataca outras peças conforme a figura abaixo:\nNa figura, o símbolo ‘•’ representa as posições que o cavalo na casa central ataca.\nExistem vários quebra-cabeças interessantes envolvendo os movimentos do cavalo; um deles pergunta quantos\ncavalos podem ser colocados em um tabuleiro M × N de forma que nenhum par de cavalos se ataque:\n(a)\n(b)\nSoluções do quebra-cabeça para (a) um tabuleiro (a) 5 × 3 (b) um tabuleiro 2 × 6.\nA sua tarefa é escrever um programa que, dados M e N, determina quantos cavalos podem ser colocados em\num tabuleiro M × N de forma que nenhum par de cavalos ataque-se simultaneamente.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira (e única) linha da entrada contém dois inteiros, M e N, (1 ≤M ≤1000, 1 ≤N ≤1000)\nindicando, respectivamente, o número de linhas e o número de colunas do tabuleiro.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha, contendo um inteiro indicando o maior número\nde cavalos que podem ser colocados no tabuleiro sem que dois deles se ataquem.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "5 3",
+            "output": ""
+        },
+        {
+            "input": "2 6",
+            "output": ""
+        },
+        {
+            "input": "1 4",
+            "output": "5\nInformações sobre a pontuação\n• Em um conjunto de casos de teste que totaliza 30 pontos, 1 ≤M ≤6.\n• Em um conjunto de casos de teste que totaliza 55 pontos, 1 ≤M ≤100."
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2008",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

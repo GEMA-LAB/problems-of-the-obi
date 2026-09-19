@@ -1,0 +1,35 @@
+{
+    "title": "Troféu",
+    "statement": "Nome do arquivo:trofeu.c, trofeu.cpp, trofeu.pas, trofeu.java, trofeu.js ou trofeu.py\nCinco alunos e alunas da escola conseguiram classiﬁcar-se para a Final da prestigiosa e muito difícil\nCompetição Estadual de Programação, que será realizada no próximo mês.\nIndependentementedaclassiﬁcaçãoqueosalunosdaescolaconseguiremnaFinal, adireçãodaescola\ndecidiu que vai fazer uma premiação para os seus alunos. Quem conseguir a maior pontuação na\nFinal, entre os alunos da escola, vai receber um troféu. E quem receber a segunda maior pontuação,\nentre os alunos da escola, vai receber uma placa comemorativa.\nO problema é que pode haver alunos com as mesmas pontuações, de forma que dependendo dos\nresultados muitas combinações de prêmios são possíveis, como por exemplo, entre outros:\n• cinco troféus (empate, todos com a mesma pontuação)\n• um troféu (maior pontuação) e duas placas (empate na segunda maior pontuação)\n• dois troféus (empate na maior pontuação) e duas placas (empate na segunda maior pontuação)\nDadas as pontuações dos cinco alunos e alunas, determine quantos troféus e placas deverão ser\nentregues.",
+    "input": "A entrada consiste de cinco linhas, cada uma contendo um inteiroPi a pontuação de um aluno\nou aluna. As pontuações serão dadas em ordem decrescente (ou seja, da maior para a menor\npontuação).",
+    "output": "Seu programa deve produzir uma única linha, contendo dois inteiros. O primeiro inteiro deve ser o\nnúmero de troféus e o segundo inteiro o número de placas comemorativas a serem entregues.",
+    "constraints": "- 1≤ Pi≤ 100",
+    "examples": [
+        {
+            "input": "100\n90\n80\n70\n60",
+            "output": "1 1"
+        },
+        {
+            "input": "100\n100\n90\n89\n77",
+            "output": "2 1"
+        },
+        {
+            "input": "99\n99\n99\n99\n99",
+            "output": "5 0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2022",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ordenação",
+        "condicional",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

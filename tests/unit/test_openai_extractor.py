@@ -168,3 +168,34 @@ def test_process_cadernos_batch(mock_client, sample_problem, tmp_path):
     assert len(errors) == 0
     assert (output_dir / "2024" / "pj" / "Torre de Dados" / "problem.json").exists()
 
+
+def test_save_problem_mirrors_cadernos_path(sample_problem, tmp_path):
+    """Garante que save_problem utiliza o caminho do PDF em cadernos/ em vez do level da LLM."""
+    cadernos_dir = tmp_path / "cadernos"
+    pdf_path = cadernos_dir / "2025" / "p1" / "ProvaOBI2025_f1p1.pdf"
+    pdf_path.parent.mkdir(parents=True)
+    pdf_path.write_bytes(b"%PDF-1.4 test")
+
+    sample_problem.level = "N1"  # LLM retornou N1
+    sample_problem.year = "2025"
+
+    output_dir = tmp_path / "output_with_code"
+    extractor = OpenAiExtractor(client=MagicMock())
+
+    saved = extractor.save_problem(
+        sample_problem,
+        output_base=output_dir,
+        source_pdf=pdf_path,
+        base_cadernos_dir=cadernos_dir,
+    )
+
+    expected = output_dir / "2025" / "p1" / "Torre de Dados" / "problem.json"
+    assert saved == expected
+    assert expected.exists()
+    assert not (output_dir / "2025" / "n1").exists()
+
+    with open(saved, "r", encoding="utf-8") as f:
+        data = json.load(f)
+        assert data["level"] == "p1"
+
+

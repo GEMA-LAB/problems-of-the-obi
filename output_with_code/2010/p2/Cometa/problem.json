@@ -1,0 +1,33 @@
+{
+    "title": "Cometa",
+    "statement": "Nome do arquivo fonte: cometa.c, cometa.cpp, ou cometa.pas\nO cometa Halley é um dos cometas de menor período do Sistema Solar, completando uma volta em torno do\nSol a cada 76 anos; na última ocasião em que ele tornou-se visível do planeta Terra, em 1986, várias agências\nespaciais enviaram sondas para coletar amostras de sua cauda e assim confirmar teorias sobre suas composições\nquímicas.\nTarefa\nEscreva um programa que, dado o ano atual, determina qual o próximo ano em que o cometa Halley será visível\nnovamente do planeta Terra. Se o ano atual é um ano de passagem do cometa, considere que o cometa já passou\nnesse ano (ou seja, considere sempre o próximo ano de passagem, não considerando o ano atual).",
+    "input": "A única linha da entrada contém um único inteiro A (2010 ≤A ≤104), indicando o ano atual.",
+    "output": "Seu programa deve imprimir uma única linha, contendo um número inteiro, indicando o próximo ano em que o\ncometa Halley será visível novamente do planeta Terra.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "2010",
+            "output": "2062"
+        },
+        {
+            "input": "10000",
+            "output": "10042"
+        },
+        {
+            "input": "2062",
+            "output": "2138"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2010",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

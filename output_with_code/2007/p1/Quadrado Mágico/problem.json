@@ -1,0 +1,34 @@
+{
+    "title": "Quadrado Mágico",
+    "statement": "Nome do arquivo fonte: magico.c, magico.cpp, ou magico.pas\nChama-se de quadrado mágico um arranjo, na forma de um quadrado, de N × N números inteiros tal que todas\nas linhas, colunas e diagonais têm a mesma soma.\nPor exemplo, o quadrado abaixo\n2 7 6\n9 5 1\n4 3 8\né um quadrado mágico de soma 15, pois todas as linhas (2+7+6 = 15, 9+5+1 = 15 e 4+3+8 = 15), colunas\n(2 + 9 + 4 = 15, 7 + 5 + 3 = 15 e 6 + 1 + 8 = 15) e diagonais (2 + 5 + 8 = 15 e 6 + 5 + 4 = 15) têm a mesma\nsoma (15).\nTarefa\nEscreva um programa que, dado um quadrado, determine se ele é magico ou não e qual a soma dele (caso seja\nmágico).",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada de cada caso de teste contém um inteiro N (2 < N < 10). As N\nlinhas seguintes contêm N inteiros cada, separados por exatamente um espaço em branco. Os inteiros dentro\ndo quadrado são todos maiores que 0 (zero) e menores que 1.000.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha com um inteiro representando a soma do\nquadrado mágico ou −1 caso o quadrado não seja mágico.\nEntrada\n3\n2 7 6\n9 5 1\n4 3 8\nSaída\n15\nEntrada\n3\n1 2 3\n4 5 6\n7 8 9\nSaída\n-1\nEntrada\n4\n16 3 2 13\n5 10 11 8\n9 6 7 12\n4 15 14 1\nSaída\n34",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3\n2 7 6\n9 5 1\n4 3 8",
+            "output": "15"
+        },
+        {
+            "input": "3\n1 2 3\n4 5 6\n7 8 9",
+            "output": "-1"
+        },
+        {
+            "input": "4\n16 3 2 13\n5 10 11 8\n9 6 7 12\n4 15 14 1",
+            "output": "34"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2007",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "matrizes",
+        "simulação"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

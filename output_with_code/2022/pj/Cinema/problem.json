@@ -1,0 +1,31 @@
+{
+    "title": "Cinema",
+    "statement": "Nome do arquivo:cinema.c, cinema.cpp, cinema.pas, cinema.java, cinema.js ou cinema.py\nDuas amigas estão na ﬁla para comprar ingressos para uma sessão de cinema. O preço dos ingressos,\nem Reais, é dado na tabela abaixo:\nIdade Preço\naté 17 anos 15\n18 a 59 anos 30\n60 anos ou mais 20\nDadas as idades das amigas, escreva um programa para calcular o total a ser pago pelos dois\ningressos.",
+    "input": "A entrada contém duas linhas, cada linha contendo um inteiro, a idade de uma das amigas.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, que deve ser o valor total\nem Reais a ser pago pelos dois ingressos.",
+    "constraints": "- 1 ≤ idade ≤ 100",
+    "examples": [
+        {
+            "input": "100\n10",
+            "output": "35"
+        },
+        {
+            "input": "17\n18",
+            "output": "45"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2022",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "aritmética",
+        "condicional",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

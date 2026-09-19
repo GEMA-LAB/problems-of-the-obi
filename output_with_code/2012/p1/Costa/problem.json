@@ -1,0 +1,29 @@
+{
+    "title": "Costa",
+    "statement": "Nome do arquivo fonte: costa.c, costa.cpp, costa.pas, costa.java, ou costa.py\nA Nlogônia é um país tropical, com muitas belezas naturais internacionalmente famosas; dentre elas, encontram-\nse as belas praias que compõem o arquipélago do país, que todo verão recebem milhões de turistas estrangeiros.\nO Ministério do Turismo da Nlogônia está preparando o país para a chegada dos turistas, mas para fazer seu\nplanejamento, precisa saber a extensão da costa nlogônica. Para isso, ele gerou um mapa que divide o território\nnacional em vários quadrados, que podem ser ocupados por água ou por terra; considera-se que um quadrado é\nparte da costa nlogônica se ele é um quadrado ocupado por terra que tem um lado em comum com um quadrado\nocupado por água.\nNa figura abaixo, (a) mostra um trecho do mapa gerado e (b) mostra os quadrados do trecho dado que são\ncosta.\nTerra\nMar\n(a)\n(b)\nCosta\nComo a Nlogônia é um país muito grande, o ministro do turismo pediu que você escrevesse um programa que,\ndado o mapa da Nlogônia, determina a extensão da costa nlogônica.",
+    "input": "A primeira linha da entrada contém dois inteiros M e N indicando, respectivamente, o número de linhas e o\nnúmero de colunas do mapa. Cada uma das M linhas seguintes contém N caracteres: um caractere ‘.’ indica\nque aquele quadrado do território é ocupada por água; um caractere ‘#’ indica que aquele quadrado do território\né ocupada por terra.\nConsidere que todo o espaço fora da área do mapa é ocupado por água.",
+    "output": "Seu programa deve imprimir uma única linha contendo um único inteiro, indicando quantos quadrados do\nterritório fazem parte da costa da Nlogônia.",
+    "constraints": "- 1 ≤M, N ≤1000\n- 4",
+    "examples": [
+        {
+            "input": "5 5\n.....\n..#..\n.###.\n..#..\n.....",
+            "output": "4"
+        },
+        {
+            "input": "10 10\n..........\n.....###..\n....#####.\n.#...##...\n..........\n.......##.\n.##.......\n..##......\n..###.....\n..#####...",
+            "output": "22"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2012",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

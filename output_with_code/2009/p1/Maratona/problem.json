@@ -1,0 +1,29 @@
+{
+    "title": "Maratona",
+    "statement": "Nome do arquivo fonte: maratona.c, maratona.cpp, ou maratona.pas\nA maratona é talvez a prova mais desgastante entre as modalidades olímpicas: são quarenta e dois mil, cento\ne noventa e cinco metros de percurso. Por isso, os organizadores sempre posicionam vários postos de água ao\nlongo do trajeto da prova, onde copos de água são distribuídos aos competidores.\nJoão Saci é um jovem atleta que tem boas chances de se tornar um maratonista de primeira linha. No entanto,\nJoão Saci descobriu que somente consegue terminar uma maratona se ingerir alguns copos de água durante\no percurso. O Laboratório de Biomecânica da universidade local, através de experimentos, determinou que\nJoão Saci consegue percorrer exatamente mais dois mil metros após o instante em que ingere um copo de\nágua. A distância que João Saci consegue percorrer após ingerir um copo de água é denominada de distância\nintermediária máxima. Assim, se a distância entre dois postos de água consecutivos no percurso da maratona\nfor sempre menor ou igual do que a distância intermediária máxima de João Saci, ele consegue terminar a prova.\nCaso contrário ele não consegue terminar a prova.\nO Laboratório de Biomecânica quer agora realizar estudos similares com outros maratonistas, que têm valor de\ndistâncias intermediárias máximas distintas, e precisa de sua ajuda.\nTarefa\nSua tarefa é escrever um programa que, dada a posição dos postos de água ao longo do percurso, e a distância\nintermediária máxima de um atleta, determine se o atleta consegue ou não completar a prova.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado).\nA primeira linha da entrada contém dois números inteiros N e M, separados por um espaço em branco, indicando\nrespectivamente o número de postos de água (2 ≤N ≤10000) e a distância intermediária máxima de um atleta,\nem metros (1 ≤M ≤42195). A segunda linha contém N números inteiros Pi, separados por um espaço em\nbranco, representando a posição dos postos de água ao longo do trajeto da maratona. A posição de um posto\nde água é dada pela distância, em metros, do início do percurso até o posto de água (0 ≤Pi ≤42195 para\n1 ≤i ≤N). O primeiro posto de água está sempre localizado no ponto de partida (ou seja, P1 = 0) e todos os\npostos estão em posições distintas. Além disso, os postos de água são dados na ordem crescente de sua distância\nao início do percurso.\nNote que a distância total da prova é a oficial para a maratona, ou seja, 42195 metros.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha contendo o caractere ‘S’ se o atleta consegue\nterminar a prova, ou o caractere ‘N’ caso contrário.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3 20000\n0 20000 33333",
+            "output": "S"
+        },
+        {
+            "input": "8 6000\n0 6000 12000 18000 24000 32000 37000 40000",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2009",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

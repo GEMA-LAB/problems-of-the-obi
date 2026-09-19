@@ -1,0 +1,26 @@
+{
+    "title": "Proteja sua senha",
+    "statement": "Arquivo fonte: senha.c, senha.cc, senha.cpp ou senha.pas\nPor questões de segurança, muitos bancos hoje em dia estão alterando a forma como seus clientes\ndigitam as senhas nos caixas eletrônicos, pois alguém pode postar-se atrás do cliente e ver as\nteclas à medida em que ele as digita.\nUma alternativa bastante utilizada tem sido associar os dez dígitos a cinco letras, de forma que\ncada letra esteja associada a dois dígitos, conforme o exemplo abaixo:\nAs associações entre números e letras são mostradas como botões numa tela sensível ao toque,\npermitindo que o cliente selecione os botões correspondentes à senha. Considerando a disposição\ndos botões da figura acima, a senha 384729 seria digitada como BCEAEB (note que a mesma\nseqüência de letras seria digitada para outras senhas, como por exemplo 982123).\nCada vez que o cliente usa o caixa eletrônico, as letras utilizadas são as mesmas (de ‘A’ a ‘E’),\ncom os botões nas mesmas posições, mas os dígitos são trocados de lugar. Assim, caso um intruso\nveja (mesmo que mais de uma vez) a seqüência de letras digitada, não é possível notar facilmente\nqual a senha do cliente do banco.\n1. Tarefa\nDada uma seqüência de associações entre letras e números, e as letras digitadas pelo cliente do\nbanco para cada uma dessas associações, você deve escrever um programa para determinar qual é\na senha do cliente.",
+    "input": "A entrada é composta de vários conjuntos de testes. A primeira linha de um conjunto de testes\ncontém um inteiro N, que indica o número de associações entre letras e números e as senhas digi-\ntadas (2 ≤ N ≤ 10). As N linhas seguintes contêm as entradas da seguinte forma: 10 dígitos, em\nordem de associação, para as letras de ‘A’ a ‘E’ (2 dígitos para a letra A, 2 para a B e assim suces-\nsivamente) e 6 letras que representam a senha codificada conforme os dígitos anteriores. As N\nassociações fornecidas em um conjunto de testes serão sempre suficientes para definir univoca-\nmente a senha do cliente. O final da entrada é indicado por N = 0.\nExemplo de Entrada\n2\n1 7 3 9 0 8 5 6 2 4 B C E A E B\n9 0 7 5 8 4 6 2 3 1 E C C B D A\n3\nA\n1\n7\nB\n3\n9\nC\n0\n8\nD\n5\n6\nE\n2\n4\n\n11\n0 1 2 3 4 5 6 7 8 9 B C D D E E\n1 3 5 4 6 8 7 9 0 2 E B C D C D\n3 2 0 4 5 9 7 6 8 1 A C D D E C\n0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "1 7 3 9 0 8 5 6 2 4 B C E A E B\n9 0 7 5 8 4 6 2 3 1 E C C B D A\n3\nA\n1\n7\nB\n3\n9\nC\n0\n8\nD\n5\n6\nE\n2\n4\n\n11\n0 1 2 3 4 5 6 7 8 9 B C D D E E\n1 3 5 4 6 8 7 9 0 2 E B C D C D\n3 2 0 4 5 9 7 6 8 1 A C D D E C\n0\n3. Saída\nPara cada conjunto de teste da entrada, seu programa deve produzir três linhas na saída. A pri-\nmeira linha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é\nnumerado seqüencialmente a partir de 1. A segunda linha deve conter a senha do cliente, com um\nespaço após cada dígito. A terceira linha deve ser deixada em branco. A grafia mostrada no Exem-\nplo de Saída, abaixo, deve ser seguida rigorosamente.",
+            "output": "Teste 1\n3 8 4 7 2 9\nTeste 2\n2 5 6 7 8 9\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2004",
+    "level": "senior",
+    "period": "Fase Única",
+    "topics": [
+        "strings",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

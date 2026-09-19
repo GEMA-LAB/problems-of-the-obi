@@ -1,0 +1,31 @@
+{
+    "title": "Bibi e a árvore",
+    "statement": "Nome do arquivo:bibi.c, bibi.cpp, bibi.java, bibi.js ou bibi.py\nBibi é uma menina apaixonada por natureza. Influenciada por sua mãe, que possui um lindo jardim\nbotânico, ela começou desde cedo a plantar e cuidar de diversos tipos de plantas.\nBibi é extremamente curiosa e sonha em um dia ser uma grande cientista. Por isso, ela registra e\nacompanha, de forma independente, o crescimento de todas as plantas do jardim, anotando tudo\nem um livro. Ela também é bastante engenhosa com as ferramentas que possui à sua disposição:\ncomo ela não possui uma fita métrica, ela mede a altura das plantas usando caixinhas de papelão\nque estão prestes a ir para a reciclagem.\nNum belo dia, sua mãe lhe trouxe de presente uma semente deAbratibum, uma árvore que supos-\ntamente vive até 100.000 anos (1.200.000 meses) e que seria a de maior altura já registrada no livro\nde Bibi. Uau!\nBibi começou imediatamente a registrar o crescimento mensal da árvore. Nos 6 primeiros meses,\nela obteve os seguintes resultados:\nDepois do sexto mês, Bibi observou que o crescimento da árvore parecia ter ficado fixo, e logo ela\nimaginou que isso poderia ser verdade para todos os meses seguintes. Deste modo, ela fez a seguinte\nanotação em seu caderno:\nQuando a Abratibum chega aos5 meses de vida, ela atinge a vida adulta. Por isso, a partir de seu\nsexto mês de vida, a cada mês a Abratibum crescerá em altura amesma quantidade de caixinhas\nque cresceu entre o seu quinto e o seu sexto mês de vida.\nBibi notou que não terá caixinhas o suficiente para medir a Abratibum por muitos meses. Por isso,\ndecidiu começar a registrar previsões de crescimento da árvore.\nOlimpíadaBrasileiradeInformática–CompetiçãoFeminina-OBI2024–Prog. Nível2–FaseÚnica 3\nSua tarefa é, dado um inteiroX, determinar a altura da árvore (em quantidade de caixinhas de\npapelão) no X-ésimo mês de vida dela.",
+    "input": "A entrada contém um único inteiroX, o mês de vida da Abratibum a ser consultado.",
+    "output": "Seu programa deve produzir uma única linha contendo um único inteiro, a altura (em caixinhas de\npapelão) da Abratibum no seuX-ésimo mês de vida.",
+    "constraints": "- 1≤ X≤ 1 200 000",
+    "examples": [
+        {
+            "input": "1",
+            "output": "1"
+        },
+        {
+            "input": "5",
+            "output": "7"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2024",
+    "level": "p2",
+    "period": "Fase Única",
+    "topics": [
+        "árvores",
+        "grafos",
+        "combinatória"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

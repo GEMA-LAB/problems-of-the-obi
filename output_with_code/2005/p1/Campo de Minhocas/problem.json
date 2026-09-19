@@ -1,0 +1,29 @@
+{
+    "title": "Campo de Minhocas",
+    "statement": "Arquivo fonte: minhoca.c, minhoca.cc, minhoca.cpp ou minhoca.pas\nMinhocas são muito importantes para a agricultura e como insumo para produção de ração animal. A\nOrganização para Bioengenharia de Minhocas (OBM) é uma entidade não governamental que promove\no aumento da produção, utilização e exportação de minhocas.\nUma das atividades promovidas pela OBM é a manutenção de uma fazenda experimental para\npesquisa de novas tecnologias de criação de minhocas. Na fazenda, a área destinada às pesquisas é de\nformato retangular, dividida em células quadrangulares de mesmo tamanho. As células são utilizadas\npara testar os efeitos, na produção de minhocas, de variações de espécies de minhocas, tipos de terra,\nde adubo, de tratamento, etc. Os pesquisadores da OBM mantêm um acompanhamento constante\ndo desenvolvimento das minhocas em cada célula, e têm uma estimativa extremamente precisa da\nprodutividade em cada uma das células. A figura abaixo mostra um mapa da fazenda, mostrando a\nprodutividade estimada de cada uma das células.\n81\n28\n240\n10\n40\n10\n100 240\n20\n180 110\n35\nUm pesquisador da OBM inventou e construiu uma máquina colhedeira de minhocas, e quer testá-\nla na fazenda.\nA máquina tem a largura de uma célula, e em uma passada pelo terreno de uma\ncélula colhe todas as minhocas dessa célula, separando-as, limpando-as e empacotando-as. Ou seja,\na máquina eliminará uma das etapas mais intensivas de mão de obra no processo de produção de\nminhocas. A máquina, porém, ainda está em desenvolvimento e tem uma restrição: não faz curvas,\npodendo movimentar-se somente em linha reta.\nDecidiu-se então que seria efetuado um teste com a máquina, de forma a colher o maior número\npossível de minhocas em uma única passada, em linha reta, de lado a lado do campo de minhocas.\nOu seja, a máquina deve colher todas as minhocas de uma ‘coluna’ ou de uma ‘linha’ de células do\ncampo de minhocas (a linha ou coluna cuja soma das produtividades esperadas das células é a maior\npossível).\nTarefa\nEscreva um programa que, fornecido o mapa do campo de minhocas, descrevendo a produtividade\nestimada em cada célula, calcule o número esperado total de minhocas a serem colhidas pela máquina\ndurante o teste, conforme descrito acima.",
+    "input": "A primeira linha da entrada contém dois números inteiros N e M, representando respectivamente o\nnúmero de linhas (1 ≤N ≤100) e o número de colunas (1 ≤M ≤100) de células existentes no campo\nexperimental de minhocas. Cada uma das N linhas seguintes contém M inteiros, representando as\nprodutividades estimadas das células correspondentes a uma linha do campo de minhocas.\nA entrada deve ser lida do dispositivo de entrada padrão (normalmente o teclado).\n\n4",
+    "output": "A saída deve ser composta por uma única linha contendo um inteiro, indicando o número esperado\ntotal de minhocas a serem colhidas pela máquina durante o teste.\nA saída deve ser escrita no dispositivo de saída padrão (normalmente a tela).",
+    "constraints": "- 1 ≤N ≤100\n- 1 ≤M ≤100\n- 0 ≤Produtividade de uma célula ≤500\n- 0 ≤Produtividade de uma linha ou coluna de células ≤50000",
+    "examples": [
+        {
+            "input": "3 4\n81 28 240 10\n40 10 100 240\n20 180 110 35",
+            "output": "450"
+        },
+        {
+            "input": "4 1\n100\n110\n0\n100",
+            "output": "310"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2005",
+    "level": "p1",
+    "period": "Fase Única",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

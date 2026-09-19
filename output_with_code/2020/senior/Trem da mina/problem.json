@@ -1,0 +1,31 @@
+{
+    "title": "Trem da mina",
+    "statement": "Nome do arquivo:“trem.x”,onde x deve ser c, cpp, pas, java, js, py2.py ou py3.py\nUma antiga mina de ouro foi desativada e Herculano quer torná-la uma atração turística. A mina\ncontém uma verdadeira rede ferroviária subterrânea, composta de estações e ramos de trilhos, pelos\nquais trafegavam os trens carregando minério. Cada ramo de trilho liga duas estações distintas\ne pode ser usado nas duas direções. Um “ciclo” na rede ferroviária é uma sequência de estações\ns1, s2, . . . , sn, sn+1 = s1, tais que si⁄= si+1 e (si, si+1) é um ramo de trilho, para1≤ i≤ n. A\nrede ferroviária pode conter ciclos, mas cada estação faz parte de no máximo um ciclo da rede\nferroviária. Os ramos de trilhos e estações são tais que, se uma parte do trem ocupa um ramo de\ntrilho ou estação, não há espaço para outro (ou o mesmo!) trem entrar novamente nesse ramo de\ntrilho ou estação.\nAlgumas estações da rede ferroviária têm acesso ao direto ao solo, para descarregar o minério.\nHerculano tem um mapa que descreve a rede ferroviária da mina, informando para cada ramo de\ntrilho o seu comprimento e quais duas estações o ramo de trilho liga.\nPara planejar o passeio turístico de trem pela mina Herculano quer saber, para as estações que têm\nacesso ao solo, conhecendo o comprimento do trem, se é possível que o trem entre na mina pela\nestação, percorra a menor distância possível dentro da mina e saia novamente pela mesma estação\nque entrou, sempre andando para a frente, sem nunca dar marcha-a-ré. Você pode ajudá-lo?",
+    "input": "A primeira linha contém dois inteirosE e R representando respectivamente o número de estações e\no número de ramos de trilhos da rede ferroviária da mina. As estações são identiﬁcadass por inteiros\nde 1 a E. Cada uma dasR linhas seguintes descreve um ramo de trilho e contém três inteirosA, B e\nC, ondeA e B representam as estações ligadas pelo ramo de trilho, eC representa o comprimento do\nramo de trilho. Uma estação é ligada por ramos de trilhos a no máximo outras 100 estações e cada\nduas estações são ligadas por no máximo um ramo de trilho. A próxima linha contém um inteiro\nK, que indica o número de consultas. Cada uma dasK linhas seguintes descreve uma consulta, e\ncontém dois inteirosX e T, que indicam respectivamente a estação pela qual Herculano quer que o\ntrem entre e o comprimento do trem.",
+    "output": "Para cada consulta da entrada seu programa deve produzir uma única linha, contendo um único\nnúmero inteiro, o comprimento do percurso mínimo que o trem deve percorrer dentro da mina para\nentrar e sair pela estação indicada na consulta, sem dar marcha-a-ré. Se não for possível para o\ntrem entrar e sair sem dar marcha-a-ré, a linha deve conter o valor−1.",
+    "constraints": "- 2≤ E≤ 104\n- 1≤ R≤ 2× E\n- 1≤ A < B≤ E\n- 1≤ C≤ 100\n- 1≤ K≤ 100\n- 1≤ X≤ E\n- 1≤ T≤ 105\n- Uma estação é ligada por ramos de trilhos a no máximo outras 100 estações e cada duas\n- estações são ligadas por no máximo um ramo de trilho.",
+    "examples": [
+        {
+            "input": "4 4\n1 2 10\n1 3 12\n3 4 7\n1 4 6\n4\n2 18\n1 10\n4 26\n3 25",
+            "output": "45\n25\n-1\n25"
+        },
+        {
+            "input": "7 8\n1 2 2\n2 3 2\n2 5 10\n5 6 25\n2 6 20\n3 7 1\n4 7 4\n3 4 3\n4\n1 6\n4 50\n7 56\n7 5",
+            "output": "16\n65\n-1\n8"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "senior",
+    "period": "Fase 3",
+    "topics": [
+        "grafos",
+        "dijkstra",
+        "menor caminho"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 512
+}

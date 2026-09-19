@@ -1,0 +1,33 @@
+{
+    "title": "Lanche na empresa",
+    "statement": "Nome do arquivo fonte: lanche.c, lanche.cpp ou lanche.pas\nAtualmente, uma empresa precisa oferecer mais que altos salários para manter seus melhores funcionários.\nUm dos benefícios comumente oferecidos é acesso a um suprimento infinito de comida e bebida disponível em\ncozinhas, onde os funcionários podem preparar lanches e refeições.\nUma empresa de tecnologia decidiu posicionar uma cozinha em suas instalações; entretanto, essa tarefa requer\num certo planejamento. Analisando a planta do prédio é possível criar um diagrama contendo todas as salas,\ntodos os corredores que as ligam e os seus respectivos comprimentos, em metros. A cozinha deve ser posicionada\nem uma das salas de tal forma que a distância entre a cozinha e a sala mais distante da cozinha seja a menor\npossível.\nObviamente, a empresa deseja utilizar esse fato para anunciar que “nenhum de seus funcionários está a mais de\nX metros de uma cozinha”. Eles contrataram o seu escritório de arquitetura para posicionar a cozinha na sala\nque minimiza X e você, como programador, deve escrever um programa que informa qual será essa distância.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém dois inteiros, S e C, (1 ≤S ≤250, 1 ≤C ≤50.000) indicando,\nrespectivamente, o número de salas e o número de corredores. As C linhas seguintes contêm, cada uma, três\ninteiros, A, B e D (1 ≤A ≤N, 1 ≤B ≤N, 1 ≤D ≤100, A̸ = B) indicando que existe um corredor de D\nmetros ligando a sala A à sala B. Cada corredor é informado uma única vez na entrada. Note que um corredor\nligando as salas A e B pode ser percorrido nos dois sentidos (da sala A para a sala B e da sala B para a sala\nA).",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha, contendo um inteiro indicando a distância\nentre a cozinha e a sala mais distante, considerando que a cozinha foi posicionada na sala onde essa distância é\nmínima.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "4 6\n1 2 1\n2 3 1\n2 4 2\n3 4 1\n1 4 1\n3 1 4",
+            "output": ""
+        },
+        {
+            "input": "4 4\n1 2 10\n2 3 1\n3 4 4\n2 4 3",
+            "output": "7"
+        },
+        {
+            "input": "5 6\n1 2 10\n2 3 10\n2 4 11\n2 5 11\n3 4 10\n4 5 10",
+            "output": ""
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2008",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

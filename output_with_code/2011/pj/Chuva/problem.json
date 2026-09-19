@@ -1,0 +1,30 @@
+{
+    "title": "Chuva",
+    "statement": "Nome do arquivo fonte: chuva.c, chuva.cpp, chuva.pas, chuva.java, ou chuva.py\nBob trabalha no OBM (Órgão Brasileiro de Metereologia), que é a organização responsável pela medição dos\níndices pluviométricos (quantidade de chuva acumulada) em todo o país. Eles são muito eficientes no que fazem,\nmas estão com um problema: eles não sabem como proceder para calcular a quantidade acumulada de chuva\nque caiu em cada região em dois períodos consecutivos, muito embora eles saibam os dados de cada período\nseparadamente.\nComo a chefia do Órgão estava muito ocupada, acabou ficando a cargo de Bob, o estagiário, a tarefa de\nimplementar um programa que some, para cada região, a quantidade de chuva acumulada em dois períodos\nconsecutivos.\nO mapa que o OBM usa é dividido em N ×N regiões, sendo que para cada região, a cada período, é determinado\num número inteiro indicando a quantidade de chuva acumulada. A quantidade de chuva acumulada total em\ncada região em dois períodos consecutivos é a soma das quantidades de chuva em cada um dos períodos.\nMas como Bob é só um estagiário e não está acostumado a fazer nada mais do que tirar cópias de documentos,\nele pediu sua ajuda para implementar o programa que calcula a quantidade de chuva acumulada total nos dois\nperíodos para cada uma das regiões, dadas as quantidades de chuva acumulada em cada período para cada\nregião.",
+    "input": "A primeira linha da entrada contém um inteiro N indicando a dimensão dos dois mapas que devem ser lidos.\nNas próximas 2N linhas são dados os dois mapas, cada mapa indicando a quantidade de chuva acumulada nas\nregiões em um período. Cada mapa é descrito em N linhas consecutivas, cada linha contendo N inteiros, sendo\nque cada inteiro indica a quantidade de chuva acumulada, no período, em uma região.",
+    "output": "A saída deverá conter N linhas, com N inteiros em cada linha, indicando a quantidade de chuva acumulada\ntotal em cada uma das regiões nos dois períodos considerados.",
+    "constraints": "- 1 ≤N ≤100.\n- 0 ≤quantidade de chuva acumulada em cada região de cada mapa ≤100.\n- 3",
+    "examples": [
+        {
+            "input": "2\n1 2\n3 4\n10 11\n12 13",
+            "output": "11 13\n15 17"
+        },
+        {
+            "input": "3\n1 1 1\n1 2 2\n1 2 3\n3 2 1\n2 2 1\n1 1 1",
+            "output": "4 3 2\n3 4 3\n2 3 4"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2011",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "matrizes",
+        "simulação"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

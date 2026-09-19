@@ -1,0 +1,32 @@
+{
+    "title": "Metrô da Nlogônia",
+    "statement": "Nome do arquivo: metro.c, metro.cpp, metro.pas, metro.java, metro.js, metro_py2.py ou metro_py3.py\nHá dois sistemas de metrô na capital da Nlogônia, operados por duas empresas diferentes. O dois\nsistemas, denominados Círculo e Quadrado, são independentes e não conectados entre si, ou seja,\nnão há nenhuma estação em comum e nenhum trilho em comum. Em cada sistema há exatamente\num caminho possível entre duas estações quaisquer, possivelmente passando por outras estações\ndo sistema. A ﬁgura abaixo mostra uma representação de dois sistemas de metrô independentes,\nsimilares ao metrô da capital da Nlogônia. Apropriadamente, no sistema Círculo as estações são\nrepresentadas por círculos, e no sistema Quadrado as estações são representadas por quadrados.\n2\n3\n4\n5\n7\n6\n6\n4\n2\n3\n1\n5\n1\nVamos chamar de diâmetro do sistema de metrô o maior número de estações no trajeto entre\nqualquer par de estações do sistema. Assim, o diâmetro do sistema Círculo na ﬁgura acima é cinco\n(trajeto 2-3-4-5-7 por exemplo) e o diâmetro do sistema Quadrado é quatro (trajeto4-3-5-6 por\nexemplo).\nO rei da Nlogônia decidiu que os dois sistemas existentes devem ser integrados, para facilitar a vida\ndos usuários. A integração vai ser implementada através da construção de um único novo trecho\nde metrô ligando exatamente um par de estações existentes (uma estação do sistema Círculo e uma\nestação do sistema Quadrado). O rei determinou ainda que o diâmetro do sistema integrado seja o\nmenor possível.\nVocê pode ajudar a planejar a integração dos sistemas? Dadas as descrições dos dois sistemas, sua\ntarefa é determinar qual par de estações deve ser ligado para realizar a integração como desejada\npelo rei.",
+    "input": "A primeira linha contém dois inteiros N e M, indicando respectivamente o número de estações\ndo sistema Círculo e do sistema Quadrado. No sistema Círculo as estações são identiﬁcadas por\nnúmeros de 1 aN e no sistema Quadrado as estações são identiﬁcadas por números de 1 aM. Cada\numa dasN − 1 linhas seguintes descreve as ligações entre estações do sistema Círculo e contém dois\ninteiros A e B indicando que existe uma ligação entre as estaçõesA e B. Cada uma das M − 1\nlinhas seguintes descreve as ligações entre estações do sistema Quadrado e contém dois inteirosX\ne Y indicando que existe uma ligação entre as estaçõesX e Y.",
+    "output": "Seu programa deve produzir dois inteiros, o primeiro representando uma estação do sistema Círculo\ne o segundo representando uma estação do sistema Quadrado. Se houver mais de um par possível,\nindique qualquer um entre os possíveis.",
+    "constraints": "- 2 ≤ N, M ≤ 105\n- 1 ≤ A, B ≤ N\n- 1 ≤ X, Y ≤ M",
+    "examples": [
+        {
+            "input": "7 6\n1 3\n3 2\n3 4\n4 5\n5 7\n6 5\n1 3\n2 3\n3 4\n3 5\n5 6",
+            "output": "4 3"
+        },
+        {
+            "input": "3 4\n1 2\n2 3\n1 2\n2 3\n3 4",
+            "output": "2 2"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "senior",
+    "period": "Fase 3",
+    "topics": [
+        "grafos",
+        "árvores",
+        "diâmetro",
+        "centro"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 512
+}

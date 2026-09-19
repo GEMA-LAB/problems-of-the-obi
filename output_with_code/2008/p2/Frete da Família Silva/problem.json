@@ -1,0 +1,29 @@
+{
+    "title": "Frete da Família Silva",
+    "statement": "Nome do arquivo fonte: frete.c, frete.cpp ou frete.pas\nHouve uma determinada época no planeta Terra em que a população estava grande demais, e determinadas\nmedidas foram tomadas para sanar esse problema. Uma vez que as primeiras colônias já haviam se estabelecido\nno planeta Marte, todos os países concordaram em mandar para lá algumas pessoas. O presidente de Pizzalândia,\nLagosta da Silva, era uma pessoa que valorizava a família, e decidiu que não ia separar famílias em nome dessa\natitude. Resolveu, então, mandar uma família inteira para Marte. No caso, a dele mesmo, a família Silva,\nprovavelmente a mais numerosa do planeta.\nTal família estabeleceu-se em Marte sem problemas, ainda mais com novas invenções que havia por lá. Uma delas\nera a pílula de nanicolina, substância descoberta naquele planeta, próximo à uma região onde existem pedras\nvoadoras, pedras macias e até pedras falantes. Lendas dizem que algum outro ser extra-terrestre depositou a\nnanicolina ali num passado distante, enquanto visitava o planeta. O efeito da pílula de nanicolina é a diminuição\nde tamanho de quem a toma, por um determinado tempo. Tal pílula foi, então, produzida em escala industrial\ne hoje em dia é distribuída pelos governos marcianos aos colonos que lá residem.\nA família Silva, todos os anos, encontra-se em alguma das muitas colônias em Marte para celebrar o aniversário\nda chegada deles ao planeta. O chefe da família é quem sempre paga o transporte de todos. O transporte é feito\natravés de ônibus-flutuadores fretados. Como todos podem tomar pílulas da nanicolina e ficarem minúsculos,\npodemos dizer que dentro de cada ônibus-flutuador cabem infinitas pessoas, e que o efeito da pílula vai durar\ndurante toda a viagem.\nAssim, o preço de uma viagem de ônibus-flutuador entre duas colônias não depende do número de pessoas que\nviajam, sendo um preço fixo. Isso permite que algumas economias sejam feitas. Suponha que existam quatro\ncolônias dos Silvas em Marte, ilustrados abaixo:\nA\nB\nC\nD\n10\n10\n5\n4\n3\n2\nOs círculos representam as colônias, e as conexões entre elas representam as estradas existentes.\nO número nas conexões representa o preço de uma viagem de ônibus-flutuador em qualquer direção. Ou seja,\nUma viagem da colônia A direto para a colônia C (ou de C para A), custa 5 moedas de silício, não importa o\nnúmero de passageiros.\nSuponha que o grande encontro seja na colônia A. Se o chefe da família pagar o frete de B para A, de C para\nA e de D para A, vai acabar gastando 25 moedas.\nMas uma coisa que poderia ser feita, também, é: os Silvas das colônias B e D vão para a C. Da C, todos vão\npara a colônia A. Isso tudo teria um gasto de somente 10 moedas.\nEste ano o número de colônias dos Silvas aumentou muito em Marte, e o chefe da família está muito preocupado\ncom o dinheiro que vai gastar para pagar todas as viagens. Então ele contratou você, que é o melhor programador\ndaquele planeta, a fazer um programa que recebe as informações a respeito das colônias, das estradas e dos fretes\nde ônibus-flutuadores, e determine qual é a menor quantidade de dinheiro necessária para custear o transporte\nde todos os Silvas para o encontro. O desespero do chefe da família é tanto que ele não se importa em qual\ncolônia será o encontro, desde que os custos sejam minimizados.\nVocê pode assumir que:\n• Entre duas colônias diferentes existe no máximo uma estrada direta.\n\n8\n• Sempre existe um caminho (de uma ou mais estradas) entre quaisquer duas colônias.",
+    "input": "A entrada contém um único teste, a ser lido da entrada padrão. A primeira linha contém dois inteiros: N e\nM (2 ≤N ≤1000, 1 ≤M ≤10.000), que representam, respectivamente, o número de colônias e o número de\nestradas existentes. Depois, seguem M linhas com 3 inteiros: P, Q e U (0 ≤P, Q ≤N −1, 1 ≤U ≤1000),\nindicando que existe uma estrada de mão dupla entre as colônias P e Q, cujo custo do frete de viagem entre\nessas duas colônias é U moedas.",
+    "output": "Seu programa deve imprimir, na saída padrão, um único inteiro, representando o número mínimo de moedas\nnecessárias para custear o transporte de todos os Silvas à colônia onde será realizada o encontro.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "4 6\n0 1 10\n0 2 5\n0 3 10\n1 2 3\n1 3 4\n2 3 2",
+            "output": ""
+        },
+        {
+            "input": "4 6\n0 1 1\n0 2 1\n0 3 1\n1 2 3\n1 3 4\n2 3 2",
+            "output": "Informações sobre a pontuação\n• Em um conjunto de casos de teste que totaliza 30 pontos, N ≤10 e M ≤100.\n• Em um conjunto de casos de teste que totaliza 55 pontos, N ≤100 e M ≤1000."
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2008",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

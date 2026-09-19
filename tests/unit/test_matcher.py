@@ -99,3 +99,108 @@ def test_find_solutions_multiple(tmp_path):
     extensions = {r.linguagem for r in results}
     assert "cpp" in extensions
     assert "py" in extensions
+
+
+def test_find_solutions_prefix_and_author_variants(tmp_path):
+    codigo_dir = tmp_path / "codigo"
+    (codigo_dir / "2025" / "p1").mkdir(parents=True)
+    (codigo_dir / "2025" / "p1" / "recarga_carro.cpp").write_text("int main() {}")
+    (codigo_dir / "2025" / "p1" / "recarga_lobo_bb.cpp").write_text("int main() {}")
+    (codigo_dir / "2025" / "p1" / "recarga_pedro_union_find.cpp").write_text("int main() {}")
+    (codigo_dir / "2025" / "p1" / "outro_problema.cpp").write_text("int main() {}")
+
+    matcher = ResourceMatcher(gabaritos_dir=tmp_path / "gabaritos", codigo_dir=codigo_dir)
+    question = QuestionFolder(
+        path=tmp_path / "output_with_code" / "2025" / "p1" / "Recarga",
+        ano=2025,
+        nivel="p1",
+        titulo="Recarga",
+        titulo_normalizado=normalize_name("Recarga"),
+    )
+    results = matcher.find_solutions(question=question)
+    assert len(results) == 3
+    names = {r.path_arquivo.name for r in results}
+    assert "recarga_carro.cpp" in names
+    assert "recarga_lobo_bb.cpp" in names
+    assert "recarga_pedro_union_find.cpp" in names
+
+
+def test_find_solutions_token_intersection_and_stopwords(tmp_path):
+    codigo_dir = tmp_path / "codigo"
+    (codigo_dir / "2025" / "p1").mkdir(parents=True)
+    (codigo_dir / "2025" / "p1" / "redes_1_freq_java.java").write_text("class Redes {}")
+    (codigo_dir / "2025" / "p1" / "redes_2_dict_py.py").write_text("print(1)")
+    (codigo_dir / "2025" / "p1" / "redes_andre.cpp").write_text("int main() {}")
+    (codigo_dir / "2025" / "p1" / "redes_reference.cpp").write_text("int main() {}")
+    (codigo_dir / "2025" / "p1" / "diagonal.java").write_text("class Diagonal {}")
+
+    matcher = ResourceMatcher(gabaritos_dir=tmp_path / "gabaritos", codigo_dir=codigo_dir)
+    question = QuestionFolder(
+        path=tmp_path / "output_with_code" / "2025" / "p1" / "Redes de Descanso",
+        ano=2025,
+        nivel="p1",
+        titulo="Redes de Descanso",
+        titulo_normalizado=normalize_name("Redes de Descanso"),
+    )
+    results = matcher.find_solutions(question=question)
+    assert len(results) == 4
+    names = {r.path_arquivo.name for r in results}
+    assert "redes_1_freq_java.java" in names
+    assert "redes_andre.cpp" in names
+
+
+def test_find_solutions_feira_de_artesanato(tmp_path):
+    codigo_dir = tmp_path / "codigo"
+    (codigo_dir / "2025" / "p1").mkdir(parents=True)
+    (codigo_dir / "2025" / "p1" / "feira.java").write_text("class Feira {}")
+    (codigo_dir / "2025" / "p1" / "feira_artesanato_cpp.cpp").write_text("int main() {}")
+    (codigo_dir / "2025" / "p1" / "feira_artesanato_py.py").write_text("print(1)")
+
+    matcher = ResourceMatcher(gabaritos_dir=tmp_path / "gabaritos", codigo_dir=codigo_dir)
+    question = QuestionFolder(
+        path=tmp_path / "output_with_code" / "2025" / "p1" / "Feira de Artesanato",
+        ano=2025,
+        nivel="p1",
+        titulo="Feira de Artesanato",
+        titulo_normalizado=normalize_name("Feira de Artesanato"),
+    )
+    results = matcher.find_solutions(question=question)
+    assert len(results) == 3
+
+
+def test_find_solutions_disambiguation(tmp_path):
+    codigo_dir = tmp_path / "codigo"
+    (codigo_dir / "2025" / "p1").mkdir(parents=True)
+    (codigo_dir / "2025" / "p1" / "fila.java").write_text("class Fila {}")
+    (codigo_dir / "2025" / "p1" / "fila_c.c").write_text("int main() {}")
+    (codigo_dir / "2025" / "p1" / "fila_cantina.cpp").write_text("int main() {}")
+
+    matcher = ResourceMatcher(gabaritos_dir=tmp_path / "gabaritos", codigo_dir=codigo_dir)
+    q_fila = QuestionFolder(
+        path=tmp_path / "output_with_code" / "2025" / "p1" / "Fila",
+        ano=2025,
+        nivel="p1",
+        titulo="Fila",
+        titulo_normalizado=normalize_name("Fila"),
+    )
+    q_cantina = QuestionFolder(
+        path=tmp_path / "output_with_code" / "2025" / "p1" / "Fila na Cantina",
+        ano=2025,
+        nivel="p1",
+        titulo="Fila na Cantina",
+        titulo_normalizado=normalize_name("Fila na Cantina"),
+    )
+    q_fila.path.mkdir(parents=True, exist_ok=True)
+    q_cantina.path.mkdir(parents=True, exist_ok=True)
+
+    res_fila = matcher.find_solutions(question=q_fila)
+    res_cantina = matcher.find_solutions(question=q_cantina)
+
+    fila_names = {r.path_arquivo.name for r in res_fila}
+    cantina_names = {r.path_arquivo.name for r in res_cantina}
+
+    assert "fila.java" in fila_names
+    assert "fila_c.c" in fila_names
+    assert "fila_cantina.cpp" in cantina_names
+    assert "fila_cantina.cpp" not in fila_names
+

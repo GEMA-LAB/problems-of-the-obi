@@ -1,0 +1,29 @@
+{
+    "title": "OBI",
+    "statement": "Nome do arquivo fonte: obi.c, obi.cpp ou obi.pas\nno Instituto de Computação da Unicamp, com todas as despesas pagas pela Fundação Carlos Chagas, patro-\ncinadora da OBI. São convidados apenas os competidores que atingem um certo número mínimo de pontos,\nconsideradas as duas fases de provas.\nVocê foi contratado pela Coordenação da OBI para fazer um programa que, dados os números de pontos obtidos\npor cada competidor em cada uma das fases, e o número mínimo de pontos para ser convidado, determine quantos\ncompetidores serão convidados para o curso na Unicamp. Você deve considerar que\n• todos os competidores participaram das duas fases;\n• o total de pontos de um competidor é a soma dos pontos obtidos nas duas fases;\nPor exemplo, se a pontuação mínima para ser convidado é 435 pontos, um competidor que tenha obtido 200\npontos na primeira fase e 235 pontos na segunda fase será convidado para o curso na Unicamp. Já um competidor\nque tenha obtido 200 pontos na primeira fase e 234 pontos na segunda fase não será convidado.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém dois números inteiros N e P, representando respectivamente o\nnúmero de competidores (1 ≤N ≤1000) e o número mínimo de pontos para ser convidado (1 ≤P ≤1000).\nCada uma das N linhas seguintes contém dois números inteiros X e Y indicando a pontuação de um competidor\nem cada uma das fases (0 ≤X ≤400) e (0 ≤Y ≤400).",
+    "output": "Seu programa deve imprimir na saída padrão uma única linha contendo um único inteiro, indicando o número\nde competidores que serão convidados a participar do curso na Unicamp.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3 100\n50 50\n100 0\n49 50",
+            "output": ""
+        },
+        {
+            "input": "4 235\n100 134\n0 0\n200 200\n150 150",
+            "output": ""
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2008",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

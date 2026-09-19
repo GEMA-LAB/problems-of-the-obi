@@ -1,9 +1,9 @@
 {
     "title": "Jogo do Castelo de Blocos",
-    "statement": "Durante uma tarde chuvosa, os irmãos Ana e Bruno decidiram construir um imenso castelo de blocos na sala de estar. Cada bloco foi cuidadosamente posicionado de modo que alguns sirvam de \"base\" para sustentar outros.\n\nPodemos representar cada bloco com um número de 1 a $N$, e dizer que se o bloco $u$ serve de base para sustentar o bloco $v$, então $v$ se apoia diretamente no bloco $u$, formando uma relação de apoio entre os blocos. Se um bloco $w$ se apoia diretamente em $v$ e $v$ se apoia diretamente em $u$, dizemos que $w$ se apoia indiretamente em $u$ e nos blocos em que $u$ se apoia (direta ou indiretamente). Observe que é possível que um bloco se apoie diretamente em mais de um bloco e é possível que um bloco seja apoio direto para vários outros blocos. Porém, a estrutura desse castelo é muito particular: um bloco nunca se apoia direta ou indiretamente em si mesmo, então não existem ciclos de apoios.\n\nDepois de horas de trabalho, o castelo ficou tão alto que a mãe deles pediu: \"Desmontem tudo antes do jantar, sem fazer bagunça!\" Como nenhum dos dois gosta de perder, eles transformaram a tarefa em um jogo.\n\nOs irmãos Ana (Jogadora 1) e Bruno (Jogador 2) alternam turnos, com Ana sempre começando. Em cada turno, um jogador deve remover exatamente um bloco de sua escolha do castelo. O bloco é retirado cuidadosamente e pode ser guardado. No entanto, a remoção de um bloco tem consequências imediatas:\n\n- Qualquer bloco que perca todos os blocos em que se apoiava diretamente no castelo desaba e é considerado desmoronado.\n- A retirada ou desmoronamento de um bloco pode causar novos desmoronamentos em cascata, ou seja, se um bloco é desmoronado ou retirado, os blocos que dependiam dele também podem ficar sem suporte e, consequentemente, desmoronar, e assim sucessivamente.\n\nO objetivo de Ana é minimizar o total de blocos desmoronados ao final do jogo, enquanto Bruno quer maximizar esse total. O jogo termina quando não restam mais blocos para serem removidos.\n\nConsiderando que ambos os irmãos jogam perfeitamente (ou seja, sempre fazem a melhor jogada possível para atingir seus objetivos), sua tarefa é determinar qual será o número de blocos que serão desmoronados ao final do jogo.",
-    "input": "A primeira linha da entrada contém dois inteiros $N$ e $M$, representando respectivamente o número total de blocos no castelo dos irmãos e o número de relações de apoio entre os blocos.\n\nAs próximas $M$ linhas contêm dois inteiros cada uma. A $i$-ésima destas linhas contêm os inteiros $u_i$ e $v_i$, indicando que o bloco $v_i$ se apoia diretamente no bloco $u_i$.",
+    "statement": "Durante uma tarde chuvosa, os irmãos Ana e Bruno decidiram construir um imenso castelo de blocos na sala de estar. Cada bloco foi cuidadosamente posicionado de modo que alguns sirvam de “base” para sustentar outros.\n\nPodemos representar cada bloco com um número de 1 a N, e dizer que se o bloco u serve de base para sustentar o bloco v, então v se apoia diretamente no bloco u, formando uma relação de apoio entre os blocos. Se um bloco w se apoia diretamente em v e v se apoia diretamente em u, dizemos que w se apoia indiretamente em u e nos blocos em que u se apoia (direta ou indiretamente). Observe que é possível que um bloco se apoie diretamente em mais de um bloco e é possível que um bloco seja apoio direto para vários outros blocos. Porém, a estrutura desse castelo é muito particular: um bloco nunca se apoia direta ou indiretamente em si mesmo, então não existem ciclos de apoios.\n\nDepois de horas de trabalho, o castelo ficou tão alto que a mãe deles pediu: “Desmontem tudo antes do jantar, sem fazer bagunça!” Como nenhum dos dois gosta de perder, eles transformaram a tarefa em um jogo.\n\nOs irmãos Ana (Jogadora 1) e Bruno (Jogador 2) alternam turnos, com Ana sempre começando. Em cada turno, um jogador deve remover exatamente um bloco de sua escolha do castelo. O bloco é retirado cuidadosamente e pode ser guardado. No entanto, a remoção de um bloco tem consequências imediatas:\n\n- Qualquer bloco que perca todos os blocos em que se apoiava diretamente no castelo desaba e é considerado desmoronado.\n- A retirada ou desmoronamento de um bloco pode causar novos desmoronamentos em cascata, ou seja, se um bloco é desmoronado ou retirado, os blocos que dependiam dele também podem ficar sem suporte e, consequentemente, desmoronar, e assim sucessivamente.\n\nO objetivo de Ana é minimizar o total de blocos desmoronados ao final do jogo, enquanto Bruno quer maximizar esse total. O jogo termina quando não restam mais blocos para serem removidos.\n\nConsiderando que ambos os irmãos jogam perfeitamente (ou seja, sempre fazem a melhor jogada possível para atingir seus objetivos), sua tarefa é determinar qual será o número de blocos que serão desmoronados ao final do jogo.",
+    "input": "A primeira linha da entrada contém dois inteiros N e M, representando respectivamente o número total de blocos no castelo dos irmãos e o número de relações de apoio entre os blocos.\nAs próximas M linhas contêm dois inteiros cada uma. A i-ésima destas linhas contêm os inteiros u_i e v_i, indicando que o bloco v_i se apoia diretamente no bloco u_i.",
     "output": "Seu programa deve imprimir uma única linha contendo um único inteiro: o número total de blocos que desmoronaram ao final de todas as operações, assumindo que ambos os jogadores jogaram de maneira ótima.",
-    "constraints": "- $1 \\leq N \\leq 18$\n- $1 \\leq M \\leq N \\times (N - 1)/2$\n- $1 \\leq u_i, v_i \\leq N$\n- As relações de apoio garantem que um bloco nunca se apoia em si mesmo, direta ou indiretamente, e não formam ciclos de dependência",
+    "constraints": "- 1 ≤ N ≤ 18\n- 1 ≤ M ≤ N × (N - 1)/2\n- 1 ≤ u_i, v_i ≤ N\nAs relações de apoio garantem que um bloco nunca se apoia em si mesmo, direta ou indiretamente, e não formam ciclos de dependência",
     "examples": [
         {
             "input": "3 2\n1 2\n1 3",
@@ -19,14 +19,14 @@
         100
     ],
     "year": "2025",
-    "level": "P2",
+    "level": "p2",
     "period": "Competição Feminina",
     "topics": [
-        "grafos",
         "programação dinâmica",
-        "bitmask",
-        "teoria dos jogos"
+        "máscara de bits",
+        "teoria dos jogos",
+        "grafos"
     ],
     "time_limit": 2.0,
-    "memory_limit": 256
+    "memory_limit": 512
 }

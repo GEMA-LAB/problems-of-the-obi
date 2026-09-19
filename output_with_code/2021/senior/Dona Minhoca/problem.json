@@ -1,0 +1,32 @@
+{
+    "title": "Dona Minhoca",
+    "statement": "Nome do arquivo:“minhoca.x”,onde x deve ser c, cpp, pas, java, js ou py\nDona Minhoca construiu uma bela casa, composta deN salas conectadas porN− 1 túneis. Cada\ntúnel conecta exatamente duas salas distintas, e pode ser percorrido em qualquer direção. A casa\nde dona Minhoca foi construída de modo que, percorrendo os túneis, é possível partir de qualquer\nsala e chegar a qualquer outra sala da casa.\nDona Minhoca quer se exercitar, e para isso planeja construir um túnel adicional, de modo a criar\num “ciclo” de salas e túneis. Vamos chamar decomprimento do ciclo o número de salas do ciclo.\nA ﬁgura (a) abaixo mostra um exemplo de casa. É possível obter um ciclo de comprimento três\nconstruindo um túnel entre as salas 2 e 5, ou um ciclo de comprimento quatro construindo um túnel\nentre as salas 1 e 3.\n2\n53\n41\n3\n1\n2\n5\n4\n5\n4\n2\n1\n3\n(a) (b) (c)\nDada a descrição da casa de dona Minhoca, escreva um programa para determinar o número de salas\ndo ciclo de maior comprimento que é possível construir, e de quantas maneiras é possível construir\num ciclo com esse comprimento.",
+    "input": "A primeira linha da entrada contém um inteiroN, o número de salas da casa de dona Minhoca. As\nsalas são identiﬁcadas por números de 1 aN. Cada uma das N− 1 linhas seguintes contém dois\ninteiros X e Y, indicando que há um túnel entre a salaX e a salaY.",
+    "output": "Seu programa deve produzir duas linhas. A primeira linha deve conter somente um inteiro, o número\ndesalasdociclodemaiorcomprimentoqueépossívelconstruir. Asegundalinhadevecontersomente\num inteiro, o número de ciclos distintos que é possível contruir com esse comprimento.",
+    "constraints": "- 3≤ N≤ 50 000\n- 1≤ X≤ N; 1≤ Y ≤ N; X⁄= Y\n- nos testes, o número de possíveis ciclos distintos é menor do que 100 000 000",
+    "examples": [
+        {
+            "input": "5\n1 2\n2 4\n4 5\n4 3",
+            "output": "4\n2"
+        },
+        {
+            "input": "8\n1 2\n2 3\n3 4\n3 6\n5 3\n1 8\n1 7",
+            "output": "5\n6"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "senior",
+    "period": "Fase 3",
+    "topics": [
+        "grafos",
+        "árvores",
+        "diâmetro",
+        "combinatória"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 512
+}

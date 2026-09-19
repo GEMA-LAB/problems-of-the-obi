@@ -1,0 +1,33 @@
+{
+    "title": "Museu",
+    "statement": "Nome do arquivo fonte: museu.c, museu.cpp, ou museu.pas\nDesde que o arquiteto Frank Gehry projetou o Museu Guggenheim de Bilbao, os museus têm sido construídos\ncom formas cada vez mais complexas, fugindo de padrões pré-estabelecidos e de simetrias. Um típico museu\nmoderno é composto por um conjuto de salas ligadas por corredores e escadas, sem preocupação com a pré-\ndefinição de caminhos a serem seguidos pelas pessoas.\nHenriqueta é uma professora do ensino fundamental que deseja visitar o museu da Ordem Brasileira de\nMedicina (OBM) para mostrar aos seus alunos de ciências como o corpo humano funciona e como as cirurgias\neram feitas nos séculos XIX e XX. Henriqueta quer planejar uma visita pelas salas do museu, obedecento as\nseguintes restrições:\n• a visita deve começar e terminar em uma mesma sala;\n• exceto a sala de partida, nenhuma sala do museu pode ser visitada mais de uma vez;\n• a visita deve incluir pelo menos duas salas;\n• os corredores são unidirecionais, ou seja, as pessoas podem caminhar, em um corredor, apenas em uma\ndireção.\n• a visita deve tomar o menor tempo possível.\nUm estudo preliminar, realizado pelo próprio museu, indica o tempo médio que cada visitante fica em uma\nsala e quanto tempo leva-se para atravessar um corredor ou uma escada. Henriqueta quer a sua ajuda para\ncalcular o tempo total da menor visita que ela pode efetuar, obedecendo as restrições dadas.\nTarefa\nEscreva um programa que, dados um conjunto de salas, um conjunto de corredores e escadas que ligam essas\nsalas e o tempo necessário para percorrer cada sala e cada corredor, determine qual é o menor tempo possível\npara uma visita. Note que o tempo de visita da sala onde a visita se inicia deve ser contado apenas uma vez.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém dois inteiros S e C, que indicam, respectivamente, o número\nde salas (1 ≤S ≤1000) e o número de corredores e escadas (1 ≤C ≤1000). As salas são numeradas de 1 a\nS. A segunda linha contém S inteiros representando o tempo gasto para percorrer cada sala. Cada uma das C\nlinhas seguintes descreve um corredor ou escada. A descrição é composta por três inteiros, I, F e T , indicando\nque o corredor somente pode ser percorrido da sala I (1 ≤I ≤N) para a sala F (1 ≤F ≤N) no tempo T\n(1 ≤T ≤1000). O tempo total máximo é sempre menor ou igual a 1000000.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha contendo o tempo gasto na visita de menor\nduração que Henriqueta pode realizar no museu. Existe pelo menos uma visita que atende as restrições impostas.\n\n4\nEntrada\n2 2\n1 1\n1 2 1\n2 1 3\nSaída\n6\nEntrada\n5 6\n5 5 10 10 5\n1 2 1\n2 3 1\n5 1 1\n3 4 1\n4 1 1\n5 2 1\nSaída\n34\nEntrada\n8 10\n3 10 8 4 1 1 8 1\n1 2 1\n1 3 10\n4 1 1\n5 8 1\n3 7 1\n7 5 2\n8 4 2\n2 3 2\n3 6 1\n6 7 2\nSaída\n42",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "2 2\n1 1\n1 2 1\n2 1 3",
+            "output": "6"
+        },
+        {
+            "input": "5 6\n5 5 10 10 5\n1 2 1\n2 3 1\n5 1 1\n3 4 1\n4 1 1\n5 2 1",
+            "output": "34"
+        },
+        {
+            "input": "8 10\n3 10 8 4 1 1 8 1\n1 2 1\n1 3 10\n4 1 1\n5 8 1\n3 7 1\n7 5 2\n8 4 2\n2 3 2\n3 6 1\n6 7 2",
+            "output": "42"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2006",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

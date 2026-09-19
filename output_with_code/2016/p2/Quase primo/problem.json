@@ -1,0 +1,38 @@
+{
+    "title": "Quase primo",
+    "statement": "Nome do arquivo: primo.c, primo.cpp, primo.pas, primo.java, primo.js ou primo.py\nO jovem César está aprendendo sobre números primos: um número X > 1 é primo se for divisível\napenas por 1 e por X.\nA primeira tarefa de casa de César consiste em dizer, para um dado número N, quantos números\nmenores ou iguais a N são primos. Acontece que os números são muito grandes e César tem preguiça.\nEle suspeita que seu professor é tão preguiçoso quanto ele, e acha que, seu professor, para testar\nse um número é primo, vai testar só uma pequena quantidade de divisores primos. Com isso em\nmente, ele compilou uma lista de K números primos que acha que o professor vai usar.\nMesmo assim, César ainda está com preguiça. Dados N e a lista com K números primos, diga\nquantos números inteiros positivos menores ou iguais a N não são divisíveis por nenhum número\nprimo na lista.",
+    "input": "A primeira linha da entrada contém dois inteiros, N e K.\nA linha seguinte contém K primos\ndistintos ki, (1 ≤i ≤K), que são os primos que César acha que o professor irá considerar.",
+    "output": "Imprima um único inteiro, a quantidade de números inteiros positivos menores ou iguais a N que\nnão são divisíveis por nenhum número na lista.",
+    "constraints": "- 1 ≤N ≤109\n- 1 ≤K ≤40\n- ki é primo e 2 ≤ki ≤N",
+    "examples": [
+        {
+            "input": "10 1\n2",
+            "output": "5"
+        },
+        {
+            "input": "10 2\n2 3",
+            "output": "3"
+        },
+        {
+            "input": "20 3\n2 5 7",
+            "output": "7\n\n7"
+        },
+        {
+            "input": "29 3\n2 5 7",
+            "output": "10"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2016",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "matemática",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

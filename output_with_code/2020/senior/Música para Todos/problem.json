@@ -1,0 +1,35 @@
+{
+    "title": "Música para Todos",
+    "statement": "Nome do arquivo:“musica.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nUma empresa de streaming de músicas lançou uma nova funcionalidade, para grupos de amigos\nouvirem em seus aparelhos a mesma música ao mesmo tempo, compartilhando assim um momento\nde alegria nestes tempos difíceis de pandemia.\nCada amigo no grupo tem que declarar uma música que adora e uma música que detesta. Um\namigo ﬁcasatisfeito se a música que está sendo compartilhada não é a música que ele detesta. Se\na música que está sendo compartilhada é detestada por um dos amigos, ele pode trocar a música\nsendo compartilhada pela música que ele adora. Se há mais de um amigo que detesta a música que\nestá sendo compartilhada, somente o amigo que é cliente há mais tempo da empresa é que pode\ntrocar a música (e troca pela música que adora).\nObviamente, após a troca da música compartilhada pode ser que outro amigo deteste a nova música,\ne uma nova troca pode ocorrer. E as trocas podem ser intermináveis!\nDadas as preferências de um grupo de amigos e a música sendo compartilhada, e considerando que\nsempre ocorre troca enquanto houver cliente não satisfeito, escreva um programa para determinar\nquantas trocas ocorrem até que todos os amigos estejam satisfeitos.",
+    "input": "A primeira linha da entrada contém três inteirosN, M e C, respectivamente o número de amigos,\no número de músicas e a música que está sendo compartilhada. As músicas são identiﬁcadas por\ninteiros de 1 aM. Cada uma das N linhas seguintes descreve as escolhas de um amigo e contém\ndois inteiros A e D, identiﬁcando respetivamente a música adorada e a música detestada. A ordem\ndos amigos na entrada obedece à ordem em que os amigos se tornaram clientes da empresa (o amigo\nque aparece antes é cliente há mais tempo).",
+    "output": "Seuprogramadeveproduzirumaúnicalinhanasaída, contendoumúnicointeiro, onúmerodetrocas\naté que todos os amigos ﬁquem satisfeitos ou o número-1 se as trocas continuam indeﬁnidamente.",
+    "constraints": "- 1≤ N≤ 105\n- 1≤ M≤ 105\n- 1≤ C≤ M\n- 1≤ A, D≤ M e A⁄= D",
+    "examples": [
+        {
+            "input": "3 4 2\n1 2\n2 3\n3 2",
+            "output": "1"
+        },
+        {
+            "input": "4 5 2\n1 3\n2 3\n3 2\n5 1",
+            "output": "3"
+        },
+        {
+            "input": "3 3 1\n1 2\n2 3\n3 1",
+            "output": "-1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "senior",
+    "period": "Fase 1",
+    "topics": [
+        "grafos",
+        "simulação",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

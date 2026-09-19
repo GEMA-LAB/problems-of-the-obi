@@ -1,0 +1,33 @@
+{
+    "title": "Reunião",
+    "statement": "Nome do arquivo fonte: reuniao.c, reuniao.cpp, ou reuniao.pas\nTodos os anos, a SBC (Sociedade Brasileira de Caminhoneiros) reúne seus membros em alguma cidade para\ndiscutir sobre a profissão. Nessas reuniões são discutidos os problemas da categoria e são apresentadas sugestões\nsobre como melhorar as condições de trabalho.\nO grande problema desse tipo de encontro é que os membros estão espalhados pelo país, uma vez que a profissão\nexige que eles viajem para diversos lugares todos os dias. Por isso, a escolha da cidade onde será feita a reunião\nsempre é feita de modo que não prejudique demais nenhum dos caminhoneiros. O critério para tal é que a maior\ndas distâncias percorridas pelos caminhoneiros para chegar ao local da reunião deve ser a menor possível. Ou\nseja, a distância percorrida pelo caminhoneiro que vai percorrer a maior distância entre todos os caminhoneiros\npara chegar à reunião deve ser a menor possível.\nTarefa\nDadas as cidades onde se encontram os caminhoneiros e a descrição das estradas que interligam essas cidades,\nescreva um programa que determina qual será a menor distância máxima percorrida por um caminhoneiro para\nchegar até o local da reunião. Os caminhoneiros conhecem bem as estradas, e portando sempre fazem o menor\ncaminho possível até a cidade da reunião. Sempre existe um caminho ligando quaisquer duas cidades.",
+    "input": "A primeira linha da entrada possui dois números inteiros N (2 ≤N ≤100) e M (N −1 ≤M ≤10000), que\nrepresentam, respectivamente, o número de cidades e o número de estradas que as interligam. As cidades são\nidentificadas por números inteiros entre 0 e N −1. As próximas M linhas da entrada possuem, cada uma, a\ndescrição de uma estrada. Cada descrição de entrada é composta por três números inteiros: U, V e W, onde U\ne V representam cidades (0 ≤U ≤N −1 e 0 ≤V ≤N −1) e W representa o comprimento da estrada que une\nessas duas cidades (todas as estradas são mão dupla, 1 ≤W ≤100). É sempre possível viajar entre qualquer\nduas cidades com as estradas existentes, mas pode haver mais de uma estrada ligando o mesmo par de cidades.",
+    "output": "Seu programa deve imprimir uma única linha contendo um número inteiro, a distância máxima percorrida por\num caminhoneiro para ir até a reunião, obedecidas as restrições estabelecidas (ou seja, essa distância máxima\ndeve ser a menor possível).",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "4 4\n0 1 2\n0 2 4\n1 3 1\n2 3 5",
+            "output": "4"
+        },
+        {
+            "input": "4 5\n0 1 2\n0 2 4\n1 3 1\n2 3 5\n3 2 2",
+            "output": "3"
+        },
+        {
+            "input": "7 12\n0 1 22\n0 2 30\n0 5 35\n1 5 11\n1 6 30\n1 2 25\n2 3 15\n2 6 10\n3 4 15\n3 5 10\n4 5 20\n5 6 33",
+            "output": "30"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2010",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

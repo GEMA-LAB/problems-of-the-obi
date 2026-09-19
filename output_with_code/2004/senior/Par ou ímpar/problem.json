@@ -1,0 +1,25 @@
+{
+    "title": "Par ou ímpar",
+    "statement": "Arquivo fonte: par.c, par.cc, par.cpp ou par.pas\nMuitas crianças gostam de decidir todas as disputas através do famoso jogo de Par ou Ímpar.\nNesse jogo, um dos participantes escolhe Par e o outro Ímpar. Após a escolha, os dois jogadores\nmostram, simultaneamente, uma certa quantidade de dedos de uma das mãos. Se a soma dos\ndedos das mãos dos dois jogadores for par, vence o jogador que escolheu Par inicialmente, caso\ncontrário vence o que escolheu Ímpar.\n1. Tarefa\nDada uma seqüência de informações sobre partidas de Par ou Ímpar (nomes dos jogadores e\nnúmeros que os jogadores escolheram), você deve escrever um programa para indicar o vencedor\nde cada uma das partidas.",
+    "input": "A entrada é composta de vários conjuntos de testes. A primeira linha de um conjunto de testes\ncontém um inteiro N, que indica o número de partidas de Par ou Ímpar que aconteceram. As duas\nlinhas seguintes contêm cada uma um nome de jogador. Um nome de jogador é uma cadeia de no\nmínimo um e no máximo dez letras (maiúsculas e minúsculas), sem espaços em branco. As N\nlinhas seguintes contêm cada uma dois inteiros A e B que representam o número de dedos que\ncada jogador mostrou em cada partida (0 ≤ A ≤ 5 e 0 ≤ B ≤ 5). Em todas as partidas, o primeiro\njogador sempre escolhe Par. O final da entrada é indicado por N = 0.\nExemplo de Entrada\n3\nPedro\nPaulo\n2 4\n3 5\n1 0\n2\nClaudio\nCarlos\n1 5\n2 3\n0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "Pedro\nPaulo\n2 4\n3 5\n1 0\n2\nClaudio\nCarlos\n1 5\n2 3\n0\n3. Saída\nPara cada conjunto de teste da entrada, seu programa deve produzir a saída da seguinte forma. A\nprimeira linha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é\nnumerado seqüencialmente a partir de 1. As próximas N linhas devem indicar o nome do vencedor\nde cada partida. A próxima linha deve ser deixada em branco. A grafia mostrada no Exemplo de\n\n3\nSaída, abaixo, deve ser seguida rigorosamente.",
+            "output": "Teste 1\nPedro\nPedro\nPaulo\nTeste 2\nClaudio\nCarlos\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2004",
+    "level": "senior",
+    "period": "Fase Única",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

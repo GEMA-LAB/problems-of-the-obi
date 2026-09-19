@@ -1,0 +1,29 @@
+{
+    "title": "Semente",
+    "statement": "Nome do arquivo fonte: semente.c, semente.cpp, semente.pas, semente.java, ou semente.py\nUm experimento biológico utiliza uma fita de papel branco especial, na qual algumas gotas de um\nreagente são colocadas em posições específicas. Inicialmente a gota de reagente faz com que o papel\nse torne preto na posição em que foi colocada. A cada dia o reagente se propaga pelo papel, em\ntodas as direções, com velocidade de 1 posição por dia, colorindo a região em que o reagente se\npropagou. A figura abaixo mostra um experimento com uma fita de 13 posições, com três gotas de\nreagente inicialmente, colocadas nas posições 2, 6 e 13 (a posição 1 é a primeira mais à esquerda da\nfita). Ao final do terceiro dia, a fita está completamente tomada pelo reagente.\nFita no estado inicial\nFita após um dia\nFita após dois dias\nFita após três dias\nVocê foi contratado para escrever um programa que, dados o comprimento da fita de papel e as\nposições das gotas de reagente no início do experimento, determine quantos dias serão necessários\npara a fita de papel ficar completamente tomada pelo reagente.",
+    "input": "A primeira linha contém dois inteiros F e R, indicando respectivamente o comprimento da fita de\npapel, em números de posições, e o número de gotas no início do experimento. A segunda linha\ncontém R inteiros, indicando as posições das gotas de reagente, que são dadas em ordem crescente.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, o número de dias neces-\nsários para que a fita de papel fique totalmente tomada pelo reagente.",
+    "constraints": "- 1 ≤F ≤100000, 1 ≤R ≤1000",
+    "examples": [
+        {
+            "input": "13 3\n2 6 13",
+            "output": "3"
+        },
+        {
+            "input": "10 2\n9 10",
+            "output": "8"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2014",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

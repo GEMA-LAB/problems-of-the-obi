@@ -1,0 +1,29 @@
+{
+    "title": "Vende-se",
+    "statement": "Nome do arquivo fonte: vende.c, vende.cpp, vende.pas, vende.java, ou vende.py\nA Otacílio Busílis Imóveis (OBI) é a maior imobiliária de Nlogópolis, especializada no aluguel de prédios\ncomerciais; todas as suas propriedades se localizam na Avenida Doutor Otacílio Busílis, assim chamada em\nhomenagem ao fundador da OBI.\nDevido à crise econômica mundial, a OBI precisa vender K de seus imóveis para levantar capital de giro.\nDr. Otacílio quer que os prédios restantes após a venda sejam o mais próximos possível — ou seja, a distância\nentre o primeiro e o último prédios restantes deve ser a menor possível.\nInfelizmente, a OBI é proprietária de tantos prédios que o Dr. Otacílio não sabe quais prédios ele deve vender;\nele lhe contratou para que você escreva um programa que determina qual é a mínima distância possível entre\no primeiro e o último prédios da OBI na avenida, após a venda de K prédios.",
+    "input": "A primeira linha da entrada contém os inteiros N e K, indicando, respectivamente, quantos prédios a OBI\npossui, e quantos prédios ela pretende vender. A linha seguinte contém N inteiros Xi, indicando a distância\nde cada um dos N prédios ao início da avenida, em metros.",
+    "output": "A saída deve conter um único inteiro indicando a menor distância possível entre o primeiro e o último prédio\npossuídos pela OBI após a venda.",
+    "constraints": "- 3 N 105\n- N −K ≥2\n- 1 Xi 106\n- todos os Xi são distintos",
+    "examples": [
+        {
+            "input": "5 2\n10 7 4 8 2",
+            "output": "3"
+        },
+        {
+            "input": "8 6\n16 11 1 7 29 4 22 2",
+            "output": "1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

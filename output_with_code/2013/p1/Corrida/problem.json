@@ -1,0 +1,29 @@
+{
+    "title": "Corrida",
+    "statement": "Nome do arquivo fonte: corrida.c, corrida.cpp, corrida.pas, corrida.java, ou corrida.py\nA Federação de Corridas de Charrete (FCC) organiza todo ano a Subida Brigite Cardoso (SBC),\ndisputada nas ladeiras de paralelepípedo de Ouro Preto. A corrida é uma das mais tradicionais do\nesporte, completando 100 anos em 2013. Para comemorar o centenário, a FCC pretende integrar\ndispostivos GPS às charretes, permitindo aos espectadores desfrutarem de dados de telemetria em\ntempo real.\nNo mesmo viés de inovação tecnológica, a FCC transmitirá a SBC via satélite para todo o planeta, e\nquer integrar a telemetria na transmissão, indicando qual seria o vencedor da corrida se as charretes\nmantivessem suas velocidades até o final da corrida; ela pediu que você escrevesse um programa\nque, dados as distâncias até a linha de chegada, as velocidades e os números das duas charretes que\nlideram a corrida, determina quem seria o vencedor da corrida (você pode supor que as charretes\nnão cruzam a linha de chegada simultaneamente).",
+    "input": "A entrada consiste de duas linhas; cada linha descreve uma das charretes que lidera a corrida. A\ndescrição de uma charrete consiste de três inteiros N, D e V indicando, respectivamente, o número\nda charrete, a sua distância à linha de chegada em metros, e a sua velocidade, em quilômetros por\nhora. Os números das duas charretes são distintos.",
+    "output": "Imprima uma única linha, contendo um único número inteiro, indicando o número da charrete que\nseria vencedora, conforme descrito acima.",
+    "constraints": "- 1 ≤N ≤99\n- 0 < D ≤1000\n- 0 < V ≤50",
+    "examples": [
+        {
+            "input": "45 900 40\n17 300 20",
+            "output": "17"
+        },
+        {
+            "input": "1 1000 100\n2 1000 99",
+            "output": "1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

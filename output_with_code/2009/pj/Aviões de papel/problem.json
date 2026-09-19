@@ -1,0 +1,33 @@
+{
+    "title": "Aviões de papel",
+    "statement": "Nome do arquivo fonte: papel.c, papel.cpp, ou papel.pas\nPara descontrair os alunos após as provas da OBI, a Diretora da escola organizou um campeonato de aviões\nde papel. Cada aluno participante receberá uma certa quantidade de folhas de um papel especial para fazer os\nseus modelos de aviões. A quantidade de folhas que cada aluno deverá receber ainda não foi determinada: ela\nserá decidida pelos juízes do campeonato.\nA diretora convidou, para atuarem como juízes, engenheiros da Embraer, uma das mais bem sucedidas empresas\nbrasileiras, que vende aviões com tecnologia brasileira no mundo todo. O campeonato está programado para\ncomeçar logo após a prova da OBI, mas os juízes ainda não chegaram à escola. A diretora está aflita, pois\ncomprou uma boa quantidade de folhas de papel especial, mas não sabe se a quantidade comprada vai ser\nsuficiente.\nConsidere, por exemplo, que a Diretora comprou 100 folhas de papel especial, e que há 33 competidores. Se os\njuízes decidirem que cada competidor tem direito a três folhas de papel, a quantidade comprada pela diretora é\nsuficiente. Mas se os juízes decidirem que cada competidor tem direito a quatro folhas, a quantidade comprada\npela diretora não seria suficiente.\nTarefa\nVocê deve escrever um programa que, dados o número de competidores, o número de folhas de papel especial\ncompradas pela Diretora e o número de folhas que cada competidor deve receber, determine se o número de\nfolhas comprado pela Diretora é suficiente.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). O arquivo de entrada contém três números inteiros C (1 ≤C ≤1000), P (1 ≤P ≤1000) e F\n(1 ≤F ≤1000) representando respectivamente o número de competidores, a quantidade de folhas de papel\nespecial compradas pela Diretora e a quantidade de folhas de papel especial que cada competidor deve receber.",
+    "output": "Seu programa deve imprimir, na saída padrão, o caractere ‘S’ se a quantidade de folhas compradas pela Diretora\né suficiente, ou o caractere ‘N’ caso contrário. Note que os caracteres devem ser letras maiúsculas.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "10 100 10",
+            "output": "S\n\n2"
+        },
+        {
+            "input": "10 90 10",
+            "output": "N"
+        },
+        {
+            "input": "5 40 2",
+            "output": "S"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2009",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

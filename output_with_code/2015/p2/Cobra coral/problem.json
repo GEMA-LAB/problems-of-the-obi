@@ -1,0 +1,33 @@
+{
+    "title": "Cobra coral",
+    "statement": "Nome do arquivo: coral.c, coral.cpp, coral.pas, coral.java, coral.js ou coral.py\nO professor Rui está desenvolvendo um sistema automático para identificar se uma cobra é uma coral\nverdadeira ou uma falsa coral. A cobra coral verdadeira é venenosa e os anéis coloridos no seu corpo\nseguem o padrão ...BVBPBVBPBVBP..., onde B,V e P representam as cores branco, vermelho e preto,\nrespectivamente. Já a falsa coral não é venenosa e os anéis seguem o padrão ...BVPBVPBVPBVP....\nO problema é que os sensores do sistema do professor Rui produzem apenas uma sequência de\nquatro números representando um pedaço do padrão de cores. Só que ele não sabe qual número\nrepresenta qual cor. Mas, por exemplo, se a sequência for 5 3 9 3, podemos dizer com certeza que\né uma coral verdadeira, mesmo sem saber qual número representa qual cor! Você deve ajudar o\nprofessor Rui e escrever um programa que diga se a coral é verdadeira ou falsa.",
+    "input": "A entrada consiste de apenas uma linha, contendo quatro números inteiros.",
+    "output": "Seu programa deve imprimir na saída uma linha com a letra “V” se a coral for verdadeira ou com a\nletra “F”, caso seja falsa.",
+    "constraints": "- Os quatro números têm valores entre 1 e 9, inclusive, e a sequência sempre representa uma\n- coral verdadeira, ou uma coral falsa.",
+    "examples": [
+        {
+            "input": "5 3 9 3",
+            "output": "V"
+        },
+        {
+            "input": "7 1 4 7",
+            "output": "F"
+        },
+        {
+            "input": "6 2 6 8",
+            "output": "V"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2015",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

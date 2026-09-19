@@ -1,0 +1,35 @@
+{
+    "title": "Linhas de Ônibus",
+    "statement": "Nome do arquivo: linhas.c, linhas.cpp, linhas.pas, linhas.java, linhas.js, linhas_py2.py ou linhas_py3.py\nNessa grande cidade na China, há T terminais de ônibus, numerados de 1 a T; e L linhas de\nônibus,numeradas de1 a L. Os mapas são muito confusos mas conseguimos entender que os ônibus\nde uma linha fazem viagens circulares passando por um conjunto ﬁxo de terminais. Por exemplo,\na tabela seguinte indica o conjunto de terminais por onde passam os ônibus de cada linha, para\nT = 10 e L = 5:\nLinha Conjunto de Terminais\n1 {4, 3, 8, 2, 1}\n2 {5, 10, 7}\n3 {1, 5}\n4 {6, 8, 10}\n5 {9, 4, 5}\nNão estamos preocupados com o trajeto da linha, com a ordem na qual o ônibus passa pelos\nterminais. Portanto, para ir do terminal2 para o terminal4, precisamos apenas tomar um ônibus\nda linha 1 e esperar até ele chegar no terminal4. O sistema garante que é possível viajar entre\nqualquer par de terminais, mas talvez seja preciso trocar de linha de ônibus algumas vezes.\nNós estamos com medo de tomar um ônibus errado e acabar perdidos na cidade. É tudo muito\ngrande na China! Por isso, queremos trocar de ônibus o menor número possível de vezes. Por\nexemplo, você pode ir do terminal2 para o terminal10 primeiro tomando a linha1 até o terminal\n1, depois a linha3 até o terminal5 e, por ﬁm, a linha2 até o terminal10; trocando de ônibus duas\nvezes, usando três linhas no total. Só que dá para ir do terminal2 para o 10 trocando apenas uma\nvez: primeiro tomando a linha1 até o terminal8 e depois a linha4 até o terminal10.\nNeste problema, dados os conjuntos de terminais de cada linha, um terminal origem e um terminal\ndestino, seu programa deve computar o número mínimo possível de linhas de ônibus para fazer a\nviagem.",
+    "input": "A primeira linha da entrada contém quatro inteiros,T, L, O e D, representando, respectivamente,\no número de terminais, o número de linhas de ônibus, o terminal origem e o terminal destino. As\núltimas L linhas da entrada descrevem, cada uma, o conjunto de terminais pelos quais uma linha\nde ônibus passa. A i-ésima linha (dessas últimas L linhas da entrada) descreve o conjunto de\nterminais da linha de ônibusi, no seguinte formato: o primeiro inteiro na linha,C, indica o número\nde terminais no conjunto. Depois desse inteiro, o restante da linha da entrada contémC inteiros\ndistintos representando os terminais.",
+    "output": "Seuprogramadeveproduzirumaúnicalinha, contendoapenasuminteiro, onúmeromínimopossível\nde linhas de ônibus para viajar do terminalO para o terminalD.",
+    "constraints": "- 2≤ T≤ 500\n- 1≤ L≤ 500\n- 2≤ C≤ T\n- O⁄= D",
+    "examples": [
+        {
+            "input": "10 5 2 10\n5 4 3 8 2 1\n3 5 10 7\n2 1 5\n3 6 8 10\n3 9 4 5",
+            "output": "2"
+        },
+        {
+            "input": "2 1 1 2\n2 2 1",
+            "output": "1"
+        },
+        {
+            "input": "10 9 1 10\n2 1 2\n2 2 3\n2 3 4\n2 4 5\n3 5 6 7\n2 6 7\n2 7 8\n2 8 9\n2 9 10",
+            "output": "8"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "p1",
+    "period": "Fase 3",
+    "topics": [
+        "grafos",
+        "bfs",
+        "menor caminho"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 512
+}

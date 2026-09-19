@@ -24,9 +24,12 @@ class TestCaseNormalizer:
     def is_input_file(self, path: Path) -> bool:
         """Determina se o arquivo e um candidato valido a entrada de teste."""
         name_lower = path.name.lower()
-        if path.suffix.lower() in self.exts_in:
+        suffix = path.suffix.lower()
+        if suffix in self.exts_in:
             return True
-        if name_lower in ("in", "in.txt", "input", "input.txt"):
+        if re.match(r"^\.i\d+$", suffix):
+            return True
+        if name_lower in ("in", "in.txt", "input", "input.txt", "entrada", "entrada.txt"):
             return True
         if name_lower.startswith("in") and any(c.isdigit() for c in name_lower):
             return True
@@ -35,9 +38,12 @@ class TestCaseNormalizer:
     def is_output_file(self, path: Path) -> bool:
         """Determina se o arquivo e um candidato valido a saida de teste."""
         name_lower = path.name.lower()
-        if path.suffix.lower() in self.exts_out:
+        suffix = path.suffix.lower()
+        if suffix in self.exts_out:
             return True
-        if name_lower in ("out", "out.txt", "output", "output.txt", "sol", "sol.txt"):
+        if re.match(r"^\.o\d+$", suffix):
+            return True
+        if name_lower in ("out", "out.txt", "output", "output.txt", "sol", "sol.txt", "saida", "saida.txt"):
             return True
         if (name_lower.startswith("out") or name_lower.startswith("sol")) and any(c.isdigit() for c in name_lower):
             return True
@@ -46,18 +52,29 @@ class TestCaseNormalizer:
     def get_pairing_key(self, file_path: Path) -> str:
         """Gera uma chave normalizada para associar entrada e saida."""
         parent_part = file_path.parent.name
+        name_lower = file_path.name.lower()
+        suffix = file_path.suffix.lower()
+
+        # Suporte a sufixos indexados .iN e .oN (comum em anos como 2003 e 2004)
+        m_i = re.match(r"^\.i(\d+)$", suffix)
+        if m_i:
+            return f"{parent_part}_{file_path.stem.lower()}_{m_i.group(1)}"
+        m_o = re.match(r"^\.o(\d+)$", suffix)
+        if m_o:
+            return f"{parent_part}_{file_path.stem.lower()}_{m_o.group(1)}"
+
         stem = file_path.stem.lower()
 
-        # Se o arquivo se chama simplesmente 'in' ou 'out', a chave e o nome da pasta pai
-        if stem in ("in", "out", "sol", "input", "output"):
+        # Se o arquivo se chama simplesmente 'in', 'out', 'entrada' ou 'saida', a chave e o nome da pasta pai
+        if stem in ("in", "out", "sol", "input", "output", "entrada", "saida"):
             return parent_part
 
         # Se contem digitos, extrai os digitos como chave primaria de pareamento
         digits = "".join(c for c in stem if c.isdigit())
         if digits:
             prefix = "".join(c for c in stem if not c.isdigit() and c not in ("-", "_", "."))
-            # Se comeca com in ou out, normaliza o prefixo
-            if prefix in ("in", "out", "sol", "input", "output"):
+            # Se comeca com in, out, sol, entrada ou saida, normaliza o prefixo
+            if prefix in ("in", "out", "sol", "input", "output", "entrada", "saida"):
                 return f"{parent_part}_{digits}"
             return f"{parent_part}_{prefix}_{digits}"
 

@@ -1,0 +1,25 @@
+{
+    "title": "Sacoleiro",
+    "statement": "Nome do arquivo fonte: saco.c, saco.cpp, ou saco.pas\nSeu amigo sacoleiro pediu sua ajuda num problema que ele está enfrentando. Ele tem um mapa de cidades\nque ele já conhece e que são interessantes para ele, além das rotas entre as mesmas. Ele pretende fazer uma\nviagem para comprar presentes para seu filho e para sua filha. O problema é que nem todos os presentes têm o\nmesmo preço, alguns são obviamente mais caros que os outros, e ele não quer ser injusto dando presentes mais\ncaros para um ou para outro. O objetivo é fazer com que diferença entre a soma dos valores dos presentes seja\na menor possível (de preferência que sejam iguais, naturalmente). Há, também, um limite de quanto ele pode\ngastar na viagem.\nO sacoleiro tem um mapa com N cidades e as rotas que as ligam. Além disso, cada cidade pertence ao\ngrupo A ou ao grupo B. No grupo A estão as cidades em que há presentes para o filho, enquanto que no grupo\nB estão as cidades com presentes para a filha. Sempre que ele pára numa cidade ele pode comprar ou não o\npresente, mesmo que ele já tenha estado lá antes, inclusive pode comprar mais de uma unidade do mesmo\npresente (enquanto tiver dinheiro disponível, naturalmente). As cidades são numeradas de 0 a N −1. O trajeto\ndeve sempre começa na cidade 0. O tamanho do percurso não importa para o sacoleiro. O total disponível\nde dinheiro para os presentes é T. O sacoleiro não pode terminar a viagem sem ter comprado pelo menos um\npresente para algum dos filhos.\nTarefa\nEscreva um programa que, dadas N cidades, as rotas entre elas e os valores de presentes de cada cidade, retorne\nqual a diferença mínima possível entre a soma dos presentes do grupo A e a soma dos presentes do grupo B.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém um inteiro N (2 ≤N ≤30) que indica a quantidade de cidades.\nA segunda linha contém um inteiro T (10 ≤T ≤100) que indica a quantidade de dinheiro que o sacoleiro tem\npara gastar. As N linhas seguintes contêm a descrição cada cidade. Cada uma dessas linhas tem o formato\nXPCKV0V1...VK−1, onde X é um inteiro que representa a cidade (numeradas de 0 a N −1); P é um inteiro\n(1 ≤P ≤10) que indica o valor do presente da cidade X; C é um caracter A ou B, indicando a que grupo a\ncidade X pertence; K é um inteiro (0 ≤K < N) que indica quantas rotas saem da cidade X; e cada Vi é um\ninteiro indicando um dos possíveis destinos a partir da cidade X. Note que as rotas não são bidirecionais. Uma\ncidade nunca terá rota para ela mesma e pode-se assumir que i̸ = j ⇒Vi̸ = Vj.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha com um inteiro representando a menor diferença\npossível de valores entre os presentes comprados para o grupo A e para o grupo B.\nEntrada\n4\n20\n0 9 A 2 1 2\n1 8 B 1 2\n2 7 A 1 3\n3 6 B 1 1\nSaída\n1",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "4\n20\n0 9 A 2 1 2\n1 8 B 1 2\n2 7 A 1 3\n3 6 B 1 1",
+            "output": "1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2007",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

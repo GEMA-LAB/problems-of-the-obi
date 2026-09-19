@@ -1,0 +1,34 @@
+{
+    "title": "Acelerador de Partículas",
+    "statement": "Nome do arquivo:“acelerador.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nAuniversidadeestáinaugurandoumgrandeaceleradordepartículas, comumemissoretrêssensores,\nnumerados 1, 2 e 3. Uma partícula, após sair do emissor, entra no acelerador onde pode dar várias\nvoltas sendo acelerada a velocidades muito altas. Num determinado momento, a partícula sai do\nacelerador por uma das três saídas, atingindo um dos sensores. A ﬁgura mostra o caminho por\nonde as partículas trafegam, com uma graduação de1 quilômetro. Por exemplo, do emissor até o\nacelerador são 3 quilômetros e a circunferência do acelerador tem8 quilômetros.\nemissor\n1\n2\n3\nNeste problema, será dada a distância total, em quilômetros, percorrida por uma certa partícula\ntrafegando do emissor até algum sensor e seu programa deve determinar qual sensor foi atingido\npela partícula. Por exemplo, veja que se a distância total for23 quilômetros, então a partícula tem\nque ter atingido o sensor2.",
+    "input": "A entrada consiste de apenas uma linha contendo um inteiroD, representando a distância total\npercorrida pela partícula.",
+    "output": "Seu programa deve imprimir uma linha contendo um inteiro, representando o número do sensor que\na partícula atingiu.",
+    "constraints": "- 6≤ D≤ 800008. D sempre será a distância total percorrida entre o emissor e algum sensor.",
+    "examples": [
+        {
+            "input": "23",
+            "output": "2"
+        },
+        {
+            "input": "6",
+            "output": "1"
+        },
+        {
+            "input": "9192",
+            "output": "3"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "senior",
+    "period": "Fase 1",
+    "topics": [
+        "aritmética",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

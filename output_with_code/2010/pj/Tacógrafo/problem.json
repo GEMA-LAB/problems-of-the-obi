@@ -1,0 +1,34 @@
+{
+    "title": "Tacógrafo",
+    "statement": "Nome do arquivo fonte: tacografo.c, tacografo.cpp, ou tacografo.pas\nTacógrafos são dispositivos instalados em determinados tipos de veículos, que registram a velocidade, tempo e\ndistância percorrida por tal veículo. É utilizada principalmente em veículos de transporte coletivo e de transporte\nde cargas, assim ajudando a evitar abusos de velocidade por parte dos motoristas.\nA empresa SBC (Sociedade Brasileira dos Caminhoneiros) decidiu encomendar uma versão um pouco mais\nbásica (e barata) para seus associados não precisarem gastar tanto na instalação desses aparelhos. Essas versões\nmodificadas registram apenas os intervalos de tempo e as velocidades médias do caminhão naqueles intervalos.\nTarefa\nApesar das restrições dos aparelhos novos, a SBC quer poder saber qual foi a distância percorrida pelos ca-\nminhões. Você deverá escrever um programa que recebe uma série de intervalos de tempo com suas respectivas\nvelocidades médias e calcula qual foi a distância total percorrida pelo caminhão de acordo com o tacógrafo.",
+    "input": "A primeira linha da entrada contém um inteiro N (1 ≤N ≤1000) representando a quantidade de intervalos\nde tempo registrados no tacógrafo. As N linhas seguintes descrevem os intervalos de tempo. Cada uma dessas\nlinhas possui dois inteiros T e V (1 ≤T ≤100, 0 ≤V ≤120), que representam, respectivamente o tempo\ndecorrido (em horas) e a velocidade média (em quilômetros por hora) no intervalo de tempo.",
+    "output": "Seu programa deve imprimir uma única linha, contendo um único número inteiro representando a distância\ntotal percorrida, em quilômetros.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3\n10 0\n55 12\n75 120",
+            "output": "9660\n\n5"
+        },
+        {
+            "input": "10\n45 46\n46 101\n7 2\n95 104\n12 107\n78 29\n10 26\n52 86\n13 79\n1 107",
+            "output": "26022"
+        },
+        {
+            "input": "8\n37 24\n68 69\n28 26\n79 8\n36 0\n50 71\n13 68\n87 113",
+            "output": "21205"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2010",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "grafos",
+        "busca"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

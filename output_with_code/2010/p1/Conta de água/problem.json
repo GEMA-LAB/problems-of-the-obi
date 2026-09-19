@@ -1,0 +1,33 @@
+{
+    "title": "Conta de água",
+    "statement": "Nome do arquivo fonte: conta.c, conta.cpp, ou conta.pas\nA empresa local de abastecimento de água, a Saneamento Básico da Cidade (SBC), está promovendo uma\ncampanha de conservação de água, distribuindo cartilhas e promovendo ações demonstrando a importância da\nágua para a vida e para o meio ambiente.\nPara incentivar mais ainda a economia de água, a SBC alterou os preços de seu fornecimento de forma que,\nproporcionalmente, aqueles clientes que consumirem menos água paguem menos pelo metro cúbico. Todo cliente\npaga mensalmente uma assinatura de R$ 7, que inclui uma franquia de 10 m3 de água. Isto é, para qualquer\nconsumo entre 0 e 10 m3, o consumidor paga a mesma quantia de R$ 7 reais (note que o valor da assinatura deve\nser pago mesmo que o consumidor não tenha consumido água). Acima de 10 m3, cada metro cúbico subsequente\ntem um valor diferente, dependendo da faixa de consumo. A SBC cobra apenas por quantidades inteiras de\nmetros cúbicos consumidos. A tabela abaixo especifica o preço por metro cúbico para cada faixa de consumo:\nFaixa de consumo (m3)\nPreço (por m3)\naté 10\nincluído na franquia\n11 a 30\nR$ 1\n31 a 100\nR$ 2\n101 em diante\nR$ 5\nAssim, por exemplo, se o consumo foi de 120 m3, o valor da conta é:\n• 7 reais da assinatura básica;\n• 20 reais pelo consumo no intervalo 11 – 30 m3;\n• 140 reais pelo consumo no intervalo 31 – 100 m3;\n• 100 reais pelo consumo no intervalo 101 – 120 m3.\nLogo o valor total da conta de água é R$ 267.\nTarefa\nEscreva um programa que, dado o consumo de uma residência em m3, calcula o valor da conta de água daquela\nresidência.",
+    "input": "A única linha da entrada contém um único inteiro N, indicando o consumo de água da residência, em m3\n(0 ≤N ≤103).",
+    "output": "Seu programa deve imprimir uma única linha, contendo o valor da conta de água daquela residência.\n\n3",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "8",
+            "output": "7"
+        },
+        {
+            "input": "14",
+            "output": "11"
+        },
+        {
+            "input": "42",
+            "output": "51"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2010",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,25 @@
+{
+    "title": "Rede ótica",
+    "statement": "Arquivo fonte: rede.c, rede.cc, rede.cpp ou rede.pas\nOs caciques da região de Tutuaçu pretendem integrar suas tribos à chamada “aldeia global”. A pri-\nmeira providência foi a distribuição de telefones celulares a todos os pajés. Agora, planejam mon-\ntar uma rede de fibra ótica interligando todas as tabas. Esta empreitada requer que sejam abertas\nnovas picadas na mata, passando por reservas de flora e fauna. Conscientes da necessidade de pre-\nservar o máximo possível o meio ambiente, os caciques encomendaram um estudo do impacto\nambiental do projeto. Será que você consegue ajudá-los a projetar a rede de fibra ótica?\n1. Tarefa\nVamos denominar uma ligação de fibra ótica entre duas tabas de um ramo de rede. Para possibili-\ntar a comunicação entre todas as tabas é necessário que todas elas estejam interligadas, direta (uti-\nlizando um ramo de rede) ou indiretamente (utilizando mais de um ramo). Os caciques\nconseguiram a informação do impacto ambiental que causará a construção dos ramos. Alguns\nramos, no entanto, nem foram considerados no estudo ambiental, pois sua construção é impossí-\nvel.\nSua tarefa é escrever um programa para determinar quais ramos devem ser construídos, de forma\na possibilitar a comunicação entre todas as tabas, causando o menor impacto ambiental possível.",
+    "input": "A entrada é composta de vários conjuntos de teste. A primeira linha de um conjunto de teste con-\ntém dois números inteiros positivos N e M que indicam, respectivamente, o número de tabas e o\nnúmero de ramos de redes possíveis. As tabas são numeradas de 1 a N. As M linhas seguintes con-\ntêm três inteiros positivos X, Y e Z, que indicam que o ramo de rede que liga a taba X à taba Y tem\nimpacto ambiental Z. Com os conjuntos de teste dados sempre é possível interligar todas as tabas.\nO final da entrada é indicado quando N = 0.\n6\n13\n5\n12\n6\n15\n6\n5\n12\n6\nRamos de rede possíveis com\ncusto ambiental associado\nInterligação das tabas com\nmenor custo ambiental\n2\n1\n5\n3\n4\n5\n1\n2\n3\n4\n\n3\nExemplo de Entrada\n3 3\n1 2 10\n2 3 10\n3 1 10\n5 6\n1 2 15\n1 3 12\n2 4 13\n2 5 5\n3 2 6\n3 4 6\n0 0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3 3\n1 2 10\n2 3 10\n3 1 10\n5 6\n1 2 15\n1 3 12\n2 4 13\n2 5 5\n3 2 6\n3 4 6\n0 0\n3. Saída\nPara cada conjunto de teste da entrada seu programa deve produzir uma lista dos ramos de redes\nque devem ser construídos. A lista deve ser precedida de uma linha que identifica o conjunto de\nteste, no formato \"Teste n\", onde n é numerado a partir de 1. A lista é composta por uma sequência\nde ramos a serem construídos, um ramo por linha. Um ramo é descrito por um par de tabas X e Y ,\ncom X < Y. Os ramos de rede podem ser listados em qualquer ordem, mas não deve haver repeti-\nção. Se houver mais de uma solução possível, imprima apenas uma delas. O final de uma lista de\nramos deve ser marcado com uma linha em branco. A grafia mostrada no Exemplo de Saída,\nabaixo, deve ser seguida rigorosamente.",
+            "output": "Teste 1\n1 2\n1 3\nTeste 2\n1 3\n2 3\n2 5\n3 4\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2000",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

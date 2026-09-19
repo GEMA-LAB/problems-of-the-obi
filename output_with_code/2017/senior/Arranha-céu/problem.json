@@ -1,0 +1,29 @@
+{
+    "title": "Arranha-céu",
+    "statement": "Nome do arquivo: arranhaceu.c, arranhaceu.cpp, arranhaceu.pas, arranhaceu.java,\narranhaceu.js, arranhaceu.py2 ou arranhaceu.py3\nUm arranha-céu residencial possui N andares, numerados de 1 a N. O síndico do arranha-céu está\ntendo muito trabalho com uma nova regra do corpo de bombeiros. Ele não sabe o porquê, mas\nos bombeiros apontam um andar k e exigem que o síndico informe o total de pessoas que moram\nno arranha-céu do andar 1 até o andar k, inclusive. Talvez seja alguma medida de segurança dos\nbombeiros! O problema é que o prédio tem muitos andares e toda hora tem gente se mudando,\npassando a morar no arranha-céu, ou indo embora. O síndico precisa cuidar de dois eventos:\n• Mudança: alterar o número de pessoas que moram num determinado andar;\n• Bombeiro: informar o total de pessoas que moram do andar 1 até um determinado andar,\ninclusive.\nDados o número de pessoas que moram em cada andar do arranha-céu inicialmente, e uma sequência\nde eventos (do tipo Mudança ou Bombeiro), seu programa deve imprimir, para cada evento do tipo\nBombeiro, o total de pessoas exigido, no momento do evento!",
+    "input": "A primeira linha da entrada contém dois inteiros N e Q, representando, respectivamente, o número\nde andares e o número de eventos. A segunda linha contém N inteiros Ai, 1 ≤i ≤N, indicando\no número de pessoas que moram no i-ésimo andar inicialmente. Cada uma das Q linhas seguintes\nrepresenta um evento e tem uma de duas formas:\n• “0 K P”, Mudança, alterar o número de pessoas que moram no K-ésimo andar para P pessoas;\n• “1 K”, Bombeiro, informar o total de pessoas que moram do andar 1 até o andar K, inclusive.",
+    "output": "Para cada evento do tipo Bombeiro, seu programa deve imprimir uma linha contendo um inteiro\nrepresentando o total de pessoas correspondente aquele evento.",
+    "constraints": "- 1 ≤N ≤105 e 1 ≤Q ≤N\n- Há pelo menos um evento do tipo Bombeiro\n- 1 ≤K ≤N\n- 0 ≤Ai ≤1000 e 0 ≤P ≤1000",
+    "examples": [
+        {
+            "input": "8 4\n30 2 0 42 10 11 11 9\n1 5\n0 4 12\n1 5\n1 1",
+            "output": "84\n54\n30\n\n7"
+        },
+        {
+            "input": "1 1\n0\n1 1",
+            "output": "0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2017",
+    "level": "senior",
+    "period": "Fase 3",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

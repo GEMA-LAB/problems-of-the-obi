@@ -1,0 +1,33 @@
+{
+    "title": "Janela",
+    "statement": "Nome do arquivo fonte: janela.c, janela.cpp, janela.pas, janela.java, ou janela.py\nA sala de aulas utilizada para os cursos da OBI tem uma grande janela, composta de três folhas\nde vidro. A janela tem um metro de altura por seis metros de comprimento. Cada folha da janela\ntem um metro de altura e dois metros de comprimento. As folhas deslizam sobre trilhos, ao longo\ndo comprimento da janela, de forma que é possível controlar a abertura da janela, para circulação\nde ar.\nDadas as posições das três folhas da janela, deseja-se determinar qual a área da janela que está\naberta, em centímetros quadrados.\nA figura abaixo ilustra duas configurações das folhas da janela.\nNa figura, os cantos inferiores\nesquerdos de cada folha são indicados por F1,F2 e F3. Na configuração (a) a janela está totalmente\nfechada, e portanto o total da área aberta é igual a zero. Na configuração (b) há duas aberturas, e\no total de área aberta é igual a (100 × 100) + (50 × 100) = 15.000 cm2.\n0\n100\n200\n300\n400\n500\n600\n0\n100\n200\n300\n400\n500\n600\n0\n100\n0\n100\n(a)\n(b)\nF1\nF1\nF2\nF2\nF3\nF3\nDadas as posições das três folhas da janela, escreva um programa que calcule a área da janela que\nestá aberta, em centímetros quadrados.",
+    "input": "A primeira e única linha da entrada contém três inteiros F1, F2 e F3, indicando as posições das três\nfolhas. A posição de cada folha é dada pela distância, em centímetros, da extremidade esquerda da\njanela até a extremidade esquerda da folha.",
+    "output": "Seu programa deve imprimir uma única linha, contendo um único inteiro, a área aberta da janela\nem centímetros quadrados.",
+    "constraints": "- 0 ≤F1, F2, F3 ≤400.\n- 3",
+    "examples": [
+        {
+            "input": "0 200 400",
+            "output": "0"
+        },
+        {
+            "input": "0 50 350",
+            "output": "15000"
+        },
+        {
+            "input": "344 344 344",
+            "output": "40000"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

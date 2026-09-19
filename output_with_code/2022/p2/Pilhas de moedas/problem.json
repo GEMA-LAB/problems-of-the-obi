@@ -1,0 +1,31 @@
+{
+    "title": "Pilhas de moedas",
+    "statement": "Nome do arquivo:pilhas.c, pilhas.cpp, pilhas.pas, pilhas.java, pilhas.js ou pilhas.py\nFlávia possui várias moedas em sua coleção, que estão organizadas emN pilhas, cada pilha com\num certo número de moedas. Vamos chamar o número de moedas de uma pilha dealtura da pilha.\nA garota pretende adicionar algumas moedas à sua coleção, de forma que cada moeda nova deve\nser adicionada em uma das pilhas existentes. As moedas originais, porém, devem permanecer nas\nsuas pilhas.\nFlávia está se perguntando agora: qual o número mínimo de moedas que ela deve adicionar à coleção\npara que, considerando os valores de todas asN novas alturas de pilhas, a quantidade de números\ndistintos seja no máximoK?\nPor exemplo, se a lista de alturas inicialmente é(3, 5, 8, 4, 5, 8), temos que existem4 valores distintos\nde alturas: 3, 4, 5 e 8. Se K = 2, poderíamos, com 3 moedas novas, adicionar duas na pilha de\níndice 1, e uma na pilha de índice4. Assim, a lista de alturas ﬁcará(5, 5, 8, 5, 5, 8), que possui\napenas dois valores distintos de alturas:5 e 8.\nNote que, se inicialmente a lista de alturas já tem no máximoK valores distintos, Flávia já estaria\nfeliz, e não iria precisar de nenhuma moeda nova.",
+    "input": "A primeira linha da entrada contém um dois inteiros separados por espaçosN, indicando o número\nde pilhas eK, indicado o número máximo de valores distintos. A segunda linha contémN inteiros\nPi, indicando as alturas das pilhas.",
+    "output": "Imprima a menor quantidade adicional de moedas.",
+    "constraints": "- 1≤ N≤ 500\n- 1≤ K≤ N\n- 1≤ vi≤ 500",
+    "examples": [
+        {
+            "input": "6 2\n5 3 8 4 5 8",
+            "output": "3"
+        },
+        {
+            "input": "6 3\n5 3 8 4 5 8",
+            "output": "1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2022",
+    "level": "p2",
+    "period": "Fase 3",
+    "topics": [
+        "guloso",
+        "jogos",
+        "otimização"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 512
+}

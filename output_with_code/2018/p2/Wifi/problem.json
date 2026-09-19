@@ -1,0 +1,35 @@
+{
+    "title": "Wifi",
+    "statement": "Nome do arquivo:“wifi.x”,onde x deve ser c|cpp|pas|java|js|py2|py3\nA arquitetura do novo museu de ciências é bastante peculiar. O prédio do museu é uma grande\nsala retangular. Dentro dessa sala existem outras salas retangulares, e dentro delas existem outras\nsalas retangulares, e assim recursivamente, como se fossem caixas dentro de caixas... As paredes\ndas salas não se tocam. Veja um exemplo na parte esquerda da ﬁgura, com oito salas.\nO diretor quer instalar uma rede wiﬁ que funcione em todo o museu. Para economizar, ele quer\ncomprar o número mínimo possível de antenas. O problema é que, pela forma como foram construí-\ndas as paredes das salas, ocorre uma coisa interessante: o sinal wiﬁ é capaz de atravessar as paredes\nquando vem de dentro para fora, mas estranhamente não atravessa as paredes quando vem de fora\npara dentro das salas! A ﬁgura mostra duas posições possíveis para uma antena, mostrada como\num círculo, e a área que o respectivo sinal wiﬁ da antena alcançaria.\nNeste problema, dadosN retângulos cujos lados são paralelos aos eixos cartesianos, que descrevem\nas salas do museu, seu programa deve computar o número mínimo possível de antenas que o diretor\ndeve comprar para que a rede wiﬁ funcione em todo o museu.",
+    "input": "A primeira linha da entrada contém um inteiroN indicando o número de salas. Cada uma dasN\nlinhas seguintes contém quatro inteiros,X1, Y1, X2 e Y2, deﬁnindo as coordenadas do canto superior\nesquerdo (X1, Y1) e inferior direito(X2, Y2) de uma sala. Não há nenhum tipo de interseção entre\nos retângulos que deﬁnem as salas. Um dos retângulos contém todos os demais e representa a sala\nmais externa (as paredes externas do prédio do museu).",
+    "output": "Imprima um inteiro, representando o número mínimo possível de antenas de wiﬁ para que a rede\nfuncione em todo o museu.",
+    "constraints": "- 1 ≤ N ≤ 105\n- − 109 ≤ X1, Y1, X2, Y2 ≤ 109; X1 < X 2 e Y2 < Y 1",
+    "examples": [
+        {
+            "input": "4\n5 19 8 17\n5 15 15 5\n0 20 20 0\n8 10 10 8",
+            "output": "2"
+        },
+        {
+            "input": "1\n-10000000 10000000 10000000 -10000000",
+            "output": "1"
+        },
+        {
+            "input": "7\n50 80 90 75\n45 30 50 20\n5 98 6 97\n0 100 100 0\n20 60 98 5\n25 50 70 10\n30 45 65 15",
+            "output": "3"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "geometria",
+        "sweep-line",
+        "estruturas de dados"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 512
+}

@@ -1,0 +1,29 @@
+{
+    "title": "Volume da TV",
+    "statement": "Nome do arquivo fonte: volume.c, volume.cpp, volume.pas, volume.java, ou volume.py\nBruno é um menino que gosta muito de ver televisão. No entanto ele se depara com um problema\nmuito chato.\nSempre que começa um novo programa no canal preferido dele, a TV Nlogônia,\nacontece de o volume do som deste programa estar diferente do anterior, às vezes com volume\nmenor, outras vezes com volume maior. Quando está com volume menor, ele aumenta o volume\npressionando uma quantidade de vezes seguidas o botão de aumentar para o volume ficar ideal; a\nmesma coisa acontece quando está um volume maior, e ele diminui o volume pressionando alguma\nquantidade de vezes seguidas o botão de diminuir o volume para ficar com o volume que ele goste\nno momento.\nO aparelho de TV dele tem umas peculiaridades: ele possui volume mínimo, com valor 0 (também\nchamado de mudo), e volume máximo, com valor 100. A TV nunca ultrapassa os volumes máximo\ne mínimo. Por exemplo, se o volume já estiver no máximo e ele pressionar o botão de aumentar o\nsom, o volume não se altera. Da mesma forma, se o volume estiver no valor mínimo e ele pressionar\no botão de diminuir o som, o volume não se altera.\nAgora Bruno quer sua ajuda: ele lembra qual era o volume inicial da TV, e quantas vezes ele\npressionou cada botão. Mas, como foram várias mudanças de volume, ele não sabe qual é o volume\natual da TV. Por isso, pediu que você o ajude a calcular qual é o volume atual, dados o volume\ninicial e a lista de trocas de volume que ele realizou.",
+    "input": "A primeira linha da entrada contém dois números inteiros V e T, que indicam, respectivamente, o\nvolume inicial e o número de trocas de volume.\nA segunda linha contém T números inteiros Ai que mostram as modificações de volume realizadas, na\nordem em que estas modificações foram feitas. O primeiro número indica a primeira modificação de\nvolume, o segundo número indica a segunda modificação, e assim por diante. Para cada modificação,\num número maior do que zero significa quantas vezes Bruno pressionou o botão de aumentar o som;\num número menor do que zero significa quantas vezes ele pressionou o botão de diminuir o som. Ou\nseja, se o número é igual a 5, significa que nessa modificação ele pressionou cinco vezes o botão de\naumentar o som; se o número é igual a −3, significa que nessa modificação ele pressionou o botão\nde diminuir o som três vezes.",
+    "output": "Seu programa deve imprimir apenas uma linha, contendo apenas um inteiro F, que indica qual o\nvolume atual da TV após as mudanças de volume.",
+    "constraints": "- 0 ≤V ≤100\n- 0 ≤T ≤1000\n- Para cada variação de volume Ai, −100 ≤Ai ≤100\n- 3",
+    "examples": [
+        {
+            "input": "50 4\n11 20 -15 -13",
+            "output": "53"
+        },
+        {
+            "input": "50 5\n30 30 30 40 -78",
+            "output": "22"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

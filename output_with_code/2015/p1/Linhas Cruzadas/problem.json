@@ -1,0 +1,29 @@
+{
+    "title": "Linhas Cruzadas",
+    "statement": "Nome do arquivo: linhas.c, linhas.cpp, linhas.pas, linhas.java, linhas.js ou linhas.py\nUma das atividades de recreação preferidas de Letícia é compor desenhos com linhas coloridas\nesticadas entre preguinhos numa base de madeira. Quanto mais cruzamentos entre pares de linhas,\nmais interessante fica a figura. Neste problema temos N pregos na vertical e N pregos na horizontal,\ncomo na figura abaixo. Os pregos na vertical possuem uma numeração fixa, de 1 a N, de baixo para\ncima. Os pregos na horizontal também são numerados de 1 a N, mas a ordem pode ser qualquer\numa. Letícia vai sempre esticar uma linha entre cada par de pregos que tiverem o mesmo número.\nDada a ordem dos pregos horizontais, seu programa deve computar o número total de cruzamentos\nentre pares de linhas no desenho de Letícia. Por exemplo, os três desenhos da figura possuem,\nrespectivamente, 0, 6 e 15 cruzamentos.\n6\n1\n2\n3\n4\n5\n6\n1\n3\n4\n1\n2\n3\n4\n5\n6\n5\n6\n2\n6\n1\n5\n2\n4\n3\n1\n2\n3\n4\n5\n6\n1\n2\n3\n4\n5",
+    "input": "A primeira linha da entrada contém um número natural N. A segunda linha contém N números\nnaturais distintos de 1 a N, representando a ordem dos pregos na horizontal.",
+    "output": "Seu programa deve escrever uma linha na saída, contendo o número de cruzamentos entre pares de\nlinhas, conforme a descrição anterior.",
+    "constraints": "- 2 ≤N ≤60000",
+    "examples": [
+        {
+            "input": "6\n1 5 3 4 6 2",
+            "output": "6"
+        },
+        {
+            "input": "15\n5 8 15 12 2 1 9 7 4 11 14 10 3 6 13",
+            "output": "49"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2015",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

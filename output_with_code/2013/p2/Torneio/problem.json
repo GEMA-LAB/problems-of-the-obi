@@ -1,0 +1,29 @@
+{
+    "title": "Torneio",
+    "statement": "Nome do arquivo fonte: torneio.c, torneio.cpp, torneio.pas, torneio.java, ou torneio.py\nJuquinha foi convidado para participar do prestigiado torneio de tênis de Rolando Barros, na Nlogônia. O\ntorneio é composto de N rodadas no estilo mata-mata: todo jogador que perde uma partida é eliminado do\ntorneio, e o vencedor desta partida avança para a próxima rodada. Como o número de jogadores ativos cai\npela metade a cada rodada, é necessário que o número de jogadores participantes seja uma potência de 2.\n1\n2\n3\n4\n5\n6\n7\n8\nPrimeira\nrodada\nSegunda\nrodada\nTerceira\nrodada\n(final)\nVencedor\nOs jogadores são inicialmente dispostos na chave por sorteio. Em uma disposição é atribuido a cada jogador\num valor de 1 a 2N, que corresponde a sua posição na chave do torneio. Jogadores vencedores avançam para\na direita da chave, e disputam com o vencedor da sub-chave vizinha. Na imagem acima, caso os jogadores\ndas posições 1 e 3 vençam suas partidas na primeira rodada, estes se enfrentarão na segunda rodada.\nJuquinha não quer perder a chance de tornar-se um jogador mundialmente famoso, e para isso contratou\nvocê para ajudá-lo em suas análises estatísticas. Ele atribuiu a cada jogador um coeficiente de habilidade Hi,\ne sabe que se dois jogadores disputarem uma partida, aquele com maior coeficiente de habilidade certamente\nserá o vencedor. Seu papel é calcular quantas disposições iniciais dos jogadores forçam Juquinha perder na\nK-ésima rodada (ou vencer o torneio, caso K = N + 1). Duas disposições são consideradas distintas se para\nalgum jogador foi atribuido um valor diferente nas duas disposições.",
+    "input": "A primeira linha contém dois inteiros N e K. Cada uma das próximas 2N linhas seguintes contêm um único\ninteiro representando o coeficiente de habilidade de um jogador. O coeficiente de Juquinha é representado\npelo primeiro desses inteiros.",
+    "output": "Seu programa deve imprimir uma única linha contendo um único inteiro indicando o número de disposições\niniciais que forçam Juquinha a perder na K-ésima rodada (ou ganhar o torneio, se K = N + 1). Como este\nnúmero pode ser muito grande, imprima o resto que este número deixa quando dividido por 1.000.000.007\n(109 + 7).",
+    "constraints": "- 1 ≤N ≤16\n- 1 ≤K ≤N + 1\n- 0 ≤coeficiente de habilidade de um jogador ≤109\n- Não existem dois jogadores diferentes com a mesma habilidade.\n- 8",
+    "examples": [
+        {
+            "input": "2 2\n3\n4\n2\n1",
+            "output": "16"
+        },
+        {
+            "input": "1 2\n7\n5",
+            "output": "2"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

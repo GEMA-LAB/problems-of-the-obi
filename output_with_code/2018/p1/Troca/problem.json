@@ -1,0 +1,31 @@
+{
+    "title": "Troca",
+    "statement": "Nome do arquivo:“troca.x”,onde x deve ser c|cpp|pas|java|js|py2|py3\nUm cientista especializado em bioinformática está estudando formas de simular alguns fenômenos,\nque ocorrem dentro das células, relacionados ao funcionamento de proteínas. Parece muito compli-\ncado, não? Só que o problema computacional básico que ele precisa resolver eﬁcientemente é fácil\nde entender. Existe uma sequência de N cartas, indexadas de 1 a N, e cada carta contém dois\nnúmeros impressos, um de cada lado. As cartas são colocadas na mesa, na sequência, com um dos\nlados virado para cima. Dados dois inteirosi e j, comi≤ j, a operaçãotroca(i, j) consiste em virar\ntodas as cartas da posiçãoi até a posiçãoj, inclusive. Por exemplo, considere a sequência de cartas\nabaixo.\nvirado para cima 31 2 45 3 8 1 32 10 4 27 12 7 7 9 63 47\nvirado para baixo 1 12 6 4 97 2 87 10 3 9 55 56 11 90 3 8\nA operação detroca(5, 11) resultaria na seguinte sequência de cartas:\nvirado para cima 31 2 45 3 97 2 87 10 3 9 55 7 7 9 63 47\nvirado para baixo 1 12 6 4 8 1 32 10 4 27 12 56 11 90 3 8\nO problema do cientista é que a sequência de cartas pode ser muito grande e podem ser feitas muitas\noperações de troca. Ele precisa saber a sequência dos números que estarão virados para cima ao\nﬁnal de todas as operações. Você pode ajudá-lo?",
+    "input": "A primeira linha da entrada contém dois inteirosN e T, indicando respectivamente a quantidade\nde cartas e a quantidade de operações de troca. A segunda linha contémN inteiros, indicando os\nnúmeros virados para cima inicialmente. A terceira linha contémN números, indicando os virados\npara baixo inicialmente. AsT linhas seguintes contém, cada uma, dois inteirosI e J, indicando os\nlimites de uma operação de troca.",
+    "output": "Imprima uma linha contendoN inteiros representando os números que estarão virados para cima\napós todas as operações.",
+    "constraints": "- 1≤ N≤ 105\n- 1≤ T≤ 105\n- 1≤ I≤ J≤ N\n- O valor dos elementos dos vetores está entre0 e 109, inclusive.",
+    "examples": [
+        {
+            "input": "16 1\n31 2 45 3 8 1 32 10 4 27 12 7 7 9 63 47\n1 12 6 4 97 2 87 10 3 9 55 56 11 90 3 8\n5 11",
+            "output": "31 2 45 3 97 2 87 10 3 9 55 7 7 9 63 47"
+        },
+        {
+            "input": "10 5\n7 88 23 44 1 67 73 2 9 11\n4 55 1 1 3 74 82 9 8 37\n1 3\n5 10\n2 6\n5 9\n1 7",
+            "output": "7 55 1 44 1 67 82 2 9 37"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "p1",
+    "period": "Fase 3",
+    "topics": [
+        "vetores",
+        "prefix sum",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

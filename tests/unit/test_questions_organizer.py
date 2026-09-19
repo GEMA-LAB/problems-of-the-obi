@@ -121,7 +121,7 @@ def test_organize_question_idempotence(tmp_path):
     assert result.status == "ignorado_idempotente"
 
 
-def test_organize_question_without_tests_removed(tmp_path):
+def test_organize_question_without_tests_kept(tmp_path):
     output_dir = tmp_path / "output_with_code"
     q_path = output_dir / "2023" / "pj" / "SemTestes"
     q_path.mkdir(parents=True)
@@ -143,8 +143,9 @@ def test_organize_question_without_tests_removed(tmp_path):
     )
 
     result = organizer.organize_question(q_folder, config)
-    assert result.status == "removido_sem_testes"
-    assert not q_path.exists()
+    assert result.status == "sem_testes"
+    assert q_path.exists()
+    assert (q_path / "problem.json").exists()
 
 
 def test_organize_all_summary(tmp_path):
@@ -179,9 +180,11 @@ def test_organize_all_summary(tmp_path):
 
     assert stats["total_encontradas"] == 2
     assert stats["sucesso"] == 1
+    assert stats["sem_testes"] == 1
     assert stats["removidas_sem_testes"] == 1
     assert stats["total_testes"] == 1
     assert stats["total_solucoes"] == 1
-    assert not q2_path.exists()
+    assert q2_path.exists()
     assert q1_path.exists()
+
 

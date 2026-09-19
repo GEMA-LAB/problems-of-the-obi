@@ -1,0 +1,25 @@
+{
+    "title": "Meteoros",
+    "statement": "Arquivo fonte: meteoro.c, meteoro.cc, meteoro.cpp ou meteoro.pas\nEm noites sem nuvens pode-se muitas vezes observar pontos brilhantes no céu que se deslocam\ncom grande velocidade, e em poucos segundos desaparecem de vista: são as chamadas estrelas\ncadentes, ou meteoros. Meteoros são na verdade partículas de poeira de pequenas dimensões que,\nao penetrar na atmosfera terrestre, queimam-se rapidamente (normalmente a uma altura entre 60 e\n120 quilômetros). Se os meteoros são suficientemente grandes, podem não queimar-se completa-\nmente na atmosfera e dessa forma atingem a superfície terrestre: nesse caso são chamados de\nmeteoritos.\nZé Felício é um fazendeiro que adora astronomia e descobriu um portal na Internet que fornece\numa lista das posições onde caíram meteoritos. Com base nessa lista, e conhecendo a localização\nde sua fazenda, Zé Felício deseja saber quantos meteoritos caíram dentro de sua propriedade. Ele\nprecisa de sua ajuda para escrever um programa de computador que faça essa verificação automa-\nticamente.\n1. Tarefa\nSão dados:\n•\numa lista de pontos no plano cartesiano, onde cada ponto corresponde à posição onde caiu um \nmeteorito;\n•\nas coordenadas de um retângulo que delimita uma fazenda.\nAs linhas que delimitam a fazenda são paralelas aos eixos cartesianos. Sua tarefa é escrever um\nprograma que determine quantos meteoritos caíram dentro da fazenda (incluindo meteoritos que\ncaíram exatamente sobre as linhas que delimitam a fazenda).",
+    "input": "Seu programa deve ler vários conjuntos de testes. A primeira linha de um conjunto de testes qua-\ntro números inteiros X1, Y1, X2 e Y2, onde (X1, Y1) é a coordenada do canto superior esquerdo e\n(X2, Y2) é a coordenada do canto inferior direito do retângulo que delimita a fazenda. A segunda\nlinha contém um inteiro, N, que indica o número de meteoritos. Seguem-se N linhas, cada uma\ncontendo dois números inteiros X e Y, correspondendo às coordenadas de cada meteorito. O final\nda entrada é indicado por X1 = Y1 = X2 =Y2 = 0.\n\n3\nExemplo de Entrada\n2 4 5 1\n2\n1 2\n3 3\n2 4 3 2\n3\n1 1\n2 2\n3 3\n0 0 0 0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "2 4 5 1\n2\n1 2\n3 3\n2 4 3 2\n3\n1 1\n2 2\n3 3\n0 0 0 0\n3. Saída\nPara cada conjunto de teste da entrada seu programa deve produzir três linhas na saída. A primeira\nlinha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é numerado\na partir de 1. A segunda linha deve conter o número de meteoritos que caíram dentro da fazenda.\nA terceira linha deve ser deixada em branco. A grafia mostrada no Exemplo de Saída, abaixo,\ndeve ser seguida rigorosamente.",
+            "output": "Teste 1\n1\nTeste 2\n2\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2001",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

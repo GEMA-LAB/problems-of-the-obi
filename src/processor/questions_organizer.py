@@ -45,6 +45,11 @@ class QuestionsOrganizer:
         if not output_dir.exists():
             return []
 
+        # Saneamento preventivo de pastas legadas orfas em output_dir
+        cadernos_dir = Path("cadernos")
+        if cadernos_dir.exists():
+            self.cleaner.migrate_legacy_directories(output_dir, cadernos_dir)
+
         questions: List[QuestionFolder] = []
 
         for json_file in output_dir.rglob("problem.json"):
@@ -84,6 +89,9 @@ class QuestionsOrganizer:
                         nivel = part_lower
                         break
 
+            level_map = {"n1": "p1", "n2": "p2", "nivel1": "p1", "nivel2": "p2"}
+            nivel = level_map.get(nivel, nivel)
+
             ano = ano or 2024
             nivel = nivel or "geral"
 
@@ -118,7 +126,7 @@ class QuestionsOrganizer:
         3. Normaliza pares sequenciais 1-para-1 em inputs/ e outputs/.
         4. Limpa residuos compilados e lixo em test_cases/.
         5. Copia e/ou extrai solucoes oficiais para solutions/.
-        6. Se nao possuir testes validos, expurga a pasta da questao.
+        6. Se nao possuir testes validos, preserva a questao e marca status='sem_testes'.
         """
         self.matcher.gabaritos_dir = config.pasta_gabaritos
         self.matcher.codigo_dir = config.pasta_codigo
@@ -127,18 +135,50 @@ class QuestionsOrganizer:
         inputs_dir = test_cases_dir / "inputs"
 
 
-        # 1. Verificacao de Idempotencia (Regra R3)
+        # 1. Verificacao de Idempotencia de Testes (Regra R3)
+        testes_ja_normalizados = False
         if not config.force and inputs_dir.exists():
             existing_inputs = list(inputs_dir.glob("*.in"))
             if len(existing_inputs) > 0:
+                testes_ja_normalizados = True
                 # Garante que arquivos soltos na raiz de test_cases/ sejam limpos
                 for item in list(test_cases_dir.iterdir()):
                     if item.is_file():
                         item.unlink(missing_ok=True)
+                
+                # Verifica se solutions/ ja existe e possui arquivos
+                solutions_dir = question.path / "solutions"
+                has_solutions = solutions_dir.exists() and any(solutions_dir.iterdir())
+                
+                # Se ja tem testes e ja tem solucoes, retorna imediatamente como ignorado_idempotente
+                if has_solutions:
+                    return OrganizeResult(
+                        questao=question.titulo,
+                        status="ignorado_idempotente",
+                        mensagem="Testes e solucoes ja existentes (force=False)",
+                    )
+                
+                # Se tem testes mas nao tem solucoes, tenta sincronizar solucoes oficiais
+                solutions = self.matcher.find_solutions(question)
+                solutions_count = 0
+                if solutions:
+                    solutions_dir.mkdir(parents=True, exist_ok=True)
+                    for sol in solutions:
+                        if sol.path_arquivo.suffix.lower() == ".zip":
+                            extracted = self.zip_extractor.extract_solutions(
+                                sol.path_arquivo, solutions_dir
+                            )
+                            solutions_count += len(extracted)
+                        else:
+                            dest_file = solutions_dir / sol.path_arquivo.name
+                            shutil.copy2(sol.path_arquivo, dest_file)
+                            solutions_count += 1
+
                 return OrganizeResult(
                     questao=question.titulo,
+                    solutions_count=solutions_count,
                     status="ignorado_idempotente",
-                    mensagem="Testes ja normalizados existentes (force=False)",
+                    mensagem="Testes existentes preservados; solucoes sincronizadas" if solutions_count > 0 else "Testes ja normalizados existentes (force=False)",
                 )
 
         # 2. Localizacao de gabarito
@@ -189,16 +229,16 @@ class QuestionsOrganizer:
                     shutil.copy2(sol.path_arquivo, dest_file)
                     solutions_count += 1
 
-        # 4. Validacao e Expurgo Final (Regras R7, I1, I4)
-        kept = self.cleaner.validate_and_cleanup_question(
+        # 4. Validacao Final de Casos de Teste (Regras R7, I1, I4)
+        has_tests = self.cleaner.validate_and_cleanup_question(
             question.path, normalized_pairs
         )
 
-        if not kept:
+        if not has_tests:
             return OrganizeResult(
                 questao=question.titulo,
-                status="removido_sem_testes",
-                mensagem="Questao removida por ausencia de casos de teste validos",
+                status="sem_testes",
+                mensagem="Questao mantida sem casos de teste validos",
             )
 
         status = "sucesso" if solutions_count > 0 else "parcial"
@@ -231,6 +271,7 @@ class QuestionsOrganizer:
             "sucesso": 0,
             "parcial": 0,
             "ignoradas_idempotentes": 0,
+            "sem_testes": 0,
             "removidas_sem_testes": 0,
             "total_testes": 0,
             "total_solucoes": 0,
@@ -244,7 +285,8 @@ class QuestionsOrganizer:
                 stats["parcial"] += 1
             elif result.status == "ignorado_idempotente":
                 stats["ignoradas_idempotentes"] += 1
-            elif result.status == "removido_sem_testes":
+            elif result.status in ("sem_testes", "removido_sem_testes"):
+                stats["sem_testes"] += 1
                 stats["removidas_sem_testes"] += 1
 
             stats["total_testes"] += len(result.test_pairs)

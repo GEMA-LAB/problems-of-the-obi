@@ -1,0 +1,39 @@
+{
+    "title": "Forja de ORicalco",
+    "statement": "O arqueólogo Jonas finalmente chegou no local marcado com um X, o grande vulcão ORiginário, responsável pela formação das ilhas do Arquipélago da Nlogônia. Como Jonas aprendeu o idioma local, ele conseguiu ler uma anotação de seu mapa, que contava a lenda do ORicalco, uma liga metálica muito valiosa antigamente produzida no vulcão. Nos tempos antigos, esse metal gerou riqueza e prosperidade, mas também trouxe guerras e destruição para a região. A lenda também mencionava algo tipo de maldição do lugar, mas o arqueólogo estava mais interessado na parte que explicava a confecção do ORicalco.\nJonas descobriu que existe uma forja secreta dentro do vulcão e que, para criar ORicalco, é necessário fundir diversas pepitas de metal nela. Para isso, o arqueólogo deve posicionar em linha os N metais que utiliza no processo, os quais tem graus de impureza a_1, a_2, ..., a_N. Em seguida, ele pode escolher uma sequência de exatamente K pepitas consecutivas, fundi-las em um único metal e colocá-lo de volta na mesma posição da linha em que as K originais estavam. Esse processo pode ser repetido quando existem ao menos K pepitas na forja.\nA lenda explica que, ao fundir as pepitas i, i+1, ..., i+K-1, o metal resultante tem impureza a_i | a_{i+1} | ... | a_{i+K-1}, em que | representa a operação binária OR. Esta operação é realizada em cada bit da seguinte maneira (sendo x e y dois bits):\n- 0 | 0 = 0\n- 0 | 1 = 1\n- 1 | 0 = 1\n- 1 | 1 = 1\nOu seja, o bit resultante da operação OR será 0 apenas quando os dois bits forem 0; senão, será 1.\nPor exemplo, se K = 2, a_1 = 10 e a_2 = 12, a forja criaria uma pepita de impureza a_1 | a_2 = 10 | 12 = 1010_2 | 1100_2 = 1110_2 = 14.\nVale ressaltar que, nas linguagens de programação, o operador OR binário é simplesmente |, portanto, sendo a e b inteiros, a | b é o resultado do OR binário entre eles.\nJonas pode fundir os metais quantas vezes quiser (inclusive, nenhuma vez) e, por fim, deve reunir todas as pepitas restantes e compactá-las, formando uma barra de ORicalco. O grau de impureza do ORicalco equivale à soma das impurezas das pepitas que restarem na forja.\nO arqueólogo deseja produzir o metal de menor impureza possível, porém não é muito bom em operações binárias. Por isso, dadas as quantidades N e K, bem como as impurezas a_1, a_2, ..., a_N dos metais, ajude Jonas a calcular a menor impureza possível da barra de ORicalco. Note que os metais já estão fixados na forja e não podem ser trocados de lugar.",
+    "input": "A primeira linha da entrada contém dois inteiros, N e K, que indicam o número de metais e o tamanho dos conjuntos que podem ser fundidos.\nA segunda linha da entrada contém N inteiros, a_1, a_2, ..., a_N, que representam as impurezas dos metais, na ordem em que estão dispostos na forja.",
+    "output": "A saída deve conter uma única linha contendo um inteiro, a menor impureza de ORicalco que Jonas consegue atingir.",
+    "constraints": "- 1 <= N <= 100000.\n- 2 <= K <= 100000.\n- 0 <= a_i < 2^30, para todo 1 <= i <= N.\nPara competidores que utilizam C++ ou Java: Observe que alguns valores na saída podem ser muito grandes para caberem em um inteiro de 32 bits. É recomendado o uso de inteiros de 64 bits (long long em C++; long em Java). (Competidores usando Python ou JavaScript podem ignorar este aviso.)",
+    "examples": [
+        {
+            "input": "5 2\n16 10 6 1 1",
+            "output": "31"
+        },
+        {
+            "input": "8 3\n6 2 1 2 2 4 1 5",
+            "output": "12"
+        },
+        {
+            "input": "11 5\n136 896 777 130 128 0 128 960 65 655 524",
+            "output": "1635"
+        },
+        {
+            "input": "11 4\n2 0 2 0 1 1 2 1 3 0 3",
+            "output": "5"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2025",
+    "level": "p2",
+    "period": "Fase 3",
+    "topics": [
+        "array",
+        "bitwise",
+        "programação dinâmica"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 512
+}

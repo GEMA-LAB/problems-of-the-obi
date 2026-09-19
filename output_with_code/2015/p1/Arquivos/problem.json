@@ -1,0 +1,29 @@
+{
+    "title": "Arquivos",
+    "statement": "Arquivos\nNome do arquivo: arquivos.c, arquivos.cpp, arquivos.pas, arquivos.java, arquivos.js ou\narquivos.py\nAldo tem N arquivos em seu computador, cada um com um tamanho em bytes. Ele quer dividir\nestes arquivos em pastas, porém o sistema do computador é velho e só aceita pastas com as duas\nseguintes limitações:\n• Uma pasta pode ter no máximo dois arquivos\n• A soma dos tamanhos dos arquivos na pasta não pode exceder B bytes\nComo ele tem muitos arquivos ele prefere não criar muitas pastas. Dado o tamanho dos arquivos,\ncalcule o número mínimo possível de pastas.\nVamos supor um exemplo que temos os arquivos de tamanho 1, 2 e 3, e que o limite de bytes seja\n3. A solução é colocar os dois primeiros arquivos juntos, totalizando apenas 2 pastas.",
+    "input": "A entrada consiste de duas linhas. A primeira linha contém os números inteiros N e B. A segunda\nlinha contém N inteiros indicando o tamanho de cada arquivo.",
+    "output": "Seu programa deve escrever uma única linha na saída, contendo um único número inteiro, a quan-\ntidade mínima possível de pastas.",
+    "constraints": "- 1 ≤N ≤105\n- 1 ≤B ≤109\n- Os arquivos terão tamanho entre 1 e B, inclusive",
+    "examples": [
+        {
+            "input": "3 3\n1 2 3",
+            "output": "2"
+        },
+        {
+            "input": "5 4\n4 3 1 2 2",
+            "output": "3"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2015",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

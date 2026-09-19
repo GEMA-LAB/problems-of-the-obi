@@ -1,0 +1,33 @@
+{
+    "title": "Pastas",
+    "statement": "Nome do arquivo fonte: pastas.c, pastas.cpp, ou pastas.pas\nEstela é uma secretária dedicada da OBI (Organização Burocrática Internacional), um megaconglomerado\nempresarial voltado a criação de documentos e preenchimento de formulários. Todo dia ela recebe milhares de\npastas suspensas e seu objetivo é organizá-las de uma forma que seja simples recuperar uma pasta do arquivo.\nCada pasta possui uma pequena aba, que fica anexada à pasta e é visível quando a pasta está suspensa\nem seu arquivo. Todo funcionário fixa a aba em uma das posições especificadas pelo manual de fixação de\nabas, embora ele possa escolher, ao acaso, qualquer uma das posições descritas no manual. Tais posições são\nnumeradas de 1 até P.\nEstela notou que fica consideravelmente mais fácil encontrar as pastas se elas forem arquivadas da seguinte\nforma: primeiro uma pasta com aba na posição 1, depois uma com aba na posição 2, e assim sucessivamente,\naté que uma pasta com aba na posição P seja arquivada. Logo após, repete-se o processo, arquivando uma\npasta com aba na posição 1. Para Estela, um conjunto de pastas é arquivado de forma perfeita se todas as\npastas desse conjunto forem arquivadas da forma descrita anteriormente, ou seja:\n• Imediatamente após toda pasta com aba na posição I, I < P, existe uma pasta com aba na posição I + 1\nou não há nenhuma pasta.\n• Imediatamente após toda pasta com aba na posição P, existe uma pasta com aba na posição 1 ou não há\nnenhuma pasta.\n• Todas as pastas do conjunto são armazenadas.\nTarefa\nDado um conjunto de pastas e a posição de suas abas, determinar se é possível arquivar esse conjunto de pastas\nde forma perfeita.",
+    "input": "A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente\no teclado). A primeira linha da entrada contém dois inteiros P e N que indicam, respectivamente, o número\nde posições possíveis para se colar as abas (1 ≤P ≤1.000) o número pastas a serem armazenadas (1 ≤N ≤\n1.000.000). As N linhas seguintes contém um inteiro I (1 ≤I ≤P) cada representando a posição onde a aba\nda I-ésima pasta foi colada.",
+    "output": "Seu programa deve imprimir, na saída padrão, uma única linha, contendo a letra S se for possível fazer um\narquivamento perfeito ou N caso contrário\n\n6\nEntrada\n2 2\n1\n2\nSaída\nS\nEntrada\n3 6\n1\n2\n3\n1\n2\n1\nSaída\nN\nEntrada\n4 7\n1\n1\n2\n2\n3\n3\n4\nSaída\nS",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "2 2\n1\n2",
+            "output": "S"
+        },
+        {
+            "input": "3 6\n1\n2\n3\n1\n2\n1",
+            "output": "N"
+        },
+        {
+            "input": "4 7\n1\n1\n2\n2\n3\n3\n4",
+            "output": "S"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2007",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

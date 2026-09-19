@@ -1,0 +1,34 @@
+{
+    "title": "Multiplicação de matrizes",
+    "statement": "Nome do arquivo fonte: matrizes.c, matrizes.cpp, ou matrizes.pas\nO conglomerado indiano Tutu é um conjunto de empresas que atua nos mais diversos ramos da indústria,\nproduzindo desde sapatos até aviões e foguetes. Por ser tão diversificada, precisa de grandes e rápidos sistemas\npara cálculos de contabilidade.\nUm dos módulos mais importantes desse sistema é o de fornecimento de produtos, onde fica a base de dados de\nprodutos e fornecedores. Um mesmo produto pode ser fornecido por vários fornecedores diferentes.\nO sistema possui duas grandes matrizes: a matriz A, onde cada linha representa um produto e cada coluna\nrepresenta um fornecedor. O valor da matriz na linha m e coluna n representa o preço do produto m se for\ncomprado do fornecedor n.\nA outra grande matriz é a B, onde cada linha representa um dia do mês e cada coluna é um produto. O valor\nda matriz na linha m e coluna n representa a quantidade do produto n a ser adquirido no dia m.\nTal empresa tem uma política de fidelidade com seus fornecedores, e uma das práticas efetuadas pela empresa\né, em um determinado dia, comprar todos os produtos necessários de um único fornecedor. Isto é, em um dia\ntodos os produtos adquiridos serao comprados do fornecedor x, no outro dia do fornecedor y, e assim por diante.\nPara auxiliar a escolha de qual fornecedor será o escolhido no dia, foi gerada outra matriz C, que é o resultado\nda multiplicação das matrizes A × B. Essa matriz diz o quanto será gasto pela empresa se adquirir todos os\nprodutos de um determinado fornecedor em um determinado dia.\nAs matrizes A e B são quadradas (o número de linhas é igual ao número de colunas) e têm valores definidos\npelas fórmulas\nAij = (P × i + Q × j)\n(mod X)\nBij = (R × i + S × j)\n(mod Y )\nonde i é o índice da linha da matriz e j é o índice da coluna da matriz (todos os índices vão de 1 até N). Os\ninteiros P, Q, R, S, X e Y são parâmetros constantes, que definem as duas matrizes A e B.\nTarefa\nEscreva um programa que, dados os parâmetros das matrizes A e B, e a posição de uma das entradas as matriz\nC, calcula o valor daquela entrada.",
+    "input": "A primeira linha da entrada contém um inteiro N, indicando as dimensões das matrizes A, B e C (2 ≤N ≤\n105). A linha seguinte contém seis inteiros P, Q, R, S, X e Y , indicando os parâmetros das matrizes A e B\n(2 ≤X, Y ≤104; 0 ≤P, Q < X; 0 ≤R, S < Y ). Finalmente, a última linha da entrada contém dois inteiros I\ne J, indicando a linha e a coluna da matriz C a serem consultados (1 ≤I, J ≤N).",
+    "output": "Seu programa deve imprimir uma única linha contendo o valor da matriz C na linha e coluna especificadas.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "3\n4 3 2 3 5 6\n2 2",
+            "output": "18"
+        },
+        {
+            "input": "4\n3 5 1 0 6 7\n4 3",
+            "output": "30"
+        },
+        {
+            "input": "2\n2 2 0 1 3 2\n2 1",
+            "output": "2"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2010",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "matrizes",
+        "simulação"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,33 @@
+{
+    "title": "Direção",
+    "statement": "Nome do arquivo: direcao.c, direcao.cpp, direcao.pas, direcao.java, direcao.js,\ndirecao.py2 ou direcao.py3\nSeu amigo está perdido no deserto e precisa encontrar um oásis. Você sabe que seu amigo está, no\nmomento, virado para um dos pontos cardeais (norte, sul, leste, oeste). Você também sabe que o\noásis mais próximo está em uma dessas quatro direções. Dadas essas duas informações, você deve\ndizer qual o menor ângulo, em graus, que seu amigo deverá virar para ir na direção do oásis mais\npróximo.",
+    "input": "A entrada contém duas strings, A e B, a direção para onde seu amigo está virado originalmente e\na direção do oásis, respectivamente.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, o menor ângulo que seu\namigo deve virar para continuar na direção correta para o oásis.",
+    "constraints": "- Os valores possíveis para A e B são { norte, leste, oeste, sul }.",
+    "examples": [
+        {
+            "input": "norte sul",
+            "output": "180"
+        },
+        {
+            "input": "oeste sul",
+            "output": "90"
+        },
+        {
+            "input": "leste leste",
+            "output": "0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2016",
+    "level": "senior",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

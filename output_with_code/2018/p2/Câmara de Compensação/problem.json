@@ -1,0 +1,34 @@
+{
+    "title": "Câmara de Compensação",
+    "statement": "Nome do arquivo:“compensacao.x”,onde x deve ser cpp, pas, java, js, py2 ou py3\nEm uma cidade, muitas pessoas emprestam dinheiro para outras pessoas. A coisa chegou a um tal\nponto que tem gente que é ao mesmo tempo devedor e credor. As pessoas resolveram então pagar\nsuas dívidas e cada uma emitiu os cheques para pagar suas dívidas. Por exemplo, na ﬁgura, item (a),\na pessoa C emitiu um cheque de 5 dinheiros para a pessoaA, e a pessoaD emitiu um cheque de\n3 dinheiros para a pessoaC. Ou seja, a pessoaC recebeu da pessoa D e pagou a pessoaA. Pior\nainda, existe um ciclo vicioso, em que a pessoaD emitiu um cheque de 3 dinheiros para a pessoaC,\nque por sua vez emitiu um cheque de 2 dinheiros para a pessoaB, que por sua vez emitiu um\ncheque de 1 dinheiro para a pessoaD. A situação mostrada no item (a) da Figura abaixo é descrita\natravés de umalista de cheques, com quatro triplas da forma(X, V, Y ), para indicar queX emitiu\num cheque deV dinheiros para Y. Na mesma Figura, no item (b), a situação é descrita com uma\nlista de apenas três cheques.\n5 3 2\n2\n1\n1\n3\n(a) (b)\nDC\nA B\nD\nBA\nC\nEntretanto, as duas listas são equivalentes: o saldo na conta bancária de uma pessoa é o mesmo em\nambas as listas de cheques. Em ambos os casos, completada a compensação de todos os cheques,\na pessoa A terminará com 5 dinheiros a mais na sua conta, a pessoaB terminará com 1 dinheiro\na mais na sua conta, a pessoaC terminará com 4 dinheiros a menos na sua conta e a pessoaD\nterminará com 2 dinheiros a menos na sua conta.\nVamos então deﬁnir equivalência de listas de cheques emitidos: duas listas de cheques sãoequivalen-\ntes se, ao ﬁnal do processo de compensação de todos os cheques, o seguinte vale para cada pessoa:\nseu saldo bancário ao ﬁnal da compensação de uma lista é o mesmo que o saldo bancário da pessoa\nao ﬁnal da compensação da outra lista.\nO total de valores compensados no item (a) da ﬁgura é igual a 11 dinheiros ao passo que no item (b)\no total é de apenas 6 dinheiros!\nEste problema tem duas subtarefas:\n• Subtarefa A: determinar, dada uma lista de cheques, se é possível ou não diminuir o total de\nvalores compensados utilizando uma outra lista de cheques equivalente.\n• Subtarefa B: determinar o total mínimo de valores compensados em uma lista de cheques\nequivalente.\nVocê deve escrever um programa que resolva apenas a Subtarefa A ou que resolva as duas subtarefas.",
+    "input": "A primeira linha contém dois inteiros,M e N, onde M é o número de cheques emitidos eN é o\nnúmero de habitantes da cidade. Os habitantes são identiﬁcados por números inteiros de 1 aN.\nCada uma das M linhas seguintes descreve um cheque da lista e contém três inteirosX, V e Y,\nque indica queX emitiu um cheque deV dinheiros a favor deY. É possível que haja mais de um\ncheque de X a Y. Também é possivel que haja cheques deX a Y e de Y a X, mas não deX a X.",
+    "output": "Seu programa deve produzir duas linhas na saída. A primeira linha descreve a resposta para a\nSubtarefa A e deve conter um único caractere. O caractere deve serS para indicar que é possível\ndiminuir o total dos cheques compensados com uma lista de cheques equivalente, ouN para indicar\nque não é possível diminuir o total de cheques compensados.\nSe o seu programa resolve também a Subtarefa B, a segunda linha descreve a resposta para essa\nsubtarefa e deve conter um número inteiro, o valor mínimo do total de cheques compensados, em\numa lista equivalente. Se o seu programa não resolve a Subtarefa B, você pode deixar a linha em\nbranco ou colocar um valor inteiro arbitrário.",
+    "constraints": "- 1≤ M≤ 106\n- 2≤ N≤ 103\n- 1≤ X≤ N, 1≤ Y ≤ N, X⁄= Y\n- 1≤ V ≤ 102",
+    "examples": [
+        {
+            "input": "4 4\n2 1 4\n3 5 1\n3 2 2\n4 3 3",
+            "output": "S\n6"
+        },
+        {
+            "input": "5 4\n4 50 3\n2 25 1\n3 10 2\n2 100 1\n4 50 3",
+            "output": "S\n215"
+        },
+        {
+            "input": "4 4\n3 10 1\n2 40 1\n2 30 4\n2 20 4",
+            "output": "N\n100"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "grafos",
+        "ad-hoc"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 256
+}

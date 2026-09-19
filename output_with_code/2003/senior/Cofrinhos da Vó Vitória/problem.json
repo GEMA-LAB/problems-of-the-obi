@@ -1,0 +1,25 @@
+{
+    "title": "Cofrinhos da Vó Vitória",
+    "statement": "Arquivo fonte: cofre.c, cofre.cc, cofre.cpp ou cofre.pas\nVó Vitória mantém, desde o nascimento dos netos Joãozinho e Zezinho, um ritual que faz a ale-\ngria dos meninos. Ela guarda todas as moedas recebidas como troco em dois pequenos cofrinhos,\num para cada neto. Quando um dos cofrinhos fica cheio, ela chama os dois netos para um alegre\nalmoço, ao final do qual entrega aos garotos as moedas guardadas nos cofrinhos de cada um.\nEla sempre foi muito zelosa quanto à distribuição igualitária do troco arrecadado. Quando, por\nforça do valor das moedas, ela não consegue depositar a mesma quantia nos dois cofrinhos, ela\nmemoriza a diferença de forma a compensá-la no próximo depósito.\n1. Tarefa\nVó Vitória está ficando velha e tem medo que deslizes de memória a façam cometer injustiças\ncom os netos, deixando de compensar as diferenças entre os cofrinhos. Sua tarefa é ajudar Vó\nVitória, escrevendo um programa de computador que indique as diferenças entre os depósitos, de\nforma que ela não tenha que preocupar-se em memorizá-las.",
+    "input": "A entrada é composta de vários conjuntos de teste. A primeira linha de um conjunto de teste con-\ntém um número inteiro N, que indica o número de depósitos nos cofrinhos. As N linhas seguintes\ndescrevem cada uma um depósito nos cofrinhos; o depósito é indicado por dois valores inteiros J\ne Z, separados por um espaço em branco, representando respectivamente os valores, em centavos,\ndepositados nos cofres de Joãozinho e Zezinho. O final da entrada é indicado por N = 0.\nExemplo de Entrada\n3\n20 25\n10 5\n10 10\n4\n0 5\n12 0\n0 20\n17 1\n0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "20 25\n10 5\n10 10\n4\n0 5\n12 0\n0 20\n17 1\n0\n3. Saída\nPara cada conjunto de teste da entrada seu programa deve produzir um conjunto de linhas na\nsaída. A primeira linha deve conter um identificador do conjunto de teste, no formato “Teste n”,\nonde n é numerado seqüencialmente a partir de 1. A seguir seu programa deve escrever uma linha\npara cada depósito do conjunto de testes. Cada linha deve conter um inteiro que representa a dife-\nrença (em centavos) entre o valor depositado nos cofrinhos do Joãozinho e do Zezinho. Deixe\numa linha em branco ao final de cada conjunto de teste. A grafia mostrada no Exemplo de Saída,\nabaixo, deve ser seguida rigorosamente.\n\nOBI2003 - página 3",
+            "output": "Teste 1\n-5\n0\n0\nTeste 2\n-5\n7\n-13\n3\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2003",
+    "level": "senior",
+    "period": "Fase Única",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,34 @@
+{
+    "title": "Quadrado Mágico",
+    "statement": "Nome do arquivo fonte: magico.c, magico.cpp, magico.pas, magico.java, ou magico.py\nArnaldo e Bernardo são dois garotos que compartilham um peculiar gosto por curiosidades matemáticas. Nos\núltimos tempos, sua principal diversão tem sido investigar propriedades matemágicas de tabuleiros quadrados\npreenchidos com inteiros. Recentemente, durante uma aula de matemática, os dois desafiaram os outros alunos\nda classe a criar quadrados mágicos, que são quadrados preenchidos com números de 1 a N 2, de tal forma que a\nsoma dos N números em uma linha, coluna ou diagonal principal do quadrado tenham sempre o mesmo valor.\nA ordem de um quadrado mágico é o seu número de linhas, e o valor do quadrado mágico é o resultado da soma\nde uma linha. Um exemplo de quadrado mágico de ordem 3 e valor 15 é mostrado na figura abaixo:\n2\n7\n6\n9\n5\n1\n4\n3\n8\nPara surpresa de Arnaldo e Bernardo, os outros alunos criaram um grande número de quadrados, alguns enormes,\ne alegaram que todos eram quadrados mágicos. Arnaldo e Bernardo agora precisam de sua ajuda, para verificar\nse os quadrados criados são realmente mágicos.\nVocê deve escrever um programa que, dado um quadrado, verifique se ele é realmente mágico.",
+    "input": "A primeira linha da entrada contém um único número inteiro N, indicando a ordem do quadrado (seu número\nde linhas). As N linhas seguintes descrevem o quadrado. Cada uma dessas linhas contém N números inteiros\nseparados por um espaço em branco.",
+    "output": "Seu programa deve imprimir uma única linha. Caso o quadrado seja mágico, a linha deve conter o valor do\nquadrado (ou seja, a soma de uma de suas linhas). Caso contrário, a linha deve conter o número 0.",
+    "constraints": "- 3 ≤N ≤1000.\n- 1 ≤valor de cada célula ≤109.",
+    "examples": [
+        {
+            "input": "3\n1 1 1\n1 1 1\n1 1 1",
+            "output": "0"
+        },
+        {
+            "input": "4\n16 3 2 13\n5 10 11 8\n9 6 7 12\n4 15 14 1",
+            "output": "34"
+        },
+        {
+            "input": "3\n4 8 9\n11 7 3\n6 5 10",
+            "output": "0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2011",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "matrizes",
+        "simulação"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

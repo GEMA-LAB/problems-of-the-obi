@@ -1,0 +1,25 @@
+{
+    "title": "Orkut",
+    "statement": "Arquivo fonte: orkut.c, orkut.cc, orkut.cpp ou orkut.pas\nLarissa acaba de entrar para o Orkut, um site na internet que permite que as pessoas se reúnam em\ncomunidades e grupos de amigos. Como ela acabou de se registrar, ela ainda não possui muitos\namigos na sua lista de contatos. Após fazer uma pesquisa, ela descobriu que os seus antigos ami-\ngos de escola (que adoravam mexer com computadores) também fazem parte do Orkut. Larissa\nentão decidiu chamá-los para serem seus amigos virtuais. Porém, eles resolveram brincar com a\nLarissa, e cada um deles só vai aceitar o pedido de Larissa quando ela já for amiga virtual de\nalguns dos outros amigos do grupo. Assim, para conseguir ter todos os seus antigos amigos de\nescola na sua lista de amigos do Orkut, ela deve cumprir as exigências de cada um deles.\n1. Tarefa\nLarissa acha que pode encontrar uma seqüência de nomes dos amigos, de modo que se ela pedir a\ncada um deles para ser sua amiga no Orkut, obedecendo a seqüência, todas as exigências serão\ncumpridas e todos eles irão aceitar o seu pedido. Larissa precisa da sua ajuda para resolver esse\nproblema de forma rápida. A sua tarefa é escrever um programa para encontrar uma seqüência de\nnomes que resolva o problema, ou dizer que não é possível encontrar tal seqüência.",
+    "input": "A entrada é composta de vários conjuntos de teste. A primeira linha de um conjunto de teste con-\ntém um inteiro N que indica o número de antigos amigos da Larissa (1 ≤ N ≤ 30). A linha seguinte\nirá conter N nomes de amigos, separados por espaço em branco. Cada nome não terá mais de 15\nletras, e serão todos distintos. Nas próximas N linhas serão indicadas as exigências que a Larissa\ndeve cumprir. Cada linha descreve a exigência de um amigo e começará com o nome desse amigo,\nseguido de um número M (0 ≤ M ≤ N–1), que indica o número de pessoas que aquele amigo quer\nque a Larissa seja amiga antes, e seguido pelos M nomes de amigos (cada item na linha separado\npor espaço em branco). O final da entrada é indicado por N = 0.\nExemplo de Entrada\n5\nJoao Maria Tadeu Jose Ricardo\nJoao 2 Maria Ricardo\nMaria 1 Tadeu\nJose 1 Joao\nTadeu 0\nRicardo 0\n3\nJoao Maria Renata\nMaria 1 Joao\nJoao 1 Renata\nRenata 1 Maria\n0\n\n13",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "Joao Maria Tadeu Jose Ricardo\nJoao 2 Maria Ricardo\nMaria 1 Tadeu\nJose 1 Joao\nTadeu 0\nRicardo 0\n3\nJoao Maria Renata\nMaria 1 Joao\nJoao 1 Renata\nRenata 1 Maria\n0\n\n13\n3. Saída\nPara cada conjunto de teste seu programa deve produzir três linhas na saída. A primeira linha\ndeverá conter um identificador do conjunto de teste, no formato “Teste n”, onde n é numerado\nseqüencialmente a partir de 1. A segunda linha deve conter a seqüência de nomes de amigos (cada\nnome seguido de um espaço em branco) que resolve o problema da Larissa, ou a palavra “impos-\nsivel”, quando não houver uma seqüência possível (note a ausência de acentuação). Se existir\nmais de uma seqüência de amigos que resolve o problema, imprima qualquer uma delas (mas ape-\nnas uma). A terceira linha deverá ser deixada em branco. A grafia mostrada no Exemplo de Saída\nabaixo deverá ser seguida rigorosamente.",
+            "output": "Teste 1\nRicardo Tadeu Maria Joao Jose\nTeste 2\nimpossivel\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2004",
+    "level": "senior",
+    "period": "Fase Única",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

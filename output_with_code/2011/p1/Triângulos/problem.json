@@ -1,0 +1,37 @@
+{
+    "title": "Triângulos",
+    "statement": "Nome do arquivo fonte: triangulos.c, triangulos.cpp, triangulos.pas, triangulos.java, ou\ntriangulos.py\nCaio estava brincando de construir triângulos com palitos de diferentes tamanhos. Ele fazia isso juntando as\npontas de três palitos sobre uma mesa. Ele notou que podia agrupar os triângulos formados em três grupos:\n• Triângulos acutângulos, que são aqueles em que todos os ângulos internos medem menos de 90◦;\n• Triângulos retângulos, que são aqueles que possuem um ângulo interno que mede exatamente 90◦;\n• Triângulos obtusângulos, que são aqueles que possuem um ângulo interno que mede mais de 90◦.\nEle também percebeu que nem sempre é possível formar um triângulo com três palitos.\nUm triângulo acutângulo\nUm triângulo retângulo\nUm triângulo obtusângulo\nSua tarefa é, dados os comprimentos A, B e C de três palitos, dizer se é possível formar um triângulo com esses\npalitos e, em caso afirmativo, dizer a qual grupo o triângulo formado pertence.",
+    "input": "A entrada consiste de uma única linha, contendo três inteiros A, B e C separados por espaço.",
+    "output": "Imprima uma linha contendo apenas uma letra minúscula:\n• `n' se não for possível formar um triângulo;\n• à' se o triângulo formado for acutângulo;\n• `r' se o triângulo formado for retângulo;\n• `o' se o triângulo formado for obtusângulo.",
+    "constraints": "- 1 ≤A ≤104\n- 1 ≤B ≤104\n- 1 ≤C ≤104\n- 9",
+    "examples": [
+        {
+            "input": "1 1 1",
+            "output": "a"
+        },
+        {
+            "input": "1 2 1",
+            "output": "n"
+        },
+        {
+            "input": "5 4 3",
+            "output": "r"
+        },
+        {
+            "input": "6 3 4",
+            "output": "o"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2011",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

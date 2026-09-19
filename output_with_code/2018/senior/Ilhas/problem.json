@@ -1,0 +1,31 @@
+{
+    "title": "Ilhas",
+    "statement": "Nome do arquivo:“ilhas.x”,onde x deve ser cpp, pas, java, js, py2 ou py3\nOs moradores das Ilhas Brasileiras Ocidentais (IBO) são assíduos jogadores do mais recente jogo\nonline, Magos e Guerreiros. Tão competitivas se tornaram as partidas de Magos e Guerreiros na\nIBO, que a empresa criadora do jogo decidiu instalar em uma das ilhas um servidor dedicado apenas\naos jogadores da IBO.\nEntretanto, a empresa sabe que, se os jogadores acharem que o novo servidor éinjusto, eles irão\nparar de jogar Magos e Guerreiros, gerando incontáveis perdas. Para avaliar se o novo servidor é\njusto, os jogadores vão comparar o desempenho do jogo na ilha que tem a conexão mais rápida e o\ndesempenhonailhaquetemaconexãomaislentacomonovoservidor. Seadiferençadedesempenho\nfor muito grande, os residentes da ilha mais distante se sentirão injustiçados e abandonarão o jogo.\nA conexão de internet da IBO funciona através de um sistema de cabos de ﬁbra ótica. Pares de ilhas\nsão conectados por cabos, e cada cabo toma um certo tempo (chamado deping) para comunicar\ninformação entre as duas partes. Quando duas ilhas se comunicam através de uma série de cabos\n(portanto, através de ilhas intermediárias), oping entre elas é a soma dospings de cada cabo no\ncaminho. A rede da IBO foi implementada por ótimos programadores e, portanto, um par de ilhas\nsempre se comunica através do caminho com menorping possível.\nDada a conﬁguração da rede da IBO e a ilha em que a empresa deseja instalar o novo servidor,\ndetermine a diferença entre ospings da ilha com menor e maiorpings até o servidor.",
+    "input": "A primeira linha contémN e M, o número de ilhas e o número de cabos de ﬁbra ótica, respectiva-\nmente. As ilhas são numeradas de1 a N. Cada uma das M linhas seguintes contém três inteiros\nUi, Vi e Pi e descreve um cabo entre as ilhasUi e Vi com ping Pi (note que cabos transmitem\ninformação em ambas as direções). Finalmente, a última linha contém um inteiroS, o número da\nilha em que o servidor será instalado.\nCada par de ilhas é conectado por no máximo um cabo de ﬁbra ótica, e nenhum cabo conecta uma\nilha a si mesma. É garantido que qualquer ilha consegue se comunicar com qualquer outra através\nde algum caminho de cabos de ﬁbra ótica.",
+    "output": "Seu programa deve produzir um inteiro representando a diferença entre oping da ilha com maior\nping até o servidor, e o da ilha com menorping até o servidor. Note que a ilha em que o servidor\nse encontra não é considerada no cálculo do menorping.",
+    "constraints": "- 2 ≤ N ≤ 1000\n- N − 1 ≤ M ≤ 105\n- 1 ≤ Ui ≤ N\n- 1 ≤ Vi ≤ N\n- 1 ≤ S ≤ N\n- 1 ≤ Pi ≤ 1000",
+    "examples": [
+        {
+            "input": "4 5\n2 1 5\n1 3 4\n2 3 6\n4 2 8\n3 4 12\n1",
+            "output": "9"
+        },
+        {
+            "input": "6 11\n1 2 3\n6 1 9\n2 6 10\n2 3 8\n5 3 3\n4 3 2\n2 4 12\n6 4 1\n4 5 9\n1 5 16\n5 6 5\n5",
+            "output": "11"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "senior",
+    "period": "Fase 1",
+    "topics": [
+        "grafos",
+        "dijkstra",
+        "menor caminho"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 512
+}

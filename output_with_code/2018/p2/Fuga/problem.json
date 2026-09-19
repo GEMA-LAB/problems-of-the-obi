@@ -1,0 +1,31 @@
+{
+    "title": "Fuga",
+    "statement": "Nome do arquivo:“fuga.x”,onde x deve ser c|cpp|pas|java|js|py2|py3\nOs irmãos Violet e Klaus estão fugindo pelas suas vidas do Conde Olaf, que corre atrás deles dentro\nde um prédio abandonado. Violet e Klaus acabam de entrar em uma sala retangular de larguraN e\ncomprimento M, dividida emN · M células (i, j) de área 1 (1 ≤ i ≤ N e 1 ≤ j ≤ M). Em algumas\ncélulas dessa sala, existem armários. Toda célula(i, j) onde i e j são pares contém um armário.\nA sala tem uma entrada na célula(Xe, Ye) e uma saída na célula(Xs, Ys), que ﬁcam em posições\ndiferentes nas bordasda sala. A entrada e a saída nunca são adjacentes a um armário.\nA ﬁgura a seguir mostra a uma possível conﬁguração da sala, ondeN = M = 7, a entrada ﬁca na\nposição (3, 7) (marcada com uma estrela) e a saída ﬁca na posição(5, 1) (marcada com um círculo).\nOs armários estão indicados em quadrados cinzas.\n1\n2\n3\n4\n5\n6\n7\n1\n 2\n 3\n 4\n 5\n 6\n 7\nPara atrasar Conde Olaf, que os está perseguindo e entrará na sala em alguns momentos, os irmãos\ndecidiram derrubar armários da sala, de forma a aumentar o tamanho do percurso necessário para ir\ndaentradaatéasaída. Ascélulasocupadasporarmárioscaídosouempénãopodemserpercorridas.\nUm armário pode ser derrubado em qualquer uma das direções paralelas aos lados da sala e ocupa\nduas células após cair. Ou seja, um armário na posição(i, j) da sala, ao cair irá ocupar uma das\nseguintes opções:\n• As células (i, j) e (i, j + 1);\n• As células (i, j) e (i, j − 1);\n• As células (i, j) e (i + 1, j); ou\n• As células (i, j) e (i − 1, j).\nDadas as dimensões da sala e as posições de entrada e de saída, você deve encontrar uma forma\nde derrubar os armários tal que a distância entre a entrada e a saída da sala seja a maior possível\ndentre todas as formas de derrubar os armários.\nPara o exemplo acima, a ﬁgura abaixo é uma solução possível. Os retângulos cinzas representam\nos armários derrubados e a linha representa o caminho entre a entrada e a saída (que passa por29\ncélulas). Nesse caso, não é possível derrubar os armários de forma que a distância entre a entrada\ne a saída seja maior que29.",
+    "input": "A primeira linha contém dois inteirosN e M, a largura e o comprimento da sala, respectivamente.\nA segunda linha contém dois inteirosXe e Ye, identiﬁcando a célula de entrada da sala(Xe, Ye). A\nterceira linha contém dois inteirosXs e Ys, identiﬁcando a célula de saída da sala(Xs, Ys).",
+    "output": "Seu programa deve produzir um inteiro representando o tamanho do menor caminho (em número\nde células) da entrada até a saída da sala após derrubar os armários de forma ótima.\n1\n2\n3\n4\n5\n6\n7\n1\n 2\n 3\n 4\n 5\n 6\n 7",
+    "constraints": "- 3 ≤ N, M ≤ 11\n- 3 ≤ Xe, Xs ≤ N\n- 3 ≤ Ye, Ys ≤ M\n- N, M, Xe, Xs, Ye, Ys são ímpares.",
+    "examples": [
+        {
+            "input": "7 7\n3 7\n5 1",
+            "output": "29"
+        },
+        {
+            "input": "11 11\n11 1\n1 11",
+            "output": "69"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2018",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "grafos",
+        "dfs",
+        "backtracking"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 512
+}

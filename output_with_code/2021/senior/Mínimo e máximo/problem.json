@@ -1,0 +1,35 @@
+{
+    "title": "Mínimo e máximo",
+    "statement": "Nome do arquivo:“minmax.x”,onde x deve ser c, cpp, pas, java, js ou py\nAlgumas pessoas conseguem fazer cálculos matemáticos com uma velocidade impressionante. Pe-\ndrinho tem essa habilidade! Um cálculo que ele consegue fazer muito rapidamente é, dados três\nnúmeros inteiros S, A, e B, determinar qual o menor número inteiro do intervalo[A, B] tal que a\nsoma de seus dígitos é igual aS.\nPor exemplo, seS = 1, A = 10, B = 30, então a reposta é 12, pois existem três números no intervalo\n[10, 30] cuja soma dos dígitos é igual a três: 12, 21 e 30, e 12 é o menor deles.\nUm colega desaﬁou Pedrinho a calcular não somente o menor número, mas também o maior número\nno intervalo[A, B] tal que a soma dos números é igual ao valor deS dado. Por exemplo, seA = 1,\nB = 1000 e S = 1, então a reposta é 1 e 1000, pois existem quatro números no intervalo[1, 1000]\ncuja soma dos dígitos é igual a um: 1,10,100,1000, sendo 1 o menor e 1000 o maior.\nSua tarefa é escrever um programa de computador para, dados os três números, tentar calcular a\nresposta para o desaﬁo mais rapidamente do que Pedrinho.",
+    "input": "A primeira linha da entrada contém um número inteiroS, o valor da soma dos dígitos. A segunda\ne a terceira linhas contêm respectivamente os inteirosA e B.",
+    "output": "Seu programa deve produzir exatamente duas linhas. A primeira linha deve conter um inteiro, o\nmenor número cuja soma de dígitos tem o valor indicado, no intervalo dado. A segunda linha deve\nconter um inteiro, o maior número cuja soma de dígitos tem o valor indicado, no intervalo dado.",
+    "constraints": "- 1 ≤ S ≤ 36\n- 1 ≤ A ≤ 10000\n- 1 ≤ B ≤ 10000\n- A ≤ B\n- sempre haverá ao menos um número no intervalo[A, B] cuja soma dos dígitos é igual aS.",
+    "examples": [
+        {
+            "input": "3\n10\n30",
+            "output": "12\n30"
+        },
+        {
+            "input": "12\n100\n500",
+            "output": "129\n480"
+        },
+        {
+            "input": "18\n1\n100",
+            "output": "99\n99"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "matemática",
+        "busca completa",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

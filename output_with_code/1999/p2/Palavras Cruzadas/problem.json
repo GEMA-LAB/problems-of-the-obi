@@ -1,0 +1,25 @@
+{
+    "title": "Palavras Cruzadas",
+    "statement": "6\n0Palavras Cruzadas\nO conhecido passatempo de palavras cruzadas é composto por uma grade retangular de quadrados\nbrancos e pretos e duas listas de definições. Uma das listas de definições é para palavras escritas\nda esquerda para a direita nos quadrados brancos (nas linhas) e a outra lista é para palavras que\ndevem ser escritas de cima para baixo nos quadrados brancos (nas colunas). Uma palavra é uma\nseqüência de dois ou mais caracteres do alfabeto. Para resolver um jogo de palavras cruzadas, as\npalavras correspondentes às definições devem ser escritas nos quadrados brancos da grade.\nAs defin",
+    "input": "de Dados\nO arquivo CRUZ.IN contém vários conjuntos de teste. A primeira linha de um conjunto de testes\ncontém dois inteiros positivos, M e N, que indicam respectivamente o número de linhas e o\nnúmero de colunas do jogo de palavras cruzadas. Cada uma das M linhas seguintes contém N\ncaracteres (caracteres do alfabeto ou o caractere ‘*’ ), correspondendo a um jogo de palavras cru-\nzadas resolvido. O caractere ‘*’ é utilizado para representar um quadrado preto. O final do arquivo\nde testes é indicado quando M = N = 0 (este último conjunto de testes não é válido e não deve ser\nprocessado).\nO arquivo CRUZ.IN contém ao menos um conjunto de teste que deve ser processado.\n \nExemplo de Entrada\n \n1 8\n*PASCAL*\n3 3\n*M*\nBIT\n*L*\n5 7\nATOS**J\nMEMORIA\n*COLE*V\n*L**DIA\nLA*VER*\n0 0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "1 8\n*PASCAL*\n3 3\n*M*\nBIT\n*L*\n5 7\nATOS**J\nMEMORIA\n*COLE*V\n*L**DIA\nLA*VER*\n0 0\n3. Saída de Dados\nSeu programa deve produzir um arquivo de saída chamado CRUZ.OUT. Para cada conjunto de\nteste do arquivo de entrada seu programa deve produzir duas listas, uma para as palavras horizon-\ntais e uma para as palavras verticais. A lista das palavras horizontais deve ser precedida por uma\nlinha de cabeçalho onde está escrito “Horizontais:”; este cabeçalho só deve aparecer quando hou-\nver palavras horizontais no jogo (por exemplo, em um jogo com apenas uma coluna não há pala-\nvras horizontais). Da mesma forma, a lista das palavras verticais deve ser precedida por uma linha\nonde está escrito  “Verticais:”. As listas devem ser numeradas e apresentadas na ordem crescente\nde numeração da grade original. Deve ser deixada uma linha em branco após cada teste. A grafia\nmostrada no Exemplo de Saída, abaixo, deve ser seguida rigorosamente.\n\n8",
+            "output": "Teste 1\nHorizontais:\n  1. PASCAL\nTeste 2\nHorizontais:\n  2. BIT\nVerticais:\n  1. MIL\nTeste 3\nHorizontais:\n  1. ATOS\n  6. MEMORIA\n  8. COLE\n  9. DIA\n  11. LA\n  12. VER\nVerticais:\n  1. AM\n  2. TECLA\n  3. OMO\n  4. SOL\n  5. JAVA\n  7. REDE\n  10. IR\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "1999",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

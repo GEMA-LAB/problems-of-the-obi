@@ -1,0 +1,39 @@
+{
+    "title": "Burocracia",
+    "statement": "Nome do arquivo:burocracia.c, burocracia.cpp, burocracia.java, burocracia.js ou\nburocracia.py\nO reino de Nlogônia funciona de uma maneira bem interessante. A fim de garantir que todos\nos nobres estão sendo monitorados, cada um deles possui exatamente um superior direto, de tal\nforma que o nobre i é subordinado direto do nobrep[i]. A única exceção a essa regra é o rei de\nNlogônia, que será representado pelo índice1 e não possui nenhum superior. Note que um nobre\npode supervisionar vários outros nobres.\nDe tempos em tempos, nobres precisam enviar relatórios para algum superior que está ak níveis\nacima na hierarquia. Por exemplo se o nobrei precisa enviar um relatório para alguém3 níveis\nacima, ele será entregue para o nobrep[p[p[i]]]. Isso tornou o funcionamento do reino extrema-\nmente burocrático, pois dependendo do número de níveis, a comunicação interna do reino se torna\nprejudicada.\nPara remediar esse problema, o rei de Nlogônia fará decretos da seguinte forma: ele escolherá algum\nnobre v e todos os nobres que estão subordinados a v (direta ou indiretamente) passarão a ser\nsubordinados diretos dev. Em outras palavras para todou tal que p[p[. . . u . . .]] = v, p[u] passa a\nser v. Dizemos que essa é uma operação de reestruturação partindo dev.\nPor exemplo, considere que o reino tem9 nobres e a estrutura do reino era tal quep[2] = 1 , p[3] =\n1, p[4] = 2 , p[5] = 2 , p[6] = 2 , p[7] = 5 , p[8] = 5 e p[9] = 8, conforme mostrado na figura abaixo:\n1\n3 2\n6 5 4\n7 8\n9\nSe neste momento o nobre9 tiver que entregar um relatório para o superior que está3 níveis acima,\nele deverá entregar ao nobre2. Mas se o nobre 4 tiver que entregar um relatório para o superior\nque está 2 níveis acima, ele deverá entregar ao nobre1.\nCaso aconteça uma reestruturação partindo do5, os superiores diretos dos nobres passariam a ser\np[2] = 1 , p[3] = 1 , p[4] = 2 , p[5] = 2 , p[6] = 2 , p[7] = 5 , p[8] = 5 e p[9] = 5, como na figura a seguir:\n1\n3\n 2\n6\n 5\n 4\n7\n 8\n9\n1\n3\n 2\n6\n 5\n 4\n7\n 8\n 9\nreestruturação \nno 5\n1\n3\n 2\n6\n 5\n 4\n7\n 8\n9\n1\n3\n 2\n6\n 5\n 4\n7\n 8\n 9\nreestruturação \nno 5\nReestruturação\npartindo de 5\nSe neste momento o nobre9 tiver que entregar um relatório para o superior que está3 níveis acima,\nagora ele deverá entregar ao nobre1.\nCaso aconteça mais uma reestruturação, mas agora partindo do2, os superiores diretos dos nobres\npassariam a serp[2] = 1 , p[3] = 1 , p[4] = 2 , p[5] = 2 , p[6] = 2 , p[7] = 2 , p[8] = 2 e p[9] = 2, como na\nfigura abaixo:\nReestruturação\npartindo de 2\n1\n3\n 2\n6\n 5\n 4\n7\n 8\n 9\nreestruturação \nno 2\n1\n3 2\n6\n 5\n 4\n7\n 8\n 9\n1\n3\n 2\n6\n 5\n 4\n7\n 8\n 9\nreestruturação \nno 2\n1\n3 2\n6\n 5\n 4\n7\n 8\n 9\nSe neste momento o nobre8 tiver que entregar um relatório para o superior que está1 nível acima,\nele deverá entregar ao nobre2.\nEntretanto, esses decretos criaram outro problema: os nobres não sabem mais pra quem eles têm\nque entregar relatórios! Sendo assim, o Rei de Nlogônia te pediu ajuda. Dadas as operações de\nreestruturação que acontecem ao longo do tempo, faça um programa que responda aos nobres para\nquem eles devem entregar relatórios naquele momento, ou seja, qual nobre esták níveis acima na\nhierarquia.",
+    "input": "A primeira linha de entrada possui um único inteiroN, o número de nobres no reino de Nlogônia.\nA segunda linha de entrada possuiN− 1 inteiros, p[2], p[3], . . . , p[N ], os superiores diretos de cada\nnobre.\nA terceira linha de entrada possui um único inteiro Q, o número de operações que você deve\nprocessar.\nAs próximas Q linhas da entrada representam as operações que aconteceram no reino de Nlogônia:\n• Se o nobrevj precisa entregar um relatório para um superiorkj níveis acima, aj-ésima dessas\nlinhas será da forma1 vj kj\n• Se o rei decidiu que haverá uma reestruturação a partir do nobrevj, a j-ésima dessas linhas\nserá da forma2 vj",
+    "output": "Para cada relatório descrito na entrada, imprima uma linha com um único inteiro: o índice do nobre\npara o qual será entregue o relatório naquele momento.",
+    "constraints": "- 2≤ N≤ 105\n- 1≤ Q≤ 5· 104\n- p[i] < i\n- 1≤ vj, kj≤ N\n- Para toda entrega de relatório, é garantido que há um superiorkj níveis acima devj",
+    "examples": [
+        {
+            "input": "9\n1 1 2 2 2 5 5 8\n6\n1 9 3\n1 4 2\n2 5\n1 9 3\n2 2\n1 8 1",
+            "output": "2\n1\n1\n2\nExplicação do exemplo 1:Este é o exemplo mostrado no enunciado."
+        },
+        {
+            "input": "5\n1 2 3 4\n5\n1 5 2\n1 3 1\n2 3\n1 5 2\n1 3 1",
+            "output": "3\n2\n2\n2\nExplicação do exemplo 2:A estrutura inicial dos nobres forma uma linha, conforme a figura a\nseguir:\n1\n2\n3\n4\n5\nVale ressaltar que esse exemplo satisfaz as restrições da subtarefa 2."
+        },
+        {
+            "input": "15\n1 1 2 2 3 3 4 4 5 5 6 6 7 7\n6\n1 12 2\n2 3\n1 12 2\n1 10 1\n2 2\n1 10 1",
+            "output": "3\n1\n5\n2\nExplicação do exemplo 3:A estrutura inicial dos nobres forma uma árvore binária completa,\nconforme a figura a seguir:\n1\n2 3\n4 5 6 7\n8 9 11 1310 12 14 15\nVale ressaltar que esse exemplo satisfaz as restrições da subtarefa 4."
+        },
+        {
+            "input": "7\n1 1 2 2 3 3\n5\n1 5 1\n1 6 1\n2 1\n1 5 1\n1 6 1",
+            "output": "2\n3\n1\n1\nExplicação do exemplo 4:Vale ressaltar que esse exemplo satisfaz as restrições das subtarefas\n4 e 5."
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2024",
+    "level": "senior",
+    "period": "Fase 3",
+    "topics": [
+        "árvores",
+        "heavy-light decomposition",
+        "estruturas de dados"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 512
+}

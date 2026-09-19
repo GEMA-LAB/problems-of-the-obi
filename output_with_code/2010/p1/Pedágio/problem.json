@@ -1,0 +1,33 @@
+{
+    "title": "Pedágio",
+    "statement": "Nome do arquivo fonte: pedagio.c, pedagio.cpp, ou pedagio.pas\nA invenção do carro tornou muito mais rápido e mais barato realizar viagens de longa distância. Realizar uma\nviagem rodoviária tem dois tipos de custos: cada quilômetro percorrido na rodovia tem um custo associado\n(não só devido ao consumo de combustível mas também devido ao desgaste das peças do carro, pneus, etc.),\nmas também é necessário passar por vários pedágios localizados ao longo da rodovia.\nOs pedágios são igualmente espaçados ao logo da rodovia; o começo da estrada não possui um pedágio, mas o\nseu final pode estar logo após um pedágio (por exemplo, se a distância entre dois pedágios consecutivos for de\n37 km e a estrada tiver 111 km, o motorista deve pagar um pedágio aos 37 km, aos 74 km e aos 111 km, logo\nantes de terminar a sua viagem).\nTarefa\nDadas as características da rodovia e os custos com gasolina e com pedágios, calcule o custo total da viagem.",
+    "input": "A entrada consiste de duas linhas. A primeira linha da entrada contém dois inteiros L e D (1 ≤L, D ≤104),\nindicando o comprimento da estrada e a distância entre pedágios, respectivamente. A segunda linha contém\ndois inteiros K e P (1 ≤K, P ≤104), indicando o custo por quilômetro percorrido e o valor de cada pedágio.\nO primeiro pedágio está localizado no quilômetro D da estrada (ou seja, a distância do início da estrada para\no primeiro pedágio é D quilômetros).",
+    "output": "Seu programa deve imprimir uma única linha contendo um único inteiro, indicando o custo total da viagem.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "111 37\n1 10",
+            "output": "141"
+        },
+        {
+            "input": "100 30\n3 14",
+            "output": "342"
+        },
+        {
+            "input": "20 70\n9 17",
+            "output": "180"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2010",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

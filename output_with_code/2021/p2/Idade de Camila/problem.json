@@ -1,0 +1,39 @@
+{
+    "title": "Idade de Camila",
+    "statement": "Nome do arquivo:“idade.x”,onde x deve ser c, cpp, pas, java, js ou py\nCibele, Camila e Celeste são três irmãs inseparáveis. Estão sempre juntas e adoram fazer esportes,\nler, cozinhar, jogar no computador... Agora estão aprendendo a programar computadores para\ndesenvolverem seus próprios jogos.\nMas nada disso interessa para esta tarefa: estamos interessados apenas nas suas idades. Sabemos\nque Cibele nasceu antes de Camila e Celeste nasceu depois de Camila.\nDados três números inteiros indicando as idades das irmãs, escreva um programa para determinar\na idade de Camila.",
+    "input": "A entrada é composta por três linhas, cada linha contendo um número inteiroN, a idade de uma\ndas irmãs.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único número inteiro, a idade de Camila.",
+    "constraints": "- 5 ≤ N ≤ 100",
+    "examples": [
+        {
+            "input": "6\n9\n7",
+            "output": "7"
+        },
+        {
+            "input": "34\n36\n38",
+            "output": "36"
+        },
+        {
+            "input": "22\n25\n22",
+            "output": "22"
+        },
+        {
+            "input": "91\n91\n91",
+            "output": "91"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "condicional",
+        "ordenação",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,34 @@
+{
+    "title": "Quadrado Aritmético",
+    "statement": "Nome do arquivo fonte: quadrado.c, quadrado.cpp, quadrado.pas, quadrado.java, ou quadrado.py\nArnaldo e Bernardo são dois garotos que compartilham um peculiar gosto por curiosidades matemáticas. Nos\núltimos tempos, sua principal diversão tem sido investigar propriedades matemágicas de tabuleiros quadrados\npreenchidos com inteiros. Um belo dia, Arnaldo desenhou o tabuleiro da seguinte figura.\n-41\n-29\n2\n28\n40\n71\n11\n23\n54\n Olha só, várias somas nesse quadrado são iguais!  exclamou Bernardo.\n Como assim?  devolveu, intrigado, Arnaldo.\n Observe:\n71\n54\n71\n54\n71\n54\n-41\n-29\n2\n-41\n-29\n2\n-41\n-29\n2\n-41\n-29\n2\n28\n40\n71\n11\n23\n54\n28\n40\n11\n23\n28\n40\n11\n23\n28\n40\n11\n23\n É mesmo! (−41) + 40 + 54 dá 53, 28 + (−29) + 54 também!  exclamou Arnaldo.\n Eu já verifiquei: existem 6 formas de escolhermos 3 células deste quadrado de forma que cada linha e coluna\ntenha exatamente uma célula escolhida.\nEm todas elas, a soma dá 53.\nAlém disso, todos os números são\ndistintos nesse quadrado.  notou Bernardo, exibindo suas habilidades aritméticas.\n Que bacana! Esse quadrado é realmente mágico! Ou, melhor, esse quadrado é realmente aritmético! Será\nque existem mais quadrados como esse?\nUma escolha legal de células é uma escolha em que toda linha e toda coluna tenha exatamente uma célula\nescolhida. Um quadrado aritmético de tamanho N e soma S é um tabuleiro de inteiros de N linhas e N colunas\nem que qualquer escolha legal tem soma S e em que todos os números são distintos.\nSua tarefa, neste problema, é gerar um quadrado aritmético de tamanho N e soma S, dados N e S. Como\nArnaldo e Bernardo vão querer conferir a sua solução em suas calculadoras, você não deve gerar um quadrado\nem que alguma célula tenha valor absoluto maior do que 109.",
+    "input": "A primeira e única linha da entrada contém dois números inteiros N e S (1 ≤N ≤1000 e −1000 ≤S ≤1000)\nrepresentando, respectivamente, o tamanho e a soma do quadrado aritmético pedido.\n\n9",
+    "output": "Seu programa deve imprimir N linhas, cada uma com N inteiros entre −109 e 109, representando o quadrado\naritmético pedido. Para uma mesma entrada, podem existir vários quadrados aritméticos válidos; seu programa\ndeve imprimir qualquer um deles, mas apenas um.\nÉ garantido que existirá pelo menos um quadrado aritmético válido para cada entrada testada.",
+    "constraints": "- 1 ≤N ≤1000\n- −1000 ≤S ≤1000\n- −109 ≤valor de cada célula ≤109",
+    "examples": [
+        {
+            "input": "2 49",
+            "output": "23 40\n9 26"
+        },
+        {
+            "input": "3 53",
+            "output": "-41 -29 2\n28 40 71\n11 23 54"
+        },
+        {
+            "input": "1 -55",
+            "output": "-55"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2011",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "matrizes",
+        "simulação"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

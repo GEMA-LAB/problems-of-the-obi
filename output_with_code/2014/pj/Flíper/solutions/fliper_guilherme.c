@@ -1,0 +1,18 @@
+/* Guilherme A. Pinto - OBI 2014 - Fliper */
+
+#include <stdio.h>
+
+int main() {
+  int P,R;
+  
+  scanf("%d%d",&P,&R);
+
+  if ( P == 0 ) {
+    printf("C\n");
+  } else {
+    if ( R == 0 ) printf("B\n");
+    else printf("A\n");
+  }
+
+  return 0;
+}

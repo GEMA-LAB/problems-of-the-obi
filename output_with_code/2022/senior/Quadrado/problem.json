@@ -1,0 +1,39 @@
+{
+    "title": "Quadrado",
+    "statement": "Nome do arquivo:quadrado.c, quadrado.cpp, quadrado.pas, quadrado.java, quadrado.js ou\nquadrado.py\nUm quadrado fantásticoé um conjunto de números inteiros positivos dispostos emN linhas por N\ncolunas tal que:\n• Não há números repetidos no quadrado.\n• A média dos números em cada linha é um número inteiro que está presente na linha.\n• A média dos números em cada coluna é um número inteiro que está presente na coluna.",
+    "input": "A primeira e única linha da entrada contém um número inteiroN, indicando a dimensão do qua-\ndrado.",
+    "output": "Seu programa deve produzirN linhas, cada uma contendoN números inteiros Xi, representando\num quadrado fantástico.",
+    "constraints": "- 1≤ N≤ 40\n- 1≤ Xi≤ 1000000",
+    "examples": [
+        {
+            "input": "1",
+            "output": "1"
+        },
+        {
+            "input": "2",
+            "output": "-1"
+        },
+        {
+            "input": "3",
+            "output": "1 2 3\n4 5 6\n7 8 9"
+        },
+        {
+            "input": "4",
+            "output": "1 2 3 6\n7 8 9 12\n13 14 15 18\n31 32 33 36"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2022",
+    "level": "senior",
+    "period": "Fase 3",
+    "topics": [
+        "matrizes",
+        "matemática",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

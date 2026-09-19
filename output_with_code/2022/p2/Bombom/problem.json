@@ -1,0 +1,35 @@
+{
+    "title": "Bombom",
+    "statement": "Nome do arquivo:bombom.c, bombom.cpp, bombom.pas, bombom.java, bombom.js ou bombom.py\nBombom é um jogo de cartas para duas pessoas, jogado com apenas dezesseis cartas: Ás, Valete,\nDama e Rei, nos quatro naipes (Copas, Espadas, Ouros e Paus). Cada carta tem um valor, que\ndepende da ﬁgura e do naipe.\nA cada partida, as cartas são embaralhadas e colocadas em um monte. Inicialmente uma carta do\nmonte é virada e mostrada aos dois jogadores: o naipe dessa carta é chamado denaipe dominante\nda partida.\nEntão cada jogador recebe três cartas do monte. Ganha a partida o jogador que tem as cartas cuja\nsoma dos valores é maior.\nO valor das cartas é dado na tabela abaixo:\nFigura Naipe não dominante Naipe Dominante\nÁs 10 14\nValete 11 15\nDama 12 16\nRei 13 17\nLuana e Edu estão jogando Bombom e querem sua ajuda para determinar o vencedor da partida,\nou se há empate.",
+    "input": "A entrada contém sete linhas, cada linha contendo a descrição de uma carta. Cada carta é descrita\npor duas letras. A primeira letra de uma carta indica a ﬁgura e pode serA, J, Q ou K, representando\nrespectivamente as ﬁguras Ás, Valete, Dama e Rei. A segunda letra de uma carta indica o naipe e\npode ser C, E, O ou P, representando respectivamente os naipes Copas, Espadas, Ouros e Paus. O\nnaipe da primeira carta da entrada é o naipe dominante da partida. A segunda, terceira e quarta\ncartas da entrada são as cartas de Luana. A quinta, sexta e sétima cartas da entrada são as cartas\nde Edu.",
+    "output": "Seu programa deve produzir uma única linha, contendo somente o nome do jogador que ganha a\npartida, ou empate caso não haja um ganhador.",
+    "constraints": "- As cartas na entrada obedecem ao formato descrito no enunciado.\n- Não há cartas repetidas na entrada.",
+    "examples": [
+        {
+            "input": "AC\nJC\nJE\nJP\nKO\nKP\nQE",
+            "output": "Edu"
+        },
+        {
+            "input": "QP\nQC\nAC\nKP\nKO\nKE\nKC",
+            "output": "empate"
+        },
+        {
+            "input": "KE\nQE\nAC\nAE\nAP\nKO\nJE",
+            "output": "Luana"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2022",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "aritmética",
+        "condicional",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

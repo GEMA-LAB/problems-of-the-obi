@@ -1,0 +1,25 @@
+{
+    "title": "Problema E",
+    "statement": "arquivo de entrada: CARGA.IN, arquivo de saída: CARGA.OUT) \nUm dos maiores problemas no transporte de cargas pesadas por rodovias é a altura dos viadutos,\npois muitas vezes a carga é mais alta do que o vão do viaduto sob o qual o caminhão deve passar.\nConsidere o mapa abaixo. É possível tranportar uma turbina de hidroelétrica, que em cima do\ncaminhão mede 7 metros de altura, da cidade Xis da Serra para a cidade Ypsilon Bonito?\nNeste caso é fácil perceber que a resposta é sim, pois o menor vão encontrado no caminho, se uti-\nlizarmos as estradas BR-1001 e BR-1024, é de 9 metros. No caso geral, com dezenas de cidades e\nestradas, a resposta pode não ser tão evidente.\n1. Tarefa\nSua tarefa é determinar, para um dado par de cidades X e Y, qual a carga mais alta que pode ser\ntransportada de X para Y por meio rodoviário, conhecendo todas as estradas da região e a altura de\ntodos os túneis e viadutos dessas estradas. Considere que todas as estradas têm limitação de altura\ne que a interligação das estradas ao redor das cidades não tem restrição de altura.",
+    "input": "de Dados\nO arquivo CARGA.IN contém vários conjuntos de teste. O número máximo de cidades, N, em\ncada teste é 100. As cidades são numeradas de 1 a N. A primeira linha do conjunto de teste contém\ndois inteiros positivos X e Y que representam respectivamente as cidades origem e a cidade des-\ntino da carga (1 ≤ X ≤ N, 1 ≤ Y ≤ N). As  linhas seguintes contêm cada uma a descrição de uma\nestrada. Cada descrição é composta por três inteiros A, B e C, representando respectivamente a\ncidade onde a estrada inicia, a cidade onde a estrada termina e a altura do viaduto ou túnel mais\nbaixo no trajeto de A para B. O final da descrição das estradas de um teste é indicado por A = B =\nC = 0.  Em cada conjunto de teste, sempre há ao menos um caminho de X para Y. O final do\narquivo de testes é indicado quando X = Y = 0 (este último conjunto de testes não é válido e não\ndeve ser processado).\nXis da Serra\nYpsilon\nBonito\nBR-1001\nBR-1024\nBR-512\nBR-2048\nindica restrição de altura\nnesta direção\n12\n10\n6\n9\n6\n15\n5\n10\n10\n10\n7\n7\n\n11\nExemplo de Entrada\n2 4\n1 4 5\n2 4 12\n0 0 0\n1 3\n1 2 10\n1 3 8\n2 3 12\n3 1 5\n0 0 0\n0 0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "2 4\n1 4 5\n2 4 12\n0 0 0\n1 3\n1 2 10\n1 3 8\n2 3 12\n3 1 5\n0 0 0\n0 0\n3. Saída de Dados\nSeu programa deve produzir um arquivo de saída chamado CARGA.OUT. Para cada conjunto de\nteste do arquivo de entrada seu programa deve produzir três linhas no arquivo de saída. A primeira\nlinha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é numerado\na partir de 1. Na segunda linha deve aparecer a altura máxima da carga, encontrada pelo seu pro-\ngrama, precedida de “altura maxima:”. A terceira linha deve ser deixada em branco. A grafia mos-\ntrada no Exemplo de Saída, abaixo, deve ser seguida rigorosamente (note que não são usados\nacentos).",
+            "output": "Teste 1\naltura maxima: 12\nTeste 2\naltura maxima: 10\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "1999",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

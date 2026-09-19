@@ -1,0 +1,29 @@
+{
+    "title": "Tira-teima",
+    "statement": "Nome do arquivo fonte: tenis.c, tenis.cpp, tenis.pas, tenis.java, ou tenis.py\nUma quadra de tênis tem o formato de um retângulo, cujos lados medem 36 pés por 78 pés, que correspondem\na um retângulo de 432 polegadas por 936 polegadas. No último Grand Slam da Austrália, Rafael Nadal perdeu\npara Novak Djoković, num dos jogos mais bonitos de tênis dos últimos tempos.\nMuitas vezes, uma jogada é tão rápida, e a bola tão próxima da borda da quadra, que o juiz pode tomar uma\ndecisão que pode ser contestada por um dos jogadores. Para isso, existe o tira-teima, que utiliza a imagem\ngravada do jogo para decidir se a bola estava dentro ou fora da metade da quadra correspondente a um dos\njogadores.\nConsidere que a semi-quadra de Rafael Nadal corresponde a um retângulo em que dois vértices têm coordenadas\n(0,0) e (432, 468), onde todos os números são em polegadas.\nVocê deve escrever um programa para, dadas as coordenadas (X, Y ) do ponto de contato da bola com o solo,\ndeterminar se uma bola bateu no solo dentro ou fora da semi-quadra. Note que se a bola bate na linha divisória\nela é considerada uma bola dentro.",
+    "input": "A entrada é dada em uma única linha, que contém dois inteiros X e Y , que correspondem às coordenadas do\nponto (X, Y ) de contato da bola com o solo, em polegadas.",
+    "output": "Seu programa deve imprimir uma única linha, contendo a palavra dentro se a bola bateu dentro da semi-quadra,\ne a palavra fora caso contrário.",
+    "constraints": "- −500 ≤X, Y ≤500",
+    "examples": [
+        {
+            "input": "-2 200",
+            "output": "fora"
+        },
+        {
+            "input": "432 10",
+            "output": "dentro"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2012",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

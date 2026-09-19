@@ -42,6 +42,15 @@ class OpenAiExtractor:
 
         if client is not None:
             self.client = client
+            if not self.config.api_key or self.config.api_key == "placeholder_key":
+                self.config = ExtractorConfig(
+                    base_url=self.config.base_url,
+                    api_key="provided_client",
+                    model=self.config.model,
+                    prompt_template_path=self.config.prompt_template_path,
+                    pasta_entrada=self.config.pasta_entrada,
+                    pasta_output=self.config.pasta_output,
+                )
         else:
             base_url = self.config.base_url
             api_key = self.config.api_key or "placeholder_key"
@@ -111,14 +120,70 @@ class OpenAiExtractor:
                 except Exception as e:
                     logger.warning(f"Falha ao deletar arquivo remoto {uploaded_file.id}: {e}")
 
-    def save_problem(self, problem: ProblemSchema, output_base: Optional[Path] = None) -> Path:
+    def save_problem(
+        self,
+        problem: ProblemSchema,
+        output_base: Optional[Path] = None,
+        source_pdf: Optional[Path] = None,
+        base_cadernos_dir: Optional[Path] = None,
+    ) -> Path:
         """
-        Salva o problema em output_with_code/[ano]/[nivel]/[nome_questao]/problem.json.
+        Salva o problema em output_with_code/[ano]/[nivel]/[nome_questao]/problem.json,
+        espelhando rigorosamente a estrutura de pastas do source_pdf em cadernos/.
         """
         base_dir = Path(output_base or self.config.pasta_output)
         clean_title = sanitize_filename(problem.title) or "Sem_Titulo"
+
         ano = str(problem.year).strip() or "unknown"
         nivel = str(problem.level).strip().lower() or "geral"
+
+        if source_pdf is not None:
+            source_path = Path(source_pdf)
+            base_cadernos = Path(base_cadernos_dir or self.config.pasta_entrada)
+            try:
+                rel_parts = source_path.relative_to(base_cadernos).parts
+            except ValueError:
+                rel_parts = source_path.parts
+
+            for part in rel_parts:
+                if part.isdigit() and len(part) == 4 and 1999 <= int(part) <= 2030:
+                    ano = part
+                    break
+
+            for part in rel_parts:
+                part_clean = part.lower().strip()
+                if part_clean in ("pj", "p0", "junior"):
+                    nivel = "pj"
+                    break
+                elif part_clean in ("p1", "n1", "nivel1", "nivel 1"):
+                    nivel = "p1"
+                    break
+                elif part_clean in ("p2", "n2", "nivel2", "nivel 2"):
+                    nivel = "p2"
+                    break
+                elif part_clean in ("senior", "ps", "pu", "sen"):
+                    nivel = "senior"
+                    break
+                elif part_clean in ("geral", "iniciacao", "cfobi"):
+                    nivel = part_clean
+                    break
+
+            if nivel in ("geral", "") and len(rel_parts) >= 2:
+                parent_name = source_path.parent.name.lower().strip()
+                if parent_name in ("p1", "p2", "pj", "senior"):
+                    nivel = parent_name
+
+        level_map = {
+            "n1": "p1", "nivel1": "p1", "p1": "p1",
+            "n2": "p2", "nivel2": "p2", "p2": "p2",
+            "pj": "pj", "junior": "pj", "p0": "pj",
+            "senior": "senior", "ps": "senior", "pu": "senior",
+            "geral": "geral",
+        }
+        nivel = level_map.get(nivel, nivel)
+
+        problem.year = ano
+        problem.level = nivel
 
         target_dir = base_dir / ano / nivel / clean_title
         target_dir.mkdir(parents=True, exist_ok=True)
@@ -149,11 +214,11 @@ class OpenAiExtractor:
                     continue
 
                 for p in problems:
-                    self.save_problem(p, output_base=output_base)
+                    self.save_problem(p, output_base=output_base, source_pdf=pdf_path)
                     extracted_all.append(p)
 
             except Exception as e:
-                logger.error(f"Erro ao processar caderno {pdf_path}: {e}")
+                logger.error(f"Erro ao processar caderno {pdf_path}")
                 errors.append(pdf_path)
 
         return extracted_all, errors

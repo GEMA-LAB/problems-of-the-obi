@@ -1,0 +1,35 @@
+{
+    "title": "Jogo do Preto e Branco",
+    "statement": "Nome do arquivo:“jogo.x”,onde x deve ser c, cpp, pas, java, js, py2.py ou py3.py\nVocê gosta de quebra-cabeças? O jogo do Preto e Branco é um quebra-cabeças que usa um tabuleiro\nretangular comL linhas eC colunas, formandoL× C casas. No tabuleiro são posicionadas algumas\npeças pretas, cada peça em uma casa diferente.\nO objetivo do jogo é colocar o maior número possível de peças brancas no tabuleiro, obedecendo às\nseguintes restrições:\n• cada casa do tabuleiro pode conter no máximo uma peça;\n• uma peça branca deve ter ao menos uma peça preta como vizinha, à direita, à esquerda, acima\nou abaixo;\n• uma peça branca não pode ter outra peça branca como vizinha, à direita, à esquerda, acima\nou abaixo;\nA ﬁgura abaixo mostra dois exemplos de jogos, com as respectivas soluções, um com um tabuleiro\n3× 3 e outro com um tabuleiro3× 5.\n(a) (b)\nSua tarefa é escrever um programa que, dadas as descrições do tabuleiro e das peças pretas posici-\nonadas, determine o maior número de peças brancas que podem ser colocadas.",
+    "input": "A primeira linha contém dois inteirosL e C, o número de linhas e o número de colunas do tabuleiro.\nAs linhas são numeradas de 1 aL e as colunas são numeradas de 1 aC. A segunda linha contém\num inteiro P, o número de peças pretas colocadas no tabuleiro. Cada uma dasP linhas seguintes\ndescreve a posição de uma peça preta e contém dois inteirosXi e Yi, indicando a linha e a coluna\nem que a peça foi colocada.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, o maior número de peças\nbrancas que podem ser colocadas no tabuleiro.",
+    "constraints": "- 1≤ L≤ 6\n- 1≤ C≤ 6\n- 1≤ P≤ 10\n- 1≤ Xi≤ L para 1≤ i≤ L\n- 1≤ Yi≤ C para 1≤ i≤ C",
+    "examples": [
+        {
+            "input": "3 3\n3\n1 1\n1 3\n3 2",
+            "output": "3"
+        },
+        {
+            "input": "1 6\n2\n1 2\n1 5",
+            "output": "3"
+        },
+        {
+            "input": "3 5\n3\n2 2\n2 3\n3 5",
+            "output": "5"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "p2",
+    "period": "Fase 3",
+    "topics": [
+        "backtracking",
+        "bitmask",
+        "jogos"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 512
+}

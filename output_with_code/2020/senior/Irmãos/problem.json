@@ -1,0 +1,30 @@
+{
+    "title": "Irmãos",
+    "statement": "Nome do arquivo:“irmaos.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nOtávio tem dois irmãos, um mais velho (Orlando) e um mais novo do que ele (Oscar). As idades\ndos três irmãos formam umaprogressão aritmética: a diferença de idade dos dois irmãos mais novos\n(Otávio e Oscar) é igual à diferença de idade dos dois irmãos mais velhos (Orlando e Otávio).\nDadas as idades de Otávio e de seu irmão mais novo, escreva um programa para determinar a idade\ndo irmão mais velho.",
+    "input": "A primeira linha da entrada contém um inteiroN, a idade do irmão mais novo de Otávio. A segunda\nlinha contém um inteiroM, a idade de Otávio.",
+    "output": "Seu programa deve produzir na saída uma única linha, contendo um único número inteiro, a idade\ndo irmão mais velho de Otávio.",
+    "constraints": "- 1≤ N≤ 40\n- N≤ M≤ 40",
+    "examples": [
+        {
+            "input": "13\n16",
+            "output": "19"
+        },
+        {
+            "input": "14\n14",
+            "output": "14"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "senior",
+    "period": "Fase 1",
+    "topics": [
+        "aritmética",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

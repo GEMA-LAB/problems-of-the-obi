@@ -1,0 +1,26 @@
+{
+    "title": "Palíndrome",
+    "statement": "Arquivo fonte: pal.c, pal.cc, pal.cpp ou pal.pas\nUma cadeia de caracteres é chamada de palíndrome se seqüência de caracteres da esquerda para a\ndireita é igual à seqüência de caracteres da direita para a esquerda (uma outra definição é que o\nprimeiro caractere da cadeia deve ser igual ao último caractere, o segundo caractere seja igual ao\npenúltimo caractere, o terceiro caractere seja igual ao antepenúltimo caractere, e assim por\ndiante). Por exemplo, as cadeias de caracteres ‘mim’, ‘axxa’ e ‘ananaganana’ são exemplos de\npalíndromes.\nSe uma cadeia não é palíndrome, ela pode ser dividida em cadeias menores que são palíndromes.\nPor exemplo, a cadeia ‘aaxyx’ pode ser dividida de quatro maneiras distintas, todas elas contendo\napenas cadeias palíndromes: {‘aa’, ‘xyx’}, {‘aa’, ‘x’, ‘y’, ‘x’}, {‘a’, ‘a’, ‘xyx’} e {‘a’, ‘a’, ‘x’, ‘y’,\n‘x’}.\n1. Tarefa\nEscreva um programa que determine qual o menor número de partes em que uma cadeia deve ser\ndividida de forma que todas as partes sejam palíndromes.",
+    "input": "A  entrada é constituída de vários conjuntos de teste. A primeira linha de um conjunto de testes\ncontém um inteiro N que indica o número de caracteres da cadeia (1 ≤ N ≤ 2000). A segunda linha\ncontém a cadeia de caracteres, composta por letras minúsculas (de ‘a’ a ‘z’), sem espaços em\nbranco. O final da entrada é indicado por N = 0.\nExemplo de Entrada\n3\naxa\n6\nxyzyyx\n10\nbbabcbbaab\n0",
+    "output": "A saída deve ser impressa conforme especificado no enunciado.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "axa\n6\nxyzyyx\n10\nbbabcbbaab\n0\n3. Saída\nPara cada conjunto de teste da entrada seu programa deve produzir três linhas na saída. A primeira\nlinha deve conter um identificador do conjunto de teste, no formato “Teste n”, onde n é numerado\na partir de 1. A segunda linha deve conter um inteiro indicando o menor número de partes que a\ncadeia de entrada deve ser dividida de forma que todas as partes sejam palíndromes. A terceira\nlinha deve ser deixada em branco. O formato mostrado no exemplo de saída abaixo deve ser\nseguido rigorosamente.\n\n7",
+            "output": "Teste 1\n1\nTeste 2\n4\nTeste 3\n4\n(esta saída corresponde ao"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2004",
+    "level": "senior",
+    "period": "Fase Única",
+    "topics": [
+        "strings",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

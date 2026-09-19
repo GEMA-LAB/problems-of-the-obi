@@ -1,0 +1,31 @@
+{
+    "title": "VAR",
+    "statement": "Nome do arquivo:var.c, var.cpp, var.java, var.js ou var.py\nCom a crescente popularidade dos campeonatos de “Beach Tenis”, uma empresa está desenvolvendo\num aplicativo para celular para ser usado por juízes. O objetivo é que, depois de configurar o\naplicativo, um “juiz de vídeo” possa usar a câmera do celular para determinar se o impacto da bola\ncom o piso foi dentro ou fora do campo de jogo.\nO campo de jogo é um retângulo de dimensões 16m x 8m. A coordenada (0,0) é a posição do juiz,\ncomo mostrado na figura (a) abaixo. A figura (a) também mostra duas marcações de bolas dentro\ndo campo de jogo (círculos pretos), nas coordenadas(−6, 6) e (8, 2). Note que uma bola em cima\nda linha é considerada dentro do campo de jogo.\n(a)\n-2\n2-2 0\n2\n4-4\n4\n6-6\n6\n8-8\n8\n10\n(b)\n-2\n2-2 0\n2\n4-4\n4\n6-6\n6\n8-8\n8\n10\nx x\nyy\nAfigura(b)mostraduasmarcaçõesdebolasforadocampodejogo(estrelaspretas), nascoordenadas\n(−4, 10) e (6, −2).\nVocê foi contratado para testar o novo aplicativo. Como é ainda um protótipo, apenas coordenadas\nde valores inteiros serão testadas.\nEscreva um programa que, dada a coordenada de uma marcação identificada pelo aplicativo, deter-\nmine se a marcação está dentro ou fora do campo de jogo.",
+    "input": "A primeira linha da entrada contém um inteiroX, a coordenadax da marcação. A segunda linha\ncontém um inteiroY, a coordenaday da marcação.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único caractere, que deve ser a letra\nmaiúscula ‘S’ se a marcação está dentro do campo; se a marcação está fora do campo de jogo a\nlinha deve conter a letra maiúscula ‘N’.",
+    "constraints": "- −100 ≤ X ≤ 100\n- −100 ≤ Y ≤ 100",
+    "examples": [
+        {
+            "input": "6\n-2",
+            "output": "N"
+        },
+        {
+            "input": "8\n2",
+            "output": "S"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2023",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "geometria",
+        "condicional",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

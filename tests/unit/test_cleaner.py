@@ -81,4 +81,26 @@ def test_validate_and_cleanup_question_without_tests(tmp_path):
     kept = cleaner.validate_and_cleanup_question(q_dir, valid_pairs=[])
 
     assert kept is False
-    assert not q_dir.exists()
+    assert q_dir.exists()
+    assert (q_dir / "problem.json").exists()
+
+
+def test_migrate_legacy_directories(tmp_path):
+    output_dir = tmp_path / "output_with_code"
+    cadernos_dir = tmp_path / "cadernos"
+
+    # Criar cadernos com p1
+    (cadernos_dir / "2025" / "p1").mkdir(parents=True)
+
+    # Criar output com n1 espurio
+    n1_dir = output_dir / "2025" / "n1" / "Pizzaria"
+    n1_dir.mkdir(parents=True)
+    (n1_dir / "problem.json").write_text('{"title": "Pizzaria", "level": "N1", "year": "2025"}')
+
+    cleaner = DatasetCleaner()
+    migrated_count = cleaner.migrate_legacy_directories(output_dir, cadernos_dir)
+
+    assert migrated_count == 1
+    assert (output_dir / "2025" / "p1" / "Pizzaria" / "problem.json").exists()
+    assert not (output_dir / "2025" / "n1").exists()
+

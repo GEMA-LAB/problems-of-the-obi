@@ -1,0 +1,29 @@
+{
+    "title": "Tarzan",
+    "statement": "Nome do arquivo fonte: tarzan.c, tarzan.cpp, tarzan.pas, tarzan.java, ou tarzan.py\nTarzan vive na floresta e é o responsável por manter a ordem na região onde vive. Para locomover-se entre as\nárvores ele só usa cipós pois esse é um meio de transporte muito mais rápido e seguro do que andar no chão da\nselva, além de, é claro, poder soltar seu grito característico enquanto viaja.\nOs cipós das árvores têm todos o mesmo alcance. Dessa forma, é possível viajar de cipó de uma árvore para\noutra se a distância entre elas é no máximo D, onde D é o alcance dos cipós.\nRecentemente uma forte chuva assolou a região e derrubou algumas árvores, restando na floresta apenas N\nárvores. Agora Tarzan quer saber se ele consegue viajar de cipó entre todas árvores remanescentes para poder\ncontinuar mantendo a ordem na região.\nPara poder manter a ordem ele precisa ser capaz de, partindo de qualquer uma das árvores, poder chegar a\ntodas as outras árvores remanescentes, possivelmente passando por outras árvores no caminho, sempre utilizando\nsomente cipós.",
+    "input": "A primeira linha da entrada contém dois inteiros, N e D, indicando respectivamente o número de árvores\nremanescentes e o alcance dos cipós.\nCada uma das N linhas seguintes contém dois inteiros Xi e Yi, as\ncoordenadas da i-ésima árvore. Não existem duas árvores com as mesmas coordenadas.",
+    "output": "Seu programa deve escrever uma única linha, contendo um único caractere: ‘S’ se Tarzan consegue viajar de\ncipó entre todas as árvores remanescentes, e ‘N’ caso contrário.\nInformações sobre a pontuação\n• Em um conjunto de casos de teste que totaliza 30 pontos, N ≤10\n• Em um conjunto de casos de teste que totaliza 70 pontos, N ≤100",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "4 5\n1 1\n6 1\n6 6\n11 6",
+            "output": "S"
+        },
+        {
+            "input": "4 5\n1 1\n6 6\n11 6\n13 8",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2012",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

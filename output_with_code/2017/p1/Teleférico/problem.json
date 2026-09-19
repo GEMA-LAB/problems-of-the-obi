@@ -1,0 +1,33 @@
+{
+    "title": "Teleférico",
+    "statement": "Nome do arquivo: teleferico.c, teleferico.cpp, teleferico.pas, teleferico.java,\nteleferico.js ou teleferico.py\nA turma do colégio vai fazer uma excursão na serra e todos os alunos e monitores vão tomar um\nteleférico para subir até o pico de uma montanha. A cabine do teleférico pode levar C pessoas no\nmáximo, contando alunos e monitores, durante uma viagem até o pico. Por questão de segurança,\ntem que ter pelo menos um monitor dentro da cabine junto com os alunos. Por exemplo, se cabem\nC = 10 pessoas na cabine e a turma tem A = 20 alunos, o colégio poderia fazer três viagens: a\nprimeira com 8 alunos e um monitor; a segunda com 6 alunos e um monitor; e a terceira com 6\nalunos e um monitor. Você consegue ver que não seria possível fazer apenas duas viagens?\nDados como entrada a capacidade C da cabine e o número total A de alunos, você deve escrever\num programa para calcular o número mínimo de viagens do teleférico.",
+    "input": "A primeira linha da entrada contém um inteiro C, representando a capacidade da cabine. A segunda\nlinha da entrada contém um inteiro A, representando o número total de alunos na turma.",
+    "output": "Seu programa deve imprimir uma linha contendo um número inteiro representando o número mínimo\nde viagens do teleférico para levar todos os alunos até o pico da montanha.",
+    "constraints": "- 2 ≤C ≤100 e 1 ≤A ≤1000",
+    "examples": [
+        {
+            "input": "10\n20",
+            "output": "3"
+        },
+        {
+            "input": "12\n55",
+            "output": "5"
+        },
+        {
+            "input": "100\n87",
+            "output": "1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2017",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}
