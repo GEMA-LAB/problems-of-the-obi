@@ -1,0 +1,35 @@
+{
+    "title": "Camisetas da Olimpíada",
+    "statement": "Nome do arquivo:“camisetas.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nA Olimpíada Municipal de Programação vai distribuir camisetas para os melhores colocados, e por\nisso solicitou que os premiados informassem o tamanho preferido da camiseta, entre os tamanhos\npequeno e médio.\nA empresa que confeccionou as camisetas, por uma falha, pode ter se enganado na quantidade de\ncamisetas para cada tamanho. Foram produzidas camisetas em número suﬁciente para todos os\npremiados, mas talvez não do tamanho preferido.\nDadas a lista com os tamanhos preferidos pelos premiados e a quantidade de camisetas de cada\ntamanho produzidas pela empresa, escreva um programa para determinar se todos os premiados\nreceberão camisetas do tamanho escolhido.",
+    "input": "A primeira linha contém um inteiroN, o número de premiados. A segunda linha contémN inteiros\nTi, indicando os tamanhos solicitados pelos premiados, sendo queTi = 1 representa o tamanho\npequeno e Ti = 2 representa o tamanho médio. A terceira linha contém um inteiroP, o número de\ncamisetas de tamanho pequeno produzidas. A quarta e última contém um inteiroM, o número de\ncamisetas de tamanho médio produzidas.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único caractere, que deve ser a letra\nmaiúscula ‘S’ se todos os premiados serão atendidos com a camiseta do tamanho que escolheram,\nou a letra maiúscula ‘N’ caso contrário.",
+    "constraints": "- 1 ≤ N ≤ 1000\n- 0 ≤ P ≤ 1000\n- 0 ≤ M ≤ 1000\n- N ≤ P + M\n- 1 ≤ Xi ≤ 2 para 1 ≤ i ≤ N",
+    "examples": [
+        {
+            "input": "5\n1 1 2 1 2\n3\n2",
+            "output": "S"
+        },
+        {
+            "input": "4\n2 2 2 2\n1\n3",
+            "output": "N"
+        },
+        {
+            "input": "6\n1 1 1 2 1 1\n4\n4",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "contagem",
+        "vetores",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

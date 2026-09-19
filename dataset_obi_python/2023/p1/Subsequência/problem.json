@@ -1,0 +1,31 @@
+{
+    "title": "Subsequência",
+    "statement": "Nome do arquivo:subsequencia.c, subsequencia.cpp, subsequencia.java, subsequencia.js\nou subsequencia.py\nVocê foi contratado pela Agência Extra-Espacial Brasileira, que procura indícios de vida extra-\nterrestre.\nUm dos telescópios da Agência, para o espectro ultravioleta, gera uma sequência de valores inteiros\npositivos que devem ser analisados continuamente. Dadas duas sequênciasSA e SB, sua primeira\nmissão é determinar seSB é umasubsequência de SA.\nUma subsequência de uma dada sequênciaS é um conjunto de elementos deS que não são neces-\nsariamente adjacentes mas que mantêm a mesma ordem em que aparecem emS. Por exemplo,[2],\n[1, 4], [1, 2, 4] e [1, 2, 3, 4] são subsequências de[1, 2, 3, 4], mas [4, 3], [3, 4, 1] e [1, 3, 5] não são.",
+    "input": "A primeira linha contém dois inteiros A e B, o número de elementos das sequências. A segunda\nlinha contém A inteirosXi, os números da sequênciaSA. A seguir a entrada contém B inteirosYi,\nos números da sequênciaSB.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único caractere, que deve ser a letra\nmaiúscula ‘S’ se SB é uma subsequência daSA ou a letra maiúscula ‘N’ caso contrário.",
+    "constraints": "- 1 ≤ A ≤ 105\n- 1 ≤ B ≤ A\n- −109 ≤ Xi ≤ 109 para 1 ≤ i ≤ A\n- −109 ≤ Yi ≤ 109 para 1 ≤ i ≤ B",
+    "examples": [
+        {
+            "input": "5 3\n1 2 3 4 5\n2 3 5",
+            "output": "S"
+        },
+        {
+            "input": "5 4\n8 17 8 21 23\n8 8 21 22",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2023",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "strings",
+        "dois ponteiros",
+        "guloso"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

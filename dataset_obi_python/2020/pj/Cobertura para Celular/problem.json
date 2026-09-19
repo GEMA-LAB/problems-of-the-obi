@@ -1,0 +1,34 @@
+{
+    "title": "Cobertura para Celular",
+    "statement": "Nome do arquivo:“celular.x”,onde x deve ser c, cpp, pas, java, js, py2.py ou py3.py\nPara atrair mais turistas, o governo decidiu permitir a instalação de uma rede de telefonia celular\nno paradisíaco arquipélago de Logarium. O arquipélago tem muitas ilhas no formato circular, todas\ncom no máximo 1 km de diâmetro.\nExatamente uma torre de celular será instalada no centro de cada uma das ilhas. Todas as torres\nserãoidênticaseterãoomesmoalcance; o alcanceéadistânciamáximadatorrequeumequipamento\n(telefone ou outra torre) pode estar de forma que a comunição seja possível.\nO governo deseja que a rede de telefonia celular garanta acobertura totaldo arquipélago, ou seja,\ndeve ser possível a um usuário comunicar-se com qualquer outro usuário no arquipélago, mesmo\nque a comunicação tenha que passar por mais de uma torre.\nHá vários tipos de torres disponíveis no mercado, cada tipo com um alcance. O governo recebeu\numa proposta atrativa de uma empresa e deseja saber se o alcance da torre ofertada permitirá a\ncobertura total do arquipélago.\nDadas a localização das torres e o alcance da torre ofertada, escreva um programa para determinar\nse a torre ofertada permite a cobertura total do arquipélago.",
+    "input": "A primeira linha da entrada contém um inteiroN indicando o número de ilhas do arquipélago.\nCada uma das N linhas seguintes contém dois inteirosXi e Yi, as coordenadas da i-ésima torre.\nNão existem duas torres com as mesmas coordenadas. A última linha da entrada contém um inteiro\nA indicando o alcance da torre.",
+    "output": "Seu programa deve produzir uma única linha na saída, contendo um único caractere, que deve ser\nS se a torre permite a cobertura total ouN caso contrário.",
+    "constraints": "- 2 ≤ N ≤ 10000\n- 0 ≤ Xi, Yi ≤ 1000, para 1 ≤ i ≤ N\n- 1 ≤ A ≤ 10000",
+    "examples": [
+        {
+            "input": "3\n200 200\n400 400\n600 600\n200",
+            "output": "N"
+        },
+        {
+            "input": "5\n10 10\n10 30\n30 10\n30 30\n20 20\n20",
+            "output": "S"
+        },
+        {
+            "input": "3\n0 0\n40 0\n0 30\n49",
+            "output": "S"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "pj",
+    "period": "Fase 3",
+    "topics": [
+        "geometria",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

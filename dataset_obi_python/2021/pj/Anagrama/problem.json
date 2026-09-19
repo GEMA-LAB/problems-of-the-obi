@@ -1,0 +1,39 @@
+{
+    "title": "Anagrama",
+    "statement": "Nome do arquivo:“anagrama.x”,onde x deve ser c, cpp, pas, java, js ou py\nUma palavraA é umanagrama de outra palavraB se podemos transformar a palavraA na palavra\nB apenas trocando de posição as letras da palavraA. Por exemplo, “iracema” é um anagrama de\n“america”, e “estudo” é um anagrama de “duetos”.\nPodemos estender o conceito de anagramas para frases, desconsiderando caracteres que não são\nletras, apenas separam as palavras da frase. Assim, por exemplo, “porta coral” é um anagrama de\n“claro trapo”. Também não é necessário que a palavra exista em alguma língua: “aca aaa bb b” é\num anagrama de “ba.ba,aab ac”.\nDadas duas frases, escreva um programa para determinar se elas são anagramas.",
+    "input": "A primeira linha da entrada contém um inteiroN, indicando o número de letras e espaços das\nfrases. As duas linhas seguintes contêm respectivamente a fraseA e a fraseB, cada linha contendo\nexatamente N caracteres, entre letras, espaços em branco, vírgulas e pontos.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único caractere, que deve serS se a\nfrase for um anagrama ouN caso contrário.",
+    "constraints": "- 1 ≤ N ≤ 200\n- Os únicos caracteres emA e B são letras minúsculas, espaços em branco, vírgulas e pontos.",
+    "examples": [
+        {
+            "input": "11\nporta coral\nclaro trapo",
+            "output": "S"
+        },
+        {
+            "input": "1\na\nb",
+            "output": "N"
+        },
+        {
+            "input": "12\naca aaa bb b\nba.ba,aab ac",
+            "output": "S"
+        },
+        {
+            "input": "2\na\naa",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "strings",
+        "contagem",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

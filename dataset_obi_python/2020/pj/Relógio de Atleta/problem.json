@@ -1,0 +1,39 @@
+{
+    "title": "Relógio de Atleta",
+    "statement": "Nome do arquivo:“relogio.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nUma empresa está desenvolvendo um novo relógio eletrônico para atletas de alto desempenho. Uma\ndas funcionalidades do novo relógio é que ele vai medir afrequência cardíaca atual(batidas do\ncoração por minuto) e acapacidade de oxigenação atualdo atleta. O relógio também vai calcular\ne armazenar afrequência cardíaca em repousodo atleta.\nOs projetistas querem que o relógio emita um aviso para o atleta de que ele ou ela deve:\n• diminuir o ritmo do exercício se a frequência cardíaca atual é maior do que três vezes a\nfrequência cardíaca em repousoou a capacidade de oxigenação atual é menor do que 95;\n• aumentar o ritmo do exercício se a frequência cardíaca atual é menor do que duas vezes\nfrequência cardíaca em repousoe a capacidade de oxigenação atual é maior do que 97;\n• manter o ritmo de exercício se nenhuma das condições anteriores ocorrer.\nDadas a frequência cardíaca em repouso, a frequência cardíaca atual e a capacidade de oxigenação\natual obtidas pelo relógio, escreva um programa que produza a sugestão que o relógio deve emitir.",
+    "input": "A entrada é composta por três linhas, cada uma contendo um único número inteiro. A primeira\nlinha contém o inteiroR, a frequência cardíaca em repouso do atleta. A segunda linha contém o\ninteiro F, a frequência cardíaca atual do atleta. A terceira linha contém o inteiroC, a capacidade\nde oxigenação atual do atleta.",
+    "output": "Seu programa deve produzir uma única linha, contendo uma única palavra, em letras minúsculas,\nque deve ser ‘aumentar’, ‘diminuir’, ou ‘manter’, de acordo com os critérios estabelecidos acima.",
+    "constraints": "- 35 ≤ R ≤ 100\n- 35 ≤ F ≤ 200\n- 50 ≤ C ≤ 100",
+    "examples": [
+        {
+            "input": "60\n119\n98",
+            "output": "aumentar"
+        },
+        {
+            "input": "60\n190\n100",
+            "output": "diminuir"
+        },
+        {
+            "input": "50\n100\n95",
+            "output": "manter"
+        },
+        {
+            "input": "50\n100\n94",
+            "output": "diminuir"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "aritmética",
+        "condicional",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,29 @@
+{
+    "title": "Postes",
+    "statement": "Nome do arquivo: postes.c, postes.cpp, postes.pas, postes.java, postes.js, postes.py2 ou\npostes.py3\nSeu João é proprietário de uma enorme fazenda, protegida por uma cerca formada por postes de\nmadeira e arame farpado. Cada poste da cerca tem 1 metro de altura. Os postes são colocados\nseparados dois metros um dos outros, ao redor de toda a fazendo, e portanto muitos postes são\nutilizados.\nInfelizmente um incêndio destruiu uma grande parte dos postes da cerca. Alguns postes, mesmo\num pouco queimados, ainda podem ser utilizados, desde que sejam reforçados. Outros estão irre-\nmediavelmente inutilizados e devem ser substituídos por postes novos.\nO engenheiro que trabalha para o Seu João percorreu toda a cerca e fez uma lista dos tamanhos de\ncada poste depois do incêndio. O engenheiro determinou que, se o poste tem menos do que 50 cm,\nele deve ser substituído. Se o poste tem ao menos 50 cm, mas menos do que 85 cm, ele deve ser\nconsertado. Se o poste tem 85 cm ou mais, ele não necessita conserto e pode ser usado normalmente.\nDada a lista com os tamanhos de cada poste, você deve escrever um programa para determinar o\nnúmero de postes que devem ser substituídos e o número de postes que devem ser reforçados para\nconsertar a cerca da fazenda do Seu João.",
+    "input": "A primeira linha da entrada contém um inteiro N, indicando o número de postes da cerca.\nA\nsegunda linha contém N números inteiros Xi, indicando os tamanhos dos postes após o incêndio.",
+    "output": "Seu programa deve produzir uma única linha, contendo dois inteiros: o número de postes que devem\nser substituídos, seguido do número de postes que devem ser consertados.",
+    "constraints": "- 3 ≤N ≤1000\n- 0 ≤Xi ≤100",
+    "examples": [
+        {
+            "input": "5\n85 49 50 84 50",
+            "output": "1 3"
+        },
+        {
+            "input": "4\n48 49 30 47",
+            "output": "4 0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2017",
+    "level": "p2",
+    "period": "Fase 3",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

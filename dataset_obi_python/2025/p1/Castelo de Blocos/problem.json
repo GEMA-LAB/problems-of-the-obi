@@ -1,0 +1,36 @@
+{
+    "title": "Castelo de Blocos",
+    "statement": "Durante uma tarde chuvosa, os irmãos Ana e Bruno decidiram construir um imenso castelo de blocos na sala de estar. Cada bloco foi cuidadosamente posicionado de modo que alguns sirvam de 'base' para sustentar outros.\n\nPodemos representar cada bloco com um número de 1 a N, e dizer que se o bloco u serve de base para sustentar o bloco v, então v se apoia diretamente no bloco u, formando uma relação de apoio entre os blocos. Se um bloco w se apoia diretamente em v e v se apoia diretamente em u, dizemos que w se apoia indiretamente em u e nos blocos em que u se apoia (direta ou indiretamente). Observe que é possível que um bloco se apoie diretamente em mais de um bloco e é possível que um bloco seja apoio direto para vários outros blocos. Porém, a estrutura desse castelo é muito particular: um bloco nunca se apoia direta ou indiretamente em si mesmo, então não existem ciclos de apoios.\n\nDepois de horas de trabalho, os irmãos decidiram que seria muito legal construir um segundo castelo, porém eles já tinham usado todos os blocos no primeiro. Por isso, Bruno propôs o seguinte: ele iria retirar uma sequência específica de K blocos B1, B2, ..., BK (nesta ordem, sem repetições) do primeiro castelo para usarem na nova construção. No passo i, Bruno tentará cuidadosamente retirar o bloco Bi do castelo.\n\nNo entanto, Ana reparou que um problema surge imediatamente após a remoção de cada bloco:\n- Os blocos não são de boa qualidade, então qualquer bloco que perca todos os blocos em que se apoiava diretamente no castelo despenca e se quebra.\n- A retirada ou quebra de um bloco pode causar novas quebras em cascata, ou seja, se um bloco é retirado ou quebra, os blocos que se apoiavam nele também podem ficar sem suporte e, consequentemente, despencar e quebrar, e assim sucessivamente.\n\nAlém disso, Ana também reparou que Bruno pode não conseguir retirar todos os blocos que deseja, já que alguns deles já poderiam ter sido quebrados nesse processo.\n\nSua tarefa é ajudar os irmãos a determinar, após Bruno seguir toda a sequência de retiradas, quantos blocos se quebraram no total nesse catastrófico processo!",
+    "input": "A primeira linha da entrada contém três inteiros N, M e K, representando respectivamente o número total de blocos no castelo dos irmãos, o número de relações de apoio entre os blocos e o número de blocos que Bruno planeja retirar.\nAs próximas M linhas contêm dois inteiros cada uma. A i-ésima destas linhas contém os inteiros ui e vi, indicando que o bloco vi se apoia diretamente no bloco ui.\nA última linha contém K inteiros B1, B2, ..., BK, representando a sequência de blocos que Bruno tentará retirar, nesta ordem. É garantido que todos os Bi são distintos.",
+    "output": "Seu programa deve imprimir uma única linha contendo um único inteiro: o número total de blocos que se quebraram ao final de todas as operações.",
+    "constraints": "- 1 ≤ N ≤ 100000\n- 1 ≤ M ≤ 200000\n- 1 ≤ K ≤ N\n- 1 ≤ ui, vi ≤ N\n- 1 ≤ Bi ≤ N\n- Todos os Bi são distintos\n- As relações de apoio garantem que um bloco nunca se apoia em si mesmo, direta ou indiretamente, e não formam ciclos de dependência",
+    "examples": [
+        {
+            "input": "3 2 1\n1 2\n1 3\n1",
+            "output": "2"
+        },
+        {
+            "input": "4 3 2\n1 2\n2 3\n2 4\n2 3",
+            "output": "2"
+        },
+        {
+            "input": "5 4 3\n1 2\n2 3\n1 4\n4 5\n1 3 5",
+            "output": "4"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2025",
+    "level": "p1",
+    "period": "Competição Feminina",
+    "topics": [
+        "grafos",
+        "DAG",
+        "fila",
+        "ordenação topológica"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 1024
+}

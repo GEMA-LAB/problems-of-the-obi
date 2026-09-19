@@ -1,0 +1,39 @@
+{
+    "title": "Alfabeto Alienígena",
+    "statement": "Nome do arquivo:alfabeto.c, alfabeto.cpp, alfabeto.java, alfabeto.js ou alfabeto.py\nMais uma vez, o OBI (Órgão Brasileiro de Inteligência) está preocupado com a possibilidade da\nexistência de vida alienígena. Os diretores do órgão suspeitam que os alienígenas existem, conse-\nguiram se infiltrar dentro da instituição e tem se comunicado secretamente. Os agentes do OBI\nse comunicam usando o dispositivo de mensagens oficial do órgão, que possui as seguintes teclas:\nletras maiúsculas deA a Z, letras minúsculas dea a z, dígitos de0 a 9, operadores aritméticos (+,\n-, *, /), hashtag (#) e ponto de exclamação (!).\nO OBI descobriu que, sempre que dois alienígenas se comunicam entre si usando o dispositivo, eles\nusam um alfabeto alienígena que possui um conjunto específico de símbolos. Assim, uma mensagem\npode ter sido escrita por alienígenas se, e somente se, todos os símbolos que compõem ela pertencem\nao alfabeto alienígena. Por exemplo, se o alfabeto alienígena for composto pelas caracteres!, 1, o\ne b, a mensagemob1!! é uma mensagem que poderia ser escrita por alienígenas. Por outro lado,\na mensagem Obi! não poderia ter sido escrita por alienígenas pois tanto o primeiro caractereO\n(maiúsculo) quanto o terceiro caracterei não fazem parte do alfabeto alienígena.\nVocê foi contratado para ajudar o OBI a identificar os invasores: dadas a lista de caracteres usados\nno alfabeto alienígena e uma mensagem enviada pelo dispositivo, determine se a mensagem poderia\nter sido escrita por alienígenas ou não.",
+    "input": "A primeira linha de entrada contém dois inteiros K e N separados por um espaço em branco,\nindicando, respectivamente, o número de caracteres presentes no alfabeto alienígena e o número de\ncaracteres da mensagem enviada.\nA segunda linha de entrada contémK caracteres distintos representando os caracteres pertencentes\nao alfabeto alienígena.\nA terceira linha de entrada contémN caracteres (não necessariamente distintos) representando a\nmensagem enviada.",
+    "output": "Seu programa deverá imprimir uma única linha contendo um único caractere: se a mensagem pode\nter sido escrita no alfabeto alienígena, imprima a letra ‘S’ maiúscula; caso contrário, imprima a\nletra ‘N’ maiúscula.",
+    "constraints": "- 1≤ K≤ 68\n- 1≤ N≤ 1000\n- Todos os caracteres usados no alfabeto ou na mensagem pertencem à lista a seguir:\n- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-*/#!",
+    "examples": [
+        {
+            "input": "4 5\n!1ob\nob1!!",
+            "output": "S"
+        },
+        {
+            "input": "1 5\na\naabab",
+            "output": "N"
+        },
+        {
+            "input": "26 32\nabcdefghijklmnopqrstuvwxyz\nolimpiadabrasileiradeinformatica",
+            "output": "S"
+        },
+        {
+            "input": "11 7\n0123+-!ABCD\nOBI!OBI",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2024",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "strings",
+        "conjuntos",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

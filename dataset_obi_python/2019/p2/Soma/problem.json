@@ -1,0 +1,31 @@
+{
+    "title": "Soma",
+    "statement": "Nome do arquivo:“soma.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nTemos uma sequência de N quadrados desenhados lado a\nlado. Cada quadrado possui um número natural anotado\ndentro dele. Dados a sequência dosN quadrados e um va-\nlor K, quantos retângulos distintos existem cuja soma dos\nnúmeros dentro do retângulo é exatamente igual aK? Por\nexemplo, a ﬁgura mostra uma sequência deN = 10 quadra-\ndos para a qual existem5 retângulos cuja soma dos números\né igual aK = 4.\n2 0 0 0 1 1 1 4 8 3\n2 0 0 0 1 1 1 4 8 3\n2 0 0 0 1 1 1 4 8 3\n2 0 0 0 1 1 1 4 8 3\n2 0 0 0 1 1 1 4 8 3",
+    "input": "A primeira linha da entrada contém dois inteirosN e K representando o número de quadrados na\nsequência e o valor da soma desejada. A segunda linha da entrada contémN números naturais Xi,\npara 1≤ i≤ N, indicando a sequência de números anotados dentro dos quadrados.",
+    "output": "Seu programa deve imprimir uma linha contendo um número inteiro representando quantos retân-\ngulos existem na sequência cuja soma é igual aK.",
+    "constraints": "- 1≤ N≤ 500000 (5× 105)\n- 0≤ K≤ 106\n- 0≤ Xi≤ 100 para 1≤ i≤ N",
+    "examples": [
+        {
+            "input": "10 4\n2 0 1 1 0 0 8 4 1 3",
+            "output": "5"
+        },
+        {
+            "input": "15 0\n0 0 0 0 0 5 12 0 1 0 0 0 51 0 0",
+            "output": "25"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "p2",
+    "period": "Fase 1",
+    "topics": [
+        "dois ponteiros",
+        "vetores",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

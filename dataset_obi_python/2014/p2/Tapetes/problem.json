@@ -1,0 +1,33 @@
+{
+    "title": "Tapetes",
+    "statement": "Nome do arquivo fonte: tapetes.c, tapetes.cpp, tapetes.pas, tapetes.java, ou tapetes.py\nNlogonia é conhecida por sua indústria de tradicionais tapetes quadrados, que são produzidos apenas\ncom dimensões inteiras, para todos os números inteiros positivos. Quer dizer, os tapetes são de\ndimensão 1 × 1, 2 × 2, 3 × 3, e assim por diante. João Tapetão, grande empresário do setor, está\nplanejando o próximo carregamento para exportação, que deve ser de exatamente N tapetes. Os\ntapetes são sempre enrolados e colocados em um tubo, um após o outro. Por exemplo, para um\ncarregamento de N = 4 tapetes de dimensões 2 × 2, 4 × 4, 6 × 6 e 3 × 3, será necessário um tubo\nde comprimento 2 + 4 + 6 + 3 = 15. A questão é que o preço do tapete é proporcional à sua área,\nde modo que quanto maior a soma das áreas dos tapetes, maior o lucro do Tapetão. No exemplo\nanterior, a soma das áreas é 22 + 42 + 62 + 32 = 65. Só que daria para lucrar mais, com o mesmo\ntubo de comprimento 15, se o carregamento fosse com quatro tapetes de dimensões 1 × 1, 4 × 4,\n7 × 7 e 3 × 3, cuja soma das áreas dá 75. Será que daria para lucrar ainda mais?\nO navio chegou e Tapetão precisa embarcar o carregamento. Há apenas um tubo de comprimento\nL e o carregamento deve conter exatamente N tapetes. Qual é a maior soma possível das áreas dos\nN tapetes que poderá ser transportada?",
+    "input": "A primeira e única linha da entrada contém dois inteiros, L e N, o comprimento do tubo e a\nquantidade de tapetes que deve transportada, respectivamente.",
+    "output": "Seu programa deve produzir uma única linha, contendo apenas um inteiro, a maior soma possível\ndas áreas dos tapetes.",
+    "constraints": "- N ≤L\n- 1 ≤L ≤106 e 1 ≤N ≤105",
+    "examples": [
+        {
+            "input": "2 2",
+            "output": "2"
+        },
+        {
+            "input": "10 5",
+            "output": "40"
+        },
+        {
+            "input": "1000000 9",
+            "output": "999984000072"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2014",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

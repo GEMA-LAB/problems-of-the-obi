@@ -1,0 +1,33 @@
+{
+    "title": "Arco e flecha",
+    "statement": "Nome do arquivo: arco.c, arco.cpp, arco.pas, arco.java, arco.js ou arco.py\nO comitê olímpico está testando uma nova forma de pontuar as\ncompetições de arco e flecha, baseada em penalidades. O atleta\nvai atirar N flechas no alvo, em sequência. A penalidade PK\nda K-ésima flecha atirada é computada imediatamente após ela\natingir o alvo, antes do próximo lançamento, e é igual ao número\nde flechas que estão no alvo naquele momento cuja distância ao\ncentro do alvo é menor ou igual à distância da K-ésima flecha\nao centro, excluindo a própria K-ésima flecha.\nQuer dizer, a\npenalidade é o número das K −1 flechas lançadas antes da K-\nésima flecha que estão mais próximas ou à mesma distância do\ncentro do alvo, comparadas com a K-ésima flecha.\nNeste problema, o centro do alvo está na origem (0, 0). Dada a sequência de coordenadas dos pontos\nem que as sucessivas flechas atingiram o alvo, seu programa deve computar a penalidade de cada\nflecha.\nPorém, para dificultar um pouco, você deverá computar a penalidade de cada flecha antes de saber\nas coordenadas dos pontos posteriores. Para descobrir as coordenadas reais da K-ésima flecha (XR\ne Y R), você deverá somar a penalidade conquistada pela flecha anterior às coordenadas X e Y\nfornecidas na entrada. Ou seja, XR\nK = XK + PK−1 e Y R\nK = YK + PK−1. Para a primeira flecha,\nXR\n1 = X1 e Y R\n1 = Y1.",
+    "input": "A primeira linha da entrada contém um inteiro N, representando a quantidade de flechas lançadas.\nCada uma das N linhas seguintes contém dois inteiros, XK e YK, indicando as coordenadas que\ndevem ser usadas para calcular o ponto em que cada flecha atingiu o alvo, definindo a sequência de\nlançamentos.",
+    "output": "Você deve imprimir N linhas.\nPara 1 ≤K ≤N, a K-ésima linha deve conter um inteiro PK\nrepresentando a penalidade que o atleta rebeceu pela K-ésima flecha.",
+    "constraints": "- 1 ≤N ≤105\n- −106 ≤XR, Y R ≤106",
+    "examples": [
+        {
+            "input": "2\n1 3\n5 4",
+            "output": "0\n1\n\n9"
+        },
+        {
+            "input": "4\n-100 85\n-25 -60\n18 33\n0 0",
+            "output": "0\n0\n0\n0"
+        },
+        {
+            "input": "6\n1 1\n2 2\n2 2\n3 3\n1 1\n3 3",
+            "output": "0\n1\n2\n3\n3\n5"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2016",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

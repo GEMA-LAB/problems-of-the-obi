@@ -1,0 +1,35 @@
+{
+    "title": "Game Show",
+    "statement": "Nome do arquivo:game.c, game.cpp, game.java, game.js ou game.py\nPopulares no mundo inteiro, osgame shows são programas de televisão ou internet nos quais os\nparticipantes competem em jogos para ganhar prêmios. A rede de televisão da sua cidade lançou\num novogame show que funciona da seguinte forma:\n• O jogo é jogado por um único participante e possui diversas salas numeradas a partir do\nnúmero 1.\n• Ao entrar em uma sala, o participante deve escolher seguir por uma das duas portas à sua\nfrente: a porta da esquerda e a porta da direita. Na salai, a porta da esquerda leva à sala\n2· i enquanto que a porta da direita leva à sala2· i + 1. Por exemplo, na sala1, a porta da\nesquerda leva à sala2 e a porta da direita leva à sala3. Da mesma forma, a porta da esquerda\nda sala 2 leva à sala2· 2 = 4 e a porta da direita da sala4 leva à sala2· 4 + 1 = 9.\n• No início do jogo, o participante é colocado na sala de número1, em frente às portas para as\nsalas 2 e 3, e recebe um papel com uma sequência de instruções indicando por qual porta ele\ndeve seguir a cada momento do jogo. Cada instrução é representada por uma letraE ou D,\nindicando que ele deve seguir pela porta da esquerda ou da direita, respectivamente.\n• As salas não possuem indicação de seus números e o desafio é não perder as contas: o parti-\ncipante ganha o jogo se ele conseguir chegar na sala final correta (ou seja, seguir pela porta\ncorreta a cada passo de acordo com as instruções) e, ao chegar nesta sala final, dizer correta-\nmente o número dela.\nPor exemplo, suponha que a sequência de instruções sejaEEDE. Isso significa que o participante deve\nescolher as portas esquerda, esquerda, direita e esquerda, nesta ordem. Podemos ver no diagrama\nabaixo que, neste caso, o participante termina na sala de número18. Portanto, ao chegar na última\nsala, o participante deve dizer o número18 para vencer.\n1 E− →2 E− →4 D− →9 E− →18\nVocê se inscreveu para participar dogame show, mas percebeu que ele exige muita habilidade com\ncálculos matemáticos e decidiu praticar. Para isso, você quer escrever um programa que te ajude a\nconferir os cálculos. Dada uma sequência de instruções, determine qual o número da sala na qual o\nparticipante terminará o jogo se ele seguir corretamente as instruções.",
+    "input": "A primeira linha da entrada contém um inteiroN, o número de instruções dadas no início do jogo.\nA segunda e última linha contém uma cadeia deN caracteres a1a2 . . . aN, cada um deles sendo ‘E’\nou ‘D’, indicando as instruções dadas no início do jogo. Noi-ésimo passo, seai = ‘E’ o participante\ndeve escolher a porta da esquerda e seai = ‘D’ ele deve escolher a porta da direita.",
+    "output": "Seu programa deverá imprimir uma única linha contendo um único inteiro, o número da sala final\ncaso o participante siga corretamente as instruções.",
+    "constraints": "- 1≤ N≤ 20\n- ai = ‘E’ ou ‘D’ para 1≤ i≤ N",
+    "examples": [
+        {
+            "input": "4\nEEDE",
+            "output": "18"
+        },
+        {
+            "input": "2\nED",
+            "output": "5"
+        },
+        {
+            "input": "8\nEEEEEEEE",
+            "output": "256"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2024",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "programação dinâmica",
+        "ad-hoc",
+        "laços"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

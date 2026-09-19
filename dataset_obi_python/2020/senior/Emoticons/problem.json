@@ -1,0 +1,39 @@
+{
+    "title": "Emoticons",
+    "statement": "Nome do arquivo:“emoticons.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nEmoticons são símbolos usados para expressar o sentimento de quem escreve uma mensagem. Scott\nFahlman, um professor de uma universidade americana, foi o primeiro a propor o uso das sequências\nde caracteres :-) e :-(, que viraram respectivamente símbolos para “divertido” e “chateado”.\nVamos deﬁnir osentimento expresso em uma mensagem como sendo:\n• neutro: se o número de símbolos “divertido” é igual ao número de símbolos “chateado”;\n• divertido: seonúmerodesímbolos“divertido” émaiordoquenúmerodesímbolos“chateado”;\n• chateado: se o número de símbolos “chateado” é maior do que número de símbolos “divertido”;\nDada uma mensagem composta por uma cadeia de caracteres, escreva um programa para determinar\no sentimento expresso na mensagem.",
+    "input": "A primeira e única linha da entrada contém a mensagemM como uma cadeia de caracteres.",
+    "output": "Seu programa deve produzir uma única linha, contendo uma única palavra, o sentimento expresso\nna mensagem da entrada.",
+    "constraints": "- 3 ≤ comprimento de M ≤ 280\n- M é composta por letras não acentuadas, espaços em branco e os caracteres ‘(’ (abre parên-\n- teses), ‘)’ (fecha parênteses), ‘:’ (dois-pontos), ‘-’ (hífen), ‘.’ (ponto) e ‘,’ (vírgula).",
+    "examples": [
+        {
+            "input": "Espero que esteja tudo bem :-)",
+            "output": "divertido"
+        },
+        {
+            "input": "Achei o filme muito divertido.",
+            "output": "neutro"
+        },
+        {
+            "input": ":-):-(:-(:-)",
+            "output": "neutro"
+        },
+        {
+            "input": "Sonhei com a prova :-( (vou estudar).",
+            "output": "chateado"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "senior",
+    "period": "Fase 1",
+    "topics": [
+        "strings",
+        "contagem",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

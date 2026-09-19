@@ -1,0 +1,35 @@
+{
+    "title": "Pesquisa de preços",
+    "statement": "Nome do arquivo:“pesquisa.x”,onde x deve ser c, cpp, pas, java, js ou py\nUma jornalista está fazendo uma pesquisa de preços de combustíveis (álcool e gasolina), em vários\nestados do país, para uma reportagem sobre qual dos dois combustíveis é mais vantajoso para\nabastecer um carro.\nNa reportagem ela vai usar a regra de que a utilização do álcool é vantajosa quando o preço por\nlitro do álcool é no máximo igual a 70% do preço por litro da gasolina.\nEla compilou os dados da pesquisa em uma lista contendo o identiﬁcador do estado e os preços do\nlitro de álcool e do litro de gasolina, e deseja computar em quais estados é mais vantajoso usar\nálcool ou gasolina. Você pode ajudá-la?",
+    "input": "A primeira linha da entrada contém um número inteiroN, o número de estados em que a pesquisa\nfoi realizada. Cada uma dasN linhas seguintes contém o identiﬁcador do estado,E, seguido de dois\nnúmeros reais A e G, representando respectivamente o preço do litro de álcool e o preço do litro de\ngasolina.",
+    "output": "Para cada estado em que o álcool é vantajoso seu programa deve produzir uma linha, contendo\nsomente o identiﬁcador do estado, na ordem em que os estados aparecem na entrada. Se em\nnenhum estado o álcool é vantajoso, seu programa deve imprimir uma linha contendo somente o\ncaratere ’*’ (asterisco).",
+    "constraints": "- 1 ≤ N ≤ 27\n- E é uma cadeia de caracteres formada por duas letras maiúsculas sem acento; todos osE são\n- distintos.\n- 0.01 ≤ A ≤ 10.00, com precisão de dois dígitos.\n- 0.01 ≤ G ≤ 10.00, com precisão de dois dígitos.",
+    "examples": [
+        {
+            "input": "2\nAM 7.00 10.00\nRS 7.01 10.00",
+            "output": "AM"
+        },
+        {
+            "input": "3\nSP 4.90 5.80\nRJ 4.70 5.70\nPR 4.60 5.60",
+            "output": "*"
+        },
+        {
+            "input": "4\nSC 5.20 5.72\nMT 4.22 6.10\nAL 5.55 6.20\nGO 4.30 6.25",
+            "output": "MT\nGO"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "aritmética",
+        "condicional",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

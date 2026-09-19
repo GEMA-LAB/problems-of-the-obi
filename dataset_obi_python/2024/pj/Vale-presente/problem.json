@@ -1,0 +1,35 @@
+{
+    "title": "Vale-presente",
+    "statement": "Nome do arquivo:vale.c, vale.cpp, vale.java, vale.js ou vale.py\nAna, uma estudante do ensino médio, fez 15 anos recentemente e recebeu diversos vales-presentes\nde amigos e familiares para usar em suas lojas favoritas, cada um com um valor em reais diferente.\nAo usar um vale-presente, Ana pode descontar o valor dele do custo total das compras.\nAlém disso, as lojas favoritas de Ana possuem uma política de desconto especial, descrito na figura\na seguir:\nAna está muito animada para ir às compras e deseja saber qual o desconto total que ela terá se usar\num vale-presente de valor específico. Escreva um programa para ajudar Ana: determine o total de\ndesconto que ela terá ao usar o vale-presente e, se possível, o desconto adicional da loja.",
+    "input": "A entrada consiste de uma única linha contendo um único inteiroN, o valor do vale-presente em\nreais.",
+    "output": "Seu programa deverá imprimir uma única linha contendo um único inteiro, o valor total do desconto\nem reais que Ana terá se usar o vale-presente deN reais.",
+    "constraints": "- 1 ≤ N ≤ 100 000",
+    "examples": [
+        {
+            "input": "100",
+            "output": "115"
+        },
+        {
+            "input": "200",
+            "output": "215"
+        },
+        {
+            "input": "50",
+            "output": "50"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2024",
+    "level": "pj",
+    "period": "Fase Única",
+    "topics": [
+        "guloso",
+        "ordenação",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

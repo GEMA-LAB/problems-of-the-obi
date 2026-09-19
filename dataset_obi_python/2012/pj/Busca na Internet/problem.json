@@ -1,0 +1,29 @@
+{
+    "title": "Busca na Internet",
+    "statement": "Nome do arquivo fonte: busca.c, busca.cpp, busca.pas, busca.java, ou busca.py\nJoão fez uma pesquisa em seu site de busca predileto, e encontrou a resposta que estava procurando no terceiro\nlink listado. Além disso, ele viu, pelo site, que t pessoas já haviam clicado neste link antes. João havia lido\nanteriormente, também na Internet, que o número de pessoas que clicam no segundo link listado é o dobro de\nnúmero de pessoas que clicam no terceiro link listado. Nessa leitura, ele também descobriu que o número de\npessoas que clicam no segundo link é a metade do número de pessoas que clicam no primeiro link.\nJoão está intrigado para saber quantas pessoas clicaram no primeiro link da busca, e, como você é amigo dele,\nquer sua ajuda nesta tarefa.",
+    "input": "Cada caso de teste possui apenas um número, t, que representa o número de pessoas que clicaram no terceiro\nlink da busca.",
+    "output": "Para cada caso de teste imprima apenas uma linha, contendo apenas um inteiro, indicando quantas pessoas\nclicaram no primeiro link, nessa busca.",
+    "constraints": "- 1 ≤t ≤1000",
+    "examples": [
+        {
+            "input": "2",
+            "output": "8"
+        },
+        {
+            "input": "25",
+            "output": "100"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2012",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -1,0 +1,29 @@
+{
+    "title": "Caverna de Ordinskaya",
+    "statement": "Nome do arquivo: caverna.c, caverna.cpp, caverna.pas, caverna.java, caverna.js ou\ncaverna.py\nAlguns de seus amigos decidiram viajar até a Russia para explorar Ordinskaya, a caverna subaquá-\ntica mais comprida do país. Apesar da boa visibilidade das águas da caverna sempre é possível\nencontrar novas passagens e túneis que levam para longe da gruta principal, o que poderia fazer\ncom que alguém se perdesse e provavelmente congelasse nas frias temperaturas observadas ali. Para\nevitar que algo assim ocorresse durante os mergulhos, o grupo usou uma fita métrica para marcar\no caminho feito e garantir um retorno seguro. Além disso aproveitaram para medir quanto haviam\nexplorado, sempre que retornavam à superfície alguém do grupo anotava num caderno o quão longe\nhaviam ido.\nO único problema com essa estratégia é que a cada mergulho pessoas diferentes ficavam responsáveis\npor verificar a fita métrica e anotar quanto havia sido explorado. Assim, se o comprimento da fita era\n10 metros, após um mergulho em que o grupo explorou 3 metros da caverna, um dos amigos poderia\nter desenrolado a fita do começo para o fim e anotar que 3 metros foram explorados, enquanto outro\nmais desatento, sem perceber que havia desenrolado a fita no sentido contrário, poderia anotar que\n7 metros foram explorados.\nApenas no final da viagem seus amigos perceberam a bagunça feita e agora pediram sua ajuda\npara reconstruir as distâncias de fato exploradas. Você foi informado que antes da viagem o grupo\ncomprou uma fita com M metros e que no total eles fizeram N mergulhos.\nOutra informação\nimportante é que a cada novo mergulho pelo menos a mesma distância do mergulho anterior era\nexplorada, então se o comprimento da fita fosse de 10 metros e as anotações feitas fossem 3 e 8\nmetros, nessa ordem, os únicos cenários que realmente poderiam ter acontecido são:\n• 3 metros no primeiro mergulho e 8 no segundo;\n• 7 metros no primeiro mergulho e 8 no segundo.\nMas se os valores anotados foram 2 e 8, existem três possibilidades:\n• 2 metros no primeiro mergulho e 8 no segundo;\n• 2 metros no primeiro mergulho e 2 no segundo;\n• 8 metros no primeiro mergulho e 8 no segundo.\nComo pode ter ocorrido algum engano nas anotações, pode ser impossível reconstruir a sequência\noriginal, não se preocupe, todos vão entender caso isso aconteça.",
+    "input": "A primeira linha contém dois inteiros N e M, representando respectivamente a quantidade de\nmergulhos que o grupo fez e o comprimento em metros da fita que levaram para a exploração. A\nsegunda linha contém N inteiros A1, A2, ..., AN representando as medições feitas a cada mergulho,\nna ordem em que foram anotadas.",
+    "output": "Seu programa deve produzir uma única linha, contendo apenas um inteiro, que representa a soma\ndas distâncias exploradas. Caso exista mais de uma sequência possível, imprima a menor soma das\nsequencias possíveis. Se não existir nenuma sequência compatível com os dados, imprima apenas o\ninteiro -1.",
+    "constraints": "- 1 ≤N ≤104.\n- 4\n- 1 ≤M ≤5 ∗105.\n- 0 ≤Ai ≤M.",
+    "examples": [
+        {
+            "input": "5 7\n2 5 3 6 0",
+            "output": "20"
+        },
+        {
+            "input": "3 5\n2 1 2",
+            "output": "-1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2016",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

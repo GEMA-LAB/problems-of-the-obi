@@ -1,0 +1,34 @@
+{
+    "title": "Quadrado",
+    "statement": "Nome do arquivo fonte: quadrado.c, quadrado.cpp, quadrado.pas, quadrado.java, ou\nquadrado.py\nUm quadrado quase mágico, de dimensões N ×N, é um quadrado que obedece à seguinte condição.\nExiste um número inteiro positivo M tal que: para qualquer linha, a soma dos números da linha é\nigual a M; e para qualquer coluna, a soma dos números da coluna é também igual a M. O quadrado\nseria mágico, e não apenas quase mágico, se a soma das diagonais também fosse M. Por exemplo,\na figura abaixo, parte (a), apresenta um quadrado quase mágico onde M = 21.\n3\n11\n4\n8\n8\n4\n9\n6\n11\n2\n6\n6\n3\n6\n4\n7\n(a)\n(b)\n8\n8\nLaura construiu um quadrado quase mágico e alterou, propositalmente, um dos números! Nesta\ntarefa, você deve escrever um programa que, dado o quadrado quase mágico alterado por Laura,\ndescubra qual era o número original antes da alteração e qual número foi colocado no lugar. Por\nexemplo, na parte (b) da figura, o número original era 1, que Laura alterou para 7.",
+    "input": "A primeira linha da entrada contém apenas um número N, representando a dimensão do quadrado.\nAs N linhas seguintes contêm, cada uma, N números inteiros, definindo o quadrado. A entrada é\ngarantidamente um quadrado quase mágico onde exatamente um número foi alterado.",
+    "output": "Seu programa deve imprimir apenas uma linha contendo dois números: primeiro o número original\ne depois o número que Laura colocou no seu lugar.",
+    "constraints": "",
+    "examples": [
+        {
+            "input": "A primeira linha da entrada contém apenas um número N, representando a dimensão do quadrado.\nAs N linhas seguintes contêm, cada uma, N números inteiros, definindo o quadrado. A entrada é\ngarantidamente um quadrado quase mágico onde exatamente um número foi alterado.",
+            "output": "Seu programa deve imprimir apenas uma linha contendo dois números: primeiro o número original\ne depois o número que Laura colocou no seu lugar.\nRestrições\n• 3 ≤N ≤50; e o valor de todos os números está entre 1 e 10000"
+        },
+        {
+            "input": "3\n3 6 6\n8 6 7\n4 3 8",
+            "output": "1 7"
+        },
+        {
+            "input": "4\n16 3 2 13\n5 10 11 8\n8 6 7 12\n4 15 14 1",
+            "output": "9 8"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2014",
+    "level": "p1",
+    "period": "Fase 2",
+    "topics": [
+        "matrizes",
+        "simulação"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

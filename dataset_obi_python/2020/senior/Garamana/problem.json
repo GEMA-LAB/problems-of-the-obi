@@ -1,0 +1,35 @@
+{
+    "title": "Garamana",
+    "statement": "Nome do arquivo:“garamana.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nUm anagrama de uma palavra é um rearranjo das letras da palavra. Por exemplo,\n1. “rota” é um anagrama de “ator”;\n2. “amor” é um anagrama de “roma”; e\n3. os anagramas de “aab” são “aab”, “aba” e “baa”.\nUm anagrama curingade uma palavra é um anagrama em que algumas das letras podem ter sido\nsubstituídas pelo caractere ‘*’ (asterisco). Por exemplo, três possíveis anagramas curingas de “amor”\nsão “*mor”, “a**r” e “r**a”.\nDadas duas palavras, escreva um programa para determinar se a segunda palavra é um anagrama\ncuringa da primeira palavra.",
+    "input": "A primeira linha da entrada contémP, a primeira palavra. A segunda linha contémA, a segunda\npalavra.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único caractere, que deve ser ‘S’ seA é\num anagrama curinga deP, ou ‘N’ caso contrário.",
+    "constraints": "- 1≤ comprimento de P≤ 100\n- comprimento de A = comprimento de P\n- P é composta por letras minúsculas não acentuadas\n- A é composta por letras minúsculas não acentuadas e o caractere ‘*’ (asterisco)",
+    "examples": [
+        {
+            "input": "roma\nator",
+            "output": "N"
+        },
+        {
+            "input": "olimpiada\npoliamida",
+            "output": "S"
+        },
+        {
+            "input": "microfone\n*conform*",
+            "output": "S"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "senior",
+    "period": "Fase 1",
+    "topics": [
+        "strings",
+        "contagem",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

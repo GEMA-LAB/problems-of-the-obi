@@ -1,0 +1,35 @@
+{
+    "title": "Cálculo rápido",
+    "statement": "Nome do arquivo:“calculo.x”,onde x deve ser c, cpp, pas, java, js ou py\nAlgumas pessoas conseguem fazer cálculos matemáticos com uma velocidade impressionante. Lau-\nrinha tem essa habilidade! Um cálculo que ela consegue fazer muito rapidamente é, dados três\nnúmeros inteiros S, A, e B, determinar quantos números do intervalo[A, B] têm a soma de seus\ndígitos igual aS.\nPor exemplo, seS = 3, A = 10 e B = 30, então a reposta é 3, pois existem três números no intervalo\n[10, 30] cuja soma dos dígitos é igual a três: 12, 21 e 30.\nSua tarefa é escrever um programa de computador para, dados os três números, tentar calcular a\nresposta mais rapidamente do que Laurinha consegue.",
+    "input": "A primeira linha da entrada contém um número inteiroS, o valor da soma dos dígitos. A segunda\ne a terceira linhas contêm respectivamente os inteirosA e B.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, quantos números no\nintervalo dado têm a soma de dígitos indicada.",
+    "constraints": "- 1 ≤ S ≤ 36\n- 1 ≤ A ≤ 10000\n- 1 ≤ B ≤ 10000\n- A ≤ B",
+    "examples": [
+        {
+            "input": "3\n10\n30",
+            "output": "3"
+        },
+        {
+            "input": "15\n1\n20",
+            "output": "0"
+        },
+        {
+            "input": "1\n1\n10000",
+            "output": "5"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "busca completa",
+        "matemática",
+        "ad-hoc"
+    ],
+    "time_limit": 2.0,
+    "memory_limit": 256
+}
