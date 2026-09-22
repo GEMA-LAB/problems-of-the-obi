@@ -18,7 +18,6 @@ lib/
 lib64/
 parts/
 sdist/
-var/
 wheels/
 share/python-wheels/
 *.egg-info/
@@ -216,4 +215,4 @@ codigo/*
 !output/var
 
 !output_with_code/2023/p1/VAR/*
-!dataset_obi_python/2023/p1/VAR/*
+!dataset_obi_python/2023/p1/VAR
