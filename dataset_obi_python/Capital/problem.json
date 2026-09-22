@@ -1,0 +1,33 @@
+{
+    "title": "Capital",
+    "statement": "Nome do arquivo fonte: capital.c, capital.cpp, capital.pas, capital.java, ou capital.py\nO governo do estado de Queensland está com problemas sérios de trânsito na capital Brisbane, onde estão\nos prédios administrativos. Para desafogar o trânsito, o prefeito de Brisbane e o governador de Queensland\ndecidiram que uma nova capital administrativa deve ser construída em uma área fora de Brisbane. Para\nprojetar a nova capital, o renomado arquiteto minimalista Joe Bloggs foi contratado.\nBloggs foi informado de que o terreno destinado à nova capital ainda não foi demarcado, mas será retangular.\nAlém disso, a cidade deverá ser dividida em quatro zonas, uma delas destinada a uma reserva ambiental\ne cada uma das outras três receberá os novos prédios de cada um dos três poderes (Executivo, Legislativo\ne Judiciário). Em um arroubo de criatividade, Bloggs decidiu que duas avenidas, perpendiculares entre si,\ncada uma paralela a dois dos lados do terreno retangular, dividirão a capital nas quatro zonas.\nBloggs recebeu do governo as áreas de cada uma das zonas e, após muito esforço, encontrou um retângulo que\npode ser dividido conforme seus planos e de forma a respeitar as áreas delimitadas. No entanto, a Fundação\nde Conservação dos Cangurus determinou que a área destinada à reserva ambiental era muito pequena, o\nque obrigou o governo a alterar as áreas das quatro zonas. Após receber as novas medidas, Bloggs tentou\nencontrar um novo retângulo que viabilizasse seu projeto, porém sem sucesso. Cansado de fazer testes,\nele pensou que talvez tenha que abandonar sua brilhante ideia. Por isso, ele pediu para você escrever um\nprograma que, dadas as áreas das quatro zonas, determine se ele poderá ou não manter seu projeto (ou seja,\nse existe um retângulo que possa ser dividido por duas retas perpendiculares, cada uma paralela a dois dos\nlados do retângulo, tal que as quatro áreas formadas obedeçam às exigências do governo).",
+    "input": "A entrada consiste de uma única linha contendo quatro inteiros A1, A2, A3, A4, indicando a área de casa\numa das zonas.",
+    "output": "Imprima uma única linha contendo um único caractere: ‘S’ se Bloggs pode preservar seu projeto e ‘N’ caso\ncontrário.",
+    "constraints": "- 1 ≤Ai ≤104",
+    "examples": [
+        {
+            "input": "1 2 4 8",
+            "output": "S"
+        },
+        {
+            "input": "1 2 3 4",
+            "output": "N"
+        },
+        {
+            "input": "15 14 6 35",
+            "output": "S"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2013",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -215,4 +215,5 @@ codigo/*
 !codigo/example.txt
 !output/var
 
-!output_with_code/2023/p1/VAR
+!output_with_code/2023/p1/VAR/*
+!dataset_obi_python/2023/p1/VAR/*

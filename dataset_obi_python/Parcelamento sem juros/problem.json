@@ -1,0 +1,30 @@
+{
+    "title": "Parcelamento sem juros",
+    "statement": "Nome do arquivo: parcelamento.c, parcelamento.cpp, parcelamento.pas, parcelamento.java, parcelamento.js,\nparcelamento_py2.py ou parcelamento_py3.py\nPedrinho está implementando o sistema de controle de pagamentos parcelados de uma grande em-\npresa de cartão de crédito digital. Os clientes podem parcelar as compras sem juros no cartão, em\naté 18 vezes. Quando o valor V da compra é divisível pelo númeroP de parcelas que o cliente\nescolhe, todas as parcelas terão o mesmo valor. Por exemplo, se o cliente comprar um livro de\nV = 30 reais em P = 6 vezes, então as parcelas terão valores:5, 5, 5, 5, 5 e 5. Mas se o valor da\ncompra não for divisível pelo número de parcelas será preciso fazer um ajuste, pois a empresa quer\nque todas as parcelas tenham sempre um valor inteiro e somem no total, claro, o valor exato da\ncompra. O que Pedrinho decidiu foi distribuir o resto da divisão deV por P igualmente entre as\nparcelas iniciais. Por exemplo, se a compra for deV = 45 e o número de parcelas forP = 7, então\nas parcelas terão valores:7, 7, 7, 6, 6, 6 e 6. Quer dizer, como o resto da divisão de45 por 7 é 3,\nentão as 3 parcelas iniciais devem ter valor um real maior do que as4 parcelas ﬁnais.\nVocê precisa ajudar Pedrinho e escrever um programa que, dado o valor da compra e o número de\nparcelas, imprima os valores de cada parcela.",
+    "input": "A primeira linha da entrada contém um inteiroV, representando o valor da compra. A segunda\nlinha da entrada contém um inteiroP, indicando o número de parcelas.",
+    "output": "Seu programa deve imprimirP linhas, cada uma contendo um inteiro representando o valor de uma\nparcela. A i-ésima linha deve conter o valor dai-ésima parcela, para1≤ i≤ P, de acordo com o\nque Pedrinho decidiu.",
+    "constraints": "- 10≤ V ≤ 1000\n- 2≤ P≤ 18",
+    "examples": [
+        {
+            "input": "30\n6",
+            "output": "5\n5\n5\n5\n5\n5"
+        },
+        {
+            "input": "45\n7",
+            "output": "7\n7\n7\n6\n6\n6\n6"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "pj",
+    "period": "Fase 3",
+    "topics": [
+        "aritmética",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

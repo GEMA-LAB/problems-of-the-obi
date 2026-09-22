@@ -1,0 +1,31 @@
+{
+    "title": "Pares de números",
+    "statement": "Nome do arquivo: pares.c, pares.cpp, pares.pas, pares.java, pares.js, pares_py2.py ou pares_py3.py\nTemos um vetor deN inteiros distintos e dois inteirosI e F. Precisamos computar quantos pa-\nres desses inteiros do vetor somam pelo menosI e no máximo F. Por exemplo, se o vetor for\n[45, 12, 11, 7, 83, 29, 5] e I = 19 e F = 52, temos exatamente8 pares cuja soma está entre19 e 52:\n{5, 29},{5, 45},{7, 12},{7, 29},{7, 45},{11, 12},{11, 29} e{12, 29}.",
+    "input": "A primeira linha da entrada contém três inteirosN, I e F, indicando respectivamente o tamanho\ndo vetor e o valor mínimo da soma e o valor máximo da soma.",
+    "output": "Seu programa deve imprimir uma única linha contendo um inteiro indicando quantos pares de\ninteiros no vetor somam pelo menosI e no máximoF.",
+    "constraints": "- 2≤ N≤ 1000\n- −2000≤ I, F≤ 2000\n- O valor de cada inteiro no vetor está entre−1000 e 1000\n- Os inteiros no vetor são distintos",
+    "examples": [
+        {
+            "input": "7 19 52\n45 12 11 7 83 29 5",
+            "output": "8"
+        },
+        {
+            "input": "2 -2 2\n12 -16",
+            "output": "0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "pj",
+    "period": "Fase 3",
+    "topics": [
+        "aritmética",
+        "vetores",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

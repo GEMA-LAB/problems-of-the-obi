@@ -32,14 +32,14 @@ Ok, agora vamos verificar a execução uv run .\main.py --step organize-question
 
 | Métrica | Quantidade |
 | :--- | :--- |
-| **Tokens de Entrada (sem cache)** | 9.590.859 |
-| **Tokens de Entrada (com cache)** | 92.754.615 |
-| **Total de Entrada** | 102.345.474 |
-| **Tokens de Saída (raciocínio/thinking)** | 218.072 |
+| **Tokens de Entrada (sem cache)** | 1.810.327 |
+| **Tokens de Entrada (com cache)** | 11.243.447 |
+| **Total de Entrada** | 13.053.774 |
+| **Tokens de Saída (raciocínio/thinking)** | 37.214 |
 | **Tokens de Saída (resposta)** | 0 |
-| **Total Geral de Saída** | 218.072 |
-| **Total Geral Consumido** | 102.563.546 |
-| **Iterações de Execução** | 678 |
+| **Total Geral de Saída** | 37.214 |
+| **Total Geral Consumido** | 13.090.988 |
+| **Iterações de Execução** | 128 |
 
 ---
 

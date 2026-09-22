@@ -1,0 +1,29 @@
+{
+    "title": "Plantação de morango",
+    "statement": "Nome do arquivo: morango.c, morango.cpp, morango.pas, morango.java, morango.js,\nmorango.py2 ou morango.py3\nOs administradores da Fazenda Fartura planejam criar uma nova plantação de morangos, no formato\nretangular. Eles têm vários locais possíveis para a nova plantação, com diferentes dimensões de\ncomprimento e largura. Para os administradores, o melhor local é aquele que tem a maior área.\nEles gostariam de ter um programa de computador que, dadas as dimensões de dois locais, determina\no que tem maior área. Você pode ajudá-los?",
+    "input": "A entrada contém quatro linhas, cada uma contendo um número inteiro. As duas primeiras linhas\nindicam as dimensões (comprimento e largura) de um dos possíveis locais. As duas últimas linhas\nindicam as dimensões (comprimento e largura) de um outro possível local para a plantação de\nmorangos. As dimensões são dadas em metros.",
+    "output": "Seu programa deve escrever uma linha contendo um único inteiro, a área, em metros quadrados, do\nmelhor local para a plantação, entre os dois locais dados na entrada.",
+    "constraints": "- 1 ≤comprimento ≤100\n- 1 ≤largura ≤100",
+    "examples": [
+        {
+            "input": "30\n8\n11\n56",
+            "output": "616"
+        },
+        {
+            "input": "12\n38\n5\n20",
+            "output": "456"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2016",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

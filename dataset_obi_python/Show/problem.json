@@ -1,0 +1,35 @@
+{
+    "title": "Show",
+    "statement": "Nome do arquivo:show.c, show.cpp, show.pas, show.java, show.js ou show.py\nUm grupo de amigos quer comprar ingressos para um show da sua banda preferida. O show acontece\nnum teatro que temN ﬁlas de assentos, cada ﬁla comM assentos.\nOs amigos querem comprar ingressos de forma que os assentos dos amigos:\n• sejam todos na mesma ﬁla,\n• sejam contíguos (ou seja, um vizinho ao outro) e\n• sejam na ﬁla mais próxima possível do palco.\nDado um mapa descrevendo os assentos disponíveis, ajude os amigos a encontrarem os ingressos de\nacordo com as condições acima.",
+    "input": "A primeira linha contém três inteirosA, N e M, indicando respectivamente o número de amigos, o\nnúmero de ﬁlas de assentos e o número de assentos em cada ﬁla do teatro. As ﬁlas são numeradas\nde 1 (mais próxima do palco) atéN (mais distante do palco). Cada uma dasN linhas seguintes\ncontém M inteiros Xi, que podem ter o valor 1 (representando um assento ocupado) ou o valor 0\n(representando um assento não ocupado). As ﬁlas de assentos são dadas da ﬁla mais distante para\na ﬁla mais próxima do palco. Ou seja, a primeira ﬁla dada na entrada é a ﬁlaN (mais distante do\npalco), a última ﬁla dada na entrada é a ﬁla 1 (mais próxima do palco).",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, que deve ser o número da\nﬁla em que os amigos conseguem comprar os ingressos se é possível encontrar ingressos de acordo\ncom as condições dadas, ou−1 caso contrário.",
+    "constraints": "- 2 ≤ A ≤ 100\n- 1 ≤ N ≤ 100\n- 1 ≤ M ≤ 100\n- 0 ≤ Xi ≤ 1 para 1 ≤ i ≤ M",
+    "examples": [
+        {
+            "input": "4 3 5\n0 0 0 0 0\n1 0 0 0 1\n1 0 0 0 0",
+            "output": "1"
+        },
+        {
+            "input": "2 3 5\n0 1 0 1 0\n0 1 0 1 0\n0 1 0 1 0",
+            "output": "-1"
+        },
+        {
+            "input": "3 6 4\n0 0 0 0\n1 0 0 0\n1 1 0 0\n1 1 1 0\n1 1 1 1\n1 1 1 1",
+            "output": "5"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2022",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "matrizes",
+        "busca",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

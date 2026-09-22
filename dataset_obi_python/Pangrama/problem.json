@@ -1,0 +1,35 @@
+{
+    "title": "Pangrama",
+    "statement": "Nome do arquivo:“pangrama.x”,onde x deve ser c, cpp, pas, java, js ou py\nUm pangrama é uma frase que contém todas as letras de um determinado alfabeto.\nEm português, um pangrama pode incluir também letras acentuadas, mas neste problema vamos\ndesconsiderar os acentos (mesmo que isso torne a frase mal escrita!)\nVeja alguns exemplos de pangramas em português (sem acentos):\n• grave e cabisbaixo, o ﬁlho justo zelava pela querida mae doente\n• hoje a noite, sem luz, decidi xeretar a quinta gaveta de vovo: achei linguica, pao e fuba\n• marta foi a cozinha pois queria ver belo jogo de xicaras\nNote que para os pangramas acima consideramos o alfabeto composto pelas letras\na b c d e f g h i j l m n o p q r s t u v x z\n(ou seja, não consideramos as letras k, w ou y). Note ainda que as frases não contêm letras\nacentuadas mas podem conter símbolos gráﬁcos como espaço em branco, vírgula e dois pontos.",
+    "input": "A primeira e única linha da entrada contém uma cadeia de caracteresC.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único caractere, que deve serS se a\nfrase for um pangram ouN caso contrário.",
+    "constraints": "- A cadeia de caracteresC tem no mínimo um e no máximo 200 caracteres. Os únicos caracteres\n- em C são as letras minúsculas do alfabeto mostrado acima, espaços em branco, vírgulas e o\n- caractere dois pontos.",
+    "examples": [
+        {
+            "input": "gazeta publica hoje: breve anuncio de faxina na quermesse",
+            "output": "S"
+        },
+        {
+            "input": "esta frase nao usa todas as letras, estao faltando algumas",
+            "output": "N"
+        },
+        {
+            "input": "abcdefghijlmnopqrstuvxz",
+            "output": "S"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "strings",
+        "contagem",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

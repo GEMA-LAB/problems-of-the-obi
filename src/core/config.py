@@ -65,6 +65,7 @@ DEFAULT_CADERNOS_DIR = Path("cadernos")
 DEFAULT_GABARITOS_DIR = Path("gabaritos")
 DEFAULT_CODIGO_DIR = Path("codigo")
 DEFAULT_OUTPUT_DIR = Path("output_with_code")
+DEFAULT_PYTHON_DATASET_DIR = Path("dataset_obi_python")
 DEFAULT_OPENAI_BASE_URL = "https://api.openai.com/v1"
 DEFAULT_OPENAI_MODEL = "gpt-4o-mini"
 DEFAULT_PROMPT_TEMPLATE = Path("src/prompts/extraction_prompt.md")

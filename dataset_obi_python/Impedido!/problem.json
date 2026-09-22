@@ -1,0 +1,35 @@
+{
+    "title": "Impedido!",
+    "statement": "Nome do arquivo: impedido.c, impedido.cpp, impedido.pas, impedido.java, impedido.js ou\nimpedido.py\nA regra do impedimento no futebol pode parecer estranha, mas sem ela, se a gente pensar bem, o jogo ficaria muito chato! Ela funciona dadas as posições de três jogadores: L o jogador atacante que lança a bola; R o jogador atacante que recebe a bola; e D o último jogador defensor. E a regra vale somente se o jogador R está no seu campo de ataque; se o jogador R está no seu campo de defesa ou na linha divisória do meio campo, ele não está em impedimento. Neste problema o campo tem 100 metros de comprimento. Dadas as posições desses três jogadores, no momento exato do lançamento, haverá impedimento se e somente se a seguinte condição for verdadeira:\n\n(R > 50) e (L < R) e (R > D)\n\nA regra parece estranha, não é mesmo? Mas a gente nem precisa entender a lógica dela. O seu programa deve apenas determinar, dadas as três posições L, R e D, se há ou não impedimento, implementando exatamente a condição acima. A figura abaixo mostra um exemplo onde não há impedimento:\n[1.png]\n",
+    "input": "A entrada é composta de apenas uma linha, contendo os três inteiros L, R e D.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único caractere, que deve ser “S” caso\nhaja impedimento, ou “N” caso contrário.",
+    "constraints": "- 0 ≤L ≤100\n- 0 ≤R ≤100\n- 0 ≤D ≤100",
+    "examples": [
+        {
+            "input": "35 60 75",
+            "output": "N"
+        },
+        {
+            "input": "55 68 67",
+            "output": "S\n\n3"
+        },
+        {
+            "input": "66 80 80",
+            "output": "N"
+        }
+    ],
+    "imgs": [
+        "1.png"
+    ],
+    "rating": [
+        100
+    ],
+    "year": "2015",
+    "level": "pj",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}
