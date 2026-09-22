@@ -1,0 +1,36 @@
+{
+    "title": "Nota cortada",
+    "statement": "Nome do arquivo:“nota.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nSe pegarmos uma nota de 100 reais e a cortarmos, usando uma tesoura, em dois pedaços, quanto vale cada um dos pedaços? A regra é simples: se um dos pedaços possuir estritamente mais da metade da área da nota original, então ele vale 100 reais; e o outro pedaço não vale nada. Veja que se cada pedaço possuir exatamente metade da área original, então nenhum dos dois tem valor.\n\nFelix e Marzia decidiram fazer um corte, em linha reta, que comece no lado inferior da nota, a base, e termine no lado superior, o topo. A nota é um retângulo de comprimento 160 centímetros e altura 70 centímetros, como mostrado na parte esquerda da figura abaixo. Felix sempre vai ficar com o pedaço mais à esquerda da nota e Marzia com o pedaço mais à direita. A parte direita da figura ilustra dois possíveis cortes. No de cima, Marzia ficaria claramente com o maior pedaço, que vale 100 reais; e no de baixo, dá para ver que Felix é quem ficaria com o maior pedaço.\n[1.png]\nO corte reto vai começar na base a uma distância de B centímetros a partir do lado esquerdo da nota; e terminar no topo a uma distância de T centímetros também a partir do lado esquerdo da nota. Veja a indicação na parte direita da figura.\n\nNeste problema, dados os valores B e T, seu programa deve computar quem vai ficar com o pedaço que vale 100 reais, ou se o valor da nota se perdeu.",
+    "input": "A primeira linha da entrada contém um inteiroB representando a distância do ponto inicial do\ncorte, na base, para o lado esquerdo da nota. A segunda linha da entrada contém um inteiroT\nrepresentando a distância do ponto ﬁnal do corte, no topo, para o lado esquerdo da nota.",
+    "output": "Seu programa deve imprimir uma linha contendo um número inteiro:1, se Felix ﬁcou com o pedaço\nque vale 100 reais; 2, se Marzia ﬁcou com o pedaço que vale100 reais; ou 0, se o valor da nota se\nperdeu.",
+    "constraints": "- 0 < B < 160\n- 0 < T < 160",
+    "examples": [
+        {
+            "input": "50\n86",
+            "output": "2"
+        },
+        {
+            "input": "70\n90",
+            "output": "0"
+        },
+        {
+            "input": "130\n138",
+            "output": "1"
+        }
+    ],
+    "imgs": [
+        "1.png"
+    ],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "p1",
+    "period": "Fase 1",
+    "topics": [
+        "geometria",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

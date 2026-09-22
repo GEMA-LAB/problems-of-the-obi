@@ -1,0 +1,37 @@
+{
+    "title": "Sequência Secreta",
+    "statement": "Nome do arquivo:“secreta.x”,onde x deve ser c, cpp, pas, java, js, py2 ou py3\nNa calçada em frente ao Palácio Imperial, não se sabe a razão, existe uma sequência de N números desenhados no chão. A sequência tem a seguinte forma: ela começa e termina com o número 1; apenas os números 1 e 2 aparecem nela; e o número 2 aparece pelo menos uma vez. Veja um exemplo na coluna (a) da figura ao lado.\n\nNinguém sabe o significado da sequência e, justamente por isso, várias teorias malucas surgiram. Uma delas diz que a sequência representa, na verdade, apenas um valor que estaria relacionado a um segredo dos imperadores. Esse valor é a quantidade máxima de números da sequência que poderiam ser marcados com um círculo, de modo que a sequência de números marcados não contenha dois números iguais consecutivos.\n\nA coluna (b) da figura ao lado ilustra uma sequência de 4 números marcados que obedece a restrição acima. Só que é possível marcar 7 números, como mostra a coluna (c) da figura.\n[1.png]\nNeste problema, dada a sequência original de números desenhados no chão da calçada, seu programa deve computar e imprimir a quantidade máxima de números da sequência que poderiam ser marcados com um círculo sem que haja dois números iguais consecutivos na sequência marcada.",
+    "input": "A primeira linha da entrada contém um inteiroN representando o tamanho da sequência. AsN\nlinhas seguintes contêm, cada uma, um inteiroVi, para1≤ i≤ N, deﬁnindo a sequência de números\ndesenhados no chão da calçada imperial.",
+    "output": "Seu programa deve imprimir uma linha contendo um número inteiro representando a quantidade\nmáxima de números da sequência que poderiam ser marcados com um círculo sem que haja dois\nnúmeros iguais consecutivos na sequência marcada.",
+    "constraints": "- 3≤ N≤ 500\n- Vi é igual a1 ou 2, para 1≤ i≤ N",
+    "examples": [
+        {
+            "input": "5\n1\n1\n1\n2\n1",
+            "output": "3"
+        },
+        {
+            "input": "12\n1\n2\n1\n2\n2\n2\n1\n1\n2\n2\n1\n1",
+            "output": "7"
+        },
+        {
+            "input": "3\n1\n2\n1",
+            "output": "3"
+        }
+    ],
+    "imgs": [
+        "1.png"
+    ],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "pj",
+    "period": "Fase 1",
+    "topics": [
+        "guloso",
+        "vetores",
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

@@ -33,6 +33,7 @@ def main():
             "organize-testcases",
             "clean-testcases",
             "export-dataset",
+            "export-python-dataset",
             "all",
         ],
         default="all",
@@ -171,7 +172,7 @@ def main():
             return
 
     # Passo 5: Exportar dataset filtrado por linguagem (via LanguageDatasetBuilder modular)
-    if args.step in ["export-dataset"]:
+    if args.step in ["export-dataset", "export-python-dataset"]:
         target_lang = "python"
         if args.language:
             target_lang = args.language
