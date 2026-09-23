@@ -1,12 +1,12 @@
 {
     "title": "Machine Learning",
-    "statement": "Nome do arquivo:machine-learning.c, machine-learning.cpp, machine-learning.java,\nmachine-learning.js ou machine-learning.py\nLetícia está fazendo faculdade de Ciências da Computação e está muito animada para começar a\nestudar sobre Aprendizado de Máquina. Porém, ela ainda está no segundo semestre da faculdade,\nentão ainda irá demorar um tempo para ter aulas sobre o assunto. Ela decidiu então construir\num modelo de aprendizado de máquina mais simples, com os conhecimentos que ela possui de\nprogramação até então.\nSua ideia foi a seguinte: ela irá construir um programa que, primeiramente, lê vários tópicos de\nartigos e palavras relacionadas a esses tópicos. Depois, o programa irá ler o texto de um artigo e\nirá definir qual o seu tópico. O tópico do artigo será aquele que possui mais palavras relacionadas\nao tópico mencionadas no artigo.\nSe houver empate, o tópico do artigo será aquele que antecede o outro no alfabeto. Uma palavra\nserá relacionada a no máximo um tópico. É garantido que o artigo terá pelo menos uma palavra\nrelacionada a algum tópico.\nLetícia pediu sua ajuda para desenvolver o algoritmo.",
-    "input": "A primeira linha de entrada contém um inteiroN, o número de tópicos possíveis. As próximasN\nlinhas são compostas cada uma por uma stringSi, o nome do tópico, seguida de um inteiroKi, o\nnúmero de palavras relacionadas ao tópico, seguido porKi strings sj, as palavras relacionadas ao\ntópico Si. A próxima linha contém um inteiroX, o número de palavras do artigo. A última linha\ncontém X strings xl, as palavras do artigo.",
-    "output": "Seu programa deve produzir uma única linha contendo uma única palavra, o nome do tópico do\nartigo.",
-    "constraints": "- 1 ≤ N ≤ 100\n- 1 ≤ número de caracteres deSi ≤ 20\n- 1 ≤ Ki ≤ 100\n- 1 ≤ número de caracteres desj ≤ 20\n- 1 ≤ X ≤ 105\n- 1 ≤ número de caracteres dexl ≤ 20\n- Todas as strings serão compostas apenas de letras minúsculas do alfabeto",
+    "statement": "Leticia está fazendo faculdade de Ciências da Computação e está muito animada para começar a estudar sobre Aprendizado de Máquina. Porém, ela ainda está no segundo semestre da faculdade, então ainda irá demorar um tempo para ter aulas sobre o assunto. Ela decidiu então construir um modelo de aprendizado de máquina mais simples, com os conhecimentos que ela possui de programação até então.\n\nSua ideia foi a seguinte: ela irá construir um programa que, primeiramente, lê vários tópicos de artigos e palavras relacionadas a esses tópicos. Depois, o programa irá ler o texto de um artigo e irá definir qual o seu tópico. O tópico do artigo será aquele que possui mais palavras relacionadas ao tópico mencionadas no artigo.\n\nSe houver empate, o tópico do artigo será aquele que antecede o outro no alfabeto. Uma palavra será relacionada a no máximo um tópico. É garantido que o artigo terá pelo menos uma palavra relacionada a algum tópico.\n\nLeticia pediu sua ajuda para desenvolver o algoritmo.",
+    "input": "A primeira linha de entrada contém um inteiro N, o número de tópicos possíveis. As próximas N linhas são compostas cada uma por uma string S_i, o nome do tópico, seguida de um inteiro K_i, o número de palavras relacionadas ao tópico, seguido por K_i strings s_j, as palavras relacionadas ao tópico S_i. A próxima linha contém um inteiro X, o número de palavras do artigo. A última linha contém X strings x_l, as palavras do artigo.",
+    "output": "Seu programa deve produzir uma única linha contendo uma única palavra, o nome do tópico do artigo.",
+    "constraints": "- 1 ≤ N ≤ 100\n- 1 ≤ número de caracteres de S_i ≤ 20\n- 1 ≤ K_i ≤ 100\n- 1 ≤ número de caracteres de s_j ≤ 20\n- 1 ≤ X ≤ 10^5\n- 1 ≤ número de caracteres de x_l ≤ 20\n- Todas as strings serão compostas apenas de letras minúsculas do alfabeto",
     "examples": [
         {
-            "input": "3\nciencia 3 quimica fisica matematica\namor 4 coracao amo carinho afeto\nlivros 3 paginas paragrafo textos\n7\neu amo textos sobre quimica e fisica",
+            "input": "3\nciencia 3 química fisica matematica\namor 4 coracao amo carinho afeto\nlivros 3 paginas paragrafo textos\n7\neu amo textos sobre quimica e fisica",
             "output": "ciencia"
         },
         {
@@ -22,10 +22,11 @@
     "level": "p2",
     "period": "Fase Única",
     "topics": [
-        "matemática",
-        "probabilidade",
-        "ad-hoc"
+        "hash",
+        "strings",
+        "contagem",
+        "implementação"
     ],
-    "time_limit": 1.0,
+    "time_limit": 2.0,
     "memory_limit": 256
 }

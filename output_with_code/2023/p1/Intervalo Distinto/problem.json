@@ -1,17 +1,17 @@
 {
     "title": "Intervalo Distinto",
-    "statement": "Nome do arquivo:distinto.c, distinto.cpp, distinto.java, distinto.js ou distinto.py\nVocê foi contratado pela Agência Extra-Espacial Brasileira, que procura indícios de vida extra-\nterrestre.\nUm dos telescópios da Agência, para o espectro ultravioleta, gera uma sequência de valores inteiros\npositivos que devem ser analisados diariamente. Sua primeira missão é determinar, na sequência\ngerada, o tamanho do maior intervalo contínuo que contém apenas números distintos.",
-    "input": "A primeira linha contém um inteiroN, o número de elementos da sequência. Cada uma das linhas\nseguintes contém um inteiroIi, os elementos da sequência na ordem em que foram gerados.",
-    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, o número de elementos\ndo maior intervalo que contém apenas números distintos.",
-    "constraints": "- 1≤ N≤ 105\n- 1≤ Ii≤ 105",
+    "statement": "Você foi contratado pela Agência Extra-Espacial Brasileira, que procura indícios de vida extra-terrestre.\n\nUm dos telescópios da Agência, para o espectro ultravioleta, gera uma sequência de valores inteiros positivos que devem ser analisados diariamente. Sua primeira missão é determinar, na sequência gerada, o tamanho do maior intervalo contínuo que contém apenas números distintos.",
+    "input": "A primeira linha contém um inteiro N, o número de elementos da sequência. Cada uma das linhas seguintes contém um inteiro I_i, os elementos da sequência na ordem em que foram gerados.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, o número de elementos do maior intervalo que contém apenas números distintos.",
+    "constraints": "- 1 <= N <= 10^5\n- 1 <= I_i <= 10^5",
     "examples": [
         {
             "input": "8\n3\n2\n1\n3\n2\n1\n3\n2",
-            "output": "3\nExplicação do exemplo 1:três intervalos, com três elementos cada, contêm números distintos:\n[3, 2, 1], [2, 1, 3] e [1, 3, 2] – note também que os intervalos ocorrem mais de uma vez na\nsequência. Como não há intervalo com números distintos maior do que esses, a resposta é 3."
+            "output": "3"
         },
         {
             "input": "6\n3\n2\n3\n8\n5\n5",
-            "output": "4\nExplicação do exemplo 2:o maior intervalo que contém números distintos é [2, 3, 8, 5], com 4\nelementos, portanto a resposta é 4."
+            "output": "4"
         }
     ],
     "imgs": [],
@@ -20,12 +20,13 @@
     ],
     "year": "2023",
     "level": "p1",
-    "period": "Fase 2",
+    "period": "Fase 2 Turno A",
     "topics": [
+        "array",
+        "janela deslizante",
         "dois ponteiros",
-        "estruturas de dados",
-        "hashing"
+        "tabelas de frequência"
     ],
     "time_limit": 2.0,
-    "memory_limit": 512
+    "memory_limit": 256
 }

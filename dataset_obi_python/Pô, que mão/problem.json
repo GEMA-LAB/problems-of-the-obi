@@ -1,0 +1,29 @@
+{
+    "title": "Pô, que mão",
+    "statement": "Nome do arquivo: pokemon.c, pokemon.cpp, pokemon.pas, pokemon.java, pokemon.js ou\npokemon.py\nUm novo jogo se tornou popular entre jovens de todas as idades recentemente: o “Pô, que mão”.\nTrata-se de um jogo onde uma mão captura criaturas raras e depois as força a lutarem umas contra\nas outras. Uma verdadeira barbárie.\nAinda assim, o jogo se tornou bastante popular. As criaturas são chamadas de “pô-que-mãos”. No\njogo, você pode dar doces para as pô-que-mãos, para que elas fiquem mais fortes e evoluam. Como\nhá poucos doces, nem sempre é possível evoluir todas as pô-que-mãos que um jogador possui.\nUm jogador tem exatamente 3 pô-que-mãos. Cada um deles necessita de uma quantidade de do-\nces para evoluir.\nConhecendo-se a quantidade de doces disponíveis, escreva um programa para\ndeterminar qual o maior número de pô-que-mãos que podem evoluir.",
+    "input": "A entrada é composta por quatro linhas, cada uma contendo um inteiro. A primeira linha contém\nN, o número de doces disponíveis. A segunda linha contém X, o número de doces necessários para\na primeira pô-que-mão evoluir. A próxima linha contém Y , o número de doces necessários para\na segunda pô-que-mão evoluir. A última linha contém Z, o número de doces necessários para a\nterceira pô-que-mão evoluir.",
+    "output": "Seu programa deve produzir uma única linha, contendo um inteiro, o maior número possível de\npô-que-mãos que podem evoluir.",
+    "constraints": "- 0 ≤N ≤1000\n- 1 ≤X ≤1000\n- 1 ≤Y ≤1000\n- 1 ≤Z ≤1000",
+    "examples": [
+        {
+            "input": "300\n220\n100\n190",
+            "output": "2"
+        },
+        {
+            "input": "1000\n100\n200\n300",
+            "output": "3"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2016",
+    "level": "p2",
+    "period": "Fase 2",
+    "topics": [
+        "ad-hoc"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

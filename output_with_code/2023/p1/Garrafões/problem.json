@@ -1,9 +1,9 @@
 {
     "title": "Garrafões",
-    "statement": "Nome do arquivo:garrafoes.c, garrafoes.cpp, garrafoes.java, garrafoes.js ou\ngarrafoes.py\nKinho trabalha em uma empresa que distribui garrafões novos para fontes de água mineral, e todo\ndia, ele visita várias fontes para deixar os garrafões.\nQuando ele chega em uma fonte, ele descarrega os garrafões do caminhão e os posiciona no chão,\num em cima do outro, formando uma pirâmide.\nEle costuma fazer assim pois facilita a contagem da quantidade total de garrafões arranjandos. O\nformato que ele dispõe a pirâmide é dado por:\n1. A primeira camada (superior) possui apenas um garrafão.\n2. A segunda camada possui 4 garrafões (2x2).\n3. A terceira camada possui 9 garrafões (3x3).\n4. a i-ésima camada possui i*i garrafões (ixi).\nAs camadas são enumeradas de cima para baixo.\nKinho ama contagem, e a medida que está descarregando os garrafões, está se questionando duas\ncoisas:\n1. De quantas formas diferentes ele pode arranjar pirâmides em uma sequência.\n2. De quantas formas diferentes ele pode arranjar pirâmides em uma sequência usando a menor\nquantidade de pirâmides possível.\nKinho não tem tempo de parar para fazer os cálculos! Ele te informou o número G de garrafões\ntotais que ele precisa descarregar e também te informou se ele deseja minimizar a quantidade total\nde pirâmides. A sua tarefa é escrever um programa que calcule de quantas maneiras diferentes ele\npoderia formar uma sequência de pirâmides com os garrafões.",
-    "input": "A entrada consiste apenas de dois inteirosG e M. G é o número de garrafões que Kinho pre-\ncisa descarregar; e M=2, se Kinho deseja minimizar a quantidade de pirâmides ouM=1, caso\ncontrário.",
-    "output": "Imprima um único inteiro X, a quantidade de maneiras que Kinho pode dispôr os garrafões em\numa sequência de pirâmides. Como o número pode ser muito alto, imprima a saída com o resto da\ndivisão por 1000000007.\nUma sequência S é diferente deT, se:\n• S tem tamanho diferente deT, ou\n• Existe algum inteiroi, tal que ai-ésima pirâmide emS seja diferente do que ai-ésima em T.",
-    "constraints": "- 1 ≤ G ≤ 100 000\n- 1 ≤ M ≤ 2",
+    "statement": "Kinho trabalha em uma empresa que distribui garrafões novos para fontes de água mineral, e todo dia, ele visita várias fontes para deixar os garrafões.\nQuando ele chega em uma fonte, ele descarrega os garrafões do caminhão e os posiciona no chão, um em cima do outro, formando uma pirâmide.\nEle costuma fazer assim pois facilita a contagem da quantidade total de garrafões arranjando. O formato que ele dispõe a pirâmide é dado por:\n1. A primeira camada (superior) possui apenas um garrafão.\n2. A segunda camada possui 4 garrafões (2x2).\n3. A terceira camada possui 9 garrafões (3x3).\n4. A i-ésima camada possui i*i garrafões (i x i).\nAs camadas são enumeradas de cima para baixo.\nKinho ama contagem, e a medida que está descarregando os garrafões, está se questionando duas coisas:\n1. De quantas formas diferentes ele pode arranjar pirâmides em uma sequência.\n2. De quantas formas diferentes ele pode arranjar pirâmides em uma sequência usando a menor quantidade de pirâmides possível.\nKinho não tem tempo de parar para fazer os cálculos! Ele te informou o número G de garrafões totais que ele precisa descarregar e também te informou se ele deseja minimizar a quantidade total de pirâmides. A sua tarefa é escrever um programa que calcule de quantas maneiras diferentes ele poderia formar uma sequência de pirâmides com os garrafões.\nUma sequência S é diferente de T, se:\n- S tem tamanho diferente de T, ou\n- Existe algum inteiro i, tal que a i-ésima pirâmide em S seja diferente do que a i-ésima em T.\nNas configurações, um número X representa uma pirâmide com X camadas.",
+    "input": "A entrada consiste apenas de dois inteiros G e M. G é o número de garrafões que Kinho precisa descarregar; e M=2, se Kinho deseja minimizar a quantidade de pirâmides ou M=1, caso contrário.",
+    "output": "Imprima um único inteiro X, a quantidade de maneiras que Kinho pode dispor os garrafões em uma sequência de pirâmides. Como o número pode ser muito alto, imprima a saída com o resto da divisão por 1000000007.",
+    "constraints": "- 1 ≤ G ≤ 100000\n- 1 ≤ M ≤ 2",
     "examples": [
         {
             "input": "5 1",
@@ -27,7 +27,7 @@
         },
         {
             "input": "100000 2",
-            "output": "192\nPara G = 10 e M = 1, e sejaX uma pirâmide comX camadas, temos as seguintes configurações:\n1. (1, 1, 1, 1, 1, 1, 1, 1, 1, 1)\n2. (2, 1, 1, 1, 1, 1)\n3. (1, 2, 1, 1, 1, 1)\n4. (1, 1, 2, 1, 1, 1)\n5. (1, 1, 1, 2, 1, 1)\n6. (1, 1, 1, 1, 2, 1)\n7. (1, 1, 1, 1, 1, 2)\n8. (2, 2)\nSe M = 2, teríamos:\n1. (2, 2)\nPois, é possível montar a sequência utilizando apenas 2 pirâmides!"
+            "output": "192"
         }
     ],
     "imgs": [],
@@ -38,10 +38,11 @@
     "level": "p1",
     "period": "Fase Única",
     "topics": [
-        "ad-hoc",
-        "simulação",
-        "matemática"
+        "programação dinâmica",
+        "módulo",
+        "contagem",
+        "otimização"
     ],
-    "time_limit": 1.0,
+    "time_limit": 4.0,
     "memory_limit": 256
 }

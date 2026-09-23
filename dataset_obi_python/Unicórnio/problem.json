@@ -1,6 +1,6 @@
 {
     "title": "Unicórnio",
-    "statement": "Vera é uma amazona que possui a dócil unicórnio Veraneio. Ambas estão se preparando para a corrida de velocidade mais famosa do Reino Encantado de Violeta. Vera possui uma estratégia muito esperta para que Veraneio fique incentivada a treinar: ela coloca na ponta de um anzol uma deliciosa cenoura que fica a 2 (dois) metros de distância à frente da unicórnio. Dessa forma, Veraneio fica muito animada para correr mais rápido.\n\nComo auxiliar de treinamento desta astuta dupla, você deve criar um programa que, dada a posição horizontal X da Veraneio, responda qual é a posição da cenoura.",
+    "statement": "Vera é uma amazona que possui a dócil unicórnio Veraneio. Ambas estão se preparando para a corrida de velocidade mais famosa do Reino Encantado de Violeta. Vera possui uma estratégia muito esperta para que Veraneio fique incentivada a treinar: ela coloca na ponta de um anzol uma deliciosa cenoura que fica a 2 (dois) metros de distância à frente da unicórnio. Dessa forma, Veraneio fica muito animada para correr mais rápido.\n[1.png]\nComo auxiliar de treinamento desta astuta dupla, você deve criar um programa que, dada a posição horizontal X da Veraneio, responda qual é a posição da cenoura.",
     "input": "A entrada possui uma única linha com o valor inteiro X que corresponde à posição horizontal da Veraneio, em metros.",
     "output": "A saída deve possuir uma única linha com a posição horizontal da cenoura que está à frente da Veraneio, em metros.",
     "constraints": "- 0 ≤ X ≤ 10000",
@@ -19,7 +19,7 @@
         }
     ],
     "imgs": [
-        "img-1.jpeg"
+        "1.png"
     ],
     "rating": [
         100
