@@ -1,0 +1,33 @@
+{
+    "title": "Viagem",
+    "statement": "Você está viajando pelo arquipélago de Kiri, que é composto por um grande número de ilhas. Não há pontes entre as ilhas, de modo que a única maneira de viajar entre as ilhas é por navio.\n\nHá várias rotas de navios disponíveis. Cada rota conecta duas ilhas distintas A e B e pode ser usada nas duas direções (de A para B ou de B para A). Cada rota tem um certo tempo de percurso (o mesmo nas duas direções) e um custo (o mesmo nas duas direções).\n\nNo momento você quer ir da ilha X para outra ilha Y, mas quer gastar no máximo um certo valor com a viagem. Você também está com pressa e gostaria de chegar o mais rapidamente possível ao seu destino.\n\nDados a lista das rotas disponíveis, com seu custo e tempos de percurso, escreva um programa para determinar se é possível chegar ao destino gastando no máximo o valor previsto para a viagem, e nesse caso qual o menor tempo para chegar ao destino. Note que pode não ser possível chegar ao destino, seja porque não há rota disponível ou porque o valor alocado para a viagem não é suficiente.",
+    "input": "A primeira linha da entrada contém três inteiros V, N e M, respectivamente o valor disponível para a viagem, o número de ilhas e o número de rotas. As ilhas são identificadas por inteiros de 1 a N.\n\nCada uma das M linhas seguintes descreve uma rota e contém quatro inteiros A_i, B_i, T_i e P_i, onde A_i e B_i representam ilhas, T_i o tempo de percurso e P_i o custo de uma passagem para esta rota. A última linha da entrada contém dois inteiros X e Y, o início e o destino da sua viagem.",
+    "output": "Seu programa deve produzir uma única linha na saída, que deve conter um único inteiro, o menor tempo necessário para chegar ao destino, ou o valor -1 caso não seja possível chegar ao destino.",
+    "constraints": "2 ≤ N ≤ 10000\n1 ≤ M ≤ 2000\n1 ≤ V ≤ 200\n1 ≤ A_i, B_i ≤ N, A_i ≠ B_i, para 1 ≤ i ≤ M.\nPode haver mais de uma rota entre o mesmo par de ilhas.\n1 ≤ T_i ≤ 100000, para 1 ≤ i ≤ M\n0 ≤ P_i ≤ 200, para 1 ≤ i ≤ M\n1 ≤ X, Y ≤ N",
+    "examples": [
+        {
+            "input": "10 4 7\n1 2 4 4\n1 3 7 2\n3 1 8 1\n3 2 2 2\n4 2 1 6\n3 4 1 1\n1 4 6 12\n1 4",
+            "output": "5"
+        },
+        {
+            "input": "3 3 3\n1 2 5 2\n3 2 8 2\n1 3 1 4\n1 3",
+            "output": "-1"
+        }
+    ],
+    "imgs": [
+        "img-4.jpeg"
+    ],
+    "rating": [
+        100
+    ],
+    "year": "2022",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "grafos",
+        "caminho mínimo",
+        "programação dinâmica"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 512
+}

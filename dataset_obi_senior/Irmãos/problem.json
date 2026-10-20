@@ -1,0 +1,30 @@
+{
+    "title": "Irmãos",
+    "statement": "Otávio tem dois irmãos, um mais velho (Orlando) e um mais novo do que ele (Oscar). As idades dos três irmãos formam uma progressão aritmética: a diferença de idade dos dois irmãos mais novos (Otávio e Oscar) é igual à diferença de idade dos dois irmãos mais velhos (Orlando e Otávio).\n\nDadas as idades de Otávio e de seu irmão mais novo, escreva um programa para determinar a idade do irmão mais velho.",
+    "input": "A primeira linha da entrada contém um inteiro N, a idade do irmão mais novo de Otávio. A segunda linha contém um inteiro M, a idade de Otávio.",
+    "output": "Seu programa deve produzir na saída uma única linha, contendo um único número inteiro, a idade do irmão mais velho de Otávio.",
+    "constraints": "1 ≤ N ≤ 40\nN ≤ M ≤ 40",
+    "examples": [
+        {
+            "input": "13\n16",
+            "output": "19"
+        },
+        {
+            "input": "14\n14",
+            "output": "14"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "senior",
+    "period": "Fase Local",
+    "topics": [
+        "matemática",
+        "progressão aritmética"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

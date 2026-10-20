@@ -1,0 +1,32 @@
+{
+    "title": "Metrô da Nlogônia",
+    "statement": "Há dois sistemas de metrô na capital da Nlogônia, operados por duas empresas diferentes. Os dois sistemas, denominados Círculo e Quadrado, são independentes e não conectados entre si, ou seja, não há nenhuma estação em comum e nenhum trilho em comum. Em cada sistema há exatamente um caminho possível entre duas estações quaisquer, possivelmente passando por outras estações do sistema.\n\nVamos chamar de diâmetro do sistema de metrô o maior número de estações no trajeto entre qualquer par de estações do sistema.\n\nO rei da Nlogônia decidiu que os dois sistemas existentes devem ser integrados, para facilitar a vida dos usuários. A integração vai ser implementada através da construção de um único novo trecho de metrô ligando exatamente um par de estações existentes (uma estação do sistema Círculo e uma estação do sistema Quadrado). O rei determinou que o diâmetro do sistema integrado será o menor possível.\n\nVocê pode ajudar a planejar a integração dos sistemas? Dadas as descrições dos dois sistemas, sua tarefa é determinar qual par de estações deve ser ligado para realizar a integração como desejada pelo rei.",
+    "input": "A primeira linha contém dois inteiros N e M, indicando respectivamente o número de estações do sistema Círculo e do sistema Quadrado. No sistema Círculo as estações são identificadas por números de 1 a N e no sistema Quadrado as estações são identificadas por números de 1 a M. Cada uma das N-1 linhas seguintes descreve as ligações entre estações do sistema Círculo e contém dois inteiros A e B indicando que existe uma ligação entre as estações A e B. Cada uma das M-1 linhas seguintes descreve as ligações entre estações do sistema Quadrado e contém dois inteiros X e Y indicando que existe uma ligação entre as estações X e Y.",
+    "output": "Seu programa deve produzir dois inteiros, o primeiro representando uma estação do sistema Círculo e o segundo representando uma estação do sistema Quadrado. Se houver mais de um par possível, indique qualquer um entre os possíveis.",
+    "constraints": "2 ≤ N, M ≤ 10^5\n1 ≤ A, B ≤ N\n1 ≤ X, Y ≤ M",
+    "examples": [
+        {
+            "input": "7 6\n1 3\n3 2\n3 4\n4 5\n5 7\n6 5\n1 3\n2 3\n3 4\n3 5\n5 6",
+            "output": "4 3"
+        },
+        {
+            "input": "3 4\n1 2\n2 3\n1 2\n2 3\n3 4",
+            "output": "2 2"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "senior",
+    "period": "Fase Nacional",
+    "topics": [
+        "grafos",
+        "árvores",
+        "diâmetro de árvore",
+        "busca em profundidade"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 1024
+}

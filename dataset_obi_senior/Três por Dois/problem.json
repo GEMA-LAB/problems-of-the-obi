@@ -1,0 +1,38 @@
+{
+    "title": "Três por Dois",
+    "statement": "Uma loja de chocolates está fazendo uma promoção do tipo \"leve três pague dois\". Mais precisamente, você pode escolher quaisquer três chocolates da loja e paga apenas pelos dois mais caros que escolher, levando o mais barato gratuitamente. Se você levar mais do que três chocolates, você pode agrupá-los em grupos de três e levar o chocolate mais barato de cada grupo gratuitamente.\n\nPor exemplo, se você escolher chocolates de preços (em reais) 8, 5, 10, 2, 5, 10 e 4, você pode agrupá-los como (8,5,10), (2,5,10) e (4), pagará um total de (10+8) + (10+5) + 4, ou seja, 37 reais. Mas você pode agrupá-los de uma forma melhor e assim conseguir pagar menos. Você consegue ver como?\n\nDados os preços dos chocolates escolhidos, escreva um programa para determinar o menor preço a pagar.",
+    "input": "A primeira linha da entrada contém um inteiro N, o número de chocolates escolhidos. Cada uma das N linhas seguintes contém um número inteiro P, o preço de um chocolate escolhido.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único número inteiro, o menor preço a pagar pelos chocolates escolhidos.",
+    "constraints": "1 ≤ N ≤ 100000\n1 ≤ P ≤ 1000",
+    "examples": [
+        {
+            "input": "4\n5\n6\n6\n5",
+            "output": "17"
+        },
+        {
+            "input": "4\n3\n3\n3\n3",
+            "output": "9"
+        },
+        {
+            "input": "6\n7\n8\n7\n7\n5\n7",
+            "output": "29"
+        },
+        {
+            "input": "7\n8\n5\n10\n2\n5\n10\n4",
+            "output": "32"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "senior",
+    "period": "Fase Local",
+    "topics": [
+        "guloso",
+        "ordenação"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 512
+}

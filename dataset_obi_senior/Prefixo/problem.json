@@ -1,0 +1,34 @@
+{
+    "title": "Prefixo",
+    "statement": "Em programas de computador, palavras, como \"otorrinolaringologista\" ou \"escolaridade\", são normalmente representadas por uma cadeia de caracteres. Um prefixo de uma palavra é qualquer sequência de caracteres consecutivos que se inicia no primeiro caractere da palavra. Por exemplo, \"escola\" e \"esco\" são prefixos de \"escola\", mas \"cola\" não é.\n\nUm prefixo comum de duas palavras é uma cadeia de caracteres que é prefixo das duas palavras. Por exemplo, \"a\", \"aba\" e \"abaca\" são exemplos de prefixos comuns das palavras \"abacate\" e \"abacaxi\".\n\nDadas duas palavras, escreva um programa para calcular o comprimento do maior prefixo comum, em número de caracteres.\n\nInformações sobre a pontuação\nA tarefa vale 100 pontos. Estes pontos estão distribuídos em subtarefas, cada uma com suas restrições adicionais às definidas acima:\n- Subtarefa 1 (33 pontos): N = M\n- Subtarefa 2 (67 pontos): Nenhuma restrição adicional.\n\nSeu programa pode resolver corretamente ambas ou somente uma das subtarefas. Sua pontuação final na tarefa é a soma dos pontos das subtarefas resolvidas corretamente por alguma das suas submissões.",
+    "input": "A primeira linha da entrada contém um inteiro N, o número de caracteres da primeira palavra. A segunda linha contém uma cadeia com N caracteres, a primeira palavra. A terceira linha contém um inteiro M, o número de caracteres da segunda palavra. A quarta linha contém uma cadeia com M caracteres, a segunda palavra.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, o número de caracteres do maior prefixo que é comum às duas sequências.",
+    "constraints": "1 ≤ N ≤ 1000\n1 ≤ M ≤ 1000\nAs palavras contêm apenas letras minúsculas e sem acentuação.",
+    "examples": [
+        {
+            "input": "7\nabacate\n7\nabacaxi",
+            "output": "5"
+        },
+        {
+            "input": "8\nparalelo\n13\nparalelogramo",
+            "output": "8"
+        },
+        {
+            "input": "6\nescola\n4\ncola",
+            "output": "0"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2023",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "strings",
+        "simulação"
+    ],
+    "time_limit": 1.5,
+    "memory_limit": 256
+}

@@ -1,0 +1,32 @@
+{
+    "title": "Caixeiro Viajante",
+    "statement": "Paulo é um caixeiro viajante, que visita clientes nas cidades do reino da Nlogônia para demonstrar novos produtos da empresa para a qual trabalha.\n\nPaulo está organizando uma viagem para visitar cada uma das N cidades do reino. A Nlogônia é imensa, as cidades são distantes, de forma que Paulo vai sempre usar transporte aéreo para ir de uma cidade a outra. Paulo conhece o tempo de voo entre cada par de cidades, mas não gosta de viajar de avião e quer minimizar o tempo de voo total para a viagem. No entanto, Paulo tem uma demanda peculiar quanto à ordem das cidades que vai visitar.\n\nNa Nlogônia os “nomes” das cidades são números inteiros de 1 a N. Paulo deseja que a ordem das cidades que vai visitar obedeçam à seguinte regra: quando Paulo visitar a cidade K, ou todas as cidades de nomes menores do que K já foram visitadas ou todas serão visitadas após K.\n\nPor exemplo, se N é igual a três, Paulo pode visitar as cidades nas ordens 1, 2, 3 ou na ordem 3, 2, 1 ou na ordem 2, 1, 3, mas não pode visitá-las na ordem 1, 3, 2, pois quando visita a cidade 3, como 1 já foi visitada, 2 também deveria ter sido visitada.\n\nEscreva um programa para determinar o tempo mínimo total de voo para a viagem de Paulo, iniciando em qualquer cidade, terminando em qualquer cidade, mas visitando cada cidade uma única vez.",
+    "input": "A primeira linha da entrada contém um inteiro N, o número de cidades. Cada uma das N(N−1)/2 linhas contém três inteiros A, B e T, indicando que o tempo de voo da cidade A para a cidade B é T (o tempo de voo da cidade B para a cidade A também é T).",
+    "output": "Seu programa deve produzir uma única linha, contendo um único número inteiro, o tempo mínimo total de voo para a viagem de Paulo.",
+    "constraints": "2 ≤ N ≤ 1500\n1 ≤ A < B ≤ N\n1 ≤ T ≤ 1000\n\nInformações sobre a pontuação:\n- Para um conjunto de casos de testes valendo 25 pontos, 1 ≤ N ≤ 10.\n- Para um conjunto adicional de casos de testes valendo 50 pontos, 1 ≤ N ≤ 20.\n- Para um conjunto adicional de casos de testes valendo 25 pontos, nenhuma restrição adicional.",
+    "examples": [
+        {
+            "input": "3\n1 2 5\n1 3 2\n2 3 4",
+            "output": "7"
+        },
+        {
+            "input": "4\n1 2 15\n1 3 7\n1 4 8\n2 3 16\n2 4 9\n3 4 12",
+            "output": "31"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        25,
+        50,
+        25
+    ],
+    "year": "2020",
+    "level": "senior",
+    "period": "Fase Estadual",
+    "topics": [
+        "programação dinâmica",
+        "grafos"
+    ],
+    "time_limit": 10.0,
+    "memory_limit": 512
+}

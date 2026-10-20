@@ -1,0 +1,37 @@
+{
+    "title": "Acelerador de partículas",
+    "statement": "A universidade está inaugurando um grande acelerador de partículas, com um emissor e três sensores, numerados 1, 2 e 3. Uma partícula, ao sair do emissor, entra no acelerador, onde pode dar várias voltas, sendo acelerada a velocidades muito altas. Num determinado momento, a partícula sai do acelerador por uma das saídas, atingindo um dos sensores. A figura mostra o caminho por onde as partículas trafegam, com uma graduação de 1 quilômetro. Por exemplo, do emissor até o acelerador são 3 quilômetros e a circunferência do acelerador tem 8 quilômetros.\n\nNeste problema, será dada a distância total, em quilômetros, percorrida por uma certa partícula trafegando do emissor até algum sensor, e seu programa deve determinar qual sensor foi atingido pela partícula. Por exemplo, veja que se a distância total for 23 quilômetros, então a partícula tem que ter atingido o sensor 2.",
+    "input": "A entrada consiste de apenas uma linha contendo um inteiro D, representando a distância total percorrida pela partícula.",
+    "output": "Seu programa deve imprimir uma linha contendo um inteiro, representando o número do sensor que a partícula atingiu.",
+    "constraints": "6 ≤ D ≤ 800008\nD sempre será a distância total percorrida entre o emissor e algum sensor.",
+    "examples": [
+        {
+            "input": "23",
+            "output": "2"
+        },
+        {
+            "input": "6",
+            "output": "1"
+        },
+        {
+            "input": "9192",
+            "output": "3"
+        }
+    ],
+    "imgs": [
+        "img-2.jpeg"
+    ],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "senior",
+    "period": "Fase Local",
+    "topics": [
+        "matemática",
+        "aritmética modular",
+        "simulação"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 256
+}

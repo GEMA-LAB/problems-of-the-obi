@@ -1,0 +1,29 @@
+{
+    "title": "Calçada Imperial",
+    "statement": "Na calçada em frente ao Palácio Imperial, não se sabe a razão, existe uma sequência de N números desenhados no chão. A sequência é composta apenas pelos números de 1 a N.\nNinguém sabe o significado da sequência e, justamente por isso, várias teorias malucas surgiram. Uma delas diz que a sequência representa, na verdade, apenas um valor que estaria relacionado a um grande segredo dos imperadores. Esse valor é a quantidade máxima de números da sequência que poderiam ser marcados com um círculo, de modo que a sequência de números marcados não contenha dois números iguais consecutivos e seja composta de no máximo dois números distintos.\nNeste problema, dada a sequência original de números desenhados no chão da calçada, seu programa deve computar e imprimir a quantidade máxima de números da sequência que poderiam ser marcados com um círculo sem que haja dois números iguais consecutivos na sequência marcada e tal que ela seja composta de no máximo dois números distintos.",
+    "input": "A primeira linha da entrada contém um inteiro N representando o tamanho da sequência. As N linhas seguintes contêm, cada uma, um inteiro V_i, para 1 ≤ i ≤ N, definindo a sequência de números desenhados no chão da calçada imperial.",
+    "output": "Seu programa deve imprimir uma linha contendo um número inteiro representando a quantidade máxima de números da sequência que poderiam ser marcados com um círculo sem que haja dois números iguais consecutivos na sequência marcada e tal que ela seja composta de no máximo dois números distintos.",
+    "constraints": "1 ≤ N ≤ 500\n1 ≤ V_i ≤ N, para 1 ≤ i ≤ N",
+    "examples": [
+        {
+            "input": "1\n1",
+            "output": "1"
+        },
+        {
+            "input": "12\n3\n2\n5\n2\n10\n4\n4\n7\n12\n2\n8\n10",
+            "output": "4"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "senior",
+    "period": "Fase Local",
+    "topics": [
+        "programação dinâmica"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 512
+}
