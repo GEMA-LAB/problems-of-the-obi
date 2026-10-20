@@ -1,0 +1,36 @@
+{
+    "title": "Robô marciano",
+    "statement": "Uma empresa de turismo aeroespacial está se preparando para a exploração comercial de Marte. Ela implantou uma base de operações no planeta, onde conduz experimentos que visam garantir a segurança de futuros turistas.\n\nA base em Marte é composta por um conjunto de áreas retangulares cobertas por um teto protetor contra a radiação solar. As áreas retangulares têm lados paralelos aos eixos Norte-Sul e Leste-Oeste. Vários robôs, controlados por comandos enviados desde o Centro de Operações da Empresa, na Terra, deslocam-se constantemente pela base para acessar materiais e equipamentos.\n\nOs robôs podem deslocar-se apenas nas quatro direções cardeais (norte, sul, leste e oeste), mas podem transitar tanto em áreas cobertas como não cobertas. Em particular, um robô pode entrar e sair de uma área coberta por qualquer ponto da borda dessa área. Para preservar a vida útil dos robôs, é importante que eles se mantenham o maior possível protegidos da intensa radiação solar, ou seja, que eles transitem preferencialmente nas áreas cobertas da base.\n\nDadas as descrições das áreas cobertas, a posição atual de um robô e a posição para a qual este robô deve se deslocar, sua tarefa é determinar a menor distância que o robô deve percorrer fora das áreas cobertas para chegar à posição de destino.",
+    "input": "A primeira linha da entrada contém quatro inteiros Xi, Yi, Xf e Yf indicando, respectivamente, a posição inicial do robô, (Xi, Yi) e a posição final do robô, (Xf, Yf).\nA segunda linha contém um único inteiro N, indicando o número de áreas cobertas. Cada uma das N linhas seguintes contém quatro inteiros X1, Y1, X2 e Y2 indicando uma região retangular coberta, tal que (X1, Y1) e (X2, Y2) são vértices opostos do retângulo de lados paralelos aos eixos. Duas áreas cobertas podem ter regiões comuns.",
+    "output": "Seu programa deve produzir uma única linha, com um único número inteiro, a menor distância que o robô deve percorrer em áreas não cobertas para ir da posição inicial à posição final do robô.",
+    "constraints": "0 ≤ N ≤ 1000\n0 ≤ Xi, Yi, Xf, Yf ≤ 10^6\n0 ≤ X1 ≤ X2 ≤ 10^6 e 0 ≤ Y1 ≤ Y2 ≤ 10^6",
+    "examples": [
+        {
+            "input": "0 0 4 3\n3\n0 0 1 5\n2 0 5 1\n3 2 6 4",
+            "output": "2"
+        },
+        {
+            "input": "2 5 5 0\n1\n0 0 1 5",
+            "output": "5"
+        },
+        {
+            "input": "4 5 5 0\n2\n0 0 1 5\n0 0 3 2",
+            "output": "5"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2019",
+    "level": "senior",
+    "period": "Fase Estadual",
+    "topics": [
+        "grafos",
+        "bfs",
+        "geometria",
+        "compressão de coordenadas"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 512
+}

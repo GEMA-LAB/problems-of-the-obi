@@ -1,9 +1,9 @@
 {
     "title": "Etiquetas",
-    "statement": "Nome do arquivo: etiquetas.c, etiquetas.cpp, etiquetas.pas, etiquetas.java, etiquetas.js, etiquetas_py2.py ou etiquetas_py3.py\n\nUma fita esticada horizontalmente é composta de N quadrados de dimensão 1 × 1, cada um deles contendo um número inteiro anotado. Temos também K etiquetas retangulares idênticas, de dimensão 1 × C, onde C é um inteiro. Nosso objetivo é colar todas as etiquetas sobre a fita de modo que a soma dos inteiros que não estiverem cobertos por nenhuma etiqueta ao final seja a maior possível. Cada etiqueta deve ser colada na horizontal, ao longo da fita. Duas etiquetas não podem estar sobrepostas e cada quadrado da fita deve estar ou totalmente coberto por uma etiqueta, ou totalmente descoberto.",
-    "input": "A primeira linha da entrada contém três inteiros N, K e C, representando, respectivamente, o comprimento da fita, o número de etiquetas e o comprimento das etiquetas. A segunda linha da entrada contém N inteiros A_i indicando a sequência de números anotados nos quadrados da fita.",
+    "statement": "Uma fita esticada horizontalmente é composta de N quadrados de dimensão 1×1, cada um deles contendo um número inteiro anotado. Temos também K etiquetas retangulares idênticas, de dimensão 1×C, onde C é um inteiro. Nosso objetivo é colar todas as etiquetas sobre a fita de modo que a soma dos inteiros que não estiverem cobertos por nenhuma etiqueta ao final seja a maior possível. Cada etiqueta deve ser colada na horizontal, ao longo da fita. Duas etiquetas não podem estar sobrepostas e cada quadrado da fita deve estar ou totalmente coberto por uma etiqueta, ou totalmente descoberto.",
+    "input": "A primeira linha da entrada contém três inteiros N, K e C, representando, respectivamente, o comprimento da fita, o número de etiquetas e o comprimento das etiquetas. A segunda linha da entrada contém N inteiros Ai indicando a sequência de números anotados nos quadrados da fita.",
     "output": "Seu programa deve imprimir uma linha contendo um inteiro indicando a soma maior possível de inteiros descobertos na fita depois que todas as etiquetas sejam coladas seguindo as condições do enunciado.",
-    "constraints": "1 ≤ N ≤ 10000\n-10000 ≤ A_i ≤ 10000\n1 ≤ K ≤ 10000\n1 ≤ C ≤ 10000\nK × C ≤ N\n\nInformações sobre a pontuação:\n- Para um conjunto de casos de testes valendo 10 pontos, os números no vetor estão ordenados crescentemente.\n- Para um conjunto de casos de testes valendo outros 10 pontos, C = 1.\n- Para um conjunto de casos de testes valendo outros 20 pontos, K = 1.\n- Para um conjunto de casos de testes valendo outros 20 pontos, K, N ≤ 100.",
+    "constraints": "1 ≤ N ≤ 10000\n-10000 ≤ Ai ≤ 10000\n1 ≤ K ≤ 10000\n1 ≤ C ≤ 10000\nK×C ≤ N",
     "examples": [
         {
             "input": "12 2 3\n1 22 4 -8 9 2 10 -1 5 5 32 -11",
@@ -26,5 +26,5 @@
         "soma de prefixos"
     ],
     "time_limit": 5.0,
-    "memory_limit": 256
+    "memory_limit": 1024
 }
