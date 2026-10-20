@@ -1,0 +1,31 @@
+{
+    "title": "Times",
+    "statement": "Chegou a hora da caça ao tesouro na gincana escolar! Para jogar, sua turma de N pessoas deve se dividir em dois times. A divisão será feita com base no número de chamada de cada aluno, um número entre 1 e N. Só que mais importante que fazer uma divisão balanceada é evitar que pessoas que não se gostam fiquem no mesmo time. Você receberá o número N de alunos e, para cada pessoa, você receberá a lista de pessoas que ela não gosta. Se a pessoa A não gosta da pessoa B então a pessoa B também não gosta da pessoa A. O aluno de número 1 sempre ficará no primeiro time. Você deve dividir os outros alunos entre os dois times de forma que dentro de cada time não haja duas pessoas que não se gostam.",
+    "input": "A primeira linha contém um inteiro N, representando o número de alunos na turma. As N linhas seguintes, para 1 ≤ i ≤ N, contêm um inteiro M_i, indicando de quantas pessoas o aluno i não gosta, e em seguida M_i inteiros X_j, indicando que a pessoa i não gosta da pessoa X_j.",
+    "output": "Seu programa deve produzir duas linhas, a primeira contendo os números dos integrantes do primeiro time e a segunda contendo os números dos integrantes do segundo time, ambas em ordem crescente. Lembre-se que o aluno 1 sempre estará no primeiro time. Sempre há uma única solução.",
+    "constraints": "2 ≤ N ≤ 10^5.\n1 ≤ M_i ≤ N - 1.\n1 ≤ X_j ≤ N.\n1 ≤ Σ_{i=1}^{N} M_i ≤ 6 × 10^5.\nOu seja, a soma de todos os M_i descritos na entrada é no máximo 6 × 10^5.\n\nInformações sobre a pontuação:\n- Em um conjunto de casos de teste equivalente a 40 pontos, N ≤ 15.",
+    "examples": [
+        {
+            "input": "13\n2 12 9\n1 10\n3 8 12 13\n5 8 10 13 6 5\n2 11 4\n1 4\n1 8\n3 4 3 7\n1 1\n2 2 4\n1 5\n2 3 1\n2 4 3",
+            "output": "1 2 3 4 7 11\n5 6 8 9 10 12 13"
+        },
+        {
+            "input": "15\n1 13\n1 13\n1 13\n1 13\n1 13\n1 13\n1 13\n1 13\n1 13\n14 11 7 1 10 8 6 14 12 3 2 15 5 4 9\n1 13\n1 13",
+            "output": "1 2 3 4 5 6 7 8 9 10 11 12 14 15\n13"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2016",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "grafos",
+        "busca em profundidade",
+        "coloração bipartida"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 512
+}

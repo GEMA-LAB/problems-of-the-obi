@@ -1,0 +1,32 @@
+{
+    "title": "Dona Minhoca",
+    "statement": "Dona Minhoca construiu uma bela casa, composta de N salas conectadas por N − 1 túneis. Cada túnel conecta exatamente duas salas distintas, e pode ser percorrido em qualquer direção. A casa de dona Minhoca foi construída de modo que, percorrendo os túneis, é possível partir de qualquer sala e chegar a qualquer outra sala da casa.\n\nPara deixar sua casa mais segura, Dona Minhoca decidiu instalar radares anti-furto em algumas das salas. Ela comprou K radares, e deve agora decidir em quais salas colocará um radar. Além disso, todos os radares terão um raio de alcance, cujo valor R também deve ser decidido. Quando um radar com raio de alcance R é instalado na sala s, todas as salas com distância menor ou igual a R da sala s (incluindo a própria s) ficam sob o alcance do radar, e estarão protegidas.\n\nDevido à política estranha de cobrança da Empresa de radares, todos os K radares devem ter o mesmo raio de alcance. Dona Minhoca então se pergunta: qual será o menor valor possível para R, tal que, se o raio de alcance dos radares for R, é possível escolher K salas para instalar os radares de forma que todas as N salas estejam protegidas?",
+    "input": "A primeira linha da entrada contém dois inteiros N e K, indicando o número de salas e de radares que Dona Minhoca possui. As N − 1 linhas seguintes contêm dois inteiros ai e bi cada, indicando que existe um túnel conectando estas duas salas.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, o menor valor possível para R.",
+    "constraints": "1 ≤ N ≤ 300000\n1 ≤ K < N\nai ≠ bi\n\nInformações sobre a pontuação:\n- Para um conjunto de casos de testes valendo 25 pontos, K = 1.\n- Para outro conjunto de casos de testes valendo 17 pontos, o túnel i conecta as salas i e i + 1 (1 ≤ i ≤ N − 1), ou seja, a casa possui o formato de uma linha reta.\n- Para outro conjunto de casos de testes valendo 17 pontos, N, K ≤ 100.\n- Para outro conjunto de casos de testes valendo 41 pontos, nenhuma restrição adicional.",
+    "examples": [
+        {
+            "input": "6 1\n1 2\n2 3\n3 4\n4 5\n4 6",
+            "output": "2"
+        },
+        {
+            "input": "6 2\n1 2\n2 3\n3 4\n4 5\n4 6",
+            "output": "1"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2022",
+    "level": "senior",
+    "period": "Fase 3",
+    "topics": [
+        "grafos",
+        "árvores",
+        "busca binária",
+        "BFS"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 512
+}

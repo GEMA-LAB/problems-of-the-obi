@@ -1,0 +1,31 @@
+{
+    "title": "Intervalo Distinto",
+    "statement": "Você foi contratado pela Agência Extra-Espacial Brasileira, que procura indícios de vida extra-terrestre.\n\nUm dos telescópios da Agência, para o espectro ultravioleta, gera uma sequência de valores inteiros positivos que devem ser analisados diariamente. Sua primeira missão é determinar, na sequência gerada, o tamanho do maior intervalo contínuo que contém apenas números distintos.\n\nInformações sobre a pontuação\nA tarefa vale 100 pontos. Estes pontos estão distribuídos em subtarefas, cada uma com suas restrições adicionais às definidas acima:\n- Subtarefa 1 (23 pontos): N ≤ 100\n- Subtarefa 2 (18 pontos): N ≤ 5000\n- Subtarefa 3 (15 pontos): Ii ≤ 100\n- Subtarefa 4 (44 pontos): Nenhuma restrição adicional.\n\nSeu programa pode resolver corretamente todas ou algumas das subtarefas acima (elas não precisam ser resolvidas em ordem). Sua pontuação final na tarefa é a soma dos pontos de todas as subtarefas resolvidas corretamente por alguma das suas submissões.",
+    "input": "A primeira linha contém um inteiro N, o número de elementos da sequência. Cada uma das linhas seguintes contém um inteiro Ii, os elementos da sequência na ordem em que foram gerados.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único inteiro, o número de elementos do maior intervalo que contém apenas números distintos.",
+    "constraints": "1 ≤ N ≤ 10^5\n1 ≤ Ii ≤ 10^5",
+    "examples": [
+        {
+            "input": "8\n3\n2\n1\n3\n2\n1\n3\n2",
+            "output": "3"
+        },
+        {
+            "input": "6\n3\n2\n3\n8\n5\n5",
+            "output": "4"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2023",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "array",
+        "two pointers",
+        "janela deslizante"
+    ],
+    "time_limit": 1.5,
+    "memory_limit": 256
+}

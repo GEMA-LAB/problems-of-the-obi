@@ -1,0 +1,35 @@
+{
+    "title": "Camisetas da Olimpíada",
+    "statement": "A Olimpíada Municipal de Programação vai distribuir camisetas para os melhores colocados, e por isso solicitou que os premiados informassem o tamanho preferido da camiseta, entre os tamanhos pequeno e médio.\n\nA empresa que confeccionou as camisetas, por uma falha, pode ter se enganado na quantidade de camisetas para cada tamanho. Foram produzidas camisetas em número suficiente para todos os premiados, mas talvez não do tamanho preferido.\n\nDadas a lista com os tamanhos preferidos pelos premiados e a quantidade de camisetas de cada tamanho produzidas pela empresa, escreva um programa para determinar se todos os premiados receberão camisetas do tamanho escolhido.",
+    "input": "A primeira linha contém um inteiro N, o número de premiados. A segunda linha contém N inteiros Ti, indicando os tamanhos solicitados pelos premiados, sendo que Ti = 1 representa o tamanho pequeno e Ti = 2 representa o tamanho médio. A terceira linha contém um inteiro P, o número de camisetas de tamanho pequeno produzidas. A quarta e última contém um inteiro M, o número de camisetas de tamanho médio produzidas.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único caractere, que deve ser a letra maiúscula 'S' se todos os premiados serão atendidos com a camiseta do tamanho que escolheram, ou a letra maiúscula 'N' caso contrário.",
+    "constraints": "1 ≤ N ≤ 1000\n0 ≤ P ≤ 1000\n0 ≤ M ≤ 1000\nN ≤ P + M\n1 ≤ Xi ≤ 2 para 1 ≤ i ≤ N\n\nInformações sobre a pontuação:\n- Para um conjunto de casos de testes valendo 20 pontos, 1 ≤ N ≤ 10.",
+    "examples": [
+        {
+            "input": "5\n1 1 2 1 2\n3\n2",
+            "output": "S"
+        },
+        {
+            "input": "4\n2 2 2 2\n1\n3",
+            "output": "N"
+        },
+        {
+            "input": "6\n1 1 1 2 1 1\n4\n4",
+            "output": "N"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2020",
+    "level": "senior",
+    "period": "Fase Local",
+    "topics": [
+        "implementação",
+        "contagem",
+        "guloso"
+    ],
+    "time_limit": 1.0,
+    "memory_limit": 256
+}

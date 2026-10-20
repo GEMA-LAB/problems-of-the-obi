@@ -1,0 +1,36 @@
+{
+    "title": "Poligrama",
+    "statement": "Duas palavras A e B são anagramas entre si se podemos transformar a palavra A na palavra B apenas trocando de posição as letras da palavra A. Por exemplo, \"duetos\" e \"estudo\" são anagramas entre si. Um outro exemplo é \"bba\" e \"bab\".\n\nVamos chamar de poligrama uma palavra que consiste na concatenação de duas ou mais palavras que são anagramas entre si. A primeira dessas palavras é chamada de raiz do poligrama. Por exemplo, a palavra \"bbabab\" é um poligrama com raiz \"bba\", pois ela é a concatenação dos anagramas \"bba\" e \"bab\".\n\nDada uma palavra, escreva um programa que determine se ela é um poligrama e encontre a sua raiz.",
+    "input": "A primeira linha da entrada contém um inteiro N, indicando o número de letras da palavra. A segunda linha contém a palavra P.",
+    "output": "Seu programa deve produzir uma única linha. Se a palavra dada é um poligrama, a linha deve conter a raiz do poligrama. Caso contrário, a linha deve conter o caractere asterisco ('*'). Se houver mais de uma raiz possível, seu programa deve imprimir a de menor comprimento.",
+    "constraints": "1 ≤ N ≤ 100000\nO número de caracteres de P é igual a N.\nOs únicos caracteres em P são letras minúsculas não acentuadas.\n\nInformações sobre a pontuação:\n- Para um conjunto de casos de testes valendo 40 pontos, N ≤ 1000.\n- Para um conjunto de casos de testes valendo outros 70 pontos, nenhuma restrição adicional.",
+    "examples": [
+        {
+            "input": "5\nxxxxx",
+            "output": "x"
+        },
+        {
+            "input": "2\nxy",
+            "output": "*"
+        },
+        {
+            "input": "6\nbbabab",
+            "output": "bba"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "strings",
+        "anagrama",
+        "contagem",
+        "divisores"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 256
+}

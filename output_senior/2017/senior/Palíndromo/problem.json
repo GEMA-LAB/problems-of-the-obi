@@ -1,0 +1,35 @@
+{
+    "title": "Palíndromo",
+    "statement": "Uma cadeia de caracteres é chamada de palíndromo se a sequência de caracteres da esquerda para a direita é igual à sequência de caracteres da direita para a esquerda (uma outra definição é que o primeiro caractere da cadeia deve ser igual ao último caractere da cadeia, o segundo caractere deve ser igual ao penúltimo caractere, o terceiro caractere deve ser igual ao antepenúltimo caractere, e assim por diante).\nPor exemplo, as cadeias de caracteres 'mim', 'axxa' e 'ananaganana' são exemplos de palíndromos. Se uma cadeia não é palíndroma, ela pode ser dividida em cadeias menores que são palíndromas. Por exemplo, a cadeia 'aaxyx' pode ser dividida de quatro maneiras distintas, todas elas contendo apenas cadeias palíndromas: {'aa', 'xyx'}, {'aa', 'x', 'y', 'x'}, {'a', 'a', 'xyx'} e {'a', 'a', 'x', 'y', 'x'}.\nDada uma cadeia de caracteres, escreva um programa que determine qual o menor número de partes em que a dada cadeia deve ser dividida de forma que todas as partes sejam palíndromos.",
+    "input": "A primeira linha contém um número inteiro N que indica o número de caracteres da cadeia. A segunda linha contém a cadeia de caracteres, composta por letras minúsculas, de 'a' a 'z', sem espaços em branco.",
+    "output": "Seu programa deve produzir uma única linha, contendo um número inteiro, o menor número de partes em que a cadeia de entrada deve ser dividida de forma que todas as partes sejam palíndromos.",
+    "constraints": "- 1 ≤ N ≤ 2000\n- A cadeia de caracteres contém apenas letras minúsculas não acentuadas ('a' a 'z').",
+    "examples": [
+        {
+            "input": "3\naxa",
+            "output": "1"
+        },
+        {
+            "input": "6\nxyzyyx",
+            "output": "4"
+        },
+        {
+            "input": "10\nbbabcbaab",
+            "output": "4"
+        }
+    ],
+    "imgs": [],
+    "rating": [
+        100
+    ],
+    "year": "2017",
+    "level": "senior",
+    "period": "Fase 1",
+    "topics": [
+        "programação dinâmica",
+        "strings",
+        "palíndromo"
+    ],
+    "time_limit": 5.0,
+    "memory_limit": 512
+}

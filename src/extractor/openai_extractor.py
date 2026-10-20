@@ -6,6 +6,7 @@ import re
 from pathlib import Path
 from typing import List, Optional, Tuple
 from openai import OpenAI
+import time
 
 from src.core.config import (
     ExtractorConfig,
@@ -209,6 +210,7 @@ class OpenAiExtractor:
         for pdf_path in cadernos_paths:
             try:
                 problems = self.extract_from_pdf(pdf_path)
+                time.sleep(2)
                 if not problems:
                     errors.append(pdf_path)
                     continue
@@ -218,6 +220,7 @@ class OpenAiExtractor:
                     extracted_all.append(p)
 
             except Exception as e:
+                time.sleep(2)
                 logger.error(f"Erro ao processar caderno {pdf_path}")
                 errors.append(pdf_path)
 

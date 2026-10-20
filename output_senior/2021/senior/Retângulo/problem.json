@@ -1,0 +1,38 @@
+{
+    "title": "Retângulo",
+    "statement": "Vô Pedro é um fazendeiro meticuloso. Em sua fazenda ele tem uma plantação no formato circular, com algumas árvores plantadas exatamente na circunferência da plantação. A figura (a) abaixo mostra a plantação com as árvores.\n\nAgora vô Pedro quer usar uma longa corda e quatro das árvores para demarcar um retângulo na plantação, usando as árvores como vértices, com a corda marcando os lados. A figura (b) abaixo mostra dois retângulos que podem ser demarcados usando as árvores na plantação figura (a).\n\nDada a descrição das posições das árvores na plantação circular de vô Pedro, sua tarefa é determinar se é possível demarcar um retângulo conforme descrito acima.",
+    "input": "A primeira linha da entrada contém um inteiro N indicando o número de árvores na circunferência da plantação. As árvores são representadas como pontos na circunferência. A segunda linha contém N inteiros L_1, L_2, ..., L_N, indicando o comprimento do arco entre cada par de árvores consecutivas. Os arcos são dados no sentido anti-horário.",
+    "output": "Seu programa deve produzir uma única linha, contendo um único caractere, que deve ser S se é possível demarcar um retângulo usando as árvores como vértices, ou N caso contrário.",
+    "constraints": "4 ≤ N ≤ 10^5\n1 ≤ L_i ≤ 10^6 para i = 1, 2, ..., N\n\nInformações sobre a pontuação:\n- Para um conjunto de casos de testes valendo 20 pontos, N ≤ 100.\n- Para um conjunto de casos de testes valendo outros 20 pontos, N ≤ 300.\n- Para um conjunto de casos de testes valendo outros 20 pontos, N ≤ 1000.\n- Para um conjunto de casos de testes valendo outros 40 pontos, nenhuma restrição adicional.",
+    "examples": [
+        {
+            "input": "8\n3 3 4 2 6 2 2 2",
+            "output": "S"
+        },
+        {
+            "input": "4\n14 16 15 15",
+            "output": "N"
+        },
+        {
+            "input": "6\n3 7 7 3 10 10",
+            "output": "S"
+        }
+    ],
+    "imgs": [
+        "img-3.jpeg",
+        "img-4.jpeg"
+    ],
+    "rating": [
+        100
+    ],
+    "year": "2021",
+    "level": "senior",
+    "period": "Fase 2",
+    "topics": [
+        "busca",
+        "soma de prefixos",
+        "geometria"
+    ],
+    "time_limit": 3.0,
+    "memory_limit": 512
+}
