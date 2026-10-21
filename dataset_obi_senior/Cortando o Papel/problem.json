@@ -1,6 +1,6 @@
 {
     "title": "Cortando o Papel",
-    "statement": "Nome do arquivo: papel.c, papel.cpp, papel.pas, papel.java, papel.js, papel.py2 ou papel.py3\n\nUma folha de papel é composta de uma sequência de retângulos com diferentes alturas mas com larguras fixas, tal que as bases dos retângulos estão assentadas em uma linha horizontal. A figura ilustra uma folha exemplo com 33 retângulos. Nós gostaríamos de fazer um único corte horizontal, com a ajuda de um estilete e uma régua, que maximize o número resultante de pedaços separados pelo corte. A figura mostra quatro diferentes cortes que resultariam, respectivamente, em 4, 11, 10 e 3 pedaços.",
+    "statement": "Uma folha de papel é composta de uma sequência de retângulos com diferentes alturas mas com larguras fixas, tal que as bases dos retângulos estão assentadas em uma linha horizontal. A figura ilustra uma folha exemplo com 33 retângulos. Nós gostaríamos de fazer um único corte horizontal, com a ajuda de um estilete e uma régua, que maximize o número resultante de pedaços separados pelo corte. A figura mostra quatro diferentes cortes que resultariam, respectivamente, em 4, 11, 10 e 3 pedaços.\n[1.png]\n",
     "input": "A primeira linha da entrada contém um inteiro N, representando o número de retângulos na folha de papel.\nA segunda linha contém N inteiros Ai, 1 ≤ i ≤ N, representando a sequência de alturas dos retângulos.",
     "output": "Seu programa deve imprimir uma LINHA contendo um inteiro representando o número máximo de pedaços possível, com um único corte horizontal.",
     "constraints": "1 ≤ N ≤ 10^5\n1 ≤ Ai ≤ 10^9, para 1 ≤ i ≤ N\n\nInformações sobre a pontuação:\n- Em um conjunto de casos de teste somando 40 pontos, N ≤ 1000",
@@ -15,7 +15,7 @@
         }
     ],
     "imgs": [
-        "img-1.jpeg"
+        "1.png"
     ],
     "rating": [
         100

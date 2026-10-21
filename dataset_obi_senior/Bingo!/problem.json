@@ -1,6 +1,6 @@
 {
     "title": "Bingo!",
-    "statement": "O grande prêmio do Bingo de São João será um carro zero-quilômetro. Todo mundo quer ser o primeiro a completar sua cartela, claro. São N cartelas, identificadas de 1 até N, que contêm, cada uma, K números distintos entre os números naturais de 1 até U, para K < U. Um número, claro, pode aparecer em mais de uma cartela e duas cartelas podem até ser iguais, ter o mesmo conjunto de números. Justamente por isso, veja que pode acontecer empate, com mais de uma cartela sendo completada no mesmo instante.\n\nNeste problema, são dados na entrada os conjuntos de números de todas as cartelas e a sequência de números sorteados, que será uma permutação dos naturais de 1 até U. Seu programa deve determinar qual ou quais cartelas vão ser completadas primeiro e ganhar o carro.\n\nPor exemplo, para N = 4, K = 5 e U = 10, com as cartelas dadas pela tabela abaixo, se a sequência de números sorteados for [7, 3, 5, 2, 6, 1, 9, 10, 4, 8], então haverá uma cartela vencedora, a número 3.\n\nCartela 1: 3 10 8 7 2\nCartela 2: 4 1 7 10 9\nCartela 3: 9 1 5 3 6\nCartela 4: 6 8 1 5 7",
+    "statement": "O grande prêmio do Bingo de São João será um carro zero-quilômetro. Todo mundo quer ser o primeiro a completar sua cartela, claro. São N cartelas identificadas de 1 até N que contêm, cada uma, K números distintos entre os números naturais de 1 até U, para K < U. Um número, claro, pode aparecer em mais de uma cartela e duas cartelas podem até ser iguais, ter o mesmo conjunto de números. Justamente por isso, veja que pode acontecer empate com mais de uma cartela sendo completada no mesmo instante.\nNeste problema, serão dados na entrada os conjuntos de números de todas as cartelas e a sequência de números sorteados, que será uma permutação dos naturais de 1 até U. Seu programa deve determinar qual ou quais cartelas vão ser completadas primeiro e ganhar o carro.\nPor exemplo, para N = 4, K = 5 e U = 10, com as cartelas dadas pela tabela abaixo, se a sequência de números sorteados for [7, 3, 5, 2, 6, 1, 9, 10, 4, 8], então haverá uma cartela vencedora, a número 3.\n[1.png]\n",
     "input": "A primeira linha da entrada contém três inteiros N, K e U, representando respectivamente o número de cartelas, quantos números cada cartela contém e o maior natural que pode ocorrer numa cartela. As N linhas seguintes contêm, cada uma, K inteiros distintos Ci, para 1 ≤ i ≤ K, representando o conjunto de números de cada cartela, da cartela 1 até a N. A última linha da entrada contém U inteiros indicando a sequência de números sorteados, uma permutação dos naturais entre 1 e U.",
     "output": "Seu programa deve imprimir uma linha contendo os números identificadores das cartelas vencedoras do carro, em ordem crescente.",
     "constraints": "1 ≤ N ≤ 1000\n1 ≤ K ≤ 1000\n1 ≤ U ≤ 10000\n\nInformações sobre a pontuação:\n- Em um conjunto de casos de teste somando 15 pontos, N ≤ 100, K ≤ 50, U ≤ 100, e apenas uma cartela é vencedora.\n- Em um conjunto de casos de teste somando 15 pontos, N ≤ 100, K ≤ 50, U ≤ 100.\n- Em um conjunto de casos de teste somando 30 pontos, N ≤ 100, K ≤ 500, U ≤ 1000.\n- Em um conjunto de casos de teste somando 40 pontos, nenhuma restrição adicional.",
@@ -14,7 +14,9 @@
             "output": "1 3 5"
         }
     ],
-    "imgs": [],
+    "imgs": [
+        "1.png"
+    ],
     "rating": [
         100
     ],
